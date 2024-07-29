@@ -170,8 +170,15 @@ document.addEventListener('DOMContentLoaded', () => {
             selectRandomInk()
         }
 
+        const allowUnreleasedCards = document.querySelector('input[data-role=unreleased]').checked;
         const cardInk = Array.from(document.querySelectorAll('input[data-role=ink]:checked')).map(ink => ink.value);
-        let cardOfInk = possibleCards.filter(card => cardInk.includes(card.ink));
+        let cardOfInk = possibleCards.filter(
+            card => {
+                if (allowUnreleasedCards) return cardInk.includes(card.ink);
+
+                return cardInk.includes(card.ink) && card.legalities.core === 'legal';
+            }
+        );
 
         while (deck.length < deckSize) {
             const weightedCards = addWeightToCardPossibilities(deck, cardOfInk);
@@ -337,9 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(`https://api.lorcast.com/v0/cards/search?q=cost:${i}`)
             .then(response => response.json())
             .then(data => {
-                cardsByCost[i] = data.results.filter(card => {
-                    return card.legalities.core === 'legal'
-                });
+                cardsByCost[i] = data.results;
             })
     );
 
