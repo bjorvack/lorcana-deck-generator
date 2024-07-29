@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const possibleCards = [];
     const cardsByCost = [];
+    const classifications = ['Action', 'Character', 'Item', 'Location', 'Song'];
     const generateDeckButton = document.querySelector('[data-role=generator]');
     const deckContainer = document.querySelector('[data-role=deck]');
     const dialog = document.querySelector('[data-role=card-preview]');
@@ -50,6 +51,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.weight *= 100;
                 if (!cardsWithShiftAndShiftTarget.includes(card.name)) card.weight *= 100000000; // If we have a Shift card, we want to pick Shift targets
             }
+        });
+
+        const classificationsInCardText = [];
+        deck.forEach(card => {
+            classifications.forEach(classification => {
+                if (card.text && card.text.includes(classification) && !classificationsInCardText.includes(classification)) {
+                    classificationsInCardText.push(classification);
+                }
+            });
+        });
+
+        weightedCards.forEach(card => {
+            const cardClassifications = card.classifications || [];
+            const cardTypes = card.types || [];
+            const types = [...cardClassifications, ...cardTypes];
+
+            types.forEach(classification => {
+                if (classificationsInCardText.includes(classification)) card.weight *= 50000;
+            });
         });
 
         return weightedCards.sort((a, b) => b.weight - a.weight);
@@ -129,6 +149,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     Promise.all(asyncFetches).then(() => {
         cardsByCost.flat().forEach(card => possibleCards.push(card));
+        possibleCards.forEach(card => {
+            const cardClassifications = card.classifications || [];
+            cardClassifications.forEach(classification => {
+                if (!classifications.includes(classification)) classifications.push(classification);
+            });
+        });
         generateDeckButton.disabled = false;
     }).then(generateDeck);
 });
