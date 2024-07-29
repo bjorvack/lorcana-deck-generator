@@ -2,6 +2,8 @@
 
 * {
     font-family: "Poppins", sans-serif;
+    color: #FFF;
+    background-color: #000;
 }
 
 h1 {
@@ -39,6 +41,8 @@ button[data-role="close"] {
 dialog {
     position: relative;
     max-width: calc(100% - 1.2rem);
+
+    border: 4px solid #D3BA84;
 }
 
 [data-role="deck"]{
