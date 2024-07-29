@@ -32,8 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // We want around 10% of the deck to be non-inkable cards
             card.weight = (card.inkwell ? 10 : 1) / possibleCards.length;
 
-            // We want to prioritize low cost cards
-            card.weight *= (11 - card.cost) / 10;
+            // For each card of the same cost, lower the weight
+            const cardsOfSameCost = deck.filter(deckCard => deckCard.cost === card.cost);
+            card.weight *= 1 / (cardsOfSameCost.length + 1);
 
             const keywords = card.keywords || [];
             const types = card.types || [];
@@ -92,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const classificationsInCardText = [];
         deck.forEach(card => {
             classifications.forEach(classification => {
-                if (card.text && card.text.includes(classification) && !classificationsInCardText.includes(classification)) {
+                if (card.text && card.text.toLowerCase().includes(classification.toLowerCase()) && !classificationsInCardText.includes(classification)) {
                     classificationsInCardText.push(classification);
                 }
             });
@@ -109,18 +110,70 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         weightedCards.forEach(card => {
-            const foundDependency = uniqueCardNames.some(name => card.text && card.text.includes(name) && card.name !== name);
+            const foundDependency = uniqueCardNames.some(name => card.text && card.text.toLowerCase().includes(name.toLowerCase()) && card.name !== name);
             if (foundDependency) card.weight *= possibleCards.length * 125;
         });
 
-        const cardsWithSinger = deck.filter(card => (card.keywords || []).includes('Singer')).map(card => card.cost);
-        if (cardsWithSinger.length > 0) {
+        const cardsWithSinger = deck.filter(card => (card.keywords || []).includes('Singer')).map(card => card.cost).length;
+        const amountOfSongs = deck.filter(card => card.type.includes('Song')).length;
+        if (cardsWithSinger > 0 && amountOfSongs < 12) {
             weightedCards.forEach(card => {
                 if (card.type.includes('Song')) {
-                    card.weight *= possibleCards.length * 125;
+                    card.weight *= possibleCards.length * 500;
+                }
+            })
+        } else if (cardsWithSinger > 16) {
+            if (card.type.includes('Song')) {
+                card.weight *= possibleCards.length * 50;
+            }
+        } else if (cardsWithSinger > 0) {
+            weightedCards.forEach(card => {
+                if (card.type.includes('Song')) {
+                    card.weight *= possibleCards.length * 20;
+                }
+
+                if (card.keywords.includes('Singer')) {
+                    card.weight *= possibleCards.length * 15;
+                }
+
+                // If card text contains song, we want to prioritize it
+                if (card.text && card.text.toLowerCase().includes('song')) {
+                    card.weight *= possibleCards.length * 10;
                 }
             })
         }
+
+        // Set the weight of a card to near zero if the cost is already on 10% of the deck
+        const costCount = deck.reduce((acc, card) => {
+            acc[card.cost] += 1;
+            return acc;
+        }, { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 });
+
+        weightedCards.forEach(card => {
+            if (card.cost >= 5 && costCount[card.cost] >= 8) {
+                card.weight *= 0.1;
+            }
+
+            if (card.cost >= 6 && costCount[card.cost] >= 8) {
+                card.weight *= 0.1;
+            }
+
+            if (card.cost >= 7 && costCount[card.cost] >= 8) {
+                card.weight *= 0.1;
+            }
+
+            if (card.cost >= 8 && costCount[card.cost] >= 8) {
+                card.weight *= 0.1;
+            }
+
+            if (card.cost >= 9 && costCount[card.cost] >= 8) {
+                card.weight *= 0.1;
+            }
+
+            if (card.cost >= 10 && costCount[card.cost] >= 8) {
+                card.weight *= 0.1;
+            }
+        })
 
         return weightedCards.sort((a, b) => b.weight - a.weight);
     };
