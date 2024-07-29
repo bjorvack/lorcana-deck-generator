@@ -128,6 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
         deckContainer.innerHTML = '';
         const deckSize = 60;
         const deck = [];
+
+        const checkedInkCount = document.querySelectorAll('input[data-role=ink]:checked').length;
+        if (checkedInkCount === 0) {
+            selectRandomInk()
+        }
+
         const cardInk = Array.from(document.querySelectorAll('input[data-role=ink]:checked')).map(ink => ink.value);
         const inkColors = [];
 
