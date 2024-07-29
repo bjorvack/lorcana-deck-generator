@@ -90,10 +90,6 @@ input[type="checkbox"]{
     transition: all .2s ease-in-out;
 }
 
-input[type="checkbox"]:checked{
-    background: #D3BA84;
-}
-
 input[type="checkbox"]:after{
     position: absolute;
     content: "";
@@ -112,4 +108,34 @@ input[type="checkbox"]:after{
 
 input[type="checkbox"]:checked:after{
     left: calc(100% - 1.5rem);
+}
+
+.amber input[type="checkbox"]:checked{
+    background: #FFC107;
+}
+
+.amethyst input[type="checkbox"]:checked{
+    background: #9C27B0;
+}
+
+.emerald input[type="checkbox"]:checked{
+    background: #4CAF50;
+}
+
+.ruby input[type="checkbox"]:checked{
+    background: #F44336;
+}
+
+.sapphire input[type="checkbox"]:checked{
+    background: #2196F3;
+}
+
+.steel input[type="checkbox"]:checked{
+    background: #607D8B;
+}
+
+@media (max-width: 764px) {
+    label {
+        display: block;
+    }
 }
