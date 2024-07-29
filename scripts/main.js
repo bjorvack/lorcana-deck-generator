@@ -90,7 +90,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 randomInks.push(randomInk);
             }
         }
+
+        toggleInkCheckboxes()
     }
+
+    const toggleInkCheckboxes = () => {
+        // Enable all checkboxes
+        const checkboxes = document.querySelectorAll('input[data-role=ink]');
+        checkboxes.forEach(checkbox => checkbox.disabled = false);
+
+        // Count the checked checkboxes
+        const checkedCheckboxes = document.querySelectorAll('input[data-role=ink]:checked');
+        const checkedCheckboxesCount = checkedCheckboxes.length;
+
+        if (checkedCheckboxesCount >= 2) {
+            // Disable all unchecked checkboxes
+            const uncheckedCheckboxes = document.querySelectorAll('input[data-role=ink]:not(:checked)');
+            uncheckedCheckboxes.forEach(checkbox => checkbox.disabled = true);
+        }
+    }
+    document.querySelectorAll('[data-role=ink]').forEach(checkbox => {
+        checkbox.addEventListener('click', toggleInkCheckboxes)
+    })
 
     const pickRandomWeightedCard = (weightedCards) => {
         const totalWeight = weightedCards.reduce((acc, card) => acc + card.weight, 0);
