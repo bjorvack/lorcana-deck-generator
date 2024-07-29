@@ -204,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     const dialog = document.querySelector('[data-role=card-preview]')
+    const closeButton = dialog.querySelector('[data-role=close]')
     const targetImg = dialog.querySelector('[data-role=card-preview] img')
     document.querySelector('[data-role=deck]').addEventListener('click', (event) => {
         const closestCard = event.target.closest('[data-role=card]')
@@ -218,6 +219,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             dialog.showModal()
         }
+    })
+
+    closeButton.addEventListener('click', () => {
+        dialog.close()
     })
 
     const asyncFetches = []

@@ -28,6 +28,19 @@ button:hover {
     color: #FFF;
 }
 
+button[data-role="close"] {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+}
+
+dialog {
+    position: relative;
+    overflow: visible !important;
+
+    max-width: calc(100% - 1.2rem);
+}
+
 [data-role="deck"]{
     display: flex;
     flex-wrap: wrap;
