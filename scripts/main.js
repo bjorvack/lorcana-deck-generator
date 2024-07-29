@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const weightedCards = addWeightToCardPossibilities(deck, cardOfInk);
             const randomCard = pickRandomWeightedCard(weightedCards);
             const maxAmountOfCopies = Math.min(4, deckSize - deck.length);
-            const weights = [0.05, 0.15, 0.3, 0.5];
+            const weights = [0.01, 0.19, 0.25, 0.55];
             let chosenAmount = 5;
 
             do {
