@@ -73,17 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         weightedCards.forEach(card => {
             const keywords = card.keywords || [];
+            let shiftModifier = 1;
             if (containsMorp && keywords.includes('Shift')) {
-                card.weight *= 250; // If we have Morp, we want to pick Shift cards
+                shiftModifier = possibleCards.length * 50; // If we have Morp, we want to pick Shift cards
             }
 
             if (card.keywords.includes('Shift') && cardNames.includes(card.name)) {
-                card.weight *= 100; // If the card is a possible shift target, we want to pick it
+                shiftModifier =  possibleCards.length * 25; // If the card is a possible shift target, we want to pick it
             }
 
             if ((cardsWithShift.includes(card.name) && card.cost < getCostForShiftTarget(card.name)) || (cardsWithShift.length && card.id === morpId)) {
-                card.weight *= 100; // If whe have a shift target, we want to pick a card to shift from
+                shiftModifier =  possibleCards.length * 25; // If whe have a shift target, we want to pick a card to shift from
             }
+
+            card.weight *= shiftModifier;
         });
 
         const classificationsInCardText = [];
@@ -101,20 +104,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const types = [...cardClassifications, ...cardTypes];
 
             types.forEach(classification => {
-                if (classificationsInCardText.includes(classification)) card.weight *= 50000;
+                if (classificationsInCardText.includes(classification)) card.weight *= possibleCards.length * 50;
             });
         });
 
         weightedCards.forEach(card => {
             const foundDependency = uniqueCardNames.some(name => card.text && card.text.includes(name) && card.name !== name);
-            if (foundDependency) card.weight *= 500;
+            if (foundDependency) card.weight *= possibleCards.length * 25;
         });
 
         const cardsWithSinger = deck.filter(card => (card.keywords || []).includes('Singer')).map(card => card.cost);
         if (cardsWithSinger.length > 0) {
             weightedCards.forEach(card => {
                 if (card.type.includes('Song')) {
-                    card.weight *= 150;
+                    card.weight *= possibleCards.length * 25;
                 }
             })
         }
