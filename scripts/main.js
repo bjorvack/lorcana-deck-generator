@@ -110,14 +110,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         weightedCards.forEach(card => {
             const foundDependency = uniqueCardNames.some(name => card.text && card.text.includes(name) && card.name !== name);
-            if (foundDependency) card.weight *= possibleCards.length * 25;
+            if (foundDependency) card.weight *= possibleCards.length * 125;
         });
 
         const cardsWithSinger = deck.filter(card => (card.keywords || []).includes('Singer')).map(card => card.cost);
         if (cardsWithSinger.length > 0) {
             weightedCards.forEach(card => {
                 if (card.type.includes('Song')) {
-                    card.weight *= possibleCards.length * 25;
+                    card.weight *= possibleCards.length * 125;
                 }
             })
         }
