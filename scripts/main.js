@@ -248,5 +248,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         console.log(`Total cards fetched: ${possibleCards.length}`)
         generateDeckButton.disabled = false
-    })
+    }).then(() => generateDeck())
 })
