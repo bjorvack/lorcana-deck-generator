@@ -44,7 +44,7 @@ dialog {
 [data-role="deck"]{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 40px;
     gap: 1rem;
