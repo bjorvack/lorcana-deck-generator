@@ -61,17 +61,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // If we have cards with shift in the deck, we want to prioritize cards with shift and shift targets
+        const cardNames = deck.map(card => card.name);
         const cardsWithShift = deck.filter(card => (card.keywords || []).includes('Shift')).map(card => card.name);
-        const cardsWithShiftAndShiftTarget = deck.filter(card => cardsWithShift.includes(card.name) && card.id !== card.id).map(card => card.name);
-        const containsMorp = deck.some(card => card.id === 'crd_be70d689335140bdadcde5f5356e169d');
+        const morpId = 'crd_be70d689335140bdadcde5f5356e169d';
+        const containsMorp = deck.some(card => card.id === morpId);
+
+        const getCostForShiftTarget = (name) => {
+            const shiftCard = deck.find(shiftCard => shiftCard.name === name && shiftCard.keywords.includes('Shift'));
+            return shiftCard ? shiftCard.cost : 0;
+        }
 
         weightedCards.forEach(card => {
             const keywords = card.keywords || [];
             if (containsMorp && keywords.includes('Shift')) {
-                card.weight *= 1000000000; // If we have Morp, we want to pick Shift cards
-            } else if (cardsWithShift.includes(card.name) || (keywords.includes('Shift') && cardsWithShift.includes(card.name))) {
-                card.weight *= 100;
-                if (!cardsWithShiftAndShiftTarget.includes(card.name)) card.weight *= 100000000; // If we have a Shift card, we want to pick Shift targets
+                card.weight *= 250; // If we have Morp, we want to pick Shift cards
+            }
+
+            if (card.keywords.includes('Shift') && cardNames.includes(card.name)) {
+                card.weight *= 100; // If the card is a possible shift target, we want to pick it
+            }
+
+            if ((cardsWithShift.includes(card.name) && card.cost < getCostForShiftTarget(card.name)) || (cardsWithShift.length && card.id === morpId)) {
+                card.weight *= 100; // If whe have a shift target, we want to pick a card to shift from
             }
         });
 
@@ -96,14 +107,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         weightedCards.forEach(card => {
             const foundDependency = uniqueCardNames.some(name => card.text && card.text.includes(name) && card.name !== name);
-            if (foundDependency) card.weight *= 2000;
+            if (foundDependency) card.weight *= 500;
         });
 
         const cardsWithSinger = deck.filter(card => (card.keywords || []).includes('Singer')).map(card => card.cost);
         if (cardsWithSinger.length > 0) {
             weightedCards.forEach(card => {
                 if (card.type.includes('Song')) {
-                    card.weight *= 2000;
+                    card.weight *= 150;
                 }
             })
         }
