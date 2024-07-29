@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Lorcana Deck Generator</title>
     <script src="scripts/main.js?version=0.0.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles/main.css?version=0.0.1">
 </head>
 <body>
@@ -35,6 +36,8 @@
     <div data-role="deck">
         <!-- Card container x60 -->
     </div>
+    <h2>Cost Curve</h2>
+    <canvas data-role="chart"></canvas>
 
     <dialog data-role="card-preview">
         <button data-role="close">x</button>

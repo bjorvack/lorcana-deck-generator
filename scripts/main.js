@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dialog = document.querySelector('[data-role=card-preview]');
     const closeButton = dialog.querySelector('[data-role=close]');
     const targetImg = dialog.querySelector('[data-role=card-preview] img');
+    const chartContainer = document.querySelector('[data-role=chart]');
 
     generateDeckButton.disabled = true;
 
@@ -196,7 +197,128 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`;
             deckContainer.innerHTML += cardHtml;
         });
+
+        generateChartForDeck(deck);
     };
+
+    const generateChartForDeck = (deck) => {
+        if (chartContainer.chart) {
+            chartContainer.chart.destroy()
+        }
+
+        const inkColors = []
+        deck.forEach(card => {
+            if (!inkColors.includes(card.ink)) inkColors.push(card.ink)
+        })
+
+        const data = []
+        inkColors.forEach(ink => {
+            data.push({
+                label: `Character ${ink}`,
+                data: countCardsByCostAndType(deck, 'Character', ink)
+            })
+
+            data.push({
+                label: `Action ${ink}`,
+                data: countCardsByCostAndType(deck, 'Action', ink)
+            })
+
+            data.push({
+                label: `Item ${ink}`,
+                data: countCardsByCostAndType(deck, 'Item', ink)
+            })
+
+            data.push({
+                label: `Location ${ink}`,
+                data: countCardsByCostAndType(deck, 'Location', ink)
+            })
+        })
+
+        const dataset = data.map((item) => {
+            const inkName = item.label.split(' ')[1]
+            let backgroundColor = ''
+            let borderColor = ''
+            switch (inkName) {
+                case 'Amber':
+                    borderColor = 'rgba(255, 215, 0, 0.2)'
+                    backgroundColor = 'rgba(255, 215, 0, 1)'
+                    break
+                case 'Amethyst':
+                    borderColor = 'rgba(153, 102, 204, 0.2)'
+                    backgroundColor = 'rgba(153, 102, 204, 1)'
+                    break
+                case 'Emerald':
+                    borderColor = 'rgba(0, 128, 0, 0.2)'
+                    backgroundColor = 'rgba(0, 128, 0, 1)'
+                    break
+                case 'Ruby':
+                    borderColor = 'rgba(220, 20, 60, 0.2)'
+                    backgroundColor = 'rgba(220, 20, 60, 1)'
+                    break
+                case 'Sapphire':
+                    borderColor = 'rgba(0, 0, 255, 0.2)'
+                    backgroundColor = 'rgba(0, 0, 255, 1)'
+                    break
+                case 'Steel':
+                    borderColor = 'rgba(192, 192, 192, 0.2)'
+                    backgroundColor = 'rgba(192, 192, 192, 1)'
+                    break
+            }
+
+            return {
+                label: item.label,
+                data: item.data,
+                backgroundColor: backgroundColor,
+                borderColor: borderColor,
+            }
+        })
+
+        const chart = new Chart(
+            chartContainer,
+            {
+                type: 'bar',
+                data: {
+                    labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                    datasets: dataset
+                },
+                options: {
+                    scales: {
+                        x: {
+                            stacked: true,
+                        },
+                        y: {
+                            stacked: true
+                        }
+                    }
+                }
+            }
+        )
+
+        chartContainer.chart = chart
+    }
+
+    const countCardsByCostAndType = (deck, type, ink) => {
+        let count = {
+            0: 0,
+            1: 0,
+            2: 0,
+            3: 0,
+            4: 0,
+            5: 0,
+            6: 0,
+            7: 0,
+            8: 0,
+            9: 0,
+            10: 0
+        }
+        deck.forEach(card => {
+          if (card.type.includes(type) && card.ink === ink) {
+            count[card.cost] += 1
+          }
+        })
+
+        return Object.values(count)
+    }
 
     generateDeckButton.addEventListener('click', generateDeck);
 
