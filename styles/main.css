@@ -12,6 +12,10 @@ h1 {
     font-size: 2.5rem;
 }
 
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
 button {
     display: block;
     margin: 2rem auto;
@@ -67,4 +71,45 @@ img[data-selected-card="0"] {
 
 img {
     max-width: 100%;
+}
+
+input[type="checkbox"]{
+    font-size: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 3.5rem;
+    height: 1.5rem;
+    background: #ddd;
+    border-radius: 3rem;
+    position: relative;
+    top: 0.5rem;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"]:checked{
+    background: #D3BA84;
+}
+
+input[type="checkbox"]:after{
+    position: absolute;
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-shadow: 0 0 .25rem rgba(0,0,0,.3);
+    box-shadow: 0 0 .25rem rgba(0,0,0,.3);
+    -webkit-transform: scale(.7);
+    transform: scale(.7);
+    left: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"]:checked:after{
+    left: calc(100% - 1.5rem);
 }

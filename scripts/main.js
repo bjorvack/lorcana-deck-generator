@@ -198,5 +198,5 @@ document.addEventListener('DOMContentLoaded', () => {
         generateDeckButton.disabled = false;
     })
         .then(selectRandomInk)
-        .then(generateDeck);
+        //.then(generateDeck);
 });
