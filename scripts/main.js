@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardsWithShift = []
         const cardsWithShiftAndShiftTarget = []
         const cardNames = []
+        let containsMorp = false
+
         for (let card of deck) {
             const keywords = card.keywords || []
             if (keywords.includes('Shift')) {
@@ -80,11 +82,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             }
+
+            if (card.id === 'crd_be70d689335140bdadcde5f5356e169d') {
+                containsMorp = true
+            }
         }
 
         for (let card of weightedCards) {
             const keywords = card.keywords || []
-            if (cardsWithShift.includes(card.name) || keywords.includes('Shift') && cardNames.includes(card.name)) {
+
+            if (containsMorp && keywords.includes('Shift')) {
+                card.weight *= 1000000000
+            } else if (cardsWithShift.includes(card.name) || keywords.includes('Shift') && cardNames.includes(card.name)) {
                 card.weight *= 100
 
                 if (!cardsWithShiftAndShiftTarget.includes(card.name)) {
