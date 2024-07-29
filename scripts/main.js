@@ -75,6 +75,23 @@ document.addEventListener('DOMContentLoaded', () => {
         return weightedCards.sort((a, b) => b.weight - a.weight);
     };
 
+    const selectRandomInk = () => {
+        const checkboxes = document.querySelectorAll('input[data-role=ink]');
+
+        // uncheck all checkboxes
+        checkboxes.forEach(checkbox => checkbox.checked = false);
+
+        // select 2 random checkboxes
+        const randomInks = [];
+        while (randomInks.length < 2) {
+            const randomInk = checkboxes[Math.floor(Math.random() * checkboxes.length)];
+            if (!randomInks.includes(randomInk)) {
+                randomInk.checked = true;
+                randomInks.push(randomInk);
+            }
+        }
+    }
+
     const pickRandomWeightedCard = (weightedCards) => {
         const totalWeight = weightedCards.reduce((acc, card) => acc + card.weight, 0);
         const randomWeight = Math.random() * totalWeight;
@@ -90,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         deckContainer.innerHTML = '';
         const deckSize = 60;
         const deck = [];
-        const cardInk = possibleCards.map(card => card.ink);
+        const cardInk = Array.from(document.querySelectorAll('input[data-role=ink]:checked')).map(ink => ink.value);
         const inkColors = [];
 
         while (inkColors.length < 2) {
@@ -158,5 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         generateDeckButton.disabled = false;
-    }).then(generateDeck);
+    })
+        .then(selectRandomInk)
+        .then(generateDeck);
 });
