@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (keywords.includes('Rush')) card.weight *= 1.3;
             if (keywords.includes('Evasive')) card.weight *= 1.2;
             if (keywords.includes('Ward')) card.weight *= 1.2;
+            if (keywords.includes('Singer')) card.weight *= 1.2;
 
             // Our deck should have a good balance of card types
             if (types.includes('Character')) card.weight *= 1.3;
@@ -76,8 +77,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         weightedCards.forEach(card => {
             const foundDependency = uniqueCardNames.some(name => card.text && card.text.includes(name) && card.name !== name);
-            if (foundDependency) card.weight *= 1000;
+            if (foundDependency) card.weight *= 2000;
         });
+
+        const cardsWithSinger = deck.filter(card => (card.keywords || []).includes('Singer')).map(card => card.cost);
+        if (cardsWithSinger.length > 0) {
+            weightedCards.forEach(card => {
+                if (card.type.includes('Song')) {
+                    card.weight *= 2000;
+                }
+            })
+        }
 
         return weightedCards.sort((a, b) => b.weight - a.weight);
     };
