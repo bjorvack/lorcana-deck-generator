@@ -143,7 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(`https://api.lorcast.com/v0/cards/search?q=cost:${i}`)
             .then(response => response.json())
             .then(data => {
-                cardsByCost[i] = data.results;
+                cardsByCost[i] = data.results.filter(card => {
+                    return card.legalities.core === 'legal'
+                });
             })
     );
 
