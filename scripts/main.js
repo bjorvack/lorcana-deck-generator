@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     generateDeckButton.disabled = true;
 
     const addWeightToCardPossibilities = (deck, possibleCards) => {
+        const uniqueCardNames = deck.map(card => card.name);
+
         const weightedCards = possibleCards.map(card => {
             // We want around 10% of the deck to be non-inkable cards
             card.weight = (card.inkwell ? 10 : 1) / possibleCards.length;
@@ -70,6 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
             types.forEach(classification => {
                 if (classificationsInCardText.includes(classification)) card.weight *= 50000;
             });
+        });
+
+        weightedCards.forEach(card => {
+            const foundDependency = uniqueCardNames.some(name => card.text && card.text.includes(name) && card.name !== name);
+            if (foundDependency) card.weight *= 1000;
         });
 
         return weightedCards.sort((a, b) => b.weight - a.weight);
