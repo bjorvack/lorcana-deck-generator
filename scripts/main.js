@@ -12,6 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const addWeightToCardPossibilities = (deck, possibleCards) => {
         const uniqueCardNames = deck.map(card => card.name);
+        const inkCount = {
+            Amber: 0,
+            Amethyst: 0,
+            Emerald: 0,
+            Ruby: 0,
+            Sapphire: 0,
+            Steel: 0,
+        }
+
+        deck.forEach(card => {
+            inkCount[card.ink] += 1;
+        })
+
+        const inkWithHighestCount = Object.keys(inkCount).reduce((a, b) => inkCount[a] > inkCount[b] ? a : b);
 
         const weightedCards = possibleCards.map(card => {
             // We want around 10% of the deck to be non-inkable cards
@@ -37,6 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (types.includes('Song')) card.weight *= 0.5;
             if (types.includes('Item')) card.weight *= 0.2;
             if (types.includes('Location')) card.weight *= 0.2;
+
+            if (card.ink === inkWithHighestCount) {
+                card.weight *= 0.5;
+            }
 
             return card;
         });
@@ -152,14 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const cardInk = Array.from(document.querySelectorAll('input[data-role=ink]:checked')).map(ink => ink.value);
-        const inkColors = [];
-
-        while (inkColors.length < 2) {
-            const randomInk = cardInk[Math.floor(Math.random() * cardInk.length)];
-            inkColors.push(randomInk);
-        }
-
-        let cardOfInk = possibleCards.filter(card => inkColors.includes(card.ink));
+        let cardOfInk = possibleCards.filter(card => cardInk.includes(card.ink));
 
         while (deck.length < deckSize) {
             const weightedCards = addWeightToCardPossibilities(deck, cardOfInk);
