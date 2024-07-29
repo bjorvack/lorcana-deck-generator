@@ -30,14 +30,12 @@ button:hover {
 
 button[data-role="close"] {
     position: absolute;
-    top: -30px;
-    right: -30px;
+    top: 0;
+    right: 0;
 }
 
 dialog {
     position: relative;
-    overflow: visible !important;
-
     max-width: calc(100% - 1.2rem);
 }
 
