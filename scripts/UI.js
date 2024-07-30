@@ -29,6 +29,7 @@ export default class UI {
         }
         randomInkIndices.forEach(index => this.inkToggles[index].checked = true)
         this.toggleInk()
+        this.generateDeckButton.click()
     }
 
     addListeners() {
