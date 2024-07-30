@@ -101,7 +101,6 @@ export default class DeckGenerator {
             return a.name < b.name ? -1 : 1
         })
 
-        console.log(`Tries remaining: ${triesRemaining}`)
         if (triesRemaining > 0) {
             triesRemaining--
             deck = this.removeCardsWithoutRequirements(deck, triesRemaining)
@@ -165,16 +164,6 @@ export default class DeckGenerator {
         const meetsRequirements = card.deckMeetsRequirements(deck)
         const missingShiftSource = this.shiftCardHasNoLowerCostCardsInDeck(card, deck)
         const singerHasNoSongToSing = this.singerHasNoSongToSing(card, deck)
-
-        if (!meetsRequirements) {
-            console.log(`Removing ${card.title} from deck`)
-            console.log(card.requiredKeywords, card.requiredClassifications, card.requiredTypes, card.requiredCardNames)
-        }
-
-        if (missingShiftSource) {
-            console.log(`Removing ${card.title} from deck`)
-            console.log(`No lower cost cards in deck`)
-        }
 
         return !meetsRequirements ||
             missingShiftSource ||
