@@ -7,7 +7,6 @@ export default class DeckGenerator {
     }
 
     initializeCardRequirements() {
-        console.log(this.types)
         for (const index in this.cards) {
             for (const keyword of this.keywords) {
                 if (this.cards[index].sanitizedText.includes(keyword.toLowerCase())) {
@@ -22,6 +21,10 @@ export default class DeckGenerator {
             }
 
             for (const type of this.types) {
+                if (type === 'Character') {
+                    continue // Skip Character type, since they are almost always required
+                }
+
                 if (this.cards[index].sanitizedText.includes(type.toLowerCase())) {
                     this.cards[index].requiredTypes.push(type)
                 }
@@ -63,13 +66,7 @@ export default class DeckGenerator {
 
     get types () {
         // Get all unique types from the cards
-        return [
-            'Action',
-            'Character',
-            'Item',
-            'Location',
-            'Song',
-        ]
+        return [...new Set(this.cards.map(card => card.types).flat())]
     }
 
     get cardNames () {
@@ -167,6 +164,7 @@ export default class DeckGenerator {
     cardHasMissingRequirements(card, deck) {
         const meetsRequirements = card.deckMeetsRequirements(deck)
         const missingShiftSource = this.shiftCardHasNoLowerCostCardsInDeck(card, deck)
+        const singerHasNoSongToSing = this.singerHasNoSongToSing(card, deck)
 
         if (!meetsRequirements) {
             console.log(`Removing ${card.title} from deck`)
@@ -179,7 +177,17 @@ export default class DeckGenerator {
         }
 
         return !meetsRequirements ||
-            missingShiftSource
+            missingShiftSource ||
+            singerHasNoSongToSing
+    }
+
+    singerHasNoSongToSing(card, deck) {
+        if (!card.keywords.includes('Singer')) {
+            return false
+        }
+
+        const songsInDeck = deck.filter(deckCard => deckCard.types.includes('Song'))
+        return !songsInDeck.some(deckCard => deckCard.cost <= card.singCost)
     }
 
     shiftCardHasNoLowerCostCardsInDeck(card, deck) {

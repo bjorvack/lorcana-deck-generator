@@ -7,7 +7,7 @@ export default class Card {
         this.inkwell = data.inkwell || false
         this.ink = data.ink
         this.keywords = data.keywords || []
-        this.types = data.types || []
+        this.types = data.type || []
         this.classifications = data.classifications || []
         this.text = data.text || ''
         this.image = data.image_uris?.digital?.large || ''
@@ -26,7 +26,7 @@ export default class Card {
     }
 
     get singCost() {
-        if (this.keywords.includes('Sing')) {
+        if (this.keywords.includes('Singer')) {
             // Look for the Singer x text in the card's text
             const match = this.text.match(/Singer (\d+)/)
             if (match) {
@@ -74,6 +74,9 @@ export default class Card {
         // Remove "Resist +X (Damage dealt to this character is reduced by X.)
         text = text.replace(/Resist \+\d+ \(Damage dealt to this character is reduced by \d+.\)/, '')
 
+        // Remove all capitalized words
+        text = text.replace(/\b[A-Z]+\b(?:\s+[A-Z]+\b)*/g, '')
+
         return text.toLowerCase()
     }
 
@@ -91,7 +94,7 @@ export default class Card {
 
         const keywordsInDeck = deck.map(card => card.keywords).flat()
 
-        return this.requiredKeywords.some(keyword => keywordsInDeck.includes(keyword))
+        return this.requiredKeywords.every(keyword => keywordsInDeck.includes(keyword))
     }
 
     deckMeetsRequiredClassifications(deck) {
@@ -101,7 +104,7 @@ export default class Card {
 
         const classificationsInDeck = deck.map(card => card.classifications).flat()
 
-        return this.requiredClassifications.some(classification => classificationsInDeck.includes(classification))
+        return this.requiredClassifications.every(classification => classificationsInDeck.includes(classification))
     }
 
     deckMeetsRequiredTypes(deck) {
@@ -111,7 +114,7 @@ export default class Card {
 
         const typesInDeck = deck.map(card => card.types).flat()
 
-        return this.requiredTypes.some(type => typesInDeck.includes(type))
+        return this.requiredTypes.every(type => typesInDeck.includes(type))
     }
 
     deckMeetsRequiredCardNames(deck) {
@@ -121,6 +124,6 @@ export default class Card {
 
         const cardNamesInDeck = deck.map(card => card.name)
 
-        return this.requiredCardNames.some(cardName => cardNamesInDeck.includes(cardName))
+        return this.requiredCardNames.every(cardName => cardNamesInDeck.includes(cardName))
     }
 }

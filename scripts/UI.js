@@ -99,10 +99,7 @@ export default class UI {
         image.alt = card.title
         image.dataset.role = 'card'
         image.dataset.selectedCard = card.id
-        image.dataset.requiredKeywords = JSON.stringify(card.requiredKeywords)
-        image.dataset.requiredClassifications = JSON.stringify(card.requiredClassifications)
-        image.dataset.requiredTypes = JSON.stringify(card.requiredTypes)
-        image.dataset.requiredCardNames = JSON.stringify(card.requiredCardNames)
+        image.dataset.data = JSON.stringify(card)
         cardContainer.appendChild(image)
     }
 }
