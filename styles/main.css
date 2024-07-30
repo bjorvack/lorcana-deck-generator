@@ -6,6 +6,10 @@
     background-color: #000;
 }
 
+.hidden {
+    display: none;
+}
+
 h1 {
     text-align: center;
     margin-top: 2rem;
