@@ -101,7 +101,6 @@ export default class WeightCalculator {
         }
 
         // Handle known good phrases
-
         // "draw a card" / "draw X cards
         if (card.sanitizedText.includes('draw a card') || card.sanitizedText.includes('draw x cards')) {
             weight *= 5
@@ -132,6 +131,11 @@ export default class WeightCalculator {
         const cardInDeckCount = deck.filter(deckCard => deckCard.id === card.id).length
         if (cardInDeckCount > 0) {
             weight *= 30
+        }
+
+        // Check if the card requirements are met if not lower the weight
+        if (!card.deckMeetsRequirements(deck)) {
+            weight *= 0.000001
         }
 
         // If the card is 4 times in the deck, set the weight to 0

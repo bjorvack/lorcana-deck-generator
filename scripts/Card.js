@@ -14,6 +14,11 @@ export default class Card {
         this.lore = data.lore || 0
         this.strength = data.strength || 0
         this.willpower = data.willpower || 0
+
+        this.requiredKeywords = []
+        this.requiredClassifications = []
+        this.requiredTypes = []
+        this.requiredCardNames = []
     }
 
     get title() {
@@ -70,5 +75,52 @@ export default class Card {
         text = text.replace(/Resist \+\d+ \(Damage dealt to this character is reduced by \d+.\)/, '')
 
         return text.toLowerCase()
+    }
+
+    deckMeetsRequirements(deck) {
+        return this.deckMeetsRequiredKeywords(deck) &&
+            this.deckMeetsRequiredClassifications(deck) &&
+            this.deckMeetsRequiredTypes(deck) &&
+            this.deckMeetsRequiredCardNames(deck)
+    }
+
+    deckMeetsRequiredKeywords(deck) {
+        if (this.requiredKeywords.length === 0) {
+            return true
+        }
+
+        const keywordsInDeck = deck.map(card => card.keywords).flat()
+
+        return this.requiredKeywords.some(keyword => keywordsInDeck.includes(keyword))
+    }
+
+    deckMeetsRequiredClassifications(deck) {
+        if (this.requiredClassifications.length === 0) {
+            return true
+        }
+
+        const classificationsInDeck = deck.map(card => card.classifications).flat()
+
+        return this.requiredClassifications.some(classification => classificationsInDeck.includes(classification))
+    }
+
+    deckMeetsRequiredTypes(deck) {
+        if (this.requiredTypes.length === 0) {
+            return true
+        }
+
+        const typesInDeck = deck.map(card => card.types).flat()
+
+        return this.requiredTypes.some(type => typesInDeck.includes(type))
+    }
+
+    deckMeetsRequiredCardNames(deck) {
+        if (this.requiredCardNames.length === 0) {
+            return true
+        }
+
+        const cardNamesInDeck = deck.map(card => card.name)
+
+        return this.requiredCardNames.some(cardName => cardNamesInDeck.includes(cardName))
     }
 }

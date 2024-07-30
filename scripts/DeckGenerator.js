@@ -2,6 +2,53 @@ export default class DeckGenerator {
     constructor(cards, weightCalculator) {
         this.weightCalculator = weightCalculator
         this.cards = cards
+
+        this.initializeCardRequirements()
+    }
+
+    initializeCardRequirements() {
+        console.log(this.types)
+        for (const index in this.cards) {
+            for (const keyword of this.keywords) {
+                if (this.cards[index].sanitizedText.includes(keyword.toLowerCase())) {
+                    this.cards[index].requiredKeywords.push(keyword)
+                }
+            }
+
+            for (const classification of this.classifications) {
+                if (this.cards[index].sanitizedText.includes(classification.toLowerCase())) {
+                    this.cards[index].requiredClassifications.push(classification)
+                }
+            }
+
+            for (const type of this.types) {
+                if (this.cards[index].sanitizedText.includes(type.toLowerCase())) {
+                    this.cards[index].requiredTypes.push(type)
+                }
+
+                if (this.cards[index].keywords.includes('Singer') && type === 'Song') {
+                    this.cards[index].requiredTypes.push(type)
+                }
+            }
+
+            for (const cardName of this.cardNames) {
+                if (this.cards[index].sanitizedText.includes(` ${cardName.toLowerCase()}`)) {
+                    this.cards[index].requiredCardNames.push(cardName)
+                }
+
+                if (this.cards[index].keywords.includes('Shift') && this.cards[index].name === cardName) {
+                    this.cards[index].requiredCardNames.push(cardName)
+                }
+
+                // if name contains & split by & and check if both are in the text
+                if (this.cards[index].keywords.includes('Shift') && this.cards[index].name.includes('&')) {
+                    const cardNames = cardName.split('&').map(name => name.toLowerCase().trim())
+                    if (cardNames.includes(cardName)) {
+                        this.cards[index].requiredCardNames.push(cardName)
+                    }
+                }
+            }
+        }
     }
 
     get keywords () {
@@ -16,7 +63,13 @@ export default class DeckGenerator {
 
     get types () {
         // Get all unique types from the cards
-        return [...new Set(this.cards.map(card => card.types).flat())]
+        return [
+            'Action',
+            'Character',
+            'Item',
+            'Location',
+            'Song',
+        ]
     }
 
     get cardNames () {
@@ -24,7 +77,7 @@ export default class DeckGenerator {
         return [...new Set(this.cards.map(card => card.name))]
     }
 
-    generateDeck(inks, deck = []) {
+    generateDeck(inks, deck = [], triesRemaining = 10) {
         const cardsOfInk = this.cards.filter(card => inks.includes(card.ink))
         if (cardsOfInk.length === 0) {
             return []
@@ -51,7 +104,11 @@ export default class DeckGenerator {
             return a.name < b.name ? -1 : 1
         })
 
-        deck = this.removeCardsWithoutRequirements(deck)
+        console.log(`Tries remaining: ${triesRemaining}`)
+        if (triesRemaining > 0) {
+            triesRemaining--
+            deck = this.removeCardsWithoutRequirements(deck, triesRemaining)
+        }
 
         return deck
     }
@@ -63,15 +120,6 @@ export default class DeckGenerator {
                 weight: this.weightCalculator.calculateWeight(card, deck)
             }
         })
-
-        if (deck.length >= 50) {
-            // Lower the weight off cards if they have missing requirements
-            weights.forEach(weight => {
-                if (this.cardHasMissingRequirements(weight.card, deck)) {
-                    weight.weight /= 10
-                }
-            })
-        }
 
         let pickableCards = weights.filter(weight => weight.weight > 0)
 
@@ -94,7 +142,7 @@ export default class DeckGenerator {
         return deck.length >= 60
     }
 
-    removeCardsWithoutRequirements(deck) {
+    removeCardsWithoutRequirements(deck, triesRemaining) {
         const uniqueCardsInDeck = []
         const uniqueInksInDeck = [...new Set(deck.map(card => card.ink))]
         for (const card of deck) {
@@ -105,7 +153,7 @@ export default class DeckGenerator {
 
         for (const card of uniqueCardsInDeck) {
             if (this.cardHasMissingRequirements(card, uniqueCardsInDeck)) {
-                deck.filter(deckCard => deckCard.id !== card.id)
+                deck = deck.filter(deckCard => deckCard.id !== card.id)
             }
         }
 
@@ -113,24 +161,25 @@ export default class DeckGenerator {
             return deck
         }
 
-        if (deck.length > 50) {
-            // remove 30% of the remaining cards at random
-            const cardsToRemove = Math.floor(deck.length * 0.3)
-            for (let i = 0; i < cardsToRemove; i++) {
-                const randomIndex = Math.floor(Math.random() * deck.length)
-                deck.splice(randomIndex, 1)
-            }
-        }
-
-        return this.generateDeck(uniqueInksInDeck, deck)
+        return this.generateDeck(uniqueInksInDeck, deck, triesRemaining)
     }
 
     cardHasMissingRequirements(card, deck) {
-        return this.cardHasMissingKeywordsInDeck(card, deck) ||
-            this.cardHasMissingClassificationInDeck(card, deck) ||
-            this.cardHasMissingTypesInDeck(card, deck) ||
-            this.cardHasMissingCardNamesInDeck(card, deck) ||
-            this.shiftCardHasNoLowerCostCardsInDeck(card, deck)
+        const meetsRequirements = card.deckMeetsRequirements(deck)
+        const missingShiftSource = this.shiftCardHasNoLowerCostCardsInDeck(card, deck)
+
+        if (!meetsRequirements) {
+            console.log(`Removing ${card.title} from deck`)
+            console.log(card.requiredKeywords, card.requiredClassifications, card.requiredTypes, card.requiredCardNames)
+        }
+
+        if (missingShiftSource) {
+            console.log(`Removing ${card.title} from deck`)
+            console.log(`No lower cost cards in deck`)
+        }
+
+        return !meetsRequirements ||
+            missingShiftSource
     }
 
     shiftCardHasNoLowerCostCardsInDeck(card, deck) {
@@ -139,78 +188,6 @@ export default class DeckGenerator {
         }
 
         const cardsWithSameName = deck.filter(deckCard => deckCard.name === card.name)
-        return cardsWithSameName.some(deckCard => deckCard.cost < card.cost)
-    }
-
-    cardHasMissingCardNamesInDeck(card, deck) {
-        const cardNamesInDeck = deck.map(card => card.name) ?? []
-        const foundCardNames = []
-        for (const cardName of this.cardNames) {
-            if (card.sanitizedText.includes(cardName.toLowerCase())) {
-                foundCardNames.push(cardName)
-            }
-        }
-
-        for (const cardName of foundCardNames) {
-            if (!cardNamesInDeck.includes(cardName)) {
-                return true
-            }
-        }
-
-        return false
-    }
-
-    cardHasMissingTypesInDeck(card, deck) {
-        const typesInDeck = deck.map(card => card.types).flat() ?? []
-        const foundTypes = []
-        for (const type of this.types) {
-            if (card.sanitizedText.includes(type.toLowerCase())) {
-                foundTypes.push(type)
-            }
-        }
-
-        for (const type of foundTypes) {
-            if (!typesInDeck.includes(type)) {
-                return true
-            }
-        }
-
-        return false
-    }
-
-    cardHasMissingClassificationInDeck(card, deck) {
-        const classificationInDeck = deck.map(card => card.classifications).flat() ?? []
-        const foundClassifications = []
-        for (const classification of this.classifications) {
-            if (card.sanitizedText.includes(classification.toLowerCase())) {
-                foundClassifications.push(classification)
-            }
-        }
-
-        for (const classification of foundClassifications) {
-            if (!classificationInDeck.includes(classification)) {
-                return true
-            }
-        }
-
-        return false
-    }
-
-    cardHasMissingKeywordsInDeck(card, deck) {
-        const keywordsInDeck = deck.map(card => card.keywords).flat() ?? []
-        const foundKeywords = []
-        for (const keyword of this.keywords) {
-            if (card.sanitizedText.includes(keyword.toLowerCase())) {
-                foundKeywords.push(keyword)
-            }
-        }
-
-        for (const keyword of foundKeywords) {
-            if (!keywordsInDeck.includes(keyword)) {
-                return true
-            }
-        }
-
-        return false
+        return !cardsWithSameName.some(deckCard => deckCard.cost < card.cost)
     }
 }
