@@ -32,6 +32,10 @@ export default class DeckGenerator {
                 if (this.cards[index].keywords.includes('Singer') && type === 'Song') {
                     this.cards[index].requiredTypes.push(type)
                 }
+
+                if (this.cards[index].sanitizedText.includes('sing') && type === 'Song') {
+                    this.cards[index].requiredTypes.push(type)
+                }
             }
 
             for (const cardName of this.cardNames) {
@@ -110,6 +114,26 @@ export default class DeckGenerator {
     }
 
     pickRandomCard(cards, deck) {
+        if (deck.length < 5) {
+            const buildAroundTypes = ['Song', 'Shift', 'Bulk', 'Item']
+            const randomBuildAroundType = buildAroundTypes[Math.floor(Math.random() * buildAroundTypes.length)]
+            console.log(`Building around ${randomBuildAroundType}`)
+            switch (randomBuildAroundType) {
+                case 'Song':
+                    const songsAndSingers = cards.filter(card => card.types.includes('Song') || card.keywords.includes('Singer'))
+                    return songsAndSingers[Math.floor(Math.random() * songsAndSingers.length)]
+                case 'Shift':
+                    const shifts = cards.filter(card => card.keywords.includes('Shift'))
+                    return shifts[Math.floor(Math.random() * shifts.length)]
+                case 'Bulk':
+                    const bulk = cards.filter(card => card.cost > 5)
+                    return bulk[Math.floor(Math.random() * bulk.length)]
+                case 'Item':
+                    const items = cards.filter(card => card.types.includes('Item'))
+                    return items[Math.floor(Math.random() * items.length)]
+            }
+        }
+
         const weights = cards.map(card => {
             return {
                 card,
@@ -118,6 +142,10 @@ export default class DeckGenerator {
         })
 
         let pickableCards = weights.filter(weight => weight.weight > 0)
+        // if a card is 4 times in a deck remove it from the pickable cards
+        pickableCards = pickableCards.filter(weight => {
+            return deck.filter(deckCard => deckCard.id === weight.card.id).length < 4
+        })
 
         const totalWeight = pickableCards.reduce((total, weight) => total + weight.weight, 0)
         const randomWeight = Math.floor(Math.random() * totalWeight)
@@ -149,12 +177,20 @@ export default class DeckGenerator {
 
         for (const card of uniqueCardsInDeck) {
             if (this.cardHasMissingRequirements(card, uniqueCardsInDeck)) {
+                console.log(`Deck is missing requirements, removing ${card.title}`)
                 deck = deck.filter(deckCard => deckCard.id !== card.id)
             }
         }
 
         if (deck.length === 60) {
             return deck
+        }
+
+        // Remove 20% of the remaining cards, this is to prevent infinite loops
+        const cardsToRemove = Math.ceil((60 - deck.length) * 0.2)
+        for (let i = 0; i < cardsToRemove; i++) {
+            console.log(`Removing random cards from deck`)
+            deck = deck.filter((_, index) => index !== Math.floor(Math.random() * deck.length))
         }
 
         return this.generateDeck(uniqueInksInDeck, deck, triesRemaining)
@@ -176,7 +212,11 @@ export default class DeckGenerator {
         }
 
         const songsInDeck = deck.filter(deckCard => deckCard.types.includes('Song'))
-        return !songsInDeck.some(deckCard => deckCard.cost <= card.singCost)
+        if (card.singCost >= 1) {
+            return !songsInDeck.some(deckCard => deckCard.cost >= card.singCost)
+        }
+
+        return !songsInDeck.some(deckCard => deckCard.cost === card.singCost)
     }
 
     shiftCardHasNoLowerCostCardsInDeck(card, deck) {
