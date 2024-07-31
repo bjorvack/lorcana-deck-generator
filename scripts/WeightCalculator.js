@@ -13,14 +13,18 @@ export default class WeightCalculator {
         weight *= card.text !== '' ? (1 + this.hasAbillityWeight) : (1 - this.hasAbillityWeight) // Card's with text have effects, these are generally better
 
         if (card.types.includes('Character')) {
-            weight *= 1.5
+            weight *= 0.7
         }
 
         if (card.types.includes('Action')) {
-            weight *= 1.3
+            weight *= 0.2
         }
 
-        return Math.max(weight, 1)
+        if (card.types.includes('Item') || card.types.includes('Location')) {
+            weight *= 0.05
+        }
+
+        return weight
     }
 
     calculateWeight(card, deck) {
@@ -35,7 +39,7 @@ export default class WeightCalculator {
         }
 
         const amountOfSongsInDeck = deck.filter(deckCard => deckCard.types.includes('Song')).length
-        if (card.types.includes('Song') && amountOfSongsInDeck < 16) {
+        if (card.types.includes('Song') && amountOfSongsInDeck < 8) {
             weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Song'])
 
             const singersInDeck = deck.filter(deckCard => deckCard.keywords.includes('Singer'))
@@ -46,17 +50,17 @@ export default class WeightCalculator {
         }
 
         const amountOfItemsInDeck = deck.filter(deckCard => deckCard.types.includes('Item')).length
-        if (card.types.includes('Item') && amountOfItemsInDeck < 16) {
+        if (card.types.includes('Item') && amountOfItemsInDeck < 4) {
             weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Item'])
         }
 
         const amountOfLocationsInDeck = deck.filter(deckCard => deckCard.types.includes('Location')).length
-        if (card.types.includes('Location') && amountOfLocationsInDeck < 16) {
+        if (card.types.includes('Location') && amountOfLocationsInDeck < 6) {
             weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Location'])
         }
 
         const amountOfActionsInDeck = deck.filter(deckCard => deckCard.types.includes('Action')).length
-        if (card.types.includes('Action') && amountOfActionsInDeck < 16) {
+        if (card.types.includes('Action') && amountOfActionsInDeck < 12) {
             weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Action'])
         }
 
