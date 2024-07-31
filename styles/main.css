@@ -34,7 +34,6 @@ h2 {
 }
 
 button {
-    min-width: 150px;
     display: block;
     padding: 0.7rem 1.2rem;
 
@@ -44,6 +43,10 @@ button {
     border: 1px solid #D3BA84;
     background-color: #D3BA84;
     color: #FFF;
+}
+
+.buttons button {
+    min-width: 150px;
 }
 
 button:hover {
