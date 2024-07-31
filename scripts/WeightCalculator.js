@@ -31,6 +31,10 @@ export default class WeightCalculator {
         let weight = this.baseWeight(card)
 
         const cardNamesInDeck = deck.map(card => card.name) ?? []
+        if (cardNamesInDeck.includes(card.name)) {
+            weight *= 25 // Make it more likely to add card with the same name (e.g. different versions)
+        }
+
         const amountOfRequiredTypesInDeck = {
             'Song': deck.filter(deckCard => deckCard.types.includes('Song')).length,
             'Item': deck.filter(deckCard => deckCard.types.includes('Item')).length,
