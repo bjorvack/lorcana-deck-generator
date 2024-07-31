@@ -131,6 +131,8 @@ export default class UI {
             const image = document.createElement('img')
             image.src = card.image
             image.alt = card.title
+            image.dataset.role = 'card'
+            cardContainer.appendChild(image)
         })
     }
 
