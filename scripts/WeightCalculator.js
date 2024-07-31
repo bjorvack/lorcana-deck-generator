@@ -14,6 +14,10 @@ export default class WeightCalculator {
 
         if (card.types.includes('Character')) {
             weight *= 0.7
+
+            if (card.sanitizedText.includes('This character can\'t {E} to sing songs.')) {
+                weight *= 0.5 // Characters that can't sing are less good
+            }
         }
 
         if (card.types.includes('Action')) {
