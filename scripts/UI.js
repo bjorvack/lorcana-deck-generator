@@ -83,6 +83,20 @@ export default class UI {
         this.cardSelectContainer.querySelector('[data-role=close]').addEventListener('click', () => {
             this.cardSelectContainer.close()
         })
+
+        this.cardSelectContainer.addEventListener('click', event => {
+            const closestButton = event.target.closest('[data-role=add-card-to-deck]')
+            if (closestButton) {
+                const cardId = closestButton.dataset.card
+                const card = this.deckGenerator.cards.find(card => card.id === cardId)
+                this.deck.push(card)
+
+                this.renderDeck()
+                this.addPickableCards()
+                this.chart.renderChart(this.deck)
+                this.cardSelectContainer.close()
+            }
+        })
     }
 
     toggleInk() {
@@ -133,6 +147,12 @@ export default class UI {
             image.alt = card.title
             image.dataset.role = 'card'
             cardContainer.appendChild(image)
+
+            const addButton = document.createElement('button')
+            addButton.textContent = 'Add card'
+            addButton.dataset.role = 'add-card-to-deck'
+            addButton.dataset.card = card.id
+            cardContainer.appendChild(addButton)
         })
     }
 
@@ -145,8 +165,9 @@ export default class UI {
                     return this.inks.indexOf(a.ink) - this.inks.indexOf(b.ink)
                 }
 
+                const typeOrder = ['Character', 'Action', 'Item', 'Location']
                 if (a.types[0] !== b.types[0]) {
-                    return a.types[0] < b.types[0] ? -1 : 1
+                    return typeOrder.indexOf(a.types[0]) - typeOrder.indexOf(b.types[0])
                 }
 
                 if (a.cost !== b.cost) {

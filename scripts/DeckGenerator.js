@@ -94,8 +94,9 @@ export default class DeckGenerator {
                 return inks.indexOf(a.ink) - inks.indexOf(b.ink)
             }
 
+            const typeOrder = ['Character', 'Action', 'Item', 'Location']
             if (a.types[0] !== b.types[0]) {
-                return a.types[0] < b.types[0] ? -1 : 1
+                return typeOrder.indexOf(a.types[0]) - typeOrder.indexOf(b.types[0])
             }
 
             if (a.cost !== b.cost) {

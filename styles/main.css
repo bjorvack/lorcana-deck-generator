@@ -110,6 +110,12 @@ select {
     border: dashed 1px #D3BA84;
 }
 
+[data-role="add-card-to-deck"] {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
 img[data-selected-card="0"] {
     display: none;
 }
