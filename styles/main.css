@@ -101,7 +101,7 @@ input[type="text"] {
     margin: 0.5rem 0;
     font-size: 1rem;
     display: block;
-    width: 100%;
+    width: calc(100% - 2rem);
 }
 
 [data-role="deck"], [data-role="card-list"] {
