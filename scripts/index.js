@@ -11,8 +11,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const weightCalculator = new WeightCalculator()
     const deckGenerator = new DeckGenerator(cards, weightCalculator)
     const chart = new Chart(document.querySelector('[data-role=chart]'))
+    const loadingScreenDialog = document.querySelector('[data-role=loading]')
+    loadingScreenDialog.show()
     const ui = new UI(
         deckGenerator,
+        loadingScreenDialog,
         document.querySelector('[data-role=generator]'),
         document.querySelector('[data-role=clear]'),
         document.querySelector('#primaryInk'),

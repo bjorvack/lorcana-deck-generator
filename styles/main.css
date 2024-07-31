@@ -49,7 +49,7 @@ button {
     min-width: 150px;
 }
 
-button:hover {
+button:hover, button:focus, button:active {
     background-color: #E3CAA8;
     color: #FFF;
 }
@@ -59,7 +59,7 @@ button:hover {
     color: #D3BA84;
 }
 
-.outline:hover {
+.outline:hover, .outline:focus, .outline:active {
     background-color: rgba(212, 187, 133, 0.1);
     color: #FFF;
 }
@@ -177,6 +177,16 @@ small {
     display: block;
     font-size: 0.5rem;
     background-color: transparent;
+}
+
+dialog[data-role=loading] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: none;
 }
 
 @media (max-width: 764px) {

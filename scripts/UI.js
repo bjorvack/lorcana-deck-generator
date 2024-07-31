@@ -1,6 +1,7 @@
 export default class UI {
     constructor(
         deckGenerator,
+        loadingScreen,
         generateDeckButton,
         clearDeckButton,
         primaryInk,
@@ -14,6 +15,7 @@ export default class UI {
         this.inks = []
 
         this.deckGenerator = deckGenerator
+        this.loadingScreen = loadingScreen
         this.generateDeckButton = generateDeckButton
         this.clearDeckButton = clearDeckButton
         this.primaryInk = primaryInk
@@ -29,15 +31,19 @@ export default class UI {
     init() {
         this.addListeners()
         this.toggleInk()
+        this.loadingScreen.close()
     }
 
     addListeners() {
         this.generateDeckButton.addEventListener('click', () => {
+            this.loadingScreen.show()
             this.deck = this.deckGenerator.generateDeck(this.inks, this.deck)
 
             this.renderDeck()
             this.addPickableCards()
             this.chart.renderChart(this.deck)
+
+            setTimeout(() => this.loadingScreen.close(), 1000)
         })
 
         this.clearDeckButton.addEventListener('click', () => {
