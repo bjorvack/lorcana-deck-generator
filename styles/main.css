@@ -68,11 +68,34 @@ dialog {
     gap: 1rem;
 }
 
-[data-role="deck"] [data-role="card-container"]{
+[data-role="deck"] [data-role="card-container"] {
     position: relative;
     display: block;
     width: 10rem;
     aspect-ratio: 100/139;
+}
+
+[data-role="deck"] [data-role="card-container"] [data-role="remove-card"] {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+[data-role="deck"] [data-role="card-container"] [data-role="add-card"] {
+    width: 10rem;
+    height: 13.9rem;
+    margin: 0;
+
+    background-color: transparent;
+    border: dashed 1px #D3BA84;
 }
 
 img[data-selected-card="0"] {
@@ -81,71 +104,6 @@ img[data-selected-card="0"] {
 
 img {
     max-width: 100%;
-}
-
-input[type="checkbox"]{
-    font-size: 30px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 3.5rem;
-    height: 1.5rem;
-    background: #ddd;
-    border-radius: 3rem;
-    position: relative;
-    top: 0.5rem;
-    cursor: pointer;
-    outline: none;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
-
-input[type="checkbox"]:after{
-    position: absolute;
-    content: "";
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    background: #fff;
-    -webkit-box-shadow: 0 0 .25rem rgba(0,0,0,.3);
-    box-shadow: 0 0 .25rem rgba(0,0,0,.3);
-    -webkit-transform: scale(.7);
-    transform: scale(.7);
-    left: 0;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
-
-input[type="checkbox"]:checked:after{
-    left: calc(100% - 1.5rem);
-}
-
-input[type="checkbox"]:checked{
-    background: #D3BA84;
-}
-
-.amber input[type="checkbox"]:checked{
-    background: #FFC107;
-}
-
-.amethyst input[type="checkbox"]:checked{
-    background: #9C27B0;
-}
-
-.emerald input[type="checkbox"]:checked{
-    background: #4CAF50;
-}
-
-.ruby input[type="checkbox"]:checked{
-    background: #F44336;
-}
-
-.sapphire input[type="checkbox"]:checked{
-    background: #2196F3;
-}
-
-.steel input[type="checkbox"]:checked{
-    background: #607D8B;
 }
 
 .d-flex {

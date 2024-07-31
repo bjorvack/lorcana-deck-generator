@@ -1,10 +1,16 @@
 export default class WeightCalculator {
+    constructor() {
+        this.cardCostWeight = 10
+        this.inkwellWeight = 1.2
+        this.loreWeight = 2
+        this.hasAbillityWeight = 0.5
+        this.requiredCardsWeight = 2.1
+    }
     baseWeight(card) {
-        let weight = Math.max(Math.pow(10 - card.cost, 2), 1) // Cheap cards are better
-        weight *= (card.inkwell ? 1.2 : 1) // Inkwell cards are better
-        weight *= card.lore > 0 ? Math.pow(2, card.lore) : 1 // Lore is good
-        weight *= card.keywords.length > 0 ? card.keywords.length * 1.2 : 1 // Keywords have great effects
-        weight *= card.text !== '' ? 1.5 : 0.7 // Card's with text have effects, these are generally better
+        let weight = Math.max(Math.pow(this.cardCostWeight - card.cost, 2), 1) // Cheap cards are better
+        weight *= (card.inkwell ? this.inkwellWeight : 1) // Inkwell cards are better
+        weight *= card.lore > 0 ? Math.pow(this.loreWeight, card.lore) : 1 // Lore is good
+        weight *= card.text !== '' ? (1 + this.hasAbillityWeight) : (1 - this.hasAbillityWeight) // Card's with text have effects, these are generally better
 
         if (card.types.includes('Character')) {
             weight *= 1.5
@@ -20,14 +26,7 @@ export default class WeightCalculator {
     calculateWeight(card, deck) {
         let weight = this.baseWeight(card)
 
-        const keywordsInDeck = deck.map(card => card.keywords).flat() ?? []
         const cardNamesInDeck = deck.map(card => card.name) ?? []
-
-        const costInDeck = deck.filter(deckCard => deckCard.cost === card.cost)
-        if (costInDeck.length < 4 && card.cost < 3) {
-            weight *= 1.5
-        }
-
         const amountOfRequiredTypesInDeck = {
             'Song': deck.filter(deckCard => deckCard.types.includes('Song')).length,
             'Item': deck.filter(deckCard => deckCard.types.includes('Item')).length,
@@ -36,67 +35,39 @@ export default class WeightCalculator {
         }
 
         const amountOfSongsInDeck = deck.filter(deckCard => deckCard.types.includes('Song')).length
-        if (card.types.includes('Song') && amountOfSongsInDeck < 8) {
-            weight *= Math.pow(2.1, amountOfRequiredTypesInDeck['Song'])
+        if (card.types.includes('Song') && amountOfSongsInDeck < 16) {
+            weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Song'])
+
+            const singersInDeck = deck.filter(deckCard => deckCard.keywords.includes('Singer'))
+            const songValues = singersInDeck.map(card => card.singCost)
+            if (songValues.length > 0 && songValues.includes(card.cost)) {
+                weight *= Math.pow((128 - amountOfSongsInDeck), this.requiredCardsWeight)
+            }
         }
 
         const amountOfItemsInDeck = deck.filter(deckCard => deckCard.types.includes('Item')).length
-        if (card.types.includes('Item') && amountOfItemsInDeck < 8) {
-            weight *= Math.pow(2.1, amountOfRequiredTypesInDeck['Item'])
+        if (card.types.includes('Item') && amountOfItemsInDeck < 16) {
+            weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Item'])
         }
 
         const amountOfLocationsInDeck = deck.filter(deckCard => deckCard.types.includes('Location')).length
-        if (card.types.includes('Location') && amountOfLocationsInDeck < 8) {
-            weight *= Math.pow(2.1, amountOfRequiredTypesInDeck['Location'])
+        if (card.types.includes('Location') && amountOfLocationsInDeck < 16) {
+            weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Location'])
         }
 
         const amountOfActionsInDeck = deck.filter(deckCard => deckCard.types.includes('Action')).length
-        if (card.types.includes('Action') && amountOfActionsInDeck < 8) {
-            weight *= Math.pow(2.1, amountOfRequiredTypesInDeck['Action'])
-        }
-
-        // Handle Singer cards
-        if (card.keywords.includes('Singer')) {
-            // Singers are better if they have a Song in the deck
-            if (keywordsInDeck.includes('Song')) {
-                weight *= 1.2
-            }
-
-            const songsInDeck = deck.filter(deckCard => deckCard.types.includes('Song'))
-            const songCostValues = songsInDeck.map(card => card.cost)
-            songCostValues.forEach(songCost => {
-                if (songCost <= card.cost) {
-                    weight *= 1.2
-                }
-            })
+        if (card.types.includes('Action') && amountOfActionsInDeck < 16) {
+            weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Action'])
         }
 
         if (card.deckMeetsRequirements(deck)) {
-            // Handle cards with any keywords in the text
-            if (card.deckMeetsRequiredKeywords(deck) && card.requiredKeywords.length > 0) {
-                weight *= 2.1
-            }
-
-            // Handle cards with any classification in the deck
-            if (card.deckMeetsRequiredClassifications(deck) && card.requiredClassifications.length > 0) {
-                weight *= 2.1
-            }
-
-            // Handle cards with any card names in the deck
-            if (card.deckMeetsRequiredCardNames(deck) && card.requiredCardNames.length > 0) {
-                weight *= 2.1
-            }
-
-            // Handle cards with any types in the deck
-            if (card.deckMeetsRequiredTypes(deck) && card.requiredTypes.length > 0) {
-                weight *= 2.1
-            }
+            weight *= Math.pow(this.requiredCardsWeight, 2)
         }
 
         // Handle shift cards
         const morphInDeck = deck.filter(deckCard => deckCard.id === 'crd_be70d689335140bdadcde5f5356e169d').length > 0
         if (card.keywords.includes('Shift') && (cardNamesInDeck.includes(card.name) || morphInDeck)) {
-            weight *= 1.2
+            weight *= this.requiredCardsWeight
         }
 
         // Handle known good phrases
@@ -122,7 +93,7 @@ export default class WeightCalculator {
 
         // "banish all"
         if (card.sanitizedText.includes('banish all')) {
-            weight *= 100 // Banish all cards are very good
+            weight *= 20 // Banish all cards are very good
         }
 
         // "gain X lore"
@@ -134,7 +105,7 @@ export default class WeightCalculator {
         // If the card is in the deck, multiply the weight
         const cardInDeckCount = deck.filter(deckCard => deckCard.id === card.id).length
         if (cardInDeckCount > 0) {
-            weight *= 30
+            weight *= Math.pow((10 - cardInDeckCount), 2)
         }
 
         return weight

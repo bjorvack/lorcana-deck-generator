@@ -2,7 +2,8 @@ export default class UI {
     constructor(
         deckGenerator,
         generateDeckButton,
-        inkToggles,
+        primaryInk,
+        secondaryInk,
         deckContainer,
         dialogContainer,
         chart
@@ -12,7 +13,8 @@ export default class UI {
 
         this.deckGenerator = deckGenerator
         this.generateDeckButton = generateDeckButton
-        this.inkToggles = inkToggles
+        this.primaryInk = primaryInk
+        this.secondaryInk = secondaryInk
         this.deckContainer = deckContainer
         this.dialogContainer = dialogContainer
         this.chart = chart
@@ -22,27 +24,19 @@ export default class UI {
 
     init() {
         this.addListeners()
-
-        const randomInkIndices = new Set()
-        while (randomInkIndices.size < 2) {
-            randomInkIndices.add(Math.floor(Math.random() * this.inkToggles.length))
-        }
-        randomInkIndices.forEach(index => this.inkToggles[index].checked = true)
         this.toggleInk()
-        this.generateDeckButton.click()
     }
 
     addListeners() {
         this.generateDeckButton.addEventListener('click', () => {
-            this.deck = this.deckGenerator.generateDeck(this.inks)
+            this.deck = this.deckGenerator.generateDeck(this.inks, this.deck)
 
             this.renderDeck()
             this.chart.renderChart(this.deck)
         })
 
-        this.inkToggles.forEach(checkbox => {
-            checkbox.addEventListener('click', this.toggleInk.bind(this))
-        })
+        this.primaryInk.addEventListener('change', this.toggleInk.bind(this))
+        this.secondaryInk.addEventListener('change', this.toggleInk.bind(this))
 
         this.deckContainer.addEventListener('click', event => {
             const closestCard = event.target.closest('[data-role=card]')
@@ -55,31 +49,50 @@ export default class UI {
             }
         })
 
+        this.deckContainer.addEventListener('click', event => {
+            const closestButton = event.target.closest('[data-role=remove-card]')
+            if (closestButton) {
+                const cardId = closestButton.dataset.cardId
+
+                // remove the first card with the same id, keep the rest
+                const index = this.deck.findIndex(card => card.id === cardId)
+                if (index !== -1) {
+                    this.deck.splice(index, 1)
+                }
+
+
+                this.renderDeck()
+                this.chart.renderChart(this.deck)
+            }
+        })
+
         this.dialogContainer.querySelector('[data-role=close]').addEventListener('click', () => {
             this.dialogContainer.close()
         })
     }
 
     toggleInk() {
-        for (const checkbox of this.inkToggles) {
-            checkbox.disabled = false
+        const inks = []
+
+        const primaryInk = this.primaryInk.options[this.primaryInk.selectedIndex]
+        if (primaryInk.value !== 'Random') {
+            inks.push(primaryInk.value)
         }
 
-        const checkedInkToggles = []
-        for (const checkbox of this.inkToggles) {
-            if (checkbox.checked) {
-                checkedInkToggles.push(checkbox)
-            }
+        const secondaryInk = this.secondaryInk.options[this.secondaryInk.selectedIndex]
+        if (secondaryInk.value !== 'Random') {
+            inks.push(secondaryInk.value)
         }
-        this.inks = checkedInkToggles.map(checkbox => checkbox.value)
 
-        if (checkedInkToggles.length >= 2) {
-            for (const checkbox of this.inkToggles) {
-                if (!checkbox.checked) {
-                    checkbox.disabled = true
-                }
-            }
+        const possibleInks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+        while (inks.length < 2) {
+            inks.push(possibleInks[Math.floor(Math.random() * possibleInks.length)])
         }
+
+        console.log(inks)
+
+        this.inks = inks
+        this.removeCardsFromWrongInk()
     }
 
     renderDeck() {
@@ -87,6 +100,17 @@ export default class UI {
         this.deck.forEach(card => {
             this.addCard(card)
         })
+
+        if (this.deck.length < 60) {
+            const cardContainer = document.createElement('div')
+            cardContainer.dataset.role = 'card-container'
+            this.deckContainer.appendChild(cardContainer)
+
+            const addButton = document.createElement('button')
+            addButton.textContent = 'Add card'
+            addButton.dataset.role = 'add-card'
+            cardContainer.appendChild(addButton)
+        }
     }
 
     addCard(card) {
@@ -103,5 +127,18 @@ export default class UI {
         image.dataset.weight = this.deckGenerator.weightCalculator.calculateWeight(card, this.deck)
         image.dataset.baseWeight = this.deckGenerator.weightCalculator.baseWeight(card)
         cardContainer.appendChild(image)
+
+        const removeButton = document.createElement('button')
+        removeButton.textContent = 'X'
+        removeButton.dataset.role = 'remove-card'
+        removeButton.dataset.cardId = card.id
+
+        cardContainer.appendChild(removeButton)
+    }
+
+    removeCardsFromWrongInk() {
+        this.deck = this.deck.filter(card => this.inks.includes(card.ink))
+        this.renderDeck()
+        this.chart.renderChart(this.deck)
     }
 }
