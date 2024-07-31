@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const ui = new UI(
         deckGenerator,
         document.querySelector('[data-role=generator]'),
+        document.querySelector('[data-role=clear]'),
         document.querySelector('#primaryInk'),
         document.querySelector('#secondaryInk'),
         document.querySelector('[data-role=deck]'),

@@ -26,9 +26,16 @@ h2 {
     margin-bottom: 1rem;
 }
 
-button {
-    display: block;
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     margin: 2rem auto;
+}
+
+button {
+    min-width: 150px;
+    display: block;
     padding: 0.7rem 1.2rem;
 
     font-size: 1.2rem;
@@ -41,6 +48,16 @@ button {
 
 button:hover {
     background-color: #E3CAA8;
+    color: #FFF;
+}
+
+.outline {
+    background-color: transparent;
+    color: #D3BA84;
+}
+
+.outline:hover {
+    background-color: rgba(212, 187, 133, 0.1);
     color: #FFF;
 }
 
