@@ -72,8 +72,8 @@ export default class WeightCalculator {
             weight *= Math.pow(this.requiredCardsWeight, 2)
         }
 
-        if (deck.length >= 45 && card.deckMeetsRequirements(deck)) {
-            weight *= 0.000001
+        if (deck.length >= 40 && !card.deckMeetsRequirements(deck)) {
+            weight *= 0.001
         }
 
         // Handle shift cards
@@ -111,7 +111,7 @@ export default class WeightCalculator {
         // "gain X lore"
         const match = card.sanitizedText.match(/gain (\d+) lore/)
         if (match) {
-            weight += parseInt(match[1]) * 5
+            weight *= parseInt(match[1]) * 1.2
         }
 
         // If the card is in the deck, multiply the weight

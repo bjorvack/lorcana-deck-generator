@@ -8,14 +8,26 @@ export default class DeckGenerator {
 
     initializeCardRequirements() {
         for (const index in this.cards) {
+            const cardText = this.cards[index].text
+
+            if (cardText === undefined || cardText === null || cardText === '') {
+                continue
+            }
+
             for (const keyword of this.keywords) {
-                if (this.cards[index].sanitizedText.includes(keyword.toLowerCase())) {
+                const gainText = `gain ${keyword.toLowerCase()}`
+                const gainsText = `gains ${keyword.toLowerCase()}`
+
+                let compareText = cardText.replace(gainText, '')
+                compareText = cardText.replace(gainsText, '')
+
+                if (compareText.includes(keyword.toLowerCase())) {
                     this.cards[index].requiredKeywords.push(keyword)
                 }
             }
 
             for (const classification of this.classifications) {
-                if (this.cards[index].sanitizedText.includes(classification.toLowerCase())) {
+                if (cardText.includes(classification.toLowerCase())) {
                     this.cards[index].requiredClassifications.push(classification)
                 }
             }
@@ -25,7 +37,7 @@ export default class DeckGenerator {
                     continue // Skip Character type, since they are almost always required
                 }
 
-                if (this.cards[index].sanitizedText.includes(type.toLowerCase())) {
+                if (cardText.includes(type.toLowerCase())) {
                     this.cards[index].requiredTypes.push(type)
                 }
 
@@ -33,13 +45,13 @@ export default class DeckGenerator {
                     this.cards[index].requiredTypes.push(type)
                 }
 
-                if (this.cards[index].sanitizedText.includes('sing') && type === 'Song') {
+                if (cardText.includes('sing') && type === 'Song') {
                     this.cards[index].requiredTypes.push(type)
                 }
             }
 
             for (const cardName of this.cardNames) {
-                if (this.cards[index].sanitizedText.includes(` ${cardName.toLowerCase()}`)) {
+                if (cardText.includes(` ${cardName.toLowerCase()}`)) {
                     this.cards[index].requiredCardNames.push(cardName)
                 }
 
@@ -78,7 +90,8 @@ export default class DeckGenerator {
         return [...new Set(this.cards.map(card => card.name))]
     }
 
-    generateDeck(inks, deck = [], triesRemaining = 10) {
+    generateDeck(inks, deck = [], triesRemaining = 50) {
+        console.log(`Generating deck, ${triesRemaining} tries remaining`)
         const cardsOfInk = this.cards.filter(card => inks.includes(card.ink))
         if (cardsOfInk.length === 0) {
             return []
@@ -108,14 +121,14 @@ export default class DeckGenerator {
 
         if (triesRemaining > 0) {
             triesRemaining--
-            deck = this.removeCardsWithoutRequirements(deck, triesRemaining)
+            deck = this.validateAndRetry(deck, triesRemaining)
         }
 
         return deck
     }
 
     pickRandomCard(cards, deck) {
-        if (deck.length < 5) {
+        if (deck.length < 2) {
             const buildAroundTypes = ['Song', 'Shift', 'Bulk', 'Item']
             const randomBuildAroundType = buildAroundTypes[Math.floor(Math.random() * buildAroundTypes.length)]
             console.log(`Building around ${randomBuildAroundType}`)
@@ -167,9 +180,24 @@ export default class DeckGenerator {
         return deck.length >= 60
     }
 
-    removeCardsWithoutRequirements(deck, triesRemaining) {
+    validateAndRetry(deck, triesRemaining) {
+        let deckLength = deck.length
+        let previousDeckLength = deckLength = null
+        do {
+            previousDeckLength = deckLength
+            deck = this.removeCardsWithoutRequirements(deck)
+            deckLength = deck.length
+        } while (deckLength !== previousDeckLength)
+
+        if (deckLength === 60) {
+            return deck
+        }
+
+        return this.generateDeck(deck.map(card => card.ink), deck, triesRemaining)
+    }
+
+    removeCardsWithoutRequirements(deck) {
         const uniqueCardsInDeck = []
-        const uniqueInksInDeck = [...new Set(deck.map(card => card.ink))]
         for (const card of deck) {
             if (!uniqueCardsInDeck.includes(card)) {
                 uniqueCardsInDeck.push(card)
@@ -183,11 +211,7 @@ export default class DeckGenerator {
             }
         }
 
-        if (deck.length === 60) {
-            return deck
-        }
-
-        return this.generateDeck(uniqueInksInDeck, deck, triesRemaining)
+        return deck
     }
 
     cardHasMissingRequirements(card, deck) {
