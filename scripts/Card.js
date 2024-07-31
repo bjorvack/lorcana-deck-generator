@@ -130,7 +130,7 @@ export default class Card {
 
         const cardNamesInDeck = deck.map(card => card.name)
 
-        return this.requiredCardNames.every(cardName => cardNamesInDeck.includes(cardName))
+        return this.requiredCardNames.some(cardName => cardNamesInDeck.includes(cardName))
     }
 
     deckMeetsShiftRequirements(deck) {
