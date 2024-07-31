@@ -19,6 +19,9 @@ export default class Card {
         this.requiredClassifications = []
         this.requiredTypes = []
         this.requiredCardNames = []
+
+        // Lowercase all letters between {} in the card's text
+        this.text = this.text.replace(/{[^}]+}/g, match => match.toLowerCase())
     }
 
     get title() {
