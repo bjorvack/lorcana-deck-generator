@@ -84,7 +84,8 @@ export default class Card {
         return this.deckMeetsRequiredKeywords(deck) &&
             this.deckMeetsRequiredClassifications(deck) &&
             this.deckMeetsRequiredTypes(deck) &&
-            this.deckMeetsRequiredCardNames(deck)
+            this.deckMeetsRequiredCardNames(deck) &&
+            this.deckMeetsShiftRequirements(deck)
     }
 
     deckMeetsRequiredKeywords(deck) {
@@ -125,5 +126,25 @@ export default class Card {
         const cardNamesInDeck = deck.map(card => card.name)
 
         return this.requiredCardNames.every(cardName => cardNamesInDeck.includes(cardName))
+    }
+
+    deckMeetsShiftRequirements(deck) {
+        if (!this.keywords.includes('Shift')) {
+            return true
+        }
+
+        const morphInDeck = deck.filter(deckCard => deckCard.id === 'crd_be70d689335140bdadcde5f5356e169d').length > 0
+        if (morphInDeck) {
+            return true
+        }
+
+        const cardsWithSameNameButDifferentVersion = deck.filter(deckCard => deckCard.name === this.name && deckCard.version !== this.version)
+        cardsWithSameNameButDifferentVersion.forEach(card => {
+            if (card.cost < this.cost) {
+                return true
+            }
+        })
+
+        return false
     }
 }
