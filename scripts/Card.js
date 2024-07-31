@@ -25,7 +25,7 @@ export default class Card {
     }
 
     get title() {
-        return this.name + (this.version ? ` - ${this.version}` : '')
+        return this.name + (this.version ? `_${this.version}` : '')
     }
 
     get singCost() {

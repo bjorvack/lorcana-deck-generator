@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         deckGenerator,
         loadingScreenDialog,
         document.querySelector('[data-role=generator]'),
+        document.querySelector('[data-role=test]'),
         document.querySelector('[data-role=clear]'),
         document.querySelector('#primaryInk'),
         document.querySelector('#secondaryInk'),

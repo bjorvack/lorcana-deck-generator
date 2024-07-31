@@ -3,6 +3,7 @@ export default class UI {
         deckGenerator,
         loadingScreen,
         generateDeckButton,
+        testDeckButton,
         clearDeckButton,
         primaryInk,
         secondaryInk,
@@ -17,6 +18,7 @@ export default class UI {
         this.deckGenerator = deckGenerator
         this.loadingScreen = loadingScreen
         this.generateDeckButton = generateDeckButton
+        this.testDeckButton = testDeckButton
         this.clearDeckButton = clearDeckButton
         this.primaryInk = primaryInk
         this.secondaryInk = secondaryInk
@@ -122,6 +124,10 @@ export default class UI {
                 }
             }
         })
+
+        this.testDeckButton.addEventListener('click', () => {
+            window.open( this.inkTableLink, '_blank')
+        })
     }
 
     toggleInk() {
@@ -168,7 +174,8 @@ export default class UI {
                 card.keywords.join(' ').toLowerCase().includes(search) ||
                 card.types.join(' ').toLowerCase().includes(search) ||
                 card.ink.toLowerCase().includes(search) ||
-                card.classifications.join(' ').toLowerCase().includes(search)
+                card.classifications.join(' ').toLowerCase().includes(search) ||
+                card.sanitizedText.includes(search)
             )
         }
 
@@ -223,6 +230,9 @@ export default class UI {
             this.addCard(card)
         })
 
+        this.testDeckButton.classList.remove('hidden')
+        this.generateDeckButton.classList.add('hidden')
+
         if (this.deck.length < 60) {
             const cardContainer = document.createElement('div')
             cardContainer.dataset.role = 'card-container'
@@ -232,6 +242,9 @@ export default class UI {
             addButton.textContent = 'Add card'
             addButton.dataset.role = 'add-card'
             cardContainer.appendChild(addButton)
+
+            this.testDeckButton.classList.add('hidden')
+            this.generateDeckButton.classList.remove('hidden')
         }
     }
 
@@ -262,5 +275,23 @@ export default class UI {
         this.deck = this.deck.filter(card => this.inks.includes(card.ink))
         this.renderDeck()
         this.chart.renderChart(this.deck)
+    }
+
+    get inkTableLink() {
+        const randomId = Math.random().toString(36).substring(7)
+        let deckName = `Generated Deck: ${this.inks[0]} - ${this.inks[1]} - ${randomId}`
+        // url encode deckName
+        deckName = encodeURIComponent(deckName)
+        let base64Id = ''
+        const uniqueCardsInDeck = [...new Set(this.deck.map(card => card.title))]
+        for (const card of uniqueCardsInDeck) {
+            const amountOfCardsWithSameTitle = this.deck.filter(deckCard => deckCard.title === card).length
+            base64Id += `${card}$${amountOfCardsWithSameTitle}|`
+        }
+
+        console.log(base64Id)
+        console.log(btoa(base64Id))
+
+        return `https://inktable.net/lor/import?svc=dreamborn&name=${deckName}&id=${btoa(base64Id)}`
     }
 }
