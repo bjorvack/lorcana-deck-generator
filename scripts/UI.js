@@ -213,7 +213,7 @@ export default class UI {
                     return a.cost - b.cost
                 }
 
-                return a.name < b.name ? -1 : 1
+                return a.title < b.title ? -1 : 1
             })
     }
 
