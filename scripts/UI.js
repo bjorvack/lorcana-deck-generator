@@ -74,24 +74,32 @@ export default class UI {
     toggleInk() {
         const inks = []
 
-        const primaryInk = this.primaryInk.options[this.primaryInk.selectedIndex]
-        if (primaryInk.value !== 'Random') {
-            inks.push(primaryInk.value)
-        }
-
-        const secondaryInk = this.secondaryInk.options[this.secondaryInk.selectedIndex]
-        if (secondaryInk.value !== 'Random') {
-            inks.push(secondaryInk.value)
-        }
-
+        let primaryInk = this.primaryInk.options[this.primaryInk.selectedIndex]
+        let secondaryInk = this.secondaryInk.options[this.secondaryInk.selectedIndex]
         const possibleInks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
-        while (inks.length < 2) {
-            inks.push(possibleInks[Math.floor(Math.random() * possibleInks.length)])
+
+        if (primaryInk.value === 'Random') {
+            const randomInk = possibleInks[Math.floor(Math.random() * possibleInks.length)]
+            // Select the primary option where the value is the same as the random ink
+            const option = Array.from(this.primaryInk.options).find(option => option.value === randomInk)
+            option.selected = true
+
+            primaryInk = option
         }
 
-        console.log(inks)
+        if (secondaryInk.value === 'Random') {
+            const randomInk = possibleInks[Math.floor(Math.random() * possibleInks.length)]
+            // Select the secondary option where the value is the same as the random ink
+            const option = Array.from(this.secondaryInk.options).find(option => option.value === randomInk)
+            option.selected = true
 
-        this.inks = inks
+            secondaryInk = option
+        }
+
+        inks.push(primaryInk.value)
+        inks.push(secondaryInk.value)
+
+        this.inks = inks.sort()
         this.removeCardsFromWrongInk()
     }
 
