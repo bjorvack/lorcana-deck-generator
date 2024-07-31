@@ -84,6 +84,14 @@ export default class UI {
             this.cardSelectContainer.close()
         })
 
+        this.cardSelectContainer.querySelector('[data-role=filter]').addEventListener('change', () => {
+            this.addPickableCards()
+        })
+
+        this.cardSelectContainer.querySelector('[data-role=filter]').addEventListener('input', () => {
+            this.addPickableCards()
+        })
+
         this.cardSelectContainer.addEventListener('click', event => {
             const closestButton = event.target.closest('[data-role=add-card-to-deck]')
             if (closestButton) {
@@ -94,6 +102,9 @@ export default class UI {
                 this.renderDeck()
                 this.addPickableCards()
                 this.chart.renderChart(this.deck)
+                if (this.deck.length === 60) {
+                    this.cardSelectContainer.close()
+                }
             }
         })
     }
@@ -132,11 +143,26 @@ export default class UI {
     }
 
     addPickableCards() {
-        const possibleCards = this.getPossibleCards()
+        let possibleCards = this.getPossibleCards()
         const cardList = this.cardSelectContainer.querySelector('[data-role=card-list]')
+        const search = this.cardSelectContainer.querySelector('[data-role=filter]').value.toLowerCase()
+
+        if (search) {
+            possibleCards = possibleCards.filter(card =>
+                card.title.toLowerCase().includes(search) ||
+                card.keywords.join(' ').toLowerCase().includes(search) ||
+                card.types.join(' ').toLowerCase().includes(search) ||
+                card.ink.toLowerCase().includes(search) ||
+                card.classifications.join(' ').toLowerCase().includes(search)
+            )
+
+            console.log(search)
+        }
 
         cardList.innerHTML = ''
         possibleCards.forEach(card => {
+            const cardCountInDeck = this.deck.filter(deckCard => deckCard.id === card.id).length
+
             const cardContainer = document.createElement('div')
             cardContainer.dataset.role = 'card-container'
             cardList.appendChild(cardContainer)
@@ -152,6 +178,11 @@ export default class UI {
             addButton.dataset.role = 'add-card-to-deck'
             addButton.dataset.card = card.id
             cardContainer.appendChild(addButton)
+
+            const cardCount = document.createElement('span')
+            cardCount.textContent = `${cardCountInDeck}`
+            cardCount.classList.add('card-count')
+            cardContainer.appendChild(cardCount)
         })
     }
 
