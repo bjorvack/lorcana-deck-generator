@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.querySelector('#secondaryInk'),
         document.querySelector('[data-role=deck]'),
         document.querySelector('[data-role=card-preview]'),
+        document.querySelector('[data-role=card-select]'),
         chart
     )
 })

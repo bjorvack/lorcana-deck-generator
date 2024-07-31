@@ -6,6 +6,7 @@ export default class UI {
         secondaryInk,
         deckContainer,
         dialogContainer,
+        cardSelectContainer,
         chart
     ) {
         this.deck = []
@@ -17,6 +18,7 @@ export default class UI {
         this.secondaryInk = secondaryInk
         this.deckContainer = deckContainer
         this.dialogContainer = dialogContainer
+        this.cardSelectContainer = cardSelectContainer
         this.chart = chart
 
         this.init()
@@ -32,6 +34,7 @@ export default class UI {
             this.deck = this.deckGenerator.generateDeck(this.inks, this.deck)
 
             this.renderDeck()
+            this.addPickableCards()
             this.chart.renderChart(this.deck)
         })
 
@@ -60,14 +63,25 @@ export default class UI {
                     this.deck.splice(index, 1)
                 }
 
-
                 this.renderDeck()
+                this.addPickableCards()
                 this.chart.renderChart(this.deck)
+            }
+        })
+
+        this.deckContainer.addEventListener('click', event => {
+            const closestButton = event.target.closest('[data-role=add-card]')
+            if (closestButton) {
+                this.cardSelectContainer.showModal()
             }
         })
 
         this.dialogContainer.querySelector('[data-role=close]').addEventListener('click', () => {
             this.dialogContainer.close()
+        })
+
+        this.cardSelectContainer.querySelector('[data-role=close]').addEventListener('click', () => {
+            this.cardSelectContainer.close()
         })
     }
 
@@ -101,6 +115,44 @@ export default class UI {
 
         this.inks = inks.sort()
         this.removeCardsFromWrongInk()
+        this.addPickableCards()
+    }
+
+    addPickableCards() {
+        const possibleCards = this.getPossibleCards()
+        const cardList = this.cardSelectContainer.querySelector('[data-role=card-list]')
+
+        cardList.innerHTML = ''
+        possibleCards.forEach(card => {
+            const cardContainer = document.createElement('div')
+            cardContainer.dataset.role = 'card-container'
+            cardList.appendChild(cardContainer)
+
+            const image = document.createElement('img')
+            image.src = card.image
+            image.alt = card.title
+        })
+    }
+
+    getPossibleCards() {
+        return this.deckGenerator.cards
+            .filter(card => this.inks.includes(card.ink))
+            .filter(card => this.deck.filter(deckCard => deckCard.id === card.id).length < 4)
+            .sort((a, b) => {
+                if (a.ink !== b.ink) {
+                    return this.inks.indexOf(a.ink) - this.inks.indexOf(b.ink)
+                }
+
+                if (a.types[0] !== b.types[0]) {
+                    return a.types[0] < b.types[0] ? -1 : 1
+                }
+
+                if (a.cost !== b.cost) {
+                    return a.cost - b.cost
+                }
+
+                return a.name < b.name ? -1 : 1
+            })
     }
 
     renderDeck() {
