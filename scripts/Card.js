@@ -81,11 +81,13 @@ export default class Card {
     }
 
     deckMeetsRequirements(deck) {
-        return this.deckMeetsRequiredKeywords(deck) &&
-            this.deckMeetsRequiredClassifications(deck) &&
-            this.deckMeetsRequiredTypes(deck) &&
-            this.deckMeetsRequiredCardNames(deck) &&
-            this.deckMeetsShiftRequirements(deck)
+        const otherCardsInDeck = deck.filter(deckCard => deckCard.id !== this.id)
+
+        return this.deckMeetsRequiredKeywords(otherCardsInDeck) &&
+            this.deckMeetsRequiredClassifications(otherCardsInDeck) &&
+            this.deckMeetsRequiredTypes(otherCardsInDeck) &&
+            this.deckMeetsRequiredCardNames(otherCardsInDeck) &&
+            this.deckMeetsShiftRequirements(otherCardsInDeck)
     }
 
     deckMeetsRequiredKeywords(deck) {

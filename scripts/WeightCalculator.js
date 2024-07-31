@@ -117,7 +117,7 @@ export default class WeightCalculator {
         // If the card is in the deck, multiply the weight
         const cardInDeckCount = deck.filter(deckCard => deckCard.id === card.id).length
         if (cardInDeckCount > 0) {
-            weight *= Math.pow((10 - cardInDeckCount), 2)
+            weight *= Math.pow((10 - cardInDeckCount), 2 - ((10 - card.cost) / 10))
         }
 
         return weight
