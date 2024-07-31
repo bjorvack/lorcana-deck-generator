@@ -110,7 +110,7 @@ export default class Card {
 
         const classificationsInDeck = deck.map(card => card.classifications).flat()
 
-        return this.requiredClassifications.every(classification => classificationsInDeck.includes(classification))
+        return this.requiredClassifications.some(classification => classificationsInDeck.includes(classification))
     }
 
     deckMeetsRequiredTypes(deck) {
