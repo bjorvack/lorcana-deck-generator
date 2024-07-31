@@ -3,7 +3,7 @@ export default class WeightCalculator {
         this.cardCostWeight = 10
         this.inkwellWeight = 1.2
         this.loreWeight = 2
-        this.hasAbillityWeight = 0.5
+        this.hasAbillityWeight = 1.5
         this.requiredCardsWeight = 2.1
     }
     baseWeight(card) {
@@ -16,7 +16,7 @@ export default class WeightCalculator {
             weight *= 0.7
 
             if (card.sanitizedText.includes('This character can\'t {e} to sing songs.'.toLowerCase())) {
-                weight *= 0.5 // Characters that can't sing are less good
+                weight *= 0.1 // Characters that can't sing are less good
             }
         }
 
@@ -36,7 +36,8 @@ export default class WeightCalculator {
 
         const cardNamesInDeck = deck.map(card => card.name) ?? []
         if (card.types.includes('Character') && cardNamesInDeck.includes(card.name)) {
-            weight *= 5 // Make it more likely to add card with the same name (e.g. different versions)
+            const amountOfCardsWithSameName = cardNamesInDeck.filter(name => name === card.name).length
+            weight *= Math.max(16 - amountOfCardsWithSameName, 1.5) // Make it more likely to add card with the same name (e.g. different versions)
         }
 
         const cardTitlesInDeck = deck.map(card => card.title) ?? []

@@ -196,6 +196,11 @@ dialog[data-role=loading] h2 {
     line-height: 100vh;
 }
 
+dialog[data-role=card-preview] {
+    width: fit-content;
+    aspect-ratio: 100/139;
+}
+
 @media (max-width: 764px) {
     .inks {
         display: block;
