@@ -94,7 +94,6 @@ export default class UI {
                 this.renderDeck()
                 this.addPickableCards()
                 this.chart.renderChart(this.deck)
-                this.cardSelectContainer.close()
             }
         })
     }
