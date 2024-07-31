@@ -8,7 +8,7 @@ export default class DeckGenerator {
 
     initializeCardRequirements() {
         for (const index in this.cards) {
-            const cardText = this.cards[index].text
+            const cardText = this.cards[index].sanitizedText
 
             if (cardText === undefined || cardText === null || cardText === '') {
                 continue

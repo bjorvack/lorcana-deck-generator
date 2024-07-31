@@ -164,8 +164,6 @@ export default class UI {
                 card.ink.toLowerCase().includes(search) ||
                 card.classifications.join(' ').toLowerCase().includes(search)
             )
-
-            console.log(search)
         }
 
         cardList.innerHTML = ''
@@ -180,6 +178,7 @@ export default class UI {
             image.src = card.image
             image.alt = card.title
             image.dataset.role = 'card'
+            image.dataset.weight = this.deckGenerator.weightCalculator.calculateWeight(card, this.deck)
             cardContainer.appendChild(image)
 
             const addButton = document.createElement('button')
