@@ -1,4 +1,5 @@
 import { Chart as ChartJS } from 'chart.js/auto'
+import pattern from 'patternomaly'
 
 export default class Chart
 {
@@ -27,15 +28,29 @@ export default class Chart
 
         for (const ink of uniqueInks) {
             const cardsOfInk = deck.filter(card => card.ink === ink)
-            const costCounts = Array.from({ length: 11 }, () => 0)
+            const inkableCostCounts = Array.from({ length: 11 }, () => 0)
+            const nonInkableCostCounts = Array.from({ length: 11 }, () => 0)
             for (const card of cardsOfInk) {
-                costCounts[card.cost]++
+                if (card.inkwell) {
+                    inkableCostCounts[card.cost]++
+
+                    continue
+                }
+
+                nonInkableCostCounts[card.cost]++
             }
+            console.log(inkableCostCounts, nonInkableCostCounts)
 
             datasets.push({
                 label: ink,
-                data: costCounts,
+                data: inkableCostCounts,
                 backgroundColor: colors[ink],
+            })
+
+            datasets.push({
+                label: `${ink} (Non-Inkable)`,
+                data: nonInkableCostCounts,
+                backgroundColor: pattern.draw('diagonal', colors[ink]),
             })
         }
 
@@ -50,7 +65,7 @@ export default class Chart
                 options:{
                     scales: {
                         x: {
-                            stacked: true
+                            stacked: true,
                         },
                         y: {
                             stacked: true
