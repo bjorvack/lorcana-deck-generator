@@ -64,6 +64,10 @@ export default class WeightCalculator {
             weight *= Math.pow(this.requiredCardsWeight, 2)
         }
 
+        if (deck.length >= 45 && card.deckMeetsRequirements(deck)) {
+            weight *= 0.000001
+        }
+
         // Handle shift cards
         const morphInDeck = deck.filter(deckCard => deckCard.id === 'crd_be70d689335140bdadcde5f5356e169d').length > 0
         if (card.keywords.includes('Shift') && (cardNamesInDeck.includes(card.name) || morphInDeck)) {
