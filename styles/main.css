@@ -185,8 +185,15 @@ dialog[data-role=loading] {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #000;
     border: none;
+}
+
+dialog[data-role=loading] h2 {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    line-height: 100vh;
 }
 
 @media (max-width: 764px) {
