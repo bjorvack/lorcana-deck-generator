@@ -187,13 +187,6 @@ export default class DeckGenerator {
             return deck
         }
 
-        // Remove 20% of the remaining cards, this is to prevent infinite loops
-        const cardsToRemove = Math.ceil((60 - deck.length) * 0.2)
-        for (let i = 0; i < cardsToRemove; i++) {
-            console.log(`Removing random cards from deck`)
-            deck = deck.filter((_, index) => index !== Math.floor(Math.random() * deck.length))
-        }
-
         return this.generateDeck(uniqueInksInDeck, deck, triesRemaining)
     }
 
