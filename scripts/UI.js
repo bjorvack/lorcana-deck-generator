@@ -182,15 +182,10 @@ export default class UI {
             cardContainer.appendChild(image)
 
             const addButton = document.createElement('button')
-            addButton.textContent = 'Add card'
+            addButton.innerHTML = `Add card <small>(${cardCountInDeck}/4)</small>`
             addButton.dataset.role = 'add-card-to-deck'
             addButton.dataset.card = card.id
             cardContainer.appendChild(addButton)
-
-            const cardCount = document.createElement('span')
-            cardCount.textContent = `${cardCountInDeck}`
-            cardCount.classList.add('card-count')
-            cardContainer.appendChild(cardCount)
         })
     }
 
