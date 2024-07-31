@@ -207,6 +207,14 @@ export default class DeckGenerator {
         for (const card of uniqueCardsInDeck) {
             if (this.cardHasMissingRequirements(card, uniqueCardsInDeck)) {
                 console.log(`Deck is missing requirements, removing ${card.title}`)
+                const requirements = {
+                    keywords: card.deckMeetsRequiredKeywords(deck),
+                    classifications: card.deckMeetsRequiredClassifications(deck),
+                    types: card.deckMeetsRequiredTypes(deck),
+                    cardNames: card.deckMeetsRequiredCardNames(deck),
+                    shiftRequirements: card.deckMeetsShiftRequirements(deck),
+                }
+                console.table(requirements)
                 deck = deck.filter(deckCard => deckCard.id !== card.id)
             }
         }
@@ -215,34 +223,6 @@ export default class DeckGenerator {
     }
 
     cardHasMissingRequirements(card, deck) {
-        const meetsRequirements = card.deckMeetsRequirements(deck)
-        const missingShiftSource = this.shiftCardHasNoLowerCostCardsInDeck(card, deck)
-        const singerHasNoSongToSing = this.singerHasNoSongToSing(card, deck)
-
-        return !meetsRequirements ||
-            missingShiftSource ||
-            singerHasNoSongToSing
-    }
-
-    singerHasNoSongToSing(card, deck) {
-        if (!card.keywords.includes('Singer')) {
-            return false
-        }
-
-        const songsInDeck = deck.filter(deckCard => deckCard.types.includes('Song'))
-        if (card.singCost >= 1) {
-            return !songsInDeck.some(deckCard => deckCard.cost >= card.singCost)
-        }
-
-        return !songsInDeck.some(deckCard => deckCard.cost === card.singCost)
-    }
-
-    shiftCardHasNoLowerCostCardsInDeck(card, deck) {
-        if (!card.keywords.includes('Shift')) {
-            return false
-        }
-
-        const cardsWithSameName = deck.filter(deckCard => deckCard.name === card.name)
-        return !cardsWithSameName.some(deckCard => deckCard.cost < card.cost)
+        return !card.deckMeetsRequirements(deck)
     }
 }

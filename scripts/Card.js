@@ -140,13 +140,14 @@ export default class Card {
             return true
         }
 
-        const cardsWithSameNameButDifferentVersion = deck.filter(deckCard => deckCard.name === this.name && deckCard.version !== this.version)
+        const cardsWithSameNameButDifferentVersion = deck.filter(deckCard => deckCard.name === this.name && deckCard.id !== this.id)
+        let foundCheaperVersion = false
         cardsWithSameNameButDifferentVersion.forEach(card => {
             if (card.cost < this.cost) {
-                return true
+                foundCheaperVersion = true
             }
         })
 
-        return false
+        return foundCheaperVersion
     }
 }

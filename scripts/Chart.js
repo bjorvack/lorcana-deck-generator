@@ -39,7 +39,6 @@ export default class Chart
 
                 nonInkableCostCounts[card.cost]++
             }
-            console.log(inkableCostCounts, nonInkableCostCounts)
 
             datasets.push({
                 label: ink,
