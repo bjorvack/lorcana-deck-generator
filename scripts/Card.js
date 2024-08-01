@@ -1,3 +1,20 @@
+const singerRegex = /Singer (\d+)/
+const bodyguardRegex = /Bodyguard \(This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.\)/
+const recklessRegex = /Reckless \(This character can't quest and must challenge each turn if able.\)/
+const wardRegex = /Ward \(Opponents can't choose this character except to challenge.\)/
+const evasiveRegex = /Evasive \(Only characters with Evasive can challenge this character.\)/
+const resistRegex = /Resist \+(\d+) \(Damage dealt to this character is reduced by (\d+)\.\)/
+const challengerRegex = /Challenger \+(\d+) \(While challenging, this character gets \+(\d+) \{s\}\)/
+
+const shiftRegexes = [
+    /Shift \d+ \(You may pay \d+ {i} to play this on top of one of your characters named .*\.\)/,
+    /Shift: Discard a\(n\) .+ card \(You may discard a\(n\) .+ card to play this on top of one of your characters named .*\.\)/,
+    /Shift: Discard \d+ cards \(You may discard \d+ cards to play this on top of one of your characters named .*\.\)/,
+]
+
+const morphId = 'crd_be70d689335140bdadcde5f5356e169d'
+const dalmatianPuppyId = 'crd_97f8be5e176144378d58823c6f9c29c7'
+
 export default class Card {
     constructor(data) {
         this.id = data.id
@@ -19,20 +36,37 @@ export default class Card {
         this.requiredClassifications = []
         this.requiredTypes = []
         this.requiredCardNames = []
-        this.canShift = false
 
         // Lowercase all letters between {} in the card's text
         this.text = this.text.replace(/{[^}]+}/g, match => match.toLowerCase())
+
+        this.initialize()
+    }
+
+    initialize() {
+        this.hasBodyguard = this.keywords.includes('Bodyguard')
+        this.hasReckless = this.keywords.includes('Reckless')
+        this.hasRush = this.keywords.includes('Rush')
+        this.hasWard = this.keywords.includes('Ward')
+        this.hasEvasive = this.keywords.includes('Evasive')
+        this.hasResist = this.keywords.includes('Resist')
+        this.hasChallenger = this.keywords.includes('Challenger')
+        this.hasSinger = this.keywords.includes('Singer')
+        this.hasShift = this.keywords.includes('Shift')
     }
 
     get title() {
         return this.name + (this.version ? `_${this.version}` : '')
     }
 
+    get maxAmount() {
+        return this.id === dalmatianPuppyId ? 60 : 4
+    }
+
     get singCost() {
-        if (this.keywords.includes('Singer')) {
+        if (this.hasSinger) {
             // Look for the Singer x text in the card's text
-            const match = this.text.match(/Singer (\d+)/)
+            const match = this.text.match(singerRegex)
             if (match) {
                 return parseInt(match[1])
             }
@@ -41,59 +75,51 @@ export default class Card {
         return this.cost
     }
 
+    get resistAmount() {
+        if (this.hasResist) {
+            // Look for the Resist +x text in the card's text
+            const match = this.text.match(resistRegex)
+            if (match) {
+                return parseInt(match[1])
+            }
+        }
+
+        return 0
+    }
+
+    get challengerAmount() {
+        if (this.hasChallenger) {
+            // Look for the Challenger +x text in the card's text
+            const match = this.text.match(challengerRegex)
+            if (match) {
+                return parseInt(match[1])
+            }
+        }
+
+        return 0
+    }
+
     get sanitizedText() {
-        // Remove the "Singer x (This character counts as cost x to sing songs.)" text from the card's text
-        let text = this.text.replace(/Singer (\d+) \(This character counts as cost \d+ to sing songs.\)/, '')
+        const patterns = [
+            singerRegex,
+            bodyguardRegex,
+            recklessRegex,
+            wardRegex,
+            evasiveRegex,
+            resistRegex,
+            challengerRegex,
+            ...shiftRegexes,
+        ]
 
-        // Remove "(A character with cost x or more can {E} to sing this song for free.)"
-        text = text.replace(/\(A character with cost \d+ or more can {e} to sing this song for free.\)/, '')
+        let text = this.text;
+        patterns.forEach(pattern => {
+            text = text.replace(pattern, '');
+        });
 
-        // Remove "Rush (This character can challenge the turn they're played.)"
-        text = text.replace(/Rush \(This character can challenge the turn they're played.\)/, '')
+        // Remove all text between ()
+        text = text.replace(/\([^)]+\)/g, '')
 
-        // Remove "Bodyguard (This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.)"
-        text = text.replace(/Bodyguard \(This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.\)/, '')
-
-        // Remove "Ward (Opponents can't choose this character except to challenge.)"
-        text = text.replace(/Ward \(Opponents can't choose this character except to challenge.\)/, '')
-
-        // Remove "Evasive (Only characters with Evasive can challenge this character.)"
-        text = text.replace(/Evasive \(Only characters with Evasive can challenge this character.\)/, '')
-
-        // Remove "Challenger +x (While challenging, this character gets +x {S}.)"
-        text = text.replace(/Challenger \+\d+ \(While challenging, this character gets \+\d+ {s}.\)/, '')
-
-        // Remove "Reckless (This character can't quest and must challenge each turn if able.)"
-        text = text.replace(/Reckless \(This character can't quest and must challenge each turn if able.\)/, '')
-
-        // Remove "Shift x (You may pay x {I} to play this on top of one of your characters named YYYYYYYYYY.)
-        text = text.replace(/Shift \d+ \(You may pay \d+ {i} to play this on top of one of your characters named .*\.\)/, '')
-
-        let copyText = text
-        // Remove "Shift: Discard a(n) XXXXXXX card (You may discard a(n) XXXXXXX card to play this on top of one of your characters named YYYYYY.)"
-        text = text.replace(/Shift: Discard a\(n\) .+ card \(You may discard a\(n\) .+ card to play this on top of one of your characters named .*\.\)/, '')
-        if (copyText !== text) {
-            this.canShift = true
-        }
-
-        copyText = text
-        // Remove "Shift: Discard 2 cards (You may discard 2 cards to play this on top of one of your characters named Flotsam or Jetsam.)"
-        text = text.replace(/Shift: Discard \d+ cards \(You may discard \d+ cards to play this on top of one of your characters named .*\.\)/, '')
-        if (copyText !== text) {
-            this.canShift = true
-        }
-
-        copyText = text
-        // Remove "Resist +X (Damage dealt to this character is reduced by X.)
-        text = text.replace(/Resist \+\d+ \(Damage dealt to this character is reduced by \d+.\)/, '')
-        if (copyText !== text) {
-            this.canShift = true
-        }
-
-        // Remove all capitalized words
-        text = text.replace(/\b[A-Z]+\b(?:\s+[A-Z]+\b)*/g, '')
-
-        return text.toLowerCase()
+        return text.toLowerCase();
     }
 
     deckMeetsRequirements(deck) {
@@ -104,6 +130,25 @@ export default class Card {
             this.deckMeetsRequiredTypes(otherCardsInDeck) &&
             this.deckMeetsRequiredCardNames(otherCardsInDeck) &&
             this.deckMeetsShiftRequirements(otherCardsInDeck)
+    }
+
+    hasRequirementsForDeck(deck) {
+        const uniqueDeckRequiredKeywords = []
+        const uniqueDeckRequiredClassifications = []
+        const uniqueDeckRequiredTypes = []
+        const uniqueDeckRequiredCardNames = []
+
+        deck.forEach(card => {
+            uniqueDeckRequiredKeywords.push(...card.requiredKeywords)
+            uniqueDeckRequiredClassifications.push(...card.requiredClassifications)
+            uniqueDeckRequiredTypes.push(...card.requiredTypes)
+            uniqueDeckRequiredCardNames.push(...card.requiredCardNames)
+        })
+
+        return uniqueDeckRequiredKeywords.some(keyword => this.keywords.includes(keyword)) ||
+            uniqueDeckRequiredClassifications.some(classification => this.classifications.includes(classification)) ||
+            uniqueDeckRequiredTypes.some(type => this.types.includes(type)) ||
+            uniqueDeckRequiredCardNames.some(cardName => this.name.includes(cardName))
     }
 
     deckMeetsRequiredKeywords(deck) {
@@ -151,7 +196,7 @@ export default class Card {
             return true
         }
 
-        const morphInDeck = deck.filter(deckCard => deckCard.id === 'crd_be70d689335140bdadcde5f5356e169d').length > 0
+        const morphInDeck = deck.filter(deckCard => deckCard.id === morphId).length > 0
         if (morphInDeck) {
             return true
         }
@@ -167,5 +212,21 @@ export default class Card {
         })
 
         return foundCheaperVersion
+    }
+
+    canShiftFrom(card) {
+        if (!this.hasShift) {
+            console.log(`Card ${this.title} can't shift`)
+            return false
+        }
+
+        if (card.id === morphId) {
+            return true
+        }
+
+        const ownNames = this.name.split('&').map(name => name.trim())
+        const cardNames = card.name.split('&').map(name => name.trim())
+
+        return ownNames.some(name => cardNames.includes(name))
     }
 }

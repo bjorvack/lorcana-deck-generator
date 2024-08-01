@@ -27,7 +27,11 @@ export default class DeckGenerator {
             }
 
             for (const classification of this.classifications) {
-                if (cardText.includes(classification.toLowerCase())) {
+                let challengeText = `challenges a ${classification.toLowerCase()}`
+
+                let compareText = cardText.replace(challengeText, '')
+
+                if (compareText.includes(classification.toLowerCase())) {
                     this.cards[index].requiredClassifications.push(classification)
                 }
             }
@@ -57,7 +61,7 @@ export default class DeckGenerator {
                 }
             }
 
-            if (this.cards[index].canShift) {
+            if (this.cards[index].hasShift) {
                 let name = [this.cards[index].name]
                 if (this.cards[index].name.includes('&')) {
                     name = this.cards[index].name.split('&').map(name => name.trim())
@@ -76,7 +80,17 @@ export default class DeckGenerator {
 
     get keywords () {
         // Get all unique keywords from the cards
-        return [...new Set(this.cards.map(card => card.keywords).flat())]
+        return [
+            'Ward',
+            'Evasive',
+            'Bodyguard',
+            'Resist',
+            'Singer',
+            'Shift',
+            'Reckless',
+            'Challenger',
+            'Rush',
+        ]
     }
 
     get classifications () {
@@ -133,23 +147,12 @@ export default class DeckGenerator {
 
     pickRandomCard(cards, deck) {
         if (deck.length < 2) {
-            const buildAroundTypes = ['Song', 'Shift', 'Bulk', 'Item']
-            const randomBuildAroundType = buildAroundTypes[Math.floor(Math.random() * buildAroundTypes.length)]
-            console.log(`Building around ${randomBuildAroundType}`)
-            switch (randomBuildAroundType) {
-                case 'Song':
-                    const songsAndSingers = cards.filter(card => card.types.includes('Song') || card.keywords.includes('Singer'))
-                    return songsAndSingers[Math.floor(Math.random() * songsAndSingers.length)]
-                case 'Shift':
-                    const shifts = cards.filter(card => card.keywords.includes('Shift'))
-                    return shifts[Math.floor(Math.random() * shifts.length)]
-                case 'Bulk':
-                    const bulk = cards.filter(card => card.cost > 5)
-                    return bulk[Math.floor(Math.random() * bulk.length)]
-                case 'Item':
-                    const items = cards.filter(card => card.types.includes('Item'))
-                    return items[Math.floor(Math.random() * items.length)]
-            }
+            const keyCards = cards.filter(card => card.keywords.includes('Shift') || card.cost >= 5)
+            const keyCard = keyCards[Math.floor(Math.random() * keyCards.length)]
+
+            console.log(`Picked key card ${keyCard.title}`)
+
+            return keyCard
         }
 
         const weights = cards.map(card => {

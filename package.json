@@ -6,7 +6,8 @@
   "description": "A lorcan deck generator using api.lorcast.com",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack --mode development --watch"
+    "dev": "webpack --mode development --watch",
+    "test": "jest /tests"
   },
   "devDependencies": {
     "webpack": "^5.93.0",

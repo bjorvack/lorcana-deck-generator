@@ -207,6 +207,15 @@ export default class UI {
             .filter(card => this.inks.includes(card.ink))
             .filter(card => this.deck.filter(deckCard => deckCard.id === card.id).length < 4)
             .sort((a, b) => {
+                const weightA = this.deckGenerator.weightCalculator.calculateWeight(a, this.deck)
+                const weightB = this.deckGenerator.weightCalculator.calculateWeight(b, this.deck)
+
+                if (weightA !== weightB) {
+                    return weightB - weightA
+                }
+
+                return 0
+
                 if (a.ink !== b.ink) {
                     return this.inks.indexOf(a.ink) - this.inks.indexOf(b.ink)
                 }

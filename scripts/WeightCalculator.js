@@ -1,215 +1,175 @@
 export default class WeightCalculator {
     constructor() {
-        this.cardCostWeight = 10
-        this.inkwellWeight = 1.2
-        this.loreWeight = 2
-        this.hasAbillityWeight = 1.5
-        this.requiredCardsWeight = 2.1
+        this.inkwellWeight = 0.2;
+        this.hasAbilityWeight = 0.1;
+        this.requiredCardsPunishment = 0.1;
     }
+
     baseWeight(card) {
-        let weight = Math.max(Math.pow(this.cardCostWeight - card.cost, 2), 1) // Cheap cards are better
-        weight *= (card.inkwell ? this.inkwellWeight : 1) // Inkwell cards are better
-        weight *= card.lore > 0 ? Math.pow(this.loreWeight, card.lore) : 1 // Lore is good
-        weight *= card.text !== '' ? (1 + this.hasAbillityWeight) : (1 - this.hasAbillityWeight) // Card's with text have effects, these are generally better
-
-        if (card.types.includes('Character')) {
-            weight *= 0.7
-
-            if (card.sanitizedText.includes('This character can\'t {e} to sing songs.'.toLowerCase())) {
-                weight *= 0.1 // Characters that can't sing are less good
-            }
-        }
-
-        if (card.types.includes('Action')) {
-            weight *= 0.2
-        }
-
-        if (card.types.includes('Item') || card.types.includes('Location')) {
-            weight *= 0.05
-        }
-
-        return weight
+        let weight = 11 - card.cost;
+        weight += card.inkwell ? this.inkwellWeight : 0;
+        weight += card.lore > 0 ? card.lore / 10 : 0;
+        weight += card.sanitizedText ? this.hasAbilityWeight : 0;
+        return weight;
     }
 
     calculateWeight(card, deck) {
-        let weight = this.baseWeight(card)
+        let weight = this.baseWeight(card);
+        weight = this.modifyWeightForShiftable(card, weight, deck);
+        weight = this.modifyWeightForShift(card, weight, deck);
+        weight = this.modifyWeightByEffect(card, weight);
+        weight = this.modifyWeightByKeywords(card, weight);
+        weight = this.modifyWeightByTypePresence(card, weight, deck);
+        weight = this.modifyWeightForSinger(card, weight, deck);
+        weight = this.modifyWeightForSong(card, weight, deck);
 
-        const cardTitlesInDeck = deck.map(card => card.title) ?? []
-        if (cardTitlesInDeck.includes(card.title)) {
-            switch (cardTitlesInDeck.length) {
-                case 1:
-                    weight *= 80
-                    break
-                case 2:
-                    weight *= 70
-                    break
-                case 3:
-                    weight *= 60
-                    break
-                default:
-                    weight *= 55
-                    break
-            }
+        weight = this.modifyWeightByTitlePresence(card, weight, deck);
+        weight = this.modifyWeightByRequirements(card, weight, deck);
+
+        return weight;
+    }
+
+    modifyWeightForSong(card, weight, deck) {
+        if (!card.types.includes('Song')) return weight;
+        weight += 0.05;
+
+        if (card.text.includes("Sing Together")) {
+            weight += 0.05;
         }
 
-        const nameRequirementsInDeck = deck.map(card => card.requiredCardNames).flat() ?? []
-        const amountOfRequiredNamesByName = {}
-        nameRequirementsInDeck.forEach(name => {
-            amountOfRequiredNamesByName[name] = amountOfRequiredNamesByName[name] + 1 || 1
-        })
-
-        if (nameRequirementsInDeck.includes(card.name)) {
-            const countCardNameInDeck = deck.filter(deckCard => deckCard.name === card.name).length
-
-            if (countCardNameInDeck === 0) {
-                weight *= 10000 // If the specific card is required and not in the deck, make it very likely to add it
+        const charactersInDeck = deck.filter(deckCard => deckCard.types.includes('Character')).sort((a, b) => a.singCost - b.singCost);
+        charactersInDeck.forEach(character => {
+            if (character.singCost < card.cost) {
+                weight += 0.1;
             }
 
-            if (amountOfRequiredNamesByName[card.name] * 2 > countCardNameInDeck) {
-                weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredNamesByName[card.name])
+            if (character.singCost === card.cost) {
+                weight += 0.5;
             }
-        }
+        });
 
-        const amountOfRequiredTypesInDeck = {
-            'Song': deck.filter(deckCard => deckCard.requiredTypes.includes('Song')).length,
-            'Item': deck.filter(deckCard => deckCard.requiredTypes.includes('Item')).length,
-            'Location': deck.filter(deckCard => deckCard.requiredTypes.includes('Location')).length,
-            'Action': deck.filter(deckCard => deckCard.requiredTypes.includes('Action')).length,
-        }
+        return weight;
+    }
 
-        const amountOfSongsInDeck = deck.filter(deckCard => deckCard.types.includes('Song')).length
-        if (card.types.includes('Song') &&
-            amountOfRequiredTypesInDeck['Song'] > 0 &&
-            amountOfSongsInDeck < 8
-        ) {
-            weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Song'])
-        }
-
-        const singersInDeck = deck.filter(deckCard => deckCard.keywords.includes('Singer'))
-        if (card.types.includes('Song') &&
-            Math.min(singersInDeck.length * 2, 12) > amountOfSongsInDeck
-        ) {
-            const amountOfSingersBySongCost = {}
-            singersInDeck.forEach(card => {
-                amountOfSingersBySongCost[card.cost] = amountOfSingersBySongCost[card.cost] + 1 || 1
-            })
-
-            const amountOfSongsByCost = {}
-            deck.filter(deckCard => deckCard.types.includes('Song')).forEach(card => {
-                amountOfSongsByCost[card.cost] = amountOfSongsByCost[card.cost] + 1 || 1
-            })
-
-            // Make sure that the keys are the same
-            Object.keys(amountOfSingersBySongCost).forEach(key => {
-                if (!amountOfSongsByCost[key]) {
-                    amountOfSongsByCost[key] = 0
-                }
-            })
-
-            // The song has a cost equal to the cost of a singer
-            if (amountOfSingersBySongCost[card.cost] > 0 && amountOfSongsByCost[card.cost] < amountOfSingersBySongCost[card.cost]) {
-                weight *= this.requiredCardsWeight * 5 // Make it very likely to add a song with the same cost as a singer
+    modifyWeightForSinger(card, weight, deck) {
+        if (!card.hasSinger) return weight;
+        const songsInDeck = deck.filter(deckCard => deckCard.types.includes('Song')).sort((a, b) => a.cost - b.cost);
+        songsInDeck.forEach(song => {
+            if (song.cost < card.singCost) {
+                weight += 1.2;
             }
-
-            const singerCosts = Object.keys(amountOfSingersBySongCost)
-            // If there is a singer cost lower than the song cost
-            if (singerCosts.some(cost => cost < card.cost)) {
-                weight *= Math.max(this.requiredCardsWeight * 0.5, 1.1) // Make it slightly more likely to add a song with a lower cost than a singer
+            if (song.cost === card.singCost) {
+                weight += 1.5;
             }
-
-            if (card.text.includes('Sing Together')) {
-                weight *= this.requiredCardsWeight // Make it more likely to add a song with the Sing Together ability
+            if (song.text.includes("Sing Together")) {
+                weight += 1.5;
             }
-        }
+        });
+        return weight;
+    }
 
-        const amountOfItemsInDeck = deck.filter(deckCard => deckCard.types.includes('Item')).length
-        if (card.types.includes('Item') &&
-            amountOfRequiredTypesInDeck['Item'] > 0 &&
-            amountOfItemsInDeck < 4) {
-            weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Item'])
-        }
+    modifyWeightForShiftable(card, weight, deck) {
+        if (!card.types.includes('Character')) return weight; // Only characters can shift
 
-        const amountOfLocationsInDeck = deck.filter(deckCard => deckCard.types.includes('Location')).length
-        if (card.types.includes('Location') &&
-            amountOfRequiredTypesInDeck['Location'] > 0 &&
-            amountOfLocationsInDeck < 6
-        ) {
-            weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Location'])
-        }
-
-        const amountOfActionsInDeck = deck.filter(deckCard => deckCard.types.includes('Action')).length
-        if (card.types.includes('Action') &&
-            amountOfRequiredTypesInDeck['Action'] > 0 &&
-            amountOfActionsInDeck < 12
-        ) {
-            weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Action'])
-        }
-
-        if (card.deckMeetsRequirements(deck)) {
-            weight *= Math.pow(this.requiredCardsWeight, 2)
-        }
-
-        if (deck.length >= 40 && !card.deckMeetsRequirements(deck)) {
-            weight *= 0.001
-        }
-
-        const cardsThatCanShift = deck.filter(deckCard => deckCard.canShift)
-        // Add cards to shift from
-        const uniqueShiftsInDeck = [...new Set(cardsThatCanShift.map(card => card.name))]
-        uniqueShiftsInDeck.forEach(shiftCard => {
-            let  names = [shiftCard]
-            if (shiftCard.includes('&')) {
-                names = shiftCard.split('&').map(name => name.trim())
-            }
-
-            if (names.includes(card.name)) {
-                weight *= this.requiredCardsWeight
+        const shiftTargets = deck.filter(deckCard => deckCard.hasShift && deckCard.id !== card.id)
+        const uniqueShiftTargets = []
+        shiftTargets.forEach(shiftTarget => {
+            if (!uniqueShiftTargets.includes(shiftTarget)) {
+                uniqueShiftTargets.push(shiftTarget)
             }
         })
 
-        // Add new shift targets
-        if (card.canShift && card.deckMeetsShiftRequirements(deck)) {
-            weight *= Math.pow(this.requiredCardsWeight, 20)
+        if (uniqueShiftTargets.length === 0) return weight;
+
+        for (const shiftTarget of uniqueShiftTargets) {
+            if (shiftTarget.canShiftFrom(card)) {
+                weight *= card.cost < shiftTarget.cost ? 100 : 1.1;
+
+                break
+            }
         }
 
-        // Handle known good phrases
-        // "draw a card"
-        if (card.sanitizedText.includes('draw a card')) {
-            weight *= 1.5
+        return weight;
+    }
+
+    modifyWeightForShift(card, weight, deck) {
+        if (!card.hasShift) return weight;
+        const deckCharacters = deck.filter(deckCard => deckCard.types.includes('Character')) // Only characters can shift
+
+        for (const deckCard of deckCharacters) {
+            if (card.canShiftFrom(deckCard) && card.id !== deckCard.id) {
+                weight *= deckCard.cost < card.cost ? 100 : 1.1;
+
+                break
+            }
         }
 
-        // "draw(s) X cards"
-        const drawMatch = card.sanitizedText.match(/draws? (\d+) cards/)
-        if (drawMatch) {
-            weight *= Math.pow(parseInt(drawMatch[1]), 1.5)
+        return weight;
+    }
+
+    modifyWeightByTitlePresence(card, weight, deck) {
+        const uniqueTitles = new Set(deck.map(deckCard => deckCard.title));
+        const countCardTitle = deck.filter(deckCard => deckCard.title === card.title).length;
+        if (countCardTitle === card.maxAmount) return 0;
+        if (countCardTitle === 0) return weight;
+
+        let modifier = Math.max(10 + (4 - countCardTitle), 1);
+        for (let i = (10 - card.cost); i < 10; i++) {
+            modifier *= 0.9;
         }
 
-        // "banish"
-        if (card.sanitizedText.includes('banish')) {
-            weight *= 1.3
+        return uniqueTitles.has(card.title) ? weight * modifier : weight;
+    }
+
+    modifyWeightByTypePresence(card, weight, deck) {
+        const type = card.types[0];
+        const targetPercentages = { Character: 0.5, Action: 0.3, Item: 0.1, Location: 0.1 };
+        const targetPercentage = targetPercentages[type] || 0;
+        const amountOfType = deck.filter(deckCard => deckCard.types.includes(type)).length;
+
+        return amountOfType < deck.length * targetPercentage ? weight + 0.5 : weight;
+    }
+
+    modifyWeightByRequirements(card, weight, deck) {
+        return card.deckMeetsRequirements(deck) ? weight : weight * this.requiredCardsPunishment;
+    }
+
+    modifyWeightByEffect(card, weight) {
+        const effects = [
+            { text: "this character can't {e} to sing songs.", modifier: -0.5 },
+            { text: "draw a card", modifier: 0.1 },
+            { text: "banish", modifier: 0.1 },
+            { text: "banish all", modifier: 0.2 },
+            { text: "return", modifier: 0.1 },
+            { text: "into your inkwell", modifier: 0.2 }
+        ];
+        for (const effect of effects) {
+            if (card.sanitizedText.includes(effect.text)) weight += effect.modifier;
         }
 
-        // "return
-        if (card.sanitizedText.includes('return')) {
-            weight *= 1.1
-        }
+        const drawMatch = card.sanitizedText.match(/draws? (\d+) cards/);
+        if (drawMatch) weight += (parseInt(drawMatch[1]) / 10)
 
-        // "into your inkwell"
-        if (card.sanitizedText.includes('into your inkwell')) {
-            weight *= 1.2
-        }
+        const loreMatch = card.sanitizedText.match(/gain (\d+) lore/);
+        if (loreMatch) weight += (parseInt(loreMatch[1]) / 10)
 
-        // "banish all"
-        if (card.sanitizedText.includes('banish all')) {
-            weight *= 20 // Banish all cards are very good
-        }
+        return weight;
+    }
 
-        // "gain X lore"
-        const match = card.sanitizedText.match(/gain (\d+) lore/)
-        if (match) {
-            weight *= parseInt(match[1]) * 1.2
+    modifyWeightByKeywords(card, weight) {
+        const keywords = [
+            { key: 'hasBodyguard', modifier: 0.2 },
+            { key: 'hasEvasive', modifier: 0.2 },
+            { key: 'hasRush', modifier: 0.2 },
+            { key: 'hasWard', modifier: 0.1 },
+            { key: 'hasSinger', modifier: 0.1 },
+            { key: 'hasReckless', modifier: 0.05 },
+            { key: 'hasChallenger', modifier: card.challengerAmount / 10 },
+            { key: 'hasResist', modifier: card.resistAmount / 10 }
+        ];
+        for (const keyword of keywords) {
+            if (card[keyword.key]) weight += keyword.modifier;
         }
-
-        return weight
+        return weight;
     }
 }
