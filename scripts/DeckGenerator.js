@@ -45,7 +45,8 @@ export default class DeckGenerator {
                     this.cards[index].requiredTypes.push(type)
                 }
 
-                if (cardText.includes('sing') && type === 'Song') {
+                const words = cardText.split(' ')
+                if (words.includes('sing') && type === 'Song') {
                     this.cards[index].requiredTypes.push(type)
                 }
             }
