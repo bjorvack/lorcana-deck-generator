@@ -175,7 +175,7 @@ export default class UI {
                 card.types.join(' ').toLowerCase().includes(search) ||
                 card.ink.toLowerCase().includes(search) ||
                 card.classifications.join(' ').toLowerCase().includes(search) ||
-                card.sanitizedText.includes(search)
+                card.text.toLowerCase().includes(search)
             )
         }
 

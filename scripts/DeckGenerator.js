@@ -55,19 +55,22 @@ export default class DeckGenerator {
                 if (cardText.includes(` ${cardName.toLowerCase()}`)) {
                     this.cards[index].requiredCardNames.push(cardName)
                 }
-
-                if (this.cards[index].keywords.includes('Shift') && this.cards[index].name === cardName) {
-                    this.cards[index].requiredCardNames.push(cardName)
-                }
-
-                // if name contains & split by & and check if both are in the text
-                if (this.cards[index].keywords.includes('Shift') && this.cards[index].name.includes('&')) {
-                    const cardNames = cardName.split('&').map(name => name.toLowerCase().trim())
-                    if (cardNames.includes(cardName)) {
-                        this.cards[index].requiredCardNames.push(cardName)
-                    }
-                }
             }
+
+            if (this.cards[index].canShift) {
+                let name = [this.cards[index].name]
+                if (this.cards[index].name.includes('&')) {
+                    name = this.cards[index].name.split('&').map(name => name.trim())
+                }
+
+                this.cards[index].requiredCardNames.push(name)
+            }
+
+            // Make each requirement unique
+            this.cards[index].requiredKeywords = [...new Set(this.cards[index].requiredKeywords)]
+            this.cards[index].requiredClassifications = [...new Set(this.cards[index].requiredClassifications)]
+            this.cards[index].requiredTypes = [...new Set(this.cards[index].requiredTypes)]
+            this.cards[index].requiredCardNames = [...new Set(this.cards[index].requiredCardNames)]
         }
     }
 

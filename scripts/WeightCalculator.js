@@ -34,12 +34,6 @@ export default class WeightCalculator {
     calculateWeight(card, deck) {
         let weight = this.baseWeight(card)
 
-        const cardNamesInDeck = deck.map(card => card.name) ?? []
-        if (card.types.includes('Character') && cardNamesInDeck.includes(card.name)) {
-            const amountOfCardsWithSameName = cardNamesInDeck.filter(name => name === card.name).length
-            weight *= Math.max(16 - amountOfCardsWithSameName, 1.5) // Make it more likely to add card with the same name (e.g. different versions)
-        }
-
         const cardTitlesInDeck = deck.map(card => card.title) ?? []
         if (cardTitlesInDeck.includes(card.title)) {
             switch (cardTitlesInDeck.length) {
@@ -59,11 +53,20 @@ export default class WeightCalculator {
         }
 
         const nameRequirementsInDeck = deck.map(card => card.requiredCardNames).flat() ?? []
-        if (nameRequirementsInDeck.includes(card.name)) {
-            weight *= 15
+        const amountOfRequiredNamesByName = {}
+        nameRequirementsInDeck.forEach(name => {
+            amountOfRequiredNamesByName[name] = amountOfRequiredNamesByName[name] + 1 || 1
+        })
 
-            if (cardTitlesInDeck === 0) {
-                weight *= 1000000
+        if (nameRequirementsInDeck.includes(card.name)) {
+            const countCardNameInDeck = deck.filter(deckCard => deckCard.name === card.name).length
+
+            if (countCardNameInDeck === 0) {
+                weight *= 10000 // If the specific card is required and not in the deck, make it very likely to add it
+            }
+
+            if (amountOfRequiredNamesByName[card.name] * 2 > countCardNameInDeck) {
+                weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredNamesByName[card.name])
             }
         }
 
@@ -80,6 +83,43 @@ export default class WeightCalculator {
             amountOfSongsInDeck < 8
         ) {
             weight *= Math.pow(this.requiredCardsWeight, amountOfRequiredTypesInDeck['Song'])
+        }
+
+        const singersInDeck = deck.filter(deckCard => deckCard.keywords.includes('Singer'))
+        if (card.types.includes('Song') &&
+            Math.min(singersInDeck.length * 2, 12) > amountOfSongsInDeck
+        ) {
+            const amountOfSingersBySongCost = {}
+            singersInDeck.forEach(card => {
+                amountOfSingersBySongCost[card.cost] = amountOfSingersBySongCost[card.cost] + 1 || 1
+            })
+
+            const amountOfSongsByCost = {}
+            deck.filter(deckCard => deckCard.types.includes('Song')).forEach(card => {
+                amountOfSongsByCost[card.cost] = amountOfSongsByCost[card.cost] + 1 || 1
+            })
+
+            // Make sure that the keys are the same
+            Object.keys(amountOfSingersBySongCost).forEach(key => {
+                if (!amountOfSongsByCost[key]) {
+                    amountOfSongsByCost[key] = 0
+                }
+            })
+
+            // The song has a cost equal to the cost of a singer
+            if (amountOfSingersBySongCost[card.cost] > 0 && amountOfSongsByCost[card.cost] < amountOfSingersBySongCost[card.cost]) {
+                weight *= this.requiredCardsWeight * 5 // Make it very likely to add a song with the same cost as a singer
+            }
+
+            const singerCosts = Object.keys(amountOfSingersBySongCost)
+            // If there is a singer cost lower than the song cost
+            if (singerCosts.some(cost => cost < card.cost)) {
+                weight *= Math.max(this.requiredCardsWeight * 0.5, 1.1) // Make it slightly more likely to add a song with a lower cost than a singer
+            }
+
+            if (card.text.includes('Sing Together')) {
+                weight *= this.requiredCardsWeight // Make it more likely to add a song with the Sing Together ability
+            }
         }
 
         const amountOfItemsInDeck = deck.filter(deckCard => deckCard.types.includes('Item')).length
@@ -113,10 +153,23 @@ export default class WeightCalculator {
             weight *= 0.001
         }
 
-        // Handle shift cards
-        const morphInDeck = deck.filter(deckCard => deckCard.id === 'crd_be70d689335140bdadcde5f5356e169d').length > 0
-        if (card.keywords.includes('Shift') && (cardNamesInDeck.includes(card.name) || morphInDeck)) {
-            weight *= this.requiredCardsWeight
+        const cardsThatCanShift = deck.filter(deckCard => deckCard.canShift)
+        // Add cards to shift from
+        const uniqueShiftsInDeck = [...new Set(cardsThatCanShift.map(card => card.name))]
+        uniqueShiftsInDeck.forEach(shiftCard => {
+            let  names = [shiftCard]
+            if (shiftCard.includes('&')) {
+                names = shiftCard.split('&').map(name => name.trim())
+            }
+
+            if (names.includes(card.name)) {
+                weight *= this.requiredCardsWeight
+            }
+        })
+
+        // Add new shift targets
+        if (card.canShift && card.deckMeetsShiftRequirements(deck)) {
+            weight *= Math.pow(this.requiredCardsWeight, 20)
         }
 
         // Handle known good phrases

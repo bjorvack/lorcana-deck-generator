@@ -19,6 +19,7 @@ export default class Card {
         this.requiredClassifications = []
         this.requiredTypes = []
         this.requiredCardNames = []
+        this.canShift = false
 
         // Lowercase all letters between {} in the card's text
         this.text = this.text.replace(/{[^}]+}/g, match => match.toLowerCase())
@@ -68,14 +69,26 @@ export default class Card {
         // Remove "Shift x (You may pay x {I} to play this on top of one of your characters named YYYYYYYYYY.)
         text = text.replace(/Shift \d+ \(You may pay \d+ {i} to play this on top of one of your characters named .*\.\)/, '')
 
+        let copyText = text
         // Remove "Shift: Discard a(n) XXXXXXX card (You may discard a(n) XXXXXXX card to play this on top of one of your characters named YYYYYY.)"
         text = text.replace(/Shift: Discard a\(n\) .+ card \(You may discard a\(n\) .+ card to play this on top of one of your characters named .*\.\)/, '')
+        if (copyText !== text) {
+            this.canShift = true
+        }
 
+        copyText = text
         // Remove "Shift: Discard 2 cards (You may discard 2 cards to play this on top of one of your characters named Flotsam or Jetsam.)"
         text = text.replace(/Shift: Discard \d+ cards \(You may discard \d+ cards to play this on top of one of your characters named .*\.\)/, '')
+        if (copyText !== text) {
+            this.canShift = true
+        }
 
+        copyText = text
         // Remove "Resist +X (Damage dealt to this character is reduced by X.)
         text = text.replace(/Resist \+\d+ \(Damage dealt to this character is reduced by \d+.\)/, '')
+        if (copyText !== text) {
+            this.canShift = true
+        }
 
         // Remove all capitalized words
         text = text.replace(/\b[A-Z]+\b(?:\s+[A-Z]+\b)*/g, '')
@@ -134,7 +147,7 @@ export default class Card {
     }
 
     deckMeetsShiftRequirements(deck) {
-        if (!this.keywords.includes('Shift')) {
+        if (!this.canShift) {
             return true
         }
 
@@ -143,7 +156,9 @@ export default class Card {
             return true
         }
 
-        const cardsWithSameNameButDifferentVersion = deck.filter(deckCard => deckCard.name === this.name && deckCard.id !== this.id)
+        const names = this.name.split('&').map(name => name.trim())
+
+        const cardsWithSameNameButDifferentVersion = deck.filter(deckCard => names.includes(deckCard.name) && deckCard.id !== this.id)
         let foundCheaperVersion = false
         cardsWithSameNameButDifferentVersion.forEach(card => {
             if (card.cost < this.cost) {
