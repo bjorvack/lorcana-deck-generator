@@ -45,7 +45,7 @@ export default class Card {
         let text = this.text.replace(/Singer (\d+) \(This character counts as cost \d+ to sing songs.\)/, '')
 
         // Remove "(A character with cost x or more can {E} to sing this song for free.)"
-        text = text.replace(/\(A character with cost \d+ or more can {E} to sing this song for free.\)/, '')
+        text = text.replace(/\(A character with cost \d+ or more can {e} to sing this song for free.\)/, '')
 
         // Remove "Rush (This character can challenge the turn they're played.)"
         text = text.replace(/Rush \(This character can challenge the turn they're played.\)/, '')
@@ -60,13 +60,13 @@ export default class Card {
         text = text.replace(/Evasive \(Only characters with Evasive can challenge this character.\)/, '')
 
         // Remove "Challenger +x (While challenging, this character gets +x {S}.)"
-        text = text.replace(/Challenger \+\d+ \(While challenging, this character gets \+\d+ {S}.\)/, '')
+        text = text.replace(/Challenger \+\d+ \(While challenging, this character gets \+\d+ {s}.\)/, '')
 
         // Remove "Reckless (This character can't quest and must challenge each turn if able.)"
         text = text.replace(/Reckless \(This character can't quest and must challenge each turn if able.\)/, '')
 
         // Remove "Shift x (You may pay x {I} to play this on top of one of your characters named YYYYYYYYYY.)
-        text = text.replace(/Shift \d+ \(You may pay \d+ {I} to play this on top of one of your characters named .*\.\)/, '')
+        text = text.replace(/Shift \d+ \(You may pay \d+ {i} to play this on top of one of your characters named .*\.\)/, '')
 
         // Remove "Shift: Discard a(n) XXXXXXX card (You may discard a(n) XXXXXXX card to play this on top of one of your characters named YYYYYY.)"
         text = text.replace(/Shift: Discard a\(n\) .+ card \(You may discard a\(n\) .+ card to play this on top of one of your characters named .*\.\)/, '')
