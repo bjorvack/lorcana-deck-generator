@@ -117,8 +117,12 @@ input[type="text"] {
 [data-role="card-container"] {
     position: relative;
     display: block;
-    width: 10rem;
+    width: 10rem;x
     aspect-ratio: 100/139;
+}
+[data-role="card-container"].missing-requirements img{
+    border: solid 1px red;
+    opacity: 0.5;
 }
 
 [data-role="card-container"] [data-role="remove-card"] {

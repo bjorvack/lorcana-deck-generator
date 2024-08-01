@@ -1,16 +1,19 @@
 const singerRegex = /Singer (\d+)/
 const bodyguardRegex = /Bodyguard \(This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.\)/
-const recklessRegex = /Reckless \(This character can't quest and must challenge each turn if able.\)/
-const wardRegex = /Ward \(Opponents can't choose this character except to challenge.\)/
+const recklessRegex = /Reckless \(This character can[’'‘]t quest and must challenge each turn if able.\)/
+const wardRegex = /Ward \(Opponents can[’'‘]t choose this character except to challenge.\)/
 const evasiveRegex = /Evasive \(Only characters with Evasive can challenge this character.\)/
 const resistRegex = /Resist \+(\d+) \(Damage dealt to this character is reduced by (\d+)\.\)/
-const challengerRegex = /Challenger \+(\d+) \(While challenging, this character gets \+(\d+) \{s\}\)/
+const challengerRegex = /Challenger \+(\d+) \(While challenging, this character gets \+(\d) (?:\w+)?(?:{S})?\.\)/
+const rushRegex = /Rush \(This character can challenge the turn they[’'‘]re played\.\)/
 
 const shiftRegexes = [
     /Shift \d+ \(You may pay \d+ {i} to play this on top of one of your characters named .*\.\)/,
-    /Shift: Discard a\(n\) .+ card \(You may discard a\(n\) .+ card to play this on top of one of your characters named .*\.\)/,
+    /Shift: Discard an? .+ card \(You may discard an? .+ card to play this on top of one of your characters named .+\.\)/,
     /Shift: Discard \d+ cards \(You may discard \d+ cards to play this on top of one of your characters named .*\.\)/,
 ]
+
+const keywordExplanationRegex = /\([^)]+\)/
 
 const morphId = 'crd_be70d689335140bdadcde5f5356e169d'
 const dalmatianPuppyId = 'crd_97f8be5e176144378d58823c6f9c29c7'
@@ -108,16 +111,16 @@ export default class Card {
             evasiveRegex,
             resistRegex,
             challengerRegex,
+            rushRegex,
             ...shiftRegexes,
+            keywordExplanationRegex
         ]
 
-        let text = this.text;
-        patterns.forEach(pattern => {
-            text = text.replace(pattern, '');
-        });
-
-        // Remove all text between ()
-        text = text.replace(/\([^)]+\)/g, '')
+        // loop over all patterns and replace them with an empty string
+        let text = this.text
+        for (const pattern of patterns) {
+            text = text.replace(pattern, '')
+        }
 
         return text.toLowerCase();
     }

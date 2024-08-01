@@ -94,6 +94,9 @@ export default class WeightCalculator {
 
     modifyWeightForShift(card, weight, deck) {
         if (!card.hasShift) return weight;
+
+        if (deck.filter(deckCard => deckCard.hasShift).length === 0) return weight * 100;
+
         const deckCharacters = deck.filter(deckCard => deckCard.types.includes('Character')) // Only characters can shift
 
         for (const deckCard of deckCharacters) {
@@ -113,7 +116,7 @@ export default class WeightCalculator {
         if (countCardTitle === card.maxAmount) return 0;
         if (countCardTitle === 0) return weight;
 
-        let modifier = Math.max(10 + (4 - countCardTitle), 1);
+        let modifier = Math.max(100 + (4 - countCardTitle), 1);
         for (let i = (10 - card.cost); i < 10; i++) {
             modifier *= 0.9;
         }

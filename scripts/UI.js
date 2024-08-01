@@ -116,6 +116,7 @@ export default class UI {
                 const card = this.deckGenerator.cards.find(card => card.id === cardId)
                 this.deck.push(card)
 
+
                 this.renderDeck()
                 this.addPickableCards()
                 this.chart.renderChart(this.deck)
@@ -185,6 +186,9 @@ export default class UI {
 
             const cardContainer = document.createElement('div')
             cardContainer.dataset.role = 'card-container'
+            if (!card.deckMeetsRequirements(this.deck)) {
+                cardContainer.classList.add('missing-requirements')
+            }
             cardList.appendChild(cardContainer)
 
             const image = document.createElement('img')
@@ -192,6 +196,8 @@ export default class UI {
             image.alt = card.title
             image.dataset.role = 'card'
             image.dataset.weight = this.deckGenerator.weightCalculator.calculateWeight(card, this.deck)
+            image.dataset.baseWeight = this.deckGenerator.weightCalculator.baseWeight(card)
+            image.dataset.sanitizedText = card.sanitizedText
             cardContainer.appendChild(image)
 
             const addButton = document.createElement('button')
@@ -207,15 +213,6 @@ export default class UI {
             .filter(card => this.inks.includes(card.ink))
             .filter(card => this.deck.filter(deckCard => deckCard.id === card.id).length < 4)
             .sort((a, b) => {
-                const weightA = this.deckGenerator.weightCalculator.calculateWeight(a, this.deck)
-                const weightB = this.deckGenerator.weightCalculator.calculateWeight(b, this.deck)
-
-                if (weightA !== weightB) {
-                    return weightB - weightA
-                }
-
-                return 0
-
                 if (a.ink !== b.ink) {
                     return this.inks.indexOf(a.ink) - this.inks.indexOf(b.ink)
                 }
@@ -235,6 +232,23 @@ export default class UI {
 
     renderDeck() {
         this.deckContainer.innerHTML = ''
+
+        this.deck.sort((a, b) => {
+            if (a.ink !== b.ink) {
+                return this.inks.indexOf(a.ink) - this.inks.indexOf(b.ink)
+            }
+
+            const typeOrder = ['Character', 'Action', 'Item', 'Location']
+            if (a.types[0] !== b.types[0]) {
+                return typeOrder.indexOf(a.types[0]) - typeOrder.indexOf(b.types[0])
+            }
+
+            if (a.cost !== b.cost) {
+                return a.cost - b.cost
+            }
+
+            return a.title < b.title ? -1 : 1
+        })
         this.deck.forEach(card => {
             this.addCard(card)
         })
@@ -245,6 +259,7 @@ export default class UI {
         if (this.deck.length < 60) {
             const cardContainer = document.createElement('div')
             cardContainer.dataset.role = 'card-container'
+
             this.deckContainer.appendChild(cardContainer)
 
             const addButton = document.createElement('button')
@@ -260,6 +275,9 @@ export default class UI {
     addCard(card) {
         const cardContainer = document.createElement('div')
         cardContainer.dataset.role = 'card-container'
+        if (!card.deckMeetsRequirements(this.deck)) {
+            cardContainer.classList.add('missing-requirements')
+        }
         this.deckContainer.appendChild(cardContainer)
 
         const image = document.createElement('img')

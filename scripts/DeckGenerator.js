@@ -14,13 +14,10 @@ export default class DeckGenerator {
                 continue
             }
 
+            const gainRegex = /gains? \w+(\s\+\d)?/g
+            const compareText = cardText.replace(gainRegex, '')
+
             for (const keyword of this.keywords) {
-                const gainText = `gain ${keyword.toLowerCase()}`
-                const gainsText = `gains ${keyword.toLowerCase()}`
-
-                let compareText = cardText.replace(gainText, '')
-                compareText = cardText.replace(gainsText, '')
-
                 if (compareText.includes(keyword.toLowerCase())) {
                     this.cards[index].requiredKeywords.push(keyword)
                 }
@@ -41,16 +38,17 @@ export default class DeckGenerator {
                     continue // Skip Character type, since they are almost always required
                 }
 
+                if (type === 'Item') {
+                    const chosenItemRegex = /(?:chosen item of yours|your items?)/g
+
+                    if (cardText.match(chosenItemRegex)) {
+                        this.cards[index].requiredTypes.push(type)
+                    }
+
+                    continue
+                }
+
                 if (cardText.includes(type.toLowerCase())) {
-                    this.cards[index].requiredTypes.push(type)
-                }
-
-                if (this.cards[index].keywords.includes('Singer') && type === 'Song') {
-                    this.cards[index].requiredTypes.push(type)
-                }
-
-                const words = cardText.split(' ')
-                if (words.includes('sing') && type === 'Song') {
                     this.cards[index].requiredTypes.push(type)
                 }
             }
@@ -119,24 +117,6 @@ export default class DeckGenerator {
             deck.push(chosenCard)
         } while (!this.isDeckValid(deck))
 
-        // Sort the deck by ink > type[0] > cost > name
-        deck.sort((a, b) => {
-            if (a.ink !== b.ink) {
-                return inks.indexOf(a.ink) - inks.indexOf(b.ink)
-            }
-
-            const typeOrder = ['Character', 'Action', 'Item', 'Location']
-            if (a.types[0] !== b.types[0]) {
-                return typeOrder.indexOf(a.types[0]) - typeOrder.indexOf(b.types[0])
-            }
-
-            if (a.cost !== b.cost) {
-                return a.cost - b.cost
-            }
-
-            return a.title < b.title ? -1 : 1
-        })
-
         if (triesRemaining > 0) {
             triesRemaining--
             deck = this.validateAndRetry(deck, triesRemaining)
@@ -146,15 +126,6 @@ export default class DeckGenerator {
     }
 
     pickRandomCard(cards, deck) {
-        if (deck.length < 2) {
-            const keyCards = cards.filter(card => card.keywords.includes('Shift') || card.cost >= 5)
-            const keyCard = keyCards[Math.floor(Math.random() * keyCards.length)]
-
-            console.log(`Picked key card ${keyCard.title}`)
-
-            return keyCard
-        }
-
         const weights = cards.map(card => {
             return {
                 card,
