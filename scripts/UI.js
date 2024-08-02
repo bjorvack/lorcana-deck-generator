@@ -187,7 +187,7 @@ export default class UI {
             const cardContainer = document.createElement('div')
             cardContainer.dataset.role = 'card-container'
             if (!card.deckMeetsRequirements(this.deck)) {
-                cardContainer.classList.add('missing-requirements')
+                //cardContainer.classList.add('missing-requirements')
             }
             cardList.appendChild(cardContainer)
 
