@@ -6,7 +6,7 @@ export default class WeightCalculator {
     }
 
     baseWeight(card) {
-        let weight = 11 - card.cost;
+        let weight = 1
         weight += card.inkwell ? this.inkwellWeight : 0;
         weight += card.lore > 0 ? card.lore / 10 : 0;
         weight += card.sanitizedText ? this.hasAbilityWeight : 0;
@@ -26,7 +26,19 @@ export default class WeightCalculator {
         weight = this.modifyWeightByTitlePresence(card, weight, deck);
         weight = this.modifyWeightByRequirements(card, weight, deck);
 
+        weight = this.modifyWeightForCost(card, weight);
+
         return weight;
+    }
+
+    modifyWeightForCost(card, weight) {
+        // Modify the weight on a bell curve based on the card's cost
+        // The peak of the curve is at cost 5
+        const peak = 4;
+        const modifier = 100;
+        const distanceFromPeak = Math.abs(card.cost - peak);
+
+        return weight * (1 / (1 + Math.pow(distanceFromPeak, 2))) * modifier;
     }
 
     modifyWeightForSong(card, weight, deck) {
