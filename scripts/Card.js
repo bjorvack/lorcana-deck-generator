@@ -43,6 +43,25 @@ export default class Card {
         // Lowercase all letters between {} in the card's text
         this.text = this.text.replace(/{[^}]+}/g, match => match.toLowerCase())
 
+        let parts = this.text.split('\n')
+        this.sanitizedText = ''
+        for (let i = 0; i < parts.length; i++) {
+            // part starts with a keyword ignore it, else add it to the sanitized text
+            const firstWord = parts[i].split(' ')[0]
+            if (this.keywords.includes(firstWord)) {
+                continue
+            }
+
+            this.sanitizedText += parts[i] + '\n'
+        }
+
+        // Remove all text between ()
+        this.sanitizedText = this.sanitizedText.replace(/\([^)]+\)/g, '')
+
+        // Remove all () from the text
+        this.sanitizedText = this.sanitizedText.replace(/\(|\)/g, '')
+        this.sanitizedText = this.sanitizedText.trim().toLowerCase()
+
         this.initialize()
     }
 
@@ -100,29 +119,6 @@ export default class Card {
         }
 
         return 0
-    }
-
-    get sanitizedText() {
-        const patterns = [
-            singerRegex,
-            bodyguardRegex,
-            recklessRegex,
-            wardRegex,
-            evasiveRegex,
-            resistRegex,
-            challengerRegex,
-            rushRegex,
-            ...shiftRegexes,
-            keywordExplanationRegex
-        ]
-
-        // loop over all patterns and replace them with an empty string
-        let text = this.text
-        for (const pattern of patterns) {
-            text = text.replace(pattern, '')
-        }
-
-        return text.toLowerCase();
     }
 
     deckMeetsRequirements(deck) {
