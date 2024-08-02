@@ -26,19 +26,26 @@ export default class WeightCalculator {
         weight = this.modifyWeightByTitlePresence(card, weight, deck);
         weight = this.modifyWeightByRequirements(card, weight, deck);
 
-        weight = this.modifyWeightForCost(card, weight);
+        weight = this.modifyWeightForCost(card, weight, deck);
 
         return weight;
     }
 
-    modifyWeightForCost(card, weight) {
+    modifyWeightForCost(card, weight, deck) {
         // Modify the weight on a bell curve based on the card's cost
         // The peak of the curve is at cost 5
         const peak = 4;
         const modifier = 100;
         const distanceFromPeak = Math.abs(card.cost - peak);
 
-        return weight * (1 / (1 + Math.pow(distanceFromPeak, 2))) * modifier;
+        weight = weight * (1 / (1 + Math.pow(distanceFromPeak, 2))) * modifier;
+
+        // if less then 4 cards cost less then 2, set the weight to 0 for higher cost cards
+        if (deck.filter(deckCard => deckCard.cost < 2).length < 4 && card.cost > 1) {
+            weight = 0;
+        }
+
+        return weight;
     }
 
     modifyWeightForSong(card, weight, deck) {
