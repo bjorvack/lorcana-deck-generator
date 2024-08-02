@@ -117,10 +117,10 @@ export default class DeckGenerator {
             deck.push(chosenCard)
         } while (!this.isDeckValid(deck))
 
-        // if (triesRemaining > 0) {
-        //     triesRemaining--
-        //     deck = this.validateAndRetry(deck, triesRemaining)
-        // }
+        if (triesRemaining > 0) {
+            triesRemaining--
+            deck = this.validateAndRetry(deck, triesRemaining)
+        }
 
         return deck
     }
