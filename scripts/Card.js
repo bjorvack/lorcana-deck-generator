@@ -75,6 +75,11 @@ export default class Card {
         this.hasChallenger = this.keywords.includes('Challenger')
         this.hasSinger = this.keywords.includes('Singer')
         this.hasShift = this.keywords.includes('Shift')
+
+        if (this.hasShift) {
+            let names = this.name.split('&').map(name => name.trim())
+            this.requiredCardNames.push(...names)
+        }
     }
 
     get title() {

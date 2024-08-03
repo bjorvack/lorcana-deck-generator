@@ -39,7 +39,7 @@ export default class DeckGenerator {
                 }
 
                 if (type === 'Item') {
-                    const chosenItemRegex = /(?:chosen item of yours|your items?)/g
+                    const chosenItemRegex = /(?:chosen item of yours|your items?|reveal an item)/g
 
                     if (cardText.match(chosenItemRegex)) {
                         this.cards[index].requiredTypes.push(type)
@@ -65,7 +65,7 @@ export default class DeckGenerator {
                     name = this.cards[index].name.split('&').map(name => name.trim())
                 }
 
-                this.cards[index].requiredCardNames.push(name)
+                this.cards[index].requiredCardNames.push(...name)
             }
 
             // Make each requirement unique

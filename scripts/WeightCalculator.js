@@ -15,17 +15,16 @@ export default class WeightCalculator {
 
     calculateWeight(card, deck) {
         let weight = this.baseWeight(card);
+
         weight = this.modifyWeightForShiftable(card, weight, deck);
         weight = this.modifyWeightForShift(card, weight, deck);
         weight = this.modifyWeightByEffect(card, weight);
         weight = this.modifyWeightByKeywords(card, weight);
-        weight = this.modifyWeightByTypePresence(card, weight, deck);
         weight = this.modifyWeightForSinger(card, weight, deck);
         weight = this.modifyWeightForSong(card, weight, deck);
 
         weight = this.modifyWeightByTitlePresence(card, weight, deck);
         weight = this.modifyWeightByRequirements(card, weight, deck);
-
         weight = this.modifyWeightForCost(card, weight, deck);
 
         return weight;
@@ -35,17 +34,10 @@ export default class WeightCalculator {
         // Modify the weight on a bell curve based on the card's cost
         // The peak of the curve is at cost 5
         const peak = 4;
-        const modifier = 100;
+        const modifier = 0.1;
         const distanceFromPeak = Math.abs(card.cost - peak);
 
-        weight = weight * (1 / (1 + Math.pow(distanceFromPeak, 2))) * modifier;
-
-        // if less then 4 cards cost less then 2, set the weight to 0 for higher cost cards
-        if (deck.filter(deckCard => deckCard.cost < 2).length < 4 && card.cost > 1) {
-            weight = 0;
-        }
-
-        return weight;
+        return weight * (1 - (distanceFromPeak * modifier));
     }
 
     modifyWeightForSong(card, weight, deck) {
@@ -63,7 +55,7 @@ export default class WeightCalculator {
             }
 
             if (character.singCost === card.cost) {
-                weight += 0.5;
+                weight += 0.1;
             }
         });
 
@@ -75,13 +67,13 @@ export default class WeightCalculator {
         const songsInDeck = deck.filter(deckCard => deckCard.types.includes('Song')).sort((a, b) => a.cost - b.cost);
         songsInDeck.forEach(song => {
             if (song.cost < card.singCost) {
-                weight += 1.2;
+                weight += 0.1;
             }
             if (song.cost === card.singCost) {
-                weight += 1.5;
+                weight += 0.2;
             }
             if (song.text.includes("Sing Together")) {
-                weight += 1.5;
+                weight += 0.2;
             }
         });
         return weight;
@@ -102,7 +94,7 @@ export default class WeightCalculator {
 
         for (const shiftTarget of uniqueShiftTargets) {
             if (shiftTarget.canShiftFrom(card)) {
-                weight *= card.cost < shiftTarget.cost ? 100 : 1.1;
+                weight *= card.cost < shiftTarget.cost ? 100.5 : 1.5;
 
                 break
             }
@@ -120,7 +112,7 @@ export default class WeightCalculator {
 
         for (const deckCard of deckCharacters) {
             if (card.canShiftFrom(deckCard) && card.id !== deckCard.id) {
-                weight *= deckCard.cost < card.cost ? 100 : 1.1;
+                weight *= deckCard.cost < card.cost ? 100.5 : 1.5;
 
                 break
             }
@@ -130,26 +122,22 @@ export default class WeightCalculator {
     }
 
     modifyWeightByTitlePresence(card, weight, deck) {
-        const uniqueTitles = new Set(deck.map(deckCard => deckCard.title));
-        const countCardTitle = deck.filter(deckCard => deckCard.title === card.title).length;
-        if (countCardTitle === card.maxAmount) return 0;
-        if (countCardTitle === 0) return weight;
-
-        let modifier = Math.max(500 + (4 - countCardTitle), 1);
-        for (let i = (10 - card.cost); i < 10; i++) {
-            modifier *= 0.9;
+        // If the card is maxAmount times in the deck, reduce the weight to 0
+        if (deck.filter(deckCard => deckCard.id === card.id).length >= card.maxAmount) {
+            return 0;
         }
 
-        return uniqueTitles.has(card.title) ? weight * modifier : weight;
-    }
+        // If the card is in the deck, increase the weight
+        if (deck.filter(deckCard => deckCard.id === card.id).length > 0) {
+            return weight * 1000;
+        }
 
-    modifyWeightByTypePresence(card, weight, deck) {
-        const type = card.types[0];
-        const targetPercentages = { Character: 0.5, Action: 0.3, Item: 0.1, Location: 0.1 };
-        const targetPercentage = targetPercentages[type] || 0;
-        const amountOfType = deck.filter(deckCard => deckCard.types.includes(type)).length;
+        // If the cards is only in the deck once, increase the weight
+        if (deck.filter(deckCard => deckCard.id === card.id).length === 1) {
+            return weight * 1000;
+        }
 
-        return amountOfType < deck.length * targetPercentage ? weight + 0.5 : weight;
+        return weight;
     }
 
     modifyWeightByRequirements(card, weight, deck) {
