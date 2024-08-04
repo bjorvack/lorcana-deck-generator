@@ -41,7 +41,7 @@ export default class WeightCalculator {
         }
 
         // Use a bell curve to predict the amount of cards with a certain cost, with the peak at 4
-        const bellCurve = 1 - Math.abs(cost - 4) / 4;
+        const bellCurve = 1 - Math.abs(cost - 3) / 3;
 
         // Expext there to be 60 cards in the deck, so the expected amount of cards with a certain cost is 60 * bellCurve
         const expectedAmountOfCardsWithCost = Math.ceil(60 * bellCurve)
