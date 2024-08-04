@@ -196,7 +196,6 @@ export default class UI {
             image.alt = card.title
             image.dataset.role = 'card'
             image.dataset.weight = this.deckGenerator.weightCalculator.calculateWeight(card, this.deck)
-            image.dataset.baseWeight = this.deckGenerator.weightCalculator.baseWeight(card)
             image.dataset.sanitizedText = card.sanitizedText
             cardContainer.appendChild(image)
 
@@ -287,7 +286,6 @@ export default class UI {
         image.dataset.selectedCard = card.id
         image.dataset.data = JSON.stringify(card)
         image.dataset.weight = this.deckGenerator.weightCalculator.calculateWeight(card, this.deck)
-        image.dataset.baseWeight = this.deckGenerator.weightCalculator.baseWeight(card)
         cardContainer.appendChild(image)
 
         const removeButton = document.createElement('button')

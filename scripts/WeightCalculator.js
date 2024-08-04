@@ -1,22 +1,12 @@
 export default class WeightCalculator {
     constructor() {
-        this.inkwellWeight = 0.2;
-        this.hasAbilityWeight = 0.1;
         this.requiredCardsPunishment = 0.1;
     }
 
-    baseWeight(card) {
-        let weight = 1
-        weight += card.inkwell ? this.inkwellWeight : 0;
-        weight += card.lore > 0 ? card.lore / 10 : 0;
-        weight += card.sanitizedText ? this.hasAbilityWeight : 0;
-        return weight;
-    }
-
     calculateWeight(card, deck) {
-        let weight = this.baseWeight(card);
-        weight = this.modifyWeightForCost(card, weight, deck);
-
+        let weight = 100
+        weight = this.modifyWeightForInkwell(card, weight);
+        weight = this.modifyWeightForAbility(card, weight);
         weight = this.modifyWeightForShiftable(card, weight, deck);
         weight = this.modifyWeightForShift(card, weight, deck);
         weight = this.modifyWeightByEffect(card, weight);
@@ -30,48 +20,38 @@ export default class WeightCalculator {
         return weight;
     }
 
-    modifyWeightForCost(card, weight, deck) {
-        // Modify the weight on a bell curve based on the card's cost
-        let cost = card.cost;
-        let amountOfCardsWithCost = deck.filter(deckCard => deckCard.cost === cost).length;
-
-        if (cost >= 7) {
-            cost = 7;
-            amountOfCardsWithCost = deck.filter(deckCard => deckCard.cost >= 7).length;
+    modifyWeightForInkwell(card, weight) {
+        if (!card.inkwell) {
+            weight *= 0.85;
         }
 
-        // Use a bell curve to predict the amount of cards with a certain cost, with the peak at 4
-        const bellCurve = 1 - Math.abs(cost - 3) / 3;
+        return weight;
+    }
 
-        // Expext there to be 60 cards in the deck, so the expected amount of cards with a certain cost is 60 * bellCurve
-        const expectedAmountOfCardsWithCost = Math.ceil(60 * bellCurve)
-
-        if (expectedAmountOfCardsWithCost === 0 || amountOfCardsWithCost >= expectedAmountOfCardsWithCost) {
-            return 0;
+    modifyWeightForAbility(card, weight) {
+        if (card.sanitizedText !== undefined && card.sanitizedText !== '' && card.sanitizedText !== null) {
+            weight *= 1.1;
         }
-
-        // The weight is multiplied by the ratio of the expected amount of cards with a certain cost and the actual amount of cards with that cost
-        weight *= expectedAmountOfCardsWithCost / amountOfCardsWithCost;
 
         return weight;
     }
 
     modifyWeightForSong(card, weight, deck) {
         if (!card.types.includes('Song')) return weight;
-        weight += 0.05;
+        weight += 5;
 
         if (card.text.includes("Sing Together")) {
-            weight += 0.05;
+            weight += 5;
         }
 
         const charactersInDeck = deck.filter(deckCard => deckCard.types.includes('Character')).sort((a, b) => a.singCost - b.singCost);
         charactersInDeck.forEach(character => {
             if (character.singCost < card.cost) {
-                weight += 0.1;
+                weight += 10;
             }
 
             if (character.singCost === card.cost) {
-                weight += 0.1;
+                weight += 10;
             }
         });
 
@@ -83,13 +63,13 @@ export default class WeightCalculator {
         const songsInDeck = deck.filter(deckCard => deckCard.types.includes('Song')).sort((a, b) => a.cost - b.cost);
         songsInDeck.forEach(song => {
             if (song.cost < card.singCost) {
-                weight += 0.1;
+                weight += 10;
             }
             if (song.cost === card.singCost) {
-                weight += 0.2;
+                weight += 20;
             }
             if (song.text.includes("Sing Together")) {
-                weight += 0.2;
+                weight += 20;
             }
         });
         return weight;
@@ -97,6 +77,8 @@ export default class WeightCalculator {
 
     modifyWeightForShiftable(card, weight, deck) {
         if (!card.types.includes('Character')) return weight; // Only characters can shift
+
+        console.log(deck);
 
         const shiftTargets = deck.filter(deckCard => deckCard.hasShift && deckCard.id !== card.id)
         const uniqueShiftTargets = []
@@ -110,7 +92,7 @@ export default class WeightCalculator {
 
         for (const shiftTarget of uniqueShiftTargets) {
             if (shiftTarget.canShiftFrom(card)) {
-                weight *= card.cost < shiftTarget.cost ? 100.5 : 1.5;
+                weight *= card.cost < shiftTarget.cost ? 100 : 1.5;
 
                 break
             }
@@ -128,7 +110,7 @@ export default class WeightCalculator {
 
         for (const deckCard of deckCharacters) {
             if (card.canShiftFrom(deckCard) && card.id !== deckCard.id) {
-                weight *= deckCard.cost < card.cost ? 100.5 : 1.5;
+                weight *= deckCard.cost < card.cost ? 100 : 1.5;
 
                 break
             }
@@ -145,7 +127,7 @@ export default class WeightCalculator {
 
         // If the card is in the deck, increase the weight
         if (deck.filter(deckCard => deckCard.id === card.id).length > 0) {
-            return weight * 1000;
+            return weight * 250;
         }
 
         // If the cards is only in the deck once, increase the weight
@@ -157,17 +139,23 @@ export default class WeightCalculator {
     }
 
     modifyWeightByRequirements(card, weight, deck) {
+        if (card.hasRequirementsForDeck(deck)) {
+            weight *= 1.4;
+        }
+
         return card.deckMeetsRequirements(deck) ? weight : weight * this.requiredCardsPunishment;
     }
 
     modifyWeightByEffect(card, weight) {
         const effects = [
-            { text: "this character can't {e} to sing songs.", modifier: -0.5 },
-            { text: "draw a card", modifier: 0.1 },
-            { text: "banish", modifier: 0.1 },
-            { text: "banish all", modifier: 0.2 },
-            { text: "return", modifier: 0.1 },
-            { text: "into your inkwell", modifier: 0.2 }
+            { text: "this character can't {e} to sing songs.", modifier: -50 },
+            { text: "draw a card", modifier: 25 },
+            { text: "draw 3 cards", modifier: 50 },
+            { text: "draws 7 cards", modifier: 50 },
+            { text: "banish", modifier: 20 },
+            { text: "banish all", modifier: 30 },
+            { text: "return", modifier: 15 },
+            { text: "into your inkwell", modifier: 20 }
         ];
         for (const effect of effects) {
             if (card.sanitizedText.includes(effect.text)) weight += effect.modifier;
@@ -184,14 +172,14 @@ export default class WeightCalculator {
 
     modifyWeightByKeywords(card, weight) {
         const keywords = [
-            { key: 'hasBodyguard', modifier: 0.2 },
-            { key: 'hasEvasive', modifier: 0.2 },
-            { key: 'hasRush', modifier: 0.2 },
-            { key: 'hasWard', modifier: 0.1 },
-            { key: 'hasSinger', modifier: 0.1 },
-            { key: 'hasReckless', modifier: 0.05 },
-            { key: 'hasChallenger', modifier: card.challengerAmount / 10 },
-            { key: 'hasResist', modifier: card.resistAmount / 10 }
+            { key: 'hasBodyguard', modifier: 20 },
+            { key: 'hasEvasive', modifier: 20 },
+            { key: 'hasRush', modifier: 20 },
+            { key: 'hasWard', modifier: 10 },
+            { key: 'hasSinger', modifier: 10 },
+            { key: 'hasReckless', modifier: 5 },
+            { key: 'hasChallenger', modifier: card.challengerAmount * 10 },
+            { key: 'hasResist', modifier: card.resistAmount * 10 }
         ];
         for (const keyword of keywords) {
             if (card[keyword.key]) weight += keyword.modifier;

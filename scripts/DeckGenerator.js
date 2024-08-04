@@ -117,16 +117,57 @@ export default class DeckGenerator {
             deck.push(chosenCard)
         } while (!this.isDeckValid(deck))
 
-        if (triesRemaining > 0) {
-            triesRemaining--
-            deck = this.validateAndRetry(deck, triesRemaining)
-        }
+        // if (triesRemaining > 0) {
+        //     triesRemaining--
+        //     deck = this.validateAndRetry(deck, triesRemaining)
+        // }
 
         return deck
     }
 
+    pickRandomCost(deck) {
+        // Pick a random card cost based on a bell curve, with the peak at 3
+        // Lower the chance of picking a cost by its amount in the deck
+
+        const chanceOfCost = {
+            1: 0.13,
+            2: 0.166,
+            3: 0.266,
+            4: 0.2,
+            5: 0.2,
+        }
+
+        console.table(chanceOfCost)
+
+        const totalChance = Object.values(chanceOfCost).reduce((total, chance) => total + chance, 0)
+        const randomChance = Math.random() * totalChance
+
+        let currentChance = 0
+        let pickedCost = null
+        for (const cost in chanceOfCost) {
+            currentChance += chanceOfCost[cost]
+            if (currentChance >= randomChance) {
+                pickedCost = cost
+                break
+            }
+        }
+
+        return parseInt(pickedCost)
+    }
+
     pickRandomCard(cards, deck) {
-        const weights = cards.map(card => {
+        const pickedCost = this.pickRandomCost(deck)
+        console.log(`Picking card of cost ${pickedCost}`)
+        const cardsOfCost = cards.filter(card => {
+            if (pickedCost === 5) {
+                return card.cost >= pickedCost
+            }
+
+            return card.cost === pickedCost
+        })
+        console.log(`Found ${cardsOfCost.length} cards of cost ${pickedCost}`)
+
+        const weights = cardsOfCost.map(card => {
             return {
                 card,
                 weight: this.weightCalculator.calculateWeight(card, deck)
@@ -201,6 +242,7 @@ export default class DeckGenerator {
     }
 
     cardHasMissingRequirements(card, deck) {
+        console.log(card, deck)
         return !card.deckMeetsRequirements(deck)
     }
 }
