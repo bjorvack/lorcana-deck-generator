@@ -32,8 +32,13 @@ export default class WeightCalculator {
 
     modifyWeightForCost(card, weight, deck) {
         // Modify the weight on a bell curve based on the card's cost
-        const cost = card.cost;
-        const amountOfCardsWithCost = deck.filter(deckCard => deckCard.cost === cost).length;
+        let cost = card.cost;
+        let amountOfCardsWithCost = deck.filter(deckCard => deckCard.cost === cost).length;
+
+        if (cost >= 7) {
+            cost = 7;
+            amountOfCardsWithCost = deck.filter(deckCard => deckCard.cost >= 7).length;
+        }
 
         // Use a bell curve to predict the amount of cards with a certain cost, with the peak at 4
         const bellCurve = 1 - Math.abs(cost - 4) / 4;
