@@ -78,8 +78,6 @@ export default class WeightCalculator {
     modifyWeightForShiftable(card, weight, deck) {
         if (!card.types.includes('Character')) return weight; // Only characters can shift
 
-        console.log(deck);
-
         const shiftTargets = deck.filter(deckCard => deckCard.hasShift && deckCard.id !== card.id)
         const uniqueShiftTargets = []
         shiftTargets.forEach(shiftTarget => {

@@ -2,8 +2,30 @@ export default class DeckGenerator {
     constructor(cards, weightCalculator) {
         this.weightCalculator = weightCalculator
         this.cards = cards
+        this.currentDistribution = null
 
+        this.useDefaultDistribution()
         this.initializeCardRequirements()
+    }
+
+    useAggroDistribution() {
+        this.currentDistribution = {
+            1: 12,
+            2: 20,
+            3: 12,
+            4: 8,
+            5: 8,
+        }
+    }
+
+    useDefaultDistribution() {
+        this.currentDistribution = {
+            1: 8,
+            2: 12,
+            3: 20,
+            4: 12,
+            5: 8,
+        }
     }
 
     initializeCardRequirements() {
@@ -130,14 +152,12 @@ export default class DeckGenerator {
         // Lower the chance of picking a cost by its amount in the deck
 
         const chanceOfCost = {
-            1: 0.13,
-            2: 0.166,
-            3: 0.266,
-            4: 0.2,
-            5: 0.2,
+            1: this.currentDistribution[1] - deck.filter(card => card.cost === 1).length,
+            2: this.currentDistribution[2] - deck.filter(card => card.cost === 2).length,
+            3: this.currentDistribution[3] - deck.filter(card => card.cost === 3).length,
+            4: this.currentDistribution[4] - deck.filter(card => card.cost === 4).length,
+            5: this.currentDistribution[5] - deck.filter(card => card.cost >= 5).length,
         }
-
-        console.table(chanceOfCost)
 
         const totalChance = Object.values(chanceOfCost).reduce((total, chance) => total + chance, 0)
         const randomChance = Math.random() * totalChance
@@ -157,7 +177,6 @@ export default class DeckGenerator {
 
     pickRandomCard(cards, deck) {
         const pickedCost = this.pickRandomCost(deck)
-        console.log(`Picking card of cost ${pickedCost}`)
         const cardsOfCost = cards.filter(card => {
             if (pickedCost === 5) {
                 return card.cost >= pickedCost
@@ -165,7 +184,6 @@ export default class DeckGenerator {
 
             return card.cost === pickedCost
         })
-        console.log(`Found ${cardsOfCost.length} cards of cost ${pickedCost}`)
 
         const weights = cardsOfCost.map(card => {
             return {
@@ -233,7 +251,6 @@ export default class DeckGenerator {
                     cardNames: card.deckMeetsRequiredCardNames(deck),
                     shiftRequirements: card.deckMeetsShiftRequirements(deck),
                 }
-                console.table(requirements)
                 deck = deck.filter(deckCard => deckCard.id !== card.id)
             }
         }

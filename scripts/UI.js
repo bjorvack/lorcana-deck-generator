@@ -2,7 +2,7 @@ export default class UI {
     constructor(
         deckGenerator,
         loadingScreen,
-        generateDeckButton,
+        generateDeckButtons,
         testDeckButton,
         clearDeckButton,
         primaryInk,
@@ -17,7 +17,7 @@ export default class UI {
 
         this.deckGenerator = deckGenerator
         this.loadingScreen = loadingScreen
-        this.generateDeckButton = generateDeckButton
+        this.generateDeckButtons = generateDeckButtons
         this.testDeckButton = testDeckButton
         this.clearDeckButton = clearDeckButton
         this.primaryInk = primaryInk
@@ -37,15 +37,28 @@ export default class UI {
     }
 
     addListeners() {
-        this.generateDeckButton.addEventListener('click', () => {
-            this.loadingScreen.show()
-            this.deck = this.deckGenerator.generateDeck(this.inks, this.deck)
+        this.generateDeckButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                this.loadingScreen.show()
 
-            this.renderDeck()
-            this.addPickableCards()
-            this.chart.renderChart(this.deck)
+                switch (button.dataset.distribution) {
+                    case 'default':
+                        this.deckGenerator.useDefaultDistribution()
+                        break
+                    case 'aggro':
+                        this.deckGenerator.useAggroDistribution()
+                        break
+                }
 
-            setTimeout(() => this.loadingScreen.close(), 1000)
+
+                this.deck = this.deckGenerator.generateDeck(this.inks, this.deck)
+
+                this.renderDeck()
+                this.addPickableCards()
+                this.chart.renderChart(this.deck)
+
+                setTimeout(() => this.loadingScreen.close(), 1000)
+            })
         })
 
         this.clearDeckButton.addEventListener('click', () => {
@@ -253,7 +266,7 @@ export default class UI {
         })
 
         this.testDeckButton.classList.remove('hidden')
-        this.generateDeckButton.classList.add('hidden')
+        this.generateDeckButtons.forEach(button => button.classList.add('hidden'))
 
         if (this.deck.length < 60) {
             const cardContainer = document.createElement('div')
@@ -267,7 +280,7 @@ export default class UI {
             cardContainer.appendChild(addButton)
 
             this.testDeckButton.classList.add('hidden')
-            this.generateDeckButton.classList.remove('hidden')
+            this.generateDeckButtons.forEach(button => button.classList.remove('hidden'))
         }
     }
 
