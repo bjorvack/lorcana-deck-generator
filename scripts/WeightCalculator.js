@@ -15,6 +15,7 @@ export default class WeightCalculator {
 
     calculateWeight(card, deck) {
         let weight = this.baseWeight(card);
+        weight = this.modifyWeightForCost(card, weight, deck);
 
         weight = this.modifyWeightForShiftable(card, weight, deck);
         weight = this.modifyWeightForShift(card, weight, deck);
@@ -25,19 +26,29 @@ export default class WeightCalculator {
 
         weight = this.modifyWeightByTitlePresence(card, weight, deck);
         weight = this.modifyWeightByRequirements(card, weight, deck);
-        weight = this.modifyWeightForCost(card, weight, deck);
 
         return weight;
     }
 
     modifyWeightForCost(card, weight, deck) {
         // Modify the weight on a bell curve based on the card's cost
-        // The peak of the curve is at cost 5
-        const peak = 4;
-        const modifier = 0.1;
-        const distanceFromPeak = Math.abs(card.cost - peak);
+        const cost = card.cost;
+        const amountOfCardsWithCost = deck.filter(deckCard => deckCard.cost === cost).length;
 
-        return weight * (1 - (distanceFromPeak * modifier));
+        // Use a bell curve to predict the amount of cards with a certain cost, with the peak at 4
+        const bellCurve = 1 - Math.abs(cost - 4) / 4;
+
+        // Expext there to be 60 cards in the deck, so the expected amount of cards with a certain cost is 60 * bellCurve
+        const expectedAmountOfCardsWithCost = Math.ceil(60 * bellCurve)
+
+        if (expectedAmountOfCardsWithCost === 0 || amountOfCardsWithCost >= expectedAmountOfCardsWithCost) {
+            return 0;
+        }
+
+        // The weight is multiplied by the ratio of the expected amount of cards with a certain cost and the actual amount of cards with that cost
+        weight *= expectedAmountOfCardsWithCost / amountOfCardsWithCost;
+
+        return weight;
     }
 
     modifyWeightForSong(card, weight, deck) {
