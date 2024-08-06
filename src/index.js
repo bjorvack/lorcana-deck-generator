@@ -1,8 +1,10 @@
-import CardApi from "./CardApi";
-import WeightCalculator from "./WeightCalculator";
-import DeckGenerator from "./DeckGenerator";
-import UI from "./UI";
-import Chart from "./Chart";
+import CardApi from "./scripts/CardApi";
+import WeightCalculator from "./scripts/WeightCalculator";
+import DeckGenerator from "./scripts/DeckGenerator";
+import UI from "./scripts/UI";
+import Chart from "./scripts/Chart";
+
+import './styles.css'
 
 // Wait for page to be loaded
 document.addEventListener('DOMContentLoaded', async () => {
