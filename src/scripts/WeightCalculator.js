@@ -124,12 +124,12 @@ export default class WeightCalculator {
 
         // If the card is in the deck, increase the weight
         if (deck.filter(deckCard => deckCard.id === card.id).length > 0) {
-            return weight * 5;
+            return weight * 10;
         }
 
         // If the cards is only in the deck once, increase the weight
         if (deck.filter(deckCard => deckCard.id === card.id).length === 1) {
-            return weight * 10;
+            return weight * 20;
         }
 
         return weight;
