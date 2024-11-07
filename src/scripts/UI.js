@@ -41,17 +41,19 @@ export default class UI {
             button.addEventListener('click', () => {
                 this.loadingScreen.show()
 
+                let deckType = 'default';
                 switch (button.dataset.distribution) {
                     case 'default':
                         this.deckGenerator.useDefaultDistribution()
                         break
                     case 'aggro':
+                        deckType = 'aggro'
                         this.deckGenerator.useAggroDistribution()
                         break
                 }
 
 
-                this.deck = this.deckGenerator.generateDeck(this.inks, this.deck)
+                this.deck = this.deckGenerator.generateDeck(this.inks, this.deck, deckType)
 
                 this.renderDeck()
                 this.addPickableCards()

@@ -128,14 +128,19 @@ export default class DeckGenerator {
         return [...new Set(this.cards.map(card => card.name))]
     }
 
-    generateDeck(inks, deck = [], triesRemaining = 50) {
-        console.log(`Generating deck, ${triesRemaining} tries remaining`)
+    generateDeck(
+        inks,
+        deck = [],
+        deckType = 'default',
+        triesRemaining = 50
+    ) {
+        console.log(`Generating ${deckType} deck, ${triesRemaining} tries remaining`)
         const cardsOfInk = this.cards.filter(card => inks.includes(card.ink))
         if (cardsOfInk.length === 0) {
             return []
         }
         do {
-            let chosenCard = this.pickRandomCard(cardsOfInk, deck)
+            let chosenCard = this.pickRandomCard(cardsOfInk, deck, deckType)
             deck.push(chosenCard)
         } while (!this.isDeckValid(deck))
 
@@ -175,7 +180,7 @@ export default class DeckGenerator {
         return parseInt(pickedCost)
     }
 
-    pickRandomCard(cards, deck) {
+    pickRandomCard(cards, deck, deckType) {
         const pickedCost = this.pickRandomCost(deck)
         const cardsOfCost = cards.filter(card => {
             if (pickedCost === 5) {
@@ -188,7 +193,7 @@ export default class DeckGenerator {
         const weights = cardsOfCost.map(card => {
             return {
                 card,
-                weight: this.weightCalculator.calculateWeight(card, deck)
+                weight: this.weightCalculator.calculateWeight(card, deck, deckType)
             }
         })
 
@@ -215,22 +220,6 @@ export default class DeckGenerator {
 
     isDeckValid(deck) {
         return deck.length >= 60
-    }
-
-    validateAndRetry(deck, triesRemaining) {
-        let deckLength = deck.length
-        let previousDeckLength = deckLength = null
-        do {
-            previousDeckLength = deckLength
-            deck = this.removeCardsWithoutRequirements(deck)
-            deckLength = deck.length
-        } while (deckLength !== previousDeckLength)
-
-        if (deckLength === 60) {
-            return deck
-        }
-
-        return this.generateDeck(deck.map(card => card.ink), deck, triesRemaining)
     }
 
     removeCardsWithoutRequirements(deck) {

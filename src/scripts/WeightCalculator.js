@@ -3,7 +3,7 @@ export default class WeightCalculator {
         this.requiredCardsPunishment = 0.1;
     }
 
-    calculateWeight(card, deck) {
+    calculateWeight(card, deck, deckType) {
         let weight = 100
         weight = this.modifyWeightForInkwell(card, weight);
         weight = this.modifyWeightForAbility(card, weight);
@@ -16,6 +16,8 @@ export default class WeightCalculator {
 
         weight = this.modifyWeightByTitlePresence(card, weight, deck);
         weight = this.modifyWeightByRequirements(card, weight, deck);
+
+        weight = this.modifyWeightByDeckType(card, weight, deckType);
 
         return weight;
     }
@@ -183,5 +185,30 @@ export default class WeightCalculator {
             if (card[keyword.key]) weight += keyword.modifier;
         }
         return weight;
+    }
+
+    modifyWeightByDeckType(card, weight, deckType) {
+        if (deckType === 'default') {
+            return weight;
+        }
+
+        if (card.cost <= 3) {
+            const effects = [
+                { text: "banish", modifier: 20 },
+                { text: "banish all", modifier: 30 },
+                { text: "return", modifier: 15 },
+                { text: "into your inkwell", modifier: 20 }
+            ];
+
+            for (const effect of effects) {
+                if (card.sanitizedText.includes(effect.text)) weight += effect.modifier;
+            }
+        }
+
+        if (card.lore > 1) {
+            weight += 20;
+        }
+
+        return weight
     }
 }
