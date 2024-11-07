@@ -1,6 +1,6 @@
 export default class WeightCalculator {
 
-    calculateWeight(card, deck, deckType) {
+    calculateWeight(card, deck, deckType, triesRemaining) {
         let weight = 1
         weight = this.modifyWeightForInkwell(card, weight);
         weight = this.modifyWeightForAbility(card, weight);
@@ -11,7 +11,7 @@ export default class WeightCalculator {
         weight = this.modifyWeightForSinger(card, weight, deck);
         weight = this.modifyWeightForSong(card, weight, deck);
 
-        weight = this.modifyWeightByTitlePresence(card, weight, deck);
+        weight = this.modifyWeightByTitlePresence(card, weight, deck, triesRemaining);
         weight = this.modifyWeightByRequirements(card, weight, deck);
 
         weight = this.modifyWeightByDeckType(card, weight, deckType);
@@ -116,7 +116,7 @@ export default class WeightCalculator {
         return weight;
     }
 
-    modifyWeightByTitlePresence(card, weight, deck) {
+    modifyWeightByTitlePresence(card, weight, deck, triesRemaining) {
         // If the card is maxAmount times in the deck, reduce the weight to 0
         if (deck.filter(deckCard => deckCard.id === card.id).length >= card.maxAmount) {
             return 0;
@@ -124,7 +124,7 @@ export default class WeightCalculator {
 
         // If the card is in the deck, increase the weight
         if (deck.filter(deckCard => deckCard.id === card.id).length > 0) {
-            return weight * 10;
+            return weight * (100 - triesRemaining);
         }
 
         // If the cards is only in the deck once, increase the weight

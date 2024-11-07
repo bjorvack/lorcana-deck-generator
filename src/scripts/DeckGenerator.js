@@ -140,14 +140,14 @@ export default class DeckGenerator {
             return []
         }
         do {
-            let chosenCard = this.pickRandomCard(cardsOfInk, deck, deckType)
+            let chosenCard = this.pickRandomCard(cardsOfInk, deck, deckType, triesRemaining)
             deck.push(chosenCard)
         } while (!this.isDeckValid(deck))
 
-        // if (triesRemaining > 0) {
-        //     triesRemaining--
-        //     deck = this.validateAndRetry(deck, triesRemaining)
-        // }
+        if (triesRemaining >= 0) {
+            triesRemaining--
+            deck = this.validateAndRetry(deck, deckType, triesRemaining)
+        }
 
         return deck
     }
@@ -180,7 +180,7 @@ export default class DeckGenerator {
         return parseInt(pickedCost)
     }
 
-    pickRandomCard(cards, deck, deckType) {
+    pickRandomCard(cards, deck, deckType, triesRemaining) {
         const pickedCost = this.pickRandomCost(deck)
         const cardsOfCost = cards.filter(card => {
             if (pickedCost === 5) {
@@ -193,7 +193,7 @@ export default class DeckGenerator {
         const weights = cardsOfCost.map(card => {
             return {
                 card,
-                weight: this.weightCalculator.calculateWeight(card, deck, deckType)
+                weight: this.weightCalculator.calculateWeight(card, deck, deckType, triesRemaining)
             }
         })
 
@@ -222,6 +222,33 @@ export default class DeckGenerator {
         return deck.length >= 60
     }
 
+    validateAndRetry(deck, deckType, triesRemaining) {
+        let deckLength = deck.length
+        let previousDeckLength = deckLength = null
+        do {
+            console.log('Removing cards without requirements')
+            previousDeckLength = deckLength
+            deck = this.removeCardsWithoutRequirements(deck)
+            deckLength = deck.length
+        } while (deckLength !== previousDeckLength)
+
+        const cardsWithSingleCopy = deck.filter(card => deck.filter(deckCard => deckCard.id === card.id).length === 1)
+        if (cardsWithSingleCopy.length > 4) {
+            console.log('Removing cards with single copy')
+            for (const card of cardsWithSingleCopy) {
+                console.log(`Removing ${card.title} with single copy`)
+                deck = deck.filter(deckCard => deckCard.id !== card.id)
+                deckLength = deck.length
+            }
+        }
+
+        if (deckLength === 60) {
+            return deck
+        }
+
+        return this.generateDeck(deck.map(card => card.ink), deck, deckType, triesRemaining)
+    }
+
     removeCardsWithoutRequirements(deck) {
         const uniqueCardsInDeck = []
         for (const card of deck) {
@@ -232,7 +259,6 @@ export default class DeckGenerator {
 
         for (const card of uniqueCardsInDeck) {
             if (this.cardHasMissingRequirements(card, uniqueCardsInDeck)) {
-                console.log(`Deck is missing requirements, removing ${card.title}`)
                 const requirements = {
                     keywords: card.deckMeetsRequiredKeywords(deck),
                     classifications: card.deckMeetsRequiredClassifications(deck),
@@ -248,7 +274,6 @@ export default class DeckGenerator {
     }
 
     cardHasMissingRequirements(card, deck) {
-        console.log(card, deck)
         return !card.deckMeetsRequirements(deck)
     }
 }
