@@ -140,7 +140,7 @@ export default class WeightCalculator {
             weight *= 1.8;
         }
 
-        return card.deckMeetsRequirements(deck) ? weight : weight * 0.8;
+        return card.deckMeetsRequirements(deck) ? weight : 0;
     }
 
     modifyWeightByEffect(card, weight) {
