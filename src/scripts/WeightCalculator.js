@@ -89,7 +89,7 @@ export default class WeightCalculator {
 
         for (const shiftTarget of uniqueShiftTargets) {
             if (shiftTarget.canShiftFrom(card)) {
-                weight *= card.cost < shiftTarget.cost ? 1.2 : 0.95;
+                weight *= card.cost < shiftTarget.cost ? 1.6 : 0.95;
 
                 break
             }
@@ -101,13 +101,13 @@ export default class WeightCalculator {
     modifyWeightForShift(card, weight, deck) {
         if (!card.hasShift) return weight;
 
-        if (deck.filter(deckCard => deckCard.hasShift).length === 0) return weight * 1.05;
+        if (deck.filter(deckCard => deckCard.hasShift).length === 0) return weight * 1.5;
 
         const deckCharacters = deck.filter(deckCard => deckCard.types.includes('Character')) // Only characters can shift
 
         for (const deckCard of deckCharacters) {
             if (card.canShiftFrom(deckCard) && card.id !== deckCard.id) {
-                weight *= deckCard.cost < card.cost ? 1.2 : 0.95;
+                weight *= deckCard.cost < card.cost ? 1.6 : 0.95;
 
                 break
             }
@@ -140,7 +140,7 @@ export default class WeightCalculator {
             weight *= 1.8;
         }
 
-        return card.deckMeetsRequirements(deck) ? weight : 0;
+        return card.deckMeetsRequirements(deck) ? weight : 0.05;
     }
 
     modifyWeightByEffect(card, weight) {
