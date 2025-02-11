@@ -31,7 +31,7 @@ export default class Card {
     this.types = data.type || []
     this.classifications = data.classifications || []
     this.text = data.text || ''
-    this.image = data.image_uris?.digital?.large || ''
+    this.image = data.image_uris?.digital?.large || data.image_uris?.digital?.normal || data.image_uris?.digital?.small || ''
     this.lore = data.lore || 0
     this.strength = data.strength || 0
     this.willpower = data.willpower || 0
