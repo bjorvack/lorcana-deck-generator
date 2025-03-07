@@ -221,9 +221,17 @@ export default class UI {
     })
   }
 
+  checkDualInks(card) {
+    if (this.inks.length !== 2) {
+      return false
+    }
+
+    return this.inks.includes(card.inks[0]) && this.inks.includes(card.inks[1])
+  }
+
   getPossibleCards() {
     return this.deckGenerator.cards
-      .filter(card => this.inks.includes(card.ink))
+      .filter(card => this.inks.includes(card.ink) || this.checkDualInks(card))
       .filter(card => this.deck.filter(deckCard => deckCard.id === card.id).length < 4)
       .sort((a, b) => {
         if (a.ink !== b.ink) {
