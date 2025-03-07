@@ -175,7 +175,7 @@ export default class WeightCalculator {
       hasEffect = true
     }
 
-    if (!hasEffect && !this.hasKeywords(card)) weight *= 0.5
+    if (card.types.includes('Character') && !hasEffect && !this.hasKeywords(card)) weight *= 0.5
 
     return weight;
   }
