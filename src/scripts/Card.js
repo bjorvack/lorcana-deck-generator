@@ -35,6 +35,7 @@ export default class Card {
     this.lore = data.lore || 0
     this.strength = data.strength || 0
     this.willpower = data.willpower || 0
+    this.legality = data.legalities.core || 'not_legal'
 
     this.requiredKeywords = []
     this.requiredClassifications = []

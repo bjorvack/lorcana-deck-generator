@@ -205,7 +205,12 @@ export default class DeckGenerator {
       return card.cost === pickedCost
     })
 
-    const weights = cardsOfCost.map(card => {
+    const legalCardsOfCost = cardsOfCost.filter(card => {
+        console.log(card)
+        return card.legality === 'legal'
+    })
+
+    const weights = legalCardsOfCost.map(card => {
       return {
         card,
         weight: this.weightCalculator.calculateWeight(card, deck, deckType, triesRemaining)
