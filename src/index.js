@@ -21,8 +21,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.querySelectorAll('[data-role=generator]'),
         document.querySelector('[data-role=test]'),
         document.querySelector('[data-role=clear]'),
-        document.querySelector('#primaryInk'),
-        document.querySelector('#secondaryInk'),
         document.querySelector('[data-role=deck]'),
         document.querySelector('[data-role=card-preview]'),
         document.querySelector('[data-role=card-select]'),

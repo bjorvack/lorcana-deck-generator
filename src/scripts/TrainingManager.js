@@ -347,7 +347,6 @@ export default class TrainingManager {
             await this.model.loadModel('localstorage://deck-generator-model');
             this.log('Model loaded.');
             document.getElementById('save-model').disabled = false;
-            document.getElementById('predict-btn').disabled = false;
         } catch (e) {
             this.log(`Error loading model: ${e.message}`);
         }
@@ -358,7 +357,7 @@ export default class TrainingManager {
         return `${name}|${version || ''}`.toLowerCase();
     }
 
-    async predict(cardNames, legalOnly = true) {
+    async predict(cardNames, legalOnly = true, allowedInks = []) {
         // Convert names to indices
         const indices = [];
         const features = [];
@@ -446,6 +445,15 @@ export default class TrainingManager {
             }
 
             // 2. Check Ink Color Limit
+            // If allowedInks are provided, strict check against them
+            if (allowedInks.length > 0) {
+                const cardInks = card.inks || (card.ink ? [card.ink] : []);
+                const isAllowed = cardInks.every(ink => allowedInks.includes(ink));
+                if (!isAllowed) {
+                    continue;
+                }
+            }
+
             // If we already have 2 or more inks, the new card MUST match one of them.
             // If we have < 2 inks, any ink is allowed (it will either match or be the 2nd color).
             if (currentInks.size >= 2) {

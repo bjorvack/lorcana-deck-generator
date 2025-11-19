@@ -19,6 +19,7 @@
             <button id="load-model">Load Model</button>
         </div>
 
+
         <div class="status-section">
             <h2>Status</h2>
             <div id="status-log"
@@ -27,18 +28,15 @@
         </div>
 
         <div class="prediction-section">
-            <h2>Prediction</h2>
-            <p>Enter card names separated by commas (e.g., "Elsa, Anna"):</p>
-            <textarea id="prediction-input" rows="4" cols="50"></textarea>
-            <br>
-            <button id="predict-btn" disabled>Predict Next Card</button>
-            <button id="add-to-deck-btn" disabled>Add to Deck</button>
-            <button id="generate-deck-btn" disabled>Generate Whole Deck</button>
-            <br><br>
-            <label><input type="checkbox" id="legal-only" checked> Only Legal Cards</label>
-            <div id="prediction-output"></div>
+            <div class="input-section">
+                <hr>
+                <div data-role="ink-selector"></div>
+                <hr>
+                <button id="generate-deck-btn" disabled>Complete deck</button>
+                <br><br>
+                <label><input type="checkbox" id="legal-only" checked> Only Legal Cards</label>
+            </div>
 
-            <h3>Deck Preview</h3>
             <div id="deck-preview" data-role="deck"></div>
 
             <div class="hidden">
@@ -46,6 +44,26 @@
                 <canvas data-role="chart"></canvas>
             </div>
         </div>
+    </div>
+
+    <dialog data-role="card-select">
+        <button data-role="close">x</button>
+        <h2>Pick cards to add</h2>
+        <div class="from-group">
+            <label for="filter">Search</label>
+            <input id="filter" type="text" data-role="filter">
+        </div>
+
+        <div data-role="card-list">
+            <!-- Card list -->
+        </div>
+    </dialog>
+
+    <div class="hidden">
+        <h2>Cost Curve</h2>
+        <canvas data-role="chart"></canvas>
+    </div>
+    </div>
     </div>
 </body>
 

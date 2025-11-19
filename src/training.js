@@ -1,37 +1,134 @@
 import './styles.css';
 import TrainingManager from './scripts/TrainingManager';
 import Chart from './scripts/Chart';
+import CardSelector from './scripts/CardSelector';
+import DeckRenderer from './scripts/DeckRenderer';
+import InkSelector from './scripts/InkSelector';
+import CardPreview from './scripts/CardPreview';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const manager = new TrainingManager();
-    const startBtn = document.getElementById('start-training');
-    const logDiv = document.getElementById('log');
-    const predictBtn = document.getElementById('predict-btn');
-    const input = document.getElementById('prediction-input');
-    const output = document.getElementById('prediction-output');
-    const addToDeckBtn = document.getElementById('add-to-deck-btn');
-    const generateDeckBtn = document.getElementById('generate-deck-btn');
-    const deckPreview = document.getElementById('deck-preview');
 
+    // UI Elements
+    const startBtn = document.getElementById('start-training');
+    const generateDeckBtn = document.getElementById('generate-deck-btn');
     const saveModelBtn = document.getElementById('save-model');
     const loadModelBtn = document.getElementById('load-model');
     const chartCanvas = document.querySelector('[data-role="chart"]');
+    const legalOnlyCheckbox = document.getElementById('legal-only');
 
     const chart = new Chart(chartCanvas);
+    let cardSelector;
+    let deckRenderer;
+    let inkSelector;
+    let cardPreview;
 
+    let currentPrediction = null;
+    let currentDeck = []; // Store actual Card objects
+    let currentInks = [];
 
-    document.getElementById('start-training').addEventListener('click', async () => {
-        const btn = document.getElementById('start-training');
-        btn.disabled = true;
+    // Initialize CardPreview
+    cardPreview = new CardPreview();
+
+    // Initialize DeckRenderer
+    const deckContainer = document.querySelector('[data-role="deck"]');
+    deckRenderer = new DeckRenderer(deckContainer, {
+        onRemove: (cardId) => {
+            const index = currentDeck.findIndex(c => c.id === cardId);
+            if (index !== -1) {
+                currentDeck.splice(index, 1);
+                updateDeckPreview();
+                cardSelector.refresh();
+            }
+        },
+        onAdd: () => cardSelector.show(),
+        onCardClick: (card) => cardPreview.show(card.image, card.name),
+        isEditable: true,
+        showAddPlaceholder: true
+    });
+
+    // Initialize InkSelector
+    inkSelector = new InkSelector(
+        document.querySelector('[data-role="ink-selector"]'),
+        {
+            onChange: (inks) => {
+                currentInks = inks;
+                // Remove cards that don't match new inks
+                // Filter currentDeck
+                const validDeck = currentDeck.filter(card => {
+                    return currentInks.includes(card.ink) || checkDualInks(card, currentInks);
+                });
+
+                if (validDeck.length !== currentDeck.length) {
+                    currentDeck = validDeck;
+                    updateDeckPreview();
+                }
+
+                if (cardSelector) cardSelector.refresh();
+            }
+        }
+    );
+
+    // Initial render to show placeholder
+    updateDeckPreview();
+
+    // Initialize Manager and fetch cards early for selector
+    try {
+        // We need cards to initialize the selector.
+        // Manager fetches cards in startTraining or loadModel.
+        // Let's force fetch here if not done.
+        if (manager.cards.length === 0) {
+            await manager.cardApi.getCards().then(cards => {
+                manager.cards = cards;
+                // Also init maps
+                manager.cards.forEach((card, index) => {
+                    const key = manager.getCardKey(card.name, card.version);
+                    if (!manager.cardMap.has(key)) {
+                        const id = manager.cardMap.size;
+                        manager.cardMap.set(key, id);
+                        manager.indexMap.set(id, card);
+                    }
+                });
+            });
+        }
+
+        cardSelector = new CardSelector(
+            manager.cards,
+            document.querySelector('[data-role=card-select]'),
+            (card) => addCardToDeck(card),
+            {
+                filter: (card) => {
+                    // Filter by ink
+                    if (currentInks.length > 0) {
+                        const inkMatch = currentInks.includes(card.ink) || checkDualInks(card, currentInks);
+                        if (!inkMatch) return false;
+                    }
+
+                    // Filter by count
+                    const count = currentDeck.filter(c => c.id === card.id).length;
+                    return count < 4;
+                },
+                renderButtonText: (card) => {
+                    const count = currentDeck.filter(c => c.id === card.id).length;
+                    return `Add Card (${count}/4)`;
+                }
+            }
+        );
+
+    } catch (e) {
+        console.error("Failed to initialize cards:", e);
+    }
+
+    startBtn.addEventListener('click', async () => {
+        startBtn.disabled = true;
         try {
             await manager.startTraining();
-            predictBtn.disabled = false;
             generateDeckBtn.disabled = false;
         } catch (e) {
             console.error(e);
             manager.log(`Error: ${e.message}`);
         } finally {
-            btn.disabled = false;
+            startBtn.disabled = false;
         }
     });
 
@@ -41,90 +138,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadModelBtn.addEventListener('click', async () => {
         await manager.loadModel();
-        predictBtn.disabled = false;
         generateDeckBtn.disabled = false;
     });
 
-    let currentPrediction = null;
-    let currentDeck = []; // Store actual Card objects
-
-    // Sync input text with currentDeck
-    function syncInputFromDeck() {
-        const names = currentDeck.map(c => c.version ? `${c.name} - ${c.version}` : c.name);
-        input.value = names.join(', ');
+    function checkDualInks(card, inks) {
+        if (inks.length !== 2 || !card.inks) {
+            return false;
+        }
+        return inks.includes(card.inks[0]) && inks.includes(card.inks[1]);
     }
 
-    function syncDeckFromInput() {
-        const text = input.value;
-        if (!text) {
-            currentDeck = [];
+    function addCardToDeck(card) {
+        if (currentDeck.length >= 60) {
+            alert("Deck is full (60 cards).");
             return;
         }
-        const cardNames = text.split(',').map(s => s.trim()).filter(s => s);
-        currentDeck = [];
-        cardNames.forEach(name => {
-            const card = manager.getCardByName(name);
-            if (card) {
-                currentDeck.push(card);
-            }
-        });
+        // Check limit of 4
+        const count = currentDeck.filter(c => c.id === card.id).length;
+        if (count >= 4) {
+            alert("Cannot add more than 4 copies of a card.");
+            return;
+        }
+
+        currentDeck.push(card);
+        updateDeckPreview();
+        cardSelector.refresh(); // Update counts
     }
 
-    const legalOnlyCheckbox = document.getElementById('legal-only');
-
-    predictBtn.addEventListener('click', async () => {
-        syncDeckFromInput();
-        updateDeckPreview(); // Update preview based on parsed cards
-
-        if (currentDeck.length === 0) return;
-
-        // We need to pass indices or names to predict. 
-        // Manager.predict takes names? No, it takes names in the previous implementation I wrote?
-        // Let's check TrainingManager.predict signature.
-        // It has `async predict(cardNames)`.
-        // So we pass names.
-
-        const names = currentDeck.map(c => c.version ? `${c.name} - ${c.version}` : c.name);
-        const legalOnly = legalOnlyCheckbox.checked;
-        const prediction = await manager.predict(names, legalOnly);
-
-        if (prediction && typeof prediction !== 'string') {
-            currentPrediction = prediction;
-            const displayName = prediction.version ? `${prediction.name} (${prediction.version})` : prediction.name;
-            output.innerHTML = `<strong>Suggested Card:</strong> ${displayName}`;
-            addToDeckBtn.disabled = false;
-        } else {
-            currentPrediction = null;
-            output.innerHTML = `<strong>Suggested Card:</strong> ${prediction || "Unknown"}`;
-            addToDeckBtn.disabled = true;
+    function removeCard(cardId) {
+        const index = currentDeck.findIndex(c => c.id === cardId);
+        if (index !== -1) {
+            currentDeck.splice(index, 1);
+            updateDeckPreview();
+            if (cardSelector) cardSelector.refresh();
         }
-    });
-
-    addToDeckBtn.addEventListener('click', () => {
-        if (!currentPrediction) return;
-
-        currentDeck.push(currentPrediction);
-        syncInputFromDeck();
-        updateDeckPreview();
-
-        addToDeckBtn.disabled = true;
-        output.innerHTML = '';
-        currentPrediction = null;
-    });
+    }
 
     generateDeckBtn.addEventListener('click', async () => {
-        syncDeckFromInput();
         generateDeckBtn.disabled = true;
         const legalOnly = legalOnlyCheckbox.checked;
 
         // Loop until 60 cards
         while (currentDeck.length < 60) {
             const names = currentDeck.map(c => c.version ? `${c.name} - ${c.version}` : c.name);
-            const prediction = await manager.predict(names, legalOnly);
+            const prediction = await manager.predict(names, legalOnly, currentInks);
 
             if (prediction && typeof prediction !== 'string') {
                 currentDeck.push(prediction);
-                syncInputFromDeck();
                 updateDeckPreview();
 
                 // Small delay to visualize progress
@@ -137,113 +197,18 @@ document.addEventListener('DOMContentLoaded', () => {
         generateDeckBtn.disabled = false;
     });
 
-    input.addEventListener('input', () => {
-        // When user types, we update the deck preview but we don't overwrite the input
-        // We parse the input to get card objects
-        const text = input.value;
-        const cardNames = text.split(',').map(s => s.trim()).filter(s => s);
-        const tempDeck = [];
-        cardNames.forEach(name => {
-            const card = manager.getCardByName(name);
-            if (card) {
-                tempDeck.push(card);
-            }
-        });
-        // We don't update currentDeck yet? 
-        // If we do, we might lose state if user is typing a name.
-        // But for preview we need objects.
-        // Let's just render what we can parse.
-        renderDeck(tempDeck);
-    });
-
-
-
     function updateDeckPreview() {
-        renderDeck(currentDeck);
-    }
+        // Determine inks present for sorting order if not using selector, 
+        // but we are using selector now.
+        // Let's pass the selected inks to renderer for sorting preference
+        deckRenderer.render(currentDeck, currentInks);
 
-    function renderDeck(deck) {
-        deckPreview.innerHTML = '';
 
-        // Sort deck
-        // 1. Ink
-        // 2. Type
-        // 3. Cost
-        // 4. Title
-
-        // Determine inks present for sorting order
-        const inks = [...new Set(deck.map(c => c.ink).filter(i => i))].sort();
-
-        const sortedDeck = [...deck].sort((a, b) => {
-            if (a.ink !== b.ink) {
-                return inks.indexOf(a.ink) - inks.indexOf(b.ink);
-            }
-            const typeOrder = ['Character', 'Action', 'Item', 'Location'];
-            // a.types is array, use first type
-            const aType = a.types && a.types.length > 0 ? a.types[0] : '';
-            const bType = b.types && b.types.length > 0 ? b.types[0] : '';
-
-            if (aType !== bType) {
-                return typeOrder.indexOf(aType) - typeOrder.indexOf(bType);
-            }
-
-            if (a.cost !== b.cost) {
-                return a.cost - b.cost;
-            }
-
-            return (a.title || a.name).localeCompare(b.title || b.name);
-        });
-
-        sortedDeck.forEach((card, sortedIndex) => {
-            // We need to map back to original index for removal?
-            // Or just remove by ID? But we can have duplicates.
-            // Remove by index in the *original* deck is tricky if we sort.
-            // UI.js removes by finding index of card with same ID.
-            // "remove the first card with the same id"
-
-            const cardContainer = document.createElement('div');
-            cardContainer.dataset.role = 'card-container';
-
-            const img = document.createElement('img');
-            img.src = card.image;
-            img.alt = card.title || card.name;
-            img.dataset.role = 'card';
-            cardContainer.appendChild(img);
-
-            const removeButton = document.createElement('button');
-            removeButton.textContent = 'X';
-            removeButton.dataset.role = 'remove-card';
-            // We store the card ID to remove it
-            removeButton.dataset.cardId = card.id;
-            // But wait, if I have 2 Elsas, which one do I remove?
-            // UI.js removes the first one found in the array.
-            // We can do the same.
-
-            cardContainer.appendChild(removeButton);
-            deckPreview.appendChild(cardContainer);
-        });
-
-        // Update remove listener to use ID
-        if (deck.length > 0) {
-            chart.renderChart(deck);
+        // Update chart
+        if (currentDeck.length > 0) {
+            chart.renderChart(currentDeck);
         } else {
             chart.renderChart([]);
         }
     }
-
-    // Update the remove listener to work with ID
-    deckPreview.addEventListener('click', (e) => {
-        const btn = e.target.closest('[data-role="remove-card"]');
-        if (btn) {
-            syncDeckFromInput();
-            const cardId = btn.dataset.cardId;
-            const index = currentDeck.findIndex(c => c.id === cardId);
-            if (index !== -1) {
-                currentDeck.splice(index, 1);
-                syncInputFromDeck();
-                updateDeckPreview();
-            }
-            e.stopPropagation(); // Prevent bubbling
-        }
-    });
 });
