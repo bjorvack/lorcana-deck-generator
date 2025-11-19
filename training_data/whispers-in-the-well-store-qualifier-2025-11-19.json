@@ -1,0 +1,1540 @@
+{
+  "name": "Whispers in the Well Store Qualifier",
+  "url": "https://inkdecks.com/lorcana-tournaments/whispers-in-the-well-store-qualifier-tournament-decks-362710",
+  "decks": [
+    {
+      "place": 1,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Black Heron",
+          "version": "Real Bad Egg"
+        },
+        {
+          "amount": 4,
+          "name": "Calhoun",
+          "version": "Marine Sergeant"
+        },
+        {
+          "amount": 4,
+          "name": "Captain Hook",
+          "version": "Forceful Duelist"
+        },
+        {
+          "amount": 3,
+          "name": "Cheshire Cat",
+          "version": "Inexplicable"
+        },
+        {
+          "amount": 2,
+          "name": "Demona",
+          "version": "Scourge of the Wyvern Clan"
+        },
+        {
+          "amount": 3,
+          "name": "Diablo",
+          "version": "Obedient Raven"
+        },
+        {
+          "amount": 1,
+          "name": "Doc",
+          "version": "Bold Knight"
+        },
+        {
+          "amount": 4,
+          "name": "Dumbo",
+          "version": "Ninth Wonder of the Universe"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Wish Fulfilled"
+        },
+        {
+          "amount": 4,
+          "name": "Giant Cobra",
+          "version": "Ghostly Serpent"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Looking for a Deal"
+        },
+        {
+          "amount": 4,
+          "name": "Lexington",
+          "version": "Small in Stature"
+        },
+        {
+          "amount": 1,
+          "name": "Madam Mim",
+          "version": "Tiny Adversary"
+        },
+        {
+          "amount": 2,
+          "name": "Mayor Winddancer",
+          "version": "Actor-Turned-Politician"
+        },
+        {
+          "amount": 4,
+          "name": "Palace Guard",
+          "version": "Spectral Sentry"
+        },
+        {
+          "amount": 4,
+          "name": "Pete",
+          "version": "Games Referee"
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 2,
+      "cards": [
+        {
+          "amount": 2,
+          "name": "Basil",
+          "version": "Undercover Detective"
+        },
+        {
+          "amount": 1,
+          "name": "Bend to My Will",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Cinderella",
+          "version": "Dream Come True"
+        },
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Clumsy Guest"
+        },
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Light on Her Hooves"
+        },
+        {
+          "amount": 4,
+          "name": "Develop Your Brain",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Donald Duck",
+          "version": "Perfect Gentleman"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 4,
+          "name": "John Silver",
+          "version": "Alien Pirate"
+        },
+        {
+          "amount": 4,
+          "name": "Malicious, Mean, and Scary",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Max Goof",
+          "version": "Chart Topper"
+        },
+        {
+          "amount": 1,
+          "name": "One Jump Ahead",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Prince Phillip",
+          "version": "Vanquisher of Foes"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 2,
+          "name": "Under the Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Vision of the Future",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "You're Welcome",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 3,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Basil",
+          "version": "Practiced Detective"
+        },
+        {
+          "amount": 1,
+          "name": "Belle",
+          "version": "Accomplished Mystic"
+        },
+        {
+          "amount": 2,
+          "name": "Cheshire Cat",
+          "version": "Inexplicable"
+        },
+        {
+          "amount": 2,
+          "name": "Demona",
+          "version": "Scourge of the Wyvern Clan"
+        },
+        {
+          "amount": 4,
+          "name": "Dumbo",
+          "version": "Ninth Wonder of the Universe"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Wish Fulfilled"
+        },
+        {
+          "amount": 3,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Looking for a Deal"
+        },
+        {
+          "amount": 3,
+          "name": "Iago",
+          "version": "Giant Spectral Parrot"
+        },
+        {
+          "amount": 4,
+          "name": "Into the Unknown",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Junior Woodchuck Guidebook",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Madam Mim",
+          "version": "Elephant"
+        },
+        {
+          "amount": 2,
+          "name": "Magical Maneuvers",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Monstro",
+          "version": "Infamous Whale"
+        },
+        {
+          "amount": 1,
+          "name": "One Jump Ahead",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Spooky Sight",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Sudden Scare",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Tamatoa",
+          "version": "Happy as a Clam"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        }
+      ]
+    },
+    {
+      "place": 4,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Basil",
+          "version": "Undercover Detective"
+        },
+        {
+          "amount": 1,
+          "name": "Bend to My Will",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Cinderella",
+          "version": "Dream Come True"
+        },
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Clumsy Guest"
+        },
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Contented Wallflower"
+        },
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Light on Her Hooves"
+        },
+        {
+          "amount": 4,
+          "name": "Donald Duck",
+          "version": "Perfect Gentleman"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 4,
+          "name": "John Silver",
+          "version": "Alien Pirate"
+        },
+        {
+          "amount": 4,
+          "name": "Malicious, Mean, and Scary",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Prince Phillip",
+          "version": "Royal Explorer"
+        },
+        {
+          "amount": 4,
+          "name": "Prince Phillip",
+          "version": "Vanquisher of Foes"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 3,
+          "name": "Vision of the Future",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "You're Welcome",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 5,
+      "cards": [
+        {
+          "amount": 2,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Goliath",
+          "version": "Clan Leader"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 4,
+          "name": "He Hurled His Thunderbolt",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Inkrunner",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Jasmine",
+          "version": "Resourceful Infiltrator"
+        },
+        {
+          "amount": 4,
+          "name": "Jasmine",
+          "version": "Steady Strategist"
+        },
+        {
+          "amount": 4,
+          "name": "Kida",
+          "version": "Creative Thinker"
+        },
+        {
+          "amount": 4,
+          "name": "Lexington",
+          "version": "Small in Stature"
+        },
+        {
+          "amount": 4,
+          "name": "Namaari",
+          "version": "Single-Minded Rival"
+        },
+        {
+          "amount": 2,
+          "name": "Pleakley",
+          "version": "Scientific Expert"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Scuttle",
+          "version": "Birdbrained"
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tinker Bell",
+          "version": "Giant Fairy"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
+        }
+      ]
+    },
+    {
+      "place": 6,
+      "cards": [
+        {
+          "amount": 2,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Captain Hook",
+          "version": "Forceful Duelist"
+        },
+        {
+          "amount": 4,
+          "name": "Cinderella",
+          "version": "Dream Come True"
+        },
+        {
+          "amount": 4,
+          "name": "Develop Your Brain",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Goliath",
+          "version": "Clan Leader"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 3,
+          "name": "He Hurled His Thunderbolt",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Jasmine",
+          "version": "Fearless Princess"
+        },
+        {
+          "amount": 3,
+          "name": "Kida",
+          "version": "Creative Thinker"
+        },
+        {
+          "amount": 1,
+          "name": "Mayor Winddancer",
+          "version": "Actor-Turned-Politician"
+        },
+        {
+          "amount": 4,
+          "name": "Namaari",
+          "version": "Single-Minded Rival"
+        },
+        {
+          "amount": 1,
+          "name": "One Jump Ahead",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Smash",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Spooky Sight",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Sudden Scare",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "The Headless Horseman",
+          "version": "Cursed Rider"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
+        },
+        {
+          "amount": 2,
+          "name": "Vision of the Future",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 7,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Clumsy Guest"
+        },
+        {
+          "amount": 3,
+          "name": "Clarabelle",
+          "version": "Contented Wallflower"
+        },
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Light on Her Hooves"
+        },
+        {
+          "amount": 4,
+          "name": "Donald Duck",
+          "version": "Perfect Gentleman"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 2,
+          "name": "Inkrunner",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "John Silver",
+          "version": "Alien Pirate"
+        },
+        {
+          "amount": 4,
+          "name": "Malicious, Mean, and Scary",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Prince Phillip",
+          "version": "Royal Explorer"
+        },
+        {
+          "amount": 4,
+          "name": "Prince Phillip",
+          "version": "Vanquisher of Foes"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Stopped Chaos in Its Tracks",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Sudden Scare",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vision of the Future",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "You're Welcome",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 8,
+      "cards": [
+        {
+          "amount": 1,
+          "name": "Aurora",
+          "version": "Dreaming Guardian"
+        },
+        {
+          "amount": 3,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Captain Hook",
+          "version": "Forceful Duelist"
+        },
+        {
+          "amount": 4,
+          "name": "Cinderella",
+          "version": "Dream Come True"
+        },
+        {
+          "amount": 4,
+          "name": "Develop Your Brain",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Goliath",
+          "version": "Clan Leader"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 3,
+          "name": "He Hurled His Thunderbolt",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Jasmine",
+          "version": "Fearless Princess"
+        },
+        {
+          "amount": 3,
+          "name": "Kida",
+          "version": "Creative Thinker"
+        },
+        {
+          "amount": 4,
+          "name": "Namaari",
+          "version": "Single-Minded Rival"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "The Headless Horseman",
+          "version": "Cursed Rider"
+        },
+        {
+          "amount": 4,
+          "name": "Tinker Bell",
+          "version": "Giant Fairy"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
+        },
+        {
+          "amount": 2,
+          "name": "Vision of the Future",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 1,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Black Heron",
+          "version": "Real Bad Egg"
+        },
+        {
+          "amount": 4,
+          "name": "Calhoun",
+          "version": "Marine Sergeant"
+        },
+        {
+          "amount": 4,
+          "name": "Captain Hook",
+          "version": "Forceful Duelist"
+        },
+        {
+          "amount": 3,
+          "name": "Cheshire Cat",
+          "version": "Inexplicable"
+        },
+        {
+          "amount": 2,
+          "name": "Demona",
+          "version": "Scourge of the Wyvern Clan"
+        },
+        {
+          "amount": 3,
+          "name": "Diablo",
+          "version": "Obedient Raven"
+        },
+        {
+          "amount": 1,
+          "name": "Doc",
+          "version": "Bold Knight"
+        },
+        {
+          "amount": 4,
+          "name": "Dumbo",
+          "version": "Ninth Wonder of the Universe"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Wish Fulfilled"
+        },
+        {
+          "amount": 4,
+          "name": "Giant Cobra",
+          "version": "Ghostly Serpent"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Looking for a Deal"
+        },
+        {
+          "amount": 4,
+          "name": "Lexington",
+          "version": "Small in Stature"
+        },
+        {
+          "amount": 1,
+          "name": "Madam Mim",
+          "version": "Tiny Adversary"
+        },
+        {
+          "amount": 2,
+          "name": "Mayor Winddancer",
+          "version": "Actor-Turned-Politician"
+        },
+        {
+          "amount": 4,
+          "name": "Palace Guard",
+          "version": "Spectral Sentry"
+        },
+        {
+          "amount": 4,
+          "name": "Pete",
+          "version": "Games Referee"
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 2,
+      "cards": [
+        {
+          "amount": 2,
+          "name": "Basil",
+          "version": "Undercover Detective"
+        },
+        {
+          "amount": 1,
+          "name": "Bend to My Will",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Cinderella",
+          "version": "Dream Come True"
+        },
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Clumsy Guest"
+        },
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Light on Her Hooves"
+        },
+        {
+          "amount": 4,
+          "name": "Develop Your Brain",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Donald Duck",
+          "version": "Perfect Gentleman"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 4,
+          "name": "John Silver",
+          "version": "Alien Pirate"
+        },
+        {
+          "amount": 4,
+          "name": "Malicious, Mean, and Scary",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Max Goof",
+          "version": "Chart Topper"
+        },
+        {
+          "amount": 1,
+          "name": "One Jump Ahead",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Prince Phillip",
+          "version": "Vanquisher of Foes"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 2,
+          "name": "Under the Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Vision of the Future",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "You're Welcome",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 3,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Basil",
+          "version": "Practiced Detective"
+        },
+        {
+          "amount": 1,
+          "name": "Belle",
+          "version": "Accomplished Mystic"
+        },
+        {
+          "amount": 2,
+          "name": "Cheshire Cat",
+          "version": "Inexplicable"
+        },
+        {
+          "amount": 2,
+          "name": "Demona",
+          "version": "Scourge of the Wyvern Clan"
+        },
+        {
+          "amount": 4,
+          "name": "Dumbo",
+          "version": "Ninth Wonder of the Universe"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Wish Fulfilled"
+        },
+        {
+          "amount": 3,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Looking for a Deal"
+        },
+        {
+          "amount": 3,
+          "name": "Iago",
+          "version": "Giant Spectral Parrot"
+        },
+        {
+          "amount": 4,
+          "name": "Into the Unknown",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Junior Woodchuck Guidebook",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Madam Mim",
+          "version": "Elephant"
+        },
+        {
+          "amount": 2,
+          "name": "Magical Maneuvers",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Monstro",
+          "version": "Infamous Whale"
+        },
+        {
+          "amount": 1,
+          "name": "One Jump Ahead",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Spooky Sight",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Sudden Scare",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Tamatoa",
+          "version": "Happy as a Clam"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        }
+      ]
+    },
+    {
+      "place": 12,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Basil",
+          "version": "Undercover Detective"
+        },
+        {
+          "amount": 1,
+          "name": "Bend to My Will",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Cinderella",
+          "version": "Dream Come True"
+        },
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Clumsy Guest"
+        },
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Contented Wallflower"
+        },
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Light on Her Hooves"
+        },
+        {
+          "amount": 4,
+          "name": "Donald Duck",
+          "version": "Perfect Gentleman"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 4,
+          "name": "John Silver",
+          "version": "Alien Pirate"
+        },
+        {
+          "amount": 4,
+          "name": "Malicious, Mean, and Scary",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Prince Phillip",
+          "version": "Royal Explorer"
+        },
+        {
+          "amount": 4,
+          "name": "Prince Phillip",
+          "version": "Vanquisher of Foes"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 3,
+          "name": "Vision of the Future",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "You're Welcome",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 13,
+      "cards": [
+        {
+          "amount": 2,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Goliath",
+          "version": "Clan Leader"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 4,
+          "name": "He Hurled His Thunderbolt",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Inkrunner",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Jasmine",
+          "version": "Resourceful Infiltrator"
+        },
+        {
+          "amount": 4,
+          "name": "Jasmine",
+          "version": "Steady Strategist"
+        },
+        {
+          "amount": 4,
+          "name": "Kida",
+          "version": "Creative Thinker"
+        },
+        {
+          "amount": 4,
+          "name": "Lexington",
+          "version": "Small in Stature"
+        },
+        {
+          "amount": 4,
+          "name": "Namaari",
+          "version": "Single-Minded Rival"
+        },
+        {
+          "amount": 2,
+          "name": "Pleakley",
+          "version": "Scientific Expert"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Scuttle",
+          "version": "Birdbrained"
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tinker Bell",
+          "version": "Giant Fairy"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
+        }
+      ]
+    },
+    {
+      "place": 14,
+      "cards": [
+        {
+          "amount": 2,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Captain Hook",
+          "version": "Forceful Duelist"
+        },
+        {
+          "amount": 4,
+          "name": "Cinderella",
+          "version": "Dream Come True"
+        },
+        {
+          "amount": 4,
+          "name": "Develop Your Brain",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Goliath",
+          "version": "Clan Leader"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 3,
+          "name": "He Hurled His Thunderbolt",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Jasmine",
+          "version": "Fearless Princess"
+        },
+        {
+          "amount": 3,
+          "name": "Kida",
+          "version": "Creative Thinker"
+        },
+        {
+          "amount": 1,
+          "name": "Mayor Winddancer",
+          "version": "Actor-Turned-Politician"
+        },
+        {
+          "amount": 4,
+          "name": "Namaari",
+          "version": "Single-Minded Rival"
+        },
+        {
+          "amount": 1,
+          "name": "One Jump Ahead",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Smash",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Spooky Sight",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Sudden Scare",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "The Headless Horseman",
+          "version": "Cursed Rider"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
+        },
+        {
+          "amount": 2,
+          "name": "Vision of the Future",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 15,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Clumsy Guest"
+        },
+        {
+          "amount": 3,
+          "name": "Clarabelle",
+          "version": "Contented Wallflower"
+        },
+        {
+          "amount": 4,
+          "name": "Clarabelle",
+          "version": "Light on Her Hooves"
+        },
+        {
+          "amount": 4,
+          "name": "Donald Duck",
+          "version": "Perfect Gentleman"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 2,
+          "name": "Inkrunner",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "John Silver",
+          "version": "Alien Pirate"
+        },
+        {
+          "amount": 4,
+          "name": "Malicious, Mean, and Scary",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Prince Phillip",
+          "version": "Royal Explorer"
+        },
+        {
+          "amount": 4,
+          "name": "Prince Phillip",
+          "version": "Vanquisher of Foes"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Stopped Chaos in Its Tracks",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Sudden Scare",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vision of the Future",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "You're Welcome",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 16,
+      "cards": [
+        {
+          "amount": 1,
+          "name": "Aurora",
+          "version": "Dreaming Guardian"
+        },
+        {
+          "amount": 3,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Captain Hook",
+          "version": "Forceful Duelist"
+        },
+        {
+          "amount": 4,
+          "name": "Cinderella",
+          "version": "Dream Come True"
+        },
+        {
+          "amount": 4,
+          "name": "Develop Your Brain",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Goliath",
+          "version": "Clan Leader"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 3,
+          "name": "He Hurled His Thunderbolt",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Jasmine",
+          "version": "Fearless Princess"
+        },
+        {
+          "amount": 3,
+          "name": "Kida",
+          "version": "Creative Thinker"
+        },
+        {
+          "amount": 4,
+          "name": "Namaari",
+          "version": "Single-Minded Rival"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "The Headless Horseman",
+          "version": "Cursed Rider"
+        },
+        {
+          "amount": 4,
+          "name": "Tinker Bell",
+          "version": "Giant Fairy"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
+        },
+        {
+          "amount": 2,
+          "name": "Vision of the Future",
+          "version": ""
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "set": 10,
+    "legality": "Core"
+  }
+}
