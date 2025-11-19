@@ -1,9 +1,11 @@
 import './styles.css';
 import TrainingManager from './scripts/TrainingManager';
+import Chart from './scripts/Chart';
 
 document.addEventListener('DOMContentLoaded', () => {
     const manager = new TrainingManager();
     const startBtn = document.getElementById('start-training');
+    const logDiv = document.getElementById('log');
     const predictBtn = document.getElementById('predict-btn');
     const input = document.getElementById('prediction-input');
     const output = document.getElementById('prediction-output');
@@ -11,9 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateDeckBtn = document.getElementById('generate-deck-btn');
     const deckPreview = document.getElementById('deck-preview');
 
-    const saveBtn = document.getElementById('save-model');
-    const loadBtn = document.getElementById('load-model');
-    const epochsInput = document.getElementById('epochs');
+    const saveModelBtn = document.getElementById('save-model');
+    const loadModelBtn = document.getElementById('load-model');
+    const chartCanvas = document.querySelector('[data-role="chart"]');
+
+    const chart = new Chart(chartCanvas);
 
 
     document.getElementById('start-training').addEventListener('click', async () => {
@@ -31,11 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    saveBtn.addEventListener('click', async () => {
+    saveModelBtn.addEventListener('click', async () => {
         await manager.saveModel();
     });
 
-    loadBtn.addEventListener('click', async () => {
+    loadModelBtn.addEventListener('click', async () => {
         await manager.loadModel();
         predictBtn.disabled = false;
         generateDeckBtn.disabled = false;
@@ -220,6 +224,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Update remove listener to use ID
+        if (deck.length > 0) {
+            chart.renderChart(deck);
+        } else {
+            chart.renderChart([]);
+        }
     }
 
     // Update the remove listener to work with ID
