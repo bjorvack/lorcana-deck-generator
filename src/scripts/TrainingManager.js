@@ -160,6 +160,7 @@ export default class TrainingManager {
         this.log('Training complete!');
         await this.saveModel();
         document.getElementById('save-model').disabled = false;
+        document.getElementById('export-model').disabled = false;
     }
 
     getInitialDeckStats() {
@@ -323,6 +324,12 @@ export default class TrainingManager {
         this.log('Model saved.');
     }
 
+    async exportModel() {
+        this.log('Exporting model to downloads...');
+        await this.model.saveModel('downloads://deck-generator-model');
+        this.log('Model exported. Check your downloads folder for model files.');
+    }
+
     async loadModel() {
         this.log('Loading model from local storage...');
         try {
@@ -347,6 +354,7 @@ export default class TrainingManager {
             await this.model.loadModel('localstorage://deck-generator-model');
             this.log('Model loaded.');
             document.getElementById('save-model').disabled = false;
+            document.getElementById('export-model').disabled = false;
         } catch (e) {
             this.log(`Error loading model: ${e.message}`);
         }

@@ -10,11 +10,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const manager = new TrainingManager();
 
     // UI Elements
-    const startBtn = document.getElementById('start-training');
     const generateDeckBtn = document.getElementById('generate-deck-btn');
-    const saveModelBtn = document.getElementById('save-model');
-    const loadModelBtn = document.getElementById('load-model');
-    const exportModelBtn = document.getElementById('export-model');
+    const testDeckBtn = document.getElementById('test-deck-btn');
+    const clearDeckBtn = document.getElementById('clear-deck-btn');
     const chartCanvas = document.querySelector('[data-role="chart"]');
     const legalOnlyCheckbox = document.getElementById('legal-only');
 
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     let inkSelector;
     let cardPreview;
 
-    let currentPrediction = null;
     let currentDeck = []; // Store actual Card objects
     let currentInks = [];
 
@@ -55,7 +52,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             onChange: (inks) => {
                 currentInks = inks;
                 // Remove cards that don't match new inks
-                // Filter currentDeck
                 const validDeck = currentDeck.filter(card => {
                     return currentInks.includes(card.ink) || checkDualInks(card, currentInks);
                 });
@@ -73,11 +69,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initial render to show placeholder
     updateDeckPreview();
 
-    // Initialize Manager and fetch cards early for selector
+    // Auto-load model and initialize
     try {
-        // We need cards to initialize the selector.
-        // Manager fetches cards in startTraining or loadModel.
-        // Let's force fetch here if not done.
+        console.log('Loading AI model...');
+
+        // Fetch cards
         if (manager.cards.length === 0) {
             await manager.cardApi.getCards().then(cards => {
                 manager.cards = cards;
@@ -93,6 +89,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         }
 
+        // Initialize card selector
         cardSelector = new CardSelector(
             manager.cards,
             document.querySelector('[data-role=card-select]'),
@@ -116,35 +113,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         );
 
-    } catch (e) {
-        console.error("Failed to initialize cards:", e);
-    }
+        // Load the model from training_data
+        await manager.model.loadModel('training_data/deck-generator-model.json');
+        console.log('Model loaded successfully!');
 
-    startBtn.addEventListener('click', async () => {
-        startBtn.disabled = true;
-        try {
-            await manager.startTraining();
-            generateDeckBtn.disabled = false;
-        } catch (e) {
-            console.error(e);
-            manager.log(`Error: ${e.message}`);
-        } finally {
-            startBtn.disabled = false;
-        }
-    });
-
-    saveModelBtn.addEventListener('click', async () => {
-        await manager.saveModel();
-    });
-
-    loadModelBtn.addEventListener('click', async () => {
-        await manager.loadModel();
+        // Enable the generate button
         generateDeckBtn.disabled = false;
-    });
 
-    exportModelBtn.addEventListener('click', async () => {
-        await manager.exportModel();
-    });
+    } catch (e) {
+        console.error('Failed to load model:', e);
+        alert('Failed to load AI model. Please refresh the page.');
+    }
 
     function checkDualInks(card, inks) {
         if (inks.length !== 2 || !card.inks) {
@@ -170,15 +149,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         cardSelector.refresh(); // Update counts
     }
 
-    function removeCard(cardId) {
-        const index = currentDeck.findIndex(c => c.id === cardId);
-        if (index !== -1) {
-            currentDeck.splice(index, 1);
-            updateDeckPreview();
-            if (cardSelector) cardSelector.refresh();
-        }
-    }
-
     generateDeckBtn.addEventListener('click', async () => {
         generateDeckBtn.disabled = true;
         const legalOnly = legalOnlyCheckbox.checked;
@@ -192,22 +162,50 @@ document.addEventListener('DOMContentLoaded', async () => {
                 currentDeck.push(prediction);
                 updateDeckPreview();
 
-                // Small delay to visualize progress
-                await new Promise(r => setTimeout(r, 100));
+                // Small delay to prevent UI freeze
+                await new Promise(resolve => setTimeout(resolve, 10));
             } else {
-                manager.log("Model could not find a valid next card. Stopping generation.");
-                break;
+                console.warn('No valid prediction:', prediction);
+                break; // Break if we can't find a valid card
             }
         }
+
         generateDeckBtn.disabled = false;
     });
 
+    clearDeckBtn.addEventListener('click', () => {
+        currentDeck = [];
+        updateDeckPreview();
+        testDeckBtn.classList.add('hidden');
+    });
+
+    testDeckBtn.addEventListener('click', () => {
+        window.open(getInkTableLink(), '_blank');
+    });
+
+    function getInkTableLink() {
+        const randomId = Math.random().toString(36).substring(7);
+        let deckName = `AI Generated Deck: ${currentInks[0]} - ${currentInks[1]} - ${randomId}`;
+        deckName = encodeURIComponent(deckName);
+        let base64Id = '';
+        const uniqueCardsInDeck = [...new Set(currentDeck.map(card => card.name))];
+        for (const card of uniqueCardsInDeck) {
+            const amountOfCardsWithSameTitle = currentDeck.filter(deckCard => deckCard.name === card).length;
+            base64Id += `${card}$${amountOfCardsWithSameTitle}|`;
+        }
+
+        return `https://inktable.net/lor/import?svc=dreamborn&name=${deckName}&id=${btoa(base64Id)}`;
+    }
+
     function updateDeckPreview() {
-        // Determine inks present for sorting order if not using selector, 
-        // but we are using selector now.
-        // Let's pass the selected inks to renderer for sorting preference
+        // Render deck with current inks for sorting preference
         deckRenderer.render(currentDeck, currentInks);
 
+        // Toggle test button based on deck state
+        testDeckBtn.classList.remove('hidden');
+        if (currentDeck.length < 60) {
+            testDeckBtn.classList.add('hidden');
+        }
 
         // Update chart
         if (currentDeck.length > 0) {

@@ -6,7 +6,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry: {
         main: './src/index.js',
-        training: './src/training.js'
+        training: './src/training.js',
+        'ai-generator': './src/ai-generator.js'
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -39,6 +40,15 @@ module.exports = {
             filename: 'training.html',
             template: './src/training.html',
             chunks: ['training'],
+            minify: {
+                collapseWhitespace: false,
+                removeComments: true,
+            },
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'ai-generator.html',
+            template: './src/ai-generator.html',
+            chunks: ['ai-generator'],
             minify: {
                 collapseWhitespace: false,
                 removeComments: true,

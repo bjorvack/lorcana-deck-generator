@@ -4,37 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lorcana Deck Generator - Training</title>
+    <title>Lorcana AI Deck Generator</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>Deck Generation Training</h1>
-
-        <div class="actions">
-            <label for="epochs">Epochs:</label>
-            <input type="number" id="epochs" value="10" min="1" style="width: 50px;">
-            <button id="start-training">Start Training</button>
-            <button id="save-model" disabled>Save Model</button>
-            <button id="load-model">Load Model</button>
-            <button id="export-model" disabled>Export Model</button>
-        </div>
-
-
-        <div class="status-section">
-            <h2>Status</h2>
-            <div id="status-log"
-                style="height: 200px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px; font-family: monospace;">
-            </div>
-        </div>
+        <h1>AI Deck Generator</h1>
 
         <div class="prediction-section">
             <div class="input-section">
+                <div class="buttons">
+                    <button id="generate-deck-btn" disabled>Complete deck</button>
+                    <button id="test-deck-btn" class="hidden">Test Deck</button>
+                    <button class="outline" id="clear-deck-btn">Clear</button>
+                </div>
                 <hr>
                 <div data-role="ink-selector"></div>
                 <hr>
-                <button id="generate-deck-btn" disabled>Complete deck</button>
-                <br><br>
                 <label><input type="checkbox" id="legal-only" checked> Only Legal Cards</label>
             </div>
 
@@ -59,13 +45,6 @@
             <!-- Card list -->
         </div>
     </dialog>
-
-    <div class="hidden">
-        <h2>Cost Curve</h2>
-        <canvas data-role="chart"></canvas>
-    </div>
-    </div>
-    </div>
 </body>
 
 </html>
