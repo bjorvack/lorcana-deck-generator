@@ -35,6 +35,7 @@ export default class Card {
     this.lore = data.lore || 0
     this.strength = data.strength || 0
     this.willpower = data.willpower || 0
+    this.moveCost = data.move_cost || 0
     this.legality = data.legalities.core || 'not_legal'
 
     this.requiredKeywords = []
@@ -77,6 +78,7 @@ export default class Card {
     this.hasChallenger = this.keywords.includes('Challenger')
     this.hasSinger = this.keywords.includes('Singer')
     this.hasShift = this.keywords.includes('Shift')
+    this.hasBoost = this.keywords.includes('Boost')
 
     if (this.hasShift) {
       let names = this.name.split('&').map(name => name.trim())
@@ -123,6 +125,19 @@ export default class Card {
       if (match) {
         return parseInt(match[1])
       }
+    }
+
+    return 0
+  }
+
+  get boostAmount() {
+    if (this.hasBoost) {
+      // Look for the Boost +x text in the card's text
+        const boostRegex = /Boost \+(\d+) \(This character gets \+(\d+) (?:\w+)?(?:{S})?\.\)/
+        const match = this.text.match(boostRegex)
+        if (match) {
+            return parseInt(match[1])
+        }
     }
 
     return 0

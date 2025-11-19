@@ -63,13 +63,30 @@ export default class DeckModel {
 
         const { xsIndices, xsFeatures, ys } = this.prepareData(sequences, featureSequences);
 
+        // Early stopping: stop if validation loss doesn't improve for 3 epochs
+        let bestValLoss = Infinity;
+        let patienceCounter = 0;
+        const patience = 3;
+
         await this.model.fit([xsIndices, xsFeatures], ys, {
             epochs: epochs || 10,
-            batchSize: 32,
+            batchSize: 64, // Increased from 32 for faster training
             validationSplit: 0.1,
             callbacks: {
                 onEpochEnd: (epoch, logs) => {
                     if (onEpochEnd) onEpochEnd(epoch, logs);
+
+                    // Early stopping logic
+                    if (logs.val_loss < bestValLoss) {
+                        bestValLoss = logs.val_loss;
+                        patienceCounter = 0;
+                    } else {
+                        patienceCounter++;
+                        if (patienceCounter >= patience) {
+                            console.log(`Early stopping at epoch ${epoch + 1}`);
+                            this.model.stopTraining = true;
+                        }
+                    }
                 }
             }
         });

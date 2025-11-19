@@ -155,12 +155,21 @@ export default class TrainingManager {
         return {
             totalCards: 0,
             inkableCount: 0,
-            costCounts: [0, 0, 0, 0, 0, 0], // 1, 2, 3, 4, 5, 6+
+            costCounts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Costs 1-10
+            inkableCostCounts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Inkable cards at costs 1-10
             typeCounts: {
                 'character': 0,
                 'action': 0,
                 'item': 0,
                 'location': 0
+            },
+            inkCounts: {
+                'Amber': 0,
+                'Amethyst': 0,
+                'Emerald': 0,
+                'Ruby': 0,
+                'Sapphire': 0,
+                'Steel': 0
             }
         };
     }
@@ -169,21 +178,30 @@ export default class TrainingManager {
         stats.totalCards++;
         if (card.inkwell) stats.inkableCount++;
 
-        const costIndex = Math.min(Math.max(0, card.cost - 1), 5); // Map 1->0, 6+->5. 0 cost -> 0
-        // Actually card cost can be 0. Let's map 0->0, 1->0? No.
-        // Let's just do buckets: 0-1, 2, 3, 4, 5, 6+.
-        // Or just indices 0 to 5.
-        // Let's assume cost 0-1 is index 0.
-        let cIdx = 0;
-        if (card.cost <= 1) cIdx = 0;
-        else if (card.cost >= 6) cIdx = 5;
-        else cIdx = card.cost - 1;
-
+        // Map cost to index: costs 1-10 -> indices 0-9, cost 0 or >10 -> capped
+        let cIdx = Math.max(0, Math.min(card.cost - 1, 9)); // cost 1->0, cost 10->9, cost 0->0 (capped)
+        if (card.cost === 0) cIdx = 0; // Treat cost 0 as cost 1 bucket
         stats.costCounts[cIdx]++;
 
-        const type = (card.types && card.types.length > 0) ? card.types[0].toLowerCase() : 'other';
-        if (stats.typeCounts.hasOwnProperty(type)) {
-            stats.typeCounts[type]++;
+        // Track inkable cards per cost
+        if (card.inkwell) {
+            stats.inkableCostCounts[cIdx]++;
+        }
+
+        // Track ink color distribution
+        if (card.ink) {
+            if (!stats.inkCounts[card.ink]) {
+                stats.inkCounts[card.ink] = 0;
+            }
+            stats.inkCounts[card.ink]++;
+        }
+
+        // Track type distribution with safety check
+        if (card.type) {
+            const t = card.type.toLowerCase();
+            if (stats.typeCounts[t] !== undefined) {
+                stats.typeCounts[t]++;
+            }
         }
     }
 
@@ -208,8 +226,8 @@ export default class TrainingManager {
         features.push(Math.min(card.willpower || 0, 10) / 10);
 
         // 6. Inks (One-hot)
-        const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
-        inks.forEach(ink => {
+        const inkColors = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
+        inkColors.forEach(ink => {
             features.push(card.ink === ink ? 1 : 0);
         });
 
@@ -220,8 +238,8 @@ export default class TrainingManager {
             features.push(cardType === type ? 1 : 0);
         });
 
-        // 8. Keywords (Boolean flags)
-        const keywords = ['Bodyguard', 'Reckless', 'Rush', 'Ward', 'Evasive', 'Resist', 'Challenger', 'Singer', 'Shift'];
+        // 8. Keyword Booleans (10 features)
+        const keywords = ['Bodyguard', 'Reckless', 'Rush', 'Ward', 'Evasive', 'Resist', 'Challenger', 'Singer', 'Shift', 'Boost'];
         keywords.forEach(kw => {
             // Check if keyword is in card.keywords array
             // Note: Some keywords might be "Resist +1", we need to check if the word exists.
@@ -241,22 +259,47 @@ export default class TrainingManager {
             }
         });
 
+        // 9. Keyword Amounts (3 features)
+        features.push(Math.min(card.resistAmount || 0, 10) / 10);      // Resist +X
+        features.push(Math.min(card.challengerAmount || 0, 10) / 10);  // Challenger +X
+        features.push(Math.min(card.boostAmount || 0, 10) / 10);       // Boost +X
+
+        // 10. Move Cost (1 feature)
+        features.push(Math.min(card.moveCost || 0, 10) / 10);
+
+        // 11. Classifications (5 features) - Common card classifications
+        const commonClassifications = ['Hero', 'Villain', 'Dreamborn', 'Storyborn', 'Floodborn'];
+        commonClassifications.forEach(cls => {
+            features.push(card.classifications && card.classifications.includes(cls) ? 1 : 0);
+        });
+
         // --- Dynamic Features (Deck Composition) ---
         // Normalize counts by total cards (or 60?)
         // Using totalCards so far allows the model to understand "early game" vs "late game" composition?
         // Or just fraction.
         const total = Math.max(1, stats.totalCards);
 
-        // 9. Inkable Fraction
+        // 12. Inkable Fraction
         features.push(stats.inkableCount / total);
 
-        // 10. Cost Curve (Fractions)
+        // 13. Cost Curve (Fractions) - 10 costs
         stats.costCounts.forEach(count => {
             features.push(count / total);
         });
 
-        // 11. Type Distribution (Fractions)
+        // 14. Type Distribution (Fractions)
         Object.values(stats.typeCounts).forEach(count => {
+            features.push(count / total);
+        });
+
+        // 15. Ink Color Distribution (Fractions)
+        const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
+        inks.forEach(ink => {
+            features.push((stats.inkCounts[ink] || 0) / total);
+        });
+
+        // 16. Inkable Cost Curve (Fractions) - 10 costs
+        stats.inkableCostCounts.forEach(count => {
             features.push(count / total);
         });
 
