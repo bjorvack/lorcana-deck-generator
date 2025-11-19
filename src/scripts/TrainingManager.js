@@ -79,10 +79,13 @@ export default class TrainingManager {
         const sequences = [];
         const featureSequences = [];
 
-        this.trainingData.forEach(rawData => {
-            rawData.decks.forEach(deck => {
+        let processedDecks = 0;
+
+        for (const rawData of this.trainingData) {
+            for (const deck of rawData.decks) {
                 const deckIndices = [];
-                deck.cards.forEach(cardEntry => {
+
+                for (const cardEntry of deck.cards) {
                     const key = this.getCardKey(cardEntry.name, cardEntry.version);
                     if (this.cardMap.has(key)) {
                         const index = this.cardMap.get(key);
@@ -90,7 +93,7 @@ export default class TrainingManager {
                             deckIndices.push(index);
                         }
                     }
-                });
+                }
 
                 if (deckIndices.length > 0) {
                     // Create a few shuffled versions
@@ -103,7 +106,7 @@ export default class TrainingManager {
                         // Initialize deck stats for this sequence
                         let currentStats = this.getInitialDeckStats();
 
-                        shuffledIndices.forEach(index => {
+                        for (const index of shuffledIndices) {
                             const card = this.indexMap.get(index);
 
                             // Extract features with CURRENT stats (before adding this card? or after? 
@@ -121,22 +124,30 @@ export default class TrainingManager {
 
                             seqIndices.push(index);
                             seqFeatures.push(features);
-                        });
+                        }
 
                         sequences.push(seqIndices);
                         featureSequences.push(seqFeatures);
                     }
                 }
-            });
-        });
-        this.log(`Generated ${sequences.length} sequences from all loaded decks.`);
+
+                processedDecks++;
+
+                // Yield to event loop every 10 decks to prevent UI blocking
+                if (processedDecks % 10 === 0) {
+                    await new Promise(resolve => setTimeout(resolve, 0));
+                }
+            }
+        }
+
+        this.log(`Generated ${sequences.length} sequences from ${processedDecks} decks.`);
 
         // 4. Train Model
         if (!this.model.model) {
             this.log('Initializing new model...');
             // We need to know feature dimension
             const featureDim = featureSequences[0][0].length;
-            this.model.initialize(this.cardMap.size, featureDim);
+            await this.model.initialize(this.cardMap.size, featureDim);
         } else {
             this.log('Continuing training on existing model...');
         }

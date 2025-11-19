@@ -10,15 +10,27 @@ export default class DeckModel {
         this.lstmUnits = 64;
     }
 
-    initialize(vocabSize, featureDim) {
-        this.vocabSize = vocabSize + 1; // +1 for padding/OOV
+    async initialize(vocabSize, featureDim) {
+        // --- Save model parameters ---
+        this.vocabSize = vocabSize + 1; // +1 for padding / OOV token
         this.featureDim = featureDim;
 
-        // Define Inputs
-        const inputIndices = tf.input({ shape: [this.maxLen], name: 'input_indices' });
-        const inputFeatures = tf.input({ shape: [this.maxLen, this.featureDim], name: 'input_features' });
+        // --- Define Inputs ---
+        // inputIndices: sequence of card IDs
+        const inputIndices = tf.input({
+            shape: [this.maxLen],
+            dtype: 'int32',
+            name: 'input_indices'
+        });
 
-        // Embedding Layer for Indices
+        // inputFeatures: precomputed embeddings for each card in the sequence
+        const inputFeatures = tf.input({
+            shape: [this.maxLen, this.featureDim],
+            dtype: 'float32',
+            name: 'input_features'
+        });
+
+        // --- Embedding Layer for card indices ---
         const embedding = tf.layers.embedding({
             inputDim: this.vocabSize,
             outputDim: this.embeddingDim,
@@ -27,34 +39,41 @@ export default class DeckModel {
             name: 'embedding'
         }).apply(inputIndices);
 
-        // Concatenate Embedding and Features
+        // --- Concatenate embedding + features ---
         const concatenated = tf.layers.concatenate().apply([embedding, inputFeatures]);
 
-        // LSTM Layer
+        // --- LSTM Layer ---
         const lstm = tf.layers.lstm({
             units: this.lstmUnits,
             returnSequences: false,
             name: 'lstm'
         }).apply(concatenated);
 
-        // Output Layer
+        // --- Output Layer: predict next card ---
         const output = tf.layers.dense({
             units: this.vocabSize,
             activation: 'softmax',
             name: 'output'
         }).apply(lstm);
 
-        // Create Model
-        this.model = tf.model({ inputs: [inputIndices, inputFeatures], outputs: output });
+        // --- Create the model ---
+        this.model = tf.model({
+            inputs: [inputIndices, inputFeatures],
+            outputs: output,
+            name: 'deck_predictor'
+        });
 
+        // --- Compile the model ---
         this.model.compile({
-            optimizer: 'adam',
+            optimizer: tf.train.adam(0.001),  // default learning rate, can be customized
             loss: 'sparseCategoricalCrossentropy',
             metrics: ['accuracy']
         });
 
+        // --- Print summary for verification ---
         this.model.summary();
     }
+
 
     async train(sequences, featureSequences, epochs, onEpochEnd) {
         if (!this.model) {
