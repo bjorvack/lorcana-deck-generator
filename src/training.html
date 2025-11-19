@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorcana Deck Generator - Training</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Deck Generation Training</h1>
+
+        <div class="actions">
+            <label for="epochs">Epochs:</label>
+            <input type="number" id="epochs" value="10" min="1" style="width: 50px;">
+            <button id="start-training">Start Training</button>
+            <button id="save-model" disabled>Save Model</button>
+            <button id="load-model">Load Model</button>
+        </div>
+
+        <div class="status-section">
+            <h2>Status</h2>
+            <div id="status-log"
+                style="height: 200px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px; font-family: monospace;">
+            </div>
+        </div>
+
+        <div class="prediction-section">
+            <h2>Prediction</h2>
+            <p>Enter card names separated by commas (e.g., "Elsa, Anna"):</p>
+            <textarea id="prediction-input" rows="4" cols="50"></textarea>
+            <br>
+            <button id="predict-btn" disabled>Predict Next Card</button>
+            <button id="add-to-deck-btn" disabled>Add to Deck</button>
+            <button id="generate-deck-btn" disabled>Generate Whole Deck</button>
+            <div id="prediction-output"></div>
+
+            <h3>Deck Preview</h3>
+            <div id="deck-preview" data-role="deck"></div>
+        </div>
+    </div>
+</body>
+
+</html>
