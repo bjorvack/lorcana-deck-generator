@@ -1,0 +1,14 @@
+{
+    "name": "inkdecks-scraper",
+    "version": "1.0.0",
+    "description": "Scraper for InkDecks tournaments",
+    "main": "scrape.js",
+    "scripts": {
+        "start": "node scrape.js"
+    },
+    "dependencies": {
+        "puppeteer": "^23.0.0",
+        "puppeteer-extra": "^3.3.6",
+        "puppeteer-extra-plugin-stealth": "^2.11.2"
+    }
+}
