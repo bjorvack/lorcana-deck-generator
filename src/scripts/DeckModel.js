@@ -4,35 +4,48 @@ export default class DeckModel {
     constructor() {
         this.model = null;
         this.vocabSize = 0;
+        this.featureDim = 0;
         this.maxLen = 60; // Max deck size usually 60
         this.embeddingDim = 32;
         this.lstmUnits = 64;
     }
 
-    initialize(vocabSize) {
+    initialize(vocabSize, featureDim) {
         this.vocabSize = vocabSize + 1; // +1 for padding/OOV
+        this.featureDim = featureDim;
 
-        this.model = tf.sequential();
+        // Define Inputs
+        const inputIndices = tf.input({ shape: [this.maxLen], name: 'input_indices' });
+        const inputFeatures = tf.input({ shape: [this.maxLen, this.featureDim], name: 'input_features' });
 
-        // Embedding Layer
-        this.model.add(tf.layers.embedding({
+        // Embedding Layer for Indices
+        const embedding = tf.layers.embedding({
             inputDim: this.vocabSize,
             outputDim: this.embeddingDim,
             inputLength: this.maxLen,
-            maskZero: true
-        }));
+            maskZero: true,
+            name: 'embedding'
+        }).apply(inputIndices);
+
+        // Concatenate Embedding and Features
+        const concatenated = tf.layers.concatenate().apply([embedding, inputFeatures]);
 
         // LSTM Layer
-        this.model.add(tf.layers.lstm({
+        const lstm = tf.layers.lstm({
             units: this.lstmUnits,
-            returnSequences: false
-        }));
+            returnSequences: false,
+            name: 'lstm'
+        }).apply(concatenated);
 
         // Output Layer
-        this.model.add(tf.layers.dense({
+        const output = tf.layers.dense({
             units: this.vocabSize,
-            activation: 'softmax'
-        }));
+            activation: 'softmax',
+            name: 'output'
+        }).apply(lstm);
+
+        // Create Model
+        this.model = tf.model({ inputs: [inputIndices, inputFeatures], outputs: output });
 
         this.model.compile({
             optimizer: 'adam',
@@ -43,14 +56,14 @@ export default class DeckModel {
         this.model.summary();
     }
 
-    async train(sequences, epochs, onEpochEnd) {
+    async train(sequences, featureSequences, epochs, onEpochEnd) {
         if (!this.model) {
             throw new Error("Model not initialized");
         }
 
-        const { xs, ys } = this.prepareData(sequences);
+        const { xsIndices, xsFeatures, ys } = this.prepareData(sequences, featureSequences);
 
-        await this.model.fit(xs, ys, {
+        await this.model.fit([xsIndices, xsFeatures], ys, {
             epochs: epochs || 10,
             batchSize: 32,
             validationSplit: 0.1,
@@ -61,70 +74,87 @@ export default class DeckModel {
             }
         });
 
-        xs.dispose();
+        xsIndices.dispose();
+        xsFeatures.dispose();
         ys.dispose();
     }
 
-    prepareData(sequences) {
-        const xs = [];
+    prepareData(sequences, featureSequences) {
+        const xsIndices = [];
+        const xsFeatures = [];
         const ys = [];
 
-        sequences.forEach(seq => {
-            // Generate sliding windows
-            // For a deck of 60 cards, we can generate 59 examples?
-            // Or just a few.
-            // Let's generate a few examples per sequence to avoid exploding data size.
-            // Or since we shuffled, maybe just take the whole sequence up to N and predict N+1?
-            // Let's do: for i from 1 to len-1
-            // Input: seq[0...i-1], Output: seq[i]
+        sequences.forEach((seq, seqIdx) => {
+            const featSeq = featureSequences[seqIdx];
 
             // Limit max examples per deck to avoid browser hang
             const step = Math.max(1, Math.floor(seq.length / 10));
 
             for (let i = 1; i < seq.length; i += step) {
-                const inputSeq = seq.slice(0, i);
+                const inputSeqIndices = seq.slice(0, i);
+                const inputSeqFeatures = featSeq.slice(0, i);
                 const target = seq[i];
 
-                // Pad input sequence
-                const paddedInput = Array(this.maxLen).fill(0);
-                // Fill from the end or beginning? Usually end for RNNs if we want recent context.
-                // But masking handles it. Let's fill from end (pre-padding) is standard for some, post-padding for others.
-                // TFJS embedding with maskZero supports variable length effectively.
-                // Let's do post-padding (fill start, rest 0) or pre-padding.
-                // Pre-padding is often better for LSTMs so the relevant info is at the end.
-                const startIdx = Math.max(0, this.maxLen - inputSeq.length);
-                for (let j = 0; j < Math.min(inputSeq.length, this.maxLen); j++) {
-                    paddedInput[startIdx + j] = inputSeq[j];
+                // Pad input sequence indices
+                const paddedIndices = Array(this.maxLen).fill(0);
+                const startIdx = Math.max(0, this.maxLen - inputSeqIndices.length);
+                for (let j = 0; j < Math.min(inputSeqIndices.length, this.maxLen); j++) {
+                    paddedIndices[startIdx + j] = inputSeqIndices[j];
                 }
 
-                xs.push(paddedInput);
+                // Pad input sequence features
+                // Feature padding should be 0 vectors
+                const paddedFeatures = [];
+                for (let k = 0; k < this.maxLen; k++) {
+                    paddedFeatures.push(Array(this.featureDim).fill(0));
+                }
+
+                for (let j = 0; j < Math.min(inputSeqFeatures.length, this.maxLen); j++) {
+                    paddedFeatures[startIdx + j] = inputSeqFeatures[j];
+                }
+
+                xsIndices.push(paddedIndices);
+                xsFeatures.push(paddedFeatures);
                 ys.push(target);
             }
         });
 
         return {
-            xs: tf.tensor2d(xs, [xs.length, this.maxLen]),
-            ys: tf.tensor1d(ys) // Sparse categorical expects integer targets
+            xsIndices: tf.tensor2d(xsIndices, [xsIndices.length, this.maxLen]),
+            xsFeatures: tf.tensor3d(xsFeatures, [xsFeatures.length, this.maxLen, this.featureDim]),
+            ys: tf.tensor1d(ys)
         };
     }
 
-    async predict(cardIndices) {
+    async predict(cardIndices, cardFeatures) {
         if (!this.model) return null;
 
-        // Prepare input
-        const paddedInput = Array(this.maxLen).fill(0);
+        // Prepare input indices
+        const paddedIndices = Array(this.maxLen).fill(0);
         const startIdx = Math.max(0, this.maxLen - cardIndices.length);
         for (let j = 0; j < Math.min(cardIndices.length, this.maxLen); j++) {
-            paddedInput[startIdx + j] = cardIndices[j];
+            paddedIndices[startIdx + j] = cardIndices[j];
         }
 
-        const inputTensor = tf.tensor2d([paddedInput], [1, this.maxLen]);
-        const prediction = this.model.predict(inputTensor);
+        // Prepare input features
+        const paddedFeatures = [];
+        for (let k = 0; k < this.maxLen; k++) {
+            paddedFeatures.push(Array(this.featureDim).fill(0));
+        }
+        for (let j = 0; j < Math.min(cardFeatures.length, this.maxLen); j++) {
+            paddedFeatures[startIdx + j] = cardFeatures[j];
+        }
+
+        const inputIndicesTensor = tf.tensor2d([paddedIndices], [1, this.maxLen]);
+        const inputFeaturesTensor = tf.tensor3d([paddedFeatures], [1, this.maxLen, this.featureDim]);
+
+        const prediction = this.model.predict([inputIndicesTensor, inputFeaturesTensor]);
 
         // Get probabilities
         const probabilities = await prediction.data();
 
-        inputTensor.dispose();
+        inputIndicesTensor.dispose();
+        inputFeaturesTensor.dispose();
         prediction.dispose();
 
         return probabilities;
@@ -143,6 +173,11 @@ export default class DeckModel {
             loss: 'sparseCategoricalCrossentropy',
             metrics: ['accuracy']
         });
+        // Recover featureDim from model input shape
+        // model.inputs[1].shape is [null, 60, featureDim]
+        if (this.model.inputs && this.model.inputs.length > 1) {
+            this.featureDim = this.model.inputs[1].shape[2];
+        }
         this.model.summary();
     }
 }

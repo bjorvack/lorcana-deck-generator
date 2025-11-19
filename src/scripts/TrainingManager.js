@@ -77,6 +77,7 @@ export default class TrainingManager {
         // 3. Process Decks
         this.log('Processing decks...');
         const sequences = [];
+        const featureSequences = [];
 
         this.trainingData.forEach(rawData => {
             rawData.decks.forEach(deck => {
@@ -94,8 +95,36 @@ export default class TrainingManager {
                 if (deckIndices.length > 0) {
                     // Create a few shuffled versions
                     for (let k = 0; k < 5; k++) {
-                        const shuffled = [...deckIndices].sort(() => Math.random() - 0.5);
-                        sequences.push(shuffled);
+                        const shuffledIndices = [...deckIndices].sort(() => Math.random() - 0.5);
+
+                        const seqIndices = [];
+                        const seqFeatures = [];
+
+                        // Initialize deck stats for this sequence
+                        let currentStats = this.getInitialDeckStats();
+
+                        shuffledIndices.forEach(index => {
+                            const card = this.indexMap.get(index);
+
+                            // Extract features with CURRENT stats (before adding this card? or after? 
+                            // Usually we want features of the card + context of what's already in deck)
+                            // Let's use stats BEFORE adding this card to represent "context when this card was chosen"
+                            // But wait, if we input x_t, we want to predict x_{t+1}.
+                            // The features should describe x_t and the state of the deck including x_t?
+                            // If the model sees "Card X", it should know "Card X is the 10th card, 5th inkable".
+                            // So we update stats, THEN extract features? 
+                            // Or extract features of X, and stats of deck *including* X?
+                            // Yes, let's include X in the stats.
+
+                            this.updateDeckStats(currentStats, card);
+                            const features = this.extractCardFeatures(card, currentStats);
+
+                            seqIndices.push(index);
+                            seqFeatures.push(features);
+                        });
+
+                        sequences.push(seqIndices);
+                        featureSequences.push(seqFeatures);
                     }
                 }
             });
@@ -105,19 +134,133 @@ export default class TrainingManager {
         // 4. Train Model
         if (!this.model.model) {
             this.log('Initializing new model...');
-            this.model.initialize(this.cardMap.size);
+            // We need to know feature dimension
+            const featureDim = featureSequences[0][0].length;
+            this.model.initialize(this.cardMap.size, featureDim);
         } else {
             this.log('Continuing training on existing model...');
         }
 
         this.log('Training model...');
-        await this.model.train(sequences, epochs, (epoch, logs) => {
+        await this.model.train(sequences, featureSequences, epochs, (epoch, logs) => {
             this.log(`Epoch ${epoch + 1}/${epochs}: loss = ${logs.loss.toFixed(4)}`);
         });
 
         this.log('Training complete!');
         await this.saveModel();
         document.getElementById('save-model').disabled = false;
+    }
+
+    getInitialDeckStats() {
+        return {
+            totalCards: 0,
+            inkableCount: 0,
+            costCounts: [0, 0, 0, 0, 0, 0], // 1, 2, 3, 4, 5, 6+
+            typeCounts: {
+                'character': 0,
+                'action': 0,
+                'item': 0,
+                'location': 0
+            }
+        };
+    }
+
+    updateDeckStats(stats, card) {
+        stats.totalCards++;
+        if (card.inkwell) stats.inkableCount++;
+
+        const costIndex = Math.min(Math.max(0, card.cost - 1), 5); // Map 1->0, 6+->5. 0 cost -> 0
+        // Actually card cost can be 0. Let's map 0->0, 1->0? No.
+        // Let's just do buckets: 0-1, 2, 3, 4, 5, 6+.
+        // Or just indices 0 to 5.
+        // Let's assume cost 0-1 is index 0.
+        let cIdx = 0;
+        if (card.cost <= 1) cIdx = 0;
+        else if (card.cost >= 6) cIdx = 5;
+        else cIdx = card.cost - 1;
+
+        stats.costCounts[cIdx]++;
+
+        const type = (card.types && card.types.length > 0) ? card.types[0].toLowerCase() : 'other';
+        if (stats.typeCounts.hasOwnProperty(type)) {
+            stats.typeCounts[type]++;
+        }
+    }
+
+    extractCardFeatures(card, stats) {
+        const features = [];
+
+        // --- Static Features ---
+
+        // 1. Cost (Normalized 0-10 -> 0-1)
+        features.push(Math.min(card.cost, 10) / 10);
+
+        // 2. Inkwell (0 or 1)
+        features.push(card.inkwell ? 1 : 0);
+
+        // 3. Lore (Normalized 0-5)
+        features.push(Math.min(card.lore || 0, 5) / 5);
+
+        // 4. Strength (Normalized 0-10)
+        features.push(Math.min(card.strength || 0, 10) / 10);
+
+        // 5. Willpower (Normalized 0-10)
+        features.push(Math.min(card.willpower || 0, 10) / 10);
+
+        // 6. Inks (One-hot)
+        const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
+        inks.forEach(ink => {
+            features.push(card.ink === ink ? 1 : 0);
+        });
+
+        // 7. Types (One-hot)
+        const types = ['Character', 'Action', 'Item', 'Location'];
+        const cardType = (card.types && card.types.length > 0) ? card.types[0] : '';
+        types.forEach(type => {
+            features.push(cardType === type ? 1 : 0);
+        });
+
+        // 8. Keywords (Boolean flags)
+        const keywords = ['Bodyguard', 'Reckless', 'Rush', 'Ward', 'Evasive', 'Resist', 'Challenger', 'Singer', 'Shift'];
+        keywords.forEach(kw => {
+            // Check if keyword is in card.keywords array
+            // Note: Some keywords might be "Resist +1", we need to check if the word exists.
+            // Card.js parses these into boolean flags like hasBodyguard.
+            // Let's use those if available, or check keywords array.
+            // The Card object from CardApi might not have the `hasX` properties initialized if it's just raw JSON?
+            // Wait, CardApi returns `new Card(data)`. So it should have them.
+            // Let's check `Card.js`. `initialize()` sets `this.hasBodyguard` etc.
+            // So we can use those.
+            const propName = `has${kw}`;
+            if (card[propName] !== undefined) {
+                features.push(card[propName] ? 1 : 0);
+            } else {
+                // Fallback to checking keywords array
+                const hasKw = card.keywords && card.keywords.some(k => k.includes(kw));
+                features.push(hasKw ? 1 : 0);
+            }
+        });
+
+        // --- Dynamic Features (Deck Composition) ---
+        // Normalize counts by total cards (or 60?)
+        // Using totalCards so far allows the model to understand "early game" vs "late game" composition?
+        // Or just fraction.
+        const total = Math.max(1, stats.totalCards);
+
+        // 9. Inkable Fraction
+        features.push(stats.inkableCount / total);
+
+        // 10. Cost Curve (Fractions)
+        stats.costCounts.forEach(count => {
+            features.push(count / total);
+        });
+
+        // 11. Type Distribution (Fractions)
+        Object.values(stats.typeCounts).forEach(count => {
+            features.push(count / total);
+        });
+
+        return features;
     }
 
     async saveModel() {
@@ -161,9 +304,14 @@ export default class TrainingManager {
         return `${name}|${version || ''}`.toLowerCase();
     }
 
-    async predict(cardNames) {
+    async predict(cardNames, legalOnly = true) {
         // Convert names to indices
         const indices = [];
+        const features = [];
+
+        // We need to reconstruct the deck stats as we go to generate features for the sequence
+        let currentStats = this.getInitialDeckStats();
+
         cardNames.forEach(name => {
             let foundId = null;
 
@@ -194,6 +342,12 @@ export default class TrainingManager {
 
             if (foundId !== null) {
                 indices.push(foundId);
+
+                const card = this.indexMap.get(foundId);
+                // Update stats and extract features
+                this.updateDeckStats(currentStats, card);
+                const cardFeatures = this.extractCardFeatures(card, currentStats);
+                features.push(cardFeatures);
             }
         });
 
@@ -213,7 +367,7 @@ export default class TrainingManager {
             }
         });
 
-        const probabilities = await this.model.predict(indices);
+        const probabilities = await this.model.predict(indices, features);
 
         // Create array of [index, probability] and sort by probability desc
         const sortedPredictions = Array.from(probabilities)
@@ -224,6 +378,11 @@ export default class TrainingManager {
         for (const { index } of sortedPredictions) {
             const card = this.indexMap.get(index);
             if (!card) continue; // Invalid index
+
+            // 0. Check Legality
+            if (legalOnly && card.legality !== 'legal') {
+                continue;
+            }
 
             // 1. Check Card Amount Limit
             const currentAmount = cardCounts.get(index) || 0;

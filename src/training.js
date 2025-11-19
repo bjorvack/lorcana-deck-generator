@@ -66,6 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const legalOnlyCheckbox = document.getElementById('legal-only');
+
     predictBtn.addEventListener('click', async () => {
         syncDeckFromInput();
         updateDeckPreview(); // Update preview based on parsed cards
@@ -79,7 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // So we pass names.
 
         const names = currentDeck.map(c => c.version ? `${c.name} - ${c.version}` : c.name);
-        const prediction = await manager.predict(names);
+        const legalOnly = legalOnlyCheckbox.checked;
+        const prediction = await manager.predict(names, legalOnly);
 
         if (prediction && typeof prediction !== 'string') {
             currentPrediction = prediction;
@@ -108,11 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
     generateDeckBtn.addEventListener('click', async () => {
         syncDeckFromInput();
         generateDeckBtn.disabled = true;
+        const legalOnly = legalOnlyCheckbox.checked;
 
         // Loop until 60 cards
         while (currentDeck.length < 60) {
             const names = currentDeck.map(c => c.version ? `${c.name} - ${c.version}` : c.name);
-            const prediction = await manager.predict(names);
+            const prediction = await manager.predict(names, legalOnly);
 
             if (prediction && typeof prediction !== 'string') {
                 currentDeck.push(prediction);
