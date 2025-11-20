@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log('Loading AI model...');
 
         // Load the model from training_data (this also loads cards)
-        await manager.loadModel('training_data/deck-generator-model.json');
+        await manager.loadModel('training_data/deck-generator-model/model.json');
         console.log('Model loaded successfully!');
 
         // Initialize card selector after cards are loaded
