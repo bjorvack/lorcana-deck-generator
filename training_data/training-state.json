@@ -1,0 +1,50 @@
+{
+  "lastTrainingDate": "2025-11-20T16:04:32.694Z",
+  "totalTrainings": 3,
+  "trainedFiles": [
+    "2025-11-16_sunday-whispers-in-the-well-core-constructed-.json",
+    "2025-11-16_czech-open-prague-2025-.json",
+    "2025-11-15_axion-now-mega-illumineers-cup-.json",
+    "2025-11-15_madverse-barcelona-ccq-.json",
+    "2025-11-15_the-forbidden-mountain-3k-.json",
+    "2025-11-15_tormenta-de-tinta-50k-.json",
+    "2025-11-09_tournoi-lorcana-revival-256-joueurs-lorcaquest-paris-2025-.json",
+    "2025-11-08_main-event-lorcaquest-paris-2025-.json",
+    "2025-11-08_cardcon-ccq-dutch-open-series-utrecht-.json",
+    "2025-11-01_tournoi-lorcana-royaume-du-tcg-.json",
+    "2025-11-01_dlc-qualifier-main-event-auckland-nz-.json",
+    "2025-11-01_ldxp-tacoma-2025-lorcana-ccq-.json",
+    "2025-10-26_sunday-10am-infinity-spectacular-dlc-milwaukee-.json",
+    "2025-10-26_disney-lorcana-challenge-milwaukee-.json",
+    "2025-10-18_al-inkdalus-.json",
+    "2025-10-18_tintenpott-1-.json",
+    "2025-10-18_fabled-store-championship-quad-case-.json",
+    "2025-10-05_randolph-rosemont-2k-.json",
+    "2025-10-05_sunday-9-00-infinity-constructed-dlc-bologna-.json",
+    "2025-11-16_sunday-whispers-in-the-well-core-constructed-.json",
+    "2025-11-16_czech-open-prague-2025-.json",
+    "2025-11-15_axion-now-mega-illumineers-cup-.json",
+    "2025-11-15_madverse-barcelona-ccq-.json",
+    "2025-11-15_the-forbidden-mountain-3k-.json"
+  ],
+  "trainingHistory": [
+    {
+      "date": "2025-11-20T15:35:25.944Z",
+      "epochs": 10,
+      "newFiles": 24,
+      "totalFiles": 24
+    },
+    {
+      "date": "2025-11-20T15:58:51.282Z",
+      "epochs": 10,
+      "newFiles": 0,
+      "totalFiles": 24
+    },
+    {
+      "date": "2025-11-20T16:04:32.694Z",
+      "epochs": 10,
+      "newFiles": 0,
+      "totalFiles": 24
+    }
+  ]
+}

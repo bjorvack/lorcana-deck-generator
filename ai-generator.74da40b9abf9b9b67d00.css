@@ -1,0 +1,227 @@
+@import url(https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+* {
+    font-family: "Poppins", sans-serif;
+    color: #FFF;
+    background-color: #000;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 1rem;
+    margin: 2rem auto;
+}
+
+button {
+    display: block;
+    padding: 0.7rem 1.2rem;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    border: 1px solid #D3BA84;
+    background-color: #D3BA84;
+    color: #FFF;
+}
+
+.buttons button {
+    min-width: 150px;
+}
+
+button:hover, button:focus, button:active {
+    background-color: #E3CAA8;
+    color: #FFF;
+}
+
+.outline {
+    background-color: transparent;
+    color: #D3BA84;
+}
+
+.outline:hover, .outline:focus, .outline:active {
+    background-color: rgba(212, 187, 133, 0.1);
+    color: #FFF;
+}
+
+button[data-role="close"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+
+dialog {
+    overflow: hidden;
+    position: relative;
+    width: min(calc(100% - 1.2rem), 960px);
+
+    border: 4px solid #D3BA84;
+}
+
+.inks {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+}
+
+select {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem 0;
+    font-size: 1rem;
+
+    border: solid 1px #D3BA84;
+}
+
+input[type="text"] {
+    border: solid 1px #D3BA84;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    display: block;
+    width: calc(100% - 2rem);
+}
+
+[data-role="deck"], [data-role="card-list"] {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+[data-role="card-container"] {
+    position: relative;
+    display: block;
+    width: 10rem;
+    aspect-ratio: 100/139;
+}
+[data-role="card-container"].missing-requirements img{
+    border: solid 1px red;
+    opacity: 0.5;
+}
+
+[data-role="card-container"] [data-role="remove-card"] {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+[data-role="card-container"] [data-role="add-card"] {
+    width: 10rem;
+    height: 13.9rem;
+    margin: 0;
+
+    background-color: transparent;
+    border: dashed 1px #D3BA84;
+}
+
+[data-role="add-card-to-deck"] {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+img[data-selected-card="0"] {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+}
+
+[data-role="card-list"] {
+    height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+[data-role="chart"] {
+    background-color: rgba(221, 221, 221, 0.1);
+}
+
+small {
+    display: block;
+    font-size: 0.5rem;
+    background-color: transparent;
+}
+
+dialog[data-role=loading] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    border: none;
+}
+
+dialog[data-role=loading] h2 {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    line-height: 100vh;
+}
+
+dialog[data-role=card-preview] {
+    width: fit-content;
+    aspect-ratio: 100/139;
+}
+
+@media (max-width: 764px) {
+    .inks {
+        display: block;
+    }
+
+    .form-group {
+        margin: 0.5rem 0;
+    }
+
+    label {
+        display: block;
+    }
+
+    select {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+}
+
