@@ -75,7 +75,10 @@ export default class ModelManager {
                 const card = this.indexMap.get(foundId);
                 // Update stats and extract features
                 this.updateDeckStats(currentStats, card);
-                const cardFeatures = this.extractCardFeatures(card, currentStats);
+
+                // Count copies of this card before extracting features
+                const copiesSoFar = indices.filter(id => id === foundId).length - 1;
+                const cardFeatures = this.extractCardFeatures(card, currentStats, copiesSoFar);
                 features.push(cardFeatures);
             }
         });
@@ -98,13 +101,25 @@ export default class ModelManager {
 
         const probabilities = await this.model.predict(indices, features);
 
-        // Create array of [index, probability] and sort by probability desc
+        // Calculate adaptive temperature based on deck size
+        const temperature = this.getAdaptiveTemperature(indices.length);
+
+        // Sample with temperature for exploration/exploitation balance
+        const sampledIndex = this.sampleWithTemperature(probabilities, temperature);
+
+        // Create array of candidate indices, starting with sampled one, then sorted by probability
         const sortedPredictions = Array.from(probabilities)
             .map((prob, index) => ({ index, prob }))
             .sort((a, b) => b.prob - a.prob);
 
-        // Find first valid card
-        for (const { index } of sortedPredictions) {
+        // Put sampled card first, then add rest
+        const candidateIndices = [
+            sampledIndex,
+            ...sortedPredictions.map(p => p.index).filter(i => i !== sampledIndex)
+        ];
+
+        // Find first valid card from candidates
+        for (const index of candidateIndices) {
             const card = this.indexMap.get(index);
             if (!card) continue; // Invalid index
 
@@ -142,6 +157,50 @@ export default class ModelManager {
         }
 
         return null;
+    }
+
+    /**
+     * Calculate adaptive temperature based on deck size
+     * High temperature (1.5) early for exploration
+     * Low temperature (0.7) late for focused completion
+     */
+    getAdaptiveTemperature(deckSize) {
+        if (deckSize <= 20) {
+            return 1.5; // High exploration for early deck building
+        } else if (deckSize <= 40) {
+            return 1.0; // Balanced
+        } else {
+            return 0.7; // Low exploration, focus on completing deck
+        }
+    }
+
+    /**
+     * Sample from probability distribution using temperature scaling
+     * Higher temperature = more exploration (flatter distribution)
+     * Lower temperature = more exploitation (peaked distribution)
+     */
+    sampleWithTemperature(probabilities, temperature = 1.0) {
+        // Apply temperature scaling: p_i^(1/T)
+        const scaledProbs = Array.from(probabilities).map(p =>
+            Math.pow(Math.max(p, 1e-10), 1 / temperature)
+        );
+
+        // Normalize to sum to 1
+        const sum = scaledProbs.reduce((a, b) => a + b, 0);
+        const normalized = scaledProbs.map(p => p / sum);
+
+        // Sample from the distribution
+        const rand = Math.random();
+        let cumSum = 0;
+        for (let i = 0; i < normalized.length; i++) {
+            cumSum += normalized[i];
+            if (rand < cumSum) {
+                return i;
+            }
+        }
+
+        // Fallback to last index (shouldn't happen)
+        return normalized.length - 1;
     }
 
     getInitialDeckStats() {
@@ -198,7 +257,7 @@ export default class ModelManager {
         }
     }
 
-    extractCardFeatures(card, stats) {
+    extractCardFeatures(card, stats, copiesSoFar = 0) {
         const features = [];
 
         // --- Static Features ---
@@ -258,29 +317,32 @@ export default class ModelManager {
             features.push(card.classifications && card.classifications.includes(cls) ? 1 : 0);
         });
 
+        // 12. Copies of this card so far (NEW FEATURE)
+        features.push(Math.min(copiesSoFar, 4) / 4);
+
         // --- Dynamic Features (Deck Composition) ---
         const total = Math.max(1, stats.totalCards);
 
-        // 12. Inkable Fraction
+        // 13. Inkable Fraction
         features.push(stats.inkableCount / total);
 
-        // 13. Cost Curve (Fractions) - 10 costs
+        // 14. Cost Curve (Fractions) - 10 costs
         stats.costCounts.forEach(count => {
             features.push(count / total);
         });
 
-        // 14. Type Distribution (Fractions)
+        // 15. Type Distribution (Fractions)
         Object.values(stats.typeCounts).forEach(count => {
             features.push(count / total);
         });
 
-        // 15. Ink Color Distribution (Fractions)
+        // 16. Ink Color Distribution (Fractions)
         const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
         inks.forEach(ink => {
             features.push((stats.inkCounts[ink] || 0) / total);
         });
 
-        // 16. Inkable Cost Curve (Fractions) - 10 costs
+        // 17. Inkable Cost Curve (Fractions) - 10 costs
         stats.inkableCostCounts.forEach(count => {
             features.push(count / total);
         });

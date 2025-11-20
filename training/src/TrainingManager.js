@@ -127,15 +127,22 @@ module.exports = class TrainingManager {
 
                         // Initialize deck stats for this sequence
                         let currentStats = this.getInitialDeckStats();
+                        const cardCounts = new Map(); // Track how many of each card
 
                         for (const index of shuffledIndices) {
                             const card = this.indexMap.get(index);
 
+                            // Count this card before updating stats
+                            const copiesSoFar = cardCounts.get(index) || 0;
+
                             this.updateDeckStats(currentStats, card);
-                            const features = this.extractCardFeatures(card, currentStats);
+                            const features = this.extractCardFeatures(card, currentStats, copiesSoFar);
 
                             seqIndices.push(index);
                             seqFeatures.push(features);
+
+                            // Update card count after extracting features
+                            cardCounts.set(index, copiesSoFar + 1);
                         }
 
                         sequences.push(seqIndices);
@@ -293,7 +300,7 @@ module.exports = class TrainingManager {
         }
     }
 
-    extractCardFeatures(card, stats) {
+    extractCardFeatures(card, stats, copiesSoFar = 0) {
         const features = [];
 
         // --- Static Features ---
@@ -353,29 +360,32 @@ module.exports = class TrainingManager {
             features.push(card.classifications && card.classifications.includes(cls) ? 1 : 0);
         });
 
+        // 12. Copies of this card so far (NEW FEATURE)
+        features.push(Math.min(copiesSoFar, 4) / 4);
+
         // --- Dynamic Features (Deck Composition) ---
         const total = Math.max(1, stats.totalCards);
 
-        // 12. Inkable Fraction
+        // 13. Inkable Fraction
         features.push(stats.inkableCount / total);
 
-        // 13. Cost Curve (Fractions) - 10 costs
+        // 14. Cost Curve (Fractions) - 10 costs
         stats.costCounts.forEach(count => {
             features.push(count / total);
         });
 
-        // 14. Type Distribution (Fractions)
+        // 15. Type Distribution (Fractions)
         Object.values(stats.typeCounts).forEach(count => {
             features.push(count / total);
         });
 
-        // 15. Ink Color Distribution (Fractions)
+        // 16. Ink Color Distribution (Fractions)
         const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
         inks.forEach(ink => {
             features.push((stats.inkCounts[ink] || 0) / total);
         });
 
-        // 16. Inkable Cost Curve (Fractions) - 10 costs
+        // 17. Inkable Cost Curve (Fractions) - 10 costs
         stats.inkableCostCounts.forEach(count => {
             features.push(count / total);
         });
