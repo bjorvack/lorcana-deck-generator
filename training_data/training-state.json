@@ -1,6 +1,6 @@
 {
-  "lastTrainingDate": "2025-11-20T17:11:46.867Z",
-  "totalTrainings": 6,
+  "lastTrainingDate": "2025-11-20T17:32:28.488Z",
+  "totalTrainings": 7,
   "trainedFiles": [
     "2025-11-16_sunday-whispers-in-the-well-core-constructed-.json",
     "2025-11-16_czech-open-prague-2025-.json",
@@ -50,7 +50,11 @@
     "2025-09-27_disney-lorcana-stockholm-open-2-ccq-.json",
     "2025-09-27_playink-annecy-ccq-.json",
     "2025-09-27_lorcana-cardiff-ccq-.json",
-    "2025-09-27_nexus-lone-star-open-10-000-prize-pool-saturday-.json"
+    "2025-09-27_nexus-lone-star-open-10-000-prize-pool-saturday-.json",
+    "2025-09-22_mulligan-challenge-24-.json",
+    "2025-09-21_summer-league-2025-lorcana-national-cup-finals-.json",
+    "2025-09-20_summer-league-25-core-constructed-.json",
+    "2025-09-21_l-arene-des-titans-.json"
   ],
   "trainingHistory": [
     {
@@ -88,6 +92,12 @@
       "epochs": 10,
       "newFiles": 9,
       "totalFiles": 49
+    },
+    {
+      "date": "2025-11-20T17:32:28.488Z",
+      "epochs": 10,
+      "newFiles": 4,
+      "totalFiles": 53
     }
   ]
 }
