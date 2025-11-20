@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorcana AI Deck Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>AI Deck Generator</h1>
+
+        <div class="prediction-section">
+            <div class="input-section">
+                <div class="buttons">
+                    <button id="generate-deck-btn" disabled>Complete deck</button>
+                    <button id="test-deck-btn" class="hidden">Test Deck</button>
+                    <button class="outline" id="clear-deck-btn">Clear</button>
+                </div>
+                <hr>
+                <div data-role="ink-selector"></div>
+                <hr>
+                <label><input type="checkbox" id="legal-only" checked> Only Legal Cards</label>
+            </div>
+
+            <div id="deck-preview" data-role="deck"></div>
+
+            <div class="hidden">
+                <h2>Cost Curve</h2>
+                <canvas data-role="chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <dialog data-role="card-select">
+        <button data-role="close">x</button>
+        <h2>Pick cards to add</h2>
+        <div class="from-group">
+            <label for="filter">Search</label>
+            <input id="filter" type="text" data-role="filter">
+        </div>
+
+        <div data-role="card-list">
+            <!-- Card list -->
+        </div>
+    </dialog>
+</body>
+
+</html>

@@ -191,6 +191,7 @@ export default class WeightCalculator {
       { key: 'hasRush', modifier: 1.05 },
       { key: 'hasWard', modifier: 1.05 },
       { key: 'hasSinger', modifier: 1.3 },
+      { key: 'hasBoost', modifier: 1.1 },
       { key: 'hasReckless', modifier: 0.95 },
       { key: 'hasChallenger', modifier: 1 + (card.challengerAmount / 10) },
       { key: 'hasResist', modifier: 1 + (card.resistAmount / 10) }

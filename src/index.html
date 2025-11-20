@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,18 +8,22 @@
     <title>Lorcana Deck Generator</title>
 
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W3LML3KZ');</script>
-<!-- End Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W3LML3KZ');</script>
+    <!-- End Google Tag Manager -->
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3LML3KZ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3LML3KZ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <h1>Lorcana Deck Generator</h1>
     <div class="buttons">
@@ -28,32 +33,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button class="outline" data-role="clear">Clear</button>
     </div>
     <hr>
-    <div class="inks mb-1">
-        <div class="form-group">
-            <label for="primaryInk">Primary Ink</label>
-            <select name="primaryInk" id="primaryInk">
-                <option value="Random" selected>Random Ink</option>
-                <option value="Amber">Amber</option>
-                <option value="Amethyst">Amethyst</option>
-                <option value="Emerald">Emerald</option>
-                <option value="Ruby">Ruby</option>
-                <option value="Sapphire">Sapphire</option>
-                <option value="Steel">Steel</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="secondaryInk">Secondary Ink</label>
-            <select name="secondaryInk" id="secondaryInk">
-                <option value="Random" selected>Random Ink</option>
-                <option value="Amber">Amber</option>
-                <option value="Amethyst">Amethyst</option>
-                <option value="Emerald">Emerald</option>
-                <option value="Ruby">Ruby</option>
-                <option value="Sapphire">Sapphire</option>
-                <option value="Steel">Steel</option>
-            </select>
-        </div>
-    </div>
+    <div data-role="ink-selector"></div>
     <hr>
     <div data-role="deck">
         <!-- Card container x60 -->
@@ -62,11 +42,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>Cost Curve</h2>
         <canvas data-role="chart"></canvas>
     </div>
-
-    <dialog data-role="card-preview">
-        <button data-role="close">x</button>
-        <img src="" alt="">
-    </dialog>
 
     <dialog data-role="card-select">
         <button data-role="close">x</button>
@@ -86,4 +61,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </dialog>
 </body>
+
 </html>
