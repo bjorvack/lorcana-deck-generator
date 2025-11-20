@@ -1,239 +1,19 @@
 {
-  "name": "Desafio Guayacan - Fabled",
-  "url": "https://inkdecks.com/lorcana-tournaments/desafio-guayacan-fabled-tournament-decks-362706",
+  "name": "LDXP Tacoma 2025 Lorcana CCQ",
+  "url": "https://inkdecks.com/lorcana-tournaments/ldxp-tacoma-2025-lorcana-ccq-tournament-decks-362663",
   "decks": [
     {
       "place": 1,
       "cards": [
         {
-          "amount": 3,
-          "name": "Basil",
-          "version": "Practiced Detective"
-        },
-        {
-          "amount": 4,
-          "name": "Belle",
-          "version": "Accomplished Mystic"
-        },
-        {
-          "amount": 1,
-          "name": "Dig a Little Deeper",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Dumbo",
-          "version": "Ninth Wonder of the Universe"
-        },
-        {
-          "amount": 1,
-          "name": "Elsa",
-          "version": "Spirit of Winter"
-        },
-        {
-          "amount": 4,
-          "name": "Elsa",
-          "version": "The Fifth Spirit"
-        },
-        {
-          "amount": 2,
-          "name": "Finders Keepers",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Genie",
-          "version": "Wish Fulfilled"
-        },
-        {
-          "amount": 4,
-          "name": "Hades",
-          "version": "Infernal Schemer"
-        },
-        {
-          "amount": 3,
-          "name": "Hypnotic Strength",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Iago",
-          "version": "Giant Spectral Parrot"
-        },
-        {
-          "amount": 4,
-          "name": "Into the Unknown",
-          "version": ""
-        },
-        {
-          "amount": 2,
-          "name": "Madam Mim",
-          "version": "Elephant"
-        },
-        {
-          "amount": 1,
-          "name": "Magical Maneuvers",
-          "version": ""
-        },
-        {
-          "amount": 2,
-          "name": "Monstro",
-          "version": "Infamous Whale"
-        },
-        {
-          "amount": 1,
-          "name": "One Jump Ahead",
-          "version": ""
-        },
-        {
-          "amount": 3,
-          "name": "Rafiki",
-          "version": "Mystical Fighter"
-        },
-        {
-          "amount": 4,
-          "name": "Sail the Azurite Sea",
-          "version": ""
-        },
-        {
-          "amount": 1,
-          "name": "Second Star to the Right",
-          "version": ""
-        },
-        {
-          "amount": 2,
-          "name": "Tick",
-          "version": "Tock - Ever-Present Pursuer"
-        },
-        {
-          "amount": 4,
-          "name": "Tipo",
-          "version": "Growing Son"
-        },
-        {
-          "amount": 2,
-          "name": "Ursula",
-          "version": "Voice Stealer"
-        }
-      ]
-    },
-    {
-      "place": 2,
-      "cards": [
-        {
-          "amount": 4,
-          "name": "Basil",
-          "version": "Undercover Detective"
-        },
-        {
-          "amount": 2,
-          "name": "Baymax",
-          "version": "Giant Robot"
-        },
-        {
-          "amount": 2,
-          "name": "Belle",
-          "version": "Of the Ball"
-        },
-        {
-          "amount": 1,
-          "name": "Bend to My Will",
-          "version": ""
-        },
-        {
-          "amount": 2,
-          "name": "Bobby Zimuruski",
-          "version": "Spray Cheese Kid"
-        },
-        {
-          "amount": 4,
-          "name": "Clarabelle",
-          "version": "Clumsy Guest"
-        },
-        {
-          "amount": 4,
-          "name": "Clarabelle",
-          "version": "Contented Wallflower"
-        },
-        {
-          "amount": 4,
-          "name": "Clarabelle",
-          "version": "Light on Her Hooves"
-        },
-        {
-          "amount": 2,
-          "name": "Develop Your Brain",
-          "version": ""
-        },
-        {
-          "amount": 3,
-          "name": "Donald Duck",
-          "version": "Perfect Gentleman"
-        },
-        {
-          "amount": 2,
-          "name": "Hades",
-          "version": "Infernal Schemer"
-        },
-        {
-          "amount": 3,
-          "name": "Heads Held High",
-          "version": ""
-        },
-        {
-          "amount": 3,
-          "name": "John Silver",
-          "version": "Alien Pirate"
-        },
-        {
-          "amount": 2,
-          "name": "Pleakley",
-          "version": "Scientific Expert"
-        },
-        {
-          "amount": 2,
-          "name": "Pouncing Practice",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Sail the Azurite Sea",
-          "version": ""
-        },
-        {
-          "amount": 2,
-          "name": "Stopped Chaos in Its Tracks",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Tipo",
-          "version": "Growing Son"
-        },
-        {
-          "amount": 3,
-          "name": "Under the Sea",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Vision of the Future",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "You're Welcome",
-          "version": ""
-        }
-      ]
-    },
-    {
-      "place": 3,
-      "cards": [
-        {
           "amount": 4,
           "name": "Aurora",
           "version": "Holding Court"
+        },
+        {
+          "amount": 1,
+          "name": "Calhoun",
+          "version": "Marine Sergeant"
         },
         {
           "amount": 4,
@@ -248,6 +28,11 @@
         {
           "amount": 3,
           "name": "Fire the Cannons!",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "I Won't Give In",
           "version": ""
         },
         {
@@ -271,7 +56,7 @@
           "version": "Disguised Soldier"
         },
         {
-          "amount": 4,
+          "amount": 3,
           "name": "Nala",
           "version": "Undaunted Lioness"
         },
@@ -314,6 +99,216 @@
           "amount": 4,
           "name": "Tiana",
           "version": "Restaurant Owner"
+        }
+      ]
+    },
+    {
+      "place": 2,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Basil",
+          "version": "Practiced Detective"
+        },
+        {
+          "amount": 4,
+          "name": "Belle",
+          "version": "Accomplished Mystic"
+        },
+        {
+          "amount": 4,
+          "name": "Dumbo",
+          "version": "Ninth Wonder of the Universe"
+        },
+        {
+          "amount": 1,
+          "name": "Elsa",
+          "version": "Gloves Off"
+        },
+        {
+          "amount": 1,
+          "name": "Elsa",
+          "version": "Spirit of Winter"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
+        },
+        {
+          "amount": 2,
+          "name": "Finders Keepers",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Wish Fulfilled"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 3,
+          "name": "Hypnotic Strength",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Into the Unknown",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Madam Mim",
+          "version": "Elephant"
+        },
+        {
+          "amount": 2,
+          "name": "Magical Maneuvers",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Monstro",
+          "version": "Infamous Whale"
+        },
+        {
+          "amount": 1,
+          "name": "One Jump Ahead",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Rafiki",
+          "version": "Mystical Fighter"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Second Star to the Right",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "The Magic Feather",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Tick",
+          "version": "Tock - Ever-Present Pursuer"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 1,
+          "name": "Ursula",
+          "version": "Voice Stealer"
+        }
+      ]
+    },
+    {
+      "place": 3,
+      "cards": [
+        {
+          "amount": 3,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Captain Hook",
+          "version": "Forceful Duelist"
+        },
+        {
+          "amount": 4,
+          "name": "Doc",
+          "version": "Bold Knight"
+        },
+        {
+          "amount": 2,
+          "name": "Fire the Cannons!",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 3,
+          "name": "Jasmine",
+          "version": "Fearless Princess"
+        },
+        {
+          "amount": 4,
+          "name": "Kida",
+          "version": "Creative Thinker"
+        },
+        {
+          "amount": 2,
+          "name": "Lady Kluck",
+          "version": "Protective Confidant"
+        },
+        {
+          "amount": 4,
+          "name": "Mulan",
+          "version": "Disguised Soldier"
+        },
+        {
+          "amount": 4,
+          "name": "Namaari",
+          "version": "Single-Minded Rival"
+        },
+        {
+          "amount": 4,
+          "name": "Pleakley",
+          "version": "Scientific Expert"
+        },
+        {
+          "amount": 2,
+          "name": "Robin Hood",
+          "version": "Unrivaled Archer"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Smash",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tinker Bell",
+          "version": "Giant Fairy"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
         }
       ]
     },
@@ -341,6 +336,11 @@
           "version": "Ninth Wonder of the Universe"
         },
         {
+          "amount": 1,
+          "name": "Elsa",
+          "version": "Gloves Off"
+        },
+        {
           "amount": 2,
           "name": "Elsa",
           "version": "Spirit of Winter"
@@ -371,7 +371,7 @@
           "version": ""
         },
         {
-          "amount": 3,
+          "amount": 2,
           "name": "Iago",
           "version": "Giant Spectral Parrot"
         },
@@ -386,19 +386,14 @@
           "version": "Elephant"
         },
         {
-          "amount": 2,
+          "amount": 1,
           "name": "Magical Maneuvers",
           "version": ""
         },
         {
-          "amount": 1,
+          "amount": 2,
           "name": "Monstro",
           "version": "Infamous Whale"
-        },
-        {
-          "amount": 1,
-          "name": "One Jump Ahead",
-          "version": ""
         },
         {
           "amount": 2,
@@ -416,7 +411,12 @@
           "version": ""
         },
         {
-          "amount": 2,
+          "amount": 1,
+          "name": "The Magic Feather",
+          "version": ""
+        },
+        {
+          "amount": 3,
           "name": "Tick",
           "version": "Tock - Ever-Present Pursuer"
         },
@@ -437,198 +437,13 @@
       "cards": [
         {
           "amount": 4,
-          "name": "Bobby Zimuruski",
-          "version": "Spray Cheese Kid"
-        },
-        {
-          "amount": 3,
-          "name": "Calhoun",
-          "version": "Marine Sergeant"
-        },
-        {
-          "amount": 4,
-          "name": "Captain Hook",
-          "version": "Forceful Duelist"
-        },
-        {
-          "amount": 1,
-          "name": "Clarabelle",
-          "version": "Contented Wallflower"
-        },
-        {
-          "amount": 4,
-          "name": "Cursed Merfolk",
-          "version": "Ursula's Handiwork"
-        },
-        {
-          "amount": 4,
-          "name": "Doc",
-          "version": "Bold Knight"
-        },
-        {
-          "amount": 4,
-          "name": "Emerald Chromicon",
-          "version": ""
-        },
-        {
-          "amount": 3,
-          "name": "Fire the Cannons!",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Go Go Tomago",
-          "version": "Darting Dynamo"
-        },
-        {
-          "amount": 1,
-          "name": "Heathcliff",
-          "version": "Stoic Butler"
-        },
-        {
-          "amount": 1,
-          "name": "Improvise",
-          "version": ""
-        },
-        {
-          "amount": 3,
-          "name": "Jafar",
-          "version": "Aspiring Ruler"
-        },
-        {
-          "amount": 4,
-          "name": "Louis",
-          "version": "Endearing Alligator"
-        },
-        {
-          "amount": 4,
-          "name": "Mulan",
-          "version": "Disguised Soldier"
-        },
-        {
-          "amount": 4,
-          "name": "Pete",
-          "version": "Games Referee"
-        },
-        {
-          "amount": 4,
-          "name": "Prince Phillip",
-          "version": "Royal Explorer"
-        },
-        {
-          "amount": 4,
-          "name": "Strength of a Raging Fire",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Ursula",
-          "version": "Deceiver"
-        }
-      ]
-    },
-    {
-      "place": 6,
-      "cards": [
-        {
-          "amount": 2,
-          "name": "Basil",
-          "version": "Practiced Detective"
-        },
-        {
-          "amount": 4,
-          "name": "Basil",
-          "version": "Undercover Detective"
-        },
-        {
-          "amount": 2,
-          "name": "Baymax",
-          "version": "Armored Companion"
-        },
-        {
-          "amount": 2,
-          "name": "Baymax",
-          "version": "Giant Robot"
-        },
-        {
-          "amount": 4,
-          "name": "Clarabelle",
-          "version": "Clumsy Guest"
-        },
-        {
-          "amount": 3,
-          "name": "Clarabelle",
-          "version": "Contented Wallflower"
-        },
-        {
-          "amount": 4,
-          "name": "Clarabelle",
-          "version": "Light on Her Hooves"
-        },
-        {
-          "amount": 4,
-          "name": "Develop Your Brain",
-          "version": ""
-        },
-        {
-          "amount": 3,
-          "name": "Donald Duck",
-          "version": "Perfect Gentleman"
-        },
-        {
-          "amount": 3,
-          "name": "Hades",
-          "version": "Infernal Schemer"
-        },
-        {
-          "amount": 3,
-          "name": "Heads Held High",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "John Silver",
-          "version": "Alien Pirate"
-        },
-        {
-          "amount": 4,
-          "name": "Sail the Azurite Sea",
-          "version": ""
-        },
-        {
-          "amount": 2,
-          "name": "Scrooge McDuck",
-          "version": "Afficionado of Antiquities"
-        },
-        {
-          "amount": 4,
-          "name": "Tipo",
-          "version": "Growing Son"
-        },
-        {
-          "amount": 4,
-          "name": "Under the Sea",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Vision of the Future",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "You're Welcome",
-          "version": ""
-        }
-      ]
-    },
-    {
-      "place": 7,
-      "cards": [
-        {
-          "amount": 4,
           "name": "Aurora",
           "version": "Holding Court"
+        },
+        {
+          "amount": 2,
+          "name": "Calhoun",
+          "version": "Marine Sergeant"
         },
         {
           "amount": 4,
@@ -641,7 +456,7 @@
           "version": "Bold Knight"
         },
         {
-          "amount": 3,
+          "amount": 4,
           "name": "Fire the Cannons!",
           "version": ""
         },
@@ -649,6 +464,11 @@
           "amount": 4,
           "name": "Lady",
           "version": "Family Dog"
+        },
+        {
+          "amount": 4,
+          "name": "Lawrence",
+          "version": "Jealous Manservant"
         },
         {
           "amount": 2,
@@ -671,12 +491,102 @@
           "version": "Bolt's Person"
         },
         {
+          "amount": 4,
+          "name": "Rhino",
+          "version": "One-Sixteenth Wolf"
+        },
+        {
+          "amount": 4,
+          "name": "Rhino",
+          "version": "Power Hamster"
+        },
+        {
+          "amount": 1,
+          "name": "Sleepy",
+          "version": "Sluggish Knight"
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "The Troubadour",
+          "version": "Musical Narrator"
+        },
+        {
+          "amount": 4,
+          "name": "Tiana",
+          "version": "Restaurant Owner"
+        }
+      ]
+    },
+    {
+      "place": 6,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Aurora",
+          "version": "Holding Court"
+        },
+        {
+          "amount": 1,
+          "name": "Chip",
+          "version": "Friend Indeed"
+        },
+        {
+          "amount": 4,
+          "name": "Daisy Duck",
+          "version": "Donald's Date"
+        },
+        {
+          "amount": 4,
+          "name": "Doc",
+          "version": "Bold Knight"
+        },
+        {
+          "amount": 3,
+          "name": "Fire the Cannons!",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Jim Dear",
+          "version": "Beloved Husband"
+        },
+        {
+          "amount": 4,
+          "name": "Lady",
+          "version": "Family Dog"
+        },
+        {
+          "amount": 3,
+          "name": "Lilo",
+          "version": "Escape Artist"
+        },
+        {
+          "amount": 4,
+          "name": "Mulan",
+          "version": "Disguised Soldier"
+        },
+        {
+          "amount": 4,
+          "name": "Nala",
+          "version": "Undaunted Lioness"
+        },
+        {
+          "amount": 3,
+          "name": "Penny",
+          "version": "Bolt's Person"
+        },
+        {
           "amount": 3,
           "name": "Pete",
           "version": "Games Referee"
         },
         {
-          "amount": 4,
+          "amount": 2,
           "name": "Pluto",
           "version": "Guard Dog"
         },
@@ -691,17 +601,12 @@
           "version": "Power Hamster"
         },
         {
-          "amount": 2,
-          "name": "Sleepy",
-          "version": "Sluggish Knight"
-        },
-        {
           "amount": 4,
           "name": "Strength of a Raging Fire",
           "version": ""
         },
         {
-          "amount": 2,
+          "amount": 4,
           "name": "The Troubadour",
           "version": "Musical Narrator"
         },
@@ -713,7 +618,7 @@
       ]
     },
     {
-      "place": 8,
+      "place": 7,
       "cards": [
         {
           "amount": 2,
@@ -731,217 +636,7 @@
           "version": "Forceful Duelist"
         },
         {
-          "amount": 3,
-          "name": "Doc",
-          "version": "Bold Knight"
-        },
-        {
           "amount": 2,
-          "name": "Dolores Madrigal",
-          "version": "Easy Listener"
-        },
-        {
-          "amount": 4,
-          "name": "Elsa",
-          "version": "The Fifth Spirit"
-        },
-        {
-          "amount": 2,
-          "name": "Fire the Cannons!",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Genie",
-          "version": "Wish Fulfilled"
-        },
-        {
-          "amount": 4,
-          "name": "Giant Cobra",
-          "version": "Ghostly Serpent"
-        },
-        {
-          "amount": 2,
-          "name": "Hypnotic Strength",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Iago",
-          "version": "Giant Spectral Parrot"
-        },
-        {
-          "amount": 3,
-          "name": "Jafar",
-          "version": "Aspiring Ruler"
-        },
-        {
-          "amount": 3,
-          "name": "Jafar",
-          "version": "Royal Vizier"
-        },
-        {
-          "amount": 2,
-          "name": "Lawrence",
-          "version": "Jealous Manservant"
-        },
-        {
-          "amount": 2,
-          "name": "Madam Mim",
-          "version": "Tiny Adversary"
-        },
-        {
-          "amount": 3,
-          "name": "Palace Guard",
-          "version": "Spectral Sentry"
-        },
-        {
-          "amount": 3,
-          "name": "Rafiki",
-          "version": "Mystical Fighter"
-        },
-        {
-          "amount": 4,
-          "name": "Rajah",
-          "version": "Ghostly Tiger"
-        },
-        {
-          "amount": 4,
-          "name": "Strength of a Raging Fire",
-          "version": ""
-        },
-        {
-          "amount": 2,
-          "name": "The White Rose",
-          "version": "Jewel of the Garden"
-        }
-      ]
-    },
-    {
-      "place": 9,
-      "cards": [
-        {
-          "amount": 2,
-          "name": "Basil",
-          "version": "Practiced Detective"
-        },
-        {
-          "amount": 3,
-          "name": "Basil",
-          "version": "Undercover Detective"
-        },
-        {
-          "amount": 2,
-          "name": "Baymax",
-          "version": "Giant Robot"
-        },
-        {
-          "amount": 2,
-          "name": "Belle",
-          "version": "Of the Ball"
-        },
-        {
-          "amount": 1,
-          "name": "Bend to My Will",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Clarabelle",
-          "version": "Clumsy Guest"
-        },
-        {
-          "amount": 4,
-          "name": "Clarabelle",
-          "version": "Contented Wallflower"
-        },
-        {
-          "amount": 4,
-          "name": "Clarabelle",
-          "version": "Light on Her Hooves"
-        },
-        {
-          "amount": 2,
-          "name": "Develop Your Brain",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Donald Duck",
-          "version": "Perfect Gentleman"
-        },
-        {
-          "amount": 3,
-          "name": "Hades",
-          "version": "Infernal Schemer"
-        },
-        {
-          "amount": 3,
-          "name": "Heads Held High",
-          "version": ""
-        },
-        {
-          "amount": 3,
-          "name": "John Silver",
-          "version": "Alien Pirate"
-        },
-        {
-          "amount": 2,
-          "name": "Pouncing Practice",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Sail the Azurite Sea",
-          "version": ""
-        },
-        {
-          "amount": 2,
-          "name": "Stopped Chaos in Its Tracks",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Tipo",
-          "version": "Growing Son"
-        },
-        {
-          "amount": 3,
-          "name": "Under the Sea",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Vision of the Future",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "You're Welcome",
-          "version": ""
-        }
-      ]
-    },
-    {
-      "place": 10,
-      "cards": [
-        {
-          "amount": 3,
-          "name": "Belle",
-          "version": "Accomplished Mystic"
-        },
-        {
-          "amount": 4,
-          "name": "Calhoun",
-          "version": "Marine Sergeant"
-        },
-        {
-          "amount": 4,
-          "name": "Captain Hook",
-          "version": "Forceful Duelist"
-        },
-        {
-          "amount": 4,
           "name": "Diablo",
           "version": "Obedient Raven"
         },
@@ -961,7 +656,7 @@
           "version": "The Fifth Spirit"
         },
         {
-          "amount": 1,
+          "amount": 2,
           "name": "Fire the Cannons!",
           "version": ""
         },
@@ -981,29 +676,39 @@
           "version": "Ghostly Serpent"
         },
         {
-          "amount": 2,
+          "amount": 3,
           "name": "Happy",
           "version": "Lively Knight"
         },
         {
-          "amount": 2,
+          "amount": 1,
+          "name": "Hypnotic Strength",
+          "version": ""
+        },
+        {
+          "amount": 1,
           "name": "Jafar",
           "version": "Aspiring Ruler"
         },
         {
-          "amount": 2,
-          "name": "Jafar",
-          "version": "Royal Vizier"
+          "amount": 1,
+          "name": "Lilo",
+          "version": "Best Explorer Ever"
         },
         {
           "amount": 2,
-          "name": "Lawrence",
-          "version": "Jealous Manservant"
+          "name": "Madam Mim",
+          "version": "Tiny Adversary"
+        },
+        {
+          "amount": 3,
+          "name": "Mr. Smee",
+          "version": "Steadfast Mate"
         },
         {
           "amount": 1,
-          "name": "Madam Mim",
-          "version": "Tiny Adversary"
+          "name": "Palace Guard",
+          "version": "Spectral Sentry"
         },
         {
           "amount": 4,
@@ -1017,13 +722,328 @@
         },
         {
           "amount": 2,
-          "name": "Timothy Q. Mouse",
-          "version": "Flight Instructor"
+          "name": "Tinker Bell",
+          "version": "Fast Flier"
+        },
+        {
+          "amount": 1,
+          "name": "Tinker Bell",
+          "version": "Giant Fairy"
         },
         {
           "amount": 4,
           "name": "Yzma",
           "version": "Conniving Chemist"
+        }
+      ]
+    },
+    {
+      "place": 8,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Basil",
+          "version": "Practiced Detective"
+        },
+        {
+          "amount": 4,
+          "name": "Belle",
+          "version": "Accomplished Mystic"
+        },
+        {
+          "amount": 2,
+          "name": "Develop Your Brain",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Dumbo",
+          "version": "Ninth Wonder of the Universe"
+        },
+        {
+          "amount": 1,
+          "name": "Elsa",
+          "version": "Spirit of Winter"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
+        },
+        {
+          "amount": 2,
+          "name": "Finders Keepers",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Wish Fulfilled"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 3,
+          "name": "Hypnotic Strength",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Iago",
+          "version": "Giant Spectral Parrot"
+        },
+        {
+          "amount": 4,
+          "name": "Into the Unknown",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Madam Mim",
+          "version": "Elephant"
+        },
+        {
+          "amount": 1,
+          "name": "Magical Maneuvers",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Monstro",
+          "version": "Infamous Whale"
+        },
+        {
+          "amount": 3,
+          "name": "Rafiki",
+          "version": "Mystical Fighter"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Second Star to the Right",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Tick",
+          "version": "Tock - Ever-Present Pursuer"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 1,
+          "name": "Ursula",
+          "version": "Voice Stealer"
+        }
+      ]
+    },
+    {
+      "place": 9,
+      "cards": [
+        {
+          "amount": 1,
+          "name": "Arthur",
+          "version": "King Victorious"
+        },
+        {
+          "amount": 3,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Doc",
+          "version": "Bold Knight"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 4,
+          "name": "Jasmine",
+          "version": "Resourceful Infiltrator"
+        },
+        {
+          "amount": 4,
+          "name": "Jasmine",
+          "version": "Steady Strategist"
+        },
+        {
+          "amount": 4,
+          "name": "Mulan",
+          "version": "Disguised Soldier"
+        },
+        {
+          "amount": 4,
+          "name": "Namaari",
+          "version": "Single-Minded Rival"
+        },
+        {
+          "amount": 4,
+          "name": "Pleakley",
+          "version": "Scientific Expert"
+        },
+        {
+          "amount": 4,
+          "name": "Robin Hood",
+          "version": "Unrivaled Archer"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Smash",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tinker Bell",
+          "version": "Giant Fairy"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
+        },
+        {
+          "amount": 2,
+          "name": "Vision of the Future",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Wasabi",
+          "version": "Methodical Engineer"
+        }
+      ]
+    },
+    {
+      "place": 10,
+      "cards": [
+        {
+          "amount": 1,
+          "name": "Arthur",
+          "version": "King Victorious"
+        },
+        {
+          "amount": 3,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Doc",
+          "version": "Bold Knight"
+        },
+        {
+          "amount": 2,
+          "name": "Fire the Cannons!",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 3,
+          "name": "Happy",
+          "version": "Lively Knight"
+        },
+        {
+          "amount": 4,
+          "name": "Jasmine",
+          "version": "Fearless Princess"
+        },
+        {
+          "amount": 4,
+          "name": "Kida",
+          "version": "Creative Thinker"
+        },
+        {
+          "amount": 3,
+          "name": "Lady Kluck",
+          "version": "Protective Confidant"
+        },
+        {
+          "amount": 2,
+          "name": "Lilo",
+          "version": "Best Explorer Ever"
+        },
+        {
+          "amount": 2,
+          "name": "Miss Bianca",
+          "version": "Unwavering Agent"
+        },
+        {
+          "amount": 3,
+          "name": "Mulan",
+          "version": "Disguised Soldier"
+        },
+        {
+          "amount": 2,
+          "name": "Pleakley",
+          "version": "Scientific Expert"
+        },
+        {
+          "amount": 1,
+          "name": "Ratigan",
+          "version": "Greedy Genius"
+        },
+        {
+          "amount": 4,
+          "name": "Robin Hood",
+          "version": "Unrivaled Archer"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Smash",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tinker Bell",
+          "version": "Giant Fairy"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
         }
       ]
     },
@@ -1046,7 +1066,7 @@
           "version": "Forceful Duelist"
         },
         {
-          "amount": 3,
+          "amount": 2,
           "name": "Diablo",
           "version": "Obedient Raven"
         },
@@ -1066,6 +1086,11 @@
           "version": "The Fifth Spirit"
         },
         {
+          "amount": 1,
+          "name": "Fire the Cannons!",
+          "version": ""
+        },
+        {
           "amount": 4,
           "name": "Genie",
           "version": "Satisfied Dragon"
@@ -1081,7 +1106,7 @@
           "version": "Ghostly Serpent"
         },
         {
-          "amount": 2,
+          "amount": 3,
           "name": "Happy",
           "version": "Lively Knight"
         },
@@ -1096,12 +1121,17 @@
           "version": "Aspiring Ruler"
         },
         {
-          "amount": 1,
+          "amount": 2,
           "name": "Madam Mim",
           "version": "Tiny Adversary"
         },
         {
-          "amount": 3,
+          "amount": 1,
+          "name": "Magical Maneuvers",
+          "version": ""
+        },
+        {
+          "amount": 2,
           "name": "Mr. Smee",
           "version": "Steadfast Mate"
         },
@@ -1111,7 +1141,7 @@
           "version": "Spectral Sentry"
         },
         {
-          "amount": 2,
+          "amount": 1,
           "name": "Rajah",
           "version": "Ghostly Tiger"
         },
@@ -1126,7 +1156,7 @@
           "version": ""
         },
         {
-          "amount": 2,
+          "amount": 1,
           "name": "The White Rose",
           "version": "Jewel of the Garden"
         },
@@ -1156,217 +1186,12 @@
       "place": 12,
       "cards": [
         {
-          "amount": 4,
-          "name": "Anna",
-          "version": "Braving the Storm"
-        },
-        {
-          "amount": 4,
-          "name": "Anna",
-          "version": "True-Hearted"
-        },
-        {
-          "amount": 4,
-          "name": "Aurora",
-          "version": "Dreaming Guardian"
-        },
-        {
-          "amount": 4,
-          "name": "Aurora",
-          "version": "Holding Court"
-        },
-        {
-          "amount": 4,
-          "name": "Daisy Duck",
-          "version": "Donald's Date"
-        },
-        {
           "amount": 1,
-          "name": "Ever as Before",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Hans",
-          "version": "Noble Scoundrel"
-        },
-        {
-          "amount": 4,
-          "name": "Jim Dear",
-          "version": "Beloved Husband"
-        },
-        {
-          "amount": 4,
-          "name": "Lady",
-          "version": "Family Dog"
-        },
-        {
-          "amount": 4,
-          "name": "Lilo",
-          "version": "Escape Artist"
-        },
-        {
-          "amount": 4,
-          "name": "Ludwig Von Drake",
-          "version": "All-Around Expert"
-        },
-        {
-          "amount": 4,
-          "name": "Patch",
-          "version": "Playful Pup"
-        },
-        {
-          "amount": 3,
-          "name": "Restoring the Heart",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Snow White",
-          "version": "Fairest in the Land"
-        },
-        {
-          "amount": 2,
-          "name": "So Much to Give",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Thunderbolt",
-          "version": "Wonder Dog"
-        },
-        {
-          "amount": 4,
-          "name": "Tiana",
-          "version": "Restaurant Owner"
-        }
-      ]
-    },
-    {
-      "place": 13,
-      "cards": [
-        {
-          "amount": 2,
           "name": "Belle",
           "version": "Accomplished Mystic"
         },
         {
-          "amount": 3,
-          "name": "Calhoun",
-          "version": "Marine Sergeant"
-        },
-        {
           "amount": 4,
-          "name": "Captain Hook",
-          "version": "Forceful Duelist"
-        },
-        {
-          "amount": 3,
-          "name": "Doc",
-          "version": "Bold Knight"
-        },
-        {
-          "amount": 4,
-          "name": "Dumbo",
-          "version": "Ninth Wonder of the Universe"
-        },
-        {
-          "amount": 4,
-          "name": "Elsa",
-          "version": "The Fifth Spirit"
-        },
-        {
-          "amount": 4,
-          "name": "Genie",
-          "version": "Satisfied Dragon"
-        },
-        {
-          "amount": 4,
-          "name": "Genie",
-          "version": "Wish Fulfilled"
-        },
-        {
-          "amount": 4,
-          "name": "Giant Cobra",
-          "version": "Ghostly Serpent"
-        },
-        {
-          "amount": 2,
-          "name": "Happy",
-          "version": "Lively Knight"
-        },
-        {
-          "amount": 2,
-          "name": "Hypnotic Strength",
-          "version": ""
-        },
-        {
-          "amount": 2,
-          "name": "Jafar",
-          "version": "Royal Vizier"
-        },
-        {
-          "amount": 2,
-          "name": "Madam Mim",
-          "version": "Tiny Adversary"
-        },
-        {
-          "amount": 3,
-          "name": "Mr. Smee",
-          "version": "Steadfast Mate"
-        },
-        {
-          "amount": 2,
-          "name": "Rafiki",
-          "version": "Mystical Fighter"
-        },
-        {
-          "amount": 2,
-          "name": "Rajah",
-          "version": "Ghostly Tiger"
-        },
-        {
-          "amount": 1,
-          "name": "Scar",
-          "version": "Finally King"
-        },
-        {
-          "amount": 4,
-          "name": "Strength of a Raging Fire",
-          "version": ""
-        },
-        {
-          "amount": 2,
-          "name": "The White Rose",
-          "version": "Jewel of the Garden"
-        },
-        {
-          "amount": 2,
-          "name": "Tinker Bell",
-          "version": "Fast Flier"
-        },
-        {
-          "amount": 1,
-          "name": "Tinker Bell",
-          "version": "Giant Fairy"
-        },
-        {
-          "amount": 3,
-          "name": "Yzma",
-          "version": "Conniving Chemist"
-        }
-      ]
-    },
-    {
-      "place": 14,
-      "cards": [
-        {
-          "amount": 2,
-          "name": "Belle",
-          "version": "Accomplished Mystic"
-        },
-        {
-          "amount": 3,
           "name": "Calhoun",
           "version": "Marine Sergeant"
         },
@@ -1396,6 +1221,111 @@
           "version": "The Fifth Spirit"
         },
         {
+          "amount": 1,
+          "name": "Fire the Cannons!",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Satisfied Dragon"
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Wish Fulfilled"
+        },
+        {
+          "amount": 4,
+          "name": "Giant Cobra",
+          "version": "Ghostly Serpent"
+        },
+        {
+          "amount": 2,
+          "name": "Hypnotic Strength",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Jafar",
+          "version": "Aspiring Ruler"
+        },
+        {
+          "amount": 1,
+          "name": "Madam Mim",
+          "version": "Elephant"
+        },
+        {
+          "amount": 2,
+          "name": "Madam Mim",
+          "version": "Tiny Adversary"
+        },
+        {
+          "amount": 4,
+          "name": "Palace Guard",
+          "version": "Spectral Sentry"
+        },
+        {
+          "amount": 3,
+          "name": "Rajah",
+          "version": "Ghostly Tiger"
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "The White Rose",
+          "version": "Jewel of the Garden"
+        },
+        {
+          "amount": 4,
+          "name": "Yzma",
+          "version": "Conniving Chemist"
+        }
+      ]
+    },
+    {
+      "place": 13,
+      "cards": [
+        {
+          "amount": 2,
+          "name": "Belle",
+          "version": "Accomplished Mystic"
+        },
+        {
+          "amount": 3,
+          "name": "Calhoun",
+          "version": "Marine Sergeant"
+        },
+        {
+          "amount": 4,
+          "name": "Captain Hook",
+          "version": "Forceful Duelist"
+        },
+        {
+          "amount": 3,
+          "name": "Diablo",
+          "version": "Obedient Raven"
+        },
+        {
+          "amount": 3,
+          "name": "Doc",
+          "version": "Bold Knight"
+        },
+        {
+          "amount": 3,
+          "name": "Dolores Madrigal",
+          "version": "Easy Listener"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
+        },
+        {
           "amount": 2,
           "name": "Fire the Cannons!",
           "version": ""
@@ -1421,19 +1351,24 @@
           "version": "Lively Knight"
         },
         {
-          "amount": 2,
+          "amount": 1,
           "name": "Hypnotic Strength",
           "version": ""
         },
         {
-          "amount": 2,
+          "amount": 1,
           "name": "Jafar",
           "version": "Aspiring Ruler"
         },
         {
           "amount": 1,
-          "name": "Jasmine",
-          "version": "Fearless Princess"
+          "name": "Jafar",
+          "version": "Royal Vizier"
+        },
+        {
+          "amount": 2,
+          "name": "Madam Mim",
+          "version": "Elephant"
         },
         {
           "amount": 2,
@@ -1441,14 +1376,19 @@
           "version": "Tiny Adversary"
         },
         {
-          "amount": 3,
+          "amount": 2,
           "name": "Mr. Smee",
           "version": "Steadfast Mate"
         },
         {
-          "amount": 2,
-          "name": "Rajah",
-          "version": "Ghostly Tiger"
+          "amount": 1,
+          "name": "Palace Guard",
+          "version": "Spectral Sentry"
+        },
+        {
+          "amount": 3,
+          "name": "Pete",
+          "version": "Games Referee"
         },
         {
           "amount": 4,
@@ -1456,19 +1396,114 @@
           "version": ""
         },
         {
-          "amount": 3,
+          "amount": 2,
+          "name": "The White Rose",
+          "version": "Jewel of the Garden"
+        },
+        {
+          "amount": 1,
+          "name": "Tick",
+          "version": "Tock - Ever-Present Pursuer"
+        },
+        {
+          "amount": 2,
           "name": "Tinker Bell",
           "version": "Fast Flier"
         },
         {
-          "amount": 2,
+          "amount": 1,
           "name": "Tinker Bell",
           "version": "Giant Fairy"
         },
         {
-          "amount": 2,
+          "amount": 1,
           "name": "Yzma",
           "version": "Conniving Chemist"
+        }
+      ]
+    },
+    {
+      "place": 14,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Basil",
+          "version": "Practiced Detective"
+        },
+        {
+          "amount": 4,
+          "name": "Belle",
+          "version": "Accomplished Mystic"
+        },
+        {
+          "amount": 4,
+          "name": "Dumbo",
+          "version": "Ninth Wonder of the Universe"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Wish Fulfilled"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 4,
+          "name": "Hypnotic Strength",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Iago",
+          "version": "Giant Spectral Parrot"
+        },
+        {
+          "amount": 4,
+          "name": "Into the Unknown",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Madam Mim",
+          "version": "Elephant"
+        },
+        {
+          "amount": 2,
+          "name": "Monstro",
+          "version": "Infamous Whale"
+        },
+        {
+          "amount": 3,
+          "name": "Rafiki",
+          "version": "Mystical Fighter"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Second Star to the Right",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tick",
+          "version": "Tock - Ever-Present Pursuer"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
         }
       ]
     },
@@ -1477,23 +1512,113 @@
       "cards": [
         {
           "amount": 4,
-          "name": "Aurora",
-          "version": "Holding Court"
+          "name": "Basil",
+          "version": "Practiced Detective"
         },
         {
           "amount": 4,
-          "name": "Bolt",
-          "version": "Down but Not Out"
+          "name": "Belle",
+          "version": "Accomplished Mystic"
         },
         {
           "amount": 4,
-          "name": "Calhoun",
-          "version": "Battle-Tested"
+          "name": "Dumbo",
+          "version": "Ninth Wonder of the Universe"
+        },
+        {
+          "amount": 1,
+          "name": "Elsa",
+          "version": "Spirit of Winter"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
         },
         {
           "amount": 2,
-          "name": "Calhoun",
-          "version": "Marine Sergeant"
+          "name": "Finders Keepers",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Wish Fulfilled"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 3,
+          "name": "Hypnotic Strength",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Iago",
+          "version": "Giant Spectral Parrot"
+        },
+        {
+          "amount": 4,
+          "name": "Into the Unknown",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Madam Mim",
+          "version": "Elephant"
+        },
+        {
+          "amount": 1,
+          "name": "Magical Maneuvers",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Monstro",
+          "version": "Infamous Whale"
+        },
+        {
+          "amount": 3,
+          "name": "Rafiki",
+          "version": "Mystical Fighter"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Second Star to the Right",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Tick",
+          "version": "Tock - Ever-Present Pursuer"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 1,
+          "name": "Ursula",
+          "version": "Voice Stealer"
+        }
+      ]
+    },
+    {
+      "place": 16,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Aurora",
+          "version": "Holding Court"
         },
         {
           "amount": 4,
@@ -1506,7 +1631,7 @@
           "version": "Bold Knight"
         },
         {
-          "amount": 2,
+          "amount": 3,
           "name": "Fire the Cannons!",
           "version": ""
         },
@@ -1516,7 +1641,7 @@
           "version": "Family Dog"
         },
         {
-          "amount": 4,
+          "amount": 3,
           "name": "Lilo",
           "version": "Escape Artist"
         },
@@ -1531,9 +1656,19 @@
           "version": "Undaunted Lioness"
         },
         {
-          "amount": 4,
+          "amount": 2,
           "name": "Penny",
           "version": "Bolt's Person"
+        },
+        {
+          "amount": 4,
+          "name": "Pete",
+          "version": "Games Referee"
+        },
+        {
+          "amount": 4,
+          "name": "Pluto",
+          "version": "Guard Dog"
         },
         {
           "amount": 4,
@@ -1552,98 +1687,13 @@
         },
         {
           "amount": 4,
-          "name": "Tiana",
-          "version": "Restaurant Owner"
-        }
-      ]
-    },
-    {
-      "place": 16,
-      "cards": [
-        {
-          "amount": 4,
-          "name": "Aurora",
-          "version": "Holding Court"
-        },
-        {
-          "amount": 4,
-          "name": "Bobby Zimuruski",
-          "version": "Spray Cheese Kid"
-        },
-        {
-          "amount": 4,
-          "name": "Daisy Duck",
-          "version": "Donald's Date"
-        },
-        {
-          "amount": 3,
-          "name": "Go Go Tomago",
-          "version": "Darting Dynamo"
-        },
-        {
-          "amount": 4,
-          "name": "Lady",
-          "version": "Decisive Dog"
-        },
-        {
-          "amount": 4,
-          "name": "Lady",
-          "version": "Elegant Spaniel"
-        },
-        {
-          "amount": 4,
-          "name": "Lady",
-          "version": "Family Dog"
-        },
-        {
-          "amount": 4,
-          "name": "Lady",
-          "version": "Miss Park Avenue"
-        },
-        {
-          "amount": 3,
-          "name": "Lilo",
-          "version": "Escape Artist"
-        },
-        {
-          "amount": 4,
-          "name": "Merryweather",
-          "version": "Good Fairy"
-        },
-        {
-          "amount": 2,
-          "name": "Pluto",
-          "version": "Friendly Pooch"
+          "name": "The Troubadour",
+          "version": "Musical Narrator"
         },
         {
           "amount": 4,
           "name": "Tiana",
           "version": "Restaurant Owner"
-        },
-        {
-          "amount": 2,
-          "name": "Tramp",
-          "version": "Dapper Rascal"
-        },
-        {
-          "amount": 4,
-          "name": "Tramp",
-          "version": "Enterprising Dog"
-        },
-        {
-          "amount": 4,
-          "name": "Tramp",
-          "version": "Street-Smart Dog"
-        },
-        {
-          "amount": 4,
-          "name": "Under the Sea",
-          "version": ""
-        },
-        {
-          "amount": 4,
-          "name": "Ursula",
-          "version": "Deceiver"
         }
       ]
     }

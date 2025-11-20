@@ -177,12 +177,12 @@ export default class ModelManager {
 
     /**
      * Calculate adaptive temperature based on deck size
-     * High temperature (1.5) early for exploration
+     * High temperature (2.5) early for exploration
      * Low temperature (0.7) late for focused completion
      */
     getAdaptiveTemperature(deckSize) {
-        if (deckSize <= 20) {
-            return 1.5; // High exploration for early deck building
+        if (deckSize <= 10) {
+            return 2.5; // High exploration for early deck building
         } else if (deckSize <= 40) {
             return 1.0; // Balanced
         } else {
