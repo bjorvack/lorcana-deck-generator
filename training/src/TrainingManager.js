@@ -1,5 +1,6 @@
 const CardApi = require('./CardApi');
 const DeckModel = require('./DeckModel');
+const TextEmbedder = require('./TextEmbedder');
 const fs = require('fs');
 const path = require('path');
 
@@ -7,6 +8,7 @@ module.exports = class TrainingManager {
     constructor() {
         this.cardApi = new CardApi();
         this.model = new DeckModel();
+        this.textEmbedder = new TextEmbedder();
         this.cards = [];
         this.cardMap = new Map(); // Name -> Index
         this.indexMap = new Map(); // Index -> Name
@@ -47,6 +49,12 @@ module.exports = class TrainingManager {
                 }
             });
             this.log(`Unique cards indexed: ${this.cardMap.size}`);
+
+            // Build text vocabulary
+            this.log('Building text vocabulary...');
+            this.textEmbedder.buildVocabulary(this.cards);
+            const vocabPath = path.join(this.trainingDataPath, 'vocabulary.json');
+            this.textEmbedder.save(vocabPath);
         } else {
             this.log('Cards already loaded.');
         }
@@ -100,6 +108,7 @@ module.exports = class TrainingManager {
         this.log('Processing decks...');
         const sequences = [];
         const featureSequences = [];
+        const textSequences = []; // NEW: text token sequences
 
         let processedDecks = 0;
 
@@ -124,6 +133,7 @@ module.exports = class TrainingManager {
 
                         const seqIndices = [];
                         const seqFeatures = [];
+                        const seqTextIndices = []; // NEW: collect text indices
 
                         // Initialize deck stats for this sequence
                         let currentStats = this.getInitialDeckStats();
@@ -137,9 +147,11 @@ module.exports = class TrainingManager {
 
                             this.updateDeckStats(currentStats, card);
                             const features = this.extractCardFeatures(card, currentStats, copiesSoFar);
+                            const textIndices = this.textEmbedder.cardToTextIndices(card); // NEW: extract text
 
                             seqIndices.push(index);
                             seqFeatures.push(features);
+                            seqTextIndices.push(textIndices); // NEW: collect text indices
 
                             // Update card count after extracting features
                             cardCounts.set(index, copiesSoFar + 1);
@@ -147,6 +159,7 @@ module.exports = class TrainingManager {
 
                         sequences.push(seqIndices);
                         featureSequences.push(seqFeatures);
+                        textSequences.push(seqTextIndices); // NEW: collect text sequences
                     }
                 }
 
@@ -161,13 +174,18 @@ module.exports = class TrainingManager {
             this.log('Initializing new model...');
             // We need to know feature dimension
             const featureDim = featureSequences[0][0].length;
-            await this.model.initialize(this.cardMap.size, featureDim);
+            await this.model.initialize(
+                this.cardMap.size,
+                featureDim,
+                this.textEmbedder.vocabularySize,
+                this.textEmbedder.maxTextTokens
+            );
         } else {
             this.log('Continuing training on existing model...');
         }
 
         this.log('Training model...');
-        await this.model.train(sequences, featureSequences, epochs, (epoch, logs) => {
+        await this.model.train(sequences, featureSequences, textSequences, epochs, (epoch, logs) => {
             this.log(`Epoch ${epoch + 1}/${epochs}: loss = ${logs.loss.toFixed(4)}`);
         });
 

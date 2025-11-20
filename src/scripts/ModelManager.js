@@ -1,10 +1,12 @@
 import CardApi from './CardApi';
 import DeckModel from './DeckModel';
+import TextEmbedder from './TextEmbedder';
 
 export default class ModelManager {
     constructor() {
         this.cardApi = new CardApi();
         this.model = new DeckModel();
+        this.textEmbedder = new TextEmbedder();
         this.cards = [];
         this.cardMap = new Map(); // Name -> Index
         this.indexMap = new Map(); // Index -> Card
@@ -32,6 +34,20 @@ export default class ModelManager {
 
     async loadModel(modelPath) {
         await this.loadCards();
+
+        // Load vocabulary
+        try {
+            const vocabResponse = await fetch('training_data/vocabulary.json');
+            if (vocabResponse.ok) {
+                const vocabData = await vocabResponse.json();
+                this.textEmbedder.load(vocabData);
+            } else {
+                console.error('Failed to load vocabulary.json');
+            }
+        } catch (e) {
+            console.error('Error loading vocabulary:', e);
+        }
+
         await this.model.loadModel(modelPath);
     }
 
@@ -39,6 +55,7 @@ export default class ModelManager {
         // Convert names to indices
         const indices = [];
         const features = [];
+        const textIndices = []; // NEW
 
         // We need to reconstruct the deck stats as we go to generate features for the sequence
         let currentStats = this.getInitialDeckStats();
@@ -79,7 +96,10 @@ export default class ModelManager {
                 // Count copies of this card before extracting features
                 const copiesSoFar = indices.filter(id => id === foundId).length - 1;
                 const cardFeatures = this.extractCardFeatures(card, currentStats, copiesSoFar);
+                const cardTextIndices = this.textEmbedder.cardToTextIndices(card); // NEW
+
                 features.push(cardFeatures);
+                textIndices.push(cardTextIndices); // NEW
             }
         });
 
@@ -99,7 +119,7 @@ export default class ModelManager {
             }
         });
 
-        const probabilities = await this.model.predict(indices, features);
+        const probabilities = await this.model.predict(indices, features, textIndices);
 
         // Calculate adaptive temperature based on deck size
         const temperature = this.getAdaptiveTemperature(indices.length);

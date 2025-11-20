@@ -8,12 +8,17 @@ module.exports = class DeckModel {
         this.maxLen = 60; // Max deck size usually 60
         this.embeddingDim = 32;
         this.lstmUnits = 64;
+        this.textVocabSize = 0; // NEW: text vocabulary size
+        this.maxTextTokens = 0; // NEW: max text tokens per card
+        this.textEmbeddingDim = 16; // NEW: text embedding dimension
     }
 
-    async initialize(vocabSize, featureDim) {
+    async initialize(vocabSize, featureDim, textVocabSize, maxTextTokens) {
         // --- Save model parameters ---
         this.vocabSize = vocabSize + 1; // +1 for padding / OOV token
         this.featureDim = featureDim;
+        this.textVocabSize = textVocabSize; // NEW
+        this.maxTextTokens = maxTextTokens; // NEW
 
         // --- Define Inputs ---
         // inputIndices: sequence of card IDs
@@ -23,11 +28,18 @@ module.exports = class DeckModel {
             name: 'input_indices'
         });
 
-        // inputFeatures: precomputed embeddings for each card in the sequence
+        // inputFeatures: precomputed numeric features for each card in the sequence
         const inputFeatures = tf.input({
             shape: [this.maxLen, this.featureDim],
             dtype: 'float32',
             name: 'input_features'
+        });
+
+        // inputTextTokens: text tokens for each card in the sequence (NEW)
+        const inputTextTokens = tf.input({
+            shape: [this.maxLen, this.maxTextTokens],
+            dtype: 'int32',
+            name: 'input_text_tokens'
         });
 
         // --- Embedding Layer for card indices ---
@@ -35,12 +47,40 @@ module.exports = class DeckModel {
             inputDim: this.vocabSize,
             outputDim: this.embeddingDim,
             inputLength: this.maxLen,
-            maskZero: true,
+            // maskZero: true, // Removed to avoid "gradient function not found for All" error
             name: 'embedding'
         }).apply(inputIndices);
 
-        // --- Concatenate embedding + features ---
-        const concatenated = tf.layers.concatenate().apply([embedding, inputFeatures]);
+        // --- Text Embedding Layer (NEW) ---
+        // For each card in sequence, we have maxTextTokens  
+        // We need to reshape to process all tokens at once
+        const textEmbedding = tf.layers.embedding({
+            inputDim: this.textVocabSize,
+            outputDim: this.textEmbeddingDim,
+            name: 'text_embedding'
+        }).apply(inputTextTokens); // Shape: [batch, maxLen, maxTextTokens, textEmbeddingDim]
+
+        // Simplify: Flatten the text embeddings per card and project down
+        // Instead of TimeDistributed(GlobalAveragePooling1D) which caused gradient issues
+
+        // Reshape to [batch, maxLen, maxTextTokens * textEmbeddingDim]
+        const textFlattener = tf.layers.reshape({
+            targetShape: [this.maxLen, this.maxTextTokens * this.textEmbeddingDim],
+            name: 'text_flatten'
+        }).apply(textEmbedding);
+
+        // Project back to textEmbeddingDim using a Dense layer
+        // Dense applied to rank 3 tensor acts on the last dimension (features), shared across steps
+        const textProjection = tf.layers.dense({
+            units: this.textEmbeddingDim,
+            activation: 'relu',
+            name: 'text_projection'
+        }).apply(textFlattener); // Shape: [batch, maxLen, textEmbeddingDim]
+
+        // --- Concatenate card embedding + numeric features + text embeddings ---
+        const concatenated = tf.layers.concatenate({
+            name: 'concat_all_features'
+        }).apply([embedding, inputFeatures, textProjection]);
 
         // --- LSTM Layer ---
         const lstm = tf.layers.lstm({
@@ -58,7 +98,7 @@ module.exports = class DeckModel {
 
         // --- Create the model ---
         this.model = tf.model({
-            inputs: [inputIndices, inputFeatures],
+            inputs: [inputIndices, inputFeatures, inputTextTokens],
             outputs: output,
             name: 'deck_predictor'
         });
@@ -75,19 +115,19 @@ module.exports = class DeckModel {
     }
 
 
-    async train(sequences, featureSequences, epochs, onEpochEnd) {
+    async train(sequences, featureSequences, textSequences, epochs, onEpochEnd) {
         if (!this.model) {
             throw new Error("Model not initialized");
         }
 
-        const { xsIndices, xsFeatures, ys } = this.prepareData(sequences, featureSequences);
+        const { xsIndices, xsFeatures, xsTextTokens, ys } = this.prepareData(sequences, featureSequences, textSequences);
 
         // Early stopping: stop if validation loss doesn't improve for 3 epochs
         let bestValLoss = Infinity;
         let patienceCounter = 0;
         const patience = 3;
 
-        await this.model.fit([xsIndices, xsFeatures], ys, {
+        await this.model.fit([xsIndices, xsFeatures, xsTextTokens], ys, {
             epochs: epochs || 10,
             batchSize: 64, // Increased from 32 for faster training
             validationSplit: 0.1,
@@ -112,16 +152,19 @@ module.exports = class DeckModel {
 
         xsIndices.dispose();
         xsFeatures.dispose();
+        xsTextTokens.dispose();
         ys.dispose();
     }
 
-    prepareData(sequences, featureSequences) {
+    prepareData(sequences, featureSequences, textSequences) {
         const xsIndices = [];
         const xsFeatures = [];
+        const xsTextTokens = []; // NEW
         const ys = [];
 
         sequences.forEach((seq, seqIdx) => {
             const featSeq = featureSequences[seqIdx];
+            const textSeq = textSequences[seqIdx]; // NEW
 
             // Limit max examples per deck to avoid browser hang - NOT NEEDED IN NODE but kept for consistency/speed
             const step = Math.max(1, Math.floor(seq.length / 10));
@@ -129,6 +172,7 @@ module.exports = class DeckModel {
             for (let i = 1; i < seq.length; i += step) {
                 const inputSeqIndices = seq.slice(0, i);
                 const inputSeqFeatures = featSeq.slice(0, i);
+                const inputSeqTextTokens = textSeq.slice(0, i); // NEW
                 const target = seq[i];
 
                 // Pad input sequence indices
@@ -149,8 +193,19 @@ module.exports = class DeckModel {
                     paddedFeatures[startIdx + j] = inputSeqFeatures[j];
                 }
 
+                // Pad input sequence text tokens (NEW)
+                const paddedTextTokens = [];
+                for (let k = 0; k < this.maxLen; k++) {
+                    paddedTextTokens.push(Array(this.maxTextTokens).fill(0)); // Pad with token 0
+                }
+
+                for (let j = 0; j < Math.min(inputSeqTextTokens.length, this.maxLen); j++) {
+                    paddedTextTokens[startIdx + j] = inputSeqTextTokens[j];
+                }
+
                 xsIndices.push(paddedIndices);
                 xsFeatures.push(paddedFeatures);
+                xsTextTokens.push(paddedTextTokens); // NEW
                 ys.push(target);
             }
         });
@@ -158,6 +213,7 @@ module.exports = class DeckModel {
         return {
             xsIndices: tf.tensor2d(xsIndices, [xsIndices.length, this.maxLen]),
             xsFeatures: tf.tensor3d(xsFeatures, [xsFeatures.length, this.maxLen, this.featureDim]),
+            xsTextTokens: tf.tensor3d(xsTextTokens, [xsTextTokens.length, this.maxLen, this.maxTextTokens]), // NEW
             ys: tf.tensor1d(ys)
         };
     }
