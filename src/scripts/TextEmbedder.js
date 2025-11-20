@@ -7,7 +7,7 @@ export default class TextEmbedder {
         this.tokenToIndex = { '<PAD>': 0, '<UNK>': 1 }; // Reserve 0 for padding, 1 for unknown
         this.indexToToken = { 0: '<PAD>', 1: '<UNK>' };
         this.vocabularySize = 2;
-        this.maxTextTokens = 20; // Max tokens per card
+        this.maxTextTokens = 30; // Max tokens per card (increased from 20)
         this.allCardNames = []; // Store all card names for text parsing
     }
 
@@ -25,6 +25,25 @@ export default class TextEmbedder {
     }
 
     /**
+     * Clean text by removing unwanted symbols and expanding abbreviations
+     * @param {string} text - Input text
+     * @returns {string} Cleaned text
+     */
+    cleanText(text) {
+        if (!text) return '';
+        let cleaned = text.toLowerCase();
+
+        // Expand abbreviations
+        cleaned = cleaned.replace(/\{e\}/g, ' exert ');
+
+        // Remove all characters except alphanumeric, spaces, +, {, }
+        // This removes ., ,, ", ', -, etc.
+        cleaned = cleaned.replace(/[^a-z0-9\s+\{\}]/g, '');
+
+        return cleaned.trim();
+    }
+
+    /**
      * Extract tokens from card text, identifying card names as single tokens
      * @param {string} text - Card text to parse
      * @param {Array} cardNames - All card names in the game
@@ -32,7 +51,8 @@ export default class TextEmbedder {
      */
     extractTextTokens(text, cardNames) {
         const tokens = [];
-        let remainingText = text.toLowerCase();
+        // Clean text first to ensure it matches normalized card names
+        let remainingText = this.cleanText(text);
 
         // First, find and extract card name references
         cardNames.forEach(cardName => {
@@ -47,7 +67,7 @@ export default class TextEmbedder {
         const words = remainingText
             .split(/\s+/)
             .map(w => w.trim())
-            .filter(w => w.length > 2); // Filter out very short words
+            .filter(w => w.length > 2 || w === '+' || w === '{' || w === '}'); // Keep special symbols even if short
 
         tokens.push(...words);
 
@@ -63,7 +83,7 @@ export default class TextEmbedder {
         const tokens = [];
 
         // 1. Card name
-        const cardName = card.name.toLowerCase().trim();
+        const cardName = this.cleanText(card.name);
         if (cardName && this.tokenToIndex[cardName] !== undefined) {
             tokens.push(this.tokenToIndex[cardName]);
         }
@@ -71,7 +91,7 @@ export default class TextEmbedder {
         // 2. Keywords
         if (card.keywords && Array.isArray(card.keywords)) {
             card.keywords.forEach(kw => {
-                const token = kw.toLowerCase().trim();
+                const token = this.cleanText(kw);
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
                 tokens.push(idx);
             });
@@ -79,7 +99,7 @@ export default class TextEmbedder {
 
         // 3. Ink colors
         if (card.ink) {
-            const token = card.ink.toLowerCase();
+            const token = this.cleanText(card.ink);
             const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
             tokens.push(idx);
         }
@@ -87,7 +107,23 @@ export default class TextEmbedder {
         // 4. Classifications
         if (card.classifications && Array.isArray(card.classifications)) {
             card.classifications.forEach(cls => {
-                const token = cls.toLowerCase().trim();
+                const token = this.cleanText(cls);
+                const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
+                tokens.push(idx);
+            });
+        }
+
+        // 5. Types
+        if (card.types && Array.isArray(card.types)) {
+            card.types.forEach(type => {
+                const token = this.cleanText(type);
+                const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
+                tokens.push(idx);
+            });
+        } else if (card.type && Array.isArray(card.type)) {
+            // Handle potential property name difference (type vs types)
+            card.type.forEach(type => {
+                const token = this.cleanText(type);
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
                 tokens.push(idx);
             });

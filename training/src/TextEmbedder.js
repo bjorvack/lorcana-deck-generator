@@ -10,7 +10,7 @@ module.exports = class TextEmbedder {
         this.tokenToIndex = { '<PAD>': 0, '<UNK>': 1 }; // Reserve 0 for padding, 1 for unknown
         this.indexToToken = { 0: '<PAD>', 1: '<UNK>' };
         this.vocabularySize = 2;
-        this.maxTextTokens = 20; // Max tokens per card
+        this.maxTextTokens = 30; // Max tokens per card (increased from 20)
         this.allCardNames = []; // Store all card names for text parsing
     }
 
@@ -22,12 +22,13 @@ module.exports = class TextEmbedder {
         const tokenSet = new Set();
 
         // First pass: collect all card names for later text parsing
-        this.allCardNames = cards.map(card => card.name.toLowerCase());
+        // Normalize names to handle apostrophe differences etc.
+        this.allCardNames = cards.map(card => this.cleanText(card.name)).filter(name => name.length > 0);
 
         // Second pass: extract all tokens
         cards.forEach(card => {
             // 1. Card name as single token (multi-word)
-            const cardName = card.name.toLowerCase().trim();
+            const cardName = this.cleanText(card.name);
             if (cardName) {
                 tokenSet.add(cardName);
             }
@@ -35,25 +36,39 @@ module.exports = class TextEmbedder {
             // 2. Keywords (individual tokens)
             if (card.keywords && Array.isArray(card.keywords)) {
                 card.keywords.forEach(kw => {
-                    const token = kw.toLowerCase().trim();
+                    const token = this.cleanText(kw);
                     if (token) tokenSet.add(token);
                 });
             }
 
             // 3. Ink colors (individual tokens)
             if (card.ink) {
-                tokenSet.add(card.ink.toLowerCase());
+                tokenSet.add(this.cleanText(card.ink));
             }
             if (card.inks && Array.isArray(card.inks)) {
                 card.inks.forEach(ink => {
-                    if (ink) tokenSet.add(ink.toLowerCase());
+                    if (ink) tokenSet.add(this.cleanText(ink));
                 });
             }
 
             // 4. Classifications (individual tokens)
             if (card.classifications && Array.isArray(card.classifications)) {
                 card.classifications.forEach(cls => {
-                    const token = cls.toLowerCase().trim();
+                    const token = this.cleanText(cls);
+                    if (token) tokenSet.add(token);
+                });
+            }
+
+            // 5. Types (individual tokens) - NEW
+            if (card.types && Array.isArray(card.types)) {
+                card.types.forEach(type => {
+                    const token = this.cleanText(type);
+                    if (token) tokenSet.add(token);
+                });
+            } else if (card.type && Array.isArray(card.type)) {
+                // Handle potential property name difference (type vs types)
+                card.type.forEach(type => {
+                    const token = this.cleanText(type);
                     if (token) tokenSet.add(token);
                 });
             }
@@ -80,6 +95,25 @@ module.exports = class TextEmbedder {
     }
 
     /**
+     * Clean text by removing unwanted symbols and expanding abbreviations
+     * @param {string} text - Input text
+     * @returns {string} Cleaned text
+     */
+    cleanText(text) {
+        if (!text) return '';
+        let cleaned = text.toLowerCase();
+
+        // Expand abbreviations
+        cleaned = cleaned.replace(/\{e\}/g, ' exert ');
+
+        // Remove all characters except alphanumeric, spaces, +, {, }
+        // This removes ., ,, ", ', -, etc.
+        cleaned = cleaned.replace(/[^a-z0-9\s+\{\}]/g, '');
+
+        return cleaned.trim();
+    }
+
+    /**
      * Extract tokens from card text, identifying card names as single tokens
      * @param {string} text - Card text to parse
      * @param {Array} cardNames - All card names in the game
@@ -87,7 +121,8 @@ module.exports = class TextEmbedder {
      */
     extractTextTokens(text, cardNames) {
         const tokens = [];
-        let remainingText = text.toLowerCase();
+        // Clean text first to ensure it matches normalized card names
+        let remainingText = this.cleanText(text);
 
         // First, find and extract card name references
         cardNames.forEach(cardName => {
@@ -102,7 +137,7 @@ module.exports = class TextEmbedder {
         const words = remainingText
             .split(/\s+/)
             .map(w => w.trim())
-            .filter(w => w.length > 2); // Filter out very short words
+            .filter(w => w.length > 2 || w === '+' || w === '{' || w === '}'); // Keep special symbols even if short
 
         tokens.push(...words);
 
@@ -118,7 +153,7 @@ module.exports = class TextEmbedder {
         const tokens = [];
 
         // 1. Card name
-        const cardName = card.name.toLowerCase().trim();
+        const cardName = this.cleanText(card.name);
         if (cardName && this.tokenToIndex[cardName] !== undefined) {
             tokens.push(this.tokenToIndex[cardName]);
         }
@@ -126,7 +161,7 @@ module.exports = class TextEmbedder {
         // 2. Keywords
         if (card.keywords && Array.isArray(card.keywords)) {
             card.keywords.forEach(kw => {
-                const token = kw.toLowerCase().trim();
+                const token = this.cleanText(kw);
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
                 tokens.push(idx);
             });
@@ -134,7 +169,7 @@ module.exports = class TextEmbedder {
 
         // 3. Ink colors
         if (card.ink) {
-            const token = card.ink.toLowerCase();
+            const token = this.cleanText(card.ink);
             const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
             tokens.push(idx);
         }
@@ -142,7 +177,23 @@ module.exports = class TextEmbedder {
         // 4. Classifications
         if (card.classifications && Array.isArray(card.classifications)) {
             card.classifications.forEach(cls => {
-                const token = cls.toLowerCase().trim();
+                const token = this.cleanText(cls);
+                const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
+                tokens.push(idx);
+            });
+        }
+
+        // 5. Types
+        if (card.types && Array.isArray(card.types)) {
+            card.types.forEach(type => {
+                const token = this.cleanText(type);
+                const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
+                tokens.push(idx);
+            });
+        } else if (card.type && Array.isArray(card.type)) {
+            // Handle potential property name difference (type vs types)
+            card.type.forEach(type => {
+                const token = this.cleanText(type);
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
                 tokens.push(idx);
             });

@@ -76,11 +76,8 @@ export default class CardSelector {
             filteredCards.sort(this.options.sort);
         }
 
-        // Limit to top 50 to prevent performance issues if no filter
-        const displayCards = filteredCards.slice(0, 50);
-
         this.cardList.innerHTML = '';
-        displayCards.forEach(card => {
+        filteredCards.forEach(card => {
             const cardContainer = document.createElement('div');
             cardContainer.dataset.role = 'card-container';
 
