@@ -16,6 +16,7 @@ module.exports = class TrainingManager {
         this.trainingDataPath = path.join(__dirname, '..', '..', 'training_data');
         this.trainingStatePath = path.join(this.trainingDataPath, 'training-state.json');
         this.trainingState = null;
+        this.loadedFiles = []; // Track files loaded in the current training session
     }
 
     log(message) {
@@ -31,7 +32,11 @@ module.exports = class TrainingManager {
         if (fullRetrain) {
             this.log('Full retrain requested - clearing training state...');
             this.trainingState = this.getInitialTrainingState();
+            this.trainingData = []; // Clear any previously cached data
         }
+
+        // Reset loadedFiles for this session
+        this.loadedFiles = [];
 
         // 1. Fetch Cards
         if (this.cards.length === 0) {
@@ -40,7 +45,7 @@ module.exports = class TrainingManager {
             this.log(`Fetched ${this.cards.length} cards.`);
 
             // Build Card Maps
-            this.cards.forEach((card, index) => {
+            this.cards.forEach((card) => {
                 const key = this.getCardKey(card.name, card.version);
                 if (!this.cardMap.has(key)) {
                     const id = this.cardMap.size;
@@ -59,49 +64,49 @@ module.exports = class TrainingManager {
             this.log('Cards already loaded.');
         }
 
-        // 2. Load Training Data
-        if (this.trainingData.length === 0) {
-            this.log('Loading training data...');
+        // 2. Load Training Data (always attempt to load new files)
+        this.log('Scanning for training data files...');
+        try {
+            const manifestPath = path.join(this.trainingDataPath, 'manifest.json');
+            if (!fs.existsSync(manifestPath)) {
+                throw new Error(`Manifest not found at ${manifestPath}`);
+            }
+            const allFiles = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
-            try {
-                const manifestPath = path.join(this.trainingDataPath, 'manifest.json');
-                if (!fs.existsSync(manifestPath)) {
-                    throw new Error(`Manifest not found at ${manifestPath}`);
-                }
-                const allFiles = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+            // Determine which files are new this session
+            const filesToTrain = fullRetrain
+                ? allFiles
+                : allFiles.filter(file => !this.trainingState.trainedFiles.includes(file));
 
-                // Filter files based on training state
-                const filesToTrain = fullRetrain
-                    ? allFiles
-                    : allFiles.filter(file => !this.trainingState.trainedFiles.includes(file));
+            this.log(`Total files in manifest: ${allFiles.length}`);
+            this.log(`Already trained files: ${this.trainingState.trainedFiles.length}`);
+            this.log(`New files to train on this session: ${filesToTrain.length}`);
 
-                this.log(`Total files in manifest: ${allFiles.length}`);
-                this.log(`Already trained files: ${this.trainingState.trainedFiles.length}`);
-                this.log(`New files to train on: ${filesToTrain.length}`);
-
-                if (filesToTrain.length === 0) {
-                    this.log('No new files to train on. All files have been processed.');
-                    return;
-                }
-
+            if (filesToTrain.length === 0) {
+                this.log('No new files to train on. All files have been processed.');
+            } else {
                 for (const file of filesToTrain) {
                     this.log(`Loading ${file}...`);
                     const filePath = path.join(this.trainingDataPath, file);
                     if (fs.existsSync(filePath)) {
                         const rawData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
                         this.log(`Loaded tournament: ${rawData.name}`);
-                        this.trainingData.push(rawData);
+                        this.trainingData.push(rawData); // Append new data (won't duplicate raw objects)
+                        this.loadedFiles.push(file); // Track the actual filename
                     } else {
                         this.log(`Warning: File ${file} not found.`);
                     }
                 }
-            } catch (e) {
-                this.log(`Error loading training data: ${e.message}`);
-                console.error(e);
-                return;
             }
-        } else {
-            this.log('Training data already loaded.');
+        } catch (e) {
+            this.log(`Error loading training data: ${e.message}`);
+            console.error(e);
+            return;
+        }
+
+        if (this.loadedFiles.length === 0) {
+            this.log('No new data loaded; skipping training run.');
+            return;
         }
 
         // 3. Process Decks
@@ -112,7 +117,7 @@ module.exports = class TrainingManager {
 
         let processedDecks = 0;
 
-        for (const rawData of this.trainingData) {
+        for (const rawData of this.trainingData.slice(-this.loadedFiles.length)) { // Only process newly loaded tournaments
             for (const deck of rawData.decks) {
                 const deckIndices = [];
 
@@ -167,7 +172,7 @@ module.exports = class TrainingManager {
             }
         }
 
-        this.log(`Generated ${sequences.length} sequences from ${processedDecks} decks.`);
+        this.log(`Generated ${sequences.length} sequences from ${processedDecks} newly loaded decks.`);
 
         // 4. Train Model
         if (!this.model.model) {
@@ -223,20 +228,8 @@ module.exports = class TrainingManager {
 
     updateTrainingState(epochs) {
         const now = new Date().toISOString();
-        const newFiles = this.trainingData.map(td => {
-            // Extract filename from tournament data
-            // We need to reconstruct it from the manifest
-            const manifestPath = path.join(this.trainingDataPath, 'manifest.json');
-            const allFiles = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-            return allFiles.find(f => {
-                const filePath = path.join(this.trainingDataPath, f);
-                if (fs.existsSync(filePath)) {
-                    const rawData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-                    return rawData.name === td.name && rawData.url === td.url;
-                }
-                return false;
-            });
-        }).filter(f => f && !this.trainingState.trainedFiles.includes(f));
+        // Use loadedFiles directly; they are the actual filenames for new data this session
+        const newFiles = this.loadedFiles.filter(f => !this.trainingState.trainedFiles.includes(f));
 
         // Add new files to trained files list
         this.trainingState.trainedFiles.push(...newFiles);
@@ -252,7 +245,7 @@ module.exports = class TrainingManager {
         this.trainingState.lastTrainingDate = now;
         this.trainingState.totalTrainings++;
 
-        this.log(`Updated training state: ${newFiles.length} new files added`);
+        this.log(`Updated training state: ${newFiles.length} new files added (session files: ${this.loadedFiles.length}).`);
     }
 
     saveTrainingState() {
@@ -322,91 +315,61 @@ module.exports = class TrainingManager {
         const features = [];
 
         // --- Static Features ---
+        features.push(Math.min(card.cost, 10) / 10); // Cost
+        features.push(card.inkwell ? 1 : 0); // Inkwell
+        features.push(Math.min(card.lore || 0, 5) / 5); // Lore
+        features.push(Math.min(card.strength || 0, 10) / 10); // Strength
+        features.push(Math.min(card.willpower || 0, 10) / 10); // Willpower
 
-        // 1. Cost (Normalized 0-10 -> 0-1)
-        features.push(Math.min(card.cost, 10) / 10);
-
-        // 2. Inkwell (0 or 1)
-        features.push(card.inkwell ? 1 : 0);
-
-        // 3. Lore (Normalized 0-5)
-        features.push(Math.min(card.lore || 0, 5) / 5);
-
-        // 4. Strength (Normalized 0-10)
-        features.push(Math.min(card.strength || 0, 10) / 10);
-
-        // 5. Willpower (Normalized 0-10)
-        features.push(Math.min(card.willpower || 0, 10) / 10);
-
-        // 6. Inks (One-hot)
+        // Inks (One-hot)
         const inkColors = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
         inkColors.forEach(ink => {
             features.push(card.ink === ink ? 1 : 0);
         });
 
-        // 7. Types (One-hot)
+        // Types (One-hot)
         const types = ['Character', 'Action', 'Item', 'Location'];
         const cardType = (card.types && card.types.length > 0) ? card.types[0] : '';
         types.forEach(type => {
             features.push(cardType === type ? 1 : 0);
         });
 
-        // 8. Keyword Booleans (10 features)
+        // Keyword Booleans
         const keywords = ['Bodyguard', 'Reckless', 'Rush', 'Ward', 'Evasive', 'Resist', 'Challenger', 'Singer', 'Shift', 'Boost'];
         keywords.forEach(kw => {
             const propName = `has${kw}`;
             if (card[propName] !== undefined) {
                 features.push(card[propName] ? 1 : 0);
             } else {
-                // Fallback to checking keywords array
                 const hasKw = card.keywords && card.keywords.some(k => k.includes(kw));
                 features.push(hasKw ? 1 : 0);
             }
         });
 
-        // 9. Keyword Amounts (3 features)
-        features.push(Math.min(card.resistAmount || 0, 10) / 10);      // Resist +X
-        features.push(Math.min(card.challengerAmount || 0, 10) / 10);  // Challenger +X
-        features.push(Math.min(card.boostAmount || 0, 10) / 10);       // Boost +X
+        // Keyword Amounts
+        features.push(Math.min(card.resistAmount || 0, 10) / 10);
+        features.push(Math.min(card.challengerAmount || 0, 10) / 10);
+        features.push(Math.min(card.boostAmount || 0, 10) / 10);
 
-        // 10. Move Cost (1 feature)
+        // Move Cost
         features.push(Math.min(card.moveCost || 0, 10) / 10);
 
-        // 11. Classifications (5 features) - Common card classifications
+        // Classifications
         const commonClassifications = ['Hero', 'Villain', 'Dreamborn', 'Storyborn', 'Floodborn'];
         commonClassifications.forEach(cls => {
             features.push(card.classifications && card.classifications.includes(cls) ? 1 : 0);
         });
 
-        // 12. Copies of this card so far (NEW FEATURE)
+        // Copies so far
         features.push(Math.min(copiesSoFar, 4) / 4);
 
-        // --- Dynamic Features (Deck Composition) ---
+        // Dynamic features
         const total = Math.max(1, stats.totalCards);
-
-        // 13. Inkable Fraction
-        features.push(stats.inkableCount / total);
-
-        // 14. Cost Curve (Fractions) - 10 costs
-        stats.costCounts.forEach(count => {
-            features.push(count / total);
-        });
-
-        // 15. Type Distribution (Fractions)
-        Object.values(stats.typeCounts).forEach(count => {
-            features.push(count / total);
-        });
-
-        // 16. Ink Color Distribution (Fractions)
-        const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
-        inks.forEach(ink => {
-            features.push((stats.inkCounts[ink] || 0) / total);
-        });
-
-        // 17. Inkable Cost Curve (Fractions) - 10 costs
-        stats.inkableCostCounts.forEach(count => {
-            features.push(count / total);
-        });
+        features.push(stats.inkableCount / total); // Inkable fraction
+        stats.costCounts.forEach(count => { features.push(count / total); }); // Cost curve
+        Object.values(stats.typeCounts).forEach(count => { features.push(count / total); }); // Type distribution
+        inkColors.forEach(ink => { features.push((stats.inkCounts[ink] || 0) / total); }); // Ink color distribution
+        stats.inkableCostCounts.forEach(count => { features.push(count / total); }); // Inkable cost curve
 
         return features;
     }
@@ -419,7 +382,6 @@ module.exports = class TrainingManager {
     }
 
     getCardKey(name, version) {
-        // Normalize key
         return `${name}|${version || ''}`.toLowerCase();
     }
-}
+};
