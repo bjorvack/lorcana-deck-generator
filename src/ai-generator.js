@@ -1,5 +1,5 @@
 import './styles.css';
-import TrainingManager from './scripts/TrainingManager';
+import ModelManager from './scripts/ModelManager';
 import Chart from './scripts/Chart';
 import CardSelector from './scripts/CardSelector';
 import DeckRenderer from './scripts/DeckRenderer';
@@ -7,7 +7,7 @@ import InkSelector from './scripts/InkSelector';
 import CardPreview from './scripts/CardPreview';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const manager = new TrainingManager();
+    const manager = new ModelManager();
 
     // UI Elements
     const generateDeckBtn = document.getElementById('generate-deck-btn');
@@ -73,23 +73,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         console.log('Loading AI model...');
 
-        // Fetch cards
-        if (manager.cards.length === 0) {
-            await manager.cardApi.getCards().then(cards => {
-                manager.cards = cards;
-                // Also init maps
-                manager.cards.forEach((card, index) => {
-                    const key = manager.getCardKey(card.name, card.version);
-                    if (!manager.cardMap.has(key)) {
-                        const id = manager.cardMap.size;
-                        manager.cardMap.set(key, id);
-                        manager.indexMap.set(id, card);
-                    }
-                });
-            });
-        }
+        // Load the model from training_data (this also loads cards)
+        await manager.loadModel('training_data/deck-generator-model.json');
+        console.log('Model loaded successfully!');
 
-        // Initialize card selector
+        // Initialize card selector after cards are loaded
         cardSelector = new CardSelector(
             manager.cards,
             document.querySelector('[data-role=card-select]'),
@@ -112,10 +100,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             }
         );
-
-        // Load the model from training_data
-        await manager.model.loadModel('training_data/deck-generator-model.json');
-        console.log('Model loaded successfully!');
 
         // Enable the generate button
         generateDeckBtn.disabled = false;
