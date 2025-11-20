@@ -4,11 +4,28 @@ const TrainingManager = require('./src/TrainingManager');
     try {
         const manager = new TrainingManager();
 
-        // Get epochs from command line arg or default to 10
-        const epochs = process.argv[2] ? parseInt(process.argv[2]) : 10;
+        // Parse command line arguments
+        const args = process.argv.slice(2);
+        let epochs = 10;
+        let fullRetrain = false;
 
-        console.log('Initializing training...');
-        await manager.startTraining(epochs);
+        for (const arg of args) {
+            if (arg === '--full') {
+                fullRetrain = true;
+            } else if (!isNaN(parseInt(arg))) {
+                epochs = parseInt(arg);
+            }
+        }
+
+        console.log('='.repeat(50));
+        console.log('Lorcana Deck Generator - Training');
+        console.log('='.repeat(50));
+        console.log(`Epochs: ${epochs}`);
+        console.log(`Mode: ${fullRetrain ? 'Full Retrain' : 'Incremental Training'}`);
+        console.log('='.repeat(50));
+        console.log('');
+
+        await manager.startTraining(epochs, fullRetrain);
 
     } catch (error) {
         console.error('Training failed:', error);

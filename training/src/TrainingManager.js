@@ -12,14 +12,24 @@ module.exports = class TrainingManager {
         this.indexMap = new Map(); // Index -> Name
         this.trainingData = [];
         this.trainingDataPath = path.join(__dirname, '..', '..', 'training_data');
+        this.trainingStatePath = path.join(this.trainingDataPath, 'training-state.json');
+        this.trainingState = null;
     }
 
     log(message) {
         console.log(`[${new Date().toLocaleTimeString()}] ${message}`);
     }
 
-    async startTraining(epochs = 10) {
+    async startTraining(epochs = 10, fullRetrain = false) {
         this.log(`Starting training process with ${epochs} epochs...`);
+        this.log(`Mode: ${fullRetrain ? 'Full retrain' : 'Incremental training'}`);
+
+        // Load training state
+        this.loadTrainingState();
+        if (fullRetrain) {
+            this.log('Full retrain requested - clearing training state...');
+            this.trainingState = this.getInitialTrainingState();
+        }
 
         // 1. Fetch Cards
         if (this.cards.length === 0) {
@@ -50,9 +60,23 @@ module.exports = class TrainingManager {
                 if (!fs.existsSync(manifestPath)) {
                     throw new Error(`Manifest not found at ${manifestPath}`);
                 }
-                const files = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+                const allFiles = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
-                for (const file of files) {
+                // Filter files based on training state
+                const filesToTrain = fullRetrain
+                    ? allFiles
+                    : allFiles.filter(file => !this.trainingState.trainedFiles.includes(file));
+
+                this.log(`Total files in manifest: ${allFiles.length}`);
+                this.log(`Already trained files: ${this.trainingState.trainedFiles.length}`);
+                this.log(`New files to train on: ${filesToTrain.length}`);
+
+                if (filesToTrain.length === 0) {
+                    this.log('No new files to train on. All files have been processed.');
+                    return;
+                }
+
+                for (const file of filesToTrain) {
                     this.log(`Loading ${file}...`);
                     const filePath = path.join(this.trainingDataPath, file);
                     if (fs.existsSync(filePath)) {
@@ -142,6 +166,77 @@ module.exports = class TrainingManager {
 
         this.log('Training complete!');
         await this.saveModel();
+
+        // Update training state
+        this.updateTrainingState(epochs);
+        this.saveTrainingState();
+    }
+
+    getInitialTrainingState() {
+        return {
+            lastTrainingDate: null,
+            totalTrainings: 0,
+            trainedFiles: [],
+            trainingHistory: []
+        };
+    }
+
+    loadTrainingState() {
+        if (fs.existsSync(this.trainingStatePath)) {
+            try {
+                this.trainingState = JSON.parse(fs.readFileSync(this.trainingStatePath, 'utf8'));
+                this.log(`Loaded training state: ${this.trainingState.trainedFiles.length} files previously trained`);
+            } catch (e) {
+                this.log(`Warning: Could not load training state: ${e.message}`);
+                this.trainingState = this.getInitialTrainingState();
+            }
+        } else {
+            this.log('No existing training state found. Starting fresh.');
+            this.trainingState = this.getInitialTrainingState();
+        }
+    }
+
+    updateTrainingState(epochs) {
+        const now = new Date().toISOString();
+        const newFiles = this.trainingData.map(td => {
+            // Extract filename from tournament data
+            // We need to reconstruct it from the manifest
+            const manifestPath = path.join(this.trainingDataPath, 'manifest.json');
+            const allFiles = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+            return allFiles.find(f => {
+                const filePath = path.join(this.trainingDataPath, f);
+                if (fs.existsSync(filePath)) {
+                    const rawData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                    return rawData.name === td.name && rawData.url === td.url;
+                }
+                return false;
+            });
+        }).filter(f => f && !this.trainingState.trainedFiles.includes(f));
+
+        // Add new files to trained files list
+        this.trainingState.trainedFiles.push(...newFiles);
+
+        // Update training history
+        this.trainingState.trainingHistory.push({
+            date: now,
+            epochs: epochs,
+            newFiles: newFiles.length,
+            totalFiles: this.trainingState.trainedFiles.length
+        });
+
+        this.trainingState.lastTrainingDate = now;
+        this.trainingState.totalTrainings++;
+
+        this.log(`Updated training state: ${newFiles.length} new files added`);
+    }
+
+    saveTrainingState() {
+        try {
+            fs.writeFileSync(this.trainingStatePath, JSON.stringify(this.trainingState, null, 2));
+            this.log(`Training state saved to ${this.trainingStatePath}`);
+        } catch (e) {
+            this.log(`Error saving training state: ${e.message}`);
+        }
     }
 
     getInitialDeckStats() {

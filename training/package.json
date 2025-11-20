@@ -4,7 +4,7 @@
     "description": "Scraper for InkDecks tournaments and Training Logic",
     "main": "scrape.js",
     "scripts": {
-        "start": "node scrape.js",
+        "scrape": "node scrape.js",
         "train": "node train.js",
         "postinstall": "node scripts/patch-tfjs-node.js"
     },
