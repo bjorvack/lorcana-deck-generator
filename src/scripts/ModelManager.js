@@ -103,10 +103,6 @@ export default class ModelManager {
             }
         });
 
-        if (indices.length === 0) {
-            return "No matching cards found in input.";
-        }
-
         // Count current card amounts and identify ink colors
         const cardCounts = new Map();
         const currentInks = new Set();
