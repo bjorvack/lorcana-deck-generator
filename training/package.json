@@ -1,0 +1,17 @@
+{
+    "name": "inkdecks-scraper",
+    "version": "1.0.0",
+    "description": "Scraper for InkDecks tournaments and Training Logic",
+    "main": "scrape.js",
+    "scripts": {
+        "start": "node scrape.js",
+        "train": "node train.js",
+        "postinstall": "node scripts/patch-tfjs-node.js"
+    },
+    "dependencies": {
+        "@tensorflow/tfjs-node": "^4.22.0",
+        "puppeteer": "^23.0.0",
+        "puppeteer-extra": "^3.3.6",
+        "puppeteer-extra-plugin-stealth": "^2.11.2"
+    }
+}
