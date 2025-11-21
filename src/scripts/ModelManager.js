@@ -117,14 +117,20 @@ export default class ModelManager {
 
         const probabilities = await this.model.predict(indices, features, textIndices);
 
-        // Calculate adaptive temperature based on deck size
+        // 1. (Removed) Repetition Penalty
+        // User feedback: Decks need up to 4 copies, so penalizing repetition is counter-productive for constructed decks.
+        // const penalizedProbabilities = this.applyRepetitionPenalty(probabilities, indices, 1.5);
+        const penalizedProbabilities = probabilities; // Pass through without penalty
+
+        // 2. Calculate adaptive temperature based on deck size
         const temperature = this.getAdaptiveTemperature(indices.length);
 
-        // Sample with temperature for exploration/exploitation balance
-        const sampledIndex = this.sampleWithTemperature(probabilities, temperature);
+        // 3. Sample using Top-P (Nucleus) Sampling with Temperature
+        // This combines temperature scaling and dynamic truncation of the tail
+        const sampledIndex = this.sampleTopP(penalizedProbabilities, temperature, 0.9);
 
         // Create array of candidate indices, starting with sampled one, then sorted by probability
-        const sortedPredictions = Array.from(probabilities)
+        const sortedPredictions = Array.from(penalizedProbabilities)
             .map((prob, index) => ({ index, prob }))
             .sort((a, b) => b.prob - a.prob);
 
@@ -182,41 +188,64 @@ export default class ModelManager {
      */
     getAdaptiveTemperature(deckSize) {
         if (deckSize <= 10) {
-            return 2.5; // High exploration for early deck building
+            return 2.0; // Slightly lower than before to balance with Top-P
         } else if (deckSize <= 40) {
             return 1.0; // Balanced
         } else {
-            return 0.7; // Low exploration, focus on completing deck
+            return 0.8; // Low exploration, focus on completing deck
         }
     }
 
     /**
-     * Sample from probability distribution using temperature scaling
-     * Higher temperature = more exploration (flatter distribution)
-     * Lower temperature = more exploitation (peaked distribution)
+     * Sample using Top-P (Nucleus) Sampling
+     * 1. Apply temperature
+     * 2. Sort probabilities
+     * 3. Take top P mass
+     * 4. Sample from that subset
      */
-    sampleWithTemperature(probabilities, temperature = 1.0) {
-        // Apply temperature scaling: p_i^(1/T)
-        const scaledProbs = Array.from(probabilities).map(p =>
-            Math.pow(Math.max(p, 1e-10), 1 / temperature)
-        );
+    sampleTopP(probabilities, temperature = 1.0, topP = 0.9) {
+        // 1. Apply temperature scaling
+        const scaledProbs = Array.from(probabilities).map((p, i) => ({
+            prob: Math.pow(Math.max(p, 1e-10), 1 / temperature),
+            index: i
+        }));
 
-        // Normalize to sum to 1
-        const sum = scaledProbs.reduce((a, b) => a + b, 0);
-        const normalized = scaledProbs.map(p => p / sum);
+        // Normalize scaled probs
+        const sum = scaledProbs.reduce((a, b) => a + b.prob, 0);
+        scaledProbs.forEach(p => p.prob /= sum);
 
-        // Sample from the distribution
-        const rand = Math.random();
-        let cumSum = 0;
-        for (let i = 0; i < normalized.length; i++) {
-            cumSum += normalized[i];
-            if (rand < cumSum) {
-                return i;
+        // 2. Sort by probability descending
+        scaledProbs.sort((a, b) => b.prob - a.prob);
+
+        // 3. Cumulative sum and cutoff
+        let cumulativeProb = 0;
+        const candidates = [];
+
+        for (const item of scaledProbs) {
+            cumulativeProb += item.prob;
+            candidates.push(item);
+            if (cumulativeProb >= topP) {
+                break;
             }
         }
 
-        // Fallback to last index (shouldn't happen)
-        return normalized.length - 1;
+        // Ensure we have at least one candidate
+        if (candidates.length === 0) candidates.push(scaledProbs[0]);
+
+        // 4. Sample from candidates
+        // Renormalize candidate probabilities
+        const candidateSum = candidates.reduce((a, b) => a + b.prob, 0);
+        const rand = Math.random() * candidateSum;
+
+        let currentSum = 0;
+        for (const item of candidates) {
+            currentSum += item.prob;
+            if (rand <= currentSum) {
+                return item.index;
+            }
+        }
+
+        return candidates[candidates.length - 1].index;
     }
 
     getInitialDeckStats() {
