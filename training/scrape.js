@@ -6,9 +6,16 @@ const path = require('path');
 puppeteer.use(StealthPlugin());
 
 (async () => {
+    const args = process.argv.slice(2);
+    const isDev = args.includes('--dev');
+
     console.log('Launching browser...');
     const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
+
+    // Set a large viewport and User Agent to ensure desktop layout
+    await page.setViewport({ width: 1920, height: 1080 });
+    await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36');
 
     try {
         console.log('Fetching and processing all tournaments...');
@@ -37,15 +44,35 @@ puppeteer.use(StealthPlugin());
                         // Find the parent row to extract the date
                         let dateStr = null;
                         let row = a.closest('tr');
+                        let debugCells = [];
+
                         if (row) {
                             // Look for date in table cells - typically in format like "Nov 20, 2025" or similar
                             const cells = Array.from(row.querySelectorAll('td'));
+                            debugCells = cells.map(c => c.innerText.trim());
+
                             for (const cell of cells) {
                                 const text = cell.innerText.trim();
-                                // Match common date patterns: "Nov 20, 2025", "2025-11-20", etc.
-                                if (/\w+\s+\d{1,2},\s+\d{4}|\d{4}-\d{2}-\d{2}|\d{1,2}\/\d{1,2}\/\d{4}/.test(text)) {
+                                // Match common date patterns:
+                                // 1. YYYY-MM-DD (2025-11-20)
+                                // 2. MMM D, YYYY (Nov 20, 2025)
+                                // 3. MM/DD/YYYY (11/20/2025)
+                                // 4. MMM-DD (Nov-16) - Fallback for mobile view, might need year inference
+                                if (/\b\d{4}-\d{2}-\d{2}\b/.test(text) ||
+                                    /\b\w{3}\s+\d{1,2},\s+\d{4}\b/.test(text) ||
+                                    /\b\d{1,2}\/\d{1,2}\/\d{4}\b/.test(text)) {
                                     dateStr = text;
                                     break;
+                                }
+                                // Fallback for "Nov-16" style
+                                if (/\b[A-Z][a-z]{2}-\d{1,2}\b/.test(text)) {
+                                    const match = text.match(/\b([A-Z][a-z]{2})-(\d{1,2})\b/);
+                                    if (match) {
+                                        // Assume current year or 2025 if not found.
+                                        // Ideally we want the full date, but this is a fallback.
+                                        // We'll try to construct a date string.
+                                        dateStr = `${match[1]} ${match[2]}, 2025`; // Hardcoded 2025 as safe bet for now given the context
+                                    }
                                 }
                             }
                         }
@@ -53,7 +80,8 @@ puppeteer.use(StealthPlugin());
                         return {
                             href: a.href,
                             text: a.innerText.trim(),
-                            dateStr: dateStr
+                            dateStr: dateStr,
+                            debugCells: debugCells // Return cells for debugging if date is missing
                         };
                     })
                     .filter(item => item.text.length > 5);
@@ -73,6 +101,14 @@ puppeteer.use(StealthPlugin());
                 console.log(`URL: ${tournament.href}`);
                 if (tournament.dateStr) {
                     console.log(`Date: ${tournament.dateStr}`);
+                } else {
+                    console.log(`Warning: No date found for ${tournament.text}`);
+                    console.log(`  Cells: ${JSON.stringify(tournament.debugCells)}`);
+
+                    if (isDev) {
+                        console.error('Error: Missing date in dev mode. Exiting.');
+                        process.exit(1);
+                    }
                 }
 
                 // Parse the tournament date
