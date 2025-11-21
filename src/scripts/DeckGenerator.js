@@ -206,8 +206,8 @@ export default class DeckGenerator {
     })
 
     const legalCardsOfCost = cardsOfCost.filter(card => {
-        console.log(card)
-        return card.legality === 'legal'
+      console.log(card)
+      return card.legality === 'legal'
     })
 
     const weights = legalCardsOfCost.map(card => {
@@ -220,7 +220,8 @@ export default class DeckGenerator {
     let pickableCards = weights.filter(weight => weight.weight > 0)
     // if a card is 4 times in a deck remove it from the pickable cards
     pickableCards = pickableCards.filter(weight => {
-      return deck.filter(deckCard => deckCard.id === weight.card.id).length < 4
+      const countInDeck = deck.filter(deckCard => deckCard.title === weight.card.title).length
+      return countInDeck < weight.card.maxAmount
     })
 
     const totalWeight = pickableCards.reduce((total, weight) => total + weight.weight, 0)

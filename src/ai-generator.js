@@ -91,12 +91,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }
 
                     // Filter by count
-                    const count = currentDeck.filter(c => c.id === card.id).length;
-                    return count < 4;
+                    const count = currentDeck.filter(c => c.title === card.title).length;
+                    return count < card.maxAmount;
                 },
                 renderButtonText: (card) => {
-                    const count = currentDeck.filter(c => c.id === card.id).length;
-                    return `Add Card (${count}/4)`;
+                    const count = currentDeck.filter(c => c.title === card.title).length;
+                    if (count >= card.maxAmount) {
+                        return `Max Reached <small>(${count}/${card.maxAmount})</small>`;
+                    }
+                    return `Add Card (${count}/${card.maxAmount})`;
                 }
             }
         );
@@ -121,10 +124,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             alert("Deck is full (60 cards).");
             return;
         }
-        // Check limit of 4
-        const count = currentDeck.filter(c => c.id === card.id).length;
-        if (count >= 4) {
-            alert("Cannot add more than 4 copies of a card.");
+        // Check limit
+        const count = currentDeck.filter(c => c.title === card.title).length;
+        if (count >= card.maxAmount) {
+            alert(`Cannot add more than ${card.maxAmount} copies of this card.`);
             return;
         }
 
@@ -172,9 +175,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         let deckName = `AI Generated Deck: ${currentInks[0]} - ${currentInks[1]} - ${randomId}`;
         deckName = encodeURIComponent(deckName);
         let base64Id = '';
-        const uniqueCardsInDeck = [...new Set(currentDeck.map(card => card.name))];
+        const uniqueCardsInDeck = [...new Set(currentDeck.map(card => card.title))];
         for (const card of uniqueCardsInDeck) {
-            const amountOfCardsWithSameTitle = currentDeck.filter(deckCard => deckCard.name === card).length;
+            const amountOfCardsWithSameTitle = currentDeck.filter(deckCard => deckCard.title === card).length;
             base64Id += `${card}$${amountOfCardsWithSameTitle}|`;
         }
 

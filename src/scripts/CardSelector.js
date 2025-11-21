@@ -88,9 +88,16 @@ export default class CardSelector {
             cardContainer.appendChild(img);
 
             const addBtn = document.createElement('button');
-            addBtn.innerHTML = this.options.renderButtonText(card);
+            const btnText = this.options.renderButtonText(card);
+            addBtn.innerHTML = btnText;
             addBtn.dataset.role = 'add-card-to-deck';
             addBtn.dataset.card = card.id;
+
+            if (btnText.includes('Max Reached')) {
+                addBtn.disabled = true;
+                addBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            }
+
             cardContainer.appendChild(addBtn);
 
             this.cardList.appendChild(cardContainer);

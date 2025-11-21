@@ -115,8 +115,8 @@ export default class UI {
     if (!inkMatch) return false;
 
     // Check Limit
-    const count = this.deck.filter(deckCard => deckCard.id === card.id).length;
-    return count < 4;
+    const count = this.deck.filter(deckCard => deckCard.title === card.title).length;
+    return count < card.maxAmount;
   }
 
   checkDualInks(card) {
@@ -144,8 +144,11 @@ export default class UI {
   }
 
   renderButtonText(card) {
-    const count = this.deck.filter(deckCard => deckCard.id === card.id).length;
-    return `Add card <small>(${count}/4)</small>`;
+    const count = this.deck.filter(deckCard => deckCard.title === card.title).length;
+    if (count >= card.maxAmount) {
+      return `Max Reached <small>(${count}/${card.maxAmount})</small>`;
+    }
+    return `Add card <small>(${count}/${card.maxAmount})</small>`;
   }
 
   // --- Actions ---
