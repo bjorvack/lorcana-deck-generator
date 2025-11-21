@@ -107,6 +107,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Enable the generate button
         generateDeckBtn.disabled = false;
 
+        // Load validation model
+        try {
+            console.log('Loading validation model...');
+            await manager.loadValidationModel('training_data/deck-validator-model/model.json');
+            console.log('Validation model loaded!');
+        } catch (e) {
+            console.warn('Validation model not available:', e);
+        }
+
     } catch (e) {
         console.error('Failed to load model:', e);
         alert('Failed to load AI model. Please refresh the page.');
@@ -200,5 +209,62 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else {
             chart.renderChart([]);
         }
+
+        // Update validation score
+        updateValidationScore();
+    }
+
+    async function updateValidationScore() {
+        const validationContainer = document.querySelector('[data-role="validation-score"]');
+        if (!validationContainer) return;
+
+        if (currentDeck.length < 60) {
+            validationContainer.innerHTML = `
+                <div class="validation-card">
+                    <div class="validation-header">
+                        <h3>Deck Realism</h3>
+                        <span class="validation-grade grade-empty">-</span>
+                    </div>
+                    <div class="validation-message">Add ${60 - currentDeck.length} more cards</div>
+                </div>
+            `;
+            return;
+        }
+
+        const result = await manager.validateDeck(currentDeck);
+        if (!result) {
+            validationContainer.innerHTML = '';
+            return;
+        }
+
+        const scorePercent = Math.round(result.score * 100);
+        const gradeClass = result.grade === 'A' ? 'grade-a' :
+            result.grade === 'B' ? 'grade-b' :
+                result.grade === 'C' ? 'grade-c' : 'grade-d';
+
+        let breakdownHTML = '';
+        if (result.breakdown && result.breakdown.length > 0) {
+            breakdownHTML = '<div class="validation-breakdown">';
+            breakdownHTML += '<h4>Issues Detected:</h4>';
+            breakdownHTML += '<ul>';
+            result.breakdown.forEach(issue => {
+                const severityClass = issue.severity === 'high' ? 'severity-high' : 'severity-medium';
+                breakdownHTML += `<li class="${severityClass}"><strong>${issue.issue}:</strong> ${issue.message}</li>`;
+            });
+            breakdownHTML += '</ul></div>';
+        }
+
+        validationContainer.innerHTML = `
+            <div class="validation-card">
+                <div class="validation-header">
+                    <h3>Deck Realism</h3>
+                    <span class="validation-grade ${gradeClass}">${result.grade}</span>
+                </div>
+                <div class="validation-score"
+>${scorePercent}%</div>
+                <div class="validation-message">${result.message}</div>
+                ${breakdownHTML}
+            </div>
+        `;
     }
 });

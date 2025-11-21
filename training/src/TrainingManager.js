@@ -479,4 +479,287 @@ module.exports = class TrainingManager {
         this.log(`Migration complete. Indexed ${hashes.size} unique decks from ${totalDecks} total decks.`);
         return Array.from(hashes);
     }
+
+    /**
+     * Extract deck-level features for validation model
+     */
+    extractDeckFeatures(deckIndices) {
+        const features = [];
+
+        // Count cards by copy amount (0-9)
+        const copyDistribution = [0, 0, 0, 0, 0]; // 1 copy, 2 copies, 3 copies, 4 copies, >4 copies
+        const cardCounts = new Map();
+        for (const idx of deckIndices) {
+            cardCounts.set(idx, (cardCounts.get(idx) || 0) + 1);
+        }
+        for (const count of cardCounts.values()) {
+            if (count === 1) copyDistribution[0]++;
+            else if (count === 2) copyDistribution[1]++;
+            else if (count === 3) copyDistribution[2]++;
+            else if (count === 4) copyDistribution[3]++;
+            else copyDistribution[4]++;
+        }
+        // Normalize
+        const totalUniqueCards = [...cardCounts.keys()].length;
+        copyDistribution.forEach((count, i) => features.push(count / Math.max(1, totalUniqueCards)));
+
+        // Mana curve distribution (costs 1-10)
+        const costCounts = Array(10).fill(0);
+        let inkableCount = 0;
+        let totalCards = deckIndices.length;
+        const typeCounts = { character: 0, action: 0, item: 0, location: 0 };
+        const inkCounts = { Amber: 0, Amethyst: 0, Emerald: 0, Ruby: 0, Sapphire: 0, Steel: 0 };
+        const keywordCounts = {
+            Ward: 0, Evasive: 0, Bodyguard: 0, Resist: 0, Singer: 0,
+            Shift: 0, Reckless: 0, Challenger: 0, Rush: 0
+        };
+        const classificationCounts = new Map();
+
+        for (const idx of deckIndices) {
+            const card = this.indexMap.get(idx);
+            if (!card) continue;
+
+            // Mana curve
+            const costIdx = Math.min(card.cost - 1, 9);
+            costCounts[costIdx]++;
+
+            // Inkable
+            if (card.inkwell) inkableCount++;
+
+            // Type
+            if (card.types && card.types.length > 0) {
+                const t = card.types[0].toLowerCase();
+                if (typeCounts[t] !== undefined) typeCounts[t]++;
+            }
+
+            // Ink color
+            if (card.ink && inkCounts[card.ink] !== undefined) {
+                inkCounts[card.ink]++;
+            }
+
+            // Keywords
+            for (const keyword of Object.keys(keywordCounts)) {
+                const propName = `has${keyword}`;
+                if (card[propName] || (card.keywords && card.keywords.some(k => k.includes(keyword)))) {
+                    keywordCounts[keyword]++;
+                }
+            }
+
+            // Classifications
+            if (card.classifications) {
+                for (const cls of card.classifications) {
+                    classificationCounts.set(cls, (classificationCounts.get(cls) || 0) + 1);
+                }
+            }
+        }
+
+        // Add mana curve (normalized)
+        costCounts.forEach(count => features.push(count / totalCards));
+
+        // Add type distribution
+        Object.values(typeCounts).forEach(count => features.push(count / totalCards));
+
+        // Add ink distribution
+        Object.values(inkCounts).forEach(count => features.push(count / totalCards));
+
+        // Add inkable ratio
+        features.push(inkableCount / totalCards);
+
+        // Add keyword distribution
+        Object.values(keywordCounts).forEach(count => features.push(count / totalCards));
+
+        // Add classification diversity (how many different classifications)
+        features.push(classificationCounts.size / 10); // Normalize by ~10 possible classifications
+
+        // Add synergy score (how many cards share classifications)
+        const avgClassificationSharing = classificationCounts.size > 0
+            ? Array.from(classificationCounts.values()).reduce((a, b) => a + b, 0) / classificationCounts.size / totalCards
+            : 0;
+        features.push(avgClassificationSharing);
+
+        return features;
+    }
+
+    /**
+     * Generate fake decks for validation model training
+     */
+    generateFakeDeck(strategy = 'random') {
+        const deckIndices = [];
+        const deckSize = 60;
+
+        if (strategy === 'pure_random') {
+            // Strategy A: Pure random (40% of fakes)
+            const cardPool = Array.from(this.cardMap.values());
+            const cardCounts = new Map();
+
+            while (deckIndices.length < deckSize) {
+                const randomIdx = cardPool[Math.floor(Math.random() * cardPool.length)];
+                const currentCount = cardCounts.get(randomIdx) || 0;
+                const card = this.indexMap.get(randomIdx);
+                const maxAmount = card?.maxAmount || 4;
+
+                if (currentCount < maxAmount) {
+                    deckIndices.push(randomIdx);
+                    cardCounts.set(randomIdx, currentCount + 1);
+                }
+            }
+        } else if (strategy === 'ink_constrained') {
+            // Strategy B: Ink-constrained random (30% of fakes)
+            const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
+            const chosenInks = [];
+            const inkCount = Math.random() < 0.5 ? 1 : 2;
+            for (let i = 0; i < inkCount; i++) {
+                const ink = inks[Math.floor(Math.random() * inks.length)];
+                if (!chosenInks.includes(ink)) chosenInks.push(ink);
+            }
+
+            const cardPool = [];
+            for (const [idx, card] of this.indexMap.entries()) {
+                if (chosenInks.includes(card.ink)) {
+                    cardPool.push(idx);
+                }
+            }
+
+            const cardCounts = new Map();
+            while (deckIndices.length < deckSize && cardPool.length > 0) {
+                const randomIdx = cardPool[Math.floor(Math.random() * cardPool.length)];
+                const currentCount = cardCounts.get(randomIdx) || 0;
+                const card = this.indexMap.get(randomIdx);
+                const maxAmount = card?.maxAmount || 4;
+
+                if (currentCount < maxAmount) {
+                    deckIndices.push(randomIdx);
+                    cardCounts.set(randomIdx, currentCount + 1);
+                }
+            }
+        } else if (strategy === 'rule_broken') {
+            // Strategy C: Rule-broken DeckGenerator style (30% of fakes)
+            // Use flat mana curve and allow excessive singletons
+            const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
+            const chosenInks = [];
+            const inkCount = Math.random() < 0.5 ? 1 : 2;
+            for (let i = 0; i < inkCount; i++) {
+                const ink = inks[Math.floor(Math.random() * inks.length)];
+                if (!chosenInks.includes(ink)) chosenInks.push(ink);
+            }
+
+            const cardPool = [];
+            for (const [idx, card] of this.indexMap.entries()) {
+                if (chosenInks.includes(card.ink)) {
+                    cardPool.push(idx);
+                }
+            }
+
+            // Flat distribution (not bell curve)
+            const costs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            const cardCounts = new Map();
+            let singletonCount = 0;
+
+            for (let i = 0; i < deckSize; i++) {
+                // Pick random cost with uniform distribution
+                const targetCost = costs[Math.floor(Math.random() * costs.length)];
+                const cardsOfCost = cardPool.filter(idx => {
+                    const card = this.indexMap.get(idx);
+                    return card && card.cost === targetCost;
+                });
+
+                if (cardsOfCost.length > 0) {
+                    let attempts = 0;
+                    let picked = false;
+                    while (!picked && attempts < 10) {
+                        const randomIdx = cardsOfCost[Math.floor(Math.random() * cardsOfCost.length)];
+                        const currentCount = cardCounts.get(randomIdx) || 0;
+                        const card = this.indexMap.get(randomIdx);
+                        const maxAmount = card?.maxAmount || 4;
+
+                        // Allow more singletons by biasing toward single copies
+                        const shouldAddCopy = currentCount === 0 || (Math.random() < 0.3 && currentCount < maxAmount);
+
+                        if (shouldAddCopy && currentCount < maxAmount) {
+                            deckIndices.push(randomIdx);
+                            if (currentCount === 0) singletonCount++;
+                            cardCounts.set(randomIdx, currentCount + 1);
+                            picked = true;
+                        }
+                        attempts++;
+                    }
+                }
+            }
+
+            // Pad if needed
+            while (deckIndices.length < deckSize) {
+                const randomIdx = cardPool[Math.floor(Math.random() * cardPool.length)];
+                deckIndices.push(randomIdx);
+            }
+        }
+
+        return deckIndices.slice(0, deckSize);
+    }
+
+    /**
+     * Generate dataset for validation model training
+     */
+    prepareValidationDataset() {
+        this.log('Preparing validation dataset...');
+        const deckFeatures = [];
+        const labels = [];
+
+        // Get real decks from training data
+        let realDeckCount = 0;
+        for (const rawData of this.trainingData) {
+            for (const deck of rawData.decks) {
+                const deckIndices = [];
+                for (const cardEntry of deck.cards) {
+                    const key = this.getCardKey(cardEntry.name, cardEntry.version);
+                    if (this.cardMap.has(key)) {
+                        const index = this.cardMap.get(key);
+                        for (let i = 0; i < cardEntry.amount; i++) {
+                            deckIndices.push(index);
+                        }
+                    }
+                }
+
+                if (deckIndices.length >= 60) {
+                    const features = this.extractDeckFeatures(deckIndices.slice(0, 60));
+                    deckFeatures.push(features);
+                    labels.push(1); // Real deck
+                    realDeckCount++;
+                }
+            }
+        }
+
+        this.log(`Extracted features from ${realDeckCount} real decks`);
+
+        // Generate fake decks (equal number to real decks)
+        const strategies = ['pure_random', 'ink_constrained', 'rule_broken'];
+        const strategyCounts = {
+            'pure_random': Math.floor(realDeckCount * 0.4),
+            'ink_constrained': Math.floor(realDeckCount * 0.3),
+            'rule_broken': Math.floor(realDeckCount * 0.3)
+        };
+
+        for (const [strategy, count] of Object.entries(strategyCounts)) {
+            for (let i = 0; i < count; i++) {
+                const fakeDeck = this.generateFakeDeck(strategy);
+                const features = this.extractDeckFeatures(fakeDeck);
+                deckFeatures.push(features);
+                labels.push(0); // Fake deck
+            }
+        }
+
+        this.log(`Generated ${realDeckCount} fake decks`);
+        this.log(`Total dataset size: ${deckFeatures.length} decks`);
+
+        // Shuffle the dataset
+        const combined = deckFeatures.map((features, i) => ({ features, label: labels[i] }));
+        for (let i = combined.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [combined[i], combined[j]] = [combined[j], combined[i]];
+        }
+
+        return {
+            features: combined.map(item => item.features),
+            labels: combined.map(item => item.label)
+        };
+    }
 };

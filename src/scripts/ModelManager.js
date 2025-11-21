@@ -1,12 +1,15 @@
 import CardApi from './CardApi';
 import DeckModel from './DeckModel';
 import TextEmbedder from './TextEmbedder';
+import ValidationModel from './ValidationModel';
 
 export default class ModelManager {
     constructor() {
         this.cardApi = new CardApi();
         this.model = new DeckModel();
         this.textEmbedder = new TextEmbedder();
+        this.validationModel = new ValidationModel(); // NEW
+        this.validationModelLoaded = false; // NEW
         this.cards = [];
         this.cardMap = new Map(); // Name -> Index
         this.indexMap = new Map(); // Index -> Card
@@ -460,5 +463,129 @@ export default class ModelManager {
             return this.indexMap.get(foundId);
         }
         return null;
+    }
+
+    async loadValidationModel(modelPath) {
+        try {
+            await this.validationModel.loadModel(modelPath);
+            this.validationModelLoaded = true;
+            console.log('Validation model loaded successfully');
+        } catch (e) {
+            console.error('Failed to load validation model:', e);
+            this.validationModelLoaded = false;
+        }
+    }
+
+    /**
+     * Extract deck-level features for validation
+     * Same logic as TrainingManager.extractDeckFeatures
+     */
+    extractDeckFeatures(deck) {
+        const features = [];
+
+        // Convert deck of cards to indices
+        const deckIndices = [];
+        deck.forEach(card => {
+            const key = this.getCardKey(card.name, card.version);
+            if (this.cardMap.has(key)) {
+                deckIndices.push(this.cardMap.get(key));
+            }
+        });
+
+        // Count cards by copy amount
+        const copyDistribution = [0, 0, 0, 0, 0];
+        const cardCounts = new Map();
+        for (const idx of deckIndices) {
+            cardCounts.set(idx, (cardCounts.get(idx) || 0) + 1);
+        }
+        for (const count of cardCounts.values()) {
+            if (count === 1) copyDistribution[0]++;
+            else if (count === 2) copyDistribution[1]++;
+            else if (count === 3) copyDistribution[2]++;
+            else if (count === 4) copyDistribution[3]++;
+            else copyDistribution[4]++;
+        }
+        const totalUniqueCards = [...cardCounts.keys()].length;
+        copyDistribution.forEach((count, i) => features.push(count / Math.max(1, totalUniqueCards)));
+
+        // Mana curve distribution
+        const costCounts = Array(10).fill(0);
+        let inkableCount = 0;
+        let totalCards = deckIndices.length;
+        const typeCounts = { character: 0, action: 0, item: 0, location: 0 };
+        const inkCounts = { Amber: 0, Amethyst: 0, Emerald: 0, Ruby: 0, Sapphire: 0, Steel: 0 };
+        const keywordCounts = {
+            Ward: 0, Evasive: 0, Bodyguard: 0, Resist: 0, Singer: 0,
+            Shift: 0, Reckless: 0, Challenger: 0, Rush: 0
+        };
+        const classificationCounts = new Map();
+
+        for (const idx of deckIndices) {
+            const card = this.indexMap.get(idx);
+            if (!card) continue;
+
+            const costIdx = Math.min(card.cost - 1, 9);
+            costCounts[costIdx]++;
+
+            if (card.inkwell) inkableCount++;
+
+            if (card.types && card.types.length > 0) {
+                const t = card.types[0].toLowerCase();
+                if (typeCounts[t] !== undefined) typeCounts[t]++;
+            }
+
+            if (card.ink && inkCounts[card.ink] !== undefined) {
+                inkCounts[card.ink]++;
+            }
+
+            for (const keyword of Object.keys(keywordCounts)) {
+                const propName = `has${keyword}`;
+                if (card[propName] || (card.keywords && card.keywords.some(k => k.includes(keyword)))) {
+                    keywordCounts[keyword]++;
+                }
+            }
+
+            if (card.classifications) {
+                for (const cls of card.classifications) {
+                    classificationCounts.set(cls, (classificationCounts.get(cls) || 0) + 1);
+                }
+            }
+        }
+
+        // Add features
+        costCounts.forEach(count => features.push(count / totalCards));
+        Object.values(typeCounts).forEach(count => features.push(count / totalCards));
+        Object.values(inkCounts).forEach(count => features.push(count / totalCards));
+        features.push(inkableCount / totalCards);
+        Object.values(keywordCounts).forEach(count => features.push(count / totalCards));
+        features.push(classificationCounts.size / 10);
+        const avgClassificationSharing = classificationCounts.size > 0
+            ? Array.from(classificationCounts.values()).reduce((a, b) => a + b, 0) / classificationCounts.size / totalCards
+            : 0;
+        features.push(avgClassificationSharing);
+
+        return features;
+    }
+
+    /**
+     * Validate a deck and return score with breakdown
+     */
+    async validateDeck(deck) {
+        if (!this.validationModelLoaded) {
+            console.warn('Validation model not loaded');
+            return null;
+        }
+
+        if (!deck || deck.length < 60) {
+            return {
+                score: 0,
+                grade: 'D',
+                message: 'Deck must have 60 cards',
+                breakdown: []
+            };
+        }
+
+        const features = this.extractDeckFeatures(deck);
+        return await this.validationModel.evaluateWithBreakdown(features);
     }
 }

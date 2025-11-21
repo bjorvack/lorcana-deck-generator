@@ -225,3 +225,123 @@ dialog[data-role=card-preview] {
         margin: 0;
     }
 }
+
+/* Validation Score Styles */
+[data-role="validation-score"] {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.validation-card {
+    background-color: rgba(211, 186, 132, 0.1);
+    border: 2px solid #D3BA84;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.validation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.validation-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.validation-grade {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    min-width: 3rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.grade-a {
+    background-color: #22c55e;
+    color: #000;
+}
+
+.grade-b {
+    background-color: #84cc16;
+    color: #000;
+}
+
+.grade-c {
+    background-color: #eab308;
+    color: #000;
+}
+
+.grade-d {
+    background-color: #ef4444;
+    color: #000;
+}
+
+.grade-empty {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #999;
+}
+
+.validation-score {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem 0;
+    background: linear-gradient(90deg, #D3BA84, #E3CAA8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.validation-message {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #D3BA84;
+    margin-bottom: 1rem;
+}
+
+.validation-breakdown {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(211, 186, 132, 0.3);
+}
+
+.validation-breakdown h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #D3BA84;
+}
+
+.validation-breakdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.validation-breakdown li {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.severity-high {
+    color: #ef4444;
+}
+
+.severity-medium {
+    color: #eab308;
+}
+
+.validation-breakdown strong {
+    background-color: transparent;
+    color: inherit;
+}
