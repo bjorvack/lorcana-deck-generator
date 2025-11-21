@@ -8,9 +8,10 @@ const challengerRegex = /Challenger \+(\d+) \(While challenging, this character 
 const rushRegex = /Rush \(This character can challenge the turn they[’'‘]re played\.\)/
 
 // Max count regexes
-const maxCopiesRegex = /You may have up to (\d+) copies/
-const anyNumberRegex = /You may have any number of cards named/
-const limitCopiesRegex = /You may only have (\d+) copies/
+// Max count regexes
+const maxCopiesRegex = /You may have up to\s+(\d+)\s+copies/i
+const anyNumberRegex = /You may have any number of cards named/i
+const limitCopiesRegex = /You may only have\s+(\d+)\s+copies/i
 
 const shiftRegexes = [
     /Shift \d+ \(You may pay \d+ {i} to play this on top of one of your characters named .*\.\)/,
@@ -91,7 +92,7 @@ module.exports = class Card {
     }
 
     get title() {
-        return this.name + (this.version ? `_${this.version}` : '')
+        return this.name + (this.version ? ` - ${this.version}` : '')
     }
 
     get maxAmount() {
