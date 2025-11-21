@@ -115,6 +115,8 @@ export default class ModelManager {
             }
         });
 
+        // 3. Predict next card probabilities
+        // Note: indices are passed for length calculation, but not used as input features
         const probabilities = await this.model.predict(indices, features, textIndices);
 
         // 1. (Removed) Repetition Penalty

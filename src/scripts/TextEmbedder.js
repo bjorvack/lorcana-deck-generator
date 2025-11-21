@@ -7,7 +7,15 @@ export default class TextEmbedder {
         this.tokenToIndex = { '<PAD>': 0, '<UNK>': 1 }; // Reserve 0 for padding, 1 for unknown
         this.indexToToken = { 0: '<PAD>', 1: '<UNK>' };
         this.vocabularySize = 2;
-        this.maxTextTokens = 30; // Max tokens per card (increased from 20)
+
+        // Define max lengths for each input type
+        this.maxNameTokens = 5;
+        this.maxKeywordsTokens = 10;
+        this.maxInkTokens = 2;
+        this.maxClassTokens = 5;
+        this.maxTypeTokens = 3;
+        this.maxBodyTokens = 30; // Card text
+
         this.allCardNames = []; // Store all card names for text parsing
     }
 
@@ -19,7 +27,15 @@ export default class TextEmbedder {
         this.tokenToIndex = data.tokenToIndex;
         this.indexToToken = data.indexToToken;
         this.vocabularySize = data.vocabularySize;
-        this.maxTextTokens = data.maxTextTokens;
+
+        // Load max lengths if available, otherwise defaults
+        this.maxNameTokens = data.maxNameTokens || 5;
+        this.maxKeywordsTokens = data.maxKeywordsTokens || 10;
+        this.maxInkTokens = data.maxInkTokens || 2;
+        this.maxClassTokens = data.maxClassTokens || 5;
+        this.maxTypeTokens = data.maxTypeTokens || 3;
+        this.maxBodyTokens = data.maxBodyTokens || 30;
+
         this.allCardNames = data.allCardNames || [];
         console.log(`Vocabulary loaded (${this.vocabularySize} tokens)`);
     }
@@ -77,61 +93,68 @@ export default class TextEmbedder {
     /**
      * Convert card properties to text token indices
      * @param {Object} card - Card object
-     * @returns {Array} Array of token indices (padded/truncated to maxTextTokens)
+     * @returns {Object} Object containing token arrays for name, keywords, ink, classifications, types, text
      */
     cardToTextIndices(card) {
-        const tokens = [];
-
-        // 1. Card name
+        // 1. Name Tokens
+        const nameTokens = [];
         const cardName = this.cleanText(card.name);
-        if (cardName && this.tokenToIndex[cardName] !== undefined) {
-            tokens.push(this.tokenToIndex[cardName]);
+        if (cardName) {
+            if (this.tokenToIndex[cardName] !== undefined) {
+                nameTokens.push(this.tokenToIndex[cardName]);
+            } else {
+                nameTokens.push(this.tokenToIndex['<UNK>']);
+            }
         }
 
-        // 2. Keywords
+        // 2. Keywords Tokens
+        const keywordsTokens = [];
         if (card.keywords && Array.isArray(card.keywords)) {
             card.keywords.forEach(kw => {
                 const token = this.cleanText(kw);
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
-                tokens.push(idx);
+                keywordsTokens.push(idx);
             });
         }
 
-        // 3. Ink colors
+        // 3. Ink Tokens
+        const inkTokens = [];
         if (card.ink) {
             const token = this.cleanText(card.ink);
             const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
-            tokens.push(idx);
+            inkTokens.push(idx);
         }
 
-        // 4. Classifications
+        // 4. Classifications Tokens
+        const classTokens = [];
         if (card.classifications && Array.isArray(card.classifications)) {
             card.classifications.forEach(cls => {
                 const token = this.cleanText(cls);
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
-                tokens.push(idx);
+                classTokens.push(idx);
             });
         }
 
-        // 5. Types
+        // 5. Types Tokens
+        const typeTokens = [];
         if (card.types && Array.isArray(card.types)) {
             card.types.forEach(type => {
                 const token = this.cleanText(type);
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
-                tokens.push(idx);
+                typeTokens.push(idx);
             });
         } else if (card.type && Array.isArray(card.type)) {
-            // Handle potential property name difference (type vs types)
             card.type.forEach(type => {
                 const token = this.cleanText(type);
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
-                tokens.push(idx);
+                typeTokens.push(idx);
             });
         }
 
-        // 5. Text tokens (limited to avoid too many)
+        // 6. Body Text Tokens
+        const bodyTokens = [];
+
         // Note: In browser we might need to construct sanitizedText if it's not on the card object
-        // The CardApi in browser might return different structure than training
         let textToProcess = card.sanitizedText;
         if (!textToProcess && card.text) {
             // Basic sanitization if sanitizedText is missing
@@ -143,14 +166,21 @@ export default class TextEmbedder {
 
         if (textToProcess) {
             const textTokens = this.extractTextTokens(textToProcess, this.allCardNames);
-            textTokens.slice(0, 10).forEach(token => { // Limit text tokens
+            textTokens.forEach(token => {
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
-                tokens.push(idx);
+                bodyTokens.push(idx);
             });
         }
 
-        // Pad or truncate to maxTextTokens
-        return this.padOrTruncate(tokens, this.maxTextTokens);
+        // Pad or truncate each
+        return {
+            name: this.padOrTruncate(nameTokens, this.maxNameTokens),
+            keywords: this.padOrTruncate(keywordsTokens, this.maxKeywordsTokens),
+            ink: this.padOrTruncate(inkTokens, this.maxInkTokens),
+            classifications: this.padOrTruncate(classTokens, this.maxClassTokens),
+            types: this.padOrTruncate(typeTokens, this.maxTypeTokens),
+            text: this.padOrTruncate(bodyTokens, this.maxBodyTokens)
+        };
     }
 
     /**

@@ -199,16 +199,26 @@ module.exports = class TrainingManager {
 
         this.log(`Generated ${sequences.length} sequences from ${processedDecks} newly loaded decks.`);
 
+        if (sequences.length === 0) {
+            this.log('No new training data found. Skipping training.');
+            return;
+        }
+
         // 4. Train Model
         if (!this.model.model) {
             this.log('Initializing new model...');
             // We need to know feature dimension
             const featureDim = featureSequences[0][0].length;
             await this.model.initialize(
-                this.cardMap.size,
-                featureDim,
+                this.cardMap.size, // Assuming this.cardMap.size is equivalent to this.cardManager.cards.length
+                featureDim, // Assuming featureDim is equivalent to this.featureManager.featureDim
                 this.textEmbedder.vocabularySize,
-                this.textEmbedder.maxTextTokens
+                this.textEmbedder.maxNameTokens,
+                this.textEmbedder.maxKeywordsTokens,
+                this.textEmbedder.maxInkTokens,
+                this.textEmbedder.maxClassTokens,
+                this.textEmbedder.maxTypeTokens,
+                this.textEmbedder.maxBodyTokens
             );
         } else {
             this.log('Continuing training on existing model...');

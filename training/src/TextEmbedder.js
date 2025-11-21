@@ -10,7 +10,15 @@ module.exports = class TextEmbedder {
         this.tokenToIndex = { '<PAD>': 0, '<UNK>': 1 }; // Reserve 0 for padding, 1 for unknown
         this.indexToToken = { 0: '<PAD>', 1: '<UNK>' };
         this.vocabularySize = 2;
-        this.maxTextTokens = 30; // Max tokens per card (increased from 20)
+
+        // Define max lengths for each input type
+        this.maxNameTokens = 5;
+        this.maxKeywordsTokens = 10;
+        this.maxInkTokens = 2; // Usually 1, maybe 2 for multi-ink? (Currently cards are single ink, but future proof)
+        this.maxClassTokens = 5;
+        this.maxTypeTokens = 3;
+        this.maxBodyTokens = 30; // Card text
+
         this.allCardNames = []; // Store all card names for text parsing
     }
 
@@ -27,13 +35,13 @@ module.exports = class TextEmbedder {
 
         // Second pass: extract all tokens
         cards.forEach(card => {
-            // 1. Card name as single token (multi-word)
+            // 1. Card name
             const cardName = this.cleanText(card.name);
             if (cardName) {
                 tokenSet.add(cardName);
             }
 
-            // 2. Keywords (individual tokens)
+            // 2. Keywords
             if (card.keywords && Array.isArray(card.keywords)) {
                 card.keywords.forEach(kw => {
                     const token = this.cleanText(kw);
@@ -41,7 +49,7 @@ module.exports = class TextEmbedder {
                 });
             }
 
-            // 3. Ink colors (individual tokens)
+            // 3. Ink
             if (card.ink) {
                 tokenSet.add(this.cleanText(card.ink));
             }
@@ -51,7 +59,7 @@ module.exports = class TextEmbedder {
                 });
             }
 
-            // 4. Classifications (individual tokens)
+            // 4. Classifications
             if (card.classifications && Array.isArray(card.classifications)) {
                 card.classifications.forEach(cls => {
                     const token = this.cleanText(cls);
@@ -59,21 +67,20 @@ module.exports = class TextEmbedder {
                 });
             }
 
-            // 5. Types (individual tokens) - NEW
+            // 5. Types
             if (card.types && Array.isArray(card.types)) {
                 card.types.forEach(type => {
                     const token = this.cleanText(type);
                     if (token) tokenSet.add(token);
                 });
             } else if (card.type && Array.isArray(card.type)) {
-                // Handle potential property name difference (type vs types)
                 card.type.forEach(type => {
                     const token = this.cleanText(type);
                     if (token) tokenSet.add(token);
                 });
             }
 
-            // 5. Parse sanitized text for card name references and other tokens
+            // 6. Body Text
             if (card.sanitizedText) {
                 const textTokens = this.extractTextTokens(card.sanitizedText, this.allCardNames);
                 textTokens.forEach(token => {
@@ -147,69 +154,87 @@ module.exports = class TextEmbedder {
     /**
      * Convert card properties to text token indices
      * @param {Object} card - Card object
-     * @returns {Array} Array of token indices (padded/truncated to maxTextTokens)
+     * @returns {Object} Object containing token arrays for name, keywords, ink, classifications, types, text
      */
     cardToTextIndices(card) {
-        const tokens = [];
-
-        // 1. Card name
+        // 1. Name Tokens
+        const nameTokens = [];
         const cardName = this.cleanText(card.name);
-        if (cardName && this.tokenToIndex[cardName] !== undefined) {
-            tokens.push(this.tokenToIndex[cardName]);
+        if (cardName) {
+            // Split name into words if needed, but currently we treat full name as one token if in vocab
+            // But if we want to handle "Simba" and "Returned King" separately?
+            // For now, let's stick to the existing logic: check if full name is a token
+            if (this.tokenToIndex[cardName] !== undefined) {
+                nameTokens.push(this.tokenToIndex[cardName]);
+            } else {
+                // Fallback: tokenize name? No, let's stick to <UNK> if not found
+                nameTokens.push(this.tokenToIndex['<UNK>']);
+            }
         }
 
-        // 2. Keywords
+        // 2. Keywords Tokens
+        const keywordsTokens = [];
         if (card.keywords && Array.isArray(card.keywords)) {
             card.keywords.forEach(kw => {
                 const token = this.cleanText(kw);
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
-                tokens.push(idx);
+                keywordsTokens.push(idx);
             });
         }
 
-        // 3. Ink colors
+        // 3. Ink Tokens
+        const inkTokens = [];
         if (card.ink) {
             const token = this.cleanText(card.ink);
             const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
-            tokens.push(idx);
+            inkTokens.push(idx);
         }
 
-        // 4. Classifications
+        // 4. Classifications Tokens
+        const classTokens = [];
         if (card.classifications && Array.isArray(card.classifications)) {
             card.classifications.forEach(cls => {
                 const token = this.cleanText(cls);
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
-                tokens.push(idx);
+                classTokens.push(idx);
             });
         }
 
-        // 5. Types
+        // 5. Types Tokens
+        const typeTokens = [];
         if (card.types && Array.isArray(card.types)) {
             card.types.forEach(type => {
                 const token = this.cleanText(type);
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
-                tokens.push(idx);
+                typeTokens.push(idx);
             });
         } else if (card.type && Array.isArray(card.type)) {
-            // Handle potential property name difference (type vs types)
             card.type.forEach(type => {
                 const token = this.cleanText(type);
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
-                tokens.push(idx);
+                typeTokens.push(idx);
             });
         }
 
-        // 5. Text tokens (limited to avoid too many)
+        // 6. Body Text Tokens
+        const bodyTokens = [];
         if (card.sanitizedText) {
             const textTokens = this.extractTextTokens(card.sanitizedText, this.allCardNames);
-            textTokens.slice(0, 10).forEach(token => { // Limit text tokens
+            textTokens.forEach(token => {
                 const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>'];
-                tokens.push(idx);
+                bodyTokens.push(idx);
             });
         }
 
-        // Pad or truncate to maxTextTokens
-        return this.padOrTruncate(tokens, this.maxTextTokens);
+        // Pad or truncate each
+        return {
+            name: this.padOrTruncate(nameTokens, this.maxNameTokens),
+            keywords: this.padOrTruncate(keywordsTokens, this.maxKeywordsTokens),
+            ink: this.padOrTruncate(inkTokens, this.maxInkTokens),
+            classifications: this.padOrTruncate(classTokens, this.maxClassTokens),
+            types: this.padOrTruncate(typeTokens, this.maxTypeTokens),
+            text: this.padOrTruncate(bodyTokens, this.maxBodyTokens)
+        };
     }
 
     /**
@@ -238,7 +263,12 @@ module.exports = class TextEmbedder {
             tokenToIndex: this.tokenToIndex,
             indexToToken: this.indexToToken,
             vocabularySize: this.vocabularySize,
-            maxTextTokens: this.maxTextTokens,
+            maxNameTokens: this.maxNameTokens,
+            maxKeywordsTokens: this.maxKeywordsTokens,
+            maxInkTokens: this.maxInkTokens,
+            maxClassTokens: this.maxClassTokens,
+            maxTypeTokens: this.maxTypeTokens,
+            maxBodyTokens: this.maxBodyTokens,
             allCardNames: this.allCardNames
         };
         fs.writeFileSync(filePath, JSON.stringify(data, null, 2));

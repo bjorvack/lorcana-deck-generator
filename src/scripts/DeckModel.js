@@ -13,71 +13,109 @@ export default class DeckModel {
         this.textEmbeddingDim = 16; // NEW
     }
 
-    async initialize(vocabSize, featureDim, textVocabSize, maxTextTokens) {
+    async initialize(vocabSize, featureDim, textVocabSize, maxNameTokens, maxKeywordsTokens, maxInkTokens, maxClassTokens, maxTypeTokens, maxBodyTokens) {
         // --- Save model parameters ---
         this.vocabSize = vocabSize + 1; // +1 for padding / OOV token
         this.featureDim = featureDim;
         this.textVocabSize = textVocabSize;
-        this.maxTextTokens = maxTextTokens;
+        this.maxNameTokens = maxNameTokens;
+        this.maxKeywordsTokens = maxKeywordsTokens;
+        this.maxInkTokens = maxInkTokens;
+        this.maxClassTokens = maxClassTokens;
+        this.maxTypeTokens = maxTypeTokens;
+        this.maxBodyTokens = maxBodyTokens;
 
         // --- Define Inputs ---
-        // inputIndices: sequence of card IDs
-        const inputIndices = tf.input({
-            shape: [this.maxLen],
-            dtype: 'int32',
-            name: 'input_indices'
-        });
 
-        // inputFeatures: precomputed numeric features for each card in the sequence
+        // 1. Numeric Features
         const inputFeatures = tf.input({
             shape: [this.maxLen, this.featureDim],
             dtype: 'float32',
             name: 'input_features'
         });
 
-        // inputTextTokens: text tokens for each card in the sequence (NEW)
-        const inputTextTokens = tf.input({
-            shape: [this.maxLen, this.maxTextTokens],
+        // 2. Name Tokens
+        const inputNameTokens = tf.input({
+            shape: [this.maxLen, this.maxNameTokens],
             dtype: 'int32',
-            name: 'input_text_tokens'
+            name: 'input_name_tokens'
         });
 
-        // --- Embedding Layer for card indices ---
-        const embedding = tf.layers.embedding({
-            inputDim: this.vocabSize,
-            outputDim: this.embeddingDim,
-            inputLength: this.maxLen,
-            // maskZero: true, // Removed to avoid "gradient function not found for All" error
-            name: 'embedding'
-        }).apply(inputIndices);
+        // 3. Keywords Tokens
+        const inputKeywordsTokens = tf.input({
+            shape: [this.maxLen, this.maxKeywordsTokens],
+            dtype: 'int32',
+            name: 'input_keywords_tokens'
+        });
 
-        // --- Text Embedding Layer (NEW) ---
-        const textEmbedding = tf.layers.embedding({
+        // 4. Ink Tokens
+        const inputInkTokens = tf.input({
+            shape: [this.maxLen, this.maxInkTokens],
+            dtype: 'int32',
+            name: 'input_ink_tokens'
+        });
+
+        // 5. Classifications Tokens
+        const inputClassTokens = tf.input({
+            shape: [this.maxLen, this.maxClassTokens],
+            dtype: 'int32',
+            name: 'input_class_tokens'
+        });
+
+        // 6. Types Tokens
+        const inputTypeTokens = tf.input({
+            shape: [this.maxLen, this.maxTypeTokens],
+            dtype: 'int32',
+            name: 'input_type_tokens'
+        });
+
+        // 7. Body Text Tokens
+        const inputBodyTokens = tf.input({
+            shape: [this.maxLen, this.maxBodyTokens],
+            dtype: 'int32',
+            name: 'input_body_tokens'
+        });
+
+        // --- Embedding Layers ---
+        const sharedEmbedding = tf.layers.embedding({
             inputDim: this.textVocabSize,
             outputDim: this.textEmbeddingDim,
-            name: 'text_embedding'
-        }).apply(inputTextTokens);
+            name: 'shared_text_embedding'
+        });
 
-        // Simplify: Flatten the text embeddings per card and project down
-        // Instead of TimeDistributed(GlobalAveragePooling1D) which caused gradient issues
+        // Helper to process text input: Embedding -> Reshape -> Dense
+        const processTextInput = (input, maxTokens, namePrefix, units) => {
+            const embedding = sharedEmbedding.apply(input);
+            const flattened = tf.layers.reshape({
+                targetShape: [this.maxLen, maxTokens * this.textEmbeddingDim],
+                name: `${namePrefix}_flatten`
+            }).apply(embedding);
+            return tf.layers.dense({
+                units: units,
+                activation: 'relu',
+                name: `${namePrefix}_projection`
+            }).apply(flattened);
+        };
 
-        // Reshape to [batch, maxLen, maxTextTokens * textEmbeddingDim]
-        const textFlattener = tf.layers.reshape({
-            targetShape: [this.maxLen, this.maxTextTokens * this.textEmbeddingDim],
-            name: 'text_flatten'
-        }).apply(textEmbedding);
+        const nameProjection = processTextInput(inputNameTokens, this.maxNameTokens, 'name', 8);
+        const keywordsProjection = processTextInput(inputKeywordsTokens, this.maxKeywordsTokens, 'keywords', 12);
+        const inkProjection = processTextInput(inputInkTokens, this.maxInkTokens, 'ink', 4);
+        const classProjection = processTextInput(inputClassTokens, this.maxClassTokens, 'class', 8);
+        const typeProjection = processTextInput(inputTypeTokens, this.maxTypeTokens, 'type', 4);
+        const bodyProjection = processTextInput(inputBodyTokens, this.maxBodyTokens, 'body', 24);
 
-        // Project back to textEmbeddingDim using a Dense layer
-        const textProjection = tf.layers.dense({
-            units: this.textEmbeddingDim,
-            activation: 'relu',
-            name: 'text_projection'
-        }).apply(textFlattener);
-
-        // --- Concatenate card embedding + numeric features + text embeddings ---
+        // --- Concatenate all features ---
         const concatenated = tf.layers.concatenate({
             name: 'concat_all_features'
-        }).apply([embedding, inputFeatures, textProjection]);
+        }).apply([
+            inputFeatures,
+            nameProjection,
+            keywordsProjection,
+            inkProjection,
+            classProjection,
+            typeProjection,
+            bodyProjection
+        ]);
 
         // --- LSTM Layer ---
         const lstm = tf.layers.lstm({
@@ -95,14 +133,22 @@ export default class DeckModel {
 
         // --- Create the model ---
         this.model = tf.model({
-            inputs: [inputIndices, inputFeatures, inputTextTokens],
+            inputs: [
+                inputFeatures,
+                inputNameTokens,
+                inputKeywordsTokens,
+                inputInkTokens,
+                inputClassTokens,
+                inputTypeTokens,
+                inputBodyTokens
+            ],
             outputs: output,
             name: 'deck_predictor'
         });
 
         // --- Compile the model ---
         this.model.compile({
-            optimizer: tf.train.adam(0.001),  // default learning rate, can be customized
+            optimizer: tf.train.adam(0.001),
             loss: 'sparseCategoricalCrossentropy',
             metrics: ['accuracy']
         });
@@ -112,66 +158,102 @@ export default class DeckModel {
     }
 
 
-    async train(sequences, featureSequences, epochs, onEpochEnd) {
-        // Browser training not primarily used, but keeping signature compatible if needed
-        // For now, throwing error if text sequences not provided but model expects them
-        console.warn("Browser training with text embeddings not fully implemented yet");
+    async train(sequences, featureSequences, textSequences, epochs, onEpochEnd) {
+        // Frontend training is not typically used, but keeping signature consistent
+        console.warn("Training in frontend is not fully implemented/optimized.");
     }
 
     prepareData(sequences, featureSequences) {
-        // Browser training data prep - skipping update for now as we train in Node
         return {};
     }
 
-    async predict(cardIndices, cardFeatures, textIndices) {
+    async predict(cardIndices, cardFeatures, textInputs) {
         if (!this.model) return null;
 
-        // Prepare input indices
-        const paddedIndices = Array(this.maxLen).fill(0);
-        const startIdx = Math.max(0, this.maxLen - cardIndices.length);
-        for (let j = 0; j < Math.min(cardIndices.length, this.maxLen); j++) {
-            paddedIndices[startIdx + j] = cardIndices[j];
-        }
+        // Note: cardIndices are still passed for context (e.g. length), but NOT used as model input
 
         // Prepare input features
+        const startIdx = Math.max(0, this.maxLen - cardIndices.length);
+
         const paddedFeatures = [];
-        for (let k = 0; k < this.maxLen; k++) {
-            paddedFeatures.push(Array(this.featureDim).fill(0));
-        }
+        for (let k = 0; k < this.maxLen; k++) paddedFeatures.push(Array(this.featureDim).fill(0));
         for (let j = 0; j < Math.min(cardFeatures.length, this.maxLen); j++) {
             paddedFeatures[startIdx + j] = cardFeatures[j];
         }
 
-        // Prepare input text tokens (NEW)
-        // We need to know maxTextTokens. If not set (e.g. model loaded), try to infer or default
-        if (!this.maxTextTokens && this.model.inputs[2]) {
-            this.maxTextTokens = this.model.inputs[2].shape[2];
+        // Infer dimensions if missing (from model inputs)
+        // inputs: [features, name, keywords, ink, class, type, body]
+        if (!this.maxNameTokens && this.model.inputs.length > 1) {
+            this.maxNameTokens = this.model.inputs[1].shape[2];
+            this.maxKeywordsTokens = this.model.inputs[2].shape[2];
+            this.maxInkTokens = this.model.inputs[3].shape[2];
+            this.maxClassTokens = this.model.inputs[4].shape[2];
+            this.maxTypeTokens = this.model.inputs[5].shape[2];
+            this.maxBodyTokens = this.model.inputs[6].shape[2];
         }
-        const maxTokens = this.maxTextTokens || 20; // Default fallback
 
-        const paddedTextTokens = [];
+        const paddedName = [];
+        const paddedKeywords = [];
+        const paddedInk = [];
+        const paddedClass = [];
+        const paddedType = [];
+        const paddedBody = [];
+
         for (let k = 0; k < this.maxLen; k++) {
-            paddedTextTokens.push(Array(maxTokens).fill(0));
+            paddedName.push(Array(this.maxNameTokens).fill(0));
+            paddedKeywords.push(Array(this.maxKeywordsTokens).fill(0));
+            paddedInk.push(Array(this.maxInkTokens).fill(0));
+            paddedClass.push(Array(this.maxClassTokens).fill(0));
+            paddedType.push(Array(this.maxTypeTokens).fill(0));
+            paddedBody.push(Array(this.maxBodyTokens).fill(0));
         }
 
-        if (textIndices) {
-            for (let j = 0; j < Math.min(textIndices.length, this.maxLen); j++) {
-                paddedTextTokens[startIdx + j] = textIndices[j];
+        if (textInputs) {
+            for (let j = 0; j < Math.min(textInputs.length, this.maxLen); j++) {
+                const textObj = textInputs[j];
+
+                const padArray = (arr, max) => {
+                    const sliced = arr.slice(0, max);
+                    return sliced.concat(Array(max - sliced.length).fill(0));
+                };
+
+                paddedName[startIdx + j] = padArray(textObj.name, this.maxNameTokens);
+                paddedKeywords[startIdx + j] = padArray(textObj.keywords, this.maxKeywordsTokens);
+                paddedInk[startIdx + j] = padArray(textObj.ink, this.maxInkTokens);
+                paddedClass[startIdx + j] = padArray(textObj.classifications, this.maxClassTokens);
+                paddedType[startIdx + j] = padArray(textObj.types, this.maxTypeTokens);
+                paddedBody[startIdx + j] = padArray(textObj.text, this.maxBodyTokens);
             }
         }
 
-        const inputIndicesTensor = tf.tensor2d([paddedIndices], [1, this.maxLen]);
         const inputFeaturesTensor = tf.tensor3d([paddedFeatures], [1, this.maxLen, this.featureDim]);
-        const inputTextTensor = tf.tensor3d([paddedTextTokens], [1, this.maxLen, maxTokens]);
+        const inputNameTensor = tf.tensor3d([paddedName], [1, this.maxLen, this.maxNameTokens]);
+        const inputKeywordsTensor = tf.tensor3d([paddedKeywords], [1, this.maxLen, this.maxKeywordsTokens]);
+        const inputInkTensor = tf.tensor3d([paddedInk], [1, this.maxLen, this.maxInkTokens]);
+        const inputClassTensor = tf.tensor3d([paddedClass], [1, this.maxLen, this.maxClassTokens]);
+        const inputTypeTensor = tf.tensor3d([paddedType], [1, this.maxLen, this.maxTypeTokens]);
+        const inputBodyTensor = tf.tensor3d([paddedBody], [1, this.maxLen, this.maxBodyTokens]);
 
-        const prediction = this.model.predict([inputIndicesTensor, inputFeaturesTensor, inputTextTensor]);
+        const prediction = this.model.predict([
+            inputFeaturesTensor,
+            inputNameTensor,
+            inputKeywordsTensor,
+            inputInkTensor,
+            inputClassTensor,
+            inputTypeTensor,
+            inputBodyTensor
+        ]);
 
         // Get probabilities
         const probabilities = await prediction.data();
 
-        inputIndicesTensor.dispose();
         inputFeaturesTensor.dispose();
-        inputTextTensor.dispose();
+        inputNameTensor.dispose();
+        inputKeywordsTensor.dispose();
+        inputInkTensor.dispose();
+        inputClassTensor.dispose();
+        inputTypeTensor.dispose();
+        inputBodyTensor.dispose();
         prediction.dispose();
 
         return probabilities;
@@ -179,25 +261,43 @@ export default class DeckModel {
 
     async saveModel(path) {
         if (!this.model) return;
+        if (!path.startsWith('file://')) {
+            path = `file://${path}`;
+        }
         await this.model.save(path);
     }
 
     async loadModel(path) {
+        // Ensure path starts with file:// (for browser this might be http://... but let's assume local for now or handle appropriately)
+        // In browser, tf.loadLayersModel usually takes a URL.
         this.model = await tf.loadLayersModel(path);
-        // Recompile model after loading to ensure it's ready for training/prediction
         this.model.compile({
             optimizer: 'adam',
             loss: 'sparseCategoricalCrossentropy',
             metrics: ['accuracy']
         });
+
         // Recover dimensions from model input shape
-        // model.inputs[1].shape is [null, 60, featureDim]
-        if (this.model.inputs && this.model.inputs.length > 1) {
-            this.featureDim = this.model.inputs[1].shape[2];
+        if (this.model.inputs && this.model.inputs.length > 0) {
+            this.featureDim = this.model.inputs[0].shape[2];
         }
-        // model.inputs[2].shape is [null, 60, maxTextTokens]
+        if (this.model.inputs && this.model.inputs.length > 1) {
+            this.maxNameTokens = this.model.inputs[1].shape[2];
+        }
         if (this.model.inputs && this.model.inputs.length > 2) {
-            this.maxTextTokens = this.model.inputs[2].shape[2];
+            this.maxKeywordsTokens = this.model.inputs[2].shape[2];
+        }
+        if (this.model.inputs && this.model.inputs.length > 3) {
+            this.maxInkTokens = this.model.inputs[3].shape[2];
+        }
+        if (this.model.inputs && this.model.inputs.length > 4) {
+            this.maxClassTokens = this.model.inputs[4].shape[2];
+        }
+        if (this.model.inputs && this.model.inputs.length > 5) {
+            this.maxTypeTokens = this.model.inputs[5].shape[2];
+        }
+        if (this.model.inputs && this.model.inputs.length > 6) {
+            this.maxBodyTokens = this.model.inputs[6].shape[2];
         }
         this.model.summary();
     }

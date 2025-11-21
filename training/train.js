@@ -6,7 +6,7 @@ const TrainingManager = require('./src/TrainingManager');
 
         // Parse command line arguments
         const args = process.argv.slice(2);
-        let epochs = 10;
+        let epochs = 20;
         let fullRetrain = false;
 
         for (const arg of args) {

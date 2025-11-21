@@ -7,6 +7,11 @@ const resistRegex = /Resist \+(\d+) \(Damage dealt to this character is reduced 
 const challengerRegex = /Challenger \+(\d+) \(While challenging, this character gets \+(\d) (?:\w+)?(?:{S})?\.\)/
 const rushRegex = /Rush \(This character can challenge the turn they[’'‘]re played\.\)/
 
+// Max count regexes
+const maxCopiesRegex = /You may have up to (\d+) copies/
+const anyNumberRegex = /You may have any number of cards named/
+const limitCopiesRegex = /You may only have (\d+) copies/
+
 const shiftRegexes = [
     /Shift \d+ \(You may pay \d+ {i} to play this on top of one of your characters named .*\.\)/,
     /Shift: Discard an? .+ card \(You may discard an? .+ card to play this on top of one of your characters named .+\.\)/,
@@ -16,7 +21,6 @@ const shiftRegexes = [
 const keywordExplanationRegex = /\([^)]+\)/
 
 const morphId = 'crd_be70d689335140bdadcde5f5356e169d'
-const dalmatianPuppyId = 'crd_97f8be5e176144378d58823c6f9c29c7'
 
 module.exports = class Card {
     constructor(data) {
@@ -91,7 +95,24 @@ module.exports = class Card {
     }
 
     get maxAmount() {
-        return this.id === dalmatianPuppyId ? 60 : 4
+        // Check for "any number of copies" (e.g. Microbots)
+        if (anyNumberRegex.test(this.text)) {
+            return 99
+        }
+
+        // Check for specific limit "up to X copies" (e.g. Dalmatian Puppy)
+        const maxMatch = this.text.match(maxCopiesRegex)
+        if (maxMatch) {
+            return parseInt(maxMatch[1])
+        }
+
+        // Check for restrictive limit "only have X copies" (e.g. The Glass Slipper)
+        const limitMatch = this.text.match(limitCopiesRegex)
+        if (limitMatch) {
+            return parseInt(limitMatch[1])
+        }
+
+        return 4
     }
 
     get singCost() {
