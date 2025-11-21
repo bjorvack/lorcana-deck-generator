@@ -225,9 +225,62 @@ module.exports = class TrainingManager {
         }
 
         this.log('Training model...');
-        await this.model.train(sequences, featureSequences, textSequences, epochs, (epoch, logs) => {
-            this.log(`Epoch ${epoch + 1}/${epochs}: loss = ${logs.loss.toFixed(4)}`);
-        });
+
+        // Helper to shuffle data arrays in sync
+        const shuffleData = (seqs, feats, texts) => {
+            const indices = seqs.map((_, i) => i);
+            for (let i = indices.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [indices[i], indices[j]] = [indices[j], indices[i]];
+            }
+            return {
+                shuffledSeqs: indices.map(i => seqs[i]),
+                shuffledFeats: indices.map(i => feats[i]),
+                shuffledTexts: indices.map(i => texts[i])
+            };
+        };
+
+        // If dataset is too large, train in batches to avoid memory issues
+        const MAX_BATCH_SIZE = 2000;
+        if (sequences.length > MAX_BATCH_SIZE) {
+            this.log(`Large dataset detected (${sequences.length} sequences). Training in batches of ${MAX_BATCH_SIZE}...`);
+
+            // Shuffle data once before training
+            this.log('Shuffling training data...');
+            const { shuffledSeqs, shuffledFeats, shuffledTexts } = shuffleData(sequences, featureSequences, textSequences);
+
+            const numBatches = Math.ceil(sequences.length / MAX_BATCH_SIZE);
+
+            // Outer loop: Epochs
+            for (let epoch = 0; epoch < epochs; epoch++) {
+                this.log(`Global Epoch ${epoch + 1}/${epochs}`);
+
+                // Inner loop: Batches
+                for (let batchIdx = 0; batchIdx < numBatches; batchIdx++) {
+                    const start = batchIdx * MAX_BATCH_SIZE;
+                    const end = Math.min((batchIdx + 1) * MAX_BATCH_SIZE, sequences.length);
+
+                    // this.log(`  Batch ${batchIdx + 1}/${numBatches} (sequences ${start}-${end})...`);
+
+                    const batchSequences = shuffledSeqs.slice(start, end);
+                    const batchFeatures = shuffledFeats.slice(start, end);
+                    const batchText = shuffledTexts.slice(start, end);
+
+                    // Train for 1 epoch per batch
+                    await this.model.train(batchSequences, batchFeatures, batchText, 1, (e, logs) => {
+                        // Only log every 5th batch to reduce noise
+                        if (batchIdx % 5 === 0 || batchIdx === numBatches - 1) {
+                            this.log(`  Batch ${batchIdx + 1}/${numBatches}: loss = ${logs.loss.toFixed(4)}`);
+                        }
+                    });
+                }
+            }
+        } else {
+            // Normal training for smaller datasets
+            await this.model.train(sequences, featureSequences, textSequences, epochs, (epoch, logs) => {
+                this.log(`Epoch ${epoch + 1}/${epochs}: loss = ${logs.loss.toFixed(4)}`);
+            });
+        }
 
         this.log('Training complete!');
         await this.saveModel();
@@ -492,6 +545,12 @@ module.exports = class TrainingManager {
         for (const idx of deckIndices) {
             cardCounts.set(idx, (cardCounts.get(idx) || 0) + 1);
         }
+
+        // CRITICAL FIX: Add unique card count as first feature
+        // Tournament decks typically have 15-20 unique cards
+        const uniqueCardCount = cardCounts.size;
+        features.push(uniqueCardCount / 20); // Normalize by typical deck diversity
+
         for (const count of cardCounts.values()) {
             if (count === 1) copyDistribution[0]++;
             else if (count === 2) copyDistribution[1]++;
@@ -581,6 +640,63 @@ module.exports = class TrainingManager {
     }
 
     /**
+     * Extract deck features including aggregated text embeddings
+     * Returns: [numeric features (38), mean embeddings (32), max embeddings (32), variance embeddings (32)]
+     */
+    extractDeckFeaturesWithEmbeddings(deckIndices) {
+        // Get numeric features
+        const numericFeatures = this.extractDeckFeatures(deckIndices);
+
+        // Get embeddings for each card
+        const embeddings = [];
+        for (const idx of deckIndices) {
+            const card = this.indexMap.get(idx);
+            if (!card || !card.embedding) continue;
+            embeddings.push(card.embedding);
+        }
+
+        if (embeddings.length === 0) {
+            // No embeddings available, return zeros
+            const embeddingDim = 32;
+            return numericFeatures.concat(
+                Array(embeddingDim).fill(0), // mean
+                Array(embeddingDim).fill(0), // max
+                Array(embeddingDim).fill(0)  // variance
+            );
+        }
+
+        const embeddingDim = embeddings[0].length;
+        const meanEmbedding = Array(embeddingDim).fill(0);
+        const maxEmbedding = Array(embeddingDim).fill(-Infinity);
+
+        // Compute mean and max
+        for (const emb of embeddings) {
+            for (let i = 0; i < embeddingDim; i++) {
+                meanEmbedding[i] += emb[i];
+                maxEmbedding[i] = Math.max(maxEmbedding[i], emb[i]);
+            }
+        }
+        for (let i = 0; i < embeddingDim; i++) {
+            meanEmbedding[i] /= embeddings.length;
+        }
+
+        // Compute variance
+        const varianceEmbedding = Array(embeddingDim).fill(0);
+        for (const emb of embeddings) {
+            for (let i = 0; i < embeddingDim; i++) {
+                const diff = emb[i] - meanEmbedding[i];
+                varianceEmbedding[i] += diff * diff;
+            }
+        }
+        for (let i = 0; i < embeddingDim; i++) {
+            varianceEmbedding[i] /= embeddings.length;
+        }
+
+        return numericFeatures.concat(meanEmbedding, maxEmbedding, varianceEmbedding);
+    }
+
+
+    /**
      * Generate fake decks for validation model training
      */
     generateFakeDeck(strategy = 'random') {
@@ -588,7 +704,7 @@ module.exports = class TrainingManager {
         const deckSize = 60;
 
         if (strategy === 'pure_random') {
-            // Strategy A: Pure random (40% of fakes)
+            // Strategy A: Pure random (30% of fakes)
             const cardPool = Array.from(this.cardMap.values());
             const cardCounts = new Map();
 
@@ -604,7 +720,7 @@ module.exports = class TrainingManager {
                 }
             }
         } else if (strategy === 'ink_constrained') {
-            // Strategy B: Ink-constrained random (30% of fakes)
+            // Strategy B: Ink-constrained random (25% of fakes)
             const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
             const chosenInks = [];
             const inkCount = Math.random() < 0.5 ? 1 : 2;
@@ -633,7 +749,7 @@ module.exports = class TrainingManager {
                 }
             }
         } else if (strategy === 'rule_broken') {
-            // Strategy C: Rule-broken DeckGenerator style (30% of fakes)
+            // Strategy C: Rule-broken DeckGenerator style (25% of fakes)
             // Use flat mana curve and allow excessive singletons
             const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
             const chosenInks = [];
@@ -691,17 +807,36 @@ module.exports = class TrainingManager {
                 const randomIdx = cardPool[Math.floor(Math.random() * cardPool.length)];
                 deckIndices.push(randomIdx);
             }
-        }
+        } else if (strategy === 'low_diversity') {
+            // Strategy D: Low diversity - only 1-5 unique cards (20% of fakes)
+            // This catches decks like "60 Dalmatian Puppies"
+            const cardPool = Array.from(this.cardMap.values());
+            const numUniqueCards = Math.floor(Math.random() * 5) + 1; // 1-5 unique cards
+            const selectedCards = [];
 
+            // Pick random unique cards
+            while (selectedCards.length < numUniqueCards) {
+                const randomIdx = cardPool[Math.floor(Math.random() * cardPool.length)];
+                if (!selectedCards.includes(randomIdx)) {
+                    selectedCards.push(randomIdx);
+                }
+            }
+
+            // Fill deck by repeating these cards
+            for (let i = 0; i < deckSize; i++) {
+                const randomCard = selectedCards[Math.floor(Math.random() * selectedCards.length)];
+                deckIndices.push(randomCard);
+            }
+        }
         return deckIndices.slice(0, deckSize);
     }
 
     /**
-     * Generate dataset for validation model training
+     * Prepare validation dataset with aggregated embedding features
      */
     prepareValidationDataset() {
         this.log('Preparing validation dataset...');
-        const deckFeatures = [];
+        const features = [];
         const labels = [];
 
         // Get real decks from training data
@@ -720,46 +855,38 @@ module.exports = class TrainingManager {
                 }
 
                 if (deckIndices.length >= 60) {
-                    const features = this.extractDeckFeatures(deckIndices.slice(0, 60));
-                    deckFeatures.push(features);
+                    const deckFeatures = this.extractDeckFeaturesWithEmbeddings(deckIndices.slice(0, 60));
+                    features.push(deckFeatures);
                     labels.push(1); // Real deck
                     realDeckCount++;
                 }
             }
         }
 
-        this.log(`Extracted features from ${realDeckCount} real decks`);
+        this.log(`Extracted ${realDeckCount} real decks`);
 
-        // Generate fake decks (equal number to real decks)
-        const strategies = ['pure_random', 'ink_constrained', 'rule_broken'];
+        // Generate fake decks (equal number to real decks) using 4 strategies
+        const strategies = ['pure_random', 'ink_constrained', 'rule_broken', 'low_diversity'];
         const strategyCounts = {
-            'pure_random': Math.floor(realDeckCount * 0.4),
-            'ink_constrained': Math.floor(realDeckCount * 0.3),
-            'rule_broken': Math.floor(realDeckCount * 0.3)
+            'pure_random': Math.floor(realDeckCount * 0.30),
+            'ink_constrained': Math.floor(realDeckCount * 0.25),
+            'rule_broken': Math.floor(realDeckCount * 0.25),
+            'low_diversity': Math.floor(realDeckCount * 0.20)
         };
 
         for (const [strategy, count] of Object.entries(strategyCounts)) {
             for (let i = 0; i < count; i++) {
                 const fakeDeck = this.generateFakeDeck(strategy);
-                const features = this.extractDeckFeatures(fakeDeck);
-                deckFeatures.push(features);
+                const deckFeatures = this.extractDeckFeaturesWithEmbeddings(fakeDeck.slice(0, 60));
+                features.push(deckFeatures);
                 labels.push(0); // Fake deck
             }
         }
 
         this.log(`Generated ${realDeckCount} fake decks`);
-        this.log(`Total dataset size: ${deckFeatures.length} decks`);
+        this.log(`Total dataset size: ${features.length} decks`);
+        this.log(`Feature dimension: ${features[0].length} (38 numeric + 96 embedding stats)`);
 
-        // Shuffle the dataset
-        const combined = deckFeatures.map((features, i) => ({ features, label: labels[i] }));
-        for (let i = combined.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [combined[i], combined[j]] = [combined[j], combined[i]];
-        }
-
-        return {
-            features: combined.map(item => item.features),
-            labels: combined.map(item => item.label)
-        };
+        return { features, labels };
     }
 };

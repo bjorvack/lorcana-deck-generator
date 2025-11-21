@@ -215,8 +215,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function updateValidationScore() {
+        console.log('updateValidationScore called, deck length:', currentDeck.length);
+
         const validationContainer = document.querySelector('[data-role="validation-score"]');
-        if (!validationContainer) return;
+        if (!validationContainer) {
+            console.warn('Validation container not found');
+            return;
+        }
 
         if (currentDeck.length < 60) {
             validationContainer.innerHTML = `
@@ -231,40 +236,53 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        const result = await manager.validateDeck(currentDeck);
-        if (!result) {
-            validationContainer.innerHTML = '';
-            return;
-        }
+        try {
+            console.log('Calling manager.validateDeck...');
+            const result = await manager.validateDeck(currentDeck);
+            console.log('Validation result received:', result);
 
-        const scorePercent = Math.round(result.score * 100);
-        const gradeClass = result.grade === 'A' ? 'grade-a' :
-            result.grade === 'B' ? 'grade-b' :
-                result.grade === 'C' ? 'grade-c' : 'grade-d';
+            if (!result) {
+                validationContainer.innerHTML = '';
+                return;
+            }
 
-        let breakdownHTML = '';
-        if (result.breakdown && result.breakdown.length > 0) {
-            breakdownHTML = '<div class="validation-breakdown">';
-            breakdownHTML += '<h4>Issues Detected:</h4>';
-            breakdownHTML += '<ul>';
-            result.breakdown.forEach(issue => {
-                const severityClass = issue.severity === 'high' ? 'severity-high' : 'severity-medium';
-                breakdownHTML += `<li class="${severityClass}"><strong>${issue.issue}:</strong> ${issue.message}</li>`;
-            });
-            breakdownHTML += '</ul></div>';
-        }
+            const scorePercent = Math.round(result.score * 100);
+            const gradeClass = result.grade === 'A' ? 'grade-a' :
+                result.grade === 'B' ? 'grade-b' :
+                    result.grade === 'C' ? 'grade-c' : 'grade-d';
 
-        validationContainer.innerHTML = `
-            <div class="validation-card">
-                <div class="validation-header">
-                    <h3>Deck Realism</h3>
-                    <span class="validation-grade ${gradeClass}">${result.grade}</span>
+            let breakdownHTML = '';
+            if (result.breakdown && result.breakdown.length > 0) {
+                breakdownHTML = '<div class="validation-breakdown">';
+                breakdownHTML += '<h4>Issues Detected:</h4>';
+                breakdownHTML += '<ul>';
+                result.breakdown.forEach(issue => {
+                    const severityClass = issue.severity === 'high' ? 'severity-high' : 'severity-medium';
+                    breakdownHTML += `<li class="${severityClass}"><strong>${issue.issue}:</strong> ${issue.message}</li>`;
+                });
+                breakdownHTML += '</ul></div>';
+            }
+
+            validationContainer.innerHTML = `
+                <div class="validation-card">
+                    <div class="validation-header">
+                        <h3>Deck Realism</h3>
+                        <span class="validation-grade ${gradeClass}">${result.grade}</span>
+                    </div>
+                    <div class="validation-score">${scorePercent}%</div>
+                    <div class="validation-message">${result.message}</div>
+                    ${breakdownHTML}
                 </div>
-                <div class="validation-score"
->${scorePercent}%</div>
-                <div class="validation-message">${result.message}</div>
-                ${breakdownHTML}
-            </div>
-        `;
+            `;
+        } catch (error) {
+            console.error('Error in updateValidationScore:', error);
+            validationContainer.innerHTML = `
+                <div class="validation-card">
+                    <div class="validation-message" style="color: #ef4444;">
+                        Error loading validation: ${error.message}
+                    </div>
+                </div>
+            `;
+        }
     }
 });

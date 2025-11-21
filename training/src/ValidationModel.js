@@ -1,68 +1,79 @@
 const tf = require('@tensorflow/tfjs-node');
 
+/**
+ * Validation Model - Set-based binary classifier
+ * Aggregates embeddings across entire deck (order-independent)
+ * to learn card co-occurrence patterns
+ */
 module.exports = class ValidationModel {
     constructor() {
         this.model = null;
-        this.featureDim = 0;
-        this.thresholds = {
-            excellent: 0.85,
-            good: 0.70,
-            fair: 0.50,
-            poor: 0
-        };
+        this.embeddingDim = 32;
     }
 
-    async initialize(featureDim) {
-        this.featureDim = featureDim;
+    async initialize(textVocabSize, numericFeatureDim) {
+        this.textVocabSize = textVocabSize;
+        this.numericFeatureDim = numericFeatureDim;
 
-        // Build a feedforward binary classifier
+        console.log('\n=== Validation Model Architecture ===');
+        console.log(`Text vocabulary size: ${this.textVocabSize}`);
+        console.log(`Numeric feature dimension: ${this.numericFeatureDim}`);
+        console.log(`Embedding dimension: ${this.embeddingDim}`);
+
+        // Input: deck-level aggregated features
+        // This will include:
+        // - Mean/max/var of text embeddings across deck
+        // - Statistical features (mana curve, type dist, etc.)
+        const inputDim = this.numericFeatureDim + (this.embeddingDim * 3); // mean + max + variance
+
         const input = tf.input({
-            shape: [this.featureDim],
+            shape: [inputDim],
             dtype: 'float32',
             name: 'deck_features'
         });
 
-        // Hidden layers with dropout for regularization
-        let hidden = tf.layers.dense({
+        // Dense layers with L2 regularization to prevent overfitting on embeddings
+        let x = tf.layers.dense({
             units: 128,
             activation: 'relu',
+            kernelRegularizer: tf.regularizers.l2({ l2: 0.01 }),
             name: 'dense_1'
         }).apply(input);
 
-        hidden = tf.layers.dropout({
-            rate: 0.3,
+        x = tf.layers.dropout({
+            rate: 0.5,  // Increased from 0.3
             name: 'dropout_1'
-        }).apply(hidden);
+        }).apply(x);
 
-        hidden = tf.layers.dense({
+        x = tf.layers.dense({
             units: 64,
             activation: 'relu',
+            kernelRegularizer: tf.regularizers.l2({ l2: 0.01 }),
             name: 'dense_2'
-        }).apply(hidden);
+        }).apply(x);
 
-        hidden = tf.layers.dropout({
-            rate: 0.3,
+        x = tf.layers.dropout({
+            rate: 0.5,  // Increased from 0.3
             name: 'dropout_2'
-        }).apply(hidden);
+        }).apply(x);
 
-        hidden = tf.layers.dense({
+        x = tf.layers.dense({
             units: 32,
             activation: 'relu',
+            kernelRegularizer: tf.regularizers.l2({ l2: 0.01 }),
             name: 'dense_3'
-        }).apply(hidden);
+        }).apply(x);
 
-        // Output layer: sigmoid for binary classification (real vs fake)
         const output = tf.layers.dense({
             units: 1,
             activation: 'sigmoid',
             name: 'output'
-        }).apply(hidden);
+        }).apply(x);
 
-        // Create and compile the model
         this.model = tf.model({
             inputs: input,
             outputs: output,
-            name: 'deck_validator'
+            name: 'validation_model'
         });
 
         this.model.compile({
@@ -74,181 +85,148 @@ module.exports = class ValidationModel {
         this.model.summary();
     }
 
-    async train(deckFeatures, labels, epochs = 20, onEpochEnd) {
-        if (!this.model) {
-            throw new Error("Model not initialized");
-        }
+    async train(features, labels, epochs = 20) {
+        console.log('\nTraining validation model...');
+        console.log(`Training on ${labels.length} decks...`);
 
-        console.log(`Training on ${deckFeatures.length} decks...`);
+        const featuresTensor = tf.tensor2d(features);
+        const labelsTensor = tf.tensor2d(labels.map(l => [l]));
 
-        const xs = tf.tensor2d(deckFeatures);
-        const ys = tf.tensor2d(labels.map(l => [l])); // Reshape to [n, 1]
+        // Split train/val
+        const splitIdx = Math.floor(labels.length * 0.8);
 
-        // Early stopping
-        let bestValLoss = Infinity;
-        let patienceCounter = 0;
-        const patience = 5;
-
-        await this.model.fit(xs, ys, {
-            epochs: epochs,
-            batchSize: 32,
-            validationSplit: 0.2,
-            shuffle: true,
-            callbacks: {
-                onEpochEnd: (epoch, logs) => {
-                    if (onEpochEnd) onEpochEnd(epoch, logs);
-
-                    // Early stopping logic
-                    if (logs.val_loss < bestValLoss) {
-                        bestValLoss = logs.val_loss;
-                        patienceCounter = 0;
-                    } else {
-                        patienceCounter++;
-                        if (patienceCounter >= patience) {
-                            console.log(`Early stopping at epoch ${epoch + 1}`);
-                            this.model.stopTraining = true;
-                        }
+        const history = await this.model.fit(
+            featuresTensor.slice([0, 0], [splitIdx, features[0].length]),
+            labelsTensor.slice([0, 0], [splitIdx, 1]),
+            {
+                epochs: epochs,
+                batchSize: 32,
+                validationData: [
+                    featuresTensor.slice([splitIdx, 0], [labels.length - splitIdx, features[0].length]),
+                    labelsTensor.slice([splitIdx, 0], [labels.length - splitIdx, 1])
+                ],
+                callbacks: {
+                    onEpochEnd: (epoch, logs) => {
+                        console.log(`Epoch ${epoch + 1}/${epochs}: loss = ${logs.loss.toFixed(4)}, acc = ${logs.acc.toFixed(4)}, val_loss = ${logs.val_loss.toFixed(4)}, val_acc = ${logs.val_acc.toFixed(4)}`);
                     }
                 }
             }
-        });
+        );
 
-        xs.dispose();
-        ys.dispose();
+        featuresTensor.dispose();
+        labelsTensor.dispose();
+
+        console.log('Training complete!');
+        return history;
     }
 
-    async evaluate(deckFeatures) {
-        if (!this.model) return null;
+    async evaluate(features) {
+        // First, check for explicit rule-based failures
+        const uniqueCardDiversity = features[0]; // First feature is unique card count / 20
+        const estimatedUniqueCards = Math.round(uniqueCardDiversity * 20);
 
-        const input = tf.tensor2d([deckFeatures]);
-        const prediction = this.model.predict(input);
-        const score = (await prediction.data())[0];
+        // Hard rule: if fewer than 10 unique cards, immediately fail
+        if (estimatedUniqueCards < 10) {
+            console.log(`[RULE] Low diversity detected: ${estimatedUniqueCards} unique cards - returning 0.0`);
+            return 0.0; // Override neural network - this is clearly fake
+        }
 
-        input.dispose();
+        // Otherwise, use neural network prediction
+        const featuresTensor = tf.tensor2d([features]);
+        const prediction = this.model.predict(featuresTensor);
+        const score = await prediction.data();
+        featuresTensor.dispose();
         prediction.dispose();
-
-        return score;
+        return score[0];
     }
 
-    async evaluateWithBreakdown(deckFeatures, featureNames) {
-        const score = await this.evaluate(deckFeatures);
+    async evaluateWithBreakdown(features) {
+        const score = await this.evaluate(features);
+        const grade = this.getGrade(score);
+        const message = this.getMessage(score);
 
-        // Analyze which features contribute to low score
-        const breakdown = this.analyzeFeatures(deckFeatures, featureNames);
+        // Analyze features for breakdown
+        const breakdown = this.analyzeFeatures(features);
 
-        return {
-            score,
-            grade: this.getGrade(score),
-            breakdown
-        };
+        return { score, grade, message, breakdown };
     }
 
-    analyzeFeatures(deckFeatures, featureNames) {
-        // This method identifies problematic features
-        // Feature indices (based on extractDeckFeatures):
-        // 0-9: card count distribution (0-1 copies, 1-2, 2-3, 3-4, 4)
-        // 10-19: mana curve (costs 1-10)
-        // 20-23: type distribution (character, action, item, location)
-        // 24-29: ink distribution
-        // 30: inkable ratio
-        // 31+: synergy metrics, keyword distribution, etc.
+    analyzeFeatures(features) {
+        // Features are: [numeric features (38), mean embeddings (32), max embeddings (32), variance embeddings (32)]
+        const numericStart = 0;
+        const numericEnd = this.numericFeatureDim;
+        const varStart = numericEnd + (this.embeddingDim * 2);
+
+        const numericFeatures = features.slice(numericStart, numericEnd);
+        const embeddingVariance = features.slice(varStart, varStart + this.embeddingDim);
 
         const issues = [];
 
-        // Check singleton ratio (too many cards with 1 copy)
-        const singletonRatio = deckFeatures[0]; // 0-1 copy bucket
+        // Check unique card diversity (feature 0)
+        const uniqueCardDiversity = numericFeatures[0];
+        const estimatedUniqueCards = Math.round(uniqueCardDiversity * 20);
+        if (estimatedUniqueCards < 10) {
+            issues.push({
+                issue: 'Very low card diversity',
+                severity: 'high',
+                message: `Only ~${estimatedUniqueCards} unique cards (expected 15-20)`
+            });
+        }
+
+        // Check embedding variance (low variance = repetitive cards)
+        const avgVariance = embeddingVariance.reduce((a, b) => a + b, 0) / embeddingVariance.length;
+        if (avgVariance < 0.01) {
+            issues.push({
+                issue: 'Repetitive card patterns',
+                severity: 'high',
+                message: 'Cards are too similar (detected via semantic analysis)'
+            });
+        }
+
+        // Check singleton ratio
+        const singletonRatio = numericFeatures[1];
         if (singletonRatio > 0.3) {
             issues.push({
                 issue: 'High singleton count',
                 severity: 'high',
-                message: `${Math.round(singletonRatio * 100)}% of deck has only 1 copy (expected <30%)`
+                message: `${Math.round(singletonRatio * 100)}% of unique cards have only 1 copy`
             });
         }
 
-        // Check mana curve variance (should be peaked, not flat)
-        const manaCurve = deckFeatures.slice(10, 20);
-        const curveVariance = this.calculateVariance(manaCurve);
-        if (curveVariance < 0.005) {
+        // Check inkable ratio (warn only if < 50%)
+        const inkableRatio = numericFeatures[26];
+        if (inkableRatio < 0.5) {
             issues.push({
-                issue: 'Flat mana curve',
+                issue: 'Low inkable ratio',
                 severity: 'medium',
-                message: 'Mana curve is too uniform (expected bell curve)'
-            });
-        }
-
-        // Check inkable ratio (should be 50-70%)
-        const inkableRatio = deckFeatures[30];
-        if (inkableRatio < 0.4 || inkableRatio > 0.8) {
-            issues.push({
-                issue: 'Unusual inkable ratio',
-                severity: 'medium',
-                message: `${Math.round(inkableRatio * 100)}% inkable cards (expected 50-70%)`
-            });
-        }
-
-        // Check type distribution (should have characters)
-        const characterRatio = deckFeatures[20];
-        if (characterRatio < 0.3) {
-            issues.push({
-                issue: 'Low character count',
-                severity: 'high',
-                message: `Only ${Math.round(characterRatio * 100)}% characters (expected >30%)`
+                message: `Only ${Math.round(inkableRatio * 100)}% inkable cards (recommended at least 50%)`
             });
         }
 
         return issues;
     }
 
-    calculateVariance(arr) {
-        const mean = arr.reduce((sum, val) => sum + val, 0) / arr.length;
-        const squaredDiffs = arr.map(val => Math.pow(val - mean, 2));
-        return squaredDiffs.reduce((sum, val) => sum + val, 0) / arr.length;
-    }
-
     getGrade(score) {
-        if (score >= this.thresholds.excellent) return 'A';
-        if (score >= this.thresholds.good) return 'B';
-        if (score >= this.thresholds.fair) return 'C';
+        if (score >= 0.85) return 'A';
+        if (score >= 0.70) return 'B';
+        if (score >= 0.50) return 'C';
         return 'D';
     }
 
     getMessage(score) {
-        if (score >= this.thresholds.excellent) {
-            return 'This deck looks authentic!';
-        } else if (score >= this.thresholds.good) {
-            return 'This deck looks realistic with minor issues';
-        } else if (score >= this.thresholds.fair) {
-            return 'This deck has some unrealistic patterns';
-        } else {
-            return 'This deck seems randomly generated';
-        }
+        if (score >= 0.85) return 'This deck looks authentic!';
+        if (score >= 0.70) return 'This deck looks realistic with minor issues';
+        if (score >= 0.50) return 'This deck has some unrealistic patterns';
+        return 'This deck seems randomly generated';
     }
 
     async saveModel(path) {
-        if (!this.model) return;
-        if (!path.startsWith('file://')) {
-            path = `file://${path}`;
-        }
-        await this.model.save(path);
+        await this.model.save(`file://${path}`);
         console.log(`Validation model saved to ${path}`);
     }
 
     async loadModel(path) {
-        if (!path.startsWith('file://')) {
-            path = `file://${path}`;
-        }
-        this.model = await tf.loadLayersModel(path);
-        this.model.compile({
-            optimizer: 'adam',
-            loss: 'binaryCrossentropy',
-            metrics: ['accuracy']
-        });
-
-        // Recover feature dimension from model input shape
-        if (this.model.inputs && this.model.inputs.length > 0) {
-            this.featureDim = this.model.inputs[0].shape[1];
-        }
-
-        this.model.summary();
+        this.model = await tf.loadLayersModel(`file://${path}/model.json`);
+        console.log(`Validation model loaded from ${path}`);
     }
 };

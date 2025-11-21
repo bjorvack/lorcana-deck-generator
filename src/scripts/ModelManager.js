@@ -477,8 +477,45 @@ export default class ModelManager {
     }
 
     /**
+     * Compute a simple embedding for a card based on its text properties
+     * Returns a 32-dimensional vector
+     */
+    computeCardEmbedding(card) {
+        const embeddingDim = 32;
+        const embedding = new Array(embeddingDim).fill(0);
+
+        // Combine all text properties
+        const textParts = [
+            card.name || '',
+            card.keywords ? card.keywords.join(' ') : '',
+            card.classifications ? card.classifications.join(' ') : '',
+            card.types ? card.types.join(' ') : '',
+            card.ink || '',
+            card.text || ''
+        ];
+        const combinedText = textParts.join(' ').toLowerCase();
+
+        // Simple character-based hashing into embedding dimensions
+        for (let i = 0; i < combinedText.length; i++) {
+            const charCode = combinedText.charCodeAt(i);
+            const bucket = charCode % embeddingDim;
+            embedding[bucket] += 1.0;
+        }
+
+        // Normalize
+        const norm = Math.sqrt(embedding.reduce((sum, val) => sum + val * val, 0));
+        if (norm > 0) {
+            for (let i = 0; i < embeddingDim; i++) {
+                embedding[i] /= norm;
+            }
+        }
+
+        return embedding;
+    }
+
+    /**
      * Extract deck-level features for validation
-     * Same logic as TrainingManager.extractDeckFeatures
+     * Returns 134 features: 38 numeric + 96 embedding stats (mean/max/variance)
      */
     extractDeckFeatures(deck) {
         const features = [];
@@ -498,6 +535,12 @@ export default class ModelManager {
         for (const idx of deckIndices) {
             cardCounts.set(idx, (cardCounts.get(idx) || 0) + 1);
         }
+
+        // CRITICAL FIX: Add unique card count as first feature
+        // Tournament decks typically have 15-20 unique cards
+        const uniqueCardCount = cardCounts.size;
+        features.push(uniqueCardCount / 20); // Normalize by typical deck diversity
+
         for (const count of cardCounts.values()) {
             if (count === 1) copyDistribution[0]++;
             else if (count === 2) copyDistribution[1]++;
@@ -564,7 +607,55 @@ export default class ModelManager {
             : 0;
         features.push(avgClassificationSharing);
 
-        return features;
+        // Add embedding aggregation features
+        const embeddings = [];
+        for (const idx of deckIndices) {
+            const card = this.indexMap.get(idx);
+            if (card) {
+                embeddings.push(this.computeCardEmbedding(card));
+            }
+        }
+
+        if (embeddings.length === 0) {
+            // No embeddings, add zeros
+            const zeros = new Array(32 * 3).fill(0);
+            features.push(...zeros);
+            return features;
+        }
+
+        const embeddingDim = 32;
+        const meanEmbedding = new Array(embeddingDim).fill(0);
+        const maxEmbedding = new Array(embeddingDim).fill(-Infinity);
+
+        // Compute mean and max
+        for (const emb of embeddings) {
+            for (let i = 0; i < embeddingDim; i++) {
+                meanEmbedding[i] += emb[i];
+                maxEmbedding[i] = Math.max(maxEmbedding[i], emb[i]);
+            }
+        }
+        for (let i = 0; i < embeddingDim; i++) {
+            meanEmbedding[i] /= embeddings.length;
+        }
+
+        // Compute variance
+        const varianceEmbedding = new Array(embeddingDim).fill(0);
+        for (const emb of embeddings) {
+            for (let i = 0; i < embeddingDim; i++) {
+                const diff = emb[i] - meanEmbedding[i];
+                varianceEmbedding[i] += diff * diff;
+            }
+        }
+        for (let i = 0; i < embeddingDim; i++) {
+            varianceEmbedding[i] /= embeddings.length;
+        }
+
+        // Add mean, max, variance embeddings (32 + 32 + 32 = 96 features)
+        features.push(...meanEmbedding);
+        features.push(...maxEmbedding);
+        features.push(...varianceEmbedding);
+
+        return features; // Now returns 134 features total
     }
 
     /**
@@ -586,6 +677,31 @@ export default class ModelManager {
         }
 
         const features = this.extractDeckFeatures(deck);
-        return await this.validationModel.evaluateWithBreakdown(features);
+
+        // Count unique cards for debugging
+        const uniqueCards = new Set(deck.map(c => this.getCardKey(c.name, c.version)));
+
+        // DEBUG: Log features to console
+        console.log('Validation features:', {
+            featureCount: features.length,
+            uniqueCardCount: uniqueCards.size,
+            singletonRatio: features[0],
+            twoOfRatio: features[1],
+            threeOfRatio: features[2],
+            fourOfRatio: features[3],
+            moreThanFourRatio: features[4],
+            manaCurvePeak: Math.max(...features.slice(5, 15)),
+            characterRatio: features[15],
+            inkableRatio: features[25],
+            synergyScore: features[36],
+            allFeatures: features
+        });
+
+        const result = await this.validationModel.evaluateWithBreakdown(features);
+
+        // DEBUG: Log raw score
+        console.log('Validation result:', result);
+
+        return result;
     }
 }
