@@ -38,6 +38,13 @@ module.exports = class TrainingManager {
         // Reset loadedFiles for this session
         this.loadedFiles = [];
 
+        // Initialize hash set for deduplication
+        if (!this.trainingState.trainedDeckHashes) {
+            this.trainingState.trainedDeckHashes = [];
+        }
+        // Convert to Set for O(1) lookups during runtime
+        this.deckHashSet = new Set(this.trainingState.trainedDeckHashes);
+
         // 1. Fetch Cards
         if (this.cards.length === 0) {
             this.log('Fetching cards...');
@@ -62,6 +69,15 @@ module.exports = class TrainingManager {
             this.textEmbedder.save(vocabPath);
         } else {
             this.log('Cards already loaded.');
+        }
+
+        // Migration: If we have trained files but no hashes, build them now
+        // We need cards loaded first to calculate hashes correctly
+        if (this.deckHashSet.size === 0 && this.trainingState.trainedFiles.length > 0 && !fullRetrain) {
+            const hashes = await this.buildInitialDeckHashes();
+            hashes.forEach(h => this.deckHashSet.add(h));
+            this.trainingState.trainedDeckHashes = hashes; // Update state immediately
+            this.saveTrainingState();
         }
 
         // 2. Load Training Data (always attempt to load new files)
@@ -131,7 +147,16 @@ module.exports = class TrainingManager {
                     }
                 }
 
+                // Deduplication Check
                 if (deckIndices.length > 0) {
+                    const deckHash = this.getDeckHash(deckIndices);
+                    if (this.deckHashSet.has(deckHash)) {
+                        // Skip duplicate deck
+                        continue;
+                    }
+                    // Add to set so we don't process it again this run (and save later)
+                    this.deckHashSet.add(deckHash);
+
                     // Create a few shuffled versions
                     for (let k = 0; k < 5; k++) {
                         const shuffledIndices = [...deckIndices].sort(() => Math.random() - 0.5);
@@ -207,6 +232,7 @@ module.exports = class TrainingManager {
             lastTrainingDate: null,
             totalTrainings: 0,
             trainedFiles: [],
+            trainedDeckHashes: [], // Store hashes of all trained decks
             trainingHistory: []
         };
     }
@@ -246,6 +272,9 @@ module.exports = class TrainingManager {
         this.trainingState.totalTrainings++;
 
         this.log(`Updated training state: ${newFiles.length} new files added (session files: ${this.loadedFiles.length}).`);
+
+        // Save updated hashes
+        this.trainingState.trainedDeckHashes = Array.from(this.deckHashSet);
     }
 
     saveTrainingState() {
@@ -383,5 +412,61 @@ module.exports = class TrainingManager {
 
     getCardKey(name, version) {
         return `${name}|${version || ''}`.toLowerCase();
+    }
+
+    /**
+     * Calculate a unique hash for a deck based on its content
+     * Sorts cards by ID and creates a string signature: "id:count|id:count|..."
+     */
+    getDeckHash(deckIndices) {
+        // Count cards
+        const counts = new Map();
+        for (const idx of deckIndices) {
+            counts.set(idx, (counts.get(idx) || 0) + 1);
+        }
+
+        // Sort by ID to ensure consistent order
+        const sortedIds = Array.from(counts.keys()).sort((a, b) => a - b);
+
+        // Build hash string
+        return sortedIds.map(id => `${id}:${counts.get(id)}`).join('|');
+    }
+
+    /**
+     * Build hash set from all previously trained files (Migration)
+     */
+    async buildInitialDeckHashes() {
+        this.log('Building initial deck hashes from history (Migration)...');
+        const hashes = new Set();
+        let totalDecks = 0;
+
+        for (const file of this.trainingState.trainedFiles) {
+            const filePath = path.join(this.trainingDataPath, file);
+            if (fs.existsSync(filePath)) {
+                try {
+                    const rawData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                    for (const deck of rawData.decks) {
+                        const deckIndices = [];
+                        for (const cardEntry of deck.cards) {
+                            const key = this.getCardKey(cardEntry.name, cardEntry.version);
+                            if (this.cardMap.has(key)) {
+                                const index = this.cardMap.get(key);
+                                for (let i = 0; i < cardEntry.amount; i++) {
+                                    deckIndices.push(index);
+                                }
+                            }
+                        }
+                        if (deckIndices.length > 0) {
+                            hashes.add(this.getDeckHash(deckIndices));
+                            totalDecks++;
+                        }
+                    }
+                } catch (e) {
+                    this.log(`Warning: Could not read ${file} for hash migration: ${e.message}`);
+                }
+            }
+        }
+        this.log(`Migration complete. Indexed ${hashes.size} unique decks from ${totalDecks} total decks.`);
+        return Array.from(hashes);
     }
 };

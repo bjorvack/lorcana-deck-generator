@@ -119,18 +119,21 @@ export default class ModelManager {
 
         // 1. (Removed) Repetition Penalty
         // User feedback: Decks need up to 4 copies, so penalizing repetition is counter-productive for constructed decks.
-        // const penalizedProbabilities = this.applyRepetitionPenalty(probabilities, indices, 1.5);
-        const penalizedProbabilities = probabilities; // Pass through without penalty
+        // const penalizedProbabilities = probabilities; // Pass through without penalty
+
+        // 1. Boost Singletons (NEW)
+        // If a card is in the deck exactly once, boost its probability to encourage a 2nd copy (consistency)
+        const boostedProbabilities = this.boostSingletons(probabilities, indices, 2.5);
 
         // 2. Calculate adaptive temperature based on deck size
         const temperature = this.getAdaptiveTemperature(indices.length);
 
         // 3. Sample using Top-P (Nucleus) Sampling with Temperature
         // This combines temperature scaling and dynamic truncation of the tail
-        const sampledIndex = this.sampleTopP(penalizedProbabilities, temperature, 0.9);
+        const sampledIndex = this.sampleTopP(boostedProbabilities, temperature, 0.9);
 
         // Create array of candidate indices, starting with sampled one, then sorted by probability
-        const sortedPredictions = Array.from(penalizedProbabilities)
+        const sortedPredictions = Array.from(boostedProbabilities)
             .map((prob, index) => ({ index, prob }))
             .sort((a, b) => b.prob - a.prob);
 
@@ -194,6 +197,36 @@ export default class ModelManager {
         } else {
             return 0.8; // Low exploration, focus on completing deck
         }
+    }
+
+    /**
+     * Boost probability of cards that are in the deck exactly once.
+     * Encourages picking a 2nd copy for consistency.
+     */
+    boostSingletons(probabilities, historyIndices, boostFactor = 2.0) {
+        const boosted = Float32Array.from(probabilities);
+
+        // Count occurrences in history
+        const counts = new Map();
+        for (const idx of historyIndices) {
+            counts.set(idx, (counts.get(idx) || 0) + 1);
+        }
+
+        // Apply boost
+        for (const [idx, count] of counts) {
+            if (count === 1 && idx < boosted.length) {
+                boosted[idx] *= boostFactor;
+            }
+        }
+
+        // Renormalize
+        let sum = 0;
+        for (let i = 0; i < boosted.length; i++) sum += boosted[i];
+        if (sum > 0) {
+            for (let i = 0; i < boosted.length; i++) boosted[i] /= sum;
+        }
+
+        return boosted;
     }
 
     /**
