@@ -5338,7 +5338,12 @@
     "2666": "{w}"
   },
   "vocabularySize": 2667,
-  "maxTextTokens": 30,
+  "maxNameTokens": 5,
+  "maxKeywordsTokens": 10,
+  "maxInkTokens": 2,
+  "maxClassTokens": 5,
+  "maxTypeTokens": 3,
+  "maxBodyTokens": 30,
   "allCardNames": [
     "a very merry unbirthday",
     "agustin madrigal",
