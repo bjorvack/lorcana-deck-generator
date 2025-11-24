@@ -207,18 +207,14 @@ module.exports = class TrainingManager {
         // 4. Train Model
         if (!this.model.model) {
             this.log('Initializing new model...');
-            // We need to know feature dimension
-            const featureDim = featureSequences[0][0].length;
+
+            // Build the static embedding matrix
+            this.log('Building card embedding matrix...');
+            const embeddingMatrix = this.buildCardEmbeddingMatrix();
+
             await this.model.initialize(
-                this.cardMap.size, // Assuming this.cardMap.size is equivalent to this.cardManager.cards.length
-                featureDim, // Assuming featureDim is equivalent to this.featureManager.featureDim
-                this.textEmbedder.vocabularySize,
-                this.textEmbedder.maxNameTokens,
-                this.textEmbedder.maxKeywordsTokens,
-                this.textEmbedder.maxInkTokens,
-                this.textEmbedder.maxClassTokens,
-                this.textEmbedder.maxTypeTokens,
-                this.textEmbedder.maxBodyTokens
+                this.cardMap.size,
+                embeddingMatrix
             );
         } else {
             this.log('Continuing training on existing model...');
@@ -227,16 +223,14 @@ module.exports = class TrainingManager {
         this.log('Training model...');
 
         // Helper to shuffle data arrays in sync
-        const shuffleData = (seqs, feats, texts) => {
+        const shuffleData = (seqs) => {
             const indices = seqs.map((_, i) => i);
             for (let i = indices.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [indices[i], indices[j]] = [indices[j], indices[i]];
             }
             return {
-                shuffledSeqs: indices.map(i => seqs[i]),
-                shuffledFeats: indices.map(i => feats[i]),
-                shuffledTexts: indices.map(i => texts[i])
+                shuffledSeqs: indices.map(i => seqs[i])
             };
         };
 
@@ -247,7 +241,7 @@ module.exports = class TrainingManager {
 
             // Shuffle data once before training
             this.log('Shuffling training data...');
-            const { shuffledSeqs, shuffledFeats, shuffledTexts } = shuffleData(sequences, featureSequences, textSequences);
+            const { shuffledSeqs } = shuffleData(sequences);
 
             const numBatches = Math.ceil(sequences.length / MAX_BATCH_SIZE);
 
@@ -260,14 +254,11 @@ module.exports = class TrainingManager {
                     const start = batchIdx * MAX_BATCH_SIZE;
                     const end = Math.min((batchIdx + 1) * MAX_BATCH_SIZE, sequences.length);
 
-                    // this.log(`  Batch ${batchIdx + 1}/${numBatches} (sequences ${start}-${end})...`);
-
                     const batchSequences = shuffledSeqs.slice(start, end);
-                    const batchFeatures = shuffledFeats.slice(start, end);
-                    const batchText = shuffledTexts.slice(start, end);
 
                     // Train for 1 epoch per batch
-                    await this.model.train(batchSequences, batchFeatures, batchText, 1, (e, logs) => {
+                    // Note: Model.train signature must change to accept only sequences
+                    await this.model.train(batchSequences, 1, (e, logs) => {
                         // Only log every 5th batch to reduce noise
                         if (batchIdx % 5 === 0 || batchIdx === numBatches - 1) {
                             this.log(`  Batch ${batchIdx + 1}/${numBatches}: loss = ${logs.loss.toFixed(4)}`);
@@ -277,7 +268,7 @@ module.exports = class TrainingManager {
             }
         } else {
             // Normal training for smaller datasets
-            await this.model.train(sequences, featureSequences, textSequences, epochs, (epoch, logs) => {
+            await this.model.train(sequences, epochs, (epoch, logs) => {
                 this.log(`Epoch ${epoch + 1}/${epochs}: loss = ${logs.loss.toFixed(4)}`);
             });
         }
@@ -288,6 +279,101 @@ module.exports = class TrainingManager {
         // Update training state
         this.updateTrainingState(epochs);
         this.saveTrainingState();
+    }
+
+    /**
+     * Build a matrix of static features for all cards to initialize the embedding layer.
+     * Returns array of arrays: [vocabSize, embeddingDim]
+     */
+    buildCardEmbeddingMatrix() {
+        // We need to map card ID (1..N) to its feature vector.
+        // ID 0 is padding, handled by the model initialization.
+        // IDs in cardMap are 0-indexed, but model uses 1-based IDs for cards (0 is pad).
+        // Actually, let's check how IDs are used.
+        // In prepareTrainingData, we use this.cardMap.get(key) + 1.
+        // So ID 1 corresponds to cardMap value 0.
+
+        const matrix = [];
+        // Iterate through IDs 0 to size-1
+        for (let i = 0; i < this.cardMap.size; i++) {
+            const card = this.indexMap.get(i);
+            if (!card) {
+                // Should not happen
+                matrix.push(new Array(64).fill(0));
+                continue;
+            }
+
+            // Extract static features
+            // We'll use a simplified version of extractCardFeatures that doesn't depend on deck stats
+            const features = this.extractStaticCardFeatures(card);
+            matrix.push(features);
+        }
+        return matrix;
+    }
+
+    /**
+     * Extract static features for embedding initialization.
+     * Must return a fixed-size array (e.g. 64 floats).
+     */
+    extractStaticCardFeatures(card) {
+        const features = [];
+
+        // 1. Cost (Normalized)
+        features.push(Math.min(card.cost, 10) / 10);
+        // 2. Inkwell
+        features.push(card.inkwell ? 1 : 0);
+        // 3. Lore
+        features.push(Math.min(card.lore || 0, 5) / 5);
+        // 4. Strength
+        features.push(Math.min(card.strength || 0, 10) / 10);
+        // 5. Willpower
+        features.push(Math.min(card.willpower || 0, 10) / 10);
+
+        // 6. Inks (One-hot 6)
+        const inkColors = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel'];
+        inkColors.forEach(ink => features.push(card.ink === ink ? 1 : 0));
+
+        // 7. Types (One-hot 4)
+        const types = ['Character', 'Action', 'Item', 'Location'];
+        const cardType = (card.types && card.types.length > 0) ? card.types[0] : '';
+        types.forEach(type => features.push(cardType === type ? 1 : 0));
+
+        // 8. Keywords (10 common ones)
+        const keywords = ['Bodyguard', 'Reckless', 'Rush', 'Ward', 'Evasive', 'Resist', 'Challenger', 'Singer', 'Shift', 'Support'];
+        keywords.forEach(kw => {
+            const hasKw = (card.keywords && card.keywords.some(k => k.includes(kw))) || (card.text && card.text.includes(kw));
+            features.push(hasKw ? 1 : 0);
+        });
+
+        // 9. Classifications (5 common ones)
+        const classifications = ['Hero', 'Villain', 'Dreamborn', 'Storyborn', 'Floodborn'];
+        classifications.forEach(cls => {
+            features.push(card.classifications && card.classifications.includes(cls) ? 1 : 0);
+        });
+
+        // Current feature count: 1+1+1+1+1 + 6 + 4 + 10 + 5 = 30 features.
+
+        // 10. Text Embedding (34 dimensions to reach 64 total)
+        // We use a simple hash-based embedding of the text/name
+        const textEmbedding = this.computeSimpleTextEmbedding(card, 34);
+        features.push(...textEmbedding);
+
+        return features;
+    }
+
+    computeSimpleTextEmbedding(card, dim) {
+        const text = `${card.name} ${card.text || ''} ${card.keywords ? card.keywords.join(' ') : ''}`.toLowerCase();
+        const embedding = new Array(dim).fill(0);
+        for (let i = 0; i < text.length; i++) {
+            const charCode = text.charCodeAt(i);
+            embedding[charCode % dim] += 1;
+        }
+        // Normalize
+        const norm = Math.sqrt(embedding.reduce((sum, val) => sum + val * val, 0));
+        if (norm > 0) {
+            for (let i = 0; i < dim; i++) embedding[i] /= norm;
+        }
+        return embedding;
     }
 
     getInitialTrainingState() {
@@ -857,7 +943,16 @@ module.exports = class TrainingManager {
                 if (deckIndices.length >= 60) {
                     const deckFeatures = this.extractDeckFeaturesWithEmbeddings(deckIndices.slice(0, 60));
                     features.push(deckFeatures);
-                    labels.push(1); // Real deck
+
+                    // SCORING LOGIC BASED ON TOURNAMENT PLACEMENT
+                    // User request: Place 1 should get higher score than Place 16.
+                    // Formula: Start at 1.0, deduct 0.02 per place below 1st. Floor at 0.6.
+                    // If place is missing, assume it's a valid tournament deck (0.85).
+                    let score = 0.85;
+                    if (deck.place) {
+                        score = Math.max(0.6, 1.0 - (deck.place - 1) * 0.02);
+                    }
+                    labels.push(score);
                     realDeckCount++;
                 }
             }

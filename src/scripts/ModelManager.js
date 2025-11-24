@@ -57,11 +57,6 @@ export default class ModelManager {
     async predict(cardNames, legalOnly = true, allowedInks = []) {
         // Convert names to indices
         const indices = [];
-        const features = [];
-        const textIndices = []; // NEW
-
-        // We need to reconstruct the deck stats as we go to generate features for the sequence
-        let currentStats = this.getInitialDeckStats();
 
         cardNames.forEach(name => {
             let foundId = null;
@@ -70,7 +65,7 @@ export default class ModelManager {
             if (name.includes(' - ')) {
                 const parts = name.split(' - ');
                 const cardName = parts[0].trim();
-                const cardVersion = parts.slice(1).join(' - ').trim(); // Handle multiple dashes if any
+                const cardVersion = parts.slice(1).join(' - ').trim();
                 const key = this.getCardKey(cardName, cardVersion);
 
                 if (this.cardMap.has(key)) {
@@ -90,27 +85,21 @@ export default class ModelManager {
             }
 
             if (foundId !== null) {
-                indices.push(foundId);
-
-                const card = this.indexMap.get(foundId);
-                // Update stats and extract features
-                this.updateDeckStats(currentStats, card);
-
-                // Count copies of this card before extracting features
-                const copiesSoFar = indices.filter(id => id === foundId).length - 1;
-                const cardFeatures = this.extractCardFeatures(card, currentStats, copiesSoFar);
-                const cardTextIndices = this.textEmbedder.cardToTextIndices(card); // NEW
-
-                features.push(cardFeatures);
-                textIndices.push(cardTextIndices); // NEW
+                // Add 1 because model uses 1-based indexing (0 is padding)
+                // Wait, backend TrainingManager uses indexMap keys (0..N) and adds 1?
+                // Let's check TrainingManager.prepareTrainingData:
+                // const cardId = this.cardMap.get(key) + 1;
+                // So yes, we need to add 1 to the ID for the model.
+                indices.push(foundId + 1);
             }
         });
 
-        // Count current card amounts and identify ink colors
+        // Count current card amounts and identify ink colors for filtering
         const cardCounts = new Map();
         const currentInks = new Set();
 
-        indices.forEach(id => {
+        indices.forEach(modelId => {
+            const id = modelId - 1; // Convert back to 0-based for map lookup
             cardCounts.set(id, (cardCounts.get(id) || 0) + 1);
             const card = this.indexMap.get(id);
             if (card && card.ink) {
@@ -119,8 +108,8 @@ export default class ModelManager {
         });
 
         // 3. Predict next card probabilities
-        // Note: indices are passed for length calculation, but not used as input features
-        const probabilities = await this.model.predict(indices, features, textIndices);
+        // Input is just the array of indices
+        const probabilities = await this.model.predict(indices);
 
         // 1. (Removed) Repetition Penalty
         // User feedback: Decks need up to 4 copies, so penalizing repetition is counter-productive for constructed decks.

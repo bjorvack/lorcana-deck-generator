@@ -57,6 +57,7 @@ export default class DeckRenderer {
     _createCardElement(card) {
         const cardContainer = document.createElement('div');
         cardContainer.dataset.role = 'card-container';
+        cardContainer.dataset.legality = card.legality;
 
         const img = document.createElement('img');
         img.src = card.image;

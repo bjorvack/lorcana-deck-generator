@@ -50,7 +50,9 @@ button {
     min-width: 150px;
 }
 
-button:hover, button:focus, button:active {
+button:hover,
+button:focus,
+button:active {
     background-color: #E3CAA8;
     color: #FFF;
 }
@@ -60,7 +62,9 @@ button:hover, button:focus, button:active {
     color: #D3BA84;
 }
 
-.outline:hover, .outline:focus, .outline:active {
+.outline:hover,
+.outline:focus,
+.outline:active {
     background-color: rgba(212, 187, 133, 0.1);
     color: #FFF;
 }
@@ -105,7 +109,8 @@ input[type="text"] {
     width: calc(100% - 2rem);
 }
 
-[data-role="deck"], [data-role="card-list"] {
+[data-role="deck"],
+[data-role="card-list"] {
     padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
@@ -121,7 +126,8 @@ input[type="text"] {
     width: 10rem;
     aspect-ratio: 100/139;
 }
-[data-role="card-container"].missing-requirements img{
+
+[data-role="card-container"].missing-requirements img {
     border: solid 1px red;
     opacity: 0.5;
 }
@@ -339,6 +345,10 @@ dialog[data-role=card-preview] {
 
 .severity-medium {
     color: #eab308;
+}
+
+.severity-info {
+    color: #22c55e;
 }
 
 .validation-breakdown strong {

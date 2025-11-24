@@ -254,10 +254,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             let breakdownHTML = '';
             if (result.breakdown && result.breakdown.length > 0) {
                 breakdownHTML = '<div class="validation-breakdown">';
-                breakdownHTML += '<h4>Issues Detected:</h4>';
+                breakdownHTML += '<h4>Analysis:</h4>';
                 breakdownHTML += '<ul>';
                 result.breakdown.forEach(issue => {
-                    const severityClass = issue.severity === 'high' ? 'severity-high' : 'severity-medium';
+                    let severityClass = 'severity-medium';
+                    if (issue.severity === 'high') severityClass = 'severity-high';
+                    if (issue.severity === 'info') severityClass = 'severity-info';
+
                     breakdownHTML += `<li class="${severityClass}"><strong>${issue.issue}:</strong> ${issue.message}</li>`;
                 });
                 breakdownHTML += '</ul></div>';
