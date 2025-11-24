@@ -1,0 +1,51 @@
+name: Train RL Model
+
+on:
+  schedule:
+    # Run at 00:00 on the 1st of every month
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+jobs:
+  train-rl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd training
+          npm install
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
+
+      - name: Train RL Model
+        run: |
+          cd training
+          npm run train-rl
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git add training_data/deck-generator-rl/*
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No RL model updates found"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "RL model updates detected"
+          fi
+
+      - name: Commit and push RL model
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "🤖 Auto-train: Update RL model [skip ci]"
+          git push
