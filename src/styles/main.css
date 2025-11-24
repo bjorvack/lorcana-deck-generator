@@ -280,6 +280,11 @@ label {
 
 [data-role="card-container"] {
     position: relative;
+    width: 100%;
+    max-width: 10rem;
+    aspect-ratio: 100/139;
+    flex-shrink: 0;
+    transition: all var(--transition-normal);
 }
 
 [data-role="card-container"].missing-requirements img {
@@ -382,7 +387,7 @@ dialog[data-role="loading"] h2 {
 
 dialog[data-role="card-preview"] {
     width: fit-content;
-    max-width: 90vw;
+    max-width: 25rem;
     max-height: 90vh;
     padding: var(--spacing-sm);
     overflow: auto;
