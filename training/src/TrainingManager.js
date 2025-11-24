@@ -918,6 +918,121 @@ module.exports = class TrainingManager {
     }
 
     /**
+     * Generate a partial deck by removing 10-20 random cards from a tournament deck
+     * @param {Array} baseDeckIndices - Full tournament deck indices (60 cards)
+     * @returns {Array} Partial deck indices (40-50 cards)
+     */
+    generatePartialDeck(baseDeckIndices) {
+        // Remove between 10-20 cards randomly
+        const cardsToRemove = Math.floor(Math.random() * 11) + 10; // 10-20
+        const deckCopy = [...baseDeckIndices];
+
+        for (let i = 0; i < cardsToRemove; i++) {
+            const randomIndex = Math.floor(Math.random() * deckCopy.length);
+            deckCopy.splice(randomIndex, 1);
+        }
+
+        return deckCopy;
+    }
+
+    /**
+     * Complete a partial deck to 60 cards using weighted card selection
+     * Similar to DeckGenerator logic but simpler
+     * @param {Array} partialDeckIndices - Partial deck indices (40-50 cards)
+     * @returns {Array} Completed deck indices (60 cards)
+     */
+    completePartialDeckWithGenerator(partialDeckIndices) {
+        const deck = [...partialDeckIndices];
+        const targetSize = 60;
+
+        // Analyze existing deck
+        const cardCounts = new Map();
+        const inks = new Set();
+        const costCounts = Array(10).fill(0);
+
+        for (const idx of deck) {
+            cardCounts.set(idx, (cardCounts.get(idx) || 0) + 1);
+            const card = this.indexMap.get(idx);
+            if (card) {
+                if (card.ink) inks.add(card.ink);
+                const costIdx = Math.min(card.cost - 1, 9);
+                costCounts[costIdx]++;
+            }
+        }
+
+        // Get card pool matching the deck's inks
+        const inkArray = Array.from(inks);
+        const cardPool = [];
+        for (const [idx, card] of this.indexMap.entries()) {
+            if (inkArray.includes(card.ink) && card.legality === 'legal') {
+                cardPool.push(idx);
+            }
+        }
+
+        if (cardPool.length === 0) {
+            // Fallback: use all cards
+            for (const idx of this.cardMap.values()) {
+                cardPool.push(idx);
+            }
+        }
+
+        // Complete the deck
+        let attempts = 0;
+        const maxAttempts = 200;
+
+        while (deck.length < targetSize && attempts < maxAttempts) {
+            // Pick a random cost based on what's missing
+            const totalCards = deck.length;
+            const avgCost = costCounts.reduce((sum, count, idx) => sum + count * (idx + 1), 0) / Math.max(1, totalCards);
+
+            // Prefer costs around 2-4 for completion
+            const targetCost = Math.floor(Math.random() * 4) + 2; // Costs 2-5
+
+            // Find cards of that cost
+            const cardsOfCost = cardPool.filter(idx => {
+                const card = this.indexMap.get(idx);
+                return card && card.cost === targetCost;
+            });
+
+            if (cardsOfCost.length > 0) {
+                // Pick a random card
+                const randomIdx = cardsOfCost[Math.floor(Math.random() * cardsOfCost.length)];
+                const currentCount = cardCounts.get(randomIdx) || 0;
+                const card = this.indexMap.get(randomIdx);
+                const maxAmount = card?.maxAmount || 4;
+
+                if (currentCount < maxAmount) {
+                    deck.push(randomIdx);
+                    cardCounts.set(randomIdx, currentCount + 1);
+                    const costIdx = Math.min(card.cost - 1, 9);
+                    costCounts[costIdx]++;
+                }
+            } else {
+                // Fallback: pick any random card
+                const randomIdx = cardPool[Math.floor(Math.random() * cardPool.length)];
+                const currentCount = cardCounts.get(randomIdx) || 0;
+                const card = this.indexMap.get(randomIdx);
+                const maxAmount = card?.maxAmount || 4;
+
+                if (currentCount < maxAmount) {
+                    deck.push(randomIdx);
+                    cardCounts.set(randomIdx, currentCount + 1);
+                }
+            }
+
+            attempts++;
+        }
+
+        // Pad if still not 60 (shouldn't happen, but safety)
+        while (deck.length < targetSize) {
+            const randomIdx = cardPool[Math.floor(Math.random() * cardPool.length)];
+            deck.push(randomIdx);
+        }
+
+        return deck.slice(0, 60); // Ensure exactly 60
+    }
+
+    /**
      * Prepare validation dataset with aggregated embedding features
      */
     prepareValidationDataset() {
@@ -927,6 +1042,8 @@ module.exports = class TrainingManager {
 
         // Get real decks from training data
         let realDeckCount = 0;
+        const realDeckIndices = []; // Store for partial deck generation
+
         for (const rawData of this.trainingData) {
             for (const deck of rawData.decks) {
                 const deckIndices = [];
@@ -941,7 +1058,8 @@ module.exports = class TrainingManager {
                 }
 
                 if (deckIndices.length >= 60) {
-                    const deckFeatures = this.extractDeckFeaturesWithEmbeddings(deckIndices.slice(0, 60));
+                    const fullDeck = deckIndices.slice(0, 60);
+                    const deckFeatures = this.extractDeckFeaturesWithEmbeddings(fullDeck);
                     features.push(deckFeatures);
 
                     // SCORING LOGIC BASED ON TOURNAMENT PLACEMENT
@@ -954,11 +1072,32 @@ module.exports = class TrainingManager {
                     }
                     labels.push(score);
                     realDeckCount++;
+
+                    // Store for partial deck generation
+                    realDeckIndices.push(fullDeck);
                 }
             }
         }
 
         this.log(`Extracted ${realDeckCount} real decks`);
+
+        // Generate partial decks from real tournament decks
+        // Generate 1-2 variants per tournament deck
+        let partialDeckCount = 0;
+        for (const baseDeck of realDeckIndices) {
+            const numVariants = Math.random() < 0.5 ? 1 : 2; // 50% chance of 1 or 2 variants
+
+            for (let v = 0; v < numVariants; v++) {
+                const partialDeck = this.generatePartialDeck(baseDeck);
+                const completedDeck = this.completePartialDeckWithGenerator(partialDeck);
+                const deckFeatures = this.extractDeckFeaturesWithEmbeddings(completedDeck);
+                features.push(deckFeatures);
+                labels.push(0.6); // Medium quality score
+                partialDeckCount++;
+            }
+        }
+
+        this.log(`Generated ${partialDeckCount} partial decks (medium quality)`);
 
         // Generate fake decks (equal number to real decks) using 4 strategies
         const strategies = ['pure_random', 'ink_constrained', 'rule_broken', 'low_diversity'];
@@ -979,7 +1118,7 @@ module.exports = class TrainingManager {
         }
 
         this.log(`Generated ${realDeckCount} fake decks`);
-        this.log(`Total dataset size: ${features.length} decks`);
+        this.log(`Total dataset size: ${features.length} decks (${realDeckCount} real + ${partialDeckCount} partial + ${realDeckCount} fake)`);
         this.log(`Feature dimension: ${features[0].length} (38 numeric + 96 embedding stats)`);
 
         return { features, labels };
