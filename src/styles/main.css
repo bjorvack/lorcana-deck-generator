@@ -570,6 +570,94 @@ button[data-role="close"]:hover {
 }
 
 /* ===== INK SELECTOR ===== */
+.ink-selector-container {
+    margin: var(--spacing-xl) 0;
+}
+
+.ink-selector-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, auto);
+    gap: var(--spacing-lg);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+.ink-checkbox {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all var(--transition-normal);
+}
+
+.ink-checkbox.disabled {
+    cursor: not-allowed;
+}
+
+.ink-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ink-checkbox-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    transition: all var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-card);
+}
+
+.ink-checkbox-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.ink-checkbox input[type="checkbox"]:checked+.ink-checkbox-icon {
+    border-color: var(--gold);
+    box-shadow: var(--shadow-glow);
+    transform: scale(1.1);
+}
+
+.ink-checkbox input[type="checkbox"]:disabled:not(:checked)+.ink-checkbox-icon {
+    opacity: 0.3;
+}
+
+.ink-checkbox-label {
+    display: block;
+    text-align: center;
+    margin-top: var(--spacing-sm);
+    font-size: 0.9rem;
+    color: var(--text-gold);
+    font-weight: 600;
+    transition: all var(--transition-normal);
+}
+
+.ink-checkbox:hover:not(.disabled) .ink-checkbox-icon {
+    transform: translateY(-2px) scale(1.05);
+    border-color: var(--gold-light);
+}
+
+.ink-checkbox:hover:not(.disabled) .ink-checkbox-label {
+    color: var(--gold-light);
+}
+
+.ink-checkbox input[type="checkbox"]:checked:hover+.ink-checkbox-icon {
+    transform: translateY(-2px) scale(1.15);
+}
+
 .inks {
     display: flex;
     gap: var(--spacing-md);
