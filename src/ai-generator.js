@@ -1,4 +1,4 @@
-import './styles.css';
+import './styles/main.css';
 import ModelManager from './scripts/ModelManager';
 import Chart from './scripts/Chart';
 import CardSelector from './scripts/CardSelector';

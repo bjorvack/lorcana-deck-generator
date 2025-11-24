@@ -4,7 +4,7 @@ import DeckGenerator from "./scripts/DeckGenerator";
 import UI from "./scripts/UI";
 import Chart from "./scripts/Chart";
 
-import './styles.css'
+import './styles/main.css'
 
 // Wait for page to be loaded
 document.addEventListener('DOMContentLoaded', async () => {
@@ -14,7 +14,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     const deckGenerator = new DeckGenerator(cards, weightCalculator)
     const chart = new Chart(document.querySelector('[data-role=chart]'))
     const loadingScreenDialog = document.querySelector('[data-role=loading]')
-    loadingScreenDialog.show()
+
+    console.log('Loading screen element:', loadingScreenDialog);
+
+    // Show the loading dialog
+    if (loadingScreenDialog) {
+        loadingScreenDialog.showModal();
+    }
+
     const ui = new UI(
         deckGenerator,
         loadingScreenDialog,

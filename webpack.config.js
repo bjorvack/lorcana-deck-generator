@@ -55,6 +55,16 @@ module.exports = {
             filename: '[name].[contenthash].css',
         }),
     ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
+        compress: true,
+        port: 8080,
+        hot: true,
+        open: true,
+        historyApiFallback: true,
+    },
     optimization: {
         moduleIds: 'deterministic',
         runtimeChunk: 'single',

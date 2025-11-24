@@ -61,8 +61,13 @@ export default class UI {
   }
 
   init() {
+    console.log('Loading screen:', this.loadingScreen);
     this.addListeners()
-    this.loadingScreen.close()
+    if (this.loadingScreen) {
+        // set display to none after initialization
+        this.loadingScreen.close()
+        this.loadingScreen.style.display = 'none'
+    }
   }
 
   addListeners() {
