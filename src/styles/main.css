@@ -586,6 +586,14 @@ button[data-role="close"]:hover {
     padding: var(--spacing-lg);
 }
 
+@media (max-width: 768px) {
+    .ink-selector-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        max-width: 100%;
+    }
+}
+
 .ink-checkbox {
     position: relative;
     cursor: pointer;
