@@ -25,6 +25,9 @@ puppeteer.use(StealthPlugin());
         let totalProcessed = 0;
 
         // Process tournaments page by page
+        // Check if we should limit to first page only (for CI/scheduled runs)
+        const firstPageOnly = process.env.FIRST_PAGE_ONLY === 'true' || args.includes('--first-page');
+
         while (hasMorePages) {
             console.log(`\n========== Fetching page ${currentPage} ==========`);
             const pageUrl = currentPage === 1
@@ -376,6 +379,14 @@ puppeteer.use(StealthPlugin());
 
             // Move to next page
             console.log(`\nCompleted page ${currentPage}. Processed ${totalProcessed} tournaments so far.`);
+
+            // Stop after first page if in first-page-only mode
+            if (firstPageOnly) {
+                console.log('First page only mode - stopping pagination.');
+                hasMorePages = false;
+                break;
+            }
+
             currentPage++;
 
             // Add delay between pages to avoid rate limiting

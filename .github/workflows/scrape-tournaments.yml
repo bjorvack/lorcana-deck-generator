@@ -1,0 +1,90 @@
+name: Scrape Tournaments
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual trigger from GitHub UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            chromium-browser \
+            fonts-liberation \
+            libasound2 \
+            libatk-bridge2.0-0 \
+            libatk1.0-0 \
+            libatspi2.0-0 \
+            libcups2 \
+            libdbus-1-3 \
+            libdrm2 \
+            libgbm1 \
+            libgtk-3-0 \
+            libnspr4 \
+            libnss3 \
+            libwayland-client0 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxfixes3 \
+            libxkbcommon0 \
+            libxrandr2 \
+            xdg-utils
+      
+      - name: Install dependencies
+        run: |
+          cd training
+          npm install
+      
+      - name: Run scraper (first page only)
+        run: |
+          cd training
+          npm run scrape
+        timeout-minutes: 20
+        env:
+          FIRST_PAGE_ONLY: 'true'
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
+      
+      - name: Check for new data
+        id: check_changes
+        run: |
+          git add training_data/*.json
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No new tournament data found"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "New tournament data detected"
+          fi
+      
+      - name: Commit and push new data
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "🤖 Auto-scrape: Add new tournament data [skip ci]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Summary
+        run: |
+          if [ "${{ steps.check_changes.outputs.has_changes }}" == "true" ]; then
+            echo "✅ New tournament data scraped and committed"
+          else
+            echo "ℹ️ No new tournaments found"
+          fi
