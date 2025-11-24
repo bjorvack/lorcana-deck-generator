@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (count >= card.maxAmount) {
                         return `Max Reached <small>(${count}/${card.maxAmount})</small>`;
                     }
-                    return `Add Card (${count}/${card.maxAmount})`;
+                    return `Add Card <small>(${count}/${card.maxAmount})</small>`;
                 }
             }
         );
