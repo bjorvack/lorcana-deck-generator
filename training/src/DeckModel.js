@@ -227,4 +227,66 @@ module.exports = class DeckModel {
         }
         this.model.summary();
     }
+
+    /**
+     * RL-specific: Sample action from probability distribution
+     * @param {Array|Float32Array} probabilities - Probability distribution over actions
+     * @param {Number} temperature - Temperature for exploration (default 1.0)
+     * @returns {Number} Sampled action index
+     */
+    sampleAction(probabilities, temperature = 1.0) {
+        const probs = Array.from(probabilities);
+
+        // Apply temperature scaling
+        const scaled = probs.map(p => Math.pow(p, 1 / temperature));
+        const sum = scaled.reduce((a, b) => a + b, 0);
+        const normalized = scaled.map(p => p / sum);
+
+        // Sample from categorical distribution
+        const rand = Math.random();
+        let cumsum = 0;
+        for (let i = 0; i < normalized.length; i++) {
+            cumsum += normalized[i];
+            if (rand < cumsum) {
+                return i;
+            }
+        }
+
+        return normalized.length - 1;
+    }
+
+    /**
+     * RL-specific: Get log probability of action
+     * @param {Array|Float32Array} probabilities - Probability distribution over actions
+     * @param {Number} action - Action index
+     * @returns {Number} Log probability
+     */
+    getLogProb(probabilities, action) {
+        const probs = Array.from(probabilities);
+        // Clip for numerical stability
+        return Math.log(Math.max(probs[action], 1e-10));
+    }
+
+    /**
+     * RL-specific: Predict with gradient tracking
+     * Returns tensor for gradient computation
+     * @param {Array} cardIndices - Current deck indices
+     * @returns {Tensor} Probability distribution tensor
+     */
+    async predictWithGradient(cardIndices) {
+        if (!this.model) return null;
+
+        const startIdx = Math.max(0, this.maxLen - cardIndices.length);
+        const paddedSeq = new Array(this.maxLen).fill(0);
+        for (let j = 0; j < Math.min(cardIndices.length, this.maxLen); j++) {
+            paddedSeq[startIdx + j] = cardIndices[j];
+        }
+
+        const inputTensor = tf.tensor2d([paddedSeq], [1, this.maxLen], 'int32');
+        const prediction = this.model.predict(inputTensor);
+
+        inputTensor.dispose();
+
+        return prediction; // Return tensor for gradient computation
+    }
 }

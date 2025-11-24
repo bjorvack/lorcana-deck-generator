@@ -6,6 +6,7 @@
     "scripts": {
         "train": "node train.js",
         "train-validator": "node train-validator.js",
+        "train-rl": "node train_rl.js",
         "scrape": "node scrape.js",
         "postinstall": "node scripts/patch-tfjs-node.js"
     },
