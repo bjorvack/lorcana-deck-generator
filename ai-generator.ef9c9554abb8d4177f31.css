@@ -273,6 +273,7 @@ label {
     position: relative;
     width: 10rem;
     aspect-ratio: 100/139;
+    flex-shrink: 0;
     transition: all var(--transition-normal);
 }
 
@@ -414,6 +415,7 @@ button[data-role="close"]:hover {
     overflow-y: auto;
     overflow-x: hidden;
     padding: var(--spacing-md);
+    align-items: flex-start;
 }
 
 [data-role="card-list"]::-webkit-scrollbar {
