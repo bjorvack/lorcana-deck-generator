@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" href="assets/favicon.png" type="image/pmg">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
     <title>Lorcana Deck Generator</title>
 
     
@@ -17,33 +17,39 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-W3LML3KZ');</script>
     
-<script defer="defer" src="runtime.f3b8dc4335034ebe43a5.js"></script><script defer="defer" src="839.133e89eccd9203900f2b.js"></script><script defer="defer" src="452.a902be71ce7af579153a.js"></script><script defer="defer" src="main.d8a685e040bd22efe49a.js"></script><link href="main.a72baa89f8bef6b3e2cd.css" rel="stylesheet"></head>
+
+<script defer="defer" src="runtime.f3b8dc4335034ebe43a5.js"></script><script defer="defer" src="839.133e89eccd9203900f2b.js"></script><script defer="defer" src="452.c220db730b29404a47a4.js"></script><script defer="defer" src="main.cfd0e4c84c0fd630f86b.js"></script><link href="main.974dad7354ab8e37baae.css" rel="stylesheet"></head>
 
 <body>
     
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3LML3KZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
 
-    <h1>Lorcana Deck Generator</h1>
-    <div class="buttons">
-        <button data-role="generator" data-distribution="aggro">Aggro</button>
-        <button data-role="generator" data-distribution="default">Midrange</button>
-        <button data-role="test" class="hidden">Test Deck</button>
-        <button class="outline" data-role="clear">Clear</button>
-    </div>
-    <hr>
-    <div data-role="ink-selector"></div>
-    <hr>
-    <div data-role="deck">
-        
-    </div>
-    <div class="hidden">
-        <h2>Cost Curve</h2>
-        <canvas data-role="chart"></canvas>
+    <div class="container">
+        <h1>Lorcana Deck Generator</h1>
+        <div class="buttons">
+            <button data-role="generator" data-distribution="aggro">Aggro</button>
+            <button data-role="generator" data-distribution="default">Midrange</button>
+            <button data-role="test" class="hidden">Test Deck</button>
+            <button class="outline" data-role="clear">Clear</button>
+        </div>
+
+        <hr>
+        <div data-role="ink-selector"></div>
+        <hr>
+
+        <div data-role="deck">
+            
+        </div>
+
+        <div class="hidden">
+            <h2>Cost Curve</h2>
+            <canvas data-role="chart"></canvas>
+        </div>
     </div>
 
     <dialog data-role="card-select">
-        <button data-role="close">x</button>
+        <button data-role="close">✕</button>
         <h2>Pick cards to add</h2>
         <div class="from-group">
             <label for="filter">Search</label>
@@ -54,7 +60,7 @@
             
         </div>
     </dialog>
-    <dialog data-role="loading" open>
+    <dialog data-role="loading">
         <div class="d-flex">
             <h2>Loading...</h2>
         </div>

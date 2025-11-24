@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
     <title>Lorcana AI Deck Generator</title>
-<script defer="defer" src="runtime.f3b8dc4335034ebe43a5.js"></script><script defer="defer" src="839.133e89eccd9203900f2b.js"></script><script defer="defer" src="122.d7ef40d7eead475a8b02.js"></script><script defer="defer" src="452.a902be71ce7af579153a.js"></script><script defer="defer" src="ai-generator.a557024c827237113154.js"></script><link href="ai-generator.a72baa89f8bef6b3e2cd.css" rel="stylesheet"></head>
+<script defer="defer" src="runtime.f3b8dc4335034ebe43a5.js"></script><script defer="defer" src="839.133e89eccd9203900f2b.js"></script><script defer="defer" src="122.0cdcfe2a41f958ebf839.js"></script><script defer="defer" src="452.c220db730b29404a47a4.js"></script><script defer="defer" src="ai-generator.95cd01b582f0713447a1.js"></script><link href="ai-generator.974dad7354ab8e37baae.css" rel="stylesheet"></head>
 
 <body>
     <div class="container">
@@ -21,7 +22,7 @@
                 <hr>
                 <div data-role="ink-selector"></div>
                 <hr>
-                <label><input type="checkbox" id="legal-only" checked="checked"> Only Legal Cards</label>
+                <label class="hidden"><input type="checkbox" id="legal-only" checked="checked"> Only Legal Cards</label>
             </div>
 
             <div id="deck-preview" data-role="deck"></div>
@@ -36,7 +37,7 @@
     </div>
 
     <dialog data-role="card-select">
-        <button data-role="close">x</button>
+        <button data-role="close">✕</button>
         <h2>Pick cards to add</h2>
         <div class="from-group">
             <label for="filter">Search</label>
