@@ -85,7 +85,33 @@ async function main() {
         savePath: path.join(__dirname, '..', 'training_data', 'deck-generator-rl')
     });
 
-    console.log('\n✓ RL Training Complete!\n');
+    console.log('\n✓ RL Training Complete!');
+
+    // Cleanup intermediate checkpoints
+    console.log('Cleaning up intermediate checkpoints...');
+    const trainingDataDir = path.join(__dirname, '..', 'training_data');
+    const files = fs.readdirSync(trainingDataDir);
+
+    let cleanedCount = 0;
+    files.forEach(file => {
+        if (file.startsWith('deck-generator-rl_epoch')) {
+            const checkpointPath = path.join(trainingDataDir, file);
+            try {
+                fs.rmSync(checkpointPath, { recursive: true, force: true });
+                cleanedCount++;
+            } catch (e) {
+                console.warn(`Failed to remove checkpoint ${file}: ${e.message}`);
+            }
+        }
+    });
+
+    if (cleanedCount > 0) {
+        console.log(`✓ Removed ${cleanedCount} intermediate checkpoint folders`);
+    } else {
+        console.log('No intermediate checkpoints found to clean');
+    }
+
+    console.log('\n');
 }
 
 // Run training
