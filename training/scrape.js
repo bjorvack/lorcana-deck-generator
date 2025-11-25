@@ -31,8 +31,8 @@ puppeteer.use(StealthPlugin());
         while (hasMorePages) {
             console.log(`\n========== Fetching page ${currentPage} ==========`);
             const pageUrl = currentPage === 1
-                ? 'https://inkdecks.com/lorcana-tournaments?sort=relevance&direction=desc'
-                : `https://inkdecks.com/lorcana-tournaments?sort=relevance&direction=desc&page=${currentPage}`;
+                ? 'https://inkdecks.com/lorcana-tournaments?relevance=3&sort=date&direction=desc'
+                : `https://inkdecks.com/lorcana-tournaments?relevance=3&sort=date&direction=desc&page=${currentPage}`;
 
             await page.goto(pageUrl, { waitUntil: 'networkidle2' });
             await new Promise(r => setTimeout(r, 3000 + Math.random() * 2000)); // 3-5s random delay
