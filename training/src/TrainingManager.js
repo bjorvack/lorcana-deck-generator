@@ -265,11 +265,17 @@ module.exports = class TrainingManager {
                         }
                     });
                 }
+
+                // Save checkpoint after every global epoch
+                await this.saveModel();
+                this.log(`  ✓ Checkpoint saved (Epoch ${epoch + 1})`);
             }
         } else {
             // Normal training for smaller datasets
-            await this.model.train(sequences, epochs, (epoch, logs) => {
+            await this.model.train(sequences, epochs, async (epoch, logs) => {
                 this.log(`Epoch ${epoch + 1}/${epochs}: loss = ${logs.loss.toFixed(4)}`);
+                // Save checkpoint
+                await this.saveModel();
             });
         }
 
@@ -353,9 +359,9 @@ module.exports = class TrainingManager {
 
         // Current feature count: 1+1+1+1+1 + 6 + 4 + 10 + 5 = 30 features.
 
-        // 10. Text Embedding (34 dimensions to reach 64 total)
+        // 10. Text Embedding (98 dimensions to reach 128 total)
         // We use a simple hash-based embedding of the text/name
-        const textEmbedding = this.computeSimpleTextEmbedding(card, 34);
+        const textEmbedding = this.computeSimpleTextEmbedding(card, 98);
         features.push(...textEmbedding);
 
         return features;

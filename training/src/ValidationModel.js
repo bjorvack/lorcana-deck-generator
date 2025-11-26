@@ -32,36 +32,49 @@ module.exports = class ValidationModel {
             name: 'deck_features'
         });
 
-        // Dense layers with L2 regularization to prevent overfitting on embeddings
+        // Dense layers with L2 regularization
+        // Increased model capacity to address underfitting
         let x = tf.layers.dense({
-            units: 128,
+            units: 256,  // Increased from 128
             activation: 'relu',
-            kernelRegularizer: tf.regularizers.l2({ l2: 0.01 }),
+            kernelRegularizer: tf.regularizers.l2({ l2: 0.001 }),  // Reduced from 0.01
             name: 'dense_1'
         }).apply(input);
 
         x = tf.layers.dropout({
-            rate: 0.5,  // Increased from 0.3
+            rate: 0.3,  // Reduced from 0.5 (was too aggressive)
             name: 'dropout_1'
         }).apply(x);
 
         x = tf.layers.dense({
-            units: 64,
+            units: 128,  // Increased from 64
             activation: 'relu',
-            kernelRegularizer: tf.regularizers.l2({ l2: 0.01 }),
+            kernelRegularizer: tf.regularizers.l2({ l2: 0.001 }),  // Reduced from 0.01
             name: 'dense_2'
         }).apply(x);
 
         x = tf.layers.dropout({
-            rate: 0.5,  // Increased from 0.3
+            rate: 0.3,  // Reduced from 0.5
             name: 'dropout_2'
+        }).apply(x);
+
+        x = tf.layers.dense({
+            units: 64,  // Increased from 32
+            activation: 'relu',
+            kernelRegularizer: tf.regularizers.l2({ l2: 0.001 }),  // Reduced from 0.01
+            name: 'dense_3'
+        }).apply(x);
+
+        x = tf.layers.dropout({
+            rate: 0.3,
+            name: 'dropout_3'
         }).apply(x);
 
         x = tf.layers.dense({
             units: 32,
             activation: 'relu',
-            kernelRegularizer: tf.regularizers.l2({ l2: 0.01 }),
-            name: 'dense_3'
+            kernelRegularizer: tf.regularizers.l2({ l2: 0.001 }),
+            name: 'dense_4'
         }).apply(x);
 
         const output = tf.layers.dense({
@@ -76,10 +89,11 @@ module.exports = class ValidationModel {
             name: 'validation_model'
         });
 
+        // Increased learning rate from 0.001 to 0.003 (3x) to address slow convergence
         this.model.compile({
-            optimizer: tf.train.adam(0.001),
+            optimizer: tf.train.adam(0.003),  // Increased from 0.001
             loss: 'binaryCrossentropy',
-            metrics: ['accuracy']
+            metrics: ['accuracy']  // TensorFlow.js doesn't have built-in precision/recall
         });
 
         this.model.summary();
@@ -88,12 +102,21 @@ module.exports = class ValidationModel {
     async train(features, labels, epochs = 20) {
         console.log('\nTraining validation model...');
         console.log(`Training on ${labels.length} decks...`);
+        console.log(`Architecture: 256 → 128 → 64 → 32 → 1`);
+        console.log(`Learning rate: 0.003 (3x increased)`);
+        console.log(`Regularization: L2=0.001, Dropout=0.3\n`);
 
         const featuresTensor = tf.tensor2d(features);
         const labelsTensor = tf.tensor2d(labels.map(l => [l]));
 
         // Split train/val
         const splitIdx = Math.floor(labels.length * 0.8);
+
+        // Learning rate scheduler: reduce LR when validation loss plateaus
+        let bestValLoss = Infinity;
+        let patienceCounter = 0;
+        const patience = 5;
+        let currentLR = 0.003;
 
         const history = await this.model.fit(
             featuresTensor.slice([0, 0], [splitIdx, features[0].length]),
@@ -106,8 +129,36 @@ module.exports = class ValidationModel {
                     labelsTensor.slice([splitIdx, 0], [labels.length - splitIdx, 1])
                 ],
                 callbacks: {
-                    onEpochEnd: (epoch, logs) => {
-                        console.log(`Epoch ${epoch + 1}/${epochs}: loss = ${logs.loss.toFixed(4)}, acc = ${logs.acc.toFixed(4)}, val_loss = ${logs.val_loss.toFixed(4)}, val_acc = ${logs.val_acc.toFixed(4)}`);
+                    onEpochEnd: async (epoch, logs) => {
+                        // Format metrics nicely
+                        const metrics = [
+                            `loss=${logs.loss.toFixed(4)}`,
+                            `acc=${(logs.acc * 100).toFixed(1)}%`,
+                            `val_loss=${logs.val_loss.toFixed(4)}`,
+                            `val_acc=${(logs.val_acc * 100).toFixed(1)}%`
+                        ];
+                        console.log(`Epoch ${epoch + 1}/${epochs}: ${metrics.join(', ')}`);
+
+                        // Learning rate scheduling
+                        if (logs.val_loss < bestValLoss) {
+                            bestValLoss = logs.val_loss;
+                            patienceCounter = 0;
+                        } else {
+                            patienceCounter++;
+                            if (patienceCounter >= patience && currentLR > 0.0001) {
+                                currentLR *= 0.5;
+                                console.log(`   → Reducing learning rate to ${currentLR.toFixed(6)}`);
+                                // Update optimizer learning rate
+                                this.model.optimizer.learningRate = currentLR;
+                                patienceCounter = 0;
+                            }
+                        }
+
+                        // Early stopping if accuracy is very high
+                        if (logs.val_acc >= 0.95 && logs.val_loss < 0.2) {
+                            console.log(`   ✓ Early stopping: validation accuracy ${(logs.val_acc * 100).toFixed(1)}% achieved!`);
+                            this.model.stopTraining = true;
+                        }
                     }
                 }
             }
@@ -116,7 +167,10 @@ module.exports = class ValidationModel {
         featuresTensor.dispose();
         labelsTensor.dispose();
 
-        console.log('Training complete!');
+        console.log('\n✅ Training complete!');
+        console.log(`Final metrics: loss=${history.history.loss[history.history.loss.length - 1].toFixed(4)}, ` +
+            `val_loss=${history.history.val_loss[history.history.val_loss.length - 1].toFixed(4)}, ` +
+            `val_acc=${(history.history.val_acc[history.history.val_acc.length - 1] * 100).toFixed(1)}%`);
         return history;
     }
 
