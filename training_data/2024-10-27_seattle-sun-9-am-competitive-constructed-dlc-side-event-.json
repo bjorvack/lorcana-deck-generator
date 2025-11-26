@@ -1,0 +1,170 @@
+{
+  "name": "Seattle - SUN 9 AM Competitive Constructed (DLC Side Event)",
+  "url": "https://inkdecks.com/lorcana-tournaments/seattle-sun-9-am-competitive-constructed-dlc-side-event-tournament-decks-1721",
+  "decks": [
+    {
+      "place": 1,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Be Prepared",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Brawl",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Chernabog's Followers",
+          "version": "Creatures of Evil"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
+        },
+        {
+          "amount": 4,
+          "name": "Flynn Rider",
+          "version": "Frenemy"
+        },
+        {
+          "amount": 4,
+          "name": "Friends on the Other Side",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Lady Tremaine",
+          "version": "Imperious Queen"
+        },
+        {
+          "amount": 4,
+          "name": "Madam Mim",
+          "version": "Fox"
+        },
+        {
+          "amount": 4,
+          "name": "Madam Mim",
+          "version": "Snake"
+        },
+        {
+          "amount": 4,
+          "name": "Magic Broom",
+          "version": "Illuminary Keeper"
+        },
+        {
+          "amount": 4,
+          "name": "Maui",
+          "version": "Hero to All"
+        },
+        {
+          "amount": 4,
+          "name": "Merlin",
+          "version": "Goat"
+        },
+        {
+          "amount": 4,
+          "name": "Merlin",
+          "version": "Rabbit"
+        },
+        {
+          "amount": 4,
+          "name": "Sisu",
+          "version": "Emboldened Warrior"
+        },
+        {
+          "amount": 4,
+          "name": "The Library",
+          "version": "A Gift for Belle"
+        }
+      ]
+    },
+    {
+      "place": 1,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Be Prepared",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Brawl",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Chernabog's Followers",
+          "version": "Creatures of Evil"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
+        },
+        {
+          "amount": 4,
+          "name": "Flynn Rider",
+          "version": "Frenemy"
+        },
+        {
+          "amount": 4,
+          "name": "Friends on the Other Side",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Lady Tremaine",
+          "version": "Imperious Queen"
+        },
+        {
+          "amount": 4,
+          "name": "Madam Mim",
+          "version": "Fox"
+        },
+        {
+          "amount": 4,
+          "name": "Madam Mim",
+          "version": "Snake"
+        },
+        {
+          "amount": 4,
+          "name": "Magic Broom",
+          "version": "Illuminary Keeper"
+        },
+        {
+          "amount": 4,
+          "name": "Maui",
+          "version": "Hero to All"
+        },
+        {
+          "amount": 4,
+          "name": "Merlin",
+          "version": "Goat"
+        },
+        {
+          "amount": 4,
+          "name": "Merlin",
+          "version": "Rabbit"
+        },
+        {
+          "amount": 4,
+          "name": "Sisu",
+          "version": "Emboldened Warrior"
+        },
+        {
+          "amount": 4,
+          "name": "The Library",
+          "version": "A Gift for Belle"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "set": 5,
+    "legality": "Core"
+  }
+}
