@@ -5,8 +5,8 @@ module.exports = class DeckModel {
         this.model = null;
         this.vocabSize = 0;
         this.maxLen = 60; // Max deck size usually 60
-        this.embeddingDim = 64; // Dimension of the card embedding
-        this.lstmUnits = 128; // Increased units for better state tracking
+        this.embeddingDim = 128; // Increased from 64
+        this.lstmUnits = 256; // Increased from 128
     }
 
     async initialize(vocabSize, embeddingMatrix) {
@@ -44,19 +44,27 @@ module.exports = class DeckModel {
 
         const embedded = embeddingLayer.apply(inputCardIds);
 
-        // --- LSTM Layer ---
-        const lstm = tf.layers.lstm({
+        // --- LSTM Layers ---
+        // Layer 1: Return sequences for next layer
+        const lstm1 = tf.layers.lstm({
             units: this.lstmUnits,
-            returnSequences: false,
-            name: 'lstm'
+            returnSequences: true,
+            name: 'lstm_1'
         }).apply(embedded);
+
+        // Layer 2: Final state
+        const lstm2 = tf.layers.lstm({
+            units: this.lstmUnits, // Keep same size
+            returnSequences: false,
+            name: 'lstm_2'
+        }).apply(lstm1);
 
         // --- Output Layer: predict next card ---
         const output = tf.layers.dense({
             units: this.vocabSize,
             activation: 'softmax',
             name: 'output'
-        }).apply(lstm);
+        }).apply(lstm2);
 
         // --- Create the model ---
         this.model = tf.model({

@@ -1,7 +1,7 @@
 const TrainingManager = require('./src/TrainingManager');
 const ValidationModel = require('./src/ValidationModel');
 
-const epochs = parseInt(process.argv[2]) || 20;
+const epochs = parseInt(process.argv[2]) || 50;  // Increased from 20
 
 console.log('==================================================');
 console.log('Lorcana Deck Validator - Set-Based Training');
@@ -126,16 +126,77 @@ async function trainValidator() {
     console.log(`Loaded ${manager.trainingData.length} tournament files`);
 
     // 4. Prepare dataset with aggregated features
+    console.log('\n📊 Preparing validation dataset...');
     const { features, labels } = manager.prepareValidationDataset();
+    console.log(`Dataset prepared: ${features.length} decks\n`);
 
-    // 5. Initialize model
+    // 5. VALIDATION: Check dataset quality
+    console.log('🔍 Validating dataset quality...');
+
+    // Check labels
+    const labelStats = {
+        min: Math.min(...labels),
+        max: Math.max(...labels),
+        mean: labels.reduce((a, b) => a + b, 0) / labels.length,
+        zeros: labels.filter(l => l === 0).length,
+        ones: labels.filter(l => l === 1).length,
+        between: labels.filter(l => l > 0 && l < 1).length,
+        nan: labels.filter(l => isNaN(l)).length,
+        infinite: labels.filter(l => !isFinite(l)).length
+    };
+
+    console.log(`Label Statistics:`);
+    console.log(`  Range: [${labelStats.min}, ${labelStats.max}]`);
+    console.log(`  Mean: ${labelStats.mean.toFixed(4)}`);
+    console.log(`  Distribution:`);
+    console.log(`    - Fake decks (0): ${labelStats.zeros} (${(labelStats.zeros / labels.length * 100).toFixed(1)}%)`);
+    console.log(`    - Real decks (0.6-1.0): ${labelStats.between + labelStats.ones} (${((labelStats.between + labelStats.ones) / labels.length * 100).toFixed(1)}%)`);
+    console.log(`    - Perfect decks (1.0): ${labelStats.ones} (${(labelStats.ones / labels.length * 100).toFixed(1)}%)`);
+
+    if (labelStats.nan > 0 || labelStats.infinite > 0) {
+        console.error(`\n❌ ERROR: Found ${labelStats.nan} NaN and ${labelStats.infinite} Infinity labels!`);
+        process.exit(1);
+    }
+
+    // Check features
+    let featuresWithNaN = 0;
+    let featuresWithInfinity = 0;
+    for (const featureVec of features) {
+        if (featureVec.some(v => isNaN(v))) featuresWithNaN++;
+        if (featureVec.some(v => !isFinite(v))) featuresWithInfinity++;
+    }
+
+    console.log(`\nFeature Statistics:`);
+    console.log(`  Dimension: ${features[0].length}`);
+    console.log(`  Features with NaN: ${featuresWithNaN}`);
+    console.log(`  Features with Infinity: ${featuresWithInfinity}`);
+
+    if (featuresWithNaN > 0 || featuresWithInfinity > 0) {
+        console.error(`\n❌ ERROR: Found ${featuresWithNaN} features with NaN and ${featuresWithInfinity} with Infinity!`);
+        process.exit(1);
+    }
+
+    console.log(`\n✅ Data validation passed!\n`);
+
+    // Print sample data
+    console.log('Sample predictions (before training):');
+    const realIdx = labels.findIndex(l => l > 0.6);
+    const fakeIdx = labels.findIndex(l => l === 0);
+    console.log(`  Real deck example (label=${labels[realIdx].toFixed(2)}): features[0:5] = [${features[realIdx].slice(0, 5).map(v => v.toFixed(3)).join(', ')}...]`);
+    console.log(`  Fake deck example (label=${labels[fakeIdx].toFixed(2)}): features[0:5] = [${features[fakeIdx].slice(0, 5).map(v => v.toFixed(3)).join(', ')}...]`);
+    console.log();
+
+    // 6. Initialize model
     const numericFeatureDim = 38; // From extractDeckFeatures
     await model.initialize(
         manager.textEmbedder.vocabularySize,
         numericFeatureDim
     );
 
-    // 6. Train
+    // 7. Train
+    console.log('==================================================');
+    console.log('🚀 Starting Training');
+    console.log('==================================================');
     await model.train(features, labels, epochs);
 
     // 7. Save
