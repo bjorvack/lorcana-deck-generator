@@ -50,7 +50,7 @@ class RLTrainer {
             const probs = await this.policy.predict(deck);
 
             // Sample action using policy
-            const { action, logProb } = this.sampleActionFromPolicy(probs, deck, cardCounts);
+            const { action, logProb } = this.sampleActionFromPolicy(probs, deck, cardCounts, inks);
 
             episode.actions.push(action);
             episode.logProbs.push(logProb);
@@ -62,20 +62,54 @@ class RLTrainer {
 
         // Get terminal reward from validator
         const deckFeatures = this.trainingManager.extractDeckFeaturesWithEmbeddings(deck);
-        episode.reward = await this.validator.evaluate(deckFeatures);
+        const validatorReward = await this.validator.evaluate(deckFeatures);
+
+        // Calculate Consistency Reward (Bonus for multiple copies)
+        const consistencyReward = this.calculateConsistencyReward(deck);
+
+        // Weighted sum: 70% Validator, 30% Consistency
+        // This encourages the model to build structured decks (3x/4x copies) 
+        // rather than just "good stuff" piles.
+        episode.reward = (validatorReward * 0.7) + (consistencyReward * 0.3);
 
         return episode;
+    }
+
+    /**
+     * Calculate consistency score based on card repetition
+     * Returns 0.0 (all singletons) to ~1.0 (highly consistent)
+     */
+    calculateConsistencyReward(deck) {
+        if (deck.length === 0) return 0;
+
+        const cardCounts = new Map();
+        for (const idx of deck) {
+            cardCounts.set(idx, (cardCounts.get(idx) || 0) + 1);
+        }
+
+        const uniqueCards = cardCounts.size;
+        const totalCards = deck.length;
+
+        // Repetition Ratio: 1.0 - (unique / total)
+        // Examples (60 cards):
+        // - 60 unique (1x each): 1 - 1 = 0.0
+        // - 30 unique (2x each): 1 - 0.5 = 0.5
+        // - 15 unique (4x each): 1 - 0.25 = 0.75
+        const repetitionRatio = 1.0 - (uniqueCards / totalCards);
+
+        // Boost the signal slightly to make it comparable to validator score
+        return Math.min(1.0, repetitionRatio * 1.3);
     }
 
     /**
      * Sample action from policy with exploration
      * Filters invalid actions (exceeds max count)
      */
-    sampleActionFromPolicy(probs, currentDeck, cardCounts) {
+    sampleActionFromPolicy(probs, currentDeck, cardCounts, allowedInks) {
         // Create array from Float32Array
         const probsArray = Array.from(probs);
 
-        // Mask invalid actions (cards at max count)
+        // Mask invalid actions (cards at max count or wrong ink)
         const maskedProbs = probsArray.map((p, idx) => {
             const card = this.trainingManager.indexMap.get(idx);
             if (!card) return 0;
@@ -86,6 +120,15 @@ class RLTrainer {
             // Can't add more if at max
             if (count >= maxAmount) return 0;
 
+            // Check Ink Constraints
+            if (allowedInks && allowedInks.length > 0) {
+                const cardInks = card.inks || (card.ink ? [card.ink] : []);
+                if (cardInks.length > 0) {
+                    const isAllowed = cardInks.every(ink => allowedInks.includes(ink));
+                    if (!isAllowed) return 0;
+                }
+            }
+
             return p;
         });
 
@@ -93,7 +136,21 @@ class RLTrainer {
         const sum = maskedProbs.reduce((a, b) => a + b, 0);
         if (sum === 0) {
             // Fallback: uniform over valid actions
-            const validActions = maskedProbs.map((p, i) => p > 0 ? i : -1).filter(i => i >= 0);
+            const validActions = maskedProbs.map((p, i) => {
+                // Re-check validity since p is 0
+                const card = this.trainingManager.indexMap.get(i);
+                if (!card) return -1;
+                const count = cardCounts.get(i) || 0;
+                const maxAmount = card.maxAmount || 4;
+                if (count >= maxAmount) return -1;
+
+                if (allowedInks && allowedInks.length > 0) {
+                    const cardInks = card.inks || (card.ink ? [card.ink] : []);
+                    if (cardInks.length > 0 && !cardInks.every(ink => allowedInks.includes(ink))) return -1;
+                }
+                return i;
+            }).filter(i => i >= 0);
+
             if (validActions.length === 0) {
                 console.warn('No valid actions available!');
                 return { action: 0, logProb: 0 };
@@ -186,42 +243,76 @@ class RLTrainer {
      * Update policy using REINFORCE algorithm
      */
     async updatePolicy(episodes) {
-        const allLogProbs = [];
-        const allAdvantages = [];
+        // 1. Prepare data
+        const states = [];
+        const actions = [];
+        const advantages = [];
 
-        // Prepare data
         for (const episode of episodes) {
             const returns = this.computeReturns(episode);
 
-            for (let t = 0; t < episode.logProbs.length; t++) {
-                allLogProbs.push(episode.logProbs[t]);
+            for (let t = 0; t < episode.states.length; t++) {
+                // Pad state to maxLen
+                const deck = episode.states[t];
+                const paddedSeq = new Array(this.policy.maxLen).fill(0);
+                const startIdx = Math.max(0, this.policy.maxLen - deck.length);
+                for (let j = 0; j < Math.min(deck.length, this.policy.maxLen); j++) {
+                    paddedSeq[startIdx + j] = deck[j];
+                }
 
-                // Advantage = return - baseline
+                states.push(paddedSeq);
+                actions.push(episode.actions[t]);
+
                 const advantage = this.useBaseline
                     ? returns[t] - this.baseline
                     : returns[t];
-                allAdvantages.push(advantage);
+                advantages.push(advantage);
             }
         }
 
-        // Compute loss
-        const loss = tf.tidy(() => {
-            const logProbsTensor = tf.tensor1d(allLogProbs);
-            const advantagesTensor = tf.tensor1d(allAdvantages);
+        // 2. Convert to Tensors
+        const statesTensor = tf.tensor2d(states, [states.length, this.policy.maxLen], 'int32');
+        const actionsTensor = tf.tensor1d(actions, 'int32');
+        const advantagesTensor = tf.tensor1d(advantages, 'float32');
 
-            // REINFORCE loss: -log(π(a|s)) * advantage
-            const policyLoss = tf.mean(tf.mul(tf.neg(logProbsTensor), advantagesTensor));
+        // 3. Compute Gradients & Update
+        const lossFunction = () => {
+            // Forward pass
+            const logits = this.policy.model.predict(statesTensor);
 
-            return policyLoss;
-        });
+            // Calculate log probs
+            // Add epsilon to avoid log(0)
+            const logProbs = tf.log(tf.add(logits, 1e-10));
 
-        // Get loss value before disposing
-        const lossValue = (await loss.data())[0];
+            // Select log prob of taken actions
+            const actionMask = tf.oneHot(actionsTensor, this.policy.vocabSize);
+            const selectedLogProbs = tf.sum(tf.mul(logProbs, actionMask), 1);
 
-        // Compute gradients and update (simplified - in practice would use tf.variableGrads)
-        // For now, we'll rely on the policy model's existing training methods
-        // This is a simplified version - full implementation would compute custom gradients
+            // Loss = -mean(log_prob * advantage)
+            // We want to maximize reward, so minimize negative reward
+            const loss = tf.mean(tf.mul(tf.neg(selectedLogProbs), advantagesTensor));
 
+            // Add entropy regularization
+            if (this.entropyCoef > 0) {
+                const entropy = tf.neg(tf.sum(tf.mul(logits, logProbs), 1));
+                const meanEntropy = tf.mean(entropy);
+                return tf.sub(loss, tf.mul(meanEntropy, this.entropyCoef));
+            }
+
+            return loss;
+        };
+
+        // Apply gradients
+        // minimize returns the value of the loss function
+        const varList = this.policy.model.trainableWeights.map(w => w.val);
+        const loss = this.optimizer.minimize(lossFunction, true, varList);
+
+        const lossValue = loss.dataSync()[0];
+
+        // Cleanup
+        statesTensor.dispose();
+        actionsTensor.dispose();
+        advantagesTensor.dispose();
         loss.dispose();
 
         return lossValue;

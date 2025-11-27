@@ -23,9 +23,9 @@ module.exports = class TrainingManager {
         console.log(`[${new Date().toLocaleTimeString()}] ${message}`);
     }
 
-    async startTraining(epochs = 10, fullRetrain = false) {
+    async startTraining(epochs = 10, fullRetrain = false, continueTraining = false) {
         this.log(`Starting training process with ${epochs} epochs...`);
-        this.log(`Mode: ${fullRetrain ? 'Full retrain' : 'Incremental training'}`);
+        this.log(`Mode: ${fullRetrain ? 'Full retrain' : continueTraining ? 'Continue training' : 'Incremental training'}`);
 
         // Load training state
         this.loadTrainingState();
@@ -90,28 +90,32 @@ module.exports = class TrainingManager {
             const allFiles = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
             // Determine which files are new this session
-            const filesToTrain = fullRetrain
-                ? allFiles
-                : allFiles.filter(file => !this.trainingState.trainedFiles.includes(file));
+            let filesToTrain;
+            if (fullRetrain || continueTraining) {
+                filesToTrain = allFiles;
+            } else {
+                filesToTrain = allFiles.filter(file => !this.trainingState.trainedFiles.includes(file));
+            }
 
             this.log(`Total files in manifest: ${allFiles.length}`);
             this.log(`Already trained files: ${this.trainingState.trainedFiles.length}`);
             this.log(`New files to train on this session: ${filesToTrain.length}`);
 
             if (filesToTrain.length === 0) {
-                this.log('No new files to train on. All files have been processed.');
-            } else {
-                for (const file of filesToTrain) {
-                    this.log(`Loading ${file}...`);
-                    const filePath = path.join(this.trainingDataPath, file);
-                    if (fs.existsSync(filePath)) {
-                        const rawData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-                        this.log(`Loaded tournament: ${rawData.name}`);
-                        this.trainingData.push(rawData); // Append new data (won't duplicate raw objects)
-                        this.loadedFiles.push(file); // Track the actual filename
-                    } else {
-                        this.log(`Warning: File ${file} not found.`);
-                    }
+                this.log('No new files found. Forcing training on ALL files to continue learning...');
+                filesToTrain = allFiles;
+            }
+
+            for (const file of filesToTrain) {
+                this.log(`Loading ${file}...`);
+                const filePath = path.join(this.trainingDataPath, file);
+                if (fs.existsSync(filePath)) {
+                    const rawData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                    this.log(`Loaded tournament: ${rawData.name}`);
+                    this.trainingData.push(rawData); // Append new data (won't duplicate raw objects)
+                    this.loadedFiles.push(file); // Track the actual filename
+                } else {
+                    this.log(`Warning: File ${file} not found.`);
                 }
             }
         } catch (e) {
@@ -235,7 +239,7 @@ module.exports = class TrainingManager {
         };
 
         // If dataset is too large, train in batches to avoid memory issues
-        const MAX_BATCH_SIZE = 2000;
+        const MAX_BATCH_SIZE = 5000; // Increased from 2000 for speed
         if (sequences.length > MAX_BATCH_SIZE) {
             this.log(`Large dataset detected (${sequences.length} sequences). Training in batches of ${MAX_BATCH_SIZE}...`);
 
