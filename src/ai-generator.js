@@ -74,8 +74,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log('Loading AI model...');
 
         // Load the RL-optimized model (trained with validator feedback)
-        await manager.loadModel('training_data/deck-generator-rl/model.json');
-        console.log('Model loaded successfully!');
+        try {
+            await manager.loadModel('training_data/deck-generator-rl/model.json');
+            console.log('✅ Loaded RL-optimized model');
+        } catch (e) {
+            console.warn('⚠️ RL model not found, falling back to base model...');
+            await manager.loadModel('training_data/deck-generator-model/model.json');
+            console.log('✅ Loaded base generator model');
+        }
 
         // Initialize card selector after cards are loaded
         cardSelector = new CardSelector(
