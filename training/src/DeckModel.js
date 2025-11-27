@@ -102,7 +102,7 @@ module.exports = class DeckModel {
             ys,
             {
                 epochs: epochs || 10,
-                batchSize: 64,
+                batchSize: 256, // Increased from 64 for faster CPU training
                 validationSplit: 0.1,
                 callbacks: {
                     onEpochEnd: (epoch, logs) => {
@@ -233,6 +233,13 @@ module.exports = class DeckModel {
         if (this.model.inputs && this.model.inputs.length > 6) {
             this.maxBodyTokens = this.model.inputs[6].shape[2];
         }
+
+        // Infer vocabSize from output shape
+        if (this.model.outputs && this.model.outputs.length > 0) {
+            // Output shape is [null, vocabSize]
+            this.vocabSize = this.model.outputs[0].shape[1];
+        }
+
         this.model.summary();
     }
 

@@ -180,7 +180,11 @@ async function evaluateGenerator() {
                 if (typeCounts[t] !== undefined) typeCounts[t]++;
             }
 
-            if (card.ink && inkCounts[card.ink] !== undefined) {
+            if (card.inks && card.inks.length > 0) {
+                card.inks.forEach(ink => {
+                    if (inkCounts[ink] !== undefined) inkCounts[ink]++;
+                });
+            } else if (card.ink && inkCounts[card.ink] !== undefined) {
                 inkCounts[card.ink]++;
             }
 
@@ -265,7 +269,11 @@ async function evaluateGenerator() {
             const card = indexMap.get(idx);
             if (!card) continue;
 
-            if (card.ink) inks.add(card.ink);
+            if (card.inks && card.inks.length > 0) {
+                card.inks.forEach(ink => inks.add(ink));
+            } else if (card.ink) {
+                inks.add(card.ink);
+            }
             if (card.inkwell) inkableCount++;
             costCounts[Math.min(card.cost, 10)]++;
 
@@ -335,8 +343,10 @@ async function evaluateGenerator() {
 
             // CRITICAL FIX: Enforce Ink Consistency
             // Only allow cards that match our selected inks
-            if (card.ink && !selectedInks.includes(card.ink)) {
-                continue;
+            const cardInks = card.inks || (card.ink ? [card.ink] : []);
+            if (cardInks.length > 0) {
+                const isAllowed = cardInks.every(ink => selectedInks.includes(ink));
+                if (!isAllowed) continue;
             }
 
             // Check max amount
@@ -359,7 +369,8 @@ async function evaluateGenerator() {
 
                     const retryCard = indexMap.get(selectedIdx);
                     if (!retryCard || retryCard.legality !== 'legal') continue;
-                    if (retryCard.ink && !selectedInks.includes(retryCard.ink)) continue;
+                    const retryInks = retryCard.inks || (retryCard.ink ? [retryCard.ink] : []);
+                    if (retryInks.length > 0 && !retryInks.every(ink => selectedInks.includes(ink))) continue;
 
                     const retryCopies = cardCounts.get(selectedIdx) || 0;
                     const retryMax = retryCard.maxAmount || 4;
@@ -381,7 +392,11 @@ async function evaluateGenerator() {
         // If we didn't get 60 cards, pad with random legal cards OF THE CORRECT INK
         if (deckIndices.length < deckSize) {
             const legalCards = Array.from(indexMap.entries())
-                .filter(([idx, card]) => card.legality === 'legal' && (!card.ink || selectedInks.includes(card.ink)))
+                .filter(([idx, card]) => {
+                    if (card.legality !== 'legal') return false;
+                    const cInks = card.inks || (card.ink ? [card.ink] : []);
+                    return cInks.length === 0 || cInks.every(ink => selectedInks.includes(ink));
+                })
                 .map(([idx]) => idx);
 
             while (deckIndices.length < deckSize && legalCards.length > 0) {
@@ -503,7 +518,9 @@ async function evaluateGenerator() {
 
     for (const [idx, count] of sortedCards) {
         const card = indexMap.get(idx);
-        console.log(`     ${count}x ${card.name} (${card.cost} cost, ${card.ink})`);
+        const name = card.version ? `${card.name} - ${card.version}` : card.name;
+        const inkStr = (card.inks && card.inks.length > 0) ? card.inks.join('/') : (card.ink || 'No Ink');
+        console.log(`     ${count}x ${name} (${card.cost} cost, ${inkStr})`);
     }
 
     console.log('\n==================================================');
