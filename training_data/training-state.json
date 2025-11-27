@@ -1,5 +1,5 @@
 {
-  "lastTrainingDate": "2025-11-26T13:02:55.509Z",
+  "lastTrainingDate": "2025-11-27T10:38:54.836Z",
   "totalTrainings": 1,
   "trainedFiles": [
     "2025-11-16_sunday-whispers-in-the-well-core-constructed-.json",
@@ -2611,8 +2611,8 @@
   ],
   "trainingHistory": [
     {
-      "date": "2025-11-26T13:02:55.509Z",
-      "epochs": 20,
+      "date": "2025-11-27T10:38:54.836Z",
+      "epochs": 50,
       "newFiles": 371,
       "totalFiles": 371
     }
