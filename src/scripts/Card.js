@@ -1,11 +1,11 @@
 const singerRegex = /Singer (\d+)/
-const bodyguardRegex = /Bodyguard \(This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.\)/
-const recklessRegex = /Reckless \(This character can[’'‘]t quest and must challenge each turn if able.\)/
-const wardRegex = /Ward \(Opponents can[’'‘]t choose this character except to challenge.\)/
-const evasiveRegex = /Evasive \(Only characters with Evasive can challenge this character.\)/
+// const bodyguardRegex = /Bodyguard \(This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.\)/
+// const recklessRegex = /Reckless \(This character can[’'‘]t quest and must challenge each turn if able.\)/
+// const wardRegex = /Ward \(Opponents can[’'‘]t choose this character except to challenge.\)/
+// const evasiveRegex = /Evasive \(Only characters with Evasive can challenge this character.\)/
 const resistRegex = /Resist \+(\d+) \(Damage dealt to this character is reduced by (\d+)\.\)/
 const challengerRegex = /Challenger \+(\d+) \(While challenging, this character gets \+(\d) (?:\w+)?(?:{S})?\.\)/
-const rushRegex = /Rush \(This character can challenge the turn they[’'‘]re played\.\)/
+// const rushRegex = /Rush \(This character can challenge the turn they[’'‘]re played\.\)/
 
 // Max count regexes
 // Max count regexes
@@ -13,18 +13,18 @@ const maxCopiesRegex = /You may have up to\s+(\d+)\s+copies/i
 const anyNumberRegex = /You may have any number of cards named/i
 const limitCopiesRegex = /You may only have\s+(\d+)\s+copies/i
 
-const shiftRegexes = [
-  /Shift \d+ \(You may pay \d+ {i} to play this on top of one of your characters named .*\.\)/,
-  /Shift: Discard an? .+ card \(You may discard an? .+ card to play this on top of one of your characters named .+\.\)/,
-  /Shift: Discard \d+ cards \(You may discard \d+ cards to play this on top of one of your characters named .*\.\)/,
-]
+// const shiftRegexes = [
+//   /Shift \d+ \(You may pay \d+ {i} to play this on top of one of your characters named .*\.\)/,
+//   /Shift: Discard an? .+ card \(You may discard an? .+ card to play this on top of one of your characters named .+\.\)/,
+//   /Shift: Discard \d+ cards \(You may discard \d+ cards to play this on top of one of your characters named .*\.\)/
+// ]
 
-const keywordExplanationRegex = /\([^)]+\)/
+// const keywordExplanationRegex = /\([^)]+\)/
 
 const morphId = 'crd_be70d689335140bdadcde5f5356e169d'
 
 export default class Card {
-  constructor(data) {
+  constructor (data) {
     this.id = data.id
     this.name = data.name
     this.version = data.version || null
@@ -51,7 +51,7 @@ export default class Card {
     // Lowercase all letters between {} in the card's text
     this.text = this.text.replace(/{[^}]+}/g, match => match.toLowerCase())
 
-    let parts = this.text.split('\n')
+    const parts = this.text.split('\n')
     this.sanitizedText = ''
     for (let i = 0; i < parts.length; i++) {
       // part starts with a keyword ignore it, else add it to the sanitized text
@@ -73,7 +73,7 @@ export default class Card {
     this.initialize()
   }
 
-  initialize() {
+  initialize () {
     this.hasBodyguard = this.keywords.includes('Bodyguard')
     this.hasReckless = this.keywords.includes('Reckless')
     this.hasRush = this.keywords.includes('Rush')
@@ -86,16 +86,16 @@ export default class Card {
     this.hasBoost = this.keywords.includes('Boost')
 
     if (this.hasShift) {
-      let names = this.name.split('&').map(name => name.trim())
+      const names = this.name.split('&').map(name => name.trim())
       this.requiredCardNames.push(...names)
     }
   }
 
-  get title() {
+  get title () {
     return this.name + (this.version ? ` - ${this.version}` : '')
   }
 
-  get maxAmount() {
+  get maxAmount () {
     // Check for "any number of copies" (e.g. Microbots)
     if (anyNumberRegex.test(this.text)) {
       return 99
@@ -116,7 +116,7 @@ export default class Card {
     return 4
   }
 
-  get singCost() {
+  get singCost () {
     if (this.hasSinger) {
       // Look for the Singer x text in the card's text
       const match = this.text.match(singerRegex)
@@ -128,7 +128,7 @@ export default class Card {
     return this.cost
   }
 
-  get resistAmount() {
+  get resistAmount () {
     if (this.hasResist) {
       // Look for the Resist +x text in the card's text
       const match = this.text.match(resistRegex)
@@ -140,7 +140,7 @@ export default class Card {
     return 0
   }
 
-  get challengerAmount() {
+  get challengerAmount () {
     if (this.hasChallenger) {
       // Look for the Challenger +x text in the card's text
       const match = this.text.match(challengerRegex)
@@ -152,7 +152,7 @@ export default class Card {
     return 0
   }
 
-  get boostAmount() {
+  get boostAmount () {
     if (this.hasBoost) {
       // Look for the Boost +x text in the card's text
       const boostRegex = /Boost \+(\d+) \(This character gets \+(\d+) (?:\w+)?(?:{S})?\.\)/
@@ -165,7 +165,7 @@ export default class Card {
     return 0
   }
 
-  deckMeetsRequirements(deck) {
+  deckMeetsRequirements (deck) {
     const otherCardsInDeck = deck.filter(deckCard => deckCard.id !== this.id)
 
     return this.deckMeetsRequiredKeywords(otherCardsInDeck) &&
@@ -175,7 +175,7 @@ export default class Card {
       this.deckMeetsShiftRequirements(otherCardsInDeck)
   }
 
-  hasRequirementsForDeck(deck) {
+  hasRequirementsForDeck (deck) {
     const uniqueDeckRequiredKeywords = []
     const uniqueDeckRequiredClassifications = []
     const uniqueDeckRequiredTypes = []
@@ -194,7 +194,7 @@ export default class Card {
       uniqueDeckRequiredCardNames.some(cardName => this.name.includes(cardName))
   }
 
-  deckMeetsRequiredKeywords(deck) {
+  deckMeetsRequiredKeywords (deck) {
     if (this.requiredKeywords.length === 0) {
       return true
     }
@@ -204,7 +204,7 @@ export default class Card {
     return this.requiredKeywords.every(keyword => keywordsInDeck.includes(keyword))
   }
 
-  deckMeetsRequiredClassifications(deck) {
+  deckMeetsRequiredClassifications (deck) {
     if (this.requiredClassifications.length === 0) {
       return true
     }
@@ -214,7 +214,7 @@ export default class Card {
     return this.requiredClassifications.some(classification => classificationsInDeck.includes(classification))
   }
 
-  deckMeetsRequiredTypes(deck) {
+  deckMeetsRequiredTypes (deck) {
     if (this.requiredTypes.length === 0) {
       return true
     }
@@ -224,7 +224,7 @@ export default class Card {
     return this.requiredTypes.every(type => typesInDeck.includes(type))
   }
 
-  deckMeetsRequiredCardNames(deck) {
+  deckMeetsRequiredCardNames (deck) {
     if (this.requiredCardNames.length === 0) {
       return true
     }
@@ -234,7 +234,7 @@ export default class Card {
     return this.requiredCardNames.some(cardName => cardNamesInDeck.includes(cardName))
   }
 
-  deckMeetsShiftRequirements(deck) {
+  deckMeetsShiftRequirements (deck) {
     if (!this.canShift) {
       return true
     }
@@ -257,7 +257,7 @@ export default class Card {
     return foundCheaperVersion
   }
 
-  canShiftFrom(card) {
+  canShiftFrom (card) {
     if (!this.hasShift) {
       console.log(`Card ${this.title} can't shift`)
       return false

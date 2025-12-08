@@ -1,11 +1,11 @@
 const singerRegex = /Singer (\d+)/
-const bodyguardRegex = /Bodyguard \(This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.\)/
-const recklessRegex = /Reckless \(This character can[’'‘]t quest and must challenge each turn if able.\)/
-const wardRegex = /Ward \(Opponents can[’'‘]t choose this character except to challenge.\)/
-const evasiveRegex = /Evasive \(Only characters with Evasive can challenge this character.\)/
+// const bodyguardRegex = /Bodyguard \(This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.\)/
+// const recklessRegex = /Reckless \(This character can[’'‘]t quest and must challenge each turn if able.\)/
+// const wardRegex = /Ward \(Opponents can[’'‘]t choose this character except to challenge.\)/
+// const evasiveRegex = /Evasive \(Only characters with Evasive can challenge this character.\)/
 const resistRegex = /Resist \+(\d+) \(Damage dealt to this character is reduced by (\d+)\.\)/
 const challengerRegex = /Challenger \+(\d+) \(While challenging, this character gets \+(\d) (?:\w+)?(?:{S})?\.\)/
-const rushRegex = /Rush \(This character can challenge the turn they[’'‘]re played\.\)/
+// const rushRegex = /Rush \(This character can challenge the turn they[’'‘]re played\.\)/
 
 // Max count regexes
 // Max count regexes
@@ -13,263 +13,254 @@ const maxCopiesRegex = /You may have up to\s+(\d+)\s+copies/i
 const anyNumberRegex = /You may have any number of cards named/i
 const limitCopiesRegex = /You may only have\s+(\d+)\s+copies/i
 
-const shiftRegexes = [
-    /Shift \d+ \(You may pay \d+ {i} to play this on top of one of your characters named .*\.\)/,
-    /Shift: Discard an? .+ card \(You may discard an? .+ card to play this on top of one of your characters named .+\.\)/,
-    /Shift: Discard \d+ cards \(You may discard \d+ cards to play this on top of one of your characters named .*\.\)/,
-]
+// const shiftRegexes = [
+//   /Shift \d+ \(You may pay \d+ {i} to play this on top of one of your characters named .*\.\)/,
+//   /Shift: Discard an? .+ card \(You may discard an? .+ card to play this on top of one of your characters named .+\.\)/,
+//   /Shift: Discard \d+ cards \(You may discard \d+ cards to play this on top of one of your characters named .*\.\)/
+// ]
 
-const keywordExplanationRegex = /\([^)]+\)/
+// const keywordExplanationRegex = /\([^)]+\)/
 
 const morphId = 'crd_be70d689335140bdadcde5f5356e169d'
 
 module.exports = class Card {
-    constructor(data) {
-        this.id = data.id
-        this.name = data.name
-        this.version = data.version || null
-        this.cost = data.cost || 0
-        this.inkwell = data.inkwell || false
-        this.ink = data.ink
-        this.inks = data.inks || [data.ink]
-        this.keywords = data.keywords || []
-        this.types = data.type || []
-        this.classifications = data.classifications || []
-        this.text = data.text || ''
-        this.image = data.image_uris?.digital?.large || data.image_uris?.digital?.normal || data.image_uris?.digital?.small || ''
-        this.lore = data.lore || 0
-        this.strength = data.strength || 0
-        this.willpower = data.willpower || 0
-        this.moveCost = data.move_cost || 0
-        this.legality = data.legalities.core || 'not_legal'
+  constructor (data) {
+    this.id = data.id
+    this.name = data.name
+    this.version = data.version || null
+    this.cost = data.cost || 0
+    this.inkwell = data.inkwell || false
+    this.ink = data.ink
+    this.inks = data.inks || [data.ink]
+    this.keywords = data.keywords || []
+    this.types = data.type || []
+    this.classifications = data.classifications || []
+    this.text = data.text || ''
+    this.image = data.image_uris?.digital?.large || data.image_uris?.digital?.normal || data.image_uris?.digital?.small || ''
+    this.lore = data.lore || 0
+    this.strength = data.strength || 0
+    this.willpower = data.willpower || 0
+    this.moveCost = data.move_cost || 0
+    this.legality = data.legalities.core || 'not_legal'
 
-        this.requiredKeywords = []
-        this.requiredClassifications = []
-        this.requiredTypes = []
-        this.requiredCardNames = []
+    this.requiredKeywords = []
+    this.requiredClassifications = []
+    this.requiredTypes = []
+    this.requiredCardNames = []
 
-        // Lowercase all letters between {} in the card's text
-        this.text = this.text.replace(/{[^}]+}/g, match => match.toLowerCase())
+    // Lowercase all letters between {} in the card's text
+    this.text = this.text.replace(/{[^}]+}/g, match => match.toLowerCase())
 
-        let parts = this.text.split('\n')
-        this.sanitizedText = ''
-        for (let i = 0; i < parts.length; i++) {
-            // part starts with a keyword ignore it, else add it to the sanitized text
-            const firstWord = parts[i].split(' ')[0]
-            if (this.keywords.includes(firstWord)) {
-                continue
-            }
+    const parts = this.text.split('\n')
+    this.sanitizedText = ''
+    for (let i = 0; i < parts.length; i++) {
+      // part starts with a keyword ignore it, else add it to the sanitized text
+      const firstWord = parts[i].split(' ')[0]
+      if (this.keywords.includes(firstWord)) {
+        continue
+      }
 
-            this.sanitizedText += parts[i] + '\n'
-        }
-
-        // Remove all text between ()
-        this.sanitizedText = this.sanitizedText.replace(/\([^)]+\)/g, '')
-
-        // Remove all () from the text
-        this.sanitizedText = this.sanitizedText.replace(/\(|\)/g, '')
-        this.sanitizedText = this.sanitizedText.trim().toLowerCase()
-
-        this.initialize()
+      this.sanitizedText += parts[i] + '\n'
     }
 
-    initialize() {
-        this.hasBodyguard = this.keywords.includes('Bodyguard')
-        this.hasReckless = this.keywords.includes('Reckless')
-        this.hasRush = this.keywords.includes('Rush')
-        this.hasWard = this.keywords.includes('Ward')
-        this.hasEvasive = this.keywords.includes('Evasive')
-        this.hasResist = this.keywords.includes('Resist')
-        this.hasChallenger = this.keywords.includes('Challenger')
-        this.hasSinger = this.keywords.includes('Singer')
-        this.hasShift = this.keywords.includes('Shift')
-        this.hasBoost = this.keywords.includes('Boost')
+    // Remove all text between ()
+    this.sanitizedText = this.sanitizedText.replace(/\([^)]+\)/g, '')
 
-        if (this.hasShift) {
-            let names = this.name.split('&').map(name => name.trim())
-            this.requiredCardNames.push(...names)
-        }
+    // Remove all () from the text
+    this.sanitizedText = this.sanitizedText.replace(/\(|\)/g, '')
+    this.sanitizedText = this.sanitizedText.trim().toLowerCase()
+
+    this.initialize()
+  }
+
+  initialize () {
+    this.hasBodyguard = this.keywords.includes('Bodyguard')
+    this.hasReckless = this.keywords.includes('Reckless')
+    this.hasRush = this.keywords.includes('Rush')
+    this.hasWard = this.keywords.includes('Ward')
+    this.hasEvasive = this.keywords.includes('Evasive')
+    this.hasResist = this.keywords.includes('Resist')
+    this.hasChallenger = this.keywords.includes('Challenger')
+    this.hasSinger = this.keywords.includes('Singer')
+    this.hasShift = this.keywords.includes('Shift')
+    this.hasBoost = this.keywords.includes('Boost')
+
+    if (this.hasShift) {
+      const names = this.name.split('&').map(name => name.trim())
+      this.requiredCardNames.push(...names)
+    }
+  }
+
+  get title () {
+    return this.name + (this.version ? ` - ${this.version}` : '')
+  }
+
+  get maxAmount () {
+    // Check for "any number of copies" (e.g. Microbots)
+    if (anyNumberRegex.test(this.text)) {
+      return 99
     }
 
-    get title() {
-        return this.name + (this.version ? ` - ${this.version}` : '')
+    // Check for specific limit "up to X copies" (e.g. Dalmatian Puppy)
+    const maxMatch = this.text.match(maxCopiesRegex)
+    if (maxMatch) {
+      return parseInt(maxMatch[1])
     }
 
-    get maxAmount() {
-        // Check for "any number of copies" (e.g. Microbots)
-        if (anyNumberRegex.test(this.text)) {
-            return 99
-        }
-
-        // Check for specific limit "up to X copies" (e.g. Dalmatian Puppy)
-        const maxMatch = this.text.match(maxCopiesRegex)
-        if (maxMatch) {
-            return parseInt(maxMatch[1])
-        }
-
-        // Check for restrictive limit "only have X copies" (e.g. The Glass Slipper)
-        const limitMatch = this.text.match(limitCopiesRegex)
-        if (limitMatch) {
-            return parseInt(limitMatch[1])
-        }
-
-        return 4
+    // Check for restrictive limit "only have X copies" (e.g. The Glass Slipper)
+    const limitMatch = this.text.match(limitCopiesRegex)
+    if (limitMatch) {
+      return parseInt(limitMatch[1])
     }
 
-    get singCost() {
-        if (this.hasSinger) {
-            // Look for the Singer x text in the card's text
-            const match = this.text.match(singerRegex)
-            if (match) {
-                return parseInt(match[1])
-            }
-        }
+    return 4
+  }
 
-        return this.cost
+  get singCost () {
+    if (this.hasSinger) {
+      // Look for the Singer x text in the card's text
+      const match = this.text.match(singerRegex)
+      if (match) {
+        return parseInt(match[1])
+      }
     }
 
-    get resistAmount() {
-        if (this.hasResist) {
-            // Look for the Resist +x text in the card's text
-            const match = this.text.match(resistRegex)
-            if (match) {
-                return parseInt(match[1])
-            }
-        }
+    return this.cost
+  }
 
-        return 0
+  get resistAmount () {
+    if (this.hasResist) {
+      // Look for the Resist +x text in the card's text
+      const match = this.text.match(resistRegex)
+      if (match) {
+        return parseInt(match[1])
+      }
     }
 
-    get challengerAmount() {
-        if (this.hasChallenger) {
-            // Look for the Challenger +x text in the card's text
-            const match = this.text.match(challengerRegex)
-            if (match) {
-                return parseInt(match[1])
-            }
-        }
+    return 0
+  }
 
-        return 0
+  get challengerAmount () {
+    if (this.hasChallenger) {
+      // Look for the Challenger +x text in the card's text
+      const match = this.text.match(challengerRegex)
+      if (match) {
+        return parseInt(match[1])
+      }
     }
 
-    get boostAmount() {
-        if (this.hasBoost) {
-            // Look for the Boost +x text in the card's text
-            const boostRegex = /Boost \+(\d+) \(This character gets \+(\d+) (?:\w+)?(?:{S})?\.\)/
-            const match = this.text.match(boostRegex)
-            if (match) {
-                return parseInt(match[1])
-            }
-        }
+    return 0
+  }
 
-        return 0
+  get boostAmount () {
+    if (this.hasBoost) {
+      // Look for the Boost +x text in the card's text
+      const boostRegex = /Boost \+(\d+) \(This character gets \+(\d+) (?:\w+)?(?:{S})?\.\)/
+      const match = this.text.match(boostRegex)
+      if (match) {
+        return parseInt(match[1])
+      }
     }
 
-    deckMeetsRequirements(deck) {
-        const otherCardsInDeck = deck.filter(deckCard => deckCard.id !== this.id)
+    return 0
+  }
 
-        return this.deckMeetsRequiredKeywords(otherCardsInDeck) &&
+  deckMeetsRequirements (deck) {
+    const otherCardsInDeck = deck.filter(deckCard => deckCard.id !== this.id)
+
+    return this.deckMeetsRequiredKeywords(otherCardsInDeck) &&
             this.deckMeetsRequiredClassifications(otherCardsInDeck) &&
             this.deckMeetsRequiredTypes(otherCardsInDeck) &&
             this.deckMeetsRequiredCardNames(otherCardsInDeck) &&
             this.deckMeetsShiftRequirements(otherCardsInDeck)
-    }
+  }
 
-    hasRequirementsForDeck(deck) {
-        const uniqueDeckRequiredKeywords = []
-        const uniqueDeckRequiredClassifications = []
-        const uniqueDeckRequiredTypes = []
-        const uniqueDeckRequiredCardNames = []
+  hasRequirementsForDeck (deck) {
+    const uniqueDeckRequiredKeywords = []
+    const uniqueDeckRequiredClassifications = []
+    const uniqueDeckRequiredTypes = []
+    const uniqueDeckRequiredCardNames = []
 
-        deck.forEach(card => {
-            uniqueDeckRequiredKeywords.push(...card.requiredKeywords)
-            uniqueDeckRequiredClassifications.push(...card.requiredClassifications)
-            uniqueDeckRequiredTypes.push(...card.requiredTypes)
-            uniqueDeckRequiredCardNames.push(...card.requiredCardNames)
-        })
+    deck.forEach(card => {
+      uniqueDeckRequiredKeywords.push(...card.requiredKeywords)
+      uniqueDeckRequiredClassifications.push(...card.requiredClassifications)
+      uniqueDeckRequiredTypes.push(...card.requiredTypes)
+      uniqueDeckRequiredCardNames.push(...card.requiredCardNames)
+    })
 
-        return uniqueDeckRequiredKeywords.some(keyword => this.keywords.includes(keyword)) ||
+    return uniqueDeckRequiredKeywords.some(keyword => this.keywords.includes(keyword)) ||
             uniqueDeckRequiredClassifications.some(classification => this.classifications.includes(classification)) ||
             uniqueDeckRequiredTypes.some(type => this.types.includes(type)) ||
             uniqueDeckRequiredCardNames.some(cardName => this.name.includes(cardName))
+  }
+
+  deckMeetsRequiredKeywords (deck) {
+    if (this.requiredKeywords.length === 0) {
+      return true
     }
 
-    deckMeetsRequiredKeywords(deck) {
-        if (this.requiredKeywords.length === 0) {
-            return true
-        }
+    const keywordsInDeck = deck.map(card => card.keywords).flat()
 
-        const keywordsInDeck = deck.map(card => card.keywords).flat()
+    return this.requiredKeywords.every(keyword => keywordsInDeck.includes(keyword))
+  }
 
-        return this.requiredKeywords.every(keyword => keywordsInDeck.includes(keyword))
+  deckMeetsRequiredClassifications (deck) {
+    if (this.requiredClassifications.length === 0) {
+      return true
     }
 
-    deckMeetsRequiredClassifications(deck) {
-        if (this.requiredClassifications.length === 0) {
-            return true
-        }
+    const classificationsInDeck = deck.map(card => card.classifications).flat()
 
-        const classificationsInDeck = deck.map(card => card.classifications).flat()
+    return this.requiredClassifications.some(classification => classificationsInDeck.includes(classification))
+  }
 
-        return this.requiredClassifications.some(classification => classificationsInDeck.includes(classification))
+  deckMeetsRequiredTypes (deck) {
+    if (this.requiredTypes.length === 0) {
+      return true
     }
 
-    deckMeetsRequiredTypes(deck) {
-        if (this.requiredTypes.length === 0) {
-            return true
-        }
+    const typesInDeck = deck.map(card => card.types).flat()
 
-        const typesInDeck = deck.map(card => card.types).flat()
+    return this.requiredTypes.every(type => typesInDeck.includes(type))
+  }
 
-        return this.requiredTypes.every(type => typesInDeck.includes(type))
+  deckMeetsRequiredCardNames (deck) {
+    if (this.requiredCardNames.length === 0) {
+      return true
     }
 
-    deckMeetsRequiredCardNames(deck) {
-        if (this.requiredCardNames.length === 0) {
-            return true
-        }
+    const cardNamesInDeck = deck.map(card => card.name)
 
-        const cardNamesInDeck = deck.map(card => card.name)
+    return this.requiredCardNames.some(cardName => cardNamesInDeck.includes(cardName))
+  }
 
-        return this.requiredCardNames.some(cardName => cardNamesInDeck.includes(cardName))
+  deckMeetsShiftRequirements (deck) {
+    if (!this.canShift) {
+      return true
     }
 
-    deckMeetsShiftRequirements(deck) {
-        if (!this.canShift) {
-            return true
-        }
-
-        const morphInDeck = deck.filter(deckCard => deckCard.id === morphId).length > 0
-        if (morphInDeck) {
-            return true
-        }
-
-        const names = this.name.split('&').map(name => name.trim())
-
-        const cardsWithSameNameButDifferentVersion = deck.filter(deckCard => names.includes(deckCard.name) && deckCard.id !== this.id)
-        let foundCheaperVersion = false
-        cardsWithSameNameButDifferentVersion.forEach(card => {
-            if (card.cost < this.cost) {
-                foundCheaperVersion = true
-            }
-        })
-
-        return foundCheaperVersion
+    const morphInDeck = deck.filter(deckCard => deckCard.id === morphId).length > 0
+    if (morphInDeck) {
+      return true
     }
 
-    canShiftFrom(card) {
-        if (!this.hasShift) {
-            console.log(`Card ${this.title} can't shift`)
-            return false
-        }
+    const names = this.name.split('&').map(name => name.trim())
 
-        if (card.id === morphId) {
-            return true
-        }
+    const cardsWithSameNameButDifferentVersion = deck.filter(deckCard => names.includes(deckCard.name) && deckCard.id !== this.id)
+    let foundCheaperVersion = false
+    cardsWithSameNameButDifferentVersion.forEach(card => {
+      if (card.cost < this.cost) {
+        foundCheaperVersion = true
+      }
+    })
 
-        const ownNames = this.name.split('&').map(name => name.trim())
-        const cardNames = card.name.split('&').map(name => name.trim())
+    return foundCheaperVersion
+  }
 
-        return ownNames.some(name => cardNames.includes(name))
+  canShiftFrom (card) {
+    if (!this.hasShift) {
+      console.log(`Card ${this.title} can't shift`)
+      return false
     }
+  }
 }

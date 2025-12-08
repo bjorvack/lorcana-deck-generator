@@ -1,10 +1,10 @@
-import DeckRenderer from "./DeckRenderer";
-import CardSelector from "./CardSelector";
-import InkSelector from "./InkSelector";
-import CardPreview from "./CardPreview";
+import DeckRenderer from './DeckRenderer'
+import CardSelector from './CardSelector'
+import InkSelector from './InkSelector'
+import CardPreview from './CardPreview'
 
 export default class UI {
-  constructor(
+  constructor (
     deckGenerator,
     loadingScreen,
     generateDeckButtons,
@@ -28,7 +28,7 @@ export default class UI {
     this.cardSelectContainer = cardSelectContainer
     this.chart = chart
 
-    this.cardPreview = new CardPreview();
+    this.cardPreview = new CardPreview()
 
     // Initialize Components
     this.deckRenderer = new DeckRenderer(this.deckContainer, {
@@ -37,7 +37,7 @@ export default class UI {
       onCardClick: (card) => this.cardPreview.show(card.image, card.name),
       isEditable: true,
       showAddPlaceholder: true
-    });
+    })
 
     this.cardSelector = new CardSelector(
       this.deckGenerator.cards,
@@ -48,34 +48,34 @@ export default class UI {
         sort: (a, b) => this.sortCards(a, b),
         renderButtonText: (card) => this.renderButtonText(card)
       }
-    );
+    )
 
     this.inkSelector = new InkSelector(
       document.querySelector('[data-role="ink-selector"]'),
       {
         onChange: (inks) => this.updateInks(inks)
       }
-    );
+    )
 
     this.init()
   }
 
-  init() {
-    console.log('Loading screen:', this.loadingScreen);
+  init () {
+    console.log('Loading screen:', this.loadingScreen)
     this.addListeners()
     if (this.loadingScreen) {
-        // set display to none after initialization
-        this.loadingScreen.close()
-        this.loadingScreen.style.display = 'none'
+      // set display to none after initialization
+      this.loadingScreen.close()
+      this.loadingScreen.style.display = 'none'
     }
   }
 
-  addListeners() {
+  addListeners () {
     this.generateDeckButtons.forEach(button => {
       button.addEventListener('click', () => {
         this.loadingScreen.show()
 
-        let deckType = 'default';
+        let deckType = 'default'
         switch (button.dataset.distribution) {
           case 'default':
             this.deckGenerator.useDefaultDistribution()
@@ -106,32 +106,32 @@ export default class UI {
     })
   }
 
-  updateInks(inks) {
-    this.inks = inks;
-    this.removeCardsFromWrongInk();
-    this.cardSelector.refresh();
+  updateInks (inks) {
+    this.inks = inks
+    this.removeCardsFromWrongInk()
+    this.cardSelector.refresh()
   }
 
   // --- Card Selector Options ---
 
-  filterCard(card) {
+  filterCard (card) {
     // Check Inks
-    const inkMatch = this.inks.includes(card.ink) || this.checkDualInks(card);
-    if (!inkMatch) return false;
+    const inkMatch = this.inks.includes(card.ink) || this.checkDualInks(card)
+    if (!inkMatch) return false
 
     // Check Limit
-    const count = this.deck.filter(deckCard => deckCard.title === card.title).length;
-    return count < card.maxAmount;
+    const count = this.deck.filter(deckCard => deckCard.title === card.title).length
+    return count < card.maxAmount
   }
 
-  checkDualInks(card) {
+  checkDualInks (card) {
     if (this.inks.length !== 2) {
       return false
     }
     return this.inks.includes(card.inks[0]) && this.inks.includes(card.inks[1])
   }
 
-  sortCards(a, b) {
+  sortCards (a, b) {
     if (a.ink !== b.ink) {
       return this.inks.indexOf(a.ink) - this.inks.indexOf(b.ink)
     }
@@ -148,45 +148,45 @@ export default class UI {
     return a.title < b.title ? -1 : 1
   }
 
-  renderButtonText(card) {
-    const count = this.deck.filter(deckCard => deckCard.title === card.title).length;
+  renderButtonText (card) {
+    const count = this.deck.filter(deckCard => deckCard.title === card.title).length
     if (count >= card.maxAmount) {
-      return `Max Reached <small>(${count}/${card.maxAmount})</small>`;
+      return `Max Reached <small>(${count}/${card.maxAmount})</small>`
     }
-    return `Add card <small>(${count}/${card.maxAmount})</small>`;
+    return `Add card <small>(${count}/${card.maxAmount})</small>`
   }
 
   // --- Actions ---
 
-  addCardToDeck(card) {
-    this.deck.push(card);
-    this.renderDeck();
-    this.cardSelector.refresh(); // Update counts
-    this.chart.renderChart(this.deck);
+  addCardToDeck (card) {
+    this.deck.push(card)
+    this.renderDeck()
+    this.cardSelector.refresh() // Update counts
+    this.chart.renderChart(this.deck)
 
     if (this.deck.length === 60) {
-      this.cardSelector.hide();
+      this.cardSelector.hide()
     }
   }
 
-  removeCard(cardId) {
-    const index = this.deck.findIndex(card => card.id === cardId);
+  removeCard (cardId) {
+    const index = this.deck.findIndex(card => card.id === cardId)
     if (index !== -1) {
-      this.deck.splice(index, 1);
+      this.deck.splice(index, 1)
     }
-    this.renderDeck();
-    this.cardSelector.refresh(); // Update counts
-    this.chart.renderChart(this.deck);
+    this.renderDeck()
+    this.cardSelector.refresh() // Update counts
+    this.chart.renderChart(this.deck)
   }
 
-  removeCardsFromWrongInk() {
+  removeCardsFromWrongInk () {
     this.deck = this.deck.filter(card => this.inks.includes(card.ink))
     this.renderDeck()
     this.chart.renderChart(this.deck)
   }
 
-  renderDeck() {
-    this.deckRenderer.render(this.deck, this.inks);
+  renderDeck () {
+    this.deckRenderer.render(this.deck, this.inks)
 
     // Toggle buttons based on deck state
     this.testDeckButton.classList.remove('hidden')
@@ -198,7 +198,7 @@ export default class UI {
     }
   }
 
-  get inkTableLink() {
+  get inkTableLink () {
     const randomId = Math.random().toString(36).substring(7)
     let deckName = `Generated Deck: ${this.inks[0]} - ${this.inks[1]} - ${randomId}`
     deckName = encodeURIComponent(deckName)

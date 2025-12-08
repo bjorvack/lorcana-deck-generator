@@ -2,11 +2,11 @@ import { Chart as ChartJS } from 'chart.js/auto'
 import pattern from 'patternomaly'
 
 export default class Chart {
-  constructor(canvas) {
+  constructor (canvas) {
     this.canvas = canvas
   }
 
-  renderChart(deck) {
+  renderChart (deck) {
     if (this.canvas.chart !== undefined) {
       this.canvas.chart.destroy()
     }
@@ -22,7 +22,7 @@ export default class Chart {
       Emerald: '#4CAF50',
       Ruby: '#F44336',
       Sapphire: '#2196F3',
-      Steel: '#607D8B',
+      Steel: '#607D8B'
     }
 
     for (const ink of uniqueInks) {
@@ -42,13 +42,13 @@ export default class Chart {
       datasets.push({
         label: ink,
         data: inkableCostCounts,
-        backgroundColor: colors[ink],
+        backgroundColor: colors[ink]
       })
 
       datasets.push({
         label: `${ink} (Non-Inkable)`,
         data: nonInkableCostCounts,
-        backgroundColor: pattern.draw('diagonal', colors[ink]),
+        backgroundColor: pattern.draw('diagonal', colors[ink])
       })
     }
 
@@ -58,12 +58,12 @@ export default class Chart {
         type: 'bar',
         data: {
           labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-          datasets: datasets
+          datasets
         },
         options: {
           scales: {
             x: {
-              stacked: true,
+              stacked: true
             },
             y: {
               stacked: true

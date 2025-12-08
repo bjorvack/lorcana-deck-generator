@@ -1,54 +1,54 @@
 export default class CardPreview {
-    constructor() {
-        this.dialog = document.querySelector('dialog[data-role="card-preview"]');
+  constructor () {
+    this.dialog = document.querySelector('dialog[data-role="card-preview"]')
 
-        if (!this.dialog) {
-            this._createDialog();
-        }
-
-        this._bindEvents();
+    if (!this.dialog) {
+      this._createDialog()
     }
 
-    _createDialog() {
-        this.dialog = document.createElement('dialog');
-        this.dialog.dataset.role = 'card-preview';
+    this._bindEvents()
+  }
 
-        const closeBtn = document.createElement('button');
-        closeBtn.dataset.role = 'close';
-        closeBtn.innerHTML = '&times;';
+  _createDialog () {
+    this.dialog = document.createElement('dialog')
+    this.dialog.dataset.role = 'card-preview'
 
-        const img = document.createElement('img');
-        img.alt = 'Card Preview';
+    const closeBtn = document.createElement('button')
+    closeBtn.dataset.role = 'close'
+    closeBtn.innerHTML = '&times;'
 
-        this.dialog.appendChild(closeBtn);
-        this.dialog.appendChild(img);
+    const img = document.createElement('img')
+    img.alt = 'Card Preview'
 
-        document.body.appendChild(this.dialog);
+    this.dialog.appendChild(closeBtn)
+    this.dialog.appendChild(img)
+
+    document.body.appendChild(this.dialog)
+  }
+
+  _bindEvents () {
+    const closeBtn = this.dialog.querySelector('[data-role="close"]')
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => this.hide())
     }
 
-    _bindEvents() {
-        const closeBtn = this.dialog.querySelector('[data-role="close"]');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', () => this.hide());
-        }
+    this.dialog.addEventListener('click', (e) => {
+      if (e.target === this.dialog) {
+        this.hide()
+      }
+    })
+  }
 
-        this.dialog.addEventListener('click', (e) => {
-            if (e.target === this.dialog) {
-                this.hide();
-            }
-        });
+  show (imageSrc, altText) {
+    const img = this.dialog.querySelector('img')
+    if (img) {
+      img.src = imageSrc
+      img.alt = altText || 'Card Preview'
     }
+    this.dialog.showModal()
+  }
 
-    show(imageSrc, altText) {
-        const img = this.dialog.querySelector('img');
-        if (img) {
-            img.src = imageSrc;
-            img.alt = altText || 'Card Preview';
-        }
-        this.dialog.showModal();
-    }
-
-    hide() {
-        this.dialog.close();
-    }
+  hide () {
+    this.dialog.close()
+  }
 }
