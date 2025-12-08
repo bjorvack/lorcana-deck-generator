@@ -18,20 +18,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const chart = new Chart(chartCanvas)
   let cardSelector
-  const deckRenderer = new DeckRenderer(document.querySelector('[data-role="deck"]'), {
-    onRemove: (cardId) => {
-      const index = currentDeck.findIndex(c => c.id === cardId)
-      if (index !== -1) {
-        currentDeck.splice(index, 1)
-        updateDeckPreview()
-        cardSelector.refresh()
-      }
-    },
-    onAdd: () => cardSelector.show(),
-    onCardClick: (card) => cardPreview.show(card.image, card.name),
-    isEditable: true,
-    showAddPlaceholder: true
-  })
+  const deckRenderer = new DeckRenderer(
+    document.querySelector('[data-role="deck"]'),
+    {
+      onRemove: (cardId) => {
+        const index = currentDeck.findIndex((c) => c.id === cardId)
+        if (index !== -1) {
+          currentDeck.splice(index, 1)
+          updateDeckPreview()
+          cardSelector.refresh()
+        }
+      },
+      onAdd: () => cardSelector.show(),
+      onCardClick: (card) => cardPreview.show(card.image, card.name),
+      isEditable: true,
+      showAddPlaceholder: true
+    }
+  )
   const cardPreview = new CardPreview()
 
   let currentDeck = [] // Store actual Card objects
@@ -45,8 +48,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       onChange: (inks) => {
         currentInks = inks
         // Remove cards that don't match new inks
-        const validDeck = currentDeck.filter(card => {
-          return currentInks.includes(card.ink) || checkDualInks(card, currentInks)
+        const validDeck = currentDeck.filter((card) => {
+          return (
+            currentInks.includes(card.ink) || checkDualInks(card, currentInks)
+          )
         })
 
         if (validDeck.length !== currentDeck.length) {
@@ -85,16 +90,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         filter: (card) => {
           // Filter by ink
           if (currentInks.length > 0) {
-            const inkMatch = currentInks.includes(card.ink) || checkDualInks(card, currentInks)
+            const inkMatch =
+              currentInks.includes(card.ink) ||
+              checkDualInks(card, currentInks)
             if (!inkMatch) return false
           }
 
           // Filter by count
-          const count = currentDeck.filter(c => c.title === card.title).length
+          const count = currentDeck.filter(
+            (c) => c.title === card.title
+          ).length
           return count < card.maxAmount
         },
         renderButtonText: (card) => {
-          const count = currentDeck.filter(c => c.title === card.title).length
+          const count = currentDeck.filter(
+            (c) => c.title === card.title
+          ).length
           if (count >= card.maxAmount) {
             return `Max Reached <small>(${count}/${card.maxAmount})</small>`
           }
@@ -109,7 +120,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Load validation model
     try {
       console.log('Loading validation model...')
-      await manager.loadValidationModel('training_data/deck-validator-model/model.json')
+      await manager.loadValidationModel(
+        'training_data/deck-validator-model/model.json'
+      )
       console.log('Validation model loaded!')
     } catch (e) {
       console.warn('Validation model not available:', e)
@@ -132,7 +145,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       return
     }
     // Check limit
-    const count = currentDeck.filter(c => c.title === card.title).length
+    const count = currentDeck.filter((c) => c.title === card.title).length
     if (count >= card.maxAmount) {
       alert(`Cannot add more than ${card.maxAmount} copies of this card.`)
       return
@@ -149,7 +162,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Loop until 60 cards
     while (currentDeck.length < 60) {
-      const names = currentDeck.map(c => c.version ? `${c.name} - ${c.version}` : c.name)
+      const names = currentDeck.map((c) =>
+        c.version ? `${c.name} - ${c.version}` : c.name
+      )
       const prediction = await manager.predict(names, legalOnly, currentInks)
 
       if (prediction && typeof prediction !== 'string') {
@@ -157,7 +172,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         updateDeckPreview()
 
         // Small delay to prevent UI freeze
-        await new Promise(resolve => setTimeout(resolve, 10))
+        await new Promise((resolve) => setTimeout(resolve, 10))
       } else {
         console.warn('No valid prediction:', prediction)
         break // Break if we can't find a valid card
@@ -182,13 +197,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     let deckName = `AI Generated Deck: ${currentInks[0]} - ${currentInks[1]} - ${randomId}`
     deckName = encodeURIComponent(deckName)
     let base64Id = ''
-    const uniqueCardsInDeck = [...new Set(currentDeck.map(card => card.title))]
+    const uniqueCardsInDeck = [
+      ...new Set(currentDeck.map((card) => card.title))
+    ]
     for (const card of uniqueCardsInDeck) {
-      const amountOfCardsWithSameTitle = currentDeck.filter(deckCard => deckCard.title === card).length
+      const amountOfCardsWithSameTitle = currentDeck.filter(
+        (deckCard) => deckCard.title === card
+      ).length
       base64Id += `${card}$${amountOfCardsWithSameTitle}|`
     }
 
-    return `https://inktable.net/lor/import?svc=dreamborn&name=${deckName}&id=${btoa(base64Id)}`
+    return `https://inktable.net/lor/import?svc=dreamborn&name=${deckName}&id=${btoa(
+      base64Id
+    )}`
   }
 
   function updateDeckPreview () {
@@ -213,9 +234,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   async function updateValidationScore () {
-    console.log('updateValidationScore called, deck length:', currentDeck.length)
+    console.log(
+      'updateValidationScore called, deck length:',
+      currentDeck.length
+    )
 
-    const validationContainer = document.querySelector('[data-role="validation-score"]')
+    const validationContainer = document.querySelector(
+      '[data-role="validation-score"]'
+    )
     if (!validationContainer) {
       console.warn('Validation container not found')
       return
@@ -228,7 +254,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <h3>Deck Realism</h3>
                         <span class="validation-grade grade-empty">-</span>
                     </div>
-                    <div class="validation-message">Add ${60 - currentDeck.length} more cards</div>
+                    <div class="validation-message">Add ${
+                      60 - currentDeck.length
+                    } more cards</div>
                 </div>
             `
       return
@@ -245,18 +273,21 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
 
       const scorePercent = Math.round(result.score * 100)
-      const gradeClass = result.grade === 'A'
-        ? 'grade-a'
-        : result.grade === 'B'
-          ? 'grade-b'
-          : result.grade === 'C' ? 'grade-c' : 'grade-d'
+      const gradeClass =
+        result.grade === 'A'
+          ? 'grade-a'
+          : result.grade === 'B'
+            ? 'grade-b'
+            : result.grade === 'C'
+              ? 'grade-c'
+              : 'grade-d'
 
       let breakdownHTML = ''
       if (result.breakdown && result.breakdown.length > 0) {
         breakdownHTML = '<div class="validation-breakdown">'
         breakdownHTML += '<h4>Analysis:</h4>'
         breakdownHTML += '<ul>'
-        result.breakdown.forEach(issue => {
+        result.breakdown.forEach((issue) => {
           let severityClass = 'severity-medium'
           if (issue.severity === 'high') severityClass = 'severity-high'
           if (issue.severity === 'info') severityClass = 'severity-info'

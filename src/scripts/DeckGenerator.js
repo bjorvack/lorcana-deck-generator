@@ -61,7 +61,8 @@ export default class DeckGenerator {
         }
 
         if (type === 'Item') {
-          const chosenItemRegex = /(?:chosen item of yours|your items?|reveal an item)/g
+          const chosenItemRegex =
+            /(?:chosen item of yours|your items?|reveal an item)/g
 
           if (cardText.match(chosenItemRegex)) {
             this.cards[index].requiredTypes.push(type)
@@ -84,17 +85,25 @@ export default class DeckGenerator {
       if (this.cards[index].hasShift) {
         let name = [this.cards[index].name]
         if (this.cards[index].name.includes('&')) {
-          name = this.cards[index].name.split('&').map(name => name.trim())
+          name = this.cards[index].name.split('&').map((name) => name.trim())
         }
 
         this.cards[index].requiredCardNames.push(...name)
       }
 
       // Make each requirement unique
-      this.cards[index].requiredKeywords = [...new Set(this.cards[index].requiredKeywords)]
-      this.cards[index].requiredClassifications = [...new Set(this.cards[index].requiredClassifications)]
-      this.cards[index].requiredTypes = [...new Set(this.cards[index].requiredTypes)]
-      this.cards[index].requiredCardNames = [...new Set(this.cards[index].requiredCardNames)]
+      this.cards[index].requiredKeywords = [
+        ...new Set(this.cards[index].requiredKeywords)
+      ]
+      this.cards[index].requiredClassifications = [
+        ...new Set(this.cards[index].requiredClassifications)
+      ]
+      this.cards[index].requiredTypes = [
+        ...new Set(this.cards[index].requiredTypes)
+      ]
+      this.cards[index].requiredCardNames = [
+        ...new Set(this.cards[index].requiredCardNames)
+      ]
     }
   }
 
@@ -115,27 +124,24 @@ export default class DeckGenerator {
 
   get classifications () {
     // Get all unique classifications from the cards
-    return [...new Set(this.cards.map(card => card.classifications).flat())]
+    return [...new Set(this.cards.map((card) => card.classifications).flat())]
   }
 
   get types () {
     // Get all unique types from the cards
-    return [...new Set(this.cards.map(card => card.types).flat())]
+    return [...new Set(this.cards.map((card) => card.types).flat())]
   }
 
   get cardNames () {
     // Get all unique card names from the cards
-    return [...new Set(this.cards.map(card => card.name))]
+    return [...new Set(this.cards.map((card) => card.name))]
   }
 
-  generateDeck (
-    inks,
-    deck = [],
-    deckType = 'default',
-    triesRemaining = 50
-  ) {
-    console.log(`Generating ${deckType} deck, ${triesRemaining} tries remaining`)
-    const cardsOfInk = this.cards.filter(card => {
+  generateDeck (inks, deck = [], deckType = 'default', triesRemaining = 50) {
+    console.log(
+      `Generating ${deckType} deck, ${triesRemaining} tries remaining`
+    )
+    const cardsOfInk = this.cards.filter((card) => {
       if (card.inks.length === 1 && inks.includes(card.inks[0])) {
         return true
       }
@@ -155,7 +161,12 @@ export default class DeckGenerator {
       return []
     }
     do {
-      const chosenCard = this.pickRandomCard(cardsOfInk, deck, deckType, triesRemaining)
+      const chosenCard = this.pickRandomCard(
+        cardsOfInk,
+        deck,
+        deckType,
+        triesRemaining
+      )
       deck.push(chosenCard)
     } while (!this.isDeckValid(deck))
 
@@ -172,14 +183,27 @@ export default class DeckGenerator {
     // Lower the chance of picking a cost by its amount in the deck
 
     const chanceOfCost = {
-      1: this.currentDistribution[1] - deck.filter(card => card.cost === 1).length,
-      2: this.currentDistribution[2] - deck.filter(card => card.cost === 2).length,
-      3: this.currentDistribution[3] - deck.filter(card => card.cost === 3).length,
-      4: this.currentDistribution[4] - deck.filter(card => card.cost === 4).length,
-      5: this.currentDistribution[5] - deck.filter(card => card.cost >= 5).length
+      1:
+        this.currentDistribution[1] -
+        deck.filter((card) => card.cost === 1).length,
+      2:
+        this.currentDistribution[2] -
+        deck.filter((card) => card.cost === 2).length,
+      3:
+        this.currentDistribution[3] -
+        deck.filter((card) => card.cost === 3).length,
+      4:
+        this.currentDistribution[4] -
+        deck.filter((card) => card.cost === 4).length,
+      5:
+        this.currentDistribution[5] -
+        deck.filter((card) => card.cost >= 5).length
     }
 
-    const totalChance = Object.values(chanceOfCost).reduce((total, chance) => total + chance, 0)
+    const totalChance = Object.values(chanceOfCost).reduce(
+      (total, chance) => total + chance,
+      0
+    )
     const randomChance = Math.random() * totalChance
 
     let currentChance = 0
@@ -197,7 +221,7 @@ export default class DeckGenerator {
 
   pickRandomCard (cards, deck, deckType, triesRemaining) {
     const pickedCost = this.pickRandomCost(deck)
-    const cardsOfCost = cards.filter(card => {
+    const cardsOfCost = cards.filter((card) => {
       if (pickedCost === 5) {
         return card.cost >= pickedCost
       }
@@ -205,26 +229,36 @@ export default class DeckGenerator {
       return card.cost === pickedCost
     })
 
-    const legalCardsOfCost = cardsOfCost.filter(card => {
+    const legalCardsOfCost = cardsOfCost.filter((card) => {
       console.log(card)
       return card.legality === 'legal'
     })
 
-    const weights = legalCardsOfCost.map(card => {
+    const weights = legalCardsOfCost.map((card) => {
       return {
         card,
-        weight: this.weightCalculator.calculateWeight(card, deck, deckType, triesRemaining)
+        weight: this.weightCalculator.calculateWeight(
+          card,
+          deck,
+          deckType,
+          triesRemaining
+        )
       }
     })
 
-    let pickableCards = weights.filter(weight => weight.weight > 0)
+    let pickableCards = weights.filter((weight) => weight.weight > 0)
     // if a card is 4 times in a deck remove it from the pickable cards
-    pickableCards = pickableCards.filter(weight => {
-      const countInDeck = deck.filter(deckCard => deckCard.title === weight.card.title).length
+    pickableCards = pickableCards.filter((weight) => {
+      const countInDeck = deck.filter(
+        (deckCard) => deckCard.title === weight.card.title
+      ).length
       return countInDeck < weight.card.maxAmount
     })
 
-    const totalWeight = pickableCards.reduce((total, weight) => total + weight.weight, 0)
+    const totalWeight = pickableCards.reduce(
+      (total, weight) => total + weight.weight,
+      0
+    )
     const randomWeight = Math.floor(Math.random() * totalWeight)
     let currentWeight = 0
     let pickedCard = null
@@ -245,7 +279,7 @@ export default class DeckGenerator {
 
   validateAndRetry (deck, deckType, triesRemaining) {
     let deckLength = deck.length
-    let previousDeckLength = deckLength = null
+    let previousDeckLength = (deckLength = null)
     do {
       console.log('Removing cards without requirements')
       previousDeckLength = deckLength
@@ -253,12 +287,14 @@ export default class DeckGenerator {
       deckLength = deck.length
     } while (deckLength !== previousDeckLength)
 
-    const cardsWithSingleCopy = deck.filter(card => deck.filter(deckCard => deckCard.id === card.id).length === 1)
+    const cardsWithSingleCopy = deck.filter(
+      (card) => deck.filter((deckCard) => deckCard.id === card.id).length === 1
+    )
     if (cardsWithSingleCopy.length > 4) {
       console.log('Removing cards with single copy')
       for (const card of cardsWithSingleCopy) {
         console.log(`Removing ${card.title} with single copy`)
-        deck = deck.filter(deckCard => deckCard.id !== card.id)
+        deck = deck.filter((deckCard) => deckCard.id !== card.id)
         deckLength = deck.length
       }
     }
@@ -267,7 +303,12 @@ export default class DeckGenerator {
       return deck
     }
 
-    return this.generateDeck(deck.map(card => card.ink), deck, deckType, triesRemaining)
+    return this.generateDeck(
+      deck.map((card) => card.ink),
+      deck,
+      deckType,
+      triesRemaining
+    )
   }
 
   removeCardsWithoutRequirements (deck) {
@@ -287,7 +328,7 @@ export default class DeckGenerator {
         //   cardNames: card.deckMeetsRequiredCardNames(deck),
         //   shiftRequirements: card.deckMeetsShiftRequirements(deck)
         // }
-        deck = deck.filter(deckCard => deckCard.id !== card.id)
+        deck = deck.filter((deckCard) => deckCard.id !== card.id)
       }
     }
 

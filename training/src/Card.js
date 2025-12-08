@@ -3,8 +3,10 @@ const singerRegex = /Singer (\d+)/
 // const recklessRegex = /Reckless \(This character can[’'‘]t quest and must challenge each turn if able.\)/
 // const wardRegex = /Ward \(Opponents can[’'‘]t choose this character except to challenge.\)/
 // const evasiveRegex = /Evasive \(Only characters with Evasive can challenge this character.\)/
-const resistRegex = /Resist \+(\d+) \(Damage dealt to this character is reduced by (\d+)\.\)/
-const challengerRegex = /Challenger \+(\d+) \(While challenging, this character gets \+(\d) (?:\w+)?(?:{S})?\.\)/
+const resistRegex =
+  /Resist \+(\d+) \(Damage dealt to this character is reduced by (\d+)\.\)/
+const challengerRegex =
+  /Challenger \+(\d+) \(While challenging, this character gets \+(\d) (?:\w+)?(?:{S})?\.\)/
 // const rushRegex = /Rush \(This character can challenge the turn they[’'‘]re played\.\)/
 
 // Max count regexes
@@ -36,7 +38,11 @@ module.exports = class Card {
     this.types = data.type || []
     this.classifications = data.classifications || []
     this.text = data.text || ''
-    this.image = data.image_uris?.digital?.large || data.image_uris?.digital?.normal || data.image_uris?.digital?.small || ''
+    this.image =
+      data.image_uris?.digital?.large ||
+      data.image_uris?.digital?.normal ||
+      data.image_uris?.digital?.small ||
+      ''
     this.lore = data.lore || 0
     this.strength = data.strength || 0
     this.willpower = data.willpower || 0
@@ -49,7 +55,7 @@ module.exports = class Card {
     this.requiredCardNames = []
 
     // Lowercase all letters between {} in the card's text
-    this.text = this.text.replace(/{[^}]+}/g, match => match.toLowerCase())
+    this.text = this.text.replace(/{[^}]+}/g, (match) => match.toLowerCase())
 
     const parts = this.text.split('\n')
     this.sanitizedText = ''
@@ -86,7 +92,7 @@ module.exports = class Card {
     this.hasBoost = this.keywords.includes('Boost')
 
     if (this.hasShift) {
-      const names = this.name.split('&').map(name => name.trim())
+      const names = this.name.split('&').map((name) => name.trim())
       this.requiredCardNames.push(...names)
     }
   }
@@ -155,7 +161,8 @@ module.exports = class Card {
   get boostAmount () {
     if (this.hasBoost) {
       // Look for the Boost +x text in the card's text
-      const boostRegex = /Boost \+(\d+) \(This character gets \+(\d+) (?:\w+)?(?:{S})?\.\)/
+      const boostRegex =
+        /Boost \+(\d+) \(This character gets \+(\d+) (?:\w+)?(?:{S})?\.\)/
       const match = this.text.match(boostRegex)
       if (match) {
         return parseInt(match[1])
@@ -166,13 +173,15 @@ module.exports = class Card {
   }
 
   deckMeetsRequirements (deck) {
-    const otherCardsInDeck = deck.filter(deckCard => deckCard.id !== this.id)
+    const otherCardsInDeck = deck.filter((deckCard) => deckCard.id !== this.id)
 
-    return this.deckMeetsRequiredKeywords(otherCardsInDeck) &&
-            this.deckMeetsRequiredClassifications(otherCardsInDeck) &&
-            this.deckMeetsRequiredTypes(otherCardsInDeck) &&
-            this.deckMeetsRequiredCardNames(otherCardsInDeck) &&
-            this.deckMeetsShiftRequirements(otherCardsInDeck)
+    return (
+      this.deckMeetsRequiredKeywords(otherCardsInDeck) &&
+      this.deckMeetsRequiredClassifications(otherCardsInDeck) &&
+      this.deckMeetsRequiredTypes(otherCardsInDeck) &&
+      this.deckMeetsRequiredCardNames(otherCardsInDeck) &&
+      this.deckMeetsShiftRequirements(otherCardsInDeck)
+    )
   }
 
   hasRequirementsForDeck (deck) {
@@ -181,17 +190,25 @@ module.exports = class Card {
     const uniqueDeckRequiredTypes = []
     const uniqueDeckRequiredCardNames = []
 
-    deck.forEach(card => {
+    deck.forEach((card) => {
       uniqueDeckRequiredKeywords.push(...card.requiredKeywords)
       uniqueDeckRequiredClassifications.push(...card.requiredClassifications)
       uniqueDeckRequiredTypes.push(...card.requiredTypes)
       uniqueDeckRequiredCardNames.push(...card.requiredCardNames)
     })
 
-    return uniqueDeckRequiredKeywords.some(keyword => this.keywords.includes(keyword)) ||
-            uniqueDeckRequiredClassifications.some(classification => this.classifications.includes(classification)) ||
-            uniqueDeckRequiredTypes.some(type => this.types.includes(type)) ||
-            uniqueDeckRequiredCardNames.some(cardName => this.name.includes(cardName))
+    return (
+      uniqueDeckRequiredKeywords.some((keyword) =>
+        this.keywords.includes(keyword)
+      ) ||
+      uniqueDeckRequiredClassifications.some((classification) =>
+        this.classifications.includes(classification)
+      ) ||
+      uniqueDeckRequiredTypes.some((type) => this.types.includes(type)) ||
+      uniqueDeckRequiredCardNames.some((cardName) =>
+        this.name.includes(cardName)
+      )
+    )
   }
 
   deckMeetsRequiredKeywords (deck) {
@@ -199,9 +216,11 @@ module.exports = class Card {
       return true
     }
 
-    const keywordsInDeck = deck.map(card => card.keywords).flat()
+    const keywordsInDeck = deck.map((card) => card.keywords).flat()
 
-    return this.requiredKeywords.every(keyword => keywordsInDeck.includes(keyword))
+    return this.requiredKeywords.every((keyword) =>
+      keywordsInDeck.includes(keyword)
+    )
   }
 
   deckMeetsRequiredClassifications (deck) {
@@ -209,9 +228,13 @@ module.exports = class Card {
       return true
     }
 
-    const classificationsInDeck = deck.map(card => card.classifications).flat()
+    const classificationsInDeck = deck
+      .map((card) => card.classifications)
+      .flat()
 
-    return this.requiredClassifications.some(classification => classificationsInDeck.includes(classification))
+    return this.requiredClassifications.some((classification) =>
+      classificationsInDeck.includes(classification)
+    )
   }
 
   deckMeetsRequiredTypes (deck) {
@@ -219,9 +242,9 @@ module.exports = class Card {
       return true
     }
 
-    const typesInDeck = deck.map(card => card.types).flat()
+    const typesInDeck = deck.map((card) => card.types).flat()
 
-    return this.requiredTypes.every(type => typesInDeck.includes(type))
+    return this.requiredTypes.every((type) => typesInDeck.includes(type))
   }
 
   deckMeetsRequiredCardNames (deck) {
@@ -229,9 +252,11 @@ module.exports = class Card {
       return true
     }
 
-    const cardNamesInDeck = deck.map(card => card.name)
+    const cardNamesInDeck = deck.map((card) => card.name)
 
-    return this.requiredCardNames.some(cardName => cardNamesInDeck.includes(cardName))
+    return this.requiredCardNames.some((cardName) =>
+      cardNamesInDeck.includes(cardName)
+    )
   }
 
   deckMeetsShiftRequirements (deck) {
@@ -239,16 +264,19 @@ module.exports = class Card {
       return true
     }
 
-    const morphInDeck = deck.filter(deckCard => deckCard.id === morphId).length > 0
+    const morphInDeck =
+      deck.filter((deckCard) => deckCard.id === morphId).length > 0
     if (morphInDeck) {
       return true
     }
 
-    const names = this.name.split('&').map(name => name.trim())
+    const names = this.name.split('&').map((name) => name.trim())
 
-    const cardsWithSameNameButDifferentVersion = deck.filter(deckCard => names.includes(deckCard.name) && deckCard.id !== this.id)
+    const cardsWithSameNameButDifferentVersion = deck.filter(
+      (deckCard) => names.includes(deckCard.name) && deckCard.id !== this.id
+    )
     let foundCheaperVersion = false
-    cardsWithSameNameButDifferentVersion.forEach(card => {
+    cardsWithSameNameButDifferentVersion.forEach((card) => {
       if (card.cost < this.cost) {
         foundCheaperVersion = true
       }

@@ -58,7 +58,7 @@ export default class ModelManager {
     // Convert names to indices
     const indices = []
 
-    cardNames.forEach(name => {
+    cardNames.forEach((name) => {
       let foundId = null
 
       // 1. Try exact match with "Name - Version" format
@@ -98,7 +98,7 @@ export default class ModelManager {
     const cardCounts = new Map()
     const currentInks = new Set()
 
-    indices.forEach(modelId => {
+    indices.forEach((modelId) => {
       const id = modelId - 1 // Convert back to 0-based for map lookup
       cardCounts.set(id, (cardCounts.get(id) || 0) + 1)
       const card = this.indexMap.get(id)
@@ -117,14 +117,22 @@ export default class ModelManager {
 
     // 1. Boost Singletons (NEW)
     // If a card is in the deck exactly once, boost its probability to encourage a 2nd copy (consistency)
-    const boostedProbabilities = this.boostSingletons(probabilities, indices, 2.5)
+    const boostedProbabilities = this.boostSingletons(
+      probabilities,
+      indices,
+      2.5
+    )
 
     // 2. Calculate adaptive temperature based on deck size
     const temperature = this.getAdaptiveTemperature(indices.length)
 
     // 3. Sample using Top-P (Nucleus) Sampling with Temperature
     // This combines temperature scaling and dynamic truncation of the tail
-    const sampledIndex = this.sampleTopP(boostedProbabilities, temperature, 0.9)
+    const sampledIndex = this.sampleTopP(
+      boostedProbabilities,
+      temperature,
+      0.9
+    )
 
     // Create array of candidate indices, starting with sampled one, then sorted by probability
     const sortedPredictions = Array.from(boostedProbabilities)
@@ -134,7 +142,9 @@ export default class ModelManager {
     // Put sampled card first, then add rest
     const candidateIndices = [
       sampledIndex,
-      ...sortedPredictions.map(p => p.index).filter(i => i !== sampledIndex)
+      ...sortedPredictions
+        .map((p) => p.index)
+        .filter((i) => i !== sampledIndex)
     ]
 
     // Find first valid card from candidates
@@ -158,7 +168,7 @@ export default class ModelManager {
       // If allowedInks are provided, strict check against them
       if (allowedInks.length > 0) {
         const cardInks = card.inks || (card.ink ? [card.ink] : [])
-        const isAllowed = cardInks.every(ink => allowedInks.includes(ink))
+        const isAllowed = cardInks.every((ink) => allowedInks.includes(ink))
         if (!isAllowed) {
           continue
         }
@@ -179,10 +189,10 @@ export default class ModelManager {
   }
 
   /**
-     * Calculate adaptive temperature based on deck size
-     * High temperature (2.5) early for exploration
-     * Low temperature (0.7) late for focused completion
-     */
+   * Calculate adaptive temperature based on deck size
+   * High temperature (2.5) early for exploration
+   * Low temperature (0.7) late for focused completion
+   */
   getAdaptiveTemperature (deckSize) {
     if (deckSize <= 10) {
       return 2.0 // Slightly lower than before to balance with Top-P
@@ -194,9 +204,9 @@ export default class ModelManager {
   }
 
   /**
-     * Boost probability of cards that are in the deck exactly once.
-     * Encourages picking a 2nd copy for consistency.
-     */
+   * Boost probability of cards that are in the deck exactly once.
+   * Encourages picking a 2nd copy for consistency.
+   */
   boostSingletons (probabilities, historyIndices, boostFactor = 2.0) {
     const boosted = Float32Array.from(probabilities)
 
@@ -224,12 +234,12 @@ export default class ModelManager {
   }
 
   /**
-     * Sample using Top-P (Nucleus) Sampling
-     * 1. Apply temperature
-     * 2. Sort probabilities
-     * 3. Take top P mass
-     * 4. Sample from that subset
-     */
+   * Sample using Top-P (Nucleus) Sampling
+   * 1. Apply temperature
+   * 2. Sort probabilities
+   * 3. Take top P mass
+   * 4. Sample from that subset
+   */
   sampleTopP (probabilities, temperature = 1.0, topP = 0.9) {
     // 1. Apply temperature scaling
     const scaledProbs = Array.from(probabilities).map((p, i) => ({
@@ -239,7 +249,9 @@ export default class ModelManager {
 
     // Normalize scaled probs
     const sum = scaledProbs.reduce((a, b) => a + b.prob, 0)
-    scaledProbs.forEach(p => { p.prob /= sum })
+    scaledProbs.forEach((p) => {
+      p.prob /= sum
+    })
 
     // 2. Sort by probability descending
     scaledProbs.sort((a, b) => b.prob - a.prob)
@@ -350,27 +362,46 @@ export default class ModelManager {
     features.push(Math.min(card.willpower || 0, 10) / 10)
 
     // 6. Inks (One-hot)
-    const inkColors = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
-    inkColors.forEach(ink => {
+    const inkColors = [
+      'Amber',
+      'Amethyst',
+      'Emerald',
+      'Ruby',
+      'Sapphire',
+      'Steel'
+    ]
+    inkColors.forEach((ink) => {
       features.push(card.ink === ink ? 1 : 0)
     })
 
     // 7. Types (One-hot)
     const types = ['Character', 'Action', 'Item', 'Location']
-    const cardType = (card.types && card.types.length > 0) ? card.types[0] : ''
-    types.forEach(type => {
+    const cardType = card.types && card.types.length > 0 ? card.types[0] : ''
+    types.forEach((type) => {
       features.push(cardType === type ? 1 : 0)
     })
 
     // 8. Keyword Booleans (10 features)
-    const keywords = ['Bodyguard', 'Reckless', 'Rush', 'Ward', 'Evasive', 'Resist', 'Challenger', 'Singer', 'Shift', 'Boost']
-    keywords.forEach(kw => {
+    const keywords = [
+      'Bodyguard',
+      'Reckless',
+      'Rush',
+      'Ward',
+      'Evasive',
+      'Resist',
+      'Challenger',
+      'Singer',
+      'Shift',
+      'Boost'
+    ]
+    keywords.forEach((kw) => {
       const propName = `has${kw}`
       if (card[propName] !== undefined) {
         features.push(card[propName] ? 1 : 0)
       } else {
         // Fallback to checking keywords array
-        const hasKw = card.keywords && card.keywords.some(k => k.includes(kw))
+        const hasKw =
+          card.keywords && card.keywords.some((k) => k.includes(kw))
         features.push(hasKw ? 1 : 0)
       }
     })
@@ -384,9 +415,17 @@ export default class ModelManager {
     features.push(Math.min(card.moveCost || 0, 10) / 10)
 
     // 11. Classifications (5 features) - Common card classifications
-    const commonClassifications = ['Hero', 'Villain', 'Dreamborn', 'Storyborn', 'Floodborn']
-    commonClassifications.forEach(cls => {
-      features.push(card.classifications && card.classifications.includes(cls) ? 1 : 0)
+    const commonClassifications = [
+      'Hero',
+      'Villain',
+      'Dreamborn',
+      'Storyborn',
+      'Floodborn'
+    ]
+    commonClassifications.forEach((cls) => {
+      features.push(
+        card.classifications && card.classifications.includes(cls) ? 1 : 0
+      )
     })
 
     // 12. Copies of this card so far (NEW FEATURE)
@@ -399,23 +438,23 @@ export default class ModelManager {
     features.push(stats.inkableCount / total)
 
     // 14. Cost Curve (Fractions) - 10 costs
-    stats.costCounts.forEach(count => {
+    stats.costCounts.forEach((count) => {
       features.push(count / total)
     })
 
     // 15. Type Distribution (Fractions)
-    Object.values(stats.typeCounts).forEach(count => {
+    Object.values(stats.typeCounts).forEach((count) => {
       features.push(count / total)
     })
 
     // 16. Ink Color Distribution (Fractions)
     const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
-    inks.forEach(ink => {
+    inks.forEach((ink) => {
       features.push((stats.inkCounts[ink] || 0) / total)
     })
 
     // 17. Inkable Cost Curve (Fractions) - 10 costs
-    stats.inkableCostCounts.forEach(count => {
+    stats.inkableCostCounts.forEach((count) => {
       features.push(count / total)
     })
 
@@ -466,9 +505,9 @@ export default class ModelManager {
   }
 
   /**
-     * Compute a simple embedding for a card based on its text properties
-     * Returns a 32-dimensional vector
-     */
+   * Compute a simple embedding for a card based on its text properties
+   * Returns a 32-dimensional vector
+   */
   computeCardEmbedding (card) {
     const embeddingDim = 32
     const embedding = new Array(embeddingDim).fill(0)
@@ -503,15 +542,15 @@ export default class ModelManager {
   }
 
   /**
-     * Extract deck-level features for validation
-     * Returns 134 features: 38 numeric + 96 embedding stats (mean/max/variance)
-     */
+   * Extract deck-level features for validation
+   * Returns 134 features: 38 numeric + 96 embedding stats (mean/max/variance)
+   */
   extractDeckFeatures (deck) {
     const features = []
 
     // Convert deck of cards to indices
     const deckIndices = []
-    deck.forEach(card => {
+    deck.forEach((card) => {
       const key = this.getCardKey(card.name, card.version)
       if (this.cardMap.has(key)) {
         deckIndices.push(this.cardMap.get(key))
@@ -538,14 +577,23 @@ export default class ModelManager {
       else copyDistribution[4]++
     }
     const totalUniqueCards = [...cardCounts.keys()].length
-    copyDistribution.forEach((count, i) => features.push(count / Math.max(1, totalUniqueCards)))
+    copyDistribution.forEach((count, i) =>
+      features.push(count / Math.max(1, totalUniqueCards))
+    )
 
     // Mana curve distribution
     const costCounts = Array(10).fill(0)
     let inkableCount = 0
     const totalCards = deckIndices.length
     const typeCounts = { character: 0, action: 0, item: 0, location: 0 }
-    const inkCounts = { Amber: 0, Amethyst: 0, Emerald: 0, Ruby: 0, Sapphire: 0, Steel: 0 }
+    const inkCounts = {
+      Amber: 0,
+      Amethyst: 0,
+      Emerald: 0,
+      Ruby: 0,
+      Sapphire: 0,
+      Steel: 0
+    }
     const keywordCounts = {
       Ward: 0,
       Evasive: 0,
@@ -579,28 +627,43 @@ export default class ModelManager {
 
       for (const keyword of Object.keys(keywordCounts)) {
         const propName = `has${keyword}`
-        if (card[propName] || (card.keywords && card.keywords.some(k => k.includes(keyword)))) {
+        if (
+          card[propName] ||
+          (card.keywords && card.keywords.some((k) => k.includes(keyword)))
+        ) {
           keywordCounts[keyword]++
         }
       }
 
       if (card.classifications) {
         for (const cls of card.classifications) {
-          classificationCounts.set(cls, (classificationCounts.get(cls) || 0) + 1)
+          classificationCounts.set(
+            cls,
+            (classificationCounts.get(cls) || 0) + 1
+          )
         }
       }
     }
 
     // Add features
-    costCounts.forEach(count => features.push(count / totalCards))
-    Object.values(typeCounts).forEach(count => features.push(count / totalCards))
-    Object.values(inkCounts).forEach(count => features.push(count / totalCards))
+    costCounts.forEach((count) => features.push(count / totalCards))
+    Object.values(typeCounts).forEach((count) =>
+      features.push(count / totalCards)
+    )
+    Object.values(inkCounts).forEach((count) =>
+      features.push(count / totalCards)
+    )
     features.push(inkableCount / totalCards)
-    Object.values(keywordCounts).forEach(count => features.push(count / totalCards))
+    Object.values(keywordCounts).forEach((count) =>
+      features.push(count / totalCards)
+    )
     features.push(classificationCounts.size / 10)
-    const avgClassificationSharing = classificationCounts.size > 0
-      ? Array.from(classificationCounts.values()).reduce((a, b) => a + b, 0) / classificationCounts.size / totalCards
-      : 0
+    const avgClassificationSharing =
+      classificationCounts.size > 0
+        ? Array.from(classificationCounts.values()).reduce((a, b) => a + b, 0) /
+          classificationCounts.size /
+          totalCards
+        : 0
     features.push(avgClassificationSharing)
 
     // Add embedding aggregation features
@@ -655,8 +718,8 @@ export default class ModelManager {
   }
 
   /**
-     * Validate a deck and return score with breakdown
-     */
+   * Validate a deck and return score with breakdown
+   */
   async validateDeck (deck) {
     if (!this.validationModelLoaded) {
       console.warn('Validation model not loaded')
@@ -675,7 +738,9 @@ export default class ModelManager {
     const features = this.extractDeckFeatures(deck)
 
     // Count unique cards for debugging
-    const uniqueCards = new Set(deck.map(c => this.getCardKey(c.name, c.version)))
+    const uniqueCards = new Set(
+      deck.map((c) => this.getCardKey(c.name, c.version))
+    )
 
     // DEBUG: Log features to console
     console.log('Validation features:', {

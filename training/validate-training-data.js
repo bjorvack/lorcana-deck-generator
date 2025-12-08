@@ -33,7 +33,9 @@ async function validateTrainingData () {
   const embeddingDim = 32
 
   // Build IDF scores for vocabulary
-  const documentFrequency = new Array(manager.textEmbedder.vocabularySize).fill(0)
+  const documentFrequency = new Array(manager.textEmbedder.vocabularySize).fill(
+    0
+  )
   const totalDocs = manager.indexMap.size
 
   // Count document frequency for each token
@@ -49,7 +51,8 @@ async function validateTrainingData () {
     ])
 
     for (const tokenIdx of uniqueTokens) {
-      if (tokenIdx > 0) { // Skip PAD token
+      if (tokenIdx > 0) {
+        // Skip PAD token
         documentFrequency[tokenIdx]++
       }
     }
@@ -74,7 +77,9 @@ async function validateTrainingData () {
     ]
 
     // Count term frequency
-    const termFrequency = new Array(manager.textEmbedder.vocabularySize).fill(0)
+    const termFrequency = new Array(manager.textEmbedder.vocabularySize).fill(
+      0
+    )
     for (const tokenIdx of allTokens) {
       if (tokenIdx > 0) {
         termFrequency[tokenIdx]++
@@ -115,10 +120,10 @@ async function validateTrainingData () {
       continue
     }
 
-    const isAllZero = card.embedding.every(v => v === 0)
+    const isAllZero = card.embedding.every((v) => v === 0)
     if (isAllZero) zeroEmbeddings++
 
-    const hasNaN = card.embedding.some(v => isNaN(v) || !isFinite(v))
+    const hasNaN = card.embedding.some((v) => isNaN(v) || !isFinite(v))
     if (hasNaN) nanEmbeddings++
 
     for (const val of card.embedding) {
@@ -133,14 +138,25 @@ async function validateTrainingData () {
 
   console.log(`   Embeddings with all zeros: ${zeroEmbeddings}`)
   console.log(`   Embeddings with NaN/Infinity: ${nanEmbeddings}`)
-  console.log(`   Embedding value range: [${embeddingStats.min.toFixed(4)}, ${embeddingStats.max.toFixed(4)}]`)
-  console.log(`   Embedding mean: ${(embeddingStats.sum / embeddingStats.count).toFixed(4)}\n`)
+  console.log(
+    `   Embedding value range: [${embeddingStats.min.toFixed(
+      4
+    )}, ${embeddingStats.max.toFixed(4)}]`
+  )
+  console.log(
+    `   Embedding mean: ${(embeddingStats.sum / embeddingStats.count).toFixed(
+      4
+    )}\n`
+  )
 
   // Print sample embeddings
   console.log('   Sample embeddings (first 3 cards):')
   for (let i = 0; i < Math.min(3, manager.indexMap.size); i++) {
     const card = manager.indexMap.get(i)
-    const embStr = card.embedding.slice(0, 5).map(v => v.toFixed(3)).join(', ')
+    const embStr = card.embedding
+      .slice(0, 5)
+      .map((v) => v.toFixed(3))
+      .join(', ')
     console.log(`   - Card ${i} (${card.name}): [${embStr}, ...]`)
   }
   console.log()
@@ -172,19 +188,34 @@ async function validateTrainingData () {
     min: Math.min(...labels),
     max: Math.max(...labels),
     mean: labels.reduce((a, b) => a + b, 0) / labels.length,
-    zeros: labels.filter(l => l === 0).length,
-    ones: labels.filter(l => l === 1).length,
-    between: labels.filter(l => l > 0 && l < 1).length,
-    nan: labels.filter(l => isNaN(l)).length,
-    infinite: labels.filter(l => !isFinite(l)).length
+    zeros: labels.filter((l) => l === 0).length,
+    ones: labels.filter((l) => l === 1).length,
+    between: labels.filter((l) => l > 0 && l < 1).length,
+    nan: labels.filter((l) => isNaN(l)).length,
+    infinite: labels.filter((l) => !isFinite(l)).length
   }
 
   console.log(`   Label range: [${labelStats.min}, ${labelStats.max}]`)
   console.log(`   Label mean: ${labelStats.mean.toFixed(4)}`)
   console.log('   Label distribution:')
-  console.log(`     - Exactly 0 (fake): ${labelStats.zeros} (${(labelStats.zeros / labels.length * 100).toFixed(1)}%)`)
-  console.log(`     - Exactly 1 (perfect): ${labelStats.ones} (${(labelStats.ones / labels.length * 100).toFixed(1)}%)`)
-  console.log(`     - Between 0-1: ${labelStats.between} (${(labelStats.between / labels.length * 100).toFixed(1)}%)`)
+  console.log(
+    `     - Exactly 0 (fake): ${labelStats.zeros} (${(
+      (labelStats.zeros / labels.length) *
+      100
+    ).toFixed(1)}%)`
+  )
+  console.log(
+    `     - Exactly 1 (perfect): ${labelStats.ones} (${(
+      (labelStats.ones / labels.length) *
+      100
+    ).toFixed(1)}%)`
+  )
+  console.log(
+    `     - Between 0-1: ${labelStats.between} (${(
+      (labelStats.between / labels.length) *
+      100
+    ).toFixed(1)}%)`
+  )
   console.log(`     - NaN values: ${labelStats.nan}`)
   console.log(`     - Infinite values: ${labelStats.infinite}\n`)
 
@@ -196,26 +227,32 @@ async function validateTrainingData () {
   console.log('📊 Step 8: Validating features...')
   const featureDim = features[0].length
   console.log(`   Feature dimension: ${featureDim}`)
-  console.log('   Expected: 38 (numeric) + 32 (mean emb) + 32 (max emb) + 32 (var emb) = 134\n')
+  console.log(
+    '   Expected: 38 (numeric) + 32 (mean emb) + 32 (max emb) + 32 (var emb) = 134\n'
+  )
 
   // Check for NaN/Infinity in features
   let featuresWithNaN = 0
   let featuresWithInfinity = 0
-  const featureStats = Array(featureDim).fill(null).map(() => ({
-    min: Infinity,
-    max: -Infinity,
-    sum: 0,
-    count: 0
-  }))
+  const featureStats = Array(featureDim)
+    .fill(null)
+    .map(() => ({
+      min: Infinity,
+      max: -Infinity,
+      sum: 0,
+      count: 0
+    }))
 
   for (const featureVec of features) {
     if (featureVec.length !== featureDim) {
-      console.log(`   ⚠️  Feature dimension mismatch: expected ${featureDim}, got ${featureVec.length}`)
+      console.log(
+        `   ⚠️  Feature dimension mismatch: expected ${featureDim}, got ${featureVec.length}`
+      )
       continue
     }
 
-    const hasNaN = featureVec.some(v => isNaN(v))
-    const hasInf = featureVec.some(v => !isFinite(v))
+    const hasNaN = featureVec.some((v) => isNaN(v))
+    const hasInf = featureVec.some((v) => !isFinite(v))
     if (hasNaN) featuresWithNaN++
     if (hasInf) featuresWithInfinity++
 
@@ -242,7 +279,11 @@ async function validateTrainingData () {
   for (let i = 0; i < Math.min(10, featureDim); i++) {
     const stats = featureStats[i]
     const mean = stats.sum / stats.count
-    console.log(`     Feature ${i}: min=${stats.min.toFixed(4)}, max=${stats.max.toFixed(4)}, mean=${mean.toFixed(4)}`)
+    console.log(
+      `     Feature ${i}: min=${stats.min.toFixed(4)}, max=${stats.max.toFixed(
+        4
+      )}, mean=${mean.toFixed(4)}`
+    )
   }
   console.log()
 
@@ -252,28 +293,44 @@ async function validateTrainingData () {
   for (let i = 0; i < Math.min(5, features.length); i++) {
     const label = labels[i]
     const featureVec = features[i]
-    const deckType = label === 0 ? 'FAKE' : (label === 1 ? 'PERFECT' : `SCORE=${label.toFixed(2)}`)
-    const firstFeatures = featureVec.slice(0, 5).map(v => v.toFixed(3)).join(', ')
+    const deckType =
+      label === 0
+        ? 'FAKE'
+        : label === 1
+          ? 'PERFECT'
+          : `SCORE=${label.toFixed(2)}`
+    const firstFeatures = featureVec
+      .slice(0, 5)
+      .map((v) => v.toFixed(3))
+      .join(', ')
     console.log(`   [${i}] Label: ${label.toFixed(2)} (${deckType})`)
-    console.log(`       Features: [${firstFeatures}, ...] (${featureVec.length} dims)`)
+    console.log(
+      `       Features: [${firstFeatures}, ...] (${featureVec.length} dims)`
+    )
   }
   console.log()
 
   console.log('   Random fake deck sample:')
-  const fakeIdx = labels.findIndex(l => l === 0)
+  const fakeIdx = labels.findIndex((l) => l === 0)
   if (fakeIdx >= 0) {
     const featureVec = features[fakeIdx]
-    const firstFeatures = featureVec.slice(0, 10).map(v => v.toFixed(3)).join(', ')
+    const firstFeatures = featureVec
+      .slice(0, 10)
+      .map((v) => v.toFixed(3))
+      .join(', ')
     console.log(`   [${fakeIdx}] Label: ${labels[fakeIdx].toFixed(2)} (FAKE)`)
     console.log(`       Features: [${firstFeatures}, ...]`)
   }
   console.log()
 
   console.log('   Random real deck sample:')
-  const realIdx = labels.findIndex(l => l > 0.6)
+  const realIdx = labels.findIndex((l) => l > 0.6)
   if (realIdx >= 0) {
     const featureVec = features[realIdx]
-    const firstFeatures = featureVec.slice(0, 10).map(v => v.toFixed(3)).join(', ')
+    const firstFeatures = featureVec
+      .slice(0, 10)
+      .map((v) => v.toFixed(3))
+      .join(', ')
     console.log(`   [${realIdx}] Label: ${labels[realIdx].toFixed(2)} (REAL)`)
     console.log(`       Features: [${firstFeatures}, ...]`)
   }
@@ -286,9 +343,18 @@ async function validateTrainingData () {
   console.log(`Total decks: ${features.length}`)
   console.log(`Feature dimension: ${featureDim}`)
   console.log(`Label range: [${labelStats.min}, ${labelStats.max}]`)
-  console.log(`Dataset balance: ${labelStats.zeros} fake, ${labelStats.between + labelStats.ones} real/partial`)
+  console.log(
+    `Dataset balance: ${labelStats.zeros} fake, ${
+      labelStats.between + labelStats.ones
+    } real/partial`
+  )
 
-  if (labelStats.nan > 0 || labelStats.infinite > 0 || featuresWithNaN > 0 || featuresWithInfinity > 0) {
+  if (
+    labelStats.nan > 0 ||
+    labelStats.infinite > 0 ||
+    featuresWithNaN > 0 ||
+    featuresWithInfinity > 0
+  ) {
     console.log('\n❌ DATA QUALITY ISSUES DETECTED!')
     console.log('   Please fix these issues before training.')
   } else {
@@ -298,7 +364,7 @@ async function validateTrainingData () {
   console.log('==================================================\n')
 }
 
-validateTrainingData().catch(error => {
+validateTrainingData().catch((error) => {
   console.error('❌ Validation failed:', error)
   console.error(error.stack)
   process.exit(1)

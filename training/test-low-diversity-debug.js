@@ -25,14 +25,20 @@ async function testLowDiversity () {
 
   // Compute embeddings (simplified from train-validator)
   const embeddingDim = 32
-  const documentFrequency = new Array(manager.textEmbedder.vocabularySize).fill(0)
+  const documentFrequency = new Array(manager.textEmbedder.vocabularySize).fill(
+    0
+  )
   const totalDocs = manager.indexMap.size
 
   for (const [, card] of manager.indexMap.entries()) {
     const textIndices = manager.textEmbedder.cardToTextIndices(card)
     const uniqueTokens = new Set([
-      ...textIndices.name, ...textIndices.keywords, ...textIndices.ink,
-      ...textIndices.classifications, ...textIndices.types, ...textIndices.text
+      ...textIndices.name,
+      ...textIndices.keywords,
+      ...textIndices.ink,
+      ...textIndices.classifications,
+      ...textIndices.types,
+      ...textIndices.text
     ])
     for (const tokenIdx of uniqueTokens) {
       if (tokenIdx > 0) documentFrequency[tokenIdx]++
@@ -47,11 +53,17 @@ async function testLowDiversity () {
   for (const [, card] of manager.indexMap.entries()) {
     const textIndices = manager.textEmbedder.cardToTextIndices(card)
     const allTokens = [
-      ...textIndices.name, ...textIndices.keywords, ...textIndices.ink,
-      ...textIndices.classifications, ...textIndices.types, ...textIndices.text
+      ...textIndices.name,
+      ...textIndices.keywords,
+      ...textIndices.ink,
+      ...textIndices.classifications,
+      ...textIndices.types,
+      ...textIndices.text
     ]
 
-    const termFrequency = new Array(manager.textEmbedder.vocabularySize).fill(0)
+    const termFrequency = new Array(manager.textEmbedder.vocabularySize).fill(
+      0
+    )
     for (const tokenIdx of allTokens) {
       if (tokenIdx > 0) termFrequency[tokenIdx]++
     }
@@ -74,13 +86,20 @@ async function testLowDiversity () {
 
   // Load model
   const path = require('path')
-  const modelPath = path.join(__dirname, '..', 'training_data', 'deck-validator-model')
+  const modelPath = path.join(
+    __dirname,
+    '..',
+    'training_data',
+    'deck-validator-model'
+  )
   await model.loadModel(modelPath)
 
   // Test low-diversity deck
   console.log('\n=== Testing Low-Diversity Deck ===')
   const fakeDeck = manager.generateFakeDeck('low_diversity')
-  const fakeFeatures = manager.extractDeckFeaturesWithEmbeddings(fakeDeck.slice(0, 60))
+  const fakeFeatures = manager.extractDeckFeaturesWithEmbeddings(
+    fakeDeck.slice(0, 60)
+  )
 
   console.log('\nDeck composition:')
   const cardCounts = new Map()
@@ -94,9 +113,18 @@ async function testLowDiversity () {
   }
 
   console.log('\nFeature analysis:')
-  console.log(`Feature[0] (unique card diversity): ${fakeFeatures[0].toFixed(4)} (expected: ${(cardCounts.size / 20).toFixed(4)})`)
+  console.log(
+    `Feature[0] (unique card diversity): ${fakeFeatures[0].toFixed(
+      4
+    )} (expected: ${(cardCounts.size / 20).toFixed(4)})`
+  )
   console.log(`Feature dimension: ${fakeFeatures.length}`)
-  console.log(`First 10 numeric features: ${fakeFeatures.slice(0, 10).map(f => f.toFixed(3)).join(', ')}`)
+  console.log(
+    `First 10 numeric features: ${fakeFeatures
+      .slice(0, 10)
+      .map((f) => f.toFixed(3))
+      .join(', ')}`
+  )
 
   // Check embedding variance (should be in features[38+32+32] to features[38+32+32+32])
   const varStart = 38 + 32 + 32
@@ -109,11 +137,14 @@ async function testLowDiversity () {
   console.log(`\nScore: ${(result.score * 100).toFixed(1)}% (${result.grade})`)
   console.log(`Message: ${result.message}`)
   if (result.breakdown.length > 0) {
-    console.log('Issues detected:', result.breakdown.map(b => b.message).join(', '))
+    console.log(
+      'Issues detected:',
+      result.breakdown.map((b) => b.message).join(', ')
+    )
   }
 }
 
-testLowDiversity().catch(error => {
+testLowDiversity().catch((error) => {
   console.error('Test failed:', error)
   console.error(error.stack)
   process.exit(1)

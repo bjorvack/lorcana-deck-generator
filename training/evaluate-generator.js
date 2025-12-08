@@ -39,19 +39,34 @@ async function evaluateGenerator () {
 
   // 2. Load vocabulary
   console.log('📚 Loading text embedder...')
-  const vocabPath = path.join(__dirname, '..', 'training_data', 'vocabulary.json')
+  const vocabPath = path.join(
+    __dirname,
+    '..',
+    'training_data',
+    'vocabulary.json'
+  )
   if (fs.existsSync(vocabPath)) {
     textEmbedder.load(vocabPath)
-    console.log(`   ✓ Vocabulary loaded: ${textEmbedder.vocabularySize} tokens\n`)
+    console.log(
+      `   ✓ Vocabulary loaded: ${textEmbedder.vocabularySize} tokens\n`
+    )
   } else {
     console.log('   Building vocabulary from cards...')
     textEmbedder.buildVocabulary(cards)
-    console.log(`   ✓ Vocabulary built: ${textEmbedder.vocabularySize} tokens\n`)
+    console.log(
+      `   ✓ Vocabulary built: ${textEmbedder.vocabularySize} tokens\n`
+    )
   }
 
   // 3. Load deck generator model
   console.log('🎲 Loading deck generator model...')
-  const generatorModelPath = path.join(__dirname, '..', 'training_data', 'deck-generator-model', 'model.json')
+  const generatorModelPath = path.join(
+    __dirname,
+    '..',
+    'training_data',
+    'deck-generator-model',
+    'model.json'
+  )
   try {
     await deckModel.loadModel(generatorModelPath)
     console.log('   ✓ Generator model loaded\n')
@@ -67,7 +82,8 @@ async function evaluateGenerator () {
   const documentFrequency = new Array(textEmbedder.vocabularySize).fill(0)
   const totalDocs = indexMap.size
 
-  for (const [idx, card] of indexMap.entries()) { // eslint-disable-line no-unused-vars
+  for (const [idx, card] of indexMap.entries()) {
+    // eslint-disable-line no-unused-vars
     const textIndices = textEmbedder.cardToTextIndices(card)
     const uniqueTokens = new Set([
       ...textIndices.name,
@@ -87,7 +103,8 @@ async function evaluateGenerator () {
     return Math.log(totalDocs / df)
   })
 
-  for (const [idx, card] of indexMap.entries()) { // eslint-disable-line no-unused-vars
+  for (const [idx, card] of indexMap.entries()) {
+    // eslint-disable-line no-unused-vars
     const textIndices = textEmbedder.cardToTextIndices(card)
     const allTokens = [
       ...textIndices.name,
@@ -122,10 +139,18 @@ async function evaluateGenerator () {
 
   // 5. Load validation model
   console.log('✅ Loading validation model...')
-  const validatorModelPath = path.join(__dirname, '..', 'training_data', 'deck-validator-model')
+  const validatorModelPath = path.join(
+    __dirname,
+    '..',
+    'training_data',
+    'deck-validator-model'
+  )
   try {
     const numericFeatureDim = 38
-    await validationModel.initialize(textEmbedder.vocabularySize, numericFeatureDim)
+    await validationModel.initialize(
+      textEmbedder.vocabularySize,
+      numericFeatureDim
+    )
     await validationModel.loadModel(validatorModelPath)
     console.log('   ✓ Validation model loaded\n')
   } catch (e) {
@@ -154,13 +179,22 @@ async function evaluateGenerator () {
       else copyDistribution[4]++
     }
     const totalUniqueCards = [...cardCounts.keys()].length
-    copyDistribution.forEach((count) => features.push(count / Math.max(1, totalUniqueCards)))
+    copyDistribution.forEach((count) =>
+      features.push(count / Math.max(1, totalUniqueCards))
+    )
 
     const costCounts = Array(10).fill(0)
     let inkableCount = 0
     const totalCards = deckIndices.length
     const typeCounts = { character: 0, action: 0, item: 0, location: 0 }
-    const inkCounts = { Amber: 0, Amethyst: 0, Emerald: 0, Ruby: 0, Sapphire: 0, Steel: 0 }
+    const inkCounts = {
+      Amber: 0,
+      Amethyst: 0,
+      Emerald: 0,
+      Ruby: 0,
+      Sapphire: 0,
+      Steel: 0
+    }
     const keywordCounts = {
       Ward: 0,
       Evasive: 0,
@@ -188,7 +222,7 @@ async function evaluateGenerator () {
       }
 
       if (card.inks && card.inks.length > 0) {
-        card.inks.forEach(ink => {
+        card.inks.forEach((ink) => {
           if (inkCounts[ink] !== undefined) inkCounts[ink]++
         })
       } else if (card.ink && inkCounts[card.ink] !== undefined) {
@@ -197,27 +231,42 @@ async function evaluateGenerator () {
 
       for (const keyword of Object.keys(keywordCounts)) {
         const propName = `has${keyword}`
-        if (card[propName] || (card.keywords && card.keywords.some(k => k.includes(keyword)))) {
+        if (
+          card[propName] ||
+          (card.keywords && card.keywords.some((k) => k.includes(keyword)))
+        ) {
           keywordCounts[keyword]++
         }
       }
 
       if (card.classifications) {
         for (const cls of card.classifications) {
-          classificationCounts.set(cls, (classificationCounts.get(cls) || 0) + 1)
+          classificationCounts.set(
+            cls,
+            (classificationCounts.get(cls) || 0) + 1
+          )
         }
       }
     }
 
-    costCounts.forEach(count => features.push(count / totalCards))
-    Object.values(typeCounts).forEach(count => features.push(count / totalCards))
-    Object.values(inkCounts).forEach(count => features.push(count / totalCards))
+    costCounts.forEach((count) => features.push(count / totalCards))
+    Object.values(typeCounts).forEach((count) =>
+      features.push(count / totalCards)
+    )
+    Object.values(inkCounts).forEach((count) =>
+      features.push(count / totalCards)
+    )
     features.push(inkableCount / totalCards)
-    Object.values(keywordCounts).forEach(count => features.push(count / totalCards))
+    Object.values(keywordCounts).forEach((count) =>
+      features.push(count / totalCards)
+    )
     features.push(classificationCounts.size / 10)
-    const avgClassificationSharing = classificationCounts.size > 0
-      ? Array.from(classificationCounts.values()).reduce((a, b) => a + b, 0) / classificationCounts.size / totalCards
-      : 0
+    const avgClassificationSharing =
+      classificationCounts.size > 0
+        ? Array.from(classificationCounts.values()).reduce((a, b) => a + b, 0) /
+          classificationCounts.size /
+          totalCards
+        : 0
     features.push(avgClassificationSharing)
 
     // Add embeddings
@@ -277,14 +326,15 @@ async function evaluateGenerator () {
       if (!card) continue
 
       if (card.inks && card.inks.length > 0) {
-        card.inks.forEach(ink => inks.add(ink))
+        card.inks.forEach((ink) => inks.add(ink))
       } else if (card.ink) {
         inks.add(card.ink)
       }
       if (card.inkwell) inkableCount++
       costCounts[Math.min(card.cost, 10)]++
 
-      const cardType = (card.types && card.types.length > 0) ? card.types[0] : 'Unknown'
+      const cardType =
+        card.types && card.types.length > 0 ? card.types[0] : 'Unknown'
       types.set(cardType, (types.get(cardType) || 0) + 1)
     }
 
@@ -295,7 +345,9 @@ async function evaluateGenerator () {
       inkableCount,
       inkablePercent: (inkableCount / deckIndices.length) * 100,
       costCounts,
-      avgCost: costCounts.reduce((sum, count, cost) => sum + count * cost, 0) / deckIndices.length,
+      avgCost:
+        costCounts.reduce((sum, count, cost) => sum + count * cost, 0) /
+        deckIndices.length,
       types: Object.fromEntries(types)
     }
   }
@@ -318,7 +370,14 @@ async function evaluateGenerator () {
     const temperature = 0.8 // Reduced from 1.2 to focus on higher probability cards
 
     // Guided Generation: Pick 2 random ink colors
-    const allInks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+    const allInks = [
+      'Amber',
+      'Amethyst',
+      'Emerald',
+      'Ruby',
+      'Sapphire',
+      'Steel'
+    ]
     const selectedInks = []
     while (selectedInks.length < 2) {
       const ink = allInks[Math.floor(Math.random() * allInks.length)]
@@ -352,7 +411,7 @@ async function evaluateGenerator () {
       // Only allow cards that match our selected inks
       const cardInks = card.inks || (card.ink ? [card.ink] : [])
       if (cardInks.length > 0) {
-        const isAllowed = cardInks.every(ink => selectedInks.includes(ink))
+        const isAllowed = cardInks.every((ink) => selectedInks.includes(ink))
         if (!isAllowed) continue
       }
 
@@ -376,8 +435,12 @@ async function evaluateGenerator () {
 
           const retryCard = indexMap.get(selectedIdx)
           if (!retryCard || retryCard.legality !== 'legal') continue
-          const retryInks = retryCard.inks || (retryCard.ink ? [retryCard.ink] : [])
-          if (retryInks.length > 0 && !retryInks.every(ink => selectedInks.includes(ink))) continue
+          const retryInks =
+            retryCard.inks || (retryCard.ink ? [retryCard.ink] : [])
+          if (
+            retryInks.length > 0 &&
+            !retryInks.every((ink) => selectedInks.includes(ink))
+          ) { continue }
 
           const retryCopies = cardCounts.get(selectedIdx) || 0
           const retryMax = retryCard.maxAmount || 4
@@ -402,12 +465,16 @@ async function evaluateGenerator () {
         .filter(([idx, card]) => {
           if (card.legality !== 'legal') return false
           const cInks = card.inks || (card.ink ? [card.ink] : [])
-          return cInks.length === 0 || cInks.every(ink => selectedInks.includes(ink))
+          return (
+            cInks.length === 0 ||
+            cInks.every((ink) => selectedInks.includes(ink))
+          )
         })
         .map(([idx]) => idx)
 
       while (deckIndices.length < deckSize && legalCards.length > 0) {
-        const randomIdx = legalCards[Math.floor(Math.random() * legalCards.length)]
+        const randomIdx =
+          legalCards[Math.floor(Math.random() * legalCards.length)]
         const copiesSoFar = cardCounts.get(randomIdx) || 0
         const card = indexMap.get(randomIdx)
         const maxAmount = card.maxAmount || 4
@@ -426,11 +493,15 @@ async function evaluateGenerator () {
     analyses.push(analysis)
 
     // Score with validation model
-    const features = extractDeckFeaturesWithEmbeddings(deckIndices.slice(0, 60))
+    const features = extractDeckFeaturesWithEmbeddings(
+      deckIndices.slice(0, 60)
+    )
     const result = await validationModel.evaluateWithBreakdown(features)
     scores.push(result.score)
 
-    process.stdout.write(` Score: ${(result.score * 100).toFixed(1)}% (${result.grade})\n`)
+    process.stdout.write(
+      ` Score: ${(result.score * 100).toFixed(1)}% (${result.grade})\n`
+    )
   }
 
   // 7. Calculate statistics
@@ -442,7 +513,8 @@ async function evaluateGenerator () {
   const minScore = Math.min(...scores)
   const maxScore = Math.max(...scores)
   const stdDev = Math.sqrt(
-    scores.reduce((sum, score) => sum + Math.pow(score - avgScore, 2), 0) / scores.length
+    scores.reduce((sum, score) => sum + Math.pow(score - avgScore, 2), 0) /
+      scores.length
   )
 
   console.log('🎯 Validation Scores:')
@@ -453,31 +525,57 @@ async function evaluateGenerator () {
   console.log()
 
   // Grade distribution
-  const grades = scores.map(s => {
+  const grades = scores.map((s) => {
     if (s >= 0.85) return 'A'
-    if (s >= 0.70) return 'B'
-    if (s >= 0.50) return 'C'
+    if (s >= 0.7) return 'B'
+    if (s >= 0.5) return 'C'
     return 'D'
   })
   const gradeCounts = { A: 0, B: 0, C: 0, D: 0 }
-  grades.forEach(g => gradeCounts[g]++)
+  grades.forEach((g) => gradeCounts[g]++)
 
   console.log('   Grade Distribution:')
-  console.log(`     A (≥85%): ${gradeCounts.A} (${(gradeCounts.A / numDecks * 100).toFixed(0)}%)`)
-  console.log(`     B (≥70%): ${gradeCounts.B} (${(gradeCounts.B / numDecks * 100).toFixed(0)}%)`)
-  console.log(`     C (≥50%): ${gradeCounts.C} (${(gradeCounts.C / numDecks * 100).toFixed(0)}%)`)
-  console.log(`     D (<50%): ${gradeCounts.D} (${(gradeCounts.D / numDecks * 100).toFixed(0)}%)`)
+  console.log(
+    `     A (≥85%): ${gradeCounts.A} (${(
+      (gradeCounts.A / numDecks) *
+      100
+    ).toFixed(0)}%)`
+  )
+  console.log(
+    `     B (≥70%): ${gradeCounts.B} (${(
+      (gradeCounts.B / numDecks) *
+      100
+    ).toFixed(0)}%)`
+  )
+  console.log(
+    `     C (≥50%): ${gradeCounts.C} (${(
+      (gradeCounts.C / numDecks) *
+      100
+    ).toFixed(0)}%)`
+  )
+  console.log(
+    `     D (<50%): ${gradeCounts.D} (${(
+      (gradeCounts.D / numDecks) *
+      100
+    ).toFixed(0)}%)`
+  )
   console.log()
 
   // Deck quality metrics
-  const avgUniqueCards = analyses.reduce((sum, a) => sum + a.uniqueCards, 0) / numDecks
-  const avgInkablePercent = analyses.reduce((sum, a) => sum + a.inkablePercent, 0) / numDecks
+  const avgUniqueCards =
+    analyses.reduce((sum, a) => sum + a.uniqueCards, 0) / numDecks
+  const avgInkablePercent =
+    analyses.reduce((sum, a) => sum + a.inkablePercent, 0) / numDecks
   const avgCost = analyses.reduce((sum, a) => sum + a.avgCost, 0) / numDecks
   // const avgInks = analyses.reduce((sum, a) => sum + a.inks.length, 0) / numDecks
 
   console.log('📈 Deck Quality Metrics:')
-  console.log(`   Average unique cards: ${avgUniqueCards.toFixed(1)} (target: 15-20)`)
-  console.log(`   Average inkable %: ${avgInkablePercent.toFixed(1)}% (target: >50%)`)
+  console.log(
+    `   Average unique cards: ${avgUniqueCards.toFixed(1)} (target: 15-20)`
+  )
+  console.log(
+    `   Average inkable %: ${avgInkablePercent.toFixed(1)}% (target: >50%)`
+  )
   console.log(`   Average cost: ${avgCost.toFixed(2)}`)
 }
 

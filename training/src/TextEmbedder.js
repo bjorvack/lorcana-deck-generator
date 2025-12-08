@@ -21,18 +21,20 @@ module.exports = class TextEmbedder {
   }
 
   /**
-     * Build vocabulary from all cards
-     * @param {Array} cards - Array of Card objects
-     */
+   * Build vocabulary from all cards
+   * @param {Array} cards - Array of Card objects
+   */
   buildVocabulary (cards) {
     const tokenSet = new Set()
 
     // First pass: collect all card names for later text parsing
     // Normalize names to handle apostrophe differences etc.
-    this.allCardNames = cards.map(card => this.cleanText(card.name)).filter(name => name.length > 0)
+    this.allCardNames = cards
+      .map((card) => this.cleanText(card.name))
+      .filter((name) => name.length > 0)
 
     // Second pass: extract all tokens
-    cards.forEach(card => {
+    cards.forEach((card) => {
       // 1. Card name
       const cardName = this.cleanText(card.name)
       if (cardName) {
@@ -41,7 +43,7 @@ module.exports = class TextEmbedder {
 
       // 2. Keywords
       if (card.keywords && Array.isArray(card.keywords)) {
-        card.keywords.forEach(kw => {
+        card.keywords.forEach((kw) => {
           const token = this.cleanText(kw)
           if (token) tokenSet.add(token)
         })
@@ -52,14 +54,14 @@ module.exports = class TextEmbedder {
         tokenSet.add(this.cleanText(card.ink))
       }
       if (card.inks && Array.isArray(card.inks)) {
-        card.inks.forEach(ink => {
+        card.inks.forEach((ink) => {
           if (ink) tokenSet.add(this.cleanText(ink))
         })
       }
 
       // 4. Classifications
       if (card.classifications && Array.isArray(card.classifications)) {
-        card.classifications.forEach(cls => {
+        card.classifications.forEach((cls) => {
           const token = this.cleanText(cls)
           if (token) tokenSet.add(token)
         })
@@ -67,12 +69,12 @@ module.exports = class TextEmbedder {
 
       // 5. Types
       if (card.types && Array.isArray(card.types)) {
-        card.types.forEach(type => {
+        card.types.forEach((type) => {
           const token = this.cleanText(type)
           if (token) tokenSet.add(token)
         })
       } else if (card.type && Array.isArray(card.type)) {
-        card.type.forEach(type => {
+        card.type.forEach((type) => {
           const token = this.cleanText(type)
           if (token) tokenSet.add(token)
         })
@@ -80,8 +82,11 @@ module.exports = class TextEmbedder {
 
       // 6. Body Text
       if (card.sanitizedText) {
-        const textTokens = this.extractTextTokens(card.sanitizedText, this.allCardNames)
-        textTokens.forEach(token => {
+        const textTokens = this.extractTextTokens(
+          card.sanitizedText,
+          this.allCardNames
+        )
+        textTokens.forEach((token) => {
           if (token) tokenSet.add(token)
         })
       }
@@ -89,21 +94,23 @@ module.exports = class TextEmbedder {
 
     // Build token-to-index mapping
     let index = 2 // Start after <PAD> and <UNK>
-    Array.from(tokenSet).sort().forEach(token => {
-      this.tokenToIndex[token] = index
-      this.indexToToken[index] = token
-      index++
-    })
+    Array.from(tokenSet)
+      .sort()
+      .forEach((token) => {
+        this.tokenToIndex[token] = index
+        this.indexToToken[index] = token
+        index++
+      })
 
     this.vocabularySize = index
     console.log(`Built vocabulary with ${this.vocabularySize} tokens`)
   }
 
   /**
-     * Clean text by removing unwanted symbols and expanding abbreviations
-     * @param {string} text - Input text
-     * @returns {string} Cleaned text
-     */
+   * Clean text by removing unwanted symbols and expanding abbreviations
+   * @param {string} text - Input text
+   * @returns {string} Cleaned text
+   */
   cleanText (text) {
     if (!text) return ''
     let cleaned = text.toLowerCase()
@@ -119,18 +126,18 @@ module.exports = class TextEmbedder {
   }
 
   /**
-     * Extract tokens from card text, identifying card names as single tokens
-     * @param {string} text - Card text to parse
-     * @param {Array} cardNames - All card names in the game
-     * @returns {Array} Array of tokens
-     */
+   * Extract tokens from card text, identifying card names as single tokens
+   * @param {string} text - Card text to parse
+   * @param {Array} cardNames - All card names in the game
+   * @returns {Array} Array of tokens
+   */
   extractTextTokens (text, cardNames) {
     const tokens = []
     // Clean text first to ensure it matches normalized card names
     let remainingText = this.cleanText(text)
 
     // First, find and extract card name references
-    cardNames.forEach(cardName => {
+    cardNames.forEach((cardName) => {
       if (remainingText.includes(cardName)) {
         tokens.push(cardName)
         // Replace found card names with placeholder to avoid duplicate tokenization
@@ -141,8 +148,8 @@ module.exports = class TextEmbedder {
     // Then tokenize remaining text (individual words)
     const words = remainingText
       .split(/\s+/)
-      .map(w => w.trim())
-      .filter(w => w.length > 2 || w === '+' || w === '{' || w === '}') // Keep special symbols even if short
+      .map((w) => w.trim())
+      .filter((w) => w.length > 2 || w === '+' || w === '{' || w === '}') // Keep special symbols even if short
 
     tokens.push(...words)
 
@@ -150,10 +157,10 @@ module.exports = class TextEmbedder {
   }
 
   /**
-     * Convert card properties to text token indices
-     * @param {Object} card - Card object
-     * @returns {Object} Object containing token arrays for name, keywords, ink, classifications, types, text
-     */
+   * Convert card properties to text token indices
+   * @param {Object} card - Card object
+   * @returns {Object} Object containing token arrays for name, keywords, ink, classifications, types, text
+   */
   cardToTextIndices (card) {
     // 1. Name Tokens
     const nameTokens = []
@@ -173,7 +180,7 @@ module.exports = class TextEmbedder {
     // 2. Keywords Tokens
     const keywordsTokens = []
     if (card.keywords && Array.isArray(card.keywords)) {
-      card.keywords.forEach(kw => {
+      card.keywords.forEach((kw) => {
         const token = this.cleanText(kw)
         const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>']
         keywordsTokens.push(idx)
@@ -191,7 +198,7 @@ module.exports = class TextEmbedder {
     // 4. Classifications Tokens
     const classTokens = []
     if (card.classifications && Array.isArray(card.classifications)) {
-      card.classifications.forEach(cls => {
+      card.classifications.forEach((cls) => {
         const token = this.cleanText(cls)
         const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>']
         classTokens.push(idx)
@@ -201,13 +208,13 @@ module.exports = class TextEmbedder {
     // 5. Types Tokens
     const typeTokens = []
     if (card.types && Array.isArray(card.types)) {
-      card.types.forEach(type => {
+      card.types.forEach((type) => {
         const token = this.cleanText(type)
         const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>']
         typeTokens.push(idx)
       })
     } else if (card.type && Array.isArray(card.type)) {
-      card.type.forEach(type => {
+      card.type.forEach((type) => {
         const token = this.cleanText(type)
         const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>']
         typeTokens.push(idx)
@@ -217,8 +224,11 @@ module.exports = class TextEmbedder {
     // 6. Body Text Tokens
     const bodyTokens = []
     if (card.sanitizedText) {
-      const textTokens = this.extractTextTokens(card.sanitizedText, this.allCardNames)
-      textTokens.forEach(token => {
+      const textTokens = this.extractTextTokens(
+        card.sanitizedText,
+        this.allCardNames
+      )
+      textTokens.forEach((token) => {
         const idx = this.tokenToIndex[token] || this.tokenToIndex['<UNK>']
         bodyTokens.push(idx)
       })
@@ -236,11 +246,11 @@ module.exports = class TextEmbedder {
   }
 
   /**
-     * Pad or truncate array to specified length
-     * @param {Array} arr - Input array
-     * @param {number} length - Target length
-     * @returns {Array} Padded/truncated array
-     */
+   * Pad or truncate array to specified length
+   * @param {Array} arr - Input array
+   * @param {number} length - Target length
+   * @returns {Array} Padded/truncated array
+   */
   padOrTruncate (arr, length) {
     if (arr.length >= length) {
       return arr.slice(0, length)
@@ -253,9 +263,9 @@ module.exports = class TextEmbedder {
   }
 
   /**
-     * Save vocabulary to JSON file
-     * @param {string} filePath - Path to save vocabulary
-     */
+   * Save vocabulary to JSON file
+   * @param {string} filePath - Path to save vocabulary
+   */
   save (filePath) {
     const data = {
       tokenToIndex: this.tokenToIndex,
@@ -274,9 +284,9 @@ module.exports = class TextEmbedder {
   }
 
   /**
-     * Load vocabulary from JSON file
-     * @param {string} filePath - Path to load vocabulary from
-     */
+   * Load vocabulary from JSON file
+   * @param {string} filePath - Path to load vocabulary from
+   */
   load (filePath) {
     const data = JSON.parse(fs.readFileSync(filePath, 'utf8'))
     this.tokenToIndex = data.tokenToIndex
@@ -284,6 +294,8 @@ module.exports = class TextEmbedder {
     this.vocabularySize = data.vocabularySize
     this.maxTextTokens = data.maxTextTokens
     this.allCardNames = data.allCardNames || []
-    console.log(`Vocabulary loaded from ${filePath} (${this.vocabularySize} tokens)`)
+    console.log(
+      `Vocabulary loaded from ${filePath} (${this.vocabularySize} tokens)`
+    )
   }
 }

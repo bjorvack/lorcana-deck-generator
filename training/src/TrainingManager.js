@@ -14,7 +14,10 @@ module.exports = class TrainingManager {
     this.indexMap = new Map() // Index -> Name
     this.trainingData = []
     this.trainingDataPath = path.join(__dirname, '..', '..', 'training_data')
-    this.trainingStatePath = path.join(this.trainingDataPath, 'training-state.json')
+    this.trainingStatePath = path.join(
+      this.trainingDataPath,
+      'training-state.json'
+    )
     this.trainingState = null
     this.loadedFiles = [] // Track files loaded in the current training session
   }
@@ -23,9 +26,21 @@ module.exports = class TrainingManager {
     console.log(`[${new Date().toLocaleTimeString()}] ${message}`)
   }
 
-  async startTraining (epochs = 10, fullRetrain = false, continueTraining = false) {
+  async startTraining (
+    epochs = 10,
+    fullRetrain = false,
+    continueTraining = false
+  ) {
     this.log(`Starting training process with ${epochs} epochs...`)
-    this.log(`Mode: ${fullRetrain ? 'Full retrain' : continueTraining ? 'Continue training' : 'Incremental training'}`)
+    this.log(
+      `Mode: ${
+        fullRetrain
+          ? 'Full retrain'
+          : continueTraining
+          ? 'Continue training'
+          : 'Incremental training'
+      }`
+    )
 
     // Load training state
     this.loadTrainingState()
@@ -73,9 +88,13 @@ module.exports = class TrainingManager {
 
     // Migration: If we have trained files but no hashes, build them now
     // We need cards loaded first to calculate hashes correctly
-    if (this.deckHashSet.size === 0 && this.trainingState.trainedFiles.length > 0 && !fullRetrain) {
+    if (
+      this.deckHashSet.size === 0 &&
+      this.trainingState.trainedFiles.length > 0 &&
+      !fullRetrain
+    ) {
       const hashes = await this.buildInitialDeckHashes()
-      hashes.forEach(h => this.deckHashSet.add(h))
+      hashes.forEach((h) => this.deckHashSet.add(h))
       this.trainingState.trainedDeckHashes = hashes // Update state immediately
       this.saveTrainingState()
     }
@@ -94,15 +113,21 @@ module.exports = class TrainingManager {
       if (fullRetrain || continueTraining) {
         filesToTrain = allFiles
       } else {
-        filesToTrain = allFiles.filter(file => !this.trainingState.trainedFiles.includes(file))
+        filesToTrain = allFiles.filter(
+          (file) => !this.trainingState.trainedFiles.includes(file)
+        )
       }
 
       this.log(`Total files in manifest: ${allFiles.length}`)
-      this.log(`Already trained files: ${this.trainingState.trainedFiles.length}`)
+      this.log(
+        `Already trained files: ${this.trainingState.trainedFiles.length}`
+      )
       this.log(`New files to train on this session: ${filesToTrain.length}`)
 
       if (filesToTrain.length === 0) {
-        this.log('No new files found. Forcing training on ALL files to continue learning...')
+        this.log(
+          'No new files found. Forcing training on ALL files to continue learning...'
+        )
         filesToTrain = allFiles
       }
 
@@ -137,7 +162,8 @@ module.exports = class TrainingManager {
 
     let processedDecks = 0
 
-    for (const rawData of this.trainingData.slice(-this.loadedFiles.length)) { // Only process newly loaded tournaments
+    for (const rawData of this.trainingData.slice(-this.loadedFiles.length)) {
+      // Only process newly loaded tournaments
       for (const deck of rawData.decks) {
         const deckIndices = []
 
@@ -163,7 +189,9 @@ module.exports = class TrainingManager {
 
           // Create a few shuffled versions
           for (let k = 0; k < 5; k++) {
-            const shuffledIndices = [...deckIndices].sort(() => Math.random() - 0.5)
+            const shuffledIndices = [...deckIndices].sort(
+              () => Math.random() - 0.5
+            )
 
             const seqIndices = []
             const seqFeatures = []
@@ -180,7 +208,11 @@ module.exports = class TrainingManager {
               const copiesSoFar = cardCounts.get(index) || 0
 
               this.updateDeckStats(currentStats, card)
-              const features = this.extractCardFeatures(card, currentStats, copiesSoFar)
+              const features = this.extractCardFeatures(
+                card,
+                currentStats,
+                copiesSoFar
+              )
               const textIndices = this.textEmbedder.cardToTextIndices(card) // NEW: extract text
 
               seqIndices.push(index)
@@ -201,7 +233,9 @@ module.exports = class TrainingManager {
       }
     }
 
-    this.log(`Generated ${sequences.length} sequences from ${processedDecks} newly loaded decks.`)
+    this.log(
+      `Generated ${sequences.length} sequences from ${processedDecks} newly loaded decks.`
+    )
 
     if (sequences.length === 0) {
       this.log('No new training data found. Skipping training.')
@@ -216,10 +250,7 @@ module.exports = class TrainingManager {
       this.log('Building card embedding matrix...')
       const embeddingMatrix = this.buildCardEmbeddingMatrix()
 
-      await this.model.initialize(
-        this.cardMap.size,
-        embeddingMatrix
-      )
+      await this.model.initialize(this.cardMap.size, embeddingMatrix)
     } else {
       this.log('Continuing training on existing model...')
     }
@@ -234,14 +265,16 @@ module.exports = class TrainingManager {
         [indices[i], indices[j]] = [indices[j], indices[i]]
       }
       return {
-        shuffledSeqs: indices.map(i => seqs[i])
+        shuffledSeqs: indices.map((i) => seqs[i])
       }
     }
 
     // If dataset is too large, train in batches to avoid memory issues
     const MAX_BATCH_SIZE = 5000 // Increased from 2000 for speed
     if (sequences.length > MAX_BATCH_SIZE) {
-      this.log(`Large dataset detected (${sequences.length} sequences). Training in batches of ${MAX_BATCH_SIZE}...`)
+      this.log(
+        `Large dataset detected (${sequences.length} sequences). Training in batches of ${MAX_BATCH_SIZE}...`
+      )
 
       // Shuffle data once before training
       this.log('Shuffling training data...')
@@ -256,7 +289,10 @@ module.exports = class TrainingManager {
         // Inner loop: Batches
         for (let batchIdx = 0; batchIdx < numBatches; batchIdx++) {
           const start = batchIdx * MAX_BATCH_SIZE
-          const end = Math.min((batchIdx + 1) * MAX_BATCH_SIZE, sequences.length)
+          const end = Math.min(
+            (batchIdx + 1) * MAX_BATCH_SIZE,
+            sequences.length
+          )
 
           const batchSequences = shuffledSeqs.slice(start, end)
 
@@ -265,7 +301,11 @@ module.exports = class TrainingManager {
           await this.model.train(batchSequences, 1, (e, logs) => {
             // Only log every 5th batch to reduce noise
             if (batchIdx % 5 === 0 || batchIdx === numBatches - 1) {
-              this.log(`  Batch ${batchIdx + 1}/${numBatches}: loss = ${logs.loss.toFixed(4)}`)
+              this.log(
+                `  Batch ${
+                  batchIdx + 1
+                }/${numBatches}: loss = ${logs.loss.toFixed(4)}`
+              )
             }
           })
         }
@@ -277,7 +317,9 @@ module.exports = class TrainingManager {
     } else {
       // Normal training for smaller datasets
       await this.model.train(sequences, epochs, async (epoch, logs) => {
-        this.log(`Epoch ${epoch + 1}/${epochs}: loss = ${logs.loss.toFixed(4)}`)
+        this.log(
+          `Epoch ${epoch + 1}/${epochs}: loss = ${logs.loss.toFixed(4)}`
+        )
         // Save checkpoint
         await this.saveModel()
       })
@@ -292,9 +334,9 @@ module.exports = class TrainingManager {
   }
 
   /**
-     * Build a matrix of static features for all cards to initialize the embedding layer.
-     * Returns array of arrays: [vocabSize, embeddingDim]
-     */
+   * Build a matrix of static features for all cards to initialize the embedding layer.
+   * Returns array of arrays: [vocabSize, embeddingDim]
+   */
   buildCardEmbeddingMatrix () {
     // We need to map card ID (1..N) to its feature vector.
     // ID 0 is padding, handled by the model initialization.
@@ -322,9 +364,9 @@ module.exports = class TrainingManager {
   }
 
   /**
-     * Extract static features for embedding initialization.
-     * Must return a fixed-size array (e.g. 64 floats).
-     */
+   * Extract static features for embedding initialization.
+   * Must return a fixed-size array (e.g. 64 floats).
+   */
   extractStaticCardFeatures (card) {
     const features = []
 
@@ -340,25 +382,53 @@ module.exports = class TrainingManager {
     features.push(Math.min(card.willpower || 0, 10) / 10)
 
     // 6. Inks (One-hot 6)
-    const inkColors = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
-    inkColors.forEach(ink => features.push(card.ink === ink ? 1 : 0))
+    const inkColors = [
+      'Amber',
+      'Amethyst',
+      'Emerald',
+      'Ruby',
+      'Sapphire',
+      'Steel'
+    ]
+    inkColors.forEach((ink) => features.push(card.ink === ink ? 1 : 0))
 
     // 7. Types (One-hot 4)
     const types = ['Character', 'Action', 'Item', 'Location']
-    const cardType = (card.types && card.types.length > 0) ? card.types[0] : ''
-    types.forEach(type => features.push(cardType === type ? 1 : 0))
+    const cardType = card.types && card.types.length > 0 ? card.types[0] : ''
+    types.forEach((type) => features.push(cardType === type ? 1 : 0))
 
     // 8. Keywords (10 common ones)
-    const keywords = ['Bodyguard', 'Reckless', 'Rush', 'Ward', 'Evasive', 'Resist', 'Challenger', 'Singer', 'Shift', 'Support']
-    keywords.forEach(kw => {
-      const hasKw = (card.keywords && card.keywords.some(k => k.includes(kw))) || (card.text && card.text.includes(kw))
+    const keywords = [
+      'Bodyguard',
+      'Reckless',
+      'Rush',
+      'Ward',
+      'Evasive',
+      'Resist',
+      'Challenger',
+      'Singer',
+      'Shift',
+      'Support'
+    ]
+    keywords.forEach((kw) => {
+      const hasKw =
+        (card.keywords && card.keywords.some((k) => k.includes(kw))) ||
+        (card.text && card.text.includes(kw))
       features.push(hasKw ? 1 : 0)
     })
 
     // 9. Classifications (5 common ones)
-    const classifications = ['Hero', 'Villain', 'Dreamborn', 'Storyborn', 'Floodborn']
-    classifications.forEach(cls => {
-      features.push(card.classifications && card.classifications.includes(cls) ? 1 : 0)
+    const classifications = [
+      'Hero',
+      'Villain',
+      'Dreamborn',
+      'Storyborn',
+      'Floodborn'
+    ]
+    classifications.forEach((cls) => {
+      features.push(
+        card.classifications && card.classifications.includes(cls) ? 1 : 0
+      )
     })
 
     // Current feature count: 1+1+1+1+1 + 6 + 4 + 10 + 5 = 30 features.
@@ -372,7 +442,9 @@ module.exports = class TrainingManager {
   }
 
   computeSimpleTextEmbedding (card, dim) {
-    const text = `${card.name} ${card.text || ''} ${card.keywords ? card.keywords.join(' ') : ''}`.toLowerCase()
+    const text = `${card.name} ${card.text || ''} ${
+      card.keywords ? card.keywords.join(' ') : ''
+    }`.toLowerCase()
     const embedding = new Array(dim).fill(0)
     for (let i = 0; i < text.length; i++) {
       const charCode = text.charCodeAt(i)
@@ -399,8 +471,12 @@ module.exports = class TrainingManager {
   loadTrainingState () {
     if (fs.existsSync(this.trainingStatePath)) {
       try {
-        this.trainingState = JSON.parse(fs.readFileSync(this.trainingStatePath, 'utf8'))
-        this.log(`Loaded training state: ${this.trainingState.trainedFiles.length} files previously trained`)
+        this.trainingState = JSON.parse(
+          fs.readFileSync(this.trainingStatePath, 'utf8')
+        )
+        this.log(
+          `Loaded training state: ${this.trainingState.trainedFiles.length} files previously trained`
+        )
       } catch (e) {
         this.log(`Warning: Could not load training state: ${e.message}`)
         this.trainingState = this.getInitialTrainingState()
@@ -414,7 +490,9 @@ module.exports = class TrainingManager {
   updateTrainingState (epochs) {
     const now = new Date().toISOString()
     // Use loadedFiles directly; they are the actual filenames for new data this session
-    const newFiles = this.loadedFiles.filter(f => !this.trainingState.trainedFiles.includes(f))
+    const newFiles = this.loadedFiles.filter(
+      (f) => !this.trainingState.trainedFiles.includes(f)
+    )
 
     // Add new files to trained files list
     this.trainingState.trainedFiles.push(...newFiles)
@@ -430,7 +508,9 @@ module.exports = class TrainingManager {
     this.trainingState.lastTrainingDate = now
     this.trainingState.totalTrainings++
 
-    this.log(`Updated training state: ${newFiles.length} new files added (session files: ${this.loadedFiles.length}).`)
+    this.log(
+      `Updated training state: ${newFiles.length} new files added (session files: ${this.loadedFiles.length}).`
+    )
 
     // Save updated hashes
     this.trainingState.trainedDeckHashes = Array.from(this.deckHashSet)
@@ -438,7 +518,10 @@ module.exports = class TrainingManager {
 
   saveTrainingState () {
     try {
-      fs.writeFileSync(this.trainingStatePath, JSON.stringify(this.trainingState, null, 2))
+      fs.writeFileSync(
+        this.trainingStatePath,
+        JSON.stringify(this.trainingState, null, 2)
+      )
       this.log(`Training state saved to ${this.trainingStatePath}`)
     } catch (e) {
       this.log(`Error saving training state: ${e.message}`)
@@ -510,26 +593,45 @@ module.exports = class TrainingManager {
     features.push(Math.min(card.willpower || 0, 10) / 10) // Willpower
 
     // Inks (One-hot)
-    const inkColors = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
-    inkColors.forEach(ink => {
+    const inkColors = [
+      'Amber',
+      'Amethyst',
+      'Emerald',
+      'Ruby',
+      'Sapphire',
+      'Steel'
+    ]
+    inkColors.forEach((ink) => {
       features.push(card.ink === ink ? 1 : 0)
     })
 
     // Types (One-hot)
     const types = ['Character', 'Action', 'Item', 'Location']
-    const cardType = (card.types && card.types.length > 0) ? card.types[0] : ''
-    types.forEach(type => {
+    const cardType = card.types && card.types.length > 0 ? card.types[0] : ''
+    types.forEach((type) => {
       features.push(cardType === type ? 1 : 0)
     })
 
     // Keyword Booleans
-    const keywords = ['Bodyguard', 'Reckless', 'Rush', 'Ward', 'Evasive', 'Resist', 'Challenger', 'Singer', 'Shift', 'Boost']
-    keywords.forEach(kw => {
+    const keywords = [
+      'Bodyguard',
+      'Reckless',
+      'Rush',
+      'Ward',
+      'Evasive',
+      'Resist',
+      'Challenger',
+      'Singer',
+      'Shift',
+      'Boost'
+    ]
+    keywords.forEach((kw) => {
       const propName = `has${kw}`
       if (card[propName] !== undefined) {
         features.push(card[propName] ? 1 : 0)
       } else {
-        const hasKw = card.keywords && card.keywords.some(k => k.includes(kw))
+        const hasKw =
+          card.keywords && card.keywords.some((k) => k.includes(kw))
         features.push(hasKw ? 1 : 0)
       }
     })
@@ -543,9 +645,17 @@ module.exports = class TrainingManager {
     features.push(Math.min(card.moveCost || 0, 10) / 10)
 
     // Classifications
-    const commonClassifications = ['Hero', 'Villain', 'Dreamborn', 'Storyborn', 'Floodborn']
-    commonClassifications.forEach(cls => {
-      features.push(card.classifications && card.classifications.includes(cls) ? 1 : 0)
+    const commonClassifications = [
+      'Hero',
+      'Villain',
+      'Dreamborn',
+      'Storyborn',
+      'Floodborn'
+    ]
+    commonClassifications.forEach((cls) => {
+      features.push(
+        card.classifications && card.classifications.includes(cls) ? 1 : 0
+      )
     })
 
     // Copies so far
@@ -554,10 +664,18 @@ module.exports = class TrainingManager {
     // Dynamic features
     const total = Math.max(1, stats.totalCards)
     features.push(stats.inkableCount / total) // Inkable fraction
-    stats.costCounts.forEach(count => { features.push(count / total) }) // Cost curve
-    Object.values(stats.typeCounts).forEach(count => { features.push(count / total) }) // Type distribution
-    inkColors.forEach(ink => { features.push((stats.inkCounts[ink] || 0) / total) }) // Ink color distribution
-    stats.inkableCostCounts.forEach(count => { features.push(count / total) }) // Inkable cost curve
+    stats.costCounts.forEach((count) => {
+      features.push(count / total)
+    }) // Cost curve
+    Object.values(stats.typeCounts).forEach((count) => {
+      features.push(count / total)
+    }) // Type distribution
+    inkColors.forEach((ink) => {
+      features.push((stats.inkCounts[ink] || 0) / total)
+    }) // Ink color distribution
+    stats.inkableCostCounts.forEach((count) => {
+      features.push(count / total)
+    }) // Inkable cost curve
 
     return features
   }
@@ -574,9 +692,9 @@ module.exports = class TrainingManager {
   }
 
   /**
-     * Calculate a unique hash for a deck based on its content
-     * Sorts cards by ID and creates a string signature: "id:count|id:count|..."
-     */
+   * Calculate a unique hash for a deck based on its content
+   * Sorts cards by ID and creates a string signature: "id:count|id:count|..."
+   */
   getDeckHash (deckIndices) {
     // Count cards
     const counts = new Map()
@@ -588,12 +706,12 @@ module.exports = class TrainingManager {
     const sortedIds = Array.from(counts.keys()).sort((a, b) => a - b)
 
     // Build hash string
-    return sortedIds.map(id => `${id}:${counts.get(id)}`).join('|')
+    return sortedIds.map((id) => `${id}:${counts.get(id)}`).join('|')
   }
 
   /**
-     * Build hash set from all previously trained files (Migration)
-     */
+   * Build hash set from all previously trained files (Migration)
+   */
   async buildInitialDeckHashes () {
     this.log('Building initial deck hashes from history (Migration)...')
     const hashes = new Set()
@@ -621,17 +739,21 @@ module.exports = class TrainingManager {
             }
           }
         } catch (e) {
-          this.log(`Warning: Could not read ${file} for hash migration: ${e.message}`)
+          this.log(
+            `Warning: Could not read ${file} for hash migration: ${e.message}`
+          )
         }
       }
     }
-    this.log(`Migration complete. Indexed ${hashes.size} unique decks from ${totalDecks} total decks.`)
+    this.log(
+      `Migration complete. Indexed ${hashes.size} unique decks from ${totalDecks} total decks.`
+    )
     return Array.from(hashes)
   }
 
   /**
-     * Extract deck-level features for validation model
-     */
+   * Extract deck-level features for validation model
+   */
   extractDeckFeatures (deckIndices) {
     const features = []
 
@@ -656,14 +778,23 @@ module.exports = class TrainingManager {
     }
     // Normalize
     const totalUniqueCards = [...cardCounts.keys()].length
-    copyDistribution.forEach((count, i) => features.push(count / Math.max(1, totalUniqueCards)))
+    copyDistribution.forEach((count, i) =>
+      features.push(count / Math.max(1, totalUniqueCards))
+    )
 
     // Mana curve distribution (costs 1-10)
     const costCounts = Array(10).fill(0)
     let inkableCount = 0
     const totalCards = deckIndices.length
     const typeCounts = { character: 0, action: 0, item: 0, location: 0 }
-    const inkCounts = { Amber: 0, Amethyst: 0, Emerald: 0, Ruby: 0, Sapphire: 0, Steel: 0 }
+    const inkCounts = {
+      Amber: 0,
+      Amethyst: 0,
+      Emerald: 0,
+      Ruby: 0,
+      Sapphire: 0,
+      Steel: 0
+    }
     const keywordCounts = {
       Ward: 0,
       Evasive: 0,
@@ -702,7 +833,10 @@ module.exports = class TrainingManager {
       // Keywords
       for (const keyword of Object.keys(keywordCounts)) {
         const propName = `has${keyword}`
-        if (card[propName] || (card.keywords && card.keywords.some(k => k.includes(keyword)))) {
+        if (
+          card[propName] ||
+          (card.keywords && card.keywords.some((k) => k.includes(keyword)))
+        ) {
           keywordCounts[keyword]++
         }
       }
@@ -710,42 +844,54 @@ module.exports = class TrainingManager {
       // Classifications
       if (card.classifications) {
         for (const cls of card.classifications) {
-          classificationCounts.set(cls, (classificationCounts.get(cls) || 0) + 1)
+          classificationCounts.set(
+            cls,
+            (classificationCounts.get(cls) || 0) + 1
+          )
         }
       }
     }
 
     // Add mana curve (normalized)
-    costCounts.forEach(count => features.push(count / totalCards))
+    costCounts.forEach((count) => features.push(count / totalCards))
 
     // Add type distribution
-    Object.values(typeCounts).forEach(count => features.push(count / totalCards))
+    Object.values(typeCounts).forEach((count) =>
+      features.push(count / totalCards)
+    )
 
     // Add ink distribution
-    Object.values(inkCounts).forEach(count => features.push(count / totalCards))
+    Object.values(inkCounts).forEach((count) =>
+      features.push(count / totalCards)
+    )
 
     // Add inkable ratio
     features.push(inkableCount / totalCards)
 
     // Add keyword distribution
-    Object.values(keywordCounts).forEach(count => features.push(count / totalCards))
+    Object.values(keywordCounts).forEach((count) =>
+      features.push(count / totalCards)
+    )
 
     // Add classification diversity (how many different classifications)
     features.push(classificationCounts.size / 10) // Normalize by ~10 possible classifications
 
     // Add synergy score (how many cards share classifications)
-    const avgClassificationSharing = classificationCounts.size > 0
-      ? Array.from(classificationCounts.values()).reduce((a, b) => a + b, 0) / classificationCounts.size / totalCards
-      : 0
+    const avgClassificationSharing =
+      classificationCounts.size > 0
+        ? Array.from(classificationCounts.values()).reduce((a, b) => a + b, 0) /
+          classificationCounts.size /
+          totalCards
+        : 0
     features.push(avgClassificationSharing)
 
     return features
   }
 
   /**
-     * Extract deck features including aggregated text embeddings
-     * Returns: [numeric features (38), mean embeddings (32), max embeddings (32), variance embeddings (32)]
-     */
+   * Extract deck features including aggregated text embeddings
+   * Returns: [numeric features (38), mean embeddings (32), max embeddings (32), variance embeddings (32)]
+   */
   extractDeckFeaturesWithEmbeddings (deckIndices) {
     // Get numeric features
     const numericFeatures = this.extractDeckFeatures(deckIndices)
@@ -795,12 +941,16 @@ module.exports = class TrainingManager {
       varianceEmbedding[i] /= embeddings.length
     }
 
-    return numericFeatures.concat(meanEmbedding, maxEmbedding, varianceEmbedding)
+    return numericFeatures.concat(
+      meanEmbedding,
+      maxEmbedding,
+      varianceEmbedding
+    )
   }
 
   /**
-     * Generate fake decks for validation model training
-     */
+   * Generate fake decks for validation model training
+   */
   generateFakeDeck (strategy = 'random') {
     const deckIndices = []
     const deckSize = 60
@@ -823,7 +973,14 @@ module.exports = class TrainingManager {
       }
     } else if (strategy === 'ink_constrained') {
       // Strategy B: Ink-constrained random (25% of fakes)
-      const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+      const inks = [
+        'Amber',
+        'Amethyst',
+        'Emerald',
+        'Ruby',
+        'Sapphire',
+        'Steel'
+      ]
       const chosenInks = []
       const inkCount = Math.random() < 0.5 ? 1 : 2
       for (let i = 0; i < inkCount; i++) {
@@ -853,7 +1010,14 @@ module.exports = class TrainingManager {
     } else if (strategy === 'rule_broken') {
       // Strategy C: Rule-broken DeckGenerator style (25% of fakes)
       // Use flat mana curve and allow excessive singletons
-      const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+      const inks = [
+        'Amber',
+        'Amethyst',
+        'Emerald',
+        'Ruby',
+        'Sapphire',
+        'Steel'
+      ]
       const chosenInks = []
       const inkCount = Math.random() < 0.5 ? 1 : 2
       for (let i = 0; i < inkCount; i++) {
@@ -876,7 +1040,7 @@ module.exports = class TrainingManager {
       for (let i = 0; i < deckSize; i++) {
         // Pick random cost with uniform distribution
         const targetCost = costs[Math.floor(Math.random() * costs.length)]
-        const cardsOfCost = cardPool.filter(idx => {
+        const cardsOfCost = cardPool.filter((idx) => {
           const card = this.indexMap.get(idx)
           return card && card.cost === targetCost
         })
@@ -885,13 +1049,16 @@ module.exports = class TrainingManager {
           let attempts = 0
           let picked = false
           while (!picked && attempts < 10) {
-            const randomIdx = cardsOfCost[Math.floor(Math.random() * cardsOfCost.length)]
+            const randomIdx =
+              cardsOfCost[Math.floor(Math.random() * cardsOfCost.length)]
             const currentCount = cardCounts.get(randomIdx) || 0
             const card = this.indexMap.get(randomIdx)
             const maxAmount = card?.maxAmount || 4
 
             // Allow more singletons by biasing toward single copies
-            const shouldAddCopy = currentCount === 0 || (Math.random() < 0.3 && currentCount < maxAmount)
+            const shouldAddCopy =
+              currentCount === 0 ||
+              (Math.random() < 0.3 && currentCount < maxAmount)
 
             if (shouldAddCopy && currentCount < maxAmount) {
               deckIndices.push(randomIdx)
@@ -926,7 +1093,8 @@ module.exports = class TrainingManager {
 
       // Fill deck by repeating these cards
       for (let i = 0; i < deckSize; i++) {
-        const randomCard = selectedCards[Math.floor(Math.random() * selectedCards.length)]
+        const randomCard =
+          selectedCards[Math.floor(Math.random() * selectedCards.length)]
         deckIndices.push(randomCard)
       }
     }
@@ -934,10 +1102,10 @@ module.exports = class TrainingManager {
   }
 
   /**
-     * Generate a partial deck by removing 10-20 random cards from a tournament deck
-     * @param {Array} baseDeckIndices - Full tournament deck indices (60 cards)
-     * @returns {Array} Partial deck indices (40-50 cards)
-     */
+   * Generate a partial deck by removing 10-20 random cards from a tournament deck
+   * @param {Array} baseDeckIndices - Full tournament deck indices (60 cards)
+   * @returns {Array} Partial deck indices (40-50 cards)
+   */
   generatePartialDeck (baseDeckIndices) {
     // Remove between 10-20 cards randomly
     const cardsToRemove = Math.floor(Math.random() * 11) + 10 // 10-20
@@ -952,11 +1120,11 @@ module.exports = class TrainingManager {
   }
 
   /**
-     * Complete a partial deck to 60 cards using weighted card selection
-     * Similar to DeckGenerator logic but simpler
-     * @param {Array} partialDeckIndices - Partial deck indices (40-50 cards)
-     * @returns {Array} Completed deck indices (60 cards)
-     */
+   * Complete a partial deck to 60 cards using weighted card selection
+   * Similar to DeckGenerator logic but simpler
+   * @param {Array} partialDeckIndices - Partial deck indices (40-50 cards)
+   * @returns {Array} Completed deck indices (60 cards)
+   */
   completePartialDeckWithGenerator (partialDeckIndices) {
     const deck = [...partialDeckIndices]
     const targetSize = 60
@@ -1005,14 +1173,15 @@ module.exports = class TrainingManager {
       const targetCost = Math.floor(Math.random() * 4) + 2 // Costs 2-5
 
       // Find cards of that cost
-      const cardsOfCost = cardPool.filter(idx => {
+      const cardsOfCost = cardPool.filter((idx) => {
         const card = this.indexMap.get(idx)
         return card && card.cost === targetCost
       })
 
       if (cardsOfCost.length > 0) {
         // Pick a random card
-        const randomIdx = cardsOfCost[Math.floor(Math.random() * cardsOfCost.length)]
+        const randomIdx =
+          cardsOfCost[Math.floor(Math.random() * cardsOfCost.length)]
         const currentCount = cardCounts.get(randomIdx) || 0
         const card = this.indexMap.get(randomIdx)
         const maxAmount = card?.maxAmount || 4
@@ -1049,8 +1218,8 @@ module.exports = class TrainingManager {
   }
 
   /**
-     * Prepare validation dataset with aggregated embedding features
-     */
+   * Prepare validation dataset with aggregated embedding features
+   */
   prepareValidationDataset () {
     this.log('Preparing validation dataset...')
     const features = []
@@ -1105,8 +1274,10 @@ module.exports = class TrainingManager {
 
       for (let v = 0; v < numVariants; v++) {
         const partialDeck = this.generatePartialDeck(baseDeck)
-        const completedDeck = this.completePartialDeckWithGenerator(partialDeck)
-        const deckFeatures = this.extractDeckFeaturesWithEmbeddings(completedDeck)
+        const completedDeck =
+          this.completePartialDeckWithGenerator(partialDeck)
+        const deckFeatures =
+          this.extractDeckFeaturesWithEmbeddings(completedDeck)
         features.push(deckFeatures)
         labels.push(0.6) // Medium quality score
         partialDeckCount++
@@ -1118,24 +1289,30 @@ module.exports = class TrainingManager {
     // Generate fake decks (equal number to real decks) using 4 strategies
     // const strategies = ['pure_random', 'ink_constrained', 'rule_broken', 'low_diversity']
     const strategyCounts = {
-      pure_random: Math.floor(realDeckCount * 0.30),
+      pure_random: Math.floor(realDeckCount * 0.3),
       ink_constrained: Math.floor(realDeckCount * 0.25),
       rule_broken: Math.floor(realDeckCount * 0.25),
-      low_diversity: Math.floor(realDeckCount * 0.20)
+      low_diversity: Math.floor(realDeckCount * 0.2)
     }
 
     for (const [strategy, count] of Object.entries(strategyCounts)) {
       for (let i = 0; i < count; i++) {
         const fakeDeck = this.generateFakeDeck(strategy)
-        const deckFeatures = this.extractDeckFeaturesWithEmbeddings(fakeDeck.slice(0, 60))
+        const deckFeatures = this.extractDeckFeaturesWithEmbeddings(
+          fakeDeck.slice(0, 60)
+        )
         features.push(deckFeatures)
         labels.push(0) // Fake deck
       }
     }
 
     this.log(`Generated ${realDeckCount} fake decks`)
-    this.log(`Total dataset size: ${features.length} decks (${realDeckCount} real + ${partialDeckCount} partial + ${realDeckCount} fake)`)
-    this.log(`Feature dimension: ${features[0].length} (38 numeric + 96 embedding stats)`)
+    this.log(
+      `Total dataset size: ${features.length} decks (${realDeckCount} real + ${partialDeckCount} partial + ${realDeckCount} fake)`
+    )
+    this.log(
+      `Feature dimension: ${features[0].length} (38 numeric + 96 embedding stats)`
+    )
 
     return { features, labels }
   }

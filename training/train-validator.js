@@ -39,7 +39,9 @@ async function trainValidator () {
   const embeddingDim = 32
 
   // Build IDF scores for vocabulary
-  const documentFrequency = new Array(manager.textEmbedder.vocabularySize).fill(0)
+  const documentFrequency = new Array(manager.textEmbedder.vocabularySize).fill(
+    0
+  )
   const totalDocs = manager.indexMap.size
 
   // Count document frequency for each token
@@ -55,7 +57,8 @@ async function trainValidator () {
     ])
 
     for (const tokenIdx of uniqueTokens) {
-      if (tokenIdx > 0) { // Skip PAD token
+      if (tokenIdx > 0) {
+        // Skip PAD token
         documentFrequency[tokenIdx]++
       }
     }
@@ -80,7 +83,9 @@ async function trainValidator () {
     ]
 
     // Count term frequency
-    const termFrequency = new Array(manager.textEmbedder.vocabularySize).fill(0)
+    const termFrequency = new Array(manager.textEmbedder.vocabularySize).fill(
+      0
+    )
     for (const tokenIdx of allTokens) {
       if (tokenIdx > 0) {
         termFrequency[tokenIdx]++
@@ -138,23 +143,40 @@ async function trainValidator () {
     min: Math.min(...labels),
     max: Math.max(...labels),
     mean: labels.reduce((a, b) => a + b, 0) / labels.length,
-    zeros: labels.filter(l => l === 0).length,
-    ones: labels.filter(l => l === 1).length,
-    between: labels.filter(l => l > 0 && l < 1).length,
-    nan: labels.filter(l => isNaN(l)).length,
-    infinite: labels.filter(l => !isFinite(l)).length
+    zeros: labels.filter((l) => l === 0).length,
+    ones: labels.filter((l) => l === 1).length,
+    between: labels.filter((l) => l > 0 && l < 1).length,
+    nan: labels.filter((l) => isNaN(l)).length,
+    infinite: labels.filter((l) => !isFinite(l)).length
   }
 
   console.log('Label Statistics:')
   console.log(`  Range: [${labelStats.min}, ${labelStats.max}]`)
   console.log(`  Mean: ${labelStats.mean.toFixed(4)}`)
   console.log('  Distribution:')
-  console.log(`    - Fake decks (0): ${labelStats.zeros} (${(labelStats.zeros / labels.length * 100).toFixed(1)}%)`)
-  console.log(`    - Real decks (0.6-1.0): ${labelStats.between + labelStats.ones} (${((labelStats.between + labelStats.ones) / labels.length * 100).toFixed(1)}%)`)
-  console.log(`    - Perfect decks (1.0): ${labelStats.ones} (${(labelStats.ones / labels.length * 100).toFixed(1)}%)`)
+  console.log(
+    `    - Fake decks (0): ${labelStats.zeros} (${(
+      (labelStats.zeros / labels.length) *
+      100
+    ).toFixed(1)}%)`
+  )
+  console.log(
+    `    - Real decks (0.6-1.0): ${labelStats.between + labelStats.ones} (${(
+      ((labelStats.between + labelStats.ones) / labels.length) *
+      100
+    ).toFixed(1)}%)`
+  )
+  console.log(
+    `    - Perfect decks (1.0): ${labelStats.ones} (${(
+      (labelStats.ones / labels.length) *
+      100
+    ).toFixed(1)}%)`
+  )
 
   if (labelStats.nan > 0 || labelStats.infinite > 0) {
-    console.error(`\n❌ ERROR: Found ${labelStats.nan} NaN and ${labelStats.infinite} Infinity labels!`)
+    console.error(
+      `\n❌ ERROR: Found ${labelStats.nan} NaN and ${labelStats.infinite} Infinity labels!`
+    )
     process.exit(1)
   }
 
@@ -162,8 +184,8 @@ async function trainValidator () {
   let featuresWithNaN = 0
   let featuresWithInfinity = 0
   for (const featureVec of features) {
-    if (featureVec.some(v => isNaN(v))) featuresWithNaN++
-    if (featureVec.some(v => !isFinite(v))) featuresWithInfinity++
+    if (featureVec.some((v) => isNaN(v))) featuresWithNaN++
+    if (featureVec.some((v) => !isFinite(v))) featuresWithInfinity++
   }
 
   console.log('\nFeature Statistics:')
@@ -172,7 +194,9 @@ async function trainValidator () {
   console.log(`  Features with Infinity: ${featuresWithInfinity}`)
 
   if (featuresWithNaN > 0 || featuresWithInfinity > 0) {
-    console.error(`\n❌ ERROR: Found ${featuresWithNaN} features with NaN and ${featuresWithInfinity} with Infinity!`)
+    console.error(
+      `\n❌ ERROR: Found ${featuresWithNaN} features with NaN and ${featuresWithInfinity} with Infinity!`
+    )
     process.exit(1)
   }
 
@@ -180,10 +204,24 @@ async function trainValidator () {
 
   // Print sample data
   console.log('Sample predictions (before training):')
-  const realIdx = labels.findIndex(l => l > 0.6)
-  const fakeIdx = labels.findIndex(l => l === 0)
-  console.log(`  Real deck example (label=${labels[realIdx].toFixed(2)}): features[0:5] = [${features[realIdx].slice(0, 5).map(v => v.toFixed(3)).join(', ')}...]`)
-  console.log(`  Fake deck example (label=${labels[fakeIdx].toFixed(2)}): features[0:5] = [${features[fakeIdx].slice(0, 5).map(v => v.toFixed(3)).join(', ')}...]`)
+  const realIdx = labels.findIndex((l) => l > 0.6)
+  const fakeIdx = labels.findIndex((l) => l === 0)
+  console.log(
+    `  Real deck example (label=${labels[realIdx].toFixed(
+      2
+    )}): features[0:5] = [${features[realIdx]
+      .slice(0, 5)
+      .map((v) => v.toFixed(3))
+      .join(', ')}...]`
+  )
+  console.log(
+    `  Fake deck example (label=${labels[fakeIdx].toFixed(
+      2
+    )}): features[0:5] = [${features[fakeIdx]
+      .slice(0, 5)
+      .map((v) => v.toFixed(3))
+      .join(', ')}...]`
+  )
   console.log()
 
   // 6. Initialize model
@@ -200,7 +238,12 @@ async function trainValidator () {
   await model.train(features, labels, epochs)
 
   // 7. Save
-  const savePath = path.join(__dirname, '..', 'training_data', 'deck-validator-model')
+  const savePath = path.join(
+    __dirname,
+    '..',
+    'training_data',
+    'deck-validator-model'
+  )
   await model.saveModel(savePath)
 
   // 8. Test on sample decks
@@ -220,20 +263,40 @@ async function trainValidator () {
       }
     }
   }
-  const realFeatures = manager.extractDeckFeaturesWithEmbeddings(realDeckIndices.slice(0, 60))
+  const realFeatures = manager.extractDeckFeaturesWithEmbeddings(
+    realDeckIndices.slice(0, 60)
+  )
   const realResult = await model.evaluateWithBreakdown(realFeatures)
-  console.log(`Real tournament deck score: ${(realResult.score * 100).toFixed(1)}% (${realResult.grade})`)
+  console.log(
+    `Real tournament deck score: ${(realResult.score * 100).toFixed(1)}% (${
+      realResult.grade
+    })`
+  )
   console.log(`Message: ${realResult.message}`)
   if (realResult.breakdown.length > 0) {
-    console.log('Issues:', realResult.breakdown.map(b => b.message).join(', '))
+    console.log(
+      'Issues:',
+      realResult.breakdown.map((b) => b.message).join(', ')
+    )
   }
 
   // Test fake decks
-  for (const strategy of ['pure_random', 'ink_constrained', 'rule_broken', 'low_diversity']) {
+  for (const strategy of [
+    'pure_random',
+    'ink_constrained',
+    'rule_broken',
+    'low_diversity'
+  ]) {
     const fakeDeck = manager.generateFakeDeck(strategy)
-    const fakeFeatures = manager.extractDeckFeaturesWithEmbeddings(fakeDeck.slice(0, 60))
+    const fakeFeatures = manager.extractDeckFeaturesWithEmbeddings(
+      fakeDeck.slice(0, 60)
+    )
     const fakeResult = await model.evaluateWithBreakdown(fakeFeatures)
-    console.log(`Fake deck (${strategy}) score: ${(fakeResult.score * 100).toFixed(1)}% (${fakeResult.grade})`)
+    console.log(
+      `Fake deck (${strategy}) score: ${(fakeResult.score * 100).toFixed(
+        1
+      )}% (${fakeResult.grade})`
+    )
   }
 
   console.log('\n==================================================')
@@ -241,7 +304,7 @@ async function trainValidator () {
   console.log('==================================================')
 }
 
-trainValidator().catch(error => {
+trainValidator().catch((error) => {
   console.error('Training failed:', error)
   console.error(error.stack)
   process.exit(1)
