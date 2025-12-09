@@ -1097,6 +1097,38 @@ module.exports = class TrainingManager {
           selectedCards[Math.floor(Math.random() * selectedCards.length)]
         deckIndices.push(randomCard)
       }
+    } else if (strategy === 'imbalanced_splash') {
+      // Strategy E: Imbalanced Splash (Intentionally create bad 55/5 splits)
+      const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+      const inkA = inks[Math.floor(Math.random() * inks.length)]
+      let inkB = inks[Math.floor(Math.random() * inks.length)]
+      while (inkB === inkA) inkB = inks[Math.floor(Math.random() * inks.length)]
+
+      const poolA = []
+      const poolB = []
+      
+      for (const [idx, card] of this.indexMap.entries()) {
+        if (card.ink === inkA) poolA.push(idx)
+        if (card.ink === inkB) poolB.push(idx)
+      }
+
+      // Fill 55 cards from A, 5 from B
+      // Ensure we have enough cards
+      if (poolA.length > 0 && poolB.length > 0) {
+        // Add 55 cards from Ink A
+        for (let i = 0; i < 55; i++) {
+          const randomIdx = poolA[Math.floor(Math.random() * poolA.length)]
+          deckIndices.push(randomIdx)
+        }
+        // Add 5 cards from Ink B
+        for (let i = 0; i < 5; i++) {
+          const randomIdx = poolB[Math.floor(Math.random() * poolB.length)]
+          deckIndices.push(randomIdx)
+        }
+      } else {
+        // Fallback if pools empty (unlikely)
+        return this.generateFakeDeck('pure_random')
+      }
     }
     return deckIndices.slice(0, deckSize)
   }
@@ -1289,10 +1321,11 @@ module.exports = class TrainingManager {
     // Generate fake decks (equal number to real decks) using 4 strategies
     // const strategies = ['pure_random', 'ink_constrained', 'rule_broken', 'low_diversity']
     const strategyCounts = {
-      pure_random: Math.floor(realDeckCount * 0.3),
-      ink_constrained: Math.floor(realDeckCount * 0.25),
-      rule_broken: Math.floor(realDeckCount * 0.25),
-      low_diversity: Math.floor(realDeckCount * 0.2)
+      pure_random: Math.floor(realDeckCount * 0.25),
+      ink_constrained: Math.floor(realDeckCount * 0.2),
+      rule_broken: Math.floor(realDeckCount * 0.2),
+      low_diversity: Math.floor(realDeckCount * 0.15),
+      imbalanced_splash: Math.floor(realDeckCount * 0.2) // New strategy
     }
 
     for (const [strategy, count] of Object.entries(strategyCounts)) {

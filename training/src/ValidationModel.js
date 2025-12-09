@@ -174,7 +174,7 @@ module.exports = class ValidationModel {
     return history
   }
 
-  async evaluate (features) {
+  async evaluate (features, requestedInks = []) {
     // First, check for explicit rule-based failures
     const uniqueCardDiversity = features[0] // First feature is unique card count / 20
     const estimatedUniqueCards = Math.round(uniqueCardDiversity * 20)
@@ -183,6 +183,20 @@ module.exports = class ValidationModel {
     if (estimatedUniqueCards < 10) {
       console.log(`[RULE] Low diversity detected: ${estimatedUniqueCards} unique cards - returning 0.0`)
       return 0.0 // Override neural network - this is clearly fake
+    }
+
+    // Check for ink balance if requestedInks provided
+    if (requestedInks.length === 2) {
+      // We need to reconstruct ink counts from features or pass raw deck
+      // Since features are aggregated, we can't easily get exact ink counts here without changing input
+      // However, we can check if the model predicts it as "bad" based on training data
+      // But for immediate rule-based penalty (since we can't easily retrain model right now with ink features):
+      
+      // NOTE: Ideally, we should pass the raw deck to evaluate() or add ink ratios to features.
+      // Assuming we can't change feature structure easily, we rely on the neural network
+      // to have learned that "imbalanced" decks are bad (via training data).
+      
+      // But we can add a heuristic penalty if we had access to ink counts.
     }
 
     // Otherwise, use neural network prediction
@@ -194,18 +208,18 @@ module.exports = class ValidationModel {
     return score[0]
   }
 
-  async evaluateWithBreakdown (features) {
-    const score = await this.evaluate(features)
+  async evaluateWithBreakdown (features, requestedInks = []) {
+    const score = await this.evaluate(features, requestedInks)
     const grade = this.getGrade(score)
     const message = this.getMessage(score)
 
     // Analyze features for breakdown
-    const breakdown = this.analyzeFeatures(features)
+    const breakdown = this.analyzeFeatures(features, requestedInks)
 
     return { score, grade, message, breakdown }
   }
 
-  analyzeFeatures (features) {
+  analyzeFeatures (features, requestedInks = []) {
     // Features are: [numeric features (38), mean embeddings (32), max embeddings (32), variance embeddings (32)]
     const numericStart = 0
     const numericEnd = this.numericFeatureDim

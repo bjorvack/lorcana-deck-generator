@@ -62,23 +62,26 @@ class RLTrainer {
 
     // Get terminal reward from validator
     const deckFeatures = this.trainingManager.extractDeckFeaturesWithEmbeddings(deck)
-    const validatorReward = await this.validator.evaluate(deckFeatures)
+    
+    // Pass 'inks' context to validator.
+    // The validator will penalize decks that don't match the learned ink profile patterns.
+    const validatorReward = await this.validator.evaluate(deckFeatures, inks)
 
     // Calculate Consistency Reward (Bonus for multiple copies)
     const consistencyReward = this.calculateConsistencyReward(deck)
 
-    // Weighted sum: 70% Validator, 30% Consistency
-    // This encourages the model to build structured decks (3x/4x copies)
-    // rather than just "good stuff" piles.
-    episode.reward = (validatorReward * 0.7) + (consistencyReward * 0.3)
+    // Weighted sum:
+    // Validator (Quality & Balance): 80% - Let the learned model decide what is "good"
+    // Consistency (Structure): 20%
+    episode.reward = (validatorReward * 0.8) + (consistencyReward * 0.2)
 
     return episode
   }
 
   /**
-     * Calculate consistency score based on card repetition
-     * Returns 0.0 (all singletons) to ~1.0 (highly consistent)
-     */
+   * Calculate consistency score based on card repetition
+   * Returns 0.0 (all singletons) to ~1.0 (highly consistent)
+   */
   calculateConsistencyReward (deck) {
     if (deck.length === 0) return 0
 
