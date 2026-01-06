@@ -81,6 +81,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
+      - name: Create status artifact
+        if: always()
+        run: echo "${{ steps.check_changes.outputs.has_changes }}" > scrape_status.txt
+      
+      - name: Upload status artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scrape-status
+          path: scrape_status.txt
+      
       - name: Summary
         run: |
           if [ "${{ steps.check_changes.outputs.has_changes }}" == "true" ]; then

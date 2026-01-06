@@ -22,7 +22,40 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Download status artifact
+        if: github.event_name == 'workflow_run'
+        uses: actions/download-artifact@v4
+        with:
+          name: scrape-status
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check trigger condition
+        id: check_trigger
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "should_run=true" >> $GITHUB_OUTPUT
+            echo "Manual trigger detected. Training will proceed."
+            exit 0
+          fi
+          
+          if [ -f "scrape_status.txt" ]; then
+            STATUS=$(cat scrape_status.txt)
+            echo "Scrape status: $STATUS"
+            if [ "$STATUS" == "true" ]; then
+              echo "should_run=true" >> $GITHUB_OUTPUT
+              echo "New data detected. Training will proceed."
+            else
+              echo "should_run=false" >> $GITHUB_OUTPUT
+              echo "No new data. Training skipped."
+            fi
+          else
+            echo "should_run=false" >> $GITHUB_OUTPUT
+            echo "No status artifact found. Training skipped."
+          fi
+
       - name: Install dependencies
+        if: steps.check_trigger.outputs.should_run == 'true'
         run: |
           cd training
           npm install
@@ -30,17 +63,20 @@ jobs:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
 
       - name: Train Deck Generator Model
+        if: steps.check_trigger.outputs.should_run == 'true'
         run: |
           cd training
           npm run train
 
       - name: Train Validator Model
+        if: steps.check_trigger.outputs.should_run == 'true'
         run: |
           cd training
           npm run train-validator
 
       - name: Check for changes
         id: check_changes
+        if: steps.check_trigger.outputs.should_run == 'true'
         run: |
           git add training_data/deck-generator-model/*
           git add training_data/deck-validator-model/*
@@ -55,7 +91,7 @@ jobs:
           fi
 
       - name: Commit and push models
-        if: steps.check_changes.outputs.has_changes == 'true'
+        if: steps.check_trigger.outputs.should_run == 'true' && steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
