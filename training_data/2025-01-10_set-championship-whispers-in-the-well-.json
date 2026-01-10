@@ -1,0 +1,830 @@
+{
+  "name": "Set Championship - Whispers in the Well",
+  "url": "https://inkdecks.com/lorcana-tournaments/set-championship-whispers-in-the-well-tournament-decks-362969",
+  "decks": [
+    {
+      "place": 2,
+      "cards": [
+        {
+          "amount": 1,
+          "name": "Arthur",
+          "version": "King Victorious"
+        },
+        {
+          "amount": 2,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Captain Hook",
+          "version": "Forceful Duelist"
+        },
+        {
+          "amount": 4,
+          "name": "Cinderella",
+          "version": "Dream Come True"
+        },
+        {
+          "amount": 4,
+          "name": "Goliath",
+          "version": "Clan Leader"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 4,
+          "name": "He Hurled His Thunderbolt",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Inkrunner",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Jasmine",
+          "version": "Fearless Princess"
+        },
+        {
+          "amount": 2,
+          "name": "Kida",
+          "version": "Creative Thinker"
+        },
+        {
+          "amount": 3,
+          "name": "Mulan",
+          "version": "Disguised Soldier"
+        },
+        {
+          "amount": 2,
+          "name": "Namaari",
+          "version": "Single-Minded Rival"
+        },
+        {
+          "amount": 2,
+          "name": "Pleakley",
+          "version": "Scientific Expert"
+        },
+        {
+          "amount": 2,
+          "name": "Pluto",
+          "version": "Steel Champion"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "The Headless Horseman",
+          "version": "Cursed Rider"
+        },
+        {
+          "amount": 4,
+          "name": "Tinker Bell",
+          "version": "Giant Fairy"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
+        },
+        {
+          "amount": 2,
+          "name": "Vision of the Future",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 2,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Basil",
+          "version": "Practiced Detective"
+        },
+        {
+          "amount": 2,
+          "name": "Belle",
+          "version": "Accomplished Mystic"
+        },
+        {
+          "amount": 2,
+          "name": "Cheshire Cat",
+          "version": "Inexplicable"
+        },
+        {
+          "amount": 3,
+          "name": "Demona",
+          "version": "Scourge of the Wyvern Clan"
+        },
+        {
+          "amount": 4,
+          "name": "Dumbo",
+          "version": "Ninth Wonder of the Universe"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Wish Fulfilled"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 3,
+          "name": "Hades",
+          "version": "Looking for a Deal"
+        },
+        {
+          "amount": 2,
+          "name": "Hypnotic Strength",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Iago",
+          "version": "Giant Spectral Parrot"
+        },
+        {
+          "amount": 4,
+          "name": "Into the Unknown",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Junior Woodchuck Guidebook",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Kuzco",
+          "version": "Selfish Emperor"
+        },
+        {
+          "amount": 2,
+          "name": "Rafiki",
+          "version": "Mystical Fighter"
+        },
+        {
+          "amount": 1,
+          "name": "Roquefort",
+          "version": "Lock Expert"
+        },
+        {
+          "amount": 4,
+          "name": "Royal Guard",
+          "version": "Octopus Soldier"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        }
+      ]
+    },
+    {
+      "place": 3,
+      "cards": [
+        {
+          "amount": 3,
+          "name": "Calhoun",
+          "version": "Marine Sergeant"
+        },
+        {
+          "amount": 2,
+          "name": "Captain Hook",
+          "version": "Forceful Duelist"
+        },
+        {
+          "amount": 4,
+          "name": "Cursed Merfolk",
+          "version": "Ursula's Handiwork"
+        },
+        {
+          "amount": 4,
+          "name": "Desperate Plan",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Doc",
+          "version": "Bold Knight"
+        },
+        {
+          "amount": 4,
+          "name": "Enigmatic Inkcaster",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Finnick",
+          "version": "Tiny Terror"
+        },
+        {
+          "amount": 4,
+          "name": "Fire the Cannons!",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Francine",
+          "version": "Eyeing the Evidence"
+        },
+        {
+          "amount": 4,
+          "name": "Fred",
+          "version": "Mascot by Day"
+        },
+        {
+          "amount": 3,
+          "name": "Go Go Tomago",
+          "version": "Darting Dynamo"
+        },
+        {
+          "amount": 3,
+          "name": "Hudson",
+          "version": "Determined Reader"
+        },
+        {
+          "amount": 1,
+          "name": "John Silver",
+          "version": "Ship's Cook"
+        },
+        {
+          "amount": 1,
+          "name": "Lilo",
+          "version": "Best Explorer Ever"
+        },
+        {
+          "amount": 1,
+          "name": "Mr. Smee",
+          "version": "Efficient Captain"
+        },
+        {
+          "amount": 4,
+          "name": "Nala",
+          "version": "Undaunted Lioness"
+        },
+        {
+          "amount": 4,
+          "name": "Nathaniel Flint",
+          "version": "Notorious Pirate"
+        },
+        {
+          "amount": 4,
+          "name": "Pegasus",
+          "version": "Gift for Hercules"
+        },
+        {
+          "amount": 2,
+          "name": "Pete",
+          "version": "Pirate Scoundrel"
+        },
+        {
+          "amount": 2,
+          "name": "Scrooge McDuck",
+          "version": "S.H.U.S.H. Agent"
+        },
+        {
+          "amount": 2,
+          "name": "Ursula",
+          "version": "Deceiver"
+        }
+      ]
+    },
+    {
+      "place": 4,
+      "cards": [
+        {
+          "amount": 2,
+          "name": "Arthur",
+          "version": "King Victorious"
+        },
+        {
+          "amount": 2,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Clawhauser",
+          "version": "Donut Detective"
+        },
+        {
+          "amount": 4,
+          "name": "Develop Your Brain",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Francine",
+          "version": "Eyeing the Evidence"
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Investigative Mind"
+        },
+        {
+          "amount": 4,
+          "name": "He Hurled His Thunderbolt",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Judy Hopps",
+          "version": "Lead Detective"
+        },
+        {
+          "amount": 3,
+          "name": "Judy Hopps",
+          "version": "On the Case"
+        },
+        {
+          "amount": 4,
+          "name": "Judy Hopps",
+          "version": "Uncovering Clues"
+        },
+        {
+          "amount": 4,
+          "name": "Nick Wilde",
+          "version": "Determined Detective"
+        },
+        {
+          "amount": 4,
+          "name": "Nick Wilde",
+          "version": "Persistent Investigator"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tinker Bell",
+          "version": "Giant Fairy"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
+        },
+        {
+          "amount": 4,
+          "name": "Vision of the Future",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 2,
+      "cards": [
+        {
+          "amount": 1,
+          "name": "Arthur",
+          "version": "King Victorious"
+        },
+        {
+          "amount": 2,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Captain Hook",
+          "version": "Forceful Duelist"
+        },
+        {
+          "amount": 4,
+          "name": "Cinderella",
+          "version": "Dream Come True"
+        },
+        {
+          "amount": 4,
+          "name": "Goliath",
+          "version": "Clan Leader"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 4,
+          "name": "He Hurled His Thunderbolt",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Inkrunner",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Jasmine",
+          "version": "Fearless Princess"
+        },
+        {
+          "amount": 2,
+          "name": "Kida",
+          "version": "Creative Thinker"
+        },
+        {
+          "amount": 3,
+          "name": "Mulan",
+          "version": "Disguised Soldier"
+        },
+        {
+          "amount": 2,
+          "name": "Namaari",
+          "version": "Single-Minded Rival"
+        },
+        {
+          "amount": 2,
+          "name": "Pleakley",
+          "version": "Scientific Expert"
+        },
+        {
+          "amount": 2,
+          "name": "Pluto",
+          "version": "Steel Champion"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "The Headless Horseman",
+          "version": "Cursed Rider"
+        },
+        {
+          "amount": 4,
+          "name": "Tinker Bell",
+          "version": "Giant Fairy"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
+        },
+        {
+          "amount": 2,
+          "name": "Vision of the Future",
+          "version": ""
+        }
+      ]
+    },
+    {
+      "place": 2,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Basil",
+          "version": "Practiced Detective"
+        },
+        {
+          "amount": 2,
+          "name": "Belle",
+          "version": "Accomplished Mystic"
+        },
+        {
+          "amount": 2,
+          "name": "Cheshire Cat",
+          "version": "Inexplicable"
+        },
+        {
+          "amount": 3,
+          "name": "Demona",
+          "version": "Scourge of the Wyvern Clan"
+        },
+        {
+          "amount": 4,
+          "name": "Dumbo",
+          "version": "Ninth Wonder of the Universe"
+        },
+        {
+          "amount": 4,
+          "name": "Elsa",
+          "version": "The Fifth Spirit"
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Wish Fulfilled"
+        },
+        {
+          "amount": 4,
+          "name": "Hades",
+          "version": "Infernal Schemer"
+        },
+        {
+          "amount": 3,
+          "name": "Hades",
+          "version": "Looking for a Deal"
+        },
+        {
+          "amount": 2,
+          "name": "Hypnotic Strength",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Iago",
+          "version": "Giant Spectral Parrot"
+        },
+        {
+          "amount": 4,
+          "name": "Into the Unknown",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Junior Woodchuck Guidebook",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Kuzco",
+          "version": "Selfish Emperor"
+        },
+        {
+          "amount": 2,
+          "name": "Rafiki",
+          "version": "Mystical Fighter"
+        },
+        {
+          "amount": 1,
+          "name": "Roquefort",
+          "version": "Lock Expert"
+        },
+        {
+          "amount": 4,
+          "name": "Royal Guard",
+          "version": "Octopus Soldier"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        }
+      ]
+    },
+    {
+      "place": 7,
+      "cards": [
+        {
+          "amount": 3,
+          "name": "Calhoun",
+          "version": "Marine Sergeant"
+        },
+        {
+          "amount": 2,
+          "name": "Captain Hook",
+          "version": "Forceful Duelist"
+        },
+        {
+          "amount": 4,
+          "name": "Cursed Merfolk",
+          "version": "Ursula's Handiwork"
+        },
+        {
+          "amount": 4,
+          "name": "Desperate Plan",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Doc",
+          "version": "Bold Knight"
+        },
+        {
+          "amount": 4,
+          "name": "Enigmatic Inkcaster",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Finnick",
+          "version": "Tiny Terror"
+        },
+        {
+          "amount": 4,
+          "name": "Fire the Cannons!",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Francine",
+          "version": "Eyeing the Evidence"
+        },
+        {
+          "amount": 4,
+          "name": "Fred",
+          "version": "Mascot by Day"
+        },
+        {
+          "amount": 3,
+          "name": "Go Go Tomago",
+          "version": "Darting Dynamo"
+        },
+        {
+          "amount": 3,
+          "name": "Hudson",
+          "version": "Determined Reader"
+        },
+        {
+          "amount": 1,
+          "name": "John Silver",
+          "version": "Ship's Cook"
+        },
+        {
+          "amount": 1,
+          "name": "Lilo",
+          "version": "Best Explorer Ever"
+        },
+        {
+          "amount": 1,
+          "name": "Mr. Smee",
+          "version": "Efficient Captain"
+        },
+        {
+          "amount": 4,
+          "name": "Nala",
+          "version": "Undaunted Lioness"
+        },
+        {
+          "amount": 4,
+          "name": "Nathaniel Flint",
+          "version": "Notorious Pirate"
+        },
+        {
+          "amount": 4,
+          "name": "Pegasus",
+          "version": "Gift for Hercules"
+        },
+        {
+          "amount": 2,
+          "name": "Pete",
+          "version": "Pirate Scoundrel"
+        },
+        {
+          "amount": 2,
+          "name": "Scrooge McDuck",
+          "version": "S.H.U.S.H. Agent"
+        },
+        {
+          "amount": 2,
+          "name": "Ursula",
+          "version": "Deceiver"
+        }
+      ]
+    },
+    {
+      "place": 8,
+      "cards": [
+        {
+          "amount": 2,
+          "name": "Arthur",
+          "version": "King Victorious"
+        },
+        {
+          "amount": 2,
+          "name": "Beyond the Horizon",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Clawhauser",
+          "version": "Donut Detective"
+        },
+        {
+          "amount": 4,
+          "name": "Develop Your Brain",
+          "version": ""
+        },
+        {
+          "amount": 3,
+          "name": "Francine",
+          "version": "Eyeing the Evidence"
+        },
+        {
+          "amount": 4,
+          "name": "Genie",
+          "version": "Investigative Mind"
+        },
+        {
+          "amount": 4,
+          "name": "He Hurled His Thunderbolt",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Judy Hopps",
+          "version": "Lead Detective"
+        },
+        {
+          "amount": 3,
+          "name": "Judy Hopps",
+          "version": "On the Case"
+        },
+        {
+          "amount": 4,
+          "name": "Judy Hopps",
+          "version": "Uncovering Clues"
+        },
+        {
+          "amount": 4,
+          "name": "Nick Wilde",
+          "version": "Determined Detective"
+        },
+        {
+          "amount": 4,
+          "name": "Nick Wilde",
+          "version": "Persistent Investigator"
+        },
+        {
+          "amount": 4,
+          "name": "Sail the Azurite Sea",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Tinker Bell",
+          "version": "Giant Fairy"
+        },
+        {
+          "amount": 4,
+          "name": "Tipo",
+          "version": "Growing Son"
+        },
+        {
+          "amount": 4,
+          "name": "Vincenzo Santorini",
+          "version": "The Explosives Expert"
+        },
+        {
+          "amount": 4,
+          "name": "Vision of the Future",
+          "version": ""
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "set": 10,
+    "legality": "Core"
+  }
+}
