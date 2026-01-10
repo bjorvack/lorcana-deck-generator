@@ -1,0 +1,200 @@
+{
+  "name": "Les Nouveaux Disciples - Whispers in the Well - Set Championship",
+  "url": "https://inkdecks.com/lorcana-tournaments/les-nouveaux-disciples-whispers-in-the-well-set-championship-tournament-decks-362918",
+  "decks": [
+    {
+      "place": 1,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Ariel",
+          "version": "Ethereal Voice"
+        },
+        {
+          "amount": 4,
+          "name": "Aurora",
+          "version": "Holding Court"
+        },
+        {
+          "amount": 4,
+          "name": "Be Our Guest",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Della's Moon Lullaby",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Doc",
+          "version": "Bold Knight"
+        },
+        {
+          "amount": 4,
+          "name": "Eilonwy",
+          "version": "Princess of Llyr"
+        },
+        {
+          "amount": 4,
+          "name": "He Hurled His Thunderbolt",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "I Won't Give In",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Look at This Family",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Mowgli",
+          "version": "Man Cub"
+        },
+        {
+          "amount": 2,
+          "name": "Mulan",
+          "version": "Disguised Soldier"
+        },
+        {
+          "amount": 4,
+          "name": "Rajah",
+          "version": "Devoted Protector"
+        },
+        {
+          "amount": 4,
+          "name": "Rapunzel",
+          "version": "Ready for Adventure"
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "The Horseman Strikes!",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "The Queen",
+          "version": "Conceited Ruler"
+        },
+        {
+          "amount": 4,
+          "name": "The Troubadour",
+          "version": "Musical Narrator"
+        },
+        {
+          "amount": 4,
+          "name": "Tiana",
+          "version": "Restaurant Owner"
+        }
+      ]
+    },
+    {
+      "place": 1,
+      "cards": [
+        {
+          "amount": 4,
+          "name": "Ariel",
+          "version": "Ethereal Voice"
+        },
+        {
+          "amount": 4,
+          "name": "Aurora",
+          "version": "Holding Court"
+        },
+        {
+          "amount": 4,
+          "name": "Be Our Guest",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Della's Moon Lullaby",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "Doc",
+          "version": "Bold Knight"
+        },
+        {
+          "amount": 4,
+          "name": "Eilonwy",
+          "version": "Princess of Llyr"
+        },
+        {
+          "amount": 4,
+          "name": "He Hurled His Thunderbolt",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "I Won't Give In",
+          "version": ""
+        },
+        {
+          "amount": 1,
+          "name": "Look at This Family",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "Mowgli",
+          "version": "Man Cub"
+        },
+        {
+          "amount": 2,
+          "name": "Mulan",
+          "version": "Disguised Soldier"
+        },
+        {
+          "amount": 4,
+          "name": "Rajah",
+          "version": "Devoted Protector"
+        },
+        {
+          "amount": 4,
+          "name": "Rapunzel",
+          "version": "Ready for Adventure"
+        },
+        {
+          "amount": 4,
+          "name": "Strength of a Raging Fire",
+          "version": ""
+        },
+        {
+          "amount": 4,
+          "name": "The Horseman Strikes!",
+          "version": ""
+        },
+        {
+          "amount": 2,
+          "name": "The Queen",
+          "version": "Conceited Ruler"
+        },
+        {
+          "amount": 4,
+          "name": "The Troubadour",
+          "version": "Musical Narrator"
+        },
+        {
+          "amount": 4,
+          "name": "Tiana",
+          "version": "Restaurant Owner"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "set": 10,
+    "legality": "Core"
+  }
+}
