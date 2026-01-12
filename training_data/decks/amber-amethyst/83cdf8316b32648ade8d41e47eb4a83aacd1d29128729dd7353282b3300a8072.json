@@ -1,0 +1,104 @@
+{
+  "hash": "83cdf8316b32648ade8d41e47eb4a83aacd1d29128729dd7353282b3300a8072",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Alma Madrigal",
+      "version": "Accepting Grandmother"
+    },
+    {
+      "amount": 4,
+      "name": "Alma Madrigal",
+      "version": "Family Matriarch"
+    },
+    {
+      "amount": 1,
+      "name": "Bruno Madrigal",
+      "version": "Out of the Shadows"
+    },
+    {
+      "amount": 4,
+      "name": "Camilo Madrigal",
+      "version": "Prankster"
+    },
+    {
+      "amount": 4,
+      "name": "Casa Madrigal",
+      "version": "Casita"
+    },
+    {
+      "amount": 4,
+      "name": "Dolores Madrigal",
+      "version": "Easy Listener"
+    },
+    {
+      "amount": 4,
+      "name": "Dolores Madrigal",
+      "version": "Within Earshot"
+    },
+    {
+      "amount": 4,
+      "name": "Fantastical and Magical",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Healing Decanter",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Isabela Madrigal",
+      "version": "In the Moment"
+    },
+    {
+      "amount": 1,
+      "name": "Look at This Family",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Luisa Madrigal",
+      "version": "Magically Strong One"
+    },
+    {
+      "amount": 4,
+      "name": "Mirabel Madrigal",
+      "version": "Curious Child"
+    },
+    {
+      "amount": 4,
+      "name": "Mirabel Madrigal",
+      "version": "Family Gatherer"
+    },
+    {
+      "amount": 4,
+      "name": "Mirabel Madrigal",
+      "version": "Gift of the Family"
+    },
+    {
+      "amount": 4,
+      "name": "Mirabel Madrigal",
+      "version": "Hopeful Dreamer"
+    },
+    {
+      "amount": 4,
+      "name": "Pepa Madrigal",
+      "version": "Sensitive Sister"
+    },
+    {
+      "amount": 4,
+      "name": "The Family Madrigal",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "This Is My Family",
+      "version": ""
+    }
+  ]
+}

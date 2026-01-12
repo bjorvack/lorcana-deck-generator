@@ -1,0 +1,99 @@
+{
+  "hash": "c98ab8aab83ff277da9f9df61eb3b20af2ba72f328733b3855a51e24f73a03bf",
+  "inks": [
+    "steel",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Aladdin",
+      "version": "Heroic Outlaw"
+    },
+    {
+      "amount": 4,
+      "name": "Fa Zhou",
+      "version": "War Hero"
+    },
+    {
+      "amount": 4,
+      "name": "Fan the Flames",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Super Goof"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Fa",
+      "version": "Spirited Elder"
+    },
+    {
+      "amount": 4,
+      "name": "Li Shang",
+      "version": "Newly Promoted"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Brave Little Tailor"
+    },
+    {
+      "amount": 2,
+      "name": "Mickey Mouse",
+      "version": "Inspirational Warrior"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Trumpeter"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Enemy of Entanglement"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Imperial General"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Mushu",
+      "version": "Majestic Dragon"
+    },
+    {
+      "amount": 1,
+      "name": "Scar",
+      "version": "Vicious Cheater"
+    },
+    {
+      "amount": 3,
+      "name": "Shere Khan",
+      "version": "Menacing Predator"
+    },
+    {
+      "amount": 4,
+      "name": "Vitalisphere",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "hash": "13e4bf376e1676e443719294f7e8c79ede3f73f1386637df4466e54cd7fa6c33",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Ariel",
+      "version": "On Human Legs"
+    },
+    {
+      "amount": 2,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Cinderella",
+      "version": "Gentle and Kind"
+    },
+    {
+      "amount": 2,
+      "name": "Control Your Temper!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Dinglehopper",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Dr. Facilier",
+      "version": "Agent Provocateur"
+    },
+    {
+      "amount": 2,
+      "name": "Dr. Facilier",
+      "version": "Charlatan"
+    },
+    {
+      "amount": 1,
+      "name": "Flotsam",
+      "version": "Ursula's Spy"
+    },
+    {
+      "amount": 3,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Hades",
+      "version": "Lord of the Underworld"
+    },
+    {
+      "amount": 2,
+      "name": "Hakuna Matata",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "HeiHei",
+      "version": "Boat Snack"
+    },
+    {
+      "amount": 2,
+      "name": "Jafar",
+      "version": "Wicked Sorcerer"
+    },
+    {
+      "amount": 2,
+      "name": "Jetsam",
+      "version": "Ursula's Spy"
+    },
+    {
+      "amount": 3,
+      "name": "Magic Broom",
+      "version": "Bucket Brigade"
+    },
+    {
+      "amount": 2,
+      "name": "Maleficent",
+      "version": "Sorceress"
+    },
+    {
+      "amount": 2,
+      "name": "Maximus",
+      "version": "Relentless Pursuer"
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "True Friend"
+    },
+    {
+      "amount": 1,
+      "name": "Mickey Mouse",
+      "version": "Wayward Sorcerer"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Beloved Princess"
+    },
+    {
+      "amount": 1,
+      "name": "Moana",
+      "version": "Of Motunui"
+    },
+    {
+      "amount": 3,
+      "name": "Olaf",
+      "version": "Friendly Snowman"
+    },
+    {
+      "amount": 1,
+      "name": "Part of Your World",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Pascal",
+      "version": "Rapunzel's Companion"
+    },
+    {
+      "amount": 3,
+      "name": "Rafiki",
+      "version": "Mysterious Sage"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "New Dog"
+    },
+    {
+      "amount": 1,
+      "name": "Sven",
+      "version": "Official Ice Deliverer"
+    },
+    {
+      "amount": 3,
+      "name": "The Wardrobe",
+      "version": "Belle's Confidant"
+    },
+    {
+      "amount": 2,
+      "name": "Yzma",
+      "version": "Alchemist"
+    }
+  ]
+}

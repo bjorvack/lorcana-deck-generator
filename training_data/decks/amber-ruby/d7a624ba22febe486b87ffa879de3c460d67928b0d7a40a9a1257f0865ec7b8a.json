@@ -1,0 +1,104 @@
+{
+  "hash": "d7a624ba22febe486b87ffa879de3c460d67928b0d7a40a9a1257f0865ec7b8a",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Brawl",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Cinderella",
+      "version": "The Right One"
+    },
+    {
+      "amount": 3,
+      "name": "Julieta Madrigal",
+      "version": "Excellent Cook"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Of Motunui"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Pride Lands",
+      "version": "Pride Rock"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Impulsive Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 4,
+      "name": "Queen's Sensor Core",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 2,
+      "name": "The Glass Slipper",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Prince",
+      "version": "Vigilant Suitor"
+    },
+    {
+      "amount": 4,
+      "name": "The Queen",
+      "version": "Commanding Presence"
+    },
+    {
+      "amount": 4,
+      "name": "The Queen",
+      "version": "Regal Monarch"
+    },
+    {
+      "amount": 2,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope von Schweetz",
+      "version": "Candy Mechanic"
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope von Schweetz",
+      "version": "Sugar Rush Princess"
+    }
+  ]
+}

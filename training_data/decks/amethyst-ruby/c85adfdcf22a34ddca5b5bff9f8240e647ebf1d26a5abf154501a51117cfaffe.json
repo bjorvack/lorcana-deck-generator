@@ -1,0 +1,104 @@
+{
+  "hash": "c85adfdcf22a34ddca5b5bff9f8240e647ebf1d26a5abf154501a51117cfaffe",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Brawl",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Chernabog's Followers",
+      "version": "Creatures of Evil"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 1,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 3,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 1,
+      "name": "Madame Medusa",
+      "version": "The Boss"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Broom",
+      "version": "Illuminary Keeper"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 2,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 3,
+      "name": "Merlin",
+      "version": "Crab"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Island Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Peter Pan",
+      "version": "Shadow Finder"
+    },
+    {
+      "amount": 4,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    }
+  ]
+}
