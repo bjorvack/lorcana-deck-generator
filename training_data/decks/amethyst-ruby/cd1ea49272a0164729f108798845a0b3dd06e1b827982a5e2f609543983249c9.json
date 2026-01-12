@@ -1,0 +1,109 @@
+{
+  "hash": "cd1ea49272a0164729f108798845a0b3dd06e1b827982a5e2f609543983249c9",
+  "inks": [
+    "amethyst",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Heroic Outlaw"
+    },
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Street Rat"
+    },
+    {
+      "amount": 1,
+      "name": "Archimedes",
+      "version": "Highly Educated Owl"
+    },
+    {
+      "amount": 4,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "Snow Queen"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Gaston",
+      "version": "Arrogant Hunter"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Broom",
+      "version": "Bucket Brigade"
+    },
+    {
+      "amount": 3,
+      "name": "Magic Mirror",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Brave Little Tailor"
+    },
+    {
+      "amount": 2,
+      "name": "Mickey Mouse",
+      "version": "Wayward Sorcerer"
+    },
+    {
+      "amount": 1,
+      "name": "Minnie Mouse",
+      "version": "Always Classy"
+    },
+    {
+      "amount": 1,
+      "name": "Olaf",
+      "version": "Friendly Snowman"
+    },
+    {
+      "amount": 1,
+      "name": "Sergeant Tibbs",
+      "version": "Courageous Cat"
+    },
+    {
+      "amount": 3,
+      "name": "Shield of Virtue",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula's Cauldron",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "White Rabbit's Pocket Watch",
+      "version": ""
+    }
+  ]
+}

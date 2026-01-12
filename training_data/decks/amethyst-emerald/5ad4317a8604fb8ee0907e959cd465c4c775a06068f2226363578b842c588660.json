@@ -1,0 +1,104 @@
+{
+  "hash": "5ad4317a8604fb8ee0907e959cd465c4c775a06068f2226363578b842c588660",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Befuddle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Not All There"
+    },
+    {
+      "amount": 3,
+      "name": "Cruella de Vil",
+      "version": "Miserable as Usual"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Charming Rogue"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "On the Job"
+    },
+    {
+      "amount": 2,
+      "name": "Hans",
+      "version": "Scheming Prince"
+    },
+    {
+      "amount": 4,
+      "name": "Jasper",
+      "version": "Common Crook"
+    },
+    {
+      "amount": 3,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 2,
+      "name": "Kuzco",
+      "version": "Temperamental Emperor"
+    },
+    {
+      "amount": 4,
+      "name": "Mad Hatter",
+      "version": "Gracious Host"
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Biding Her Time"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Sorceress"
+    },
+    {
+      "amount": 4,
+      "name": "Mother Gothel",
+      "version": "Selfish Manipulator"
+    },
+    {
+      "amount": 4,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Rafiki",
+      "version": "Mysterious Sage"
+    },
+    {
+      "amount": 1,
+      "name": "Ursula's Cauldron",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Yzma",
+      "version": "Alchemist"
+    },
+    {
+      "amount": 2,
+      "name": "Zeus",
+      "version": "God of Lightning"
+    }
+  ]
+}

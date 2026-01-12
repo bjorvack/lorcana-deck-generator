@@ -1,0 +1,104 @@
+{
+  "hash": "641603311129a39c5d395c722ad036574f2dd9873b53e056cb86aa976df829d2",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Eye of the Fates",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Fishbone Quill",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Gramma Tala",
+      "version": "Storyteller"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Golden Flower",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 4,
+      "name": "Maurice",
+      "version": "World-Famous Inventor"
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "Detective"
+    },
+    {
+      "amount": 1,
+      "name": "One Jump Ahead",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Poisoned Apple",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Robin Hood",
+      "version": "Unrivaled Archer"
+    },
+    {
+      "amount": 2,
+      "name": "Scepter of Arendelle",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Shield of Virtue",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Sword of Truth",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tamatoa",
+      "version": "So Shiny!"
+    }
+  ]
+}

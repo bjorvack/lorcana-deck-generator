@@ -1,0 +1,89 @@
+{
+  "hash": "1129b6c410d1d4cacda6568a3df6c9d27179fad3c92f7860637932b71c868c02",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Whole New World",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Spectacular Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Gentle and Kind"
+    },
+    {
+      "amount": 4,
+      "name": "Grab Your Sword",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 4,
+      "name": "Moana",
+      "version": "Of Motunui"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Eric",
+      "version": "Dashing and Brave"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "New Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Tiny Tactician"
+    }
+  ]
+}

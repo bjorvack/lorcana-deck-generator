@@ -1,0 +1,94 @@
+{
+  "hash": "ed8793377289c89eaab1453e34c926819326d7301e4a5b3ce4fef2b0e092bf76",
+  "inks": [
+    "emerald",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Whole New World",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Not All There"
+    },
+    {
+      "amount": 4,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Charming Rogue"
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "On the Job"
+    },
+    {
+      "amount": 4,
+      "name": "Grab Your Sword",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hans",
+      "version": "Scheming Prince"
+    },
+    {
+      "amount": 4,
+      "name": "Kuzco",
+      "version": "Temperamental Emperor"
+    },
+    {
+      "amount": 2,
+      "name": "Mad Hatter",
+      "version": "Gracious Host"
+    },
+    {
+      "amount": 4,
+      "name": "Megara",
+      "version": "Pulling the Strings"
+    },
+    {
+      "amount": 2,
+      "name": "Prince Eric",
+      "version": "Dashing and Brave"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Future King"
+    },
+    {
+      "amount": 4,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 2,
+      "name": "Tinker Bell",
+      "version": "Most Helpful"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Tiny Tactician"
+    }
+  ]
+}

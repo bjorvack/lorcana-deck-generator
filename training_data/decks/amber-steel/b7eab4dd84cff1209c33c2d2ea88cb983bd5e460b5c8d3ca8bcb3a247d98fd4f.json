@@ -1,0 +1,89 @@
+{
+  "hash": "b7eab4dd84cff1209c33c2d2ea88cb983bd5e460b5c8d3ca8bcb3a247d98fd4f",
+  "inks": [
+    "amber",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Whole New World",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Spectacular Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 3,
+      "name": "Goons",
+      "version": "Maleficent's Underlings"
+    },
+    {
+      "amount": 4,
+      "name": "Grab Your Sword",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Lantern",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Eric",
+      "version": "Dashing and Brave"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Future King"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "New Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Tiny Tactician"
+    }
+  ]
+}

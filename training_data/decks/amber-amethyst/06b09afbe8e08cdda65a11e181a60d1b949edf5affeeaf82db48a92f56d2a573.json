@@ -1,0 +1,89 @@
+{
+  "hash": "06b09afbe8e08cdda65a11e181a60d1b949edf5affeeaf82db48a92f56d2a573",
+  "inks": [
+    "amethyst",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Dr. Facilier",
+      "version": "Charlatan"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "Snow Queen"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Spirit of Winter"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Jafar",
+      "version": "Keeper of Secrets"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Sorceress"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "True Friend"
+    },
+    {
+      "amount": 4,
+      "name": "Mr. Smee",
+      "version": "Loyal First Mate"
+    },
+    {
+      "amount": 3,
+      "name": "Part of Your World",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pascal",
+      "version": "Rapunzel's Companion"
+    },
+    {
+      "amount": 4,
+      "name": "Rafiki",
+      "version": "Mysterious Sage"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "New Dog"
+    },
+    {
+      "amount": 4,
+      "name": "You Have Forgotten Me",
+      "version": ""
+    }
+  ]
+}

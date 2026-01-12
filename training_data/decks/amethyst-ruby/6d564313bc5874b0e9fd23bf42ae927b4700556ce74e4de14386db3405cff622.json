@@ -1,0 +1,94 @@
+{
+  "hash": "6d564313bc5874b0e9fd23bf42ae927b4700556ce74e4de14386db3405cff622",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Aladdin",
+      "version": "Heroic Outlaw"
+    },
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Street Rat"
+    },
+    {
+      "amount": 4,
+      "name": "Archimedes",
+      "version": "Highly Educated Owl"
+    },
+    {
+      "amount": 4,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Gaston",
+      "version": "Arrogant Hunter"
+    },
+    {
+      "amount": 2,
+      "name": "Jetsam",
+      "version": "Ursula's Spy"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Broom",
+      "version": "Bucket Brigade"
+    },
+    {
+      "amount": 2,
+      "name": "Magic Mirror",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Sorceress"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Wayward Sorcerer"
+    },
+    {
+      "amount": 2,
+      "name": "Rafiki",
+      "version": "Mysterious Sage"
+    },
+    {
+      "amount": 3,
+      "name": "The Queen",
+      "version": "Wicked and Vain"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Power Hungry"
+    }
+  ]
+}

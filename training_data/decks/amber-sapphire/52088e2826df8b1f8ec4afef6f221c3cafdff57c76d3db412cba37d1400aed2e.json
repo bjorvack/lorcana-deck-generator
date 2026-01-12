@@ -1,0 +1,94 @@
+{
+  "hash": "52088e2826df8b1f8ec4afef6f221c3cafdff57c76d3db412cba37d1400aed2e",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Spectacular Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Belle",
+      "version": "Strange but Special"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Fishbone Quill",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Gramma Tala",
+      "version": "Storyteller"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "Hakuna Matata",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Detective"
+    },
+    {
+      "amount": 4,
+      "name": "One Jump Ahead",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Unrivaled Archer"
+    },
+    {
+      "amount": 2,
+      "name": "Scar",
+      "version": "Mastermind"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "New Dog"
+    },
+    {
+      "amount": 1,
+      "name": "Ursula's Shell Necklace",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "You Have Forgotten Me",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "hash": "032b186813725b98d351942c28085ccf5e63525ea81b15a7f77d20b74167c740",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Spectacular Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Gaston",
+      "version": "Arrogant Hunter"
+    },
+    {
+      "amount": 3,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 2,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "True Friend"
+    },
+    {
+      "amount": 4,
+      "name": "Moana",
+      "version": "Of Motunui"
+    },
+    {
+      "amount": 3,
+      "name": "Part of Your World",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Peter Pan",
+      "version": "Fearless Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Pongo",
+      "version": "Ol' Rascal"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 3,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "New Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 3,
+      "name": "You Have Forgotten Me",
+      "version": ""
+    }
+  ]
+}

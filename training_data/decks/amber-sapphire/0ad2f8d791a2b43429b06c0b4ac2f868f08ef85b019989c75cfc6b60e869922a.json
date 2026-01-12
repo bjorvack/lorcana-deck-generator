@@ -1,0 +1,94 @@
+{
+  "hash": "0ad2f8d791a2b43429b06c0b4ac2f868f08ef85b019989c75cfc6b60e869922a",
+  "inks": [
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Eye of the Fates",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Lord of the Underworld"
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Uninvited"
+    },
+    {
+      "amount": 4,
+      "name": "Maximus",
+      "version": "Relentless Pursuer"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Detective"
+    },
+    {
+      "amount": 1,
+      "name": "Minnie Mouse",
+      "version": "Beloved Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Philoctetes",
+      "version": "Trainer of Heroes"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Unrivaled Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "New Dog"
+    },
+    {
+      "amount": 1,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "You Have Forgotten Me",
+      "version": ""
+    }
+  ]
+}

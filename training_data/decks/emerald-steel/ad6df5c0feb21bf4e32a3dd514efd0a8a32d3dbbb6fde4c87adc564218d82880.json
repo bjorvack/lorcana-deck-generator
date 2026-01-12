@@ -1,0 +1,94 @@
+{
+  "hash": "ad6df5c0feb21bf4e32a3dd514efd0a8a32d3dbbb6fde4c87adc564218d82880",
+  "inks": [
+    "steel",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Whole New World",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Beast's Mirror",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Not All There"
+    },
+    {
+      "amount": 3,
+      "name": "Duke of Weselton",
+      "version": "Opportunistic Official"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Charming Rogue"
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "On the Job"
+    },
+    {
+      "amount": 4,
+      "name": "Hans",
+      "version": "Scheming Prince"
+    },
+    {
+      "amount": 3,
+      "name": "Hans",
+      "version": "Thirteenth in Line"
+    },
+    {
+      "amount": 4,
+      "name": "Kristoff",
+      "version": "Official Ice Master"
+    },
+    {
+      "amount": 4,
+      "name": "Kuzco",
+      "version": "Temperamental Emperor"
+    },
+    {
+      "amount": 4,
+      "name": "Mad Hatter",
+      "version": "Gracious Host"
+    },
+    {
+      "amount": 2,
+      "name": "Mother Gothel",
+      "version": "Selfish Manipulator"
+    },
+    {
+      "amount": 3,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Future King"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Most Helpful"
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Tiny Tactician"
+    }
+  ]
+}

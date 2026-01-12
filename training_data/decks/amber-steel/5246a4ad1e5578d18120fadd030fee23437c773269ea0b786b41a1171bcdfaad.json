@@ -1,0 +1,99 @@
+{
+  "hash": "5246a4ad1e5578d18120fadd030fee23437c773269ea0b786b41a1171bcdfaad",
+  "inks": [
+    "amber",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Spectacular Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Beast",
+      "version": "Hardheaded"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Musketeer"
+    },
+    {
+      "amount": 4,
+      "name": "Grab Your Sword",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hakuna Matata",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Hans",
+      "version": "Thirteenth in Line"
+    },
+    {
+      "amount": 2,
+      "name": "Maximus",
+      "version": "Palace Horse"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Of Motunui"
+    },
+    {
+      "amount": 2,
+      "name": "Part of Your World",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Prince Eric",
+      "version": "Dashing and Brave"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 3,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Tiny Tactician"
+    },
+    {
+      "amount": 4,
+      "name": "You Have Forgotten Me",
+      "version": ""
+    }
+  ]
+}

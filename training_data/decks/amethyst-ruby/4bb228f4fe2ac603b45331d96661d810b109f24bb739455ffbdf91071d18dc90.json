@@ -1,0 +1,114 @@
+{
+  "hash": "4bb228f4fe2ac603b45331d96661d810b109f24bb739455ffbdf91071d18dc90",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Heroic Outlaw"
+    },
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Street Rat"
+    },
+    {
+      "amount": 4,
+      "name": "Archimedes",
+      "version": "Highly Educated Owl"
+    },
+    {
+      "amount": 4,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Befuddle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "Snow Queen"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "Spirit of Winter"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Gaston",
+      "version": "Arrogant Hunter"
+    },
+    {
+      "amount": 3,
+      "name": "Goofy",
+      "version": "Daredevil"
+    },
+    {
+      "amount": 2,
+      "name": "Magic Broom",
+      "version": "Bucket Brigade"
+    },
+    {
+      "amount": 2,
+      "name": "Magic Mirror",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Sorceress"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 2,
+      "name": "Mickey Mouse",
+      "version": "Brave Little Tailor"
+    },
+    {
+      "amount": 1,
+      "name": "Shield of Virtue",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula's Cauldron",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "White Rabbit's Pocket Watch",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Zeus",
+      "version": "God of Lightning"
+    }
+  ]
+}

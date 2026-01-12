@@ -1,0 +1,114 @@
+{
+  "hash": "b895ce528c7c7f15e65594dda5482291406a587602d8cf765feaa38d2cbba497",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Aladdin",
+      "version": "Heroic Outlaw"
+    },
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Street Rat"
+    },
+    {
+      "amount": 4,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Befuddle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "Snow Queen"
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "Spirit of Winter"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Gaston",
+      "version": "Arrogant Hunter"
+    },
+    {
+      "amount": 2,
+      "name": "Jafar",
+      "version": "Keeper of Secrets"
+    },
+    {
+      "amount": 2,
+      "name": "Magic Mirror",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Sorceress"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 2,
+      "name": "Mickey Mouse",
+      "version": "Brave Little Tailor"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Always Classy"
+    },
+    {
+      "amount": 2,
+      "name": "Rafiki",
+      "version": "Mysterious Sage"
+    },
+    {
+      "amount": 2,
+      "name": "Shield of Virtue",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Queen",
+      "version": "Wicked and Vain"
+    },
+    {
+      "amount": 2,
+      "name": "Ursula's Cauldron",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "White Rabbit's Pocket Watch",
+      "version": ""
+    }
+  ]
+}

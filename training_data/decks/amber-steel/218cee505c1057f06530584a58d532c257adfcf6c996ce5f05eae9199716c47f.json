@@ -1,0 +1,104 @@
+{
+  "hash": "218cee505c1057f06530584a58d532c257adfcf6c996ce5f05eae9199716c47f",
+  "inks": [
+    "amber",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Ariel",
+      "version": "Spectacular Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Beast",
+      "version": "Hardheaded"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 2,
+      "name": "Cerberus",
+      "version": "Three-Headed Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Cinderella",
+      "version": "Gentle and Kind"
+    },
+    {
+      "amount": 2,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Grab Your Sword",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Hakuna Matata",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hans",
+      "version": "Thirteenth in Line"
+    },
+    {
+      "amount": 2,
+      "name": "Maximus",
+      "version": "Palace Horse"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Of Motunui"
+    },
+    {
+      "amount": 1,
+      "name": "Part of Your World",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Prince Eric",
+      "version": "Dashing and Brave"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 4,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Tiny Tactician"
+    }
+  ]
+}
