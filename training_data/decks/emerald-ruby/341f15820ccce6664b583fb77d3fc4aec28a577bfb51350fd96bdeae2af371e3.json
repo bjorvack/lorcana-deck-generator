@@ -1,0 +1,104 @@
+{
+  "hash": "341f15820ccce6664b583fb77d3fc4aec28a577bfb51350fd96bdeae2af371e3",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 3,
+      "name": "Heffalumps and Woozles",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "I2I",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Max Goof",
+      "version": "Chart Topper"
+    },
+    {
+      "amount": 3,
+      "name": "Max Goof",
+      "version": "Rebellious Teen"
+    },
+    {
+      "amount": 4,
+      "name": "Max Goof",
+      "version": "Rockin' Teen"
+    },
+    {
+      "amount": 4,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 2,
+      "name": "Powerline",
+      "version": "Musical Superstar"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "World's Greatest Rock Star"
+    },
+    {
+      "amount": 2,
+      "name": "Remember Who You Are",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Stand Out",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 3,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}

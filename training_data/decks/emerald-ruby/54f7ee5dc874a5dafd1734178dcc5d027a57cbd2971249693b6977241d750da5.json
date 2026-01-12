@@ -1,0 +1,89 @@
+{
+  "hash": "54f7ee5dc874a5dafd1734178dcc5d027a57cbd2971249693b6977241d750da5",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Brawl",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Fidget",
+      "version": "Sneaky Bat"
+    },
+    {
+      "amount": 4,
+      "name": "Hypnotize",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 4,
+      "name": "Moana",
+      "version": "Self-Taught Sailor"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Cloud Racer"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Flying Steed"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 4,
+      "name": "Prince John",
+      "version": "Greediest of All"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Sharpshooter"
+    },
+    {
+      "amount": 4,
+      "name": "Sudden Chill",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "We Don't Talk About Bruno",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "You Came Back",
+      "version": ""
+    }
+  ]
+}

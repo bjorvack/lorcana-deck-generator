@@ -1,0 +1,139 @@
+{
+  "hash": "3b8e911083671021754297485432db6da2f220c5428dc4affbdf688ce0254c4d",
+  "inks": [
+    "amethyst",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Amethyst Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Baloo",
+      "version": "von Bruinwald XIII"
+    },
+    {
+      "amount": 4,
+      "name": "Chernabog's Followers",
+      "version": "Creatures of Evil"
+    },
+    {
+      "amount": 1,
+      "name": "Chief Bogo",
+      "version": "Commanding Officer"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 1,
+      "name": "Darling Dear",
+      "version": "Beloved Wife"
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Goofy",
+      "version": "Groundbreaking Chef"
+    },
+    {
+      "amount": 1,
+      "name": "Honeymaren",
+      "version": "Northuldra Guide"
+    },
+    {
+      "amount": 1,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Broom",
+      "version": "Illuminary Keeper"
+    },
+    {
+      "amount": 3,
+      "name": "Magic Carpet",
+      "version": "Amazing Flier"
+    },
+    {
+      "amount": 2,
+      "name": "Maleficent",
+      "version": "Biding Her Time"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 2,
+      "name": "Pascal",
+      "version": "Rapunzel's Companion"
+    },
+    {
+      "amount": 3,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 1,
+      "name": "Show Me More!",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Simba",
+      "version": "Pride Protector"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Sven",
+      "version": "Reindeer Steed"
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 2,
+      "name": "Tinker Bell",
+      "version": "Fast Flier"
+    }
+  ]
+}

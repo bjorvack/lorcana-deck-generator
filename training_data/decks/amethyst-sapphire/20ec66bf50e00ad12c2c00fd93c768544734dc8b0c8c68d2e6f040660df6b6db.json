@@ -1,0 +1,109 @@
+{
+  "hash": "20ec66bf50e00ad12c2c00fd93c768544734dc8b0c8c68d2e6f040660df6b6db",
+  "inks": [
+    "amethyst",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Anna",
+      "version": "Magical Mission"
+    },
+    {
+      "amount": 4,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 4,
+      "name": "Belle",
+      "version": "Apprentice Inventor"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Finders Keepers",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 3,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 2,
+      "name": "Kuzco",
+      "version": "Selfish Emperor"
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 2,
+      "name": "Monstro",
+      "version": "Infamous Whale"
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Peter Pan's Shadow",
+      "version": "Not Sewn On"
+    },
+    {
+      "amount": 1,
+      "name": "Rafiki",
+      "version": "Shaman Duelist"
+    },
+    {
+      "amount": 2,
+      "name": "Ratigan",
+      "version": "Greedy Genius"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tamatoa",
+      "version": "Happy as a Clam"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 2,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}

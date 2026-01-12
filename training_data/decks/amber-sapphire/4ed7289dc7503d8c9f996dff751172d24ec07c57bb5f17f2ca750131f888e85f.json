@@ -1,0 +1,114 @@
+{
+  "hash": "4ed7289dc7503d8c9f996dff751172d24ec07c57bb5f17f2ca750131f888e85f",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 2,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Dewey",
+      "version": "Showy Nephew"
+    },
+    {
+      "amount": 2,
+      "name": "Fishbone Quill",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Gramma Tala",
+      "version": "Keeper of Ancient Stories"
+    },
+    {
+      "amount": 4,
+      "name": "Helping Hand",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Hiram Flaversham",
+      "version": "Toymaker"
+    },
+    {
+      "amount": 2,
+      "name": "How Far I'll Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Huey",
+      "version": "Savvy Nephew"
+    },
+    {
+      "amount": 2,
+      "name": "Lantern",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 4,
+      "name": "Louie",
+      "version": "One Cool Duck"
+    },
+    {
+      "amount": 4,
+      "name": "Nothing to Hide",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Sheriff of Nottingham",
+      "version": "Bushel Britches"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Divine Water Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 2,
+      "name": "Tamatoa",
+      "version": "So Shiny!"
+    },
+    {
+      "amount": 2,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 2,
+      "name": "Wendy Darling",
+      "version": "Talented Sailor"
+    }
+  ]
+}

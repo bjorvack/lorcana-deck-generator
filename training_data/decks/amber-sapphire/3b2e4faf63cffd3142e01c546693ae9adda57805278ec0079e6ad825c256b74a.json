@@ -1,0 +1,99 @@
+{
+  "hash": "3b2e4faf63cffd3142e01c546693ae9adda57805278ec0079e6ad825c256b74a",
+  "inks": [
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Alice",
+      "version": "Growing Girl"
+    },
+    {
+      "amount": 4,
+      "name": "Alice",
+      "version": "Savvy Sailor"
+    },
+    {
+      "amount": 2,
+      "name": "Aurora",
+      "version": "Dreaming Guardian"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Darling Dear",
+      "version": "Beloved Wife"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 2,
+      "name": "Fergus McDuck",
+      "version": "Scrooge's Father"
+    },
+    {
+      "amount": 4,
+      "name": "Jim Dear",
+      "version": "Beloved Husband"
+    },
+    {
+      "amount": 4,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Patch",
+      "version": "Playful Pup"
+    },
+    {
+      "amount": 2,
+      "name": "Pongo",
+      "version": "Determined Father"
+    },
+    {
+      "amount": 3,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Ready for Adventure"
+    },
+    {
+      "amount": 2,
+      "name": "Restoring the Heart",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Thunderbolt",
+      "version": "Wonder Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "hash": "8707e458332ab452a086bcd393f758caa7215e5567130c326020a724e72032eb",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Blessed Bagpipes",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Secret Agent"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Spiteful Raven"
+    },
+    {
+      "amount": 3,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Fairy Ship",
+      "version": "Royal Vessel"
+    },
+    {
+      "amount": 2,
+      "name": "Flintheart Glomgold",
+      "version": "Scheming Billionaire"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Gwythaint",
+      "version": "Savage Hunter"
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Kuzco",
+      "version": "Panicked Llama"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Crab"
+    },
+    {
+      "amount": 2,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Cloud Racer"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 3,
+      "name": "Pull the Lever!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sudden Chill",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 2,
+      "name": "Vision Slab",
+      "version": ""
+    }
+  ]
+}

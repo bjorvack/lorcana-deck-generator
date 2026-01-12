@@ -1,0 +1,104 @@
+{
+  "hash": "a77ef8593bcc9f645c38a860ab15c58ab135fb5537538482ed5666f49d6d3512",
+  "inks": [
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Groundbreaking Chef"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 2,
+      "name": "Minnie Mouse",
+      "version": "Musketeer Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Patch",
+      "version": "Playful Pup"
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Gallant Defender"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "Pride Protector"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 4,
+      "name": "So Much to Give",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Thunderbolt",
+      "version": "Wonder Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

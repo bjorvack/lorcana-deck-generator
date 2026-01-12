@@ -1,0 +1,114 @@
+{
+  "hash": "a0f1d64b443a753d7f1a38750cda6d001ccaadf2daa08eb3b731db4712bfbbd8",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Chip",
+      "version": "Quick Thinker"
+    },
+    {
+      "amount": 2,
+      "name": "Cri",
+      "version": "Kee - Lucky Cricket"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Devoted Herald"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Maleficent's Spy"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Spiteful Raven"
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Enigmatic Inkcaster",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 1,
+      "name": "Goofy",
+      "version": "Emerald Champion"
+    },
+    {
+      "amount": 1,
+      "name": "Hidden Cove",
+      "version": "Tranquil Haven"
+    },
+    {
+      "amount": 2,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 1,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 3,
+      "name": "Merlin",
+      "version": "Crab"
+    },
+    {
+      "amount": 1,
+      "name": "Peter Pan",
+      "version": "Shadow Finder"
+    },
+    {
+      "amount": 4,
+      "name": "Pull the Lever!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 3,
+      "name": "We Don't Talk About Bruno",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Wrong Lever!",
+      "version": ""
+    }
+  ]
+}

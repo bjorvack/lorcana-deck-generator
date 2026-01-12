@@ -1,0 +1,149 @@
+{
+  "hash": "f5a20ead155e1ada9ea6f699ca3e3eccece10c9a3c98bba459aaaea26e2bc284",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Aladdin",
+      "version": "Heroic Outlaw"
+    },
+    {
+      "amount": 2,
+      "name": "Aladdin",
+      "version": "Prince Ali"
+    },
+    {
+      "amount": 3,
+      "name": "Aladdin",
+      "version": "Street Rat"
+    },
+    {
+      "amount": 2,
+      "name": "Captain",
+      "version": "Colonel's Lieutenant"
+    },
+    {
+      "amount": 1,
+      "name": "Cruella de Vil",
+      "version": "Miserable as Usual"
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Boisterous Fowl"
+    },
+    {
+      "amount": 3,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Duke of Weselton",
+      "version": "Opportunistic Official"
+    },
+    {
+      "amount": 2,
+      "name": "He's Got a Sword!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Horace",
+      "version": "No-Good Scoundrel"
+    },
+    {
+      "amount": 1,
+      "name": "Iago",
+      "version": "Loud-Mouthed Parrot"
+    },
+    {
+      "amount": 2,
+      "name": "Jasper",
+      "version": "Common Crook"
+    },
+    {
+      "amount": 1,
+      "name": "LeFou",
+      "version": "Instigator"
+    },
+    {
+      "amount": 3,
+      "name": "Mad Hatter",
+      "version": "Gracious Host"
+    },
+    {
+      "amount": 3,
+      "name": "Megara",
+      "version": "Pulling the Strings"
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "Steamboat Pilot"
+    },
+    {
+      "amount": 3,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Peter Pan",
+      "version": "Never Landing"
+    },
+    {
+      "amount": 3,
+      "name": "Pongo",
+      "version": "Ol' Rascal"
+    },
+    {
+      "amount": 3,
+      "name": "Rapunzel",
+      "version": "Letting Down Her Hair"
+    },
+    {
+      "amount": 2,
+      "name": "Scar",
+      "version": "Fiery Usurper"
+    },
+    {
+      "amount": 3,
+      "name": "Sergeant Tibbs",
+      "version": "Courageous Cat"
+    },
+    {
+      "amount": 2,
+      "name": "Shield of Virtue",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Stampede",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Steal from the Rich",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Stitch",
+      "version": "Abomination"
+    },
+    {
+      "amount": 2,
+      "name": "Stolen Scimitar",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Vicious Betrayal",
+      "version": ""
+    }
+  ]
+}

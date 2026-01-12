@@ -1,0 +1,94 @@
+{
+  "hash": "5a9ea4a0a58b7c7dd488823063ffea04035074243038f0ba0597e8e96ee30c6b",
+  "inks": [
+    "amber",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Circle of Life",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Dale",
+      "version": "Mischievous Ranger"
+    },
+    {
+      "amount": 4,
+      "name": "David Xanatos",
+      "version": "Steel Clan Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 2,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hudson",
+      "version": "Determined Reader"
+    },
+    {
+      "amount": 2,
+      "name": "Lantern",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Amber Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Rhino",
+      "version": "One-Sixteenth Wolf"
+    },
+    {
+      "amount": 4,
+      "name": "Rhino",
+      "version": "Power Hamster"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "King in the Making"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Troubadour",
+      "version": "Musical Narrator"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Vanessa"
+    },
+    {
+      "amount": 4,
+      "name": "Vincenzo Santorini",
+      "version": "The Explosives Expert"
+    }
+  ]
+}

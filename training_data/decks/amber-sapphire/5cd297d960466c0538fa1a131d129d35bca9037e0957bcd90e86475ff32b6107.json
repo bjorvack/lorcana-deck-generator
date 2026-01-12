@@ -1,0 +1,119 @@
+{
+  "hash": "5cd297d960466c0538fa1a131d129d35bca9037e0957bcd90e86475ff32b6107",
+  "inks": [
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "99 Puppies",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Amber Coil",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Chernabog",
+      "version": "Evildoer"
+    },
+    {
+      "amount": 2,
+      "name": "First Aid",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Freckles",
+      "version": "Good Boy"
+    },
+    {
+      "amount": 2,
+      "name": "Good Job!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Kanine Krunchies",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Lucky",
+      "version": "Runt of the Litter"
+    },
+    {
+      "amount": 2,
+      "name": "Lucky",
+      "version": "The 15th Puppy"
+    },
+    {
+      "amount": 1,
+      "name": "McDuck Manor",
+      "version": "Scrooge's Mansion"
+    },
+    {
+      "amount": 4,
+      "name": "Patch",
+      "version": "Intimidating Pup"
+    },
+    {
+      "amount": 4,
+      "name": "Pepper",
+      "version": "Quick-Thinking Puppy"
+    },
+    {
+      "amount": 1,
+      "name": "Perdita",
+      "version": "Devoted Mother"
+    },
+    {
+      "amount": 2,
+      "name": "Perdita",
+      "version": "Playful Mother"
+    },
+    {
+      "amount": 1,
+      "name": "Pongo",
+      "version": "Dear Old Dad"
+    },
+    {
+      "amount": 2,
+      "name": "Pongo",
+      "version": "Determined Father"
+    },
+    {
+      "amount": 4,
+      "name": "Roger Radcliffe",
+      "version": "Dog Lover"
+    },
+    {
+      "amount": 4,
+      "name": "Rolly",
+      "version": "Hungry Pup"
+    },
+    {
+      "amount": 2,
+      "name": "Sapphire Coil",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Thunderbolt",
+      "version": "Wonder Dog"
+    },
+    {
+      "amount": 1,
+      "name": "Tiana's Palace",
+      "version": "Jazz Restaurant"
+    },
+    {
+      "amount": 1,
+      "name": "Trusty",
+      "version": "Loyal Bloodhound"
+    }
+  ]
+}

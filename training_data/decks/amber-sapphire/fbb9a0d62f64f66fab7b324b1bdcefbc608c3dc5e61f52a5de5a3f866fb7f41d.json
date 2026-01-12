@@ -1,0 +1,99 @@
+{
+  "hash": "fbb9a0d62f64f66fab7b324b1bdcefbc608c3dc5e61f52a5de5a3f866fb7f41d",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 3,
+      "name": "Baymax",
+      "version": "Armored Companion"
+    },
+    {
+      "amount": 4,
+      "name": "Belle",
+      "version": "Apprentice Inventor"
+    },
+    {
+      "amount": 4,
+      "name": "Cogsworth",
+      "version": "Grandfather Clock"
+    },
+    {
+      "amount": 3,
+      "name": "Flintheart Glomgold",
+      "version": "Lone Cheater"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 2,
+      "name": "Maximus",
+      "version": "Palace Horse"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Musketeer Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 2,
+      "name": "Scepter of Arendelle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Thunderbolt",
+      "version": "Wonder Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Wendy Darling",
+      "version": "Authority on Peter Pan"
+    },
+    {
+      "amount": 4,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "You Have Forgotten Me",
+      "version": ""
+    }
+  ]
+}

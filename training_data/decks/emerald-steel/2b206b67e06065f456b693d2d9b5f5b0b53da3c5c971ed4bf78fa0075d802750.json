@@ -1,0 +1,109 @@
+{
+  "hash": "2b206b67e06065f456b693d2d9b5f5b0b53da3c5c971ed4bf78fa0075d802750",
+  "inks": [
+    "emerald",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Bagheera",
+      "version": "Guardian Jaguar"
+    },
+    {
+      "amount": 3,
+      "name": "Billy Bones",
+      "version": "Space Sailor"
+    },
+    {
+      "amount": 3,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "The Pirate King"
+    },
+    {
+      "amount": 3,
+      "name": "Captain Hook",
+      "version": "Underhanded"
+    },
+    {
+      "amount": 3,
+      "name": "Desperate Plan",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Duck for Cover!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Grewnge",
+      "version": "Cannon Expert"
+    },
+    {
+      "amount": 4,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Maui",
+      "version": "Stubborn Trickster"
+    },
+    {
+      "amount": 4,
+      "name": "Mosquito Bite",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Mr. Smee",
+      "version": "Bumbling Mate"
+    },
+    {
+      "amount": 4,
+      "name": "Mr. Smee",
+      "version": "Efficient Captain"
+    },
+    {
+      "amount": 3,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 3,
+      "name": "Pete",
+      "version": "Pirate Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Space Pirate"
+    },
+    {
+      "amount": 2,
+      "name": "Signed Contract",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Walk the Plank!",
+      "version": ""
+    }
+  ]
+}

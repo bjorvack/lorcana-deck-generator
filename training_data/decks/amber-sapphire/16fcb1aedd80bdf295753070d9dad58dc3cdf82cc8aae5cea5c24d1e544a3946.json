@@ -1,0 +1,99 @@
+{
+  "hash": "16fcb1aedd80bdf295753070d9dad58dc3cdf82cc8aae5cea5c24d1e544a3946",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Of the Ball"
+    },
+    {
+      "amount": 2,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Dewey",
+      "version": "Lovable Showoff"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Focused Flatfoot"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 2,
+      "name": "Huey",
+      "version": "Savvy Nephew"
+    },
+    {
+      "amount": 4,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 4,
+      "name": "Look at This Family",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Louie",
+      "version": "Chill Nephew"
+    },
+    {
+      "amount": 2,
+      "name": "Restoring the Heart",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 3,
+      "name": "Thunderbolt",
+      "version": "Wonder Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Wreck",
+      "version": "It Ralph - Admiral Underpants"
+    }
+  ]
+}

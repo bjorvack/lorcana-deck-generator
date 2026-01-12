@@ -1,0 +1,94 @@
+{
+  "hash": "2ff92ae73ea948cc4be93dd875bd9f6f65dcc164673978428d44d8ab54ce2f74",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Alice",
+      "version": "Savvy Sailor"
+    },
+    {
+      "amount": 4,
+      "name": "Anna",
+      "version": "Braving the Storm"
+    },
+    {
+      "amount": 4,
+      "name": "Belle",
+      "version": "Apprentice Inventor"
+    },
+    {
+      "amount": 3,
+      "name": "Cogsworth",
+      "version": "Grandfather Clock"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 2,
+      "name": "Jim Dear",
+      "version": "Beloved Husband"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 2,
+      "name": "McDuck Manor",
+      "version": "Scrooge's Mansion"
+    },
+    {
+      "amount": 4,
+      "name": "Patch",
+      "version": "Playful Pup"
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 2,
+      "name": "Restoring the Heart",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sven",
+      "version": "Reindeer Steed"
+    },
+    {
+      "amount": 4,
+      "name": "Thunderbolt",
+      "version": "Wonder Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Wendy Darling",
+      "version": "Authority on Peter Pan"
+    }
+  ]
+}

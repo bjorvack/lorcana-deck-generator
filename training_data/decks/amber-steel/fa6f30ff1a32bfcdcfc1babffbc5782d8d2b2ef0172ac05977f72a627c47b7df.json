@@ -1,0 +1,129 @@
+{
+  "hash": "fa6f30ff1a32bfcdcfc1babffbc5782d8d2b2ef0172ac05977f72a627c47b7df",
+  "inks": [
+    "amber",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 3,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Gene",
+      "version": "Niceland Resident"
+    },
+    {
+      "amount": 1,
+      "name": "Goofy",
+      "version": "Groundbreaking Chef"
+    },
+    {
+      "amount": 2,
+      "name": "Happy",
+      "version": "Lively Knight"
+    },
+    {
+      "amount": 2,
+      "name": "Hundred Acre Island",
+      "version": "Pooh's Home"
+    },
+    {
+      "amount": 2,
+      "name": "Invited to the Ball",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Jafar",
+      "version": "Aspiring Ruler"
+    },
+    {
+      "amount": 2,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lawrence",
+      "version": "Jealous Manservant"
+    },
+    {
+      "amount": 1,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "Food Fight Defender"
+    },
+    {
+      "amount": 1,
+      "name": "Minnie Mouse",
+      "version": "Storyteller"
+    },
+    {
+      "amount": 2,
+      "name": "Mr. Arrow",
+      "version": "Legacy's First Mate"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Nala",
+      "version": "Mischievous Cub"
+    },
+    {
+      "amount": 1,
+      "name": "Namaari",
+      "version": "Single-Minded Rival"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 2,
+      "name": "Pluto",
+      "version": "Guard Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Champion of Sherwood"
+    },
+    {
+      "amount": 3,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "The Troubadour",
+      "version": "Musical Narrator"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "hash": "115f4f34fa9b76a5fb3cd0bbe207488cf381ed6d92dcdd02ff29ef4363346cc5",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Anna",
+      "version": "Braving the Storm"
+    },
+    {
+      "amount": 3,
+      "name": "Anna",
+      "version": "Making Snow Plans"
+    },
+    {
+      "amount": 3,
+      "name": "Anna",
+      "version": "True-Hearted"
+    },
+    {
+      "amount": 3,
+      "name": "Beast",
+      "version": "Aggressive Lord"
+    },
+    {
+      "amount": 2,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 2,
+      "name": "Coconut Basket",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cri",
+      "version": "Kee - Good Luck Charm"
+    },
+    {
+      "amount": 2,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 2,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Heir of Agrabah"
+    },
+    {
+      "amount": 2,
+      "name": "Jasmine",
+      "version": "Soothing Princess"
+    },
+    {
+      "amount": 2,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Peter Pan",
+      "version": "High Flyer"
+    },
+    {
+      "amount": 2,
+      "name": "Robin Hood",
+      "version": "Unrivaled Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Sudden Scare",
+      "version": ""
+    }
+  ]
+}

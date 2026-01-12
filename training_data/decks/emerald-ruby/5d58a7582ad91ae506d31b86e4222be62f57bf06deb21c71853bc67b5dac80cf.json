@@ -1,0 +1,89 @@
+{
+  "hash": "5d58a7582ad91ae506d31b86e4222be62f57bf06deb21c71853bc67b5dac80cf",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Card Soldiers",
+      "version": "Royal Troops"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Perplexing Feline"
+    },
+    {
+      "amount": 4,
+      "name": "Dormouse",
+      "version": "Easily Agitated"
+    },
+    {
+      "amount": 4,
+      "name": "Ed",
+      "version": "Laughing Hyena"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Flying Goof"
+    },
+    {
+      "amount": 4,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Royal Seafarer"
+    },
+    {
+      "amount": 4,
+      "name": "Mad Hatter",
+      "version": "Unruly Eccentric"
+    },
+    {
+      "amount": 4,
+      "name": "March Hare",
+      "version": "Hare-Brained Eccentric"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Haughty Monarch"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Impulsive Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Unpredictable Bully"
+    },
+    {
+      "amount": 2,
+      "name": "Robin Hood",
+      "version": "Archery Contestant"
+    },
+    {
+      "amount": 4,
+      "name": "Scar",
+      "version": "Vengeful Lion"
+    },
+    {
+      "amount": 4,
+      "name": "Shenzi",
+      "version": "Scar's Accomplice"
+    }
+  ]
+}
