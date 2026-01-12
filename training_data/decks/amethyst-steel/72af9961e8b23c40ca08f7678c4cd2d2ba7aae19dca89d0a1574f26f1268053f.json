@@ -1,0 +1,164 @@
+{
+  "hash": "72af9961e8b23c40ca08f7678c4cd2d2ba7aae19dca89d0a1574f26f1268053f",
+  "inks": [
+    "steel",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Anna",
+      "version": "Eager Acolyte"
+    },
+    {
+      "amount": 1,
+      "name": "Anna",
+      "version": "Mystical Majesty"
+    },
+    {
+      "amount": 2,
+      "name": "Archimedes",
+      "version": "Electrified Owl"
+    },
+    {
+      "amount": 3,
+      "name": "Archimedes",
+      "version": "Exasperated Owl"
+    },
+    {
+      "amount": 2,
+      "name": "Beyond the Horizon",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Can't Hold It Back Anymore",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Trusted Sister"
+    },
+    {
+      "amount": 2,
+      "name": "Finders Keepers",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Giant Cobra",
+      "version": "Ghostly Serpent"
+    },
+    {
+      "amount": 2,
+      "name": "Helga Sinclair",
+      "version": "Tough as Nails"
+    },
+    {
+      "amount": 3,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 4,
+      "name": "Jafar",
+      "version": "Aspiring Ruler"
+    },
+    {
+      "amount": 1,
+      "name": "Jafar",
+      "version": "High Sultan of Lorcana"
+    },
+    {
+      "amount": 1,
+      "name": "Jafar",
+      "version": "Newly Crowned"
+    },
+    {
+      "amount": 1,
+      "name": "Jafar",
+      "version": "Royal Vizier"
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Cheating Spellcaster"
+    },
+    {
+      "amount": 1,
+      "name": "Magic Carpet",
+      "version": "Phantom Rug"
+    },
+    {
+      "amount": 2,
+      "name": "Maleficent",
+      "version": "Vengeful Sorceress"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 1,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 1,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Rajah",
+      "version": "Ghostly Tiger"
+    },
+    {
+      "amount": 1,
+      "name": "Restoring the Crown",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Scarab",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Nokk",
+      "version": "Mythical Spirit"
+    },
+    {
+      "amount": 1,
+      "name": "The Sultan",
+      "version": "Royal Apparition"
+    },
+    {
+      "amount": 1,
+      "name": "Training Staff",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Treasure Guardian",
+      "version": "Foreboding Sentry"
+    }
+  ]
+}

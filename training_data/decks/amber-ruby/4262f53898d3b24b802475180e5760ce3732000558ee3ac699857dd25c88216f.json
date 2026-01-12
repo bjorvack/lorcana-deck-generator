@@ -1,0 +1,114 @@
+{
+  "hash": "4262f53898d3b24b802475180e5760ce3732000558ee3ac699857dd25c88216f",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Baloo",
+      "version": "von Bruinwald XIII"
+    },
+    {
+      "amount": 1,
+      "name": "Chernabog",
+      "version": "Evildoer"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Gene",
+      "version": "Niceland Resident"
+    },
+    {
+      "amount": 2,
+      "name": "Good Job!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Super Goof"
+    },
+    {
+      "amount": 2,
+      "name": "Imperial Proclamation",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Kida",
+      "version": "Protector of Atlantis"
+    },
+    {
+      "amount": 3,
+      "name": "Koda",
+      "version": "Smallish Bear"
+    },
+    {
+      "amount": 2,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Stylish Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "Pride Protector"
+    },
+    {
+      "amount": 1,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 2,
+      "name": "Sven",
+      "version": "Reindeer Steed"
+    },
+    {
+      "amount": 1,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    },
+    {
+      "amount": 4,
+      "name": "Wendy Darling",
+      "version": "Talented Sailor"
+    }
+  ]
+}

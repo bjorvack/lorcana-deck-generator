@@ -1,0 +1,138 @@
+{
+  "hash": "398416e12dda76a21663464b495660990257a22cf6dd4f057d00776960a2eb01",
+  "inks": [
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Alice",
+      "version": "Savvy Sailor"
+    },
+    {
+      "amount": 3,
+      "name": "Aunt Cass",
+      "version": "Biggest Fan"
+    },
+    {
+      "amount": 2,
+      "name": "Baymax",
+      "version": "Armored Companion"
+    },
+    {
+      "amount": 1,
+      "name": "Baymax",
+      "version": "Personal Healthcare Companion"
+    },
+    {
+      "amount": 4,
+      "name": "Baymax's Healthcare Chip",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Belle",
+      "version": "Inventive Engineer"
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Strutting His Stuff"
+    },
+    {
+      "amount": 2,
+      "name": "Fang Crossbow",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Institute of Technology",
+      "version": "Prestigious University"
+    },
+    {
+      "amount": 1,
+      "name": "Kuzco",
+      "version": "Selfish Emperor"
+    },
+    {
+      "amount": 2,
+      "name": "Launch",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Medal of Heroes",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Microbots",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Mufasa",
+      "version": "King of the Pride Lands"
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Scar",
+      "version": "Mastermind"
+    },
+    {
+      "amount": 1,
+      "name": "Tadashi Hamada",
+      "version": "Baymax Inventor"
+    },
+    {
+      "amount": 2,
+      "name": "Tadashi Hamada",
+      "version": "Gifted Roboticist"
+    },
+    {
+      "amount": 2,
+      "name": "Triton",
+      "version": "Discerning King"
+    },
+    {
+      "amount": 4,
+      "name": "Wasabi",
+      "version": "Methodical Engineer"
+    },
+    {
+      "amount": 3,
+      "name": "We Could Be Immortals",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Yokai",
+      "version": "Enigmatic Inventor"
+    },
+    {
+      "amount": 4,
+      "name": "Yokai",
+      "version": "Professor Callaghan"
+    },
+    {
+      "amount": 2,
+      "name": "Yokai",
+      "version": "Scientific Supervillain"
+    }
+  ]
+}

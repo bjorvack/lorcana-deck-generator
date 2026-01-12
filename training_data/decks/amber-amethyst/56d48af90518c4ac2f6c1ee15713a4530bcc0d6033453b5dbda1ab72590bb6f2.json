@@ -1,0 +1,154 @@
+{
+  "hash": "56d48af90518c4ac2f6c1ee15713a4530bcc0d6033453b5dbda1ab72590bb6f2",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "99 Puppies",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Bambi",
+      "version": "Little Prince"
+    },
+    {
+      "amount": 1,
+      "name": "Chernabog",
+      "version": "Evildoer"
+    },
+    {
+      "amount": 2,
+      "name": "Dinglehopper",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Gale",
+      "version": "Wind Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Genie",
+      "version": "Main Attraction"
+    },
+    {
+      "amount": 2,
+      "name": "Heal What Has Been Hurt",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "I'm Stuck!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Purple Dragon"
+    },
+    {
+      "amount": 2,
+      "name": "Magic Carpet",
+      "version": "Amazing Flier"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Carpet",
+      "version": "Flying Rug"
+    },
+    {
+      "amount": 3,
+      "name": "Maximus",
+      "version": "Palace Horse"
+    },
+    {
+      "amount": 4,
+      "name": "Miracle Candle",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Monstro",
+      "version": "Infamous Whale"
+    },
+    {
+      "amount": 1,
+      "name": "Monstro",
+      "version": "Whale of a Whale"
+    },
+    {
+      "amount": 4,
+      "name": "Pascal",
+      "version": "Rapunzel's Companion"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Very Small Animal"
+    },
+    {
+      "amount": 2,
+      "name": "Safe and Sound",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sign the Scroll",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "Pride Protector"
+    },
+    {
+      "amount": 2,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 4,
+      "name": "The Queen's Castle",
+      "version": "Mirror Chamber"
+    },
+    {
+      "amount": 2,
+      "name": "The Sorcerer's Tower",
+      "version": "Wondrous Workspace"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fast Flier"
+    },
+    {
+      "amount": 2,
+      "name": "Triton's Trident",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula's Lair",
+      "version": "Eye of the Storm"
+    }
+  ]
+}

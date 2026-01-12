@@ -1,0 +1,94 @@
+{
+  "hash": "19c177006a1f4ad68d43c1527423afe70cdc041c43cb1bb9b289280b60221390",
+  "inks": [
+    "steel",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Black Heron",
+      "version": "Real Bad Egg"
+    },
+    {
+      "amount": 4,
+      "name": "Chernabog's Followers",
+      "version": "Creatures of Evil"
+    },
+    {
+      "amount": 2,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Giant Cobra",
+      "version": "Ghostly Serpent"
+    },
+    {
+      "amount": 4,
+      "name": "Gwythaint",
+      "version": "Savage Hunter"
+    },
+    {
+      "amount": 3,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Let the Storm Rage On",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Luisa Madrigal",
+      "version": "Magically Strong One"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Broom",
+      "version": "Illuminary Keeper"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 3,
+      "name": "Mufasa",
+      "version": "Among the Stars"
+    },
+    {
+      "amount": 4,
+      "name": "Mufasa",
+      "version": "Respected King"
+    },
+    {
+      "amount": 4,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 4,
+      "name": "Violet Sabrewing",
+      "version": "Senior Junior Woodchuck"
+    },
+    {
+      "amount": 3,
+      "name": "Winnie the Pooh",
+      "version": "Hunny Wizard"
+    }
+  ]
+}
