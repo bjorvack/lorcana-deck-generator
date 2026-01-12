@@ -1,0 +1,104 @@
+{
+  "hash": "3ed5b7ea3468b0f0849778e4728f22fa07e5a89c5ae5e9f0b0de4a81a7f9282f",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Befuddle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Not All There"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Charming Rogue"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "On the Job"
+    },
+    {
+      "amount": 3,
+      "name": "Hans",
+      "version": "Scheming Prince"
+    },
+    {
+      "amount": 1,
+      "name": "Jafar",
+      "version": "Wicked Sorcerer"
+    },
+    {
+      "amount": 4,
+      "name": "Jasper",
+      "version": "Common Crook"
+    },
+    {
+      "amount": 3,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Kuzco",
+      "version": "Temperamental Emperor"
+    },
+    {
+      "amount": 4,
+      "name": "Mad Hatter",
+      "version": "Gracious Host"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Sorceress"
+    },
+    {
+      "amount": 3,
+      "name": "Megara",
+      "version": "Pulling the Strings"
+    },
+    {
+      "amount": 3,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Olaf",
+      "version": "Friendly Snowman"
+    },
+    {
+      "amount": 4,
+      "name": "Pascal",
+      "version": "Rapunzel's Companion"
+    },
+    {
+      "amount": 2,
+      "name": "Peter Pan",
+      "version": "Never Landing"
+    },
+    {
+      "amount": 2,
+      "name": "Rafiki",
+      "version": "Mysterious Sage"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Most Helpful"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "hash": "5a1d558b8d70487dc4e00dee3e475e77f4b534de8f03333ff9ef4b6abe5aa102",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Heroic Outlaw"
+    },
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Street Rat"
+    },
+    {
+      "amount": 4,
+      "name": "Archimedes",
+      "version": "Highly Educated Owl"
+    },
+    {
+      "amount": 4,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "Snow Queen"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Spirit of Winter"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Gaston",
+      "version": "Arrogant Hunter"
+    },
+    {
+      "amount": 4,
+      "name": "LeFou",
+      "version": "Instigator"
+    },
+    {
+      "amount": 3,
+      "name": "Magic Mirror",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Sorceress"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 3,
+      "name": "Rafiki",
+      "version": "Mysterious Sage"
+    },
+    {
+      "amount": 4,
+      "name": "Sergeant Tibbs",
+      "version": "Courageous Cat"
+    },
+    {
+      "amount": 2,
+      "name": "Shield of Virtue",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "The Queen",
+      "version": "Wicked and Vain"
+    },
+    {
+      "amount": 1,
+      "name": "Ursula",
+      "version": "Power Hungry"
+    }
+  ]
+}

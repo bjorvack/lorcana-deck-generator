@@ -1,0 +1,94 @@
+{
+  "hash": "99405f2717a0ebe97b5a6f2d5ee12d610ad1700df7c051ef1796c216b2c1f5f6",
+  "inks": [
+    "emerald",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Dreaming Guardian"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Regal Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Not All There"
+    },
+    {
+      "amount": 2,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Duke of Weselton",
+      "version": "Opportunistic Official"
+    },
+    {
+      "amount": 2,
+      "name": "Eye of the Fates",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Flounder",
+      "version": "Voice of Reason"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Charming Rogue"
+    },
+    {
+      "amount": 4,
+      "name": "Hans",
+      "version": "Scheming Prince"
+    },
+    {
+      "amount": 3,
+      "name": "Jasmine",
+      "version": "Disguised"
+    },
+    {
+      "amount": 3,
+      "name": "Jasper",
+      "version": "Common Crook"
+    },
+    {
+      "amount": 4,
+      "name": "Kuzco",
+      "version": "Temperamental Emperor"
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Mad Hatter",
+      "version": "Gracious Host"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Uninvited"
+    },
+    {
+      "amount": 2,
+      "name": "Philoctetes",
+      "version": "Trainer of Heroes"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Most Helpful"
+    }
+  ]
+}

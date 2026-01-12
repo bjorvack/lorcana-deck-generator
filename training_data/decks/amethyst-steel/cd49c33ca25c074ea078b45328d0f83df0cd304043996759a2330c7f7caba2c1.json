@@ -1,0 +1,99 @@
+{
+  "hash": "cd49c33ca25c074ea078b45328d0f83df0cd304043996759a2330c7f7caba2c1",
+  "inks": [
+    "steel",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Beast",
+      "version": "Hardheaded"
+    },
+    {
+      "amount": 3,
+      "name": "Captain Hook",
+      "version": "Captain of the Jolly Roger"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "Snow Queen"
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "Spirit of Winter"
+    },
+    {
+      "amount": 4,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Grab Your Sword",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hans",
+      "version": "Thirteenth in Line"
+    },
+    {
+      "amount": 2,
+      "name": "Jafar",
+      "version": "Keeper of Secrets"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Broom",
+      "version": "Bucket Brigade"
+    },
+    {
+      "amount": 1,
+      "name": "Magic Mirror",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Sorceress"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Wayward Sorcerer"
+    },
+    {
+      "amount": 4,
+      "name": "The Queen",
+      "version": "Wicked and Vain"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Power Hungry"
+    },
+    {
+      "amount": 2,
+      "name": "White Rabbit's Pocket Watch",
+      "version": ""
+    }
+  ]
+}

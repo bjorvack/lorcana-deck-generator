@@ -1,0 +1,104 @@
+{
+  "hash": "06ae2c27f74efc33893131736c13ff37f1e1c061ea711e51c1034c4987f11e8e",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "A Whole New World",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Aladdin",
+      "version": "Heroic Outlaw"
+    },
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Street Rat"
+    },
+    {
+      "amount": 2,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Beast",
+      "version": "Hardheaded"
+    },
+    {
+      "amount": 2,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Gaston",
+      "version": "Arrogant Hunter"
+    },
+    {
+      "amount": 3,
+      "name": "Grab Your Sword",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hans",
+      "version": "Thirteenth in Line"
+    },
+    {
+      "amount": 1,
+      "name": "Maui",
+      "version": "Demigod"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Brave Little Tailor"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Imperial Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Future King"
+    },
+    {
+      "amount": 3,
+      "name": "Simba",
+      "version": "Returned King"
+    },
+    {
+      "amount": 4,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Te Kā",
+      "version": "Heartless"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Tiny Tactician"
+    }
+  ]
+}
