@@ -1,0 +1,94 @@
+{
+  "hash": "0f03b02c4f58e75b35e792b955c0443a9292a12e9ecc7a65968f49f776fe0a81",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Friend Owl",
+      "version": "Cantankerous Neighbor"
+    },
+    {
+      "amount": 3,
+      "name": "Gaston",
+      "version": "Arrogant Hunter"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Fa",
+      "version": "Spirited Elder"
+    },
+    {
+      "amount": 4,
+      "name": "Invited to the Ball",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Koda",
+      "version": "Talkative Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Daring Defender"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Sweetheart Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Free Spirit"
+    },
+    {
+      "amount": 3,
+      "name": "Simba",
+      "version": "Pride Protector"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Scrappy Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Sir Kay",
+      "version": "Unruly Knight"
+    },
+    {
+      "amount": 3,
+      "name": "Taffyta Muttonfudge",
+      "version": "Ruthless Rival"
+    }
+  ]
+}

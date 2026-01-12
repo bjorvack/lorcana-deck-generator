@@ -1,0 +1,104 @@
+{
+  "hash": "6c1aa10ce2f9e96d9fb05f725770b7ed24ccc94a7c2a00d196cfc4166bd6bc09",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Bibbidi Bobbidi Boo",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Brawl",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Chip",
+      "version": "Quick Thinker"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Devoted Herald"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Maleficent's Spy"
+    },
+    {
+      "amount": 2,
+      "name": "Heffalumps and Woozles",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Lady Tremaine",
+      "version": "Imperious Queen"
+    },
+    {
+      "amount": 2,
+      "name": "Madame Medusa",
+      "version": "The Boss"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 2,
+      "name": "Pete",
+      "version": "Bad Guy"
+    },
+    {
+      "amount": 4,
+      "name": "Prince John",
+      "version": "Greediest of All"
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 4,
+      "name": "Sudden Chill",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Undermine",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver of All"
+    },
+    {
+      "amount": 4,
+      "name": "We Don't Talk About Bruno",
+      "version": ""
+    }
+  ]
+}

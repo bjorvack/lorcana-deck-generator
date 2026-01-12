@@ -1,0 +1,94 @@
+{
+  "hash": "1b7f9188e3ff0be1cea0641bff7a97cb2ad57a106d6917bf97bdeb4d140cb548",
+  "inks": [
+    "amethyst",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Amber Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Bolt",
+      "version": "Dependable Friend"
+    },
+    {
+      "amount": 2,
+      "name": "Chernabog",
+      "version": "Evildoer"
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "Supportive Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Healing Decanter",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Joshua Sweet",
+      "version": "The Doctor"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Resourceful Rabbit"
+    },
+    {
+      "amount": 4,
+      "name": "Maximus",
+      "version": "Palace Horse"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Free Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Nala",
+      "version": "Mischievous Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Nani",
+      "version": "Protective Sister"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Determined Defender"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Eric",
+      "version": "Seafaring Prince"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel's Tower",
+      "version": "Secluded Prison"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 3,
+      "name": "The Queen's Castle",
+      "version": "Mirror Chamber"
+    }
+  ]
+}

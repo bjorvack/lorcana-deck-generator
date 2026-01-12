@@ -1,0 +1,129 @@
+{
+  "hash": "fd5599a427261a4472a9406aed009c210d8e29d73aaaa2d9233a5703ff4adb03",
+  "inks": [
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "99 Puppies",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Agustin Madrigal",
+      "version": "Clumsy Dad"
+    },
+    {
+      "amount": 2,
+      "name": "Aurelian Gyrosensor",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "B.E.N.",
+      "version": "Eccentric Robot"
+    },
+    {
+      "amount": 3,
+      "name": "Dewey",
+      "version": "Showy Nephew"
+    },
+    {
+      "amount": 2,
+      "name": "Fix",
+      "version": "It Felix, Jr. - Delighted Sightseer"
+    },
+    {
+      "amount": 2,
+      "name": "Fix",
+      "version": "It Felix, Jr. - Niceland Steward"
+    },
+    {
+      "amount": 1,
+      "name": "Heart of Atlantis",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "HeiHei",
+      "version": "Boat Snack"
+    },
+    {
+      "amount": 2,
+      "name": "Huey",
+      "version": "Savvy Nephew"
+    },
+    {
+      "amount": 2,
+      "name": "Julieta Madrigal",
+      "version": "Excellent Cook"
+    },
+    {
+      "amount": 2,
+      "name": "Kida",
+      "version": "Atlantean"
+    },
+    {
+      "amount": 2,
+      "name": "King Louie",
+      "version": "Bandleader"
+    },
+    {
+      "amount": 4,
+      "name": "Louie",
+      "version": "Chill Nephew"
+    },
+    {
+      "amount": 3,
+      "name": "Ludwig von Drake",
+      "version": "Self-Proclaimed Genius"
+    },
+    {
+      "amount": 2,
+      "name": "McDuck Manor",
+      "version": "Scrooge's Mansion"
+    },
+    {
+      "amount": 3,
+      "name": "Mirabel Madrigal",
+      "version": "Prophecy Finder"
+    },
+    {
+      "amount": 4,
+      "name": "Motunui",
+      "version": "Island Paradise"
+    },
+    {
+      "amount": 4,
+      "name": "Never Land",
+      "version": "Mermaid Lagoon"
+    },
+    {
+      "amount": 1,
+      "name": "Perdita",
+      "version": "Devoted Mother"
+    },
+    {
+      "amount": 1,
+      "name": "Pride Lands",
+      "version": "Pride Rock"
+    },
+    {
+      "amount": 4,
+      "name": "Rolly",
+      "version": "Hungry Pup"
+    },
+    {
+      "amount": 2,
+      "name": "The Great Illuminary",
+      "version": "Radiant Ballroom"
+    },
+    {
+      "amount": 4,
+      "name": "Vault Door",
+      "version": ""
+    }
+  ]
+}

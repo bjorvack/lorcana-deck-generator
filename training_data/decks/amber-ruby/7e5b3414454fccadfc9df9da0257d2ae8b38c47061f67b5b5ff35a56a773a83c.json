@@ -1,0 +1,99 @@
+{
+  "hash": "7e5b3414454fccadfc9df9da0257d2ae8b38c47061f67b5b5ff35a56a773a83c",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Courageous Rescuer"
+    },
+    {
+      "amount": 4,
+      "name": "Candy Drift",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Fix",
+      "version": "It Felix, Jr. - Pint-Sized Hero"
+    },
+    {
+      "amount": 4,
+      "name": "Gloyd Orangeboar",
+      "version": "Fierce Competitor"
+    },
+    {
+      "amount": 4,
+      "name": "King Candy",
+      "version": "Royal Racer"
+    },
+    {
+      "amount": 4,
+      "name": "King Candy",
+      "version": "Sugar Rush Nightmare"
+    },
+    {
+      "amount": 4,
+      "name": "Sugar Rush Speedway",
+      "version": "Finish Line"
+    },
+    {
+      "amount": 4,
+      "name": "Sugar Rush Speedway",
+      "version": "Starting Line"
+    },
+    {
+      "amount": 4,
+      "name": "Taffyta Muttonfudge",
+      "version": "Crowd Favorite"
+    },
+    {
+      "amount": 2,
+      "name": "Taffyta Muttonfudge",
+      "version": "Ruthless Rival"
+    },
+    {
+      "amount": 3,
+      "name": "Taffyta Muttonfudge",
+      "version": "Sour Speedster"
+    },
+    {
+      "amount": 2,
+      "name": "Turbo",
+      "version": "Royal Hack"
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope Von Schweetz",
+      "version": "Spunky Speedster"
+    },
+    {
+      "amount": 2,
+      "name": "Vanellope von Schweetz",
+      "version": "Candy Mechanic"
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope von Schweetz",
+      "version": "Random Roster Racer"
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope von Schweetz",
+      "version": "Sugar Rush Champ"
+    },
+    {
+      "amount": 4,
+      "name": "Wreck",
+      "version": "It Ralph - Back Seat Driver"
+    },
+    {
+      "amount": 3,
+      "name": "Wreck",
+      "version": "It Ralph - Big Lug"
+    }
+  ]
+}

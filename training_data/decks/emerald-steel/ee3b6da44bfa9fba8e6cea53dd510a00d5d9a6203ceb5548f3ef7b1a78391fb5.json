@@ -1,0 +1,109 @@
+{
+  "hash": "ee3b6da44bfa9fba8e6cea53dd510a00d5d9a6203ceb5548f3ef7b1a78391fb5",
+  "inks": [
+    "emerald",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "And Then Along Came Zeus",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Arges",
+      "version": "The Cyclops"
+    },
+    {
+      "amount": 2,
+      "name": "Hades",
+      "version": "Double Dealer"
+    },
+    {
+      "amount": 3,
+      "name": "Hera",
+      "version": "Queen of the Gods"
+    },
+    {
+      "amount": 3,
+      "name": "Hercules",
+      "version": "Beloved Hero"
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "Divine Hero"
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "Hero in Training"
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "True Hero"
+    },
+    {
+      "amount": 3,
+      "name": "Hidden Cove",
+      "version": "Tranquil Haven"
+    },
+    {
+      "amount": 2,
+      "name": "Lythos",
+      "version": "Rock Titan"
+    },
+    {
+      "amount": 4,
+      "name": "Megara",
+      "version": "Liberated One"
+    },
+    {
+      "amount": 2,
+      "name": "One Last Hope",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Cloud Racer"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 3,
+      "name": "Philoctetes",
+      "version": "No-Nonsense Instructor"
+    },
+    {
+      "amount": 2,
+      "name": "Pyros",
+      "version": "Lava Titan"
+    },
+    {
+      "amount": 2,
+      "name": "Rise of the Titans",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "The Muses",
+      "version": "Proclaimers of Heroes"
+    },
+    {
+      "amount": 4,
+      "name": "Weight Set",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Zeus",
+      "version": "Mr. Lightning Bolts"
+    }
+  ]
+}

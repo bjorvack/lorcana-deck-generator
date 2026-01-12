@@ -1,0 +1,129 @@
+{
+  "hash": "32dbbfbbb3d3e55c7e54f606640a999217c9f2ba39e5ffea7ce13a98b4db6592",
+  "inks": [
+    "amber",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Amber Coil",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Arthur",
+      "version": "Wart"
+    },
+    {
+      "amount": 4,
+      "name": "Benja",
+      "version": "Guardian of the Dragon Gem"
+    },
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Hard-Nosed Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "David",
+      "version": "Impressive Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Good Job!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "True Hero"
+    },
+    {
+      "amount": 2,
+      "name": "Hercules",
+      "version": "Unwavering Demigod"
+    },
+    {
+      "amount": 1,
+      "name": "Jafar",
+      "version": "Royal Vizier"
+    },
+    {
+      "amount": 2,
+      "name": "Koda",
+      "version": "Smallish Bear"
+    },
+    {
+      "amount": 3,
+      "name": "Lilo",
+      "version": "Galactic Hero"
+    },
+    {
+      "amount": 2,
+      "name": "Magic Broom",
+      "version": "Aerial Cleaner"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Standard Bearer"
+    },
+    {
+      "amount": 2,
+      "name": "Minnie Mouse",
+      "version": "Compassionate Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Monterey Jack",
+      "version": "Defiant Protector"
+    },
+    {
+      "amount": 2,
+      "name": "Mr. Smee",
+      "version": "Steadfast Mate"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Free Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Nani",
+      "version": "Protective Sister"
+    },
+    {
+      "amount": 2,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 4,
+      "name": "Rhino",
+      "version": "One-Sixteenth Wolf"
+    },
+    {
+      "amount": 2,
+      "name": "Thebes",
+      "version": "The Big Olive"
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

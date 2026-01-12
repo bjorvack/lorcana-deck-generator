@@ -1,0 +1,94 @@
+{
+  "hash": "9281ead13aaa2fbc52b222d985066c856034cf9c4ba96e5bde5f692ec84408d3",
+  "inks": [
+    "emerald",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Not All There"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Lovely Lady"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Secret Agent"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Eric",
+      "version": "Seafaring Prince"
+    },
+    {
+      "amount": 4,
+      "name": "Prince John",
+      "version": "Greediest of All"
+    },
+    {
+      "amount": 4,
+      "name": "Sign the Scroll",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Signed Contract",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula's Trickery",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Wendy Darling",
+      "version": "Talented Sailor"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "hash": "718b6888fbd04825b64755e04d2da89408c3234e5a1bfce59d7c033fc18549e5",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Anna",
+      "version": "Braving the Storm"
+    },
+    {
+      "amount": 2,
+      "name": "Aurora",
+      "version": "Tranquil Princess"
+    },
+    {
+      "amount": 3,
+      "name": "Belle",
+      "version": "Apprentice Inventor"
+    },
+    {
+      "amount": 3,
+      "name": "Darling Dear",
+      "version": "Beloved Wife"
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Duke Weaselton",
+      "version": "Small-Time Crook"
+    },
+    {
+      "amount": 2,
+      "name": "Flintheart Glomgold",
+      "version": "Lone Cheater"
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Cramped in the Lamp"
+    },
+    {
+      "amount": 2,
+      "name": "Glean",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Julieta Madrigal",
+      "version": "Excellent Cook"
+    },
+    {
+      "amount": 2,
+      "name": "McDuck Manor",
+      "version": "Scrooge's Mansion"
+    },
+    {
+      "amount": 4,
+      "name": "Nala",
+      "version": "Mischievous Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Patch",
+      "version": "Playful Pup"
+    },
+    {
+      "amount": 3,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Pouncing Practice",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Restoring the Heart",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Rolly",
+      "version": "Chubby Puppy"
+    },
+    {
+      "amount": 2,
+      "name": "Sardine Can",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Snow White",
+      "version": "Fairest in the Land"
+    },
+    {
+      "amount": 4,
+      "name": "Thunderbolt",
+      "version": "Wonder Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Wendy Darling",
+      "version": "Talented Sailor"
+    },
+    {
+      "amount": 1,
+      "name": "You Have Forgotten Me",
+      "version": ""
+    }
+  ]
+}

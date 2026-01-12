@@ -1,0 +1,23 @@
+[
+  {
+    "hash": "42665ff9531f22dacc038d09d6923d3e6e2d6addc28b6b7c87531d51fd611c9c",
+    "name": "Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/set-championship-tournament-decks-2211",
+    "date": "2015-02-01",
+    "meta": {
+      "set": 6,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "a47828b46f71aa55e6c9e27acbb0c7f15617404354e2c19d85c64eee3679796a",
+        "place": 1,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      }
+    ]
+  }
+]
