@@ -1,0 +1,179 @@
+{
+  "hash": "e1b9c4153998c5309f0c111b1a0916317e27dc50a506c1c76be3989e62d608a3",
+  "inks": [
+    "amethyst",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Arthur",
+      "version": "Wart"
+    },
+    {
+      "amount": 2,
+      "name": "Basil",
+      "version": "Tenacious Mouse"
+    },
+    {
+      "amount": 2,
+      "name": "Beast's Mirror",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Benja",
+      "version": "Guardian of the Dragon Gem"
+    },
+    {
+      "amount": 1,
+      "name": "Dolores Madrigal",
+      "version": "Easy Listener"
+    },
+    {
+      "amount": 2,
+      "name": "Duckworth",
+      "version": "Ghost Butler"
+    },
+    {
+      "amount": 1,
+      "name": "Fa Zhou",
+      "version": "War Hero"
+    },
+    {
+      "amount": 2,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Giant Cobra",
+      "version": "Ghostly Serpent"
+    },
+    {
+      "amount": 2,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Heihei",
+      "version": "Rambling Rooster"
+    },
+    {
+      "amount": 3,
+      "name": "Jafar",
+      "version": "Aspiring Ruler"
+    },
+    {
+      "amount": 1,
+      "name": "Jafar",
+      "version": "Keeper of Secrets"
+    },
+    {
+      "amount": 1,
+      "name": "Jafar",
+      "version": "Lamp Thief"
+    },
+    {
+      "amount": 1,
+      "name": "Jafar",
+      "version": "Newly Crowned"
+    },
+    {
+      "amount": 2,
+      "name": "Jafar",
+      "version": "Royal Vizier"
+    },
+    {
+      "amount": 1,
+      "name": "Jasmine",
+      "version": "Fearless Princess"
+    },
+    {
+      "amount": 1,
+      "name": "Lawrence",
+      "version": "Jealous Manservant"
+    },
+    {
+      "amount": 2,
+      "name": "Lena Sabrewing",
+      "version": "Mysterious Duck"
+    },
+    {
+      "amount": 1,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 1,
+      "name": "Li Shang",
+      "version": "Imperial Captain"
+    },
+    {
+      "amount": 2,
+      "name": "Merlin",
+      "version": "Completing His Research"
+    },
+    {
+      "amount": 2,
+      "name": "Mushu",
+      "version": "Braggin' Dragon"
+    },
+    {
+      "amount": 1,
+      "name": "Nibs",
+      "version": "Lost Boy"
+    },
+    {
+      "amount": 1,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 1,
+      "name": "Philoctetes",
+      "version": "No-Nonsense Instructor"
+    },
+    {
+      "amount": 2,
+      "name": "Prince Eric",
+      "version": "Dashing and Brave"
+    },
+    {
+      "amount": 3,
+      "name": "Rajah",
+      "version": "Ghostly Tiger"
+    },
+    {
+      "amount": 1,
+      "name": "Raya",
+      "version": "Guidance Seeker"
+    },
+    {
+      "amount": 4,
+      "name": "Razoul",
+      "version": "Menacing Guard"
+    },
+    {
+      "amount": 1,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tiana",
+      "version": "Diligent Waitress"
+    },
+    {
+      "amount": 2,
+      "name": "Treasure Guardian",
+      "version": "Foreboding Sentry"
+    },
+    {
+      "amount": 1,
+      "name": "Zeus",
+      "version": "Missing His Spark"
+    }
+  ]
+}

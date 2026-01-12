@@ -1,0 +1,109 @@
+{
+  "hash": "f70a48829b341a3be3667639275a46f47eb1c5e9bf7af8a85bf7e463f76c657d",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Banzai",
+      "version": "Gluttonous Predator"
+    },
+    {
+      "amount": 1,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 2,
+      "name": "Chernabog's Followers",
+      "version": "Creatures of Evil"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 3,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 1,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Kit Cloudkicker",
+      "version": "Tough Guy"
+    },
+    {
+      "amount": 2,
+      "name": "Lyle Tiberius Rourke",
+      "version": "Cunning Mercenary"
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Snake"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Crab"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Rabbit"
+    },
+    {
+      "amount": 2,
+      "name": "Sir Hiss",
+      "version": "Aggravating Asp"
+    },
+    {
+      "amount": 2,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Sea Witch Queen"
+    }
+  ]
+}

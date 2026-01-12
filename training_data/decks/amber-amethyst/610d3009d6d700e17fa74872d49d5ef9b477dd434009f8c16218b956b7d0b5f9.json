@@ -1,0 +1,114 @@
+{
+  "hash": "610d3009d6d700e17fa74872d49d5ef9b477dd434009f8c16218b956b7d0b5f9",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Alan",
+      "version": "a-Dale - Rockin' Rooster"
+    },
+    {
+      "amount": 3,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 1,
+      "name": "Circle of Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 1,
+      "name": "Donald Duck",
+      "version": "Coin Collector"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 2,
+      "name": "Iago",
+      "version": "Stompin' Mad"
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lantern",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 4,
+      "name": "Monstro",
+      "version": "Infamous Whale"
+    },
+    {
+      "amount": 1,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 3,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Royal Guard",
+      "version": "Octopus Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "The Great Illuminary",
+      "version": "Abandoned Laboratory"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "We Know the Way",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

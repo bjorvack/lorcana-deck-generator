@@ -1,0 +1,99 @@
+{
+  "hash": "88f34d37224d6ec225d1e7a79f2a9ab6a72257dc96b6c6f449086da7b0d48c1e",
+  "inks": [
+    "amber",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Ethereal Voice"
+    },
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Sonic Warrior"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 4,
+      "name": "Beyond the Horizon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 1,
+      "name": "Gazelle",
+      "version": "Ballad Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 1,
+      "name": "Goofy",
+      "version": "Groundbreaking Chef"
+    },
+    {
+      "amount": 4,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Fearless Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 1,
+      "name": "Mayor Winddancer",
+      "version": "Actor-Turned-Politician"
+    },
+    {
+      "amount": 1,
+      "name": "Mickey Mouse",
+      "version": "Amber Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Troubadour",
+      "version": "Musical Narrator"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Vanessa"
+    },
+    {
+      "amount": 4,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

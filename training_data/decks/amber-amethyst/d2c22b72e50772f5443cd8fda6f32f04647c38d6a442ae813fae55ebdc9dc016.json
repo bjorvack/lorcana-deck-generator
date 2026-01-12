@@ -1,0 +1,99 @@
+{
+  "hash": "d2c22b72e50772f5443cd8fda6f32f04647c38d6a442ae813fae55ebdc9dc016",
+  "inks": [
+    "amethyst",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Baloo",
+      "version": "von Bruinwald XIII"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Good Job!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Honeymaren",
+      "version": "Northuldra Guide"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 3,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 3,
+      "name": "Madam Mim",
+      "version": "Snake"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 2,
+      "name": "Rapunzel's Tower",
+      "version": "Secluded Prison"
+    },
+    {
+      "amount": 2,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 2,
+      "name": "The Prince",
+      "version": "Vigilant Suitor"
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 3,
+      "name": "This Is My Family",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Wendy Darling",
+      "version": "Talented Sailor"
+    }
+  ]
+}

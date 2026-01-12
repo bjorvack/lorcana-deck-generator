@@ -1,0 +1,84 @@
+{
+  "hash": "fc7d24a512e361dbf6cdae50d9f01d734d8aa0c4ff5b1bbee011c31ca173bead",
+  "inks": [
+    "steel",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Adventurous Collector"
+    },
+    {
+      "amount": 4,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "LeFou",
+      "version": "Instigator"
+    },
+    {
+      "amount": 4,
+      "name": "Max Goof",
+      "version": "Rockin' Teen"
+    },
+    {
+      "amount": 4,
+      "name": "Mufasa",
+      "version": "Champion of the Pride Lands"
+    },
+    {
+      "amount": 4,
+      "name": "Mufasa",
+      "version": "Respected King"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "World's Greatest Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Capable Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Roxanne",
+      "version": "Powerline Fan"
+    },
+    {
+      "amount": 4,
+      "name": "Sergeant Tibbs",
+      "version": "Courageous Cat"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Scrappy Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Son of Mufasa"
+    },
+    {
+      "amount": 4,
+      "name": "You Can Fly!",
+      "version": ""
+    }
+  ]
+}

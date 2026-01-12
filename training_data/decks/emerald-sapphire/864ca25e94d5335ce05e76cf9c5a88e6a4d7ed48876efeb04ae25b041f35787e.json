@@ -1,0 +1,109 @@
+{
+  "hash": "864ca25e94d5335ce05e76cf9c5a88e6a4d7ed48876efeb04ae25b041f35787e",
+  "inks": [
+    "emerald",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Disguised Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 3,
+      "name": "Basil",
+      "version": "Undercover Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Baymax",
+      "version": "Giant Robot"
+    },
+    {
+      "amount": 2,
+      "name": "Bend to My Will",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Focused Flatfoot"
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Of the Lamp"
+    },
+    {
+      "amount": 1,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 2,
+      "name": "Heads Held High",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Honey Lemon",
+      "version": "Costumed Catalyst"
+    },
+    {
+      "amount": 1,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 2,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 3,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}

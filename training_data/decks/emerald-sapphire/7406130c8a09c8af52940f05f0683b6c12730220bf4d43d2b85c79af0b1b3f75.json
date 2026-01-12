@@ -1,0 +1,109 @@
+{
+  "hash": "7406130c8a09c8af52940f05f0683b6c12730220bf4d43d2b85c79af0b1b3f75",
+  "inks": [
+    "emerald",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Baymax",
+      "version": "Giant Robot"
+    },
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 3,
+      "name": "Captain Hook",
+      "version": "Underhanded"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Focused Flatfoot"
+    },
+    {
+      "amount": 3,
+      "name": "Flounder",
+      "version": "Collector's Companion"
+    },
+    {
+      "amount": 4,
+      "name": "Helping Hand",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Jeweled Collar",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Mama Odie",
+      "version": "Mystical Maven"
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 4,
+      "name": "Penny the Orphan",
+      "version": "Clever Child"
+    },
+    {
+      "amount": 2,
+      "name": "Prince Phillip",
+      "version": "Gallant Defender"
+    },
+    {
+      "amount": 2,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 3,
+      "name": "Prince Phillip",
+      "version": "Warden of the Woods"
+    },
+    {
+      "amount": 3,
+      "name": "Rescue Rangers Submarine",
+      "version": "Mobile Headquarters"
+    },
+    {
+      "amount": 2,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Seldom All They Seem",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Stand Out",
+      "version": ""
+    }
+  ]
+}

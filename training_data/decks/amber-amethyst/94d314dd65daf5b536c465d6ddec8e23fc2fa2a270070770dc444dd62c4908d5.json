@@ -1,0 +1,99 @@
+{
+  "hash": "94d314dd65daf5b536c465d6ddec8e23fc2fa2a270070770dc444dd62c4908d5",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "Storm Chaser"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Broom",
+      "version": "Bucket Brigade"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Broom",
+      "version": "Illuminary Keeper"
+    },
+    {
+      "amount": 2,
+      "name": "Magic Broom",
+      "version": "The Big Sweeper"
+    },
+    {
+      "amount": 2,
+      "name": "Maleficent",
+      "version": "Biding Her Time"
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "Wayward Sorcerer"
+    },
+    {
+      "amount": 3,
+      "name": "Peter Pan",
+      "version": "Shadow Finder"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "New Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 3,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 4,
+      "name": "Yen Sid",
+      "version": "Powerful Sorcerer"
+    }
+  ]
+}

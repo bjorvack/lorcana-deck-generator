@@ -1,0 +1,99 @@
+{
+  "hash": "1ec6c2518b8104cab6cade90a0e8e0afca93c1924198671b8bb7fd4895eec21b",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Anna",
+      "version": "Diplomatic Queen"
+    },
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 4,
+      "name": "Chip",
+      "version": "Quick Thinker"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Spiteful Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "Of the Lamp"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 3,
+      "name": "Madam Mim",
+      "version": "Tiny Adversary"
+    },
+    {
+      "amount": 4,
+      "name": "Pull the Lever!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Sudden Chill",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Wrong Lever!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Yelana",
+      "version": "Northuldra Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Yzma",
+      "version": "Conniving Chemist"
+    }
+  ]
+}

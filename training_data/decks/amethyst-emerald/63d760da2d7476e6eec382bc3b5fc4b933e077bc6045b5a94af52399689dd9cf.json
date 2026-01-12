@@ -1,0 +1,104 @@
+{
+  "hash": "63d760da2d7476e6eec382bc3b5fc4b933e077bc6045b5a94af52399689dd9cf",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Chip",
+      "version": "Quick Thinker"
+    },
+    {
+      "amount": 1,
+      "name": "Cri",
+      "version": "Kee - Lucky Cricket"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Devoted Herald"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Maleficent's Spy"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Spiteful Raven"
+    },
+    {
+      "amount": 3,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 1,
+      "name": "Hidden Cove",
+      "version": "Tranquil Haven"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Crab"
+    },
+    {
+      "amount": 2,
+      "name": "Prince John",
+      "version": "Greediest of All"
+    },
+    {
+      "amount": 4,
+      "name": "Pull the Lever!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sudden Chill",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "We Don't Talk About Bruno",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Wrong Lever!",
+      "version": ""
+    }
+  ]
+}

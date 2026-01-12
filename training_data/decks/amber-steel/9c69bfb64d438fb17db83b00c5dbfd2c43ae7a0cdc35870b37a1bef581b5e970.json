@@ -1,0 +1,89 @@
+{
+  "hash": "9c69bfb64d438fb17db83b00c5dbfd2c43ae7a0cdc35870b37a1bef581b5e970",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Whole New World",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Resolute Swordsman"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Food Fight Defender"
+    },
+    {
+      "amount": 4,
+      "name": "Nala",
+      "version": "Mischievous Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 4,
+      "name": "Pride Lands",
+      "version": "Pride Rock"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Eric",
+      "version": "Dashing and Brave"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Future King"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Alien Dancer"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "New Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "Tiana",
+      "version": "Diligent Waitress"
+    },
+    {
+      "amount": 2,
+      "name": "Zero to Hero",
+      "version": ""
+    }
+  ]
+}

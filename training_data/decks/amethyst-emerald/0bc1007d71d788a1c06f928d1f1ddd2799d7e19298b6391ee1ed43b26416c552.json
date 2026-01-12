@@ -1,0 +1,109 @@
+{
+  "hash": "0bc1007d71d788a1c06f928d1f1ddd2799d7e19298b6391ee1ed43b26416c552",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Betrayer of the Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 2,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Emily Quackfaster",
+      "version": "Level-Headed Librarian"
+    },
+    {
+      "amount": 1,
+      "name": "Finnick",
+      "version": "Tiny Terror"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 1,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 1,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Louis",
+      "version": "Endearing Alligator"
+    },
+    {
+      "amount": 2,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Rajah",
+      "version": "Ghostly Tiger"
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "hash": "a049b5542e134b55e6c40198396eb3115d15e3e5c1b69c76a02fac3a36e013e3",
+  "inks": [
+    "amethyst",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Amethyst Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Castle Wyvern",
+      "version": "Above the Clouds"
+    },
+    {
+      "amount": 3,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Fairy Ship",
+      "version": "Royal Vessel"
+    },
+    {
+      "amount": 4,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Giant Cobra",
+      "version": "Ghostly Serpent"
+    },
+    {
+      "amount": 4,
+      "name": "Illuminary Tunnels",
+      "version": "Linked Caverns"
+    },
+    {
+      "amount": 4,
+      "name": "John Silver",
+      "version": "Greedy Treasure Seeker"
+    },
+    {
+      "amount": 2,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 1,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 1,
+      "name": "Nala",
+      "version": "Undaunted Lioness"
+    },
+    {
+      "amount": 4,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 2,
+      "name": "Seven Dwarfs' Mine",
+      "version": "Secure Fortress"
+    },
+    {
+      "amount": 2,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 3,
+      "name": "They Never Come Back",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Fast Flier"
+    },
+    {
+      "amount": 2,
+      "name": "Zootopia",
+      "version": "Police Headquarters"
+    }
+  ]
+}

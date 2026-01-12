@@ -1,0 +1,114 @@
+{
+  "hash": "0b8595da2cd4f0b5cd4464df4f8bba6a0b8a3dd5600c64d299bd26799039a9b2",
+  "inks": [
+    "steel",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Agrabah",
+      "version": "Marketplace"
+    },
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 2,
+      "name": "Denahi",
+      "version": "Impatient Hunter"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Daisy's Date"
+    },
+    {
+      "amount": 3,
+      "name": "Duck for Cover!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Fortisphere",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Super Goof"
+    },
+    {
+      "amount": 4,
+      "name": "Li Shang",
+      "version": "Newly Promoted"
+    },
+    {
+      "amount": 2,
+      "name": "Longboat",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Medallion Weights",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Mickey Mouse",
+      "version": "Food Fight Defender"
+    },
+    {
+      "amount": 1,
+      "name": "Mushu",
+      "version": "Majestic Dragon"
+    },
+    {
+      "amount": 2,
+      "name": "Queen of Hearts",
+      "version": "Impulsive Ruler"
+    },
+    {
+      "amount": 2,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 4,
+      "name": "Shere Khan",
+      "version": "Menacing Predator"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "Adventurous Successor"
+    },
+    {
+      "amount": 2,
+      "name": "The Matchmaker",
+      "version": "Unforgiving Expert"
+    },
+    {
+      "amount": 2,
+      "name": "The Sword Released",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Thievery",
+      "version": ""
+    }
+  ]
+}

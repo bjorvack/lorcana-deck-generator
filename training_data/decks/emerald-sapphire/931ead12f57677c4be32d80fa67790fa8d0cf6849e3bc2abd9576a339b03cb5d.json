@@ -1,0 +1,109 @@
+{
+  "hash": "931ead12f57677c4be32d80fa67790fa8d0cf6849e3bc2abd9576a339b03cb5d",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Anna",
+      "version": "Diplomatic Queen"
+    },
+    {
+      "amount": 3,
+      "name": "Basil",
+      "version": "Undercover Detective"
+    },
+    {
+      "amount": 1,
+      "name": "Bend to My Will",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 2,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Mosquito Bite",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Sudden Scare",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 1,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}

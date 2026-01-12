@@ -1,0 +1,139 @@
+{
+  "hash": "bfa8c2742281e5fe7b1c478c37310b737611ffed2e761d60375a4bc6da8c99b3",
+  "inks": [
+    "amethyst",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Archimedes",
+      "version": "Exasperated Owl"
+    },
+    {
+      "amount": 2,
+      "name": "Daisy Duck",
+      "version": "Spotless Food-Fighter"
+    },
+    {
+      "amount": 2,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Daisy's Date"
+    },
+    {
+      "amount": 1,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Finders Keepers",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Gale",
+      "version": "Wind Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "King of Hearts",
+      "version": "Monarch of Wonderland"
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Vengeful Sorceress"
+    },
+    {
+      "amount": 4,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 1,
+      "name": "Ratigan",
+      "version": "Raging Rat"
+    },
+    {
+      "amount": 1,
+      "name": "Ratigan's Party",
+      "version": "Seedy Back Room"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "Adventurous Successor"
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 2,
+      "name": "Snowanna Rainbeau",
+      "version": "Cool Competitor"
+    },
+    {
+      "amount": 3,
+      "name": "Taffyta Muttonfudge",
+      "version": "Crowd Favorite"
+    },
+    {
+      "amount": 2,
+      "name": "Taffyta Muttonfudge",
+      "version": "Ruthless Rival"
+    },
+    {
+      "amount": 2,
+      "name": "Taffyta Muttonfudge",
+      "version": "Sour Speedster"
+    },
+    {
+      "amount": 3,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 2,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    },
+    {
+      "amount": 2,
+      "name": "Turbo",
+      "version": "Royal Hack"
+    },
+    {
+      "amount": 1,
+      "name": "Vanellope von Schweetz",
+      "version": "Random Roster Racer"
+    },
+    {
+      "amount": 1,
+      "name": "Wreck",
+      "version": "It Ralph - Demolition Dude"
+    }
+  ]
+}
