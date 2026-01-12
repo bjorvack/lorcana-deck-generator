@@ -1,0 +1,94 @@
+{
+  "hash": "72f3bd2f0998923a874dd21a443d9bd82fef4eeb82b3e87d6c5a6b993dc4ab49",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Baloo",
+      "version": "von Bruinwald XIII"
+    },
+    {
+      "amount": 4,
+      "name": "Chernabog's Followers",
+      "version": "Creatures of Evil"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Kuzco",
+      "version": "Wanted Llama"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Snake"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Biding Her Time"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 2,
+      "name": "The Sorcerer's Spellbook",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "hash": "efcbd0b59da2a303df3cf5081fdc3041b8817e99819b870248fb18fb2e235a86",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Agrabah",
+      "version": "Marketplace"
+    },
+    {
+      "amount": 4,
+      "name": "Brawl",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Don Karnage",
+      "version": "Prince of Pirates"
+    },
+    {
+      "amount": 4,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Daredevil"
+    },
+    {
+      "amount": 4,
+      "name": "Heathcliff",
+      "version": "Stoic Butler"
+    },
+    {
+      "amount": 4,
+      "name": "Heffalumps and Woozles",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hidden Cove",
+      "version": "Tranquil Haven"
+    },
+    {
+      "amount": 4,
+      "name": "Hypnotize",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Make the Potion",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Markowski",
+      "version": "Space Trooper"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 4,
+      "name": "Perilous Maze",
+      "version": "Watery Labyrinth"
+    },
+    {
+      "amount": 4,
+      "name": "Peter Pan's Dagger",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ray",
+      "version": "Easygoing Firefly"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "hash": "367b4a815b5b82130c8d744d9302478bc6849b4c5141251bf66fd3cedf5b3ee1",
+  "inks": [
+    "sapphire",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Brawl",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Down in New Orleans",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Super Goof"
+    },
+    {
+      "amount": 4,
+      "name": "Gramma Tala",
+      "version": "Keeper of Ancient Stories"
+    },
+    {
+      "amount": 4,
+      "name": "How Far I'll Go",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Lilo",
+      "version": "Causing an Uproar"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 2,
+      "name": "Maui's Fish Hook",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Sisu",
+      "version": "Empowered Sibling"
+    },
+    {
+      "amount": 3,
+      "name": "Tamatoa",
+      "version": "Happy as a Clam"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}

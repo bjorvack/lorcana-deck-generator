@@ -9,7 +9,7 @@ console.log('==================================================')
 console.log(`Epochs: ${epochs}`)
 console.log('==================================================\n')
 
-async function trainValidator () {
+async function trainValidator() {
   const manager = new TrainingManager()
   const model = new ValidationModel()
 
@@ -114,21 +114,21 @@ async function trainValidator () {
   }
   console.log('TF-IDF embeddings computed')
 
-  // 3. Load training data manually
+  // 3. Load training data using new structure
   console.log('Loading tournament data...')
   const fs = require('fs')
   const path = require('path')
-  const manifestPath = path.join(manager.trainingDataPath, 'manifest.json')
-  const allFiles = JSON.parse(fs.readFileSync(manifestPath, 'utf8'))
 
-  for (const file of allFiles) {
-    const filePath = path.join(manager.trainingDataPath, file)
-    if (fs.existsSync(filePath)) {
-      const rawData = JSON.parse(fs.readFileSync(filePath, 'utf8'))
-      manager.trainingData.push(rawData)
-    }
+  // Load training state and initialize hash set
+  manager.loadTrainingState()
+  if (!manager.trainingState.trainedDeckHashes) {
+    manager.trainingState.trainedDeckHashes = []
   }
-  console.log(`Loaded ${manager.trainingData.length} tournament files`)
+  manager.deckHashSet = new Set(manager.trainingState.trainedDeckHashes)
+
+  // Load all decks for validation (force load all)
+  await manager.loadTrainingData(true) // true = force load all (not just new)
+  console.log(`Loaded ${manager.newDecksToTrain.length} decks`)
 
   // 4. Prepare dataset with aggregated features
   console.log('\n📊 Preparing validation dataset...')
@@ -251,15 +251,17 @@ async function trainValidator () {
   console.log('Testing model on sample decks...')
   console.log('==================================================')
 
-  // Test real deck
-  const realDeck = manager.trainingData[0].decks[0]
+  // Test real deck (use first deck from newDecksToTrain)
+  const realDeck = manager.newDecksToTrain[0]
   const realDeckIndices = []
-  for (const cardEntry of realDeck.cards) {
-    const key = manager.getCardKey(cardEntry.name, cardEntry.version)
-    if (manager.cardMap.has(key)) {
-      const index = manager.cardMap.get(key)
-      for (let i = 0; i < cardEntry.amount; i++) {
-        realDeckIndices.push(index)
+  if (realDeck && realDeck.cards) {
+    for (const cardEntry of realDeck.cards) {
+      const key = manager.getCardKey(cardEntry.name, cardEntry.version)
+      if (manager.cardMap.has(key)) {
+        const index = manager.cardMap.get(key)
+        for (let i = 0; i < cardEntry.amount; i++) {
+          realDeckIndices.push(index)
+        }
       }
     }
   }
@@ -268,8 +270,7 @@ async function trainValidator () {
   )
   const realResult = await model.evaluateWithBreakdown(realFeatures)
   console.log(
-    `Real tournament deck score: ${(realResult.score * 100).toFixed(1)}% (${
-      realResult.grade
+    `Real tournament deck score: ${(realResult.score * 100).toFixed(1)}% (${realResult.grade
     })`
   )
   console.log(`Message: ${realResult.message}`)

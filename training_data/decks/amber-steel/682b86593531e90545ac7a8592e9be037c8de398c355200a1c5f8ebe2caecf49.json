@@ -1,0 +1,104 @@
+{
+  "hash": "682b86593531e90545ac7a8592e9be037c8de398c355200a1c5f8ebe2caecf49",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Whole New World",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "And Then Along Came Zeus",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ariel",
+      "version": "Sonic Warrior"
+    },
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Spectacular Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 1,
+      "name": "Beyond the Horizon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Ballroom Sensation"
+    },
+    {
+      "amount": 3,
+      "name": "Let the Storm Rage On",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Namaari",
+      "version": "Single-Minded Rival"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 2,
+      "name": "Prince Naveen",
+      "version": "Ukulele Player"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Queen",
+      "version": "Commanding Presence"
+    },
+    {
+      "amount": 4,
+      "name": "The Queen",
+      "version": "Conceited Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "The Queen",
+      "version": "Regal Monarch"
+    },
+    {
+      "amount": 2,
+      "name": "The Troubadour",
+      "version": "Musical Narrator"
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Vanessa"
+    },
+    {
+      "amount": 3,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

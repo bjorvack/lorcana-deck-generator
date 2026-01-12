@@ -1,0 +1,114 @@
+{
+  "hash": "ead23d882e705b46ea76b27b196e05dee9d4282a72039bcce933bf8ef645d548",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Card Soldiers",
+      "version": "Royal Troops"
+    },
+    {
+      "amount": 3,
+      "name": "Gaston",
+      "version": "Despicable Dealer"
+    },
+    {
+      "amount": 1,
+      "name": "Goofy",
+      "version": "Flying Goof"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Super Goof"
+    },
+    {
+      "amount": 3,
+      "name": "Lady Tremaine",
+      "version": "Imperious Queen"
+    },
+    {
+      "amount": 2,
+      "name": "Madame Medusa",
+      "version": "The Boss"
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 2,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 4,
+      "name": "Mother Gothel",
+      "version": "Withered and Wicked"
+    },
+    {
+      "amount": 4,
+      "name": "Mufasa",
+      "version": "Betrayed Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Pongo",
+      "version": "Determined Father"
+    },
+    {
+      "amount": 1,
+      "name": "Prince Eric",
+      "version": "Expert Helmsman"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Empowered Sibling"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 3,
+      "name": "Teeth and Ambitions",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Vanellope Von Schweetz",
+      "version": "Spunky Speedster"
+    },
+    {
+      "amount": 1,
+      "name": "Wreck",
+      "version": "It Ralph - Admiral Underpants"
+    }
+  ]
+}

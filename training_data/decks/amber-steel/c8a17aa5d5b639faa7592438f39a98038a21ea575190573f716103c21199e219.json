@@ -1,0 +1,119 @@
+{
+  "hash": "c8a17aa5d5b639faa7592438f39a98038a21ea575190573f716103c21199e219",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Ethereal Voice"
+    },
+    {
+      "amount": 1,
+      "name": "Ariel",
+      "version": "Singing Mermaid"
+    },
+    {
+      "amount": 3,
+      "name": "Ariel",
+      "version": "Sonic Warrior"
+    },
+    {
+      "amount": 3,
+      "name": "Bagheera",
+      "version": "Cautious Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Beyond the Horizon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 1,
+      "name": "Gazelle",
+      "version": "Ballad Singer"
+    },
+    {
+      "amount": 4,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Jasmine",
+      "version": "Fearless Princess"
+    },
+    {
+      "amount": 3,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 4,
+      "name": "Look at This Family",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "Amber Champion"
+    },
+    {
+      "amount": 1,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Rhino",
+      "version": "One-Sixteenth Wolf"
+    },
+    {
+      "amount": 3,
+      "name": "Rhino",
+      "version": "Power Hamster"
+    },
+    {
+      "amount": 3,
+      "name": "Shanti",
+      "version": "Village Girl"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Troubadour",
+      "version": "Musical Narrator"
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Vanessa"
+    },
+    {
+      "amount": 1,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

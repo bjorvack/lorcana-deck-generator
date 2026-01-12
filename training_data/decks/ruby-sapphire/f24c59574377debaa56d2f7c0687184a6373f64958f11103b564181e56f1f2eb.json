@@ -1,0 +1,109 @@
+{
+  "hash": "f24c59574377debaa56d2f7c0687184a6373f64958f11103b564181e56f1f2eb",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 3,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Focused Flatfoot"
+    },
+    {
+      "amount": 2,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 3,
+      "name": "Ichabod Crane",
+      "version": "Scared Out of His Mind"
+    },
+    {
+      "amount": 3,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Kristoff",
+      "version": "Mining the Ruins"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Standing Her Ground"
+    },
+    {
+      "amount": 2,
+      "name": "Next Stop, Olympus",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Raya",
+      "version": "Kumandran Rider"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Time to Go!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 3,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "hash": "18860e1d0761df786d20bcec28d9df904873adc63b629258e688e1e7aa2af8c9",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Prince Ali"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Tranquil Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Baymax",
+      "version": "Giant Robot"
+    },
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 4,
+      "name": "Ed",
+      "version": "Hysterical Partygoer"
+    },
+    {
+      "amount": 4,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 1,
+      "name": "Heathcliff",
+      "version": "Stoic Butler"
+    },
+    {
+      "amount": 4,
+      "name": "Heffalumps and Woozles",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hidden Cove",
+      "version": "Tranquil Haven"
+    },
+    {
+      "amount": 4,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "MegaBot",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 3,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Stand Out",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "The Queen",
+      "version": "Cruelest of All"
+    },
+    {
+      "amount": 2,
+      "name": "Thomas O'Malley",
+      "version": "Feline Charmer"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 1,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}

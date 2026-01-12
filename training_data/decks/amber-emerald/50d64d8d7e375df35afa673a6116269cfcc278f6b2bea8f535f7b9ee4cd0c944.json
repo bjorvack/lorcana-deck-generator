@@ -1,0 +1,124 @@
+{
+  "hash": "50d64d8d7e375df35afa673a6116269cfcc278f6b2bea8f535f7b9ee4cd0c944",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Captain Hook",
+      "version": "Underhanded"
+    },
+    {
+      "amount": 4,
+      "name": "Chip",
+      "version": "Friend Indeed"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Musketeer Spy"
+    },
+    {
+      "amount": 3,
+      "name": "David",
+      "version": "Impressive Surfer"
+    },
+    {
+      "amount": 2,
+      "name": "Flotsam",
+      "version": "Slippery as an Eel"
+    },
+    {
+      "amount": 4,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 2,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Good Job!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Heffalumps and Woozles",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Lady",
+      "version": "Decisive Dog"
+    },
+    {
+      "amount": 1,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Mosquito Bite",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Nani",
+      "version": "Protective Sister"
+    },
+    {
+      "amount": 1,
+      "name": "Olivia Flaversham",
+      "version": "The Toymaker's Daughter"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Pirate Scoundrel"
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Wonderland Empress"
+    },
+    {
+      "amount": 4,
+      "name": "Rhino",
+      "version": "One-Sixteenth Wolf"
+    },
+    {
+      "amount": 1,
+      "name": "Sebastian",
+      "version": "Loyal Crab"
+    },
+    {
+      "amount": 3,
+      "name": "The Queen",
+      "version": "Regal Monarch"
+    },
+    {
+      "amount": 2,
+      "name": "Tinker Bell",
+      "version": "Most Helpful"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Vanessa"
+    }
+  ]
+}

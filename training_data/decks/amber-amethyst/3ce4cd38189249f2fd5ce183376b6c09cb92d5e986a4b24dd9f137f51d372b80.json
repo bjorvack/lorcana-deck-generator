@@ -1,0 +1,129 @@
+{
+  "hash": "3ce4cd38189249f2fd5ce183376b6c09cb92d5e986a4b24dd9f137f51d372b80",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Chernabog's Followers",
+      "version": "Creatures of Evil"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 1,
+      "name": "Doc",
+      "version": "Leader of the Seven Dwarfs"
+    },
+    {
+      "amount": 2,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 2,
+      "name": "Honeymaren",
+      "version": "Northuldra Guide"
+    },
+    {
+      "amount": 1,
+      "name": "Isabela Madrigal",
+      "version": "Golden Child"
+    },
+    {
+      "amount": 1,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 1,
+      "name": "Magic Broom",
+      "version": "Illuminary Keeper"
+    },
+    {
+      "amount": 2,
+      "name": "Magic Carpet",
+      "version": "Amazing Flier"
+    },
+    {
+      "amount": 2,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Determined Explorer"
+    },
+    {
+      "amount": 3,
+      "name": "Pascal",
+      "version": "Garden Chameleon"
+    },
+    {
+      "amount": 4,
+      "name": "Pascal",
+      "version": "Rapunzel's Companion"
+    },
+    {
+      "amount": 2,
+      "name": "Peter Pan",
+      "version": "Shadow Finder"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 2,
+      "name": "Rajah",
+      "version": "Ghostly Tiger"
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 1,
+      "name": "This Is My Family",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fast Flier"
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Mad Sea Witch"
+    }
+  ]
+}

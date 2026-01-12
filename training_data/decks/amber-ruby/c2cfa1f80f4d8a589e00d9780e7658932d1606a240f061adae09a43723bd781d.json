@@ -1,0 +1,129 @@
+{
+  "hash": "c2cfa1f80f4d8a589e00d9780e7658932d1606a240f061adae09a43723bd781d",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Brawl",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Chernabog",
+      "version": "Evildoer"
+    },
+    {
+      "amount": 3,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 2,
+      "name": "Doc",
+      "version": "Leader of the Seven Dwarfs"
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Flynn Rider",
+      "version": "Frenemy"
+    },
+    {
+      "amount": 3,
+      "name": "Good Job!",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Goofy",
+      "version": "Flying Goof"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Super Goof"
+    },
+    {
+      "amount": 3,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Madame Medusa",
+      "version": "The Boss"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 3,
+      "name": "Moana",
+      "version": "Self-Taught Sailor"
+    },
+    {
+      "amount": 3,
+      "name": "Mother Gothel",
+      "version": "Withered and Wicked"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 1,
+      "name": "Prince Eric",
+      "version": "Expert Helmsman"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 3,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Empowered Sibling"
+    },
+    {
+      "amount": 2,
+      "name": "Sven",
+      "version": "Reindeer Steed"
+    }
+  ]
+}

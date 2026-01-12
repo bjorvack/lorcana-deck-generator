@@ -8,7 +8,7 @@ const path = require('path')
  * RL Training Script
  * Fine-tunes the deck generator using validator scores as reward
  */
-async function main () {
+async function main() {
   console.log('\n╔══════════════════════════════════════╗')
   console.log('║  RL Training for Deck Generator      ║')
   console.log('╚══════════════════════════════════════╝\n')
@@ -16,6 +16,13 @@ async function main () {
   // Initialize Training Manager
   console.log('[1/5] Initialize Training Manager...')
   const trainingManager = new TrainingManager()
+
+  // Load training state and initialize hash set
+  trainingManager.loadTrainingState()
+  if (!trainingManager.trainingState.trainedDeckHashes) {
+    trainingManager.trainingState.trainedDeckHashes = []
+  }
+  trainingManager.deckHashSet = new Set(trainingManager.trainingState.trainedDeckHashes)
 
   // Load cards
   console.log('[2/5] Loading cards...')
@@ -33,6 +40,11 @@ async function main () {
     }
   })
   console.log(`  ✓ Indexed ${trainingManager.cardMap.size} unique cards`)
+
+  // Build text vocabulary
+  console.log('[3b/5] Building text vocabulary...')
+  trainingManager.textEmbedder.buildVocabulary(trainingManager.cards)
+  console.log(`  ✓ Vocabulary size: ${trainingManager.textEmbedder.vocabularySize}`)
 
   // Load pre-trained DeckModel
   console.log('[4/5] Loading pre-trained deck model...')

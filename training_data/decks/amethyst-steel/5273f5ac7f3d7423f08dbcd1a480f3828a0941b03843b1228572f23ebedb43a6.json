@@ -1,0 +1,94 @@
+{
+  "hash": "5273f5ac7f3d7423f08dbcd1a480f3828a0941b03843b1228572f23ebedb43a6",
+  "inks": [
+    "amethyst",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Broadway",
+      "version": "Sturdy and Strong"
+    },
+    {
+      "amount": 2,
+      "name": "But I'm Much Faster",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 2,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Dr. Calico",
+      "version": "Green-Eyed Man"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "Exploring the Unknown"
+    },
+    {
+      "amount": 4,
+      "name": "Finders Keepers",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Giant Cobra",
+      "version": "Ghostly Serpent"
+    },
+    {
+      "amount": 4,
+      "name": "Gwythaint",
+      "version": "Savage Hunter"
+    },
+    {
+      "amount": 4,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hudson",
+      "version": "Determined Reader"
+    },
+    {
+      "amount": 2,
+      "name": "Let the Storm Rage On",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 4,
+      "name": "Mr. Smee",
+      "version": "Bumbling Mate"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 4,
+      "name": "The Twins",
+      "version": "Lost Boys"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "hash": "0bdd7d6a99550b63104c8a972fb31145e7aaad11a0b8ac040d692283fd965a6e",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 1,
+      "name": "Cri",
+      "version": "Kee - Lucky Cricket"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 2,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 3,
+      "name": "Flynn Rider",
+      "version": "Charming Rogue"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 3,
+      "name": "Kit Cloudkicker",
+      "version": "Tough Guy"
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 3,
+      "name": "Madam Mim",
+      "version": "Snake"
+    },
+    {
+      "amount": 3,
+      "name": "Magic Broom",
+      "version": "Illuminary Keeper"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Crab"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 2,
+      "name": "Merlin",
+      "version": "Rabbit"
+    },
+    {
+      "amount": 2,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 3,
+      "name": "We Don't Talk About Bruno",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "hash": "0b41abb8c2c7cef31d41605907bd488c76ebcfce5982b43317655223af31e5f9",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Chernabog's Followers",
+      "version": "Creatures of Evil"
+    },
+    {
+      "amount": 2,
+      "name": "Cri",
+      "version": "Kee - Lucky Cricket"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 3,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Kit Cloudkicker",
+      "version": "Tough Guy"
+    },
+    {
+      "amount": 2,
+      "name": "Lyle Tiberius Rourke",
+      "version": "Cunning Mercenary"
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 3,
+      "name": "Madam Mim",
+      "version": "Snake"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Crab"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Rabbit"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    }
+  ]
+}

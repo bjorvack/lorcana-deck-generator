@@ -1,0 +1,109 @@
+{
+  "hash": "119de53c24ab6b4fd12318e5813c71026c523d09733b553a3b61485d9f2e446f",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Alice",
+      "version": "Savvy Sailor"
+    },
+    {
+      "amount": 3,
+      "name": "Ba",
+      "version": "Boom!"
+    },
+    {
+      "amount": 3,
+      "name": "Baymax",
+      "version": "Armored Companion"
+    },
+    {
+      "amount": 3,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 2,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Cogsworth",
+      "version": "Grandfather Clock"
+    },
+    {
+      "amount": 3,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 3,
+      "name": "Gantu",
+      "version": "Captain Crankyhead"
+    },
+    {
+      "amount": 2,
+      "name": "Grab Your Sword",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ling",
+      "version": "Imperial Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "McDuck Manor",
+      "version": "Scrooge's Mansion"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Food Fight Defender"
+    },
+    {
+      "amount": 4,
+      "name": "Mr. Smee",
+      "version": "Bumbling Mate"
+    },
+    {
+      "amount": 3,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Guard Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Beloved Outlaw"
+    },
+    {
+      "amount": 3,
+      "name": "Robin Hood",
+      "version": "Champion of Sherwood"
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge McDuck",
+      "version": "Afficionado of Antiquities"
+    },
+    {
+      "amount": 2,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Wendy Darling",
+      "version": "Authority on Peter Pan"
+    }
+  ]
+}

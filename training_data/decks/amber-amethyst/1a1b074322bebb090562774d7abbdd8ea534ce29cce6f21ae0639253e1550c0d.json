@@ -1,0 +1,84 @@
+{
+  "hash": "1a1b074322bebb090562774d7abbdd8ea534ce29cce6f21ae0639253e1550c0d",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Amethyst Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Baloo",
+      "version": "von Bruinwald XIII"
+    },
+    {
+      "amount": 4,
+      "name": "Befuddle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Chernabog's Followers",
+      "version": "Creatures of Evil"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Biding Her Time"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 4,
+      "name": "The Boss is on a Roll",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Wendy Darling",
+      "version": "Talented Sailor"
+    }
+  ]
+}

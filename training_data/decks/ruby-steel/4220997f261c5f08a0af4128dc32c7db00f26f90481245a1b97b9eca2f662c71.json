@@ -1,0 +1,109 @@
+{
+  "hash": "4220997f261c5f08a0af4128dc32c7db00f26f90481245a1b97b9eca2f662c71",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ariel",
+      "version": "Adventurous Collector"
+    },
+    {
+      "amount": 2,
+      "name": "Ariel",
+      "version": "Sonic Warrior"
+    },
+    {
+      "amount": 3,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Beyond the Horizon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 2,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "I'm Still Here",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Imperial General"
+    },
+    {
+      "amount": 1,
+      "name": "Nothing We Won't Do",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 3,
+      "name": "Powerline",
+      "version": "Musical Superstar"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "World's Greatest Rock Star"
+    },
+    {
+      "amount": 3,
+      "name": "Roxanne",
+      "version": "Powerline Fan"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "When Will My Life Begin?",
+      "version": ""
+    }
+  ]
+}

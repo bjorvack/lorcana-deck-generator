@@ -1,0 +1,110 @@
+{
+  "hash": "d9850720304586329ca967d0a8954d1a32e089bee2049a2b32a0dc0915822edb",
+  "inks": [
+    "ruby",
+    "amethyst",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Brawl",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Bruni",
+      "version": "Fire Salamander"
+    },
+    {
+      "amount": 4,
+      "name": "Card Soldiers",
+      "version": "Royal Troops"
+    },
+    {
+      "amount": 4,
+      "name": "Chernabog's Followers",
+      "version": "Creatures of Evil"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Frenemy"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Lady Tremaine",
+      "version": "Imperious Queen"
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Snake"
+    },
+    {
+      "amount": 2,
+      "name": "Madame Medusa",
+      "version": "The Boss"
+    },
+    {
+      "amount": 2,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 2,
+      "name": "Merlin",
+      "version": "Crab"
+    },
+    {
+      "amount": 3,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Rabbit"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Self-Taught Sailor"
+    },
+    {
+      "amount": 3,
+      "name": "Prince John",
+      "version": "Fraidy-Cat"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 4,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 4,
+      "name": "The Queen's Castle",
+      "version": "Mirror Chamber"
+    },
+    {
+      "amount": 2,
+      "name": "Tuk Tuk",
+      "version": "Lively Partner"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "hash": "7ed2b56686e2b9d082ccdc716a882f16319f0306d7b5371b759a53b3b67e6748",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Alma Madrigal",
+      "version": "Accepting Grandmother"
+    },
+    {
+      "amount": 1,
+      "name": "Antonio Madrigal",
+      "version": "Friend to All"
+    },
+    {
+      "amount": 2,
+      "name": "Antonio's Jaguar",
+      "version": "Faithful Companion"
+    },
+    {
+      "amount": 2,
+      "name": "Bambi",
+      "version": "Prince of the Forest"
+    },
+    {
+      "amount": 3,
+      "name": "Bruno Madrigal",
+      "version": "Single-Minded"
+    },
+    {
+      "amount": 3,
+      "name": "Camilo Madrigal",
+      "version": "Center Stage"
+    },
+    {
+      "amount": 2,
+      "name": "Charlotte La Bouff",
+      "version": "Mardi Gras Princess"
+    },
+    {
+      "amount": 1,
+      "name": "Clawhauser",
+      "version": "Front Desk Officer"
+    },
+    {
+      "amount": 2,
+      "name": "Dewey",
+      "version": "Lovable Showoff"
+    },
+    {
+      "amount": 2,
+      "name": "Dolores Madrigal",
+      "version": "Within Earshot"
+    },
+    {
+      "amount": 2,
+      "name": "Druun",
+      "version": "Ravenous Plague"
+    },
+    {
+      "amount": 1,
+      "name": "Flower",
+      "version": "Shy Skunk"
+    },
+    {
+      "amount": 2,
+      "name": "Forest Duel",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 2,
+      "name": "Huey",
+      "version": "Reliable Leader"
+    },
+    {
+      "amount": 2,
+      "name": "Louie",
+      "version": "One Cool Duck"
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Up to No Good"
+    },
+    {
+      "amount": 2,
+      "name": "Mariano Guzman",
+      "version": "Handsome Suitor"
+    },
+    {
+      "amount": 3,
+      "name": "Mirabel Madrigal",
+      "version": "Curious Child"
+    },
+    {
+      "amount": 1,
+      "name": "Pascal",
+      "version": "Garden Chameleon"
+    },
+    {
+      "amount": 3,
+      "name": "Pepa Madrigal",
+      "version": "Sensitive Sister"
+    },
+    {
+      "amount": 2,
+      "name": "Poe De Spell",
+      "version": "Magica's Brother"
+    },
+    {
+      "amount": 2,
+      "name": "Ryder",
+      "version": "Fleet-Footed Infiltrator"
+    },
+    {
+      "amount": 3,
+      "name": "So Much to Give",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "This Is My Family",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Tiana",
+      "version": "Natural Talent"
+    },
+    {
+      "amount": 3,
+      "name": "Trials and Tribulations",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Try Everything",
+      "version": ""
+    }
+  ]
+}

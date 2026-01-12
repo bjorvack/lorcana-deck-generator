@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer-extra')
 const StealthPlugin = require('puppeteer-extra-plugin-stealth')
 const fs = require('fs')
 const path = require('path')
+const crypto = require('crypto')
 
 puppeteer.use(StealthPlugin());
 
@@ -10,17 +11,79 @@ puppeteer.use(StealthPlugin());
   const isDev = args.includes('--dev')
 
   console.log('Launching browser...')
-  const browser = await puppeteer.launch({ headless: true })
+  const browser = await puppeteer.launch({
+    headless: true
+  })
   const page = await browser.newPage()
 
   // Set a large viewport and User Agent to ensure desktop layout
-  await page.setViewport({ width: 1920, height: 1080 })
+  await page.setViewport({
+    width: 1920,
+    height: 1080
+  })
   await page.setUserAgent(
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
   )
 
+  // Helper: Get deck hash
+  function getDeckHash(cards) {
+    const sorted = [...cards].sort((a, b) => {
+      const nameA = a.name.toLowerCase()
+      const nameB = b.name.toLowerCase()
+      if (nameA < nameB) return -1
+      if (nameA > nameB) return 1
+      const verA = (a.version || '').toLowerCase()
+      const verB = (b.version || '').toLowerCase()
+      return verA.localeCompare(verB)
+    })
+
+    const signature = sorted.map(c => `${c.amount}x${c.name}|${c.version || ''}`).join('||')
+    return crypto.createHash('sha256').update(signature).digest('hex')
+  }
+
+  function getInkPath(inks) {
+    if (!inks || inks.length === 0) return null
+    return inks.slice().sort().join('-')
+  }
+
+  // Helper: Get tournament hash (name + date)
+  function getTournamentHash(name, date) {
+    const signature = `${name}|${date}`
+    return crypto.createHash('sha256').update(signature).digest('hex')
+  }
+
+  // Helper: Get set of all existing tournament hashes
+  function getExistingTournamentHashes() {
+    const hashes = new Set()
+    const tournamentsDir = path.join(__dirname, '..', 'training_data', 'tournaments')
+
+    if (fs.existsSync(tournamentsDir)) {
+      const files = fs.readdirSync(tournamentsDir).filter(f => f.endsWith('.json'))
+      for (const file of files) {
+        try {
+          const filePath = path.join(tournamentsDir, file)
+          const data = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+          for (const t of data) {
+            if (t.hash) {
+              hashes.add(t.hash)
+            } else if (t.name && t.date) {
+              hashes.add(getTournamentHash(t.name, t.date))
+            }
+          }
+        } catch (e) {
+          console.warn(`Warning: Could not read/parse tournament file ${file}: ${e.message}`)
+        }
+      }
+    }
+    return hashes
+  }
+
   try {
     console.log('Fetching and processing all tournaments...')
+
+    // Pre-load all existing tournament hashes
+    const existingTournamentHashes = getExistingTournamentHashes()
+    console.log(`Loaded ${existingTournamentHashes.size} existing tournaments to skip.`)
 
     let currentPage = 1
     let hasMorePages = true
@@ -34,11 +97,13 @@ puppeteer.use(StealthPlugin());
     while (hasMorePages) {
       console.log(`\n========== Fetching page ${currentPage} ==========`)
       const pageUrl =
-        currentPage === 1
-          ? 'https://inkdecks.com/lorcana-tournaments/core?sort=date&direction=desc'
-          : `https://inkdecks.com/lorcana-tournaments/core?sort=date&direction=desc&page=${currentPage}`
+        currentPage === 1 ?
+          'https://inkdecks.com/lorcana-tournaments/core?sort=date&direction=desc' :
+          `https://inkdecks.com/lorcana-tournaments/core?sort=date&direction=desc&page=${currentPage}`
 
-      await page.goto(pageUrl, { waitUntil: 'networkidle2' })
+      await page.goto(pageUrl, {
+        waitUntil: 'networkidle2'
+      })
       await new Promise((resolve) =>
         setTimeout(resolve, 3000 + Math.random() * 2000)
       ) // 3-5s random delay
@@ -113,64 +178,55 @@ puppeteer.use(StealthPlugin());
         `Found ${tournamentLinks.length} tournaments on page ${currentPage}`
       )
 
-      // Process each tournament on this page
+      // PROCESS TOURNAMENTS
       for (const tournament of tournamentLinks) {
         console.log(`\nProcessing: ${tournament.text}`)
         console.log(`URL: ${tournament.href}`)
-        if (tournament.dateStr) {
-          console.log(`Date: ${tournament.dateStr}`)
-        } else {
-          console.log(`Warning: No date found for ${tournament.text}`)
-          console.log(`  Cells: ${JSON.stringify(tournament.debugCells)}`)
 
-          if (isDev) {
-            console.error('Error: Missing date in dev mode. Exiting.')
-            process.exit(1)
-          }
-        }
-
-        // Parse the tournament date
+        // Parse date
         let tournamentDate = 'unknown-date'
+        let year = 'unknown'
         if (tournament.dateStr) {
           try {
             const parsed = new Date(tournament.dateStr)
             if (!isNaN(parsed.getTime())) {
               tournamentDate = parsed.toISOString().split('T')[0]
+              year = parsed.getFullYear().toString()
             }
           } catch (e) {
-            console.log(
-              `  Warning: Could not parse date: ${tournament.dateStr}`
-            )
+            console.log(`  Warning: Could not parse date: ${tournament.dateStr}`)
           }
         }
 
-        // Create filename with prepended date for sorting
-        const tournamentSlug = tournament.href
-          .split('/')
-          .pop()
-          .replace('-tournament-decks', '')
-          .replace(/\d+$/, '')
-        const filename = `${tournamentDate}_${tournamentSlug}.json`
-        const outputPath = path.join(
-          __dirname,
-          '..',
-          'training_data',
-          filename
-        )
+        // Check if tournament already exists in the year file
+        const yearFilePath = path.join(__dirname, '..', 'training_data', 'tournaments', `${year}.json`)
+        let yearData = []
+        if (fs.existsSync(yearFilePath)) {
+          try {
+            yearData = JSON.parse(fs.readFileSync(yearFilePath, 'utf8'))
+          } catch (e) {
+            console.error('Error reading year file, starting fresh array')
+          }
+        }
 
-        if (fs.existsSync(outputPath)) {
-          console.log(`⏭️  Skipping - already scraped (${filename})`)
+        // Check if tournament already exists (by name + date hash)
+        const currentHash = getTournamentHash(tournament.text, tournamentDate)
+
+        if (existingTournamentHashes.has(currentHash)) {
+          console.log(`⏭️  Skipping - already scraped (${tournament.text} | ${tournamentDate})`)
           continue
         }
 
-        await page.goto(tournament.href, { waitUntil: 'networkidle2' })
+        await page.goto(tournament.href, {
+          waitUntil: 'networkidle2'
+        })
         await new Promise((resolve) =>
           setTimeout(resolve, 2000 + Math.random() * 2000)
         ) // 2-4s random delay
 
         // Extract tournament metadata
         const tournamentMeta = await page.evaluate(() => {
-          // Extract player count - look for "Players" text in table cells
+          // Extract player count
           let players = null
           const allCells = Array.from(document.querySelectorAll('td'))
           const playersCell = allCells.find(
@@ -181,99 +237,75 @@ puppeteer.use(StealthPlugin());
             players = playersText ? parseInt(playersText) : null
           }
 
-          // Extract set and legality from breadcrumbs or page content
+          // Extract set and legality
           let set = null
           let legality = null
-
-          // Try to find set info (e.g., "Set 10" or similar)
           const pageText = document.body.innerText
           const setMatch = pageText.match(/Set\s+(\d+)/i)
           if (setMatch) {
             set = parseInt(setMatch[1])
           }
-
-          // Try to determine legality from URL or page content
-          if (
-            pageText.includes('Core') ||
-            window.location.href.includes('core')
-          ) {
+          if (pageText.includes('Core') || window.location.href.includes('core')) {
             legality = 'Core'
-          } else if (
-            pageText.includes('Infinity') ||
-            window.location.href.includes('infinity')
-          ) {
+          } else if (pageText.includes('Infinity') || window.location.href.includes('infinity')) {
             legality = 'Infinity'
           }
 
-          return { players, set, legality }
+          return {
+            players,
+            set,
+            legality
+          }
         })
 
-        // Extract deck links with placement and ink colors
+        // Extract deck links
         const deckData = await page.evaluate(() => {
-          const rows = Array.from(document.querySelectorAll('tr[data-href]'))
+          const rows = Array.from(document.querySelectorAll('tr[id^="desktop-deck-"]'))
           return rows
             .filter((row) =>
               row.getAttribute('data-href')?.includes('/lorcana-metagame/deck-')
             )
-            .slice(0, 16)
             .map((row, index) => {
               const href = row.getAttribute('data-href')
 
-              // Try to find placement from the row
-              const placeCell = row.querySelector('td:first-child')
-              const place = placeCell
-                ? parseInt(placeCell.innerText) || index + 1
-                : index + 1
+              const placeCell = row.querySelector('td')
+              let place = index + 1 // Default fallback
 
-              // Try to extract ink colors from the row
+              if (placeCell) {
+                const text = placeCell.innerText.trim()
+
+                if (text.toLowerCase().includes('winner') || text.includes('1st')) {
+                  place = 1
+                }
+                else if (text.toLowerCase().includes('finalist') || text.toLowerCase().includes('runner') || text.includes('2nd')) {
+                  place = 2
+                }
+                else {
+                  const match = text.match(/(\d+)/)
+                  if (match) place = parseInt(match[1])
+                }
+              }
+
               const inks = []
-              const inkElements = row.querySelectorAll(
-                '[class*="ink-"], [data-ink], img[alt*="ink"]'
-              )
-              inkElements.forEach((el) => {
-                // Check class names for ink colors
-                const classList = el.className.split(' ')
-                classList.forEach((cls) => {
-                  const inkMatch = cls.match(
-                    /ink-(amber|amethyst|emerald|ruby|sapphire|steel)/i
-                  )
-                  if (inkMatch && !inks.includes(inkMatch[1].toLowerCase())) {
-                    inks.push(inkMatch[1].toLowerCase())
-                  }
-                })
-
-                // Check alt text for ink colors
-                const alt = el.getAttribute('alt') || ''
-                const inkColors = [
-                  'amber',
-                  'amethyst',
-                  'emerald',
-                  'ruby',
-                  'sapphire',
-                  'steel'
-                ]
-                inkColors.forEach((color) => {
-                  if (
-                    alt.toLowerCase().includes(color) &&
-                    !inks.includes(color)
-                  ) {
-                    inks.push(color)
-                  }
-                })
-              })
-
-              return { href, place, inks }
+              return {
+                href,
+                place,
+                inks
+              }
             })
         })
 
         console.log(`Found ${deckData.length} decks`)
 
-        const decks = []
+        const processedDecks = []
 
         // Process each deck
         for (const deckInfo of deckData) {
-          console.log(`Fetching deck: ${deckInfo.href}`)
-          await page.goto(deckInfo.href, { waitUntil: 'networkidle2' })
+          console.log(`Fetching deck (Place: ${deckInfo.place}): ${deckInfo.href}`)
+
+          await page.goto(deckInfo.href, {
+            waitUntil: 'networkidle2'
+          })
           await new Promise((resolve) =>
             setTimeout(resolve, 3000 + Math.random() * 2000)
           ) // 3-5s random delay
@@ -283,194 +315,211 @@ puppeteer.use(StealthPlugin());
           const exportUrlMatch = html.match(/\/decks\/export\/([a-f0-9-]+)/)
 
           let parsedCards = []
+          let failureReason = 'Unknown Error'
+
           if (exportUrlMatch) {
             const exportUrl = exportUrlMatch[0]
-            console.log(`  Export URL: ${exportUrl}`)
 
-            // Retry logic for export page fetching
+            // --- INK SCRAPING (Primary) ---
+            // Fetch inks from the deck page details
+            if (!deckInfo.inks || deckInfo.inks.length === 0) {
+              console.log('  Testing deck page for ink colors...')
+              const pageInks = await page.evaluate(() => {
+                const foundInks = []
+                const images = Array.from(document.querySelectorAll('img'))
+                const inkColors = ['amber', 'amethyst', 'emerald', 'ruby', 'sapphire', 'steel']
+
+                images.forEach(img => {
+                  const alt = (img.getAttribute('alt') || '').toLowerCase()
+                  const src = (img.getAttribute('src') || '').toLowerCase()
+                  const className = (img.className || '').toLowerCase()
+
+                  inkColors.forEach(color => {
+                    if (
+                      (alt.includes(color) || src.includes(color) || className.includes(color)) &&
+                      !foundInks.includes(color)
+                    ) {
+                      foundInks.push(color)
+                    }
+                  })
+                })
+
+                if (foundInks.length === 0) {
+                  const bodyText = document.body.innerText.toLowerCase()
+                  const headerText = bodyText.substring(0, 1000)
+                  inkColors.forEach(color => {
+                    if (headerText.includes(color) && !foundInks.includes(color)) {
+                      foundInks.push(color)
+                    }
+                  })
+                }
+                return foundInks
+              })
+
+              if (pageInks.length > 0) {
+                deckInfo.inks = pageInks
+                console.log(`  ✓ Found inks on deck page: ${pageInks.join(', ')}`)
+              } else {
+                console.log('  ✗ Could not find inks on deck page.')
+              }
+            }
+            // ----------------------------------
+
             const maxRetries = 3
             let retryCount = 0
             let cardList = null
 
             while (retryCount < maxRetries && !cardList) {
               if (retryCount > 0) {
-                const delay = 3000 * retryCount // Exponential backoff: 3s, 6s, 9s
-                console.log(
-                  `  Retry ${retryCount}/${maxRetries} after ${delay}ms delay...`
-                )
-                await new Promise((resolve) => setTimeout(resolve, delay))
+                await new Promise((resolve) => setTimeout(resolve, 3000 * retryCount))
               }
-
               try {
-                // Navigate to the TXT export URL with longer wait
                 await page.goto(`https://inkdecks.com${exportUrl}/txt`, {
                   waitUntil: 'networkidle2',
                   timeout: 30000
                 })
                 await new Promise((resolve) =>
                   setTimeout(resolve, 4000 + Math.random() * 2000)
-                ) // 4-6s random wait for Cloudflare
+                )
 
-                // Get the plain text card list
-                cardList = await page.evaluate(() => {
+                const result = await page.evaluate(() => {
                   const textarea = document.querySelector('textarea')
-                  if (textarea && textarea.value) {
-                    return textarea.value
-                  }
-                  // Check if it's a Cloudflare challenge page
+                  if (textarea && textarea.value) return { type: 'success', content: textarea.value }
+                  const bodyText = document.body.innerText
                   if (
-                    document.body.innerText.includes(
-                      'Verifying you are human'
-                    ) ||
-                    document.body.innerText.includes('Just a moment')
+                    bodyText.includes('Verifying you are human') ||
+                    bodyText.includes('Just a moment')
                   ) {
-                    return null // Signal to retry
+                    return { type: 'captcha', content: null }
                   }
-                  return document.body.innerText
+                  return { type: 'empty', content: bodyText }
                 })
 
-                // If we got content, try to parse it
-                if (cardList && cardList.trim().length > 0) {
-                  const lines = cardList
-                    .split('\n')
-                    .filter((line) => line.trim())
-
-                  const tempCards = lines
-                    .map((line) => {
-                      // Match "N Card Name - Card Subtitle" format
-                      const match = line.match(
-                        /^(\d+)\s*[x×]?\s+(.+?)\s*-\s*(.+)$/
-                      )
-                      if (match) {
-                        return {
-                          amount: parseInt(match[1]),
-                          name: match[2].trim(),
-                          version: match[3].trim()
-                        }
+                if (result.type === 'success' && result.content.trim().length > 0) {
+                  cardList = result.content
+                  const lines = cardList.split('\n').filter((line) => line.trim())
+                  const tempCards = lines.map((line) => {
+                    const match = line.match(/^(\d+)\s*[x×]?\s+(.+?)\s*-\s*(.+)$/)
+                    if (match) return {
+                      amount: parseInt(match[1]),
+                      name: match[2].trim(),
+                      version: match[3].trim()
+                    }
+                    const simpleMatch = line.match(/^(\d+)\s*[x×]?\s+(.+)$/)
+                    if (simpleMatch && simpleMatch[2].length > 2) {
+                      return {
+                        amount: parseInt(simpleMatch[1]),
+                        name: simpleMatch[2].trim(),
+                        version: ''
                       }
-                      // Also try without version
-                      const simpleMatch = line.match(/^(\d+)\s*[x×]?\s+(.+)$/)
-                      if (simpleMatch && simpleMatch[2].length > 2) {
-                        return {
-                          amount: parseInt(simpleMatch[1]),
-                          name: simpleMatch[2].trim(),
-                          version: ''
-                        }
-                      }
-                      return null
-                    })
-                    .filter(
-                      (card) =>
-                        card !== null && card.amount >= 1 && card.amount <= 4
-                    )
+                    }
+                    return null
+                  }).filter(c => c !== null && c.amount >= 1 && c.amount <= 4)
 
-                  // Only accept the result if we got some cards
                   if (tempCards.length > 0) {
                     parsedCards = tempCards
-                    break // Success!
+                    break
                   } else {
-                    cardList = null // Reset to retry
+                    failureReason = 'Parsed 0 valid cards from text content'
+                    cardList = null
                   }
+                } else if (result.type === 'captcha') {
+                  failureReason = 'Cloudflare/Captcha detected'
+                } else {
+                  failureReason = 'No textarea found or empty content'
                 }
-              } catch (error) {
-                console.log(
-                  `  Error on attempt ${retryCount + 1}: ${error.message}`
-                )
+              } catch (e) {
+                console.log(`  Error retry ${retryCount}: ${e.message}`)
+                failureReason = `Exception: ${e.message}`
               }
-
               retryCount++
             }
-
-            if (parsedCards.length === 0 && retryCount >= maxRetries) {
-              console.log(`  ✗ Failed after ${maxRetries} retries`)
-            }
+          } else {
+            failureReason = 'No export URL found in page HTML'
           }
 
           if (parsedCards.length > 0) {
-            const deckEntry = {
-              place: deckInfo.place,
-              cards: parsedCards
-            }
+            const inkPath = getInkPath(deckInfo.inks)
 
-            // Only add inks if we found any
-            if (deckInfo.inks.length > 0) {
-              deckEntry.inks = deckInfo.inks
-            }
+            // Strict validation: Decks must have identified inks
+            if (!inkPath) {
+              console.error('  🛑 FATAL: Deck found with unknown/missing inks!')
+              console.error(`  URL: ${deckInfo.href}`)
+              console.error('  Please inspect the page to see where ink information is located.')
+              process.exit(1) // Stop the script as requested
+            } else {
+              const hash = getDeckHash(parsedCards)
 
-            decks.push(deckEntry)
-            console.log(`  ✓ Extracted ${parsedCards.length} cards`)
+              // Save dedicated deck file if not exists
+              const deckDir = path.join(__dirname, '..', 'training_data', 'decks', inkPath)
+              if (!fs.existsSync(deckDir)) fs.mkdirSync(deckDir, {
+                recursive: true
+              })
+
+              const deckFile = path.join(deckDir, `${hash}.json`)
+              if (!fs.existsSync(deckFile)) {
+                const deckContent = {
+                  hash,
+                  inks: deckInfo.inks,
+                  cards: parsedCards
+                }
+                fs.writeFileSync(deckFile, JSON.stringify(deckContent, null, 2))
+                console.log(`  ✓ Saved new deck: ${hash.substring(0, 8)}...`)
+              } else {
+                console.log(`  ✓ Deck already exists: ${hash.substring(0, 8)}...`)
+              }
+
+              // Add to tournament list
+              processedDecks.push({
+                hash,
+                place: deckInfo.place,
+                inks: deckInfo.inks
+              })
+            }
           } else {
-            console.log('  ✗ Failed to extract cards')
+            console.log(`  ✗ Failed to extract cards: ${failureReason}`)
           }
 
-          // Add a random delay between deck fetches to avoid rate limiting
           await new Promise((resolve) =>
             setTimeout(resolve, 2000 + Math.random() * 2000)
-          ) // 2-4s random delay
+          )
         }
 
-        // Save tournament data
-        if (decks.length > 0) {
-          const tournamentData = {
+        // Save tournament entry ONLY if we have decks
+        if (processedDecks.length > 0) {
+          const tournamentEntry = {
+            hash: currentHash,
             name: tournament.text,
             url: tournament.href,
-            decks
+            date: tournamentDate,
+            meta: {},
+            players: tournamentMeta.players, // can be null
+            decks: processedDecks
           }
+          if (tournamentMeta.set) tournamentEntry.meta.set = tournamentMeta.set
+          if (tournamentMeta.legality) tournamentEntry.meta.legality = tournamentMeta.legality
 
-          // Add metadata if available
-          if (tournamentMeta.set || tournamentMeta.legality) {
-            tournamentData.meta = {}
-            if (tournamentMeta.set) { tournamentData.meta.set = tournamentMeta.set }
-            if (tournamentMeta.legality) { tournamentData.meta.legality = tournamentMeta.legality }
+          // Re-read file to prevent race conditions roughly (not perfect but OK for single thread loop)
+          if (fs.existsSync(yearFilePath)) {
+            yearData = JSON.parse(fs.readFileSync(yearFilePath, 'utf8'))
           }
+          yearData.push(tournamentEntry)
 
-          if (tournamentMeta.players) {
-            tournamentData.players = tournamentMeta.players
-          }
+          // Create directory if needed
+          const tournamentsDir = path.dirname(yearFilePath)
+          if (!fs.existsSync(tournamentsDir)) fs.mkdirSync(tournamentsDir, { recursive: true })
 
-          // Create filename from tournament name (same logic as earlier)
-          const tournamentSlug = tournament.href
-            .split('/')
-            .pop()
-            .replace('-tournament-decks', '')
-            .replace(/\d+$/, '')
-          const filename = `${tournamentDate}_${tournamentSlug}.json`
-
-          const outputPath = path.join(
-            __dirname,
-            '..',
-            'training_data',
-            filename
-          )
-          fs.writeFileSync(outputPath, JSON.stringify(tournamentData, null, 2))
-          console.log(`Saved to: ${outputPath}`)
-
-          // Update manifest
-          const manifestPath = path.join(
-            __dirname,
-            '..',
-            'training_data',
-            'manifest.json'
-          )
-          let manifest = []
-          if (fs.existsSync(manifestPath)) {
-            manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'))
-          }
-          if (!manifest.includes(filename)) {
-            manifest.push(filename)
-            fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2))
-          }
+          fs.writeFileSync(yearFilePath, JSON.stringify(yearData, null, 2))
+          console.log(`Saved tournament to ${year}.json`)
         }
 
         totalProcessed++
       }
 
-      // Move to next page
       console.log(
         `\nCompleted page ${currentPage}. Processed ${totalProcessed} tournaments so far.`
       )
 
-      // Stop after first page if in first-page-only mode
       if (firstPageOnly) {
         console.log('First page only mode - stopping pagination.')
         hasMorePages = false
@@ -478,8 +527,6 @@ puppeteer.use(StealthPlugin());
       }
 
       currentPage++
-
-      // Add delay between pages to avoid rate limiting
       await new Promise((resolve) =>
         setTimeout(resolve, 2000 + Math.random() * 2000)
       )
@@ -488,6 +535,7 @@ puppeteer.use(StealthPlugin());
     console.log('\n========== Scraping complete! ==========')
     console.log(`Total tournaments processed: ${totalProcessed}`)
     console.log(`Total pages: ${currentPage - 1}`)
+
   } catch (e) {
     console.error('Error:', e)
   } finally {

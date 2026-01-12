@@ -1,0 +1,129 @@
+{
+  "hash": "fad450876f9eeec52925dafc0615555543cfac07da096e4fc6f9fe3e035c8b75",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Arthur",
+      "version": "King Victorious"
+    },
+    {
+      "amount": 1,
+      "name": "Basil",
+      "version": "Tenacious Mouse"
+    },
+    {
+      "amount": 1,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 1,
+      "name": "Castle Wyvern",
+      "version": "Above the Clouds"
+    },
+    {
+      "amount": 2,
+      "name": "Daisy Duck",
+      "version": "Ghost Finder"
+    },
+    {
+      "amount": 1,
+      "name": "Detective's Badge",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Ghost Hunter"
+    },
+    {
+      "amount": 1,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Francine",
+      "version": "Eyeing the Evidence"
+    },
+    {
+      "amount": 1,
+      "name": "Genie",
+      "version": "Investigative Mind"
+    },
+    {
+      "amount": 3,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Inspector Tezuka",
+      "version": "Resolute Officer"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 2,
+      "name": "Minnie Mouse",
+      "version": "Ghost Hunter"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Persistent Investigator"
+    },
+    {
+      "amount": 2,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 1,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 1,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    }
+  ]
+}

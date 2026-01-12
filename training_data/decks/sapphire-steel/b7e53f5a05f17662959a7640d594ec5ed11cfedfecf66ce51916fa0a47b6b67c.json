@@ -1,0 +1,159 @@
+{
+  "hash": "b7e53f5a05f17662959a7640d594ec5ed11cfedfecf66ce51916fa0a47b6b67c",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Aladdin",
+      "version": "Research Assistant"
+    },
+    {
+      "amount": 1,
+      "name": "Aladdin",
+      "version": "Vigilant Guard"
+    },
+    {
+      "amount": 2,
+      "name": "Basil",
+      "version": "Tenacious Mouse"
+    },
+    {
+      "amount": 3,
+      "name": "Bernard",
+      "version": "Over-Prepared"
+    },
+    {
+      "amount": 1,
+      "name": "Captain Hook",
+      "version": "Captain of the Jolly Roger"
+    },
+    {
+      "amount": 1,
+      "name": "Chief Bogo",
+      "version": "Calling the Shots"
+    },
+    {
+      "amount": 2,
+      "name": "Clawhauser",
+      "version": "Donut Detective"
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Ghost Hunter"
+    },
+    {
+      "amount": 3,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Francine",
+      "version": "Eyeing the Evidence"
+    },
+    {
+      "amount": 2,
+      "name": "Helping Hand",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Inspector Tezuka",
+      "version": "Resolute Officer"
+    },
+    {
+      "amount": 2,
+      "name": "Jasmine",
+      "version": "Fearless Princess"
+    },
+    {
+      "amount": 2,
+      "name": "Jasmine",
+      "version": "Soothing Princess"
+    },
+    {
+      "amount": 2,
+      "name": "Jasmine",
+      "version": "Steady Strategist"
+    },
+    {
+      "amount": 2,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 3,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 2,
+      "name": "Mickey Mouse",
+      "version": "Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Minnie Mouse",
+      "version": "Ghost Hunter"
+    },
+    {
+      "amount": 1,
+      "name": "Mr. Arrow",
+      "version": "Legacy's First Mate"
+    },
+    {
+      "amount": 1,
+      "name": "Nala",
+      "version": "Undaunted Lioness"
+    },
+    {
+      "amount": 1,
+      "name": "Namaari",
+      "version": "Single-Minded Rival"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Determined Detective"
+    },
+    {
+      "amount": 1,
+      "name": "Nick Wilde",
+      "version": "Persistent Investigator"
+    },
+    {
+      "amount": 2,
+      "name": "One Jump Ahead",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Pluto",
+      "version": "Guard Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Putting It All Together",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "The Sultan",
+      "version": "Playful Monarch"
+    },
+    {
+      "amount": 2,
+      "name": "Zootopia",
+      "version": "Police Headquarters"
+    }
+  ]
+}

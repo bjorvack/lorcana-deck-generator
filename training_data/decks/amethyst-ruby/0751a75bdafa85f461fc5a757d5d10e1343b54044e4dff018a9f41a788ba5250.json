@@ -1,0 +1,99 @@
+{
+  "hash": "0751a75bdafa85f461fc5a757d5d10e1343b54044e4dff018a9f41a788ba5250",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Brawl",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 4,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 2,
+      "name": "Lady Tremaine",
+      "version": "Imperious Queen"
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 3,
+      "name": "Madam Mim",
+      "version": "Snake"
+    },
+    {
+      "amount": 2,
+      "name": "Madame Medusa",
+      "version": "The Boss"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 3,
+      "name": "Merlin",
+      "version": "Crab"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Rabbit"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 4,
+      "name": "Shere Khan",
+      "version": "Menacing Predator"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "hash": "ea9867b78cab831d49323a002907837859b73f9ab70c82dfdecbf116d7cb2039",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Ariel",
+      "version": "Sonic Warrior"
+    },
+    {
+      "amount": 2,
+      "name": "Arthur",
+      "version": "King Victorious"
+    },
+    {
+      "amount": 3,
+      "name": "But I'm Much Faster",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 2,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Hen Wen's Visions",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Might Solve a Mystery",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Pleakley",
+      "version": "Scientific Expert"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Headless Horseman",
+      "version": "Cursed Rider"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vincenzo Santorini",
+      "version": "The Explosives Expert"
+    },
+    {
+      "amount": 2,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}

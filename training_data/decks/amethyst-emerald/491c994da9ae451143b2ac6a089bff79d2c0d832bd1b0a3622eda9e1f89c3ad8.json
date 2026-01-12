@@ -1,0 +1,109 @@
+{
+  "hash": "491c994da9ae451143b2ac6a089bff79d2c0d832bd1b0a3622eda9e1f89c3ad8",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 2,
+      "name": "Chip",
+      "version": "Quick Thinker"
+    },
+    {
+      "amount": 1,
+      "name": "Cri",
+      "version": "Kee - Lucky Cricket"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Devoted Herald"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Maleficent's Spy"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Spiteful Raven"
+    },
+    {
+      "amount": 3,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 2,
+      "name": "Hidden Cove",
+      "version": "Tranquil Haven"
+    },
+    {
+      "amount": 3,
+      "name": "Merlin",
+      "version": "Crab"
+    },
+    {
+      "amount": 1,
+      "name": "Peter Pan",
+      "version": "Shadow Finder"
+    },
+    {
+      "amount": 2,
+      "name": "Prince John",
+      "version": "Greediest of All"
+    },
+    {
+      "amount": 4,
+      "name": "Pull the Lever!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sudden Chill",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "We Don't Talk About Bruno",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Wrong Lever!",
+      "version": ""
+    }
+  ]
+}

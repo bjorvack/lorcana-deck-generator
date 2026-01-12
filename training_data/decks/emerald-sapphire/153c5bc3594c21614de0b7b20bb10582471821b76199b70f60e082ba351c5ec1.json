@@ -1,0 +1,109 @@
+{
+  "hash": "153c5bc3594c21614de0b7b20bb10582471821b76199b70f60e082ba351c5ec1",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Duke Weaselton",
+      "version": "Small-Time Crook"
+    },
+    {
+      "amount": 2,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Flotsam",
+      "version": "Slippery as an Eel"
+    },
+    {
+      "amount": 3,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 2,
+      "name": "Gramma Tala",
+      "version": "Keeper of Ancient Stories"
+    },
+    {
+      "amount": 4,
+      "name": "Heathcliff",
+      "version": "Stoic Butler"
+    },
+    {
+      "amount": 2,
+      "name": "Heffalumps and Woozles",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Jetsam",
+      "version": "Riffraff"
+    },
+    {
+      "amount": 3,
+      "name": "Kit Cloudkicker",
+      "version": "Navigator"
+    },
+    {
+      "amount": 4,
+      "name": "Kit Cloudkicker",
+      "version": "Spunky Bear Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "McDuck Manor",
+      "version": "Scrooge's Mansion"
+    },
+    {
+      "amount": 4,
+      "name": "Megara",
+      "version": "Liberated One"
+    },
+    {
+      "amount": 2,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Pegasus",
+      "version": "Cloud Racer"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 3,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Deceiver"
+    }
+  ]
+}

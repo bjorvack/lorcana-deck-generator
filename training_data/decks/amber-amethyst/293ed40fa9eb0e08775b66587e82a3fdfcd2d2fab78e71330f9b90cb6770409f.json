@@ -1,0 +1,109 @@
+{
+  "hash": "293ed40fa9eb0e08775b66587e82a3fdfcd2d2fab78e71330f9b90cb6770409f",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Bambi",
+      "version": "Prince of the Forest"
+    },
+    {
+      "amount": 2,
+      "name": "Bruno Madrigal",
+      "version": "Singing Seer"
+    },
+    {
+      "amount": 3,
+      "name": "Bruno Madrigal",
+      "version": "Single-Minded"
+    },
+    {
+      "amount": 2,
+      "name": "Calhoun",
+      "version": "Hard-Nosed Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Camilo Madrigal",
+      "version": "Center Stage"
+    },
+    {
+      "amount": 4,
+      "name": "Dewey",
+      "version": "Lovable Showoff"
+    },
+    {
+      "amount": 1,
+      "name": "Fantastical and Magical",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Flower",
+      "version": "Shy Skunk"
+    },
+    {
+      "amount": 3,
+      "name": "Forest Duel",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Gene",
+      "version": "Niceland Resident"
+    },
+    {
+      "amount": 4,
+      "name": "Huey",
+      "version": "Reliable Leader"
+    },
+    {
+      "amount": 2,
+      "name": "It Means No Worries",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Louie",
+      "version": "One Cool Duck"
+    },
+    {
+      "amount": 3,
+      "name": "Mirabel Madrigal",
+      "version": "Curious Child"
+    },
+    {
+      "amount": 3,
+      "name": "Monstro",
+      "version": "Infamous Whale"
+    },
+    {
+      "amount": 3,
+      "name": "Poe De Spell",
+      "version": "Magica's Brother"
+    },
+    {
+      "amount": 3,
+      "name": "Pride Lands",
+      "version": "Jungle Oasis"
+    },
+    {
+      "amount": 4,
+      "name": "Pua",
+      "version": "Protective Pig"
+    },
+    {
+      "amount": 3,
+      "name": "They Never Come Back",
+      "version": ""
+    }
+  ]
+}

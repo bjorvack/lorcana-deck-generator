@@ -1,0 +1,149 @@
+{
+  "hash": "b0e6d8f789599fce9c6249d8606f8408f6497bb4f2a6790eb38c4bb8a0d22a38",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Aladdin",
+      "version": "Intrepid Commander"
+    },
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Prince Ali"
+    },
+    {
+      "amount": 1,
+      "name": "Daisy Duck",
+      "version": "Pirate Captain"
+    },
+    {
+      "amount": 1,
+      "name": "Donald Duck",
+      "version": "First Mate"
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Sleepwalker"
+    },
+    {
+      "amount": 2,
+      "name": "Flotilla",
+      "version": "Coconut Armada"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Flying Goof"
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Set for Adventure"
+    },
+    {
+      "amount": 1,
+      "name": "HeiHei",
+      "version": "Bumbling Rooster"
+    },
+    {
+      "amount": 4,
+      "name": "Honey Lemon",
+      "version": "Chemical Genius"
+    },
+    {
+      "amount": 3,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "John Darling",
+      "version": "Sophisticated Swordsman"
+    },
+    {
+      "amount": 1,
+      "name": "John Silver",
+      "version": "Ferocious Friend"
+    },
+    {
+      "amount": 1,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 2,
+      "name": "Mertle Edmonds",
+      "version": "Lilo's Rival"
+    },
+    {
+      "amount": 1,
+      "name": "Michael Darling",
+      "version": "Playful Swordsman"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Pirate Lookout"
+    },
+    {
+      "amount": 1,
+      "name": "Perilous Maze",
+      "version": "Watery Labyrinth"
+    },
+    {
+      "amount": 2,
+      "name": "RLS Legacy",
+      "version": "Solar Galleon"
+    },
+    {
+      "amount": 4,
+      "name": "Skull Rock",
+      "version": "Isolated Fortress"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Little Trickster"
+    },
+    {
+      "amount": 2,
+      "name": "Tootles",
+      "version": "Lost Boy"
+    },
+    {
+      "amount": 1,
+      "name": "Transport Pod",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope Von Schweetz",
+      "version": "Gutsy Go-Getter"
+    },
+    {
+      "amount": 1,
+      "name": "You Came Back",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Zazu",
+      "version": "Steward of the Pride Lands"
+    }
+  ]
+}

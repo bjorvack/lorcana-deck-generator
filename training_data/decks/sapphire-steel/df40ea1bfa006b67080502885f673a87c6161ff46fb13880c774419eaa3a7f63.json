@@ -1,0 +1,124 @@
+{
+  "hash": "df40ea1bfa006b67080502885f673a87c6161ff46fb13880c774419eaa3a7f63",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Aurora",
+      "version": "Dreaming Guardian"
+    },
+    {
+      "amount": 2,
+      "name": "Basil",
+      "version": "Tenacious Mouse"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 2,
+      "name": "Castle Wyvern",
+      "version": "Above the Clouds"
+    },
+    {
+      "amount": 3,
+      "name": "Clawhauser",
+      "version": "Donut Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Cri",
+      "version": "Kee - Good Luck Charm"
+    },
+    {
+      "amount": 2,
+      "name": "Daisy Duck",
+      "version": "Sapphire Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Ghost Hunter"
+    },
+    {
+      "amount": 4,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Francine",
+      "version": "Eyeing the Evidence"
+    },
+    {
+      "amount": 3,
+      "name": "Jasmine",
+      "version": "Soothing Princess"
+    },
+    {
+      "amount": 3,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "On the Case"
+    },
+    {
+      "amount": 2,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 1,
+      "name": "Mayor Winddancer",
+      "version": "Actor-Turned-Politician"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Detective"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Ghost Hunter"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Determined Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Persistent Investigator"
+    },
+    {
+      "amount": 2,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 2,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Sudden Scare",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Zootopia",
+      "version": "Police Headquarters"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "hash": "fa008b6daf896b59304bbb1bfd4c53f2ba4b2a26b3625cd2c25853a639d11adc",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Break Free",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 2,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Li Shang",
+      "version": "Newly Promoted"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Best Explorer Ever"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 4,
+      "name": "Moana",
+      "version": "Self-Taught Sailor"
+    },
+    {
+      "amount": 1,
+      "name": "Mr. Arrow",
+      "version": "Legacy's First Mate"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Imperial General"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Nathaniel Flint",
+      "version": "Notorious Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "One Last Hope",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Alien Troublemaker"
+    },
+    {
+      "amount": 3,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    }
+  ]
+}
