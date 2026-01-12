@@ -53,7 +53,6 @@ jobs:
         run: |
           cd training
           npm run scrape
-        timeout-minutes: 20
         env:
           FIRST_PAGE_ONLY: 'true'
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
@@ -62,7 +61,7 @@ jobs:
       - name: Check for new data
         id: check_changes
         run: |
-          git add training_data/*.json
+          git add training_data/
           if git diff --staged --quiet; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
             echo "No new tournament data found"
