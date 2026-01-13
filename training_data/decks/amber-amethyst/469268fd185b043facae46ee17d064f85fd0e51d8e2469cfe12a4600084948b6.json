@@ -1,0 +1,114 @@
+{
+  "hash": "469268fd185b043facae46ee17d064f85fd0e51d8e2469cfe12a4600084948b6",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 2,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 1,
+      "name": "Elsa",
+      "version": "Spirit of Winter"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 3,
+      "name": "Gaston",
+      "version": "Frightful Bully"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 2,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 3,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lantern",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 1,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 3,
+      "name": "Royal Guard",
+      "version": "Octopus Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "They Never Come Back",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Whisper of Vanessa"
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

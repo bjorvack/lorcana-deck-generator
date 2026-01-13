@@ -1,0 +1,104 @@
+{
+  "hash": "ad2295caa9447ece6322fccc2784abd34b2246ff215e0c0fab90457dd83da717",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Amethyst Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Blessed Bagpipes",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Enchantress",
+      "version": "Unexpected Judge"
+    },
+    {
+      "amount": 4,
+      "name": "Enigmatic Inkcaster",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Fairy Ship",
+      "version": "Royal Vessel"
+    },
+    {
+      "amount": 3,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 4,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Kuzco",
+      "version": "Wanted Llama"
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Vexed Partygoer"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 3,
+      "name": "Scrooge McDuck",
+      "version": "S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 3,
+      "name": "Show Me More!",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "The Queen",
+      "version": "Jealous Beauty"
+    },
+    {
+      "amount": 4,
+      "name": "This Is My Family",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    }
+  ]
+}

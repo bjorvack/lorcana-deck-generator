@@ -1,0 +1,104 @@
+{
+  "hash": "47e44366df16292bab92eb7cb71481b6494e94d0980990ab5ab5bb9a95a5ae90",
+  "inks": [
+    "amethyst",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Can't Hold It Back Anymore",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 2,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Finders Keepers",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 1,
+      "name": "Hades",
+      "version": "Ruthless Tyrant"
+    },
+    {
+      "amount": 3,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Moana",
+      "version": "Island Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Mother Gothel",
+      "version": "Vain Sorceress"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 4,
+      "name": "The Great Illuminary",
+      "version": "Abandoned Laboratory"
+    },
+    {
+      "amount": 3,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    }
+  ]
+}

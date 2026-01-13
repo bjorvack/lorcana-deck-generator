@@ -1,0 +1,89 @@
+{
+  "hash": "a47554351672c1c4a5f1755147fb10f361285093f4bd8d5e4971096f84e370aa",
+  "inks": [
+    "amethyst",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Baloo",
+      "version": "von Bruinwald XIII"
+    },
+    {
+      "amount": 2,
+      "name": "Chernabog",
+      "version": "Evildoer"
+    },
+    {
+      "amount": 3,
+      "name": "Cinderella",
+      "version": "Ballroom Sensation"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Broom",
+      "version": "Illuminary Keeper"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Biding Her Time"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 4,
+      "name": "The Bare Necessities",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 4,
+      "name": "This Is My Family",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "hash": "d26e1f55f29c0484293e0d11a79567b3f0a7d16258ef0410c4c1f5916def44b5",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 2,
+      "name": "Demona",
+      "version": "Betrayer of the Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 2,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Emily Quackfaster",
+      "version": "Level-Headed Librarian"
+    },
+    {
+      "amount": 1,
+      "name": "Finnick",
+      "version": "Tiny Terror"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 2,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Louis",
+      "version": "Endearing Alligator"
+    },
+    {
+      "amount": 2,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    }
+  ]
+}

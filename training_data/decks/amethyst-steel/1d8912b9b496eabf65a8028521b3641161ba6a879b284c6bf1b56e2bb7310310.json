@@ -1,0 +1,109 @@
+{
+  "hash": "1d8912b9b496eabf65a8028521b3641161ba6a879b284c6bf1b56e2bb7310310",
+  "inks": [
+    "steel",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Benja",
+      "version": "Guardian of the Dragon Gem"
+    },
+    {
+      "amount": 3,
+      "name": "Black Heron",
+      "version": "Real Bad Egg"
+    },
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 3,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 3,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "Exploring the Unknown"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Spirit of Winter"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 3,
+      "name": "Giant Cobra",
+      "version": "Ghostly Serpent"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 3,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Tiny Adversary"
+    },
+    {
+      "amount": 2,
+      "name": "Namaari",
+      "version": "Single-Minded Rival"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "The Sword of Hercules",
+      "version": ""
+    }
+  ]
+}

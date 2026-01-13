@@ -1,0 +1,104 @@
+{
+  "hash": "cea72c557a5cd90d38570841e1771a159caecaf0593a0a6859e86e8f66426c36",
+  "inks": [
+    "sapphire",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Alice",
+      "version": "Accidentally Adrift"
+    },
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Camilo Madrigal",
+      "version": "Family Copycat"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Betrayer of the Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 2,
+      "name": "Grimorum Arcanorum",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 2,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Into the Unknown",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 2,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 2,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Whisper of Vanessa"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "hash": "90ca1aea93dffbd6808905567c365859ecc2999e9541791bf4a57700a3f14ccd",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Belle",
+      "version": "Apprentice Inventor"
+    },
+    {
+      "amount": 4,
+      "name": "Fishbone Quill",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hiram Flaversham",
+      "version": "Toymaker"
+    },
+    {
+      "amount": 2,
+      "name": "Kuzco",
+      "version": "Selfish Emperor"
+    },
+    {
+      "amount": 2,
+      "name": "Lucky Dime",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Maurice's Workshop",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sapphire Coil",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Resourceful Miser"
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Daring Visitor"
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Empowered Sibling"
+    },
+    {
+      "amount": 4,
+      "name": "Tamatoa",
+      "version": "Happy as a Clam"
+    },
+    {
+      "amount": 3,
+      "name": "Tamatoa",
+      "version": "So Shiny!"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vitalisphere",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "hash": "3c87f0116249ca34dcbcf51022e9e311f77fba91aed072f0896b570a54ca424d",
+  "inks": [
+    "sapphire",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 3,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 2,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 4,
+      "name": "Into the Unknown",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 1,
+      "name": "Magical Maneuvers",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Tamatoa",
+      "version": "Happy as a Clam"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "hash": "6fa5c375706cdced06baf7e81702e1696e30107ba06c86a4b71c62bdcae3204c",
+  "inks": [
+    "sapphire",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "All Is Found",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Ever as Before",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Evil Comes Prepared",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Freckles",
+      "version": "Good Boy"
+    },
+    {
+      "amount": 1,
+      "name": "I2I",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Max Goof",
+      "version": "Rockin' Teen"
+    },
+    {
+      "amount": 3,
+      "name": "Mufasa",
+      "version": "King of the Pride Lands"
+    },
+    {
+      "amount": 2,
+      "name": "Nothing We Won't Do",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "One Jump Ahead",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "P.J. Pete",
+      "version": "Caught Up in the Music"
+    },
+    {
+      "amount": 3,
+      "name": "Pepper",
+      "version": "Quick-Thinking Puppy"
+    },
+    {
+      "amount": 2,
+      "name": "Pouncing Practice",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Powerline",
+      "version": "Musical Superstar"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 1,
+      "name": "Powerline",
+      "version": "World's Greatest Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "Roxanne",
+      "version": "Powerline Fan"
+    },
+    {
+      "amount": 3,
+      "name": "Scar",
+      "version": "Betrayer"
+    },
+    {
+      "amount": 4,
+      "name": "Sergeant Tibbs",
+      "version": "Courageous Cat"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Adventurous Successor"
+    },
+    {
+      "amount": 3,
+      "name": "Simba",
+      "version": "Scrappy Cub"
+    }
+  ]
+}

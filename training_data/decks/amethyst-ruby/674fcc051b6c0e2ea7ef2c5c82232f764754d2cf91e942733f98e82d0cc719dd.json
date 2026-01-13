@@ -1,0 +1,114 @@
+{
+  "hash": "674fcc051b6c0e2ea7ef2c5c82232f764754d2cf91e942733f98e82d0cc719dd",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 2,
+      "name": "Dumbo",
+      "version": "The Flying Elephant"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 2,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 2,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 3,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 2,
+      "name": "Magical Maneuvers",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 2,
+      "name": "Peter Pan",
+      "version": "High Flyer"
+    },
+    {
+      "amount": 1,
+      "name": "Shere Khan",
+      "version": "Keen-Eyed Hunter"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 3,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 2,
+      "name": "They Never Come Back",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Whisper of Vanessa"
+    }
+  ]
+}

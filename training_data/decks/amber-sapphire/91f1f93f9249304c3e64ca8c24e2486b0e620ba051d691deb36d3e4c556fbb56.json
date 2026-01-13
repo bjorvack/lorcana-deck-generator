@@ -1,0 +1,89 @@
+{
+  "hash": "91f1f93f9249304c3e64ca8c24e2486b0e620ba051d691deb36d3e4c556fbb56",
+  "inks": [
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Anna",
+      "version": "Braving the Storm"
+    },
+    {
+      "amount": 4,
+      "name": "Chip 'n' Dale",
+      "version": "Recovery Rangers"
+    },
+    {
+      "amount": 4,
+      "name": "Chip",
+      "version": "Friend Indeed"
+    },
+    {
+      "amount": 4,
+      "name": "Chip",
+      "version": "Ranger Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Coconut Basket",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Dale",
+      "version": "Friend in Need"
+    },
+    {
+      "amount": 2,
+      "name": "Dale",
+      "version": "Mischievous Ranger"
+    },
+    {
+      "amount": 4,
+      "name": "Institute of Technology",
+      "version": "Prestigious University"
+    },
+    {
+      "amount": 4,
+      "name": "Kenai",
+      "version": "Big Brother"
+    },
+    {
+      "amount": 4,
+      "name": "Koda",
+      "version": "Talkative Cub"
+    },
+    {
+      "amount": 4,
+      "name": "McDuck Manor",
+      "version": "Scrooge's Mansion"
+    },
+    {
+      "amount": 4,
+      "name": "Never Land",
+      "version": "Mermaid Lagoon"
+    },
+    {
+      "amount": 2,
+      "name": "Rescue Rangers Away!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sleepy",
+      "version": "Nodding Off"
+    },
+    {
+      "amount": 4,
+      "name": "The Underworld",
+      "version": "River Styx"
+    },
+    {
+      "amount": 4,
+      "name": "Winter Camp",
+      "version": "Medical Tent"
+    }
+  ]
+}

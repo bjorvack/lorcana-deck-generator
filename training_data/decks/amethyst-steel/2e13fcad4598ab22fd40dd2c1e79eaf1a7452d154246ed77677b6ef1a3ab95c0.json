@@ -1,0 +1,104 @@
+{
+  "hash": "2e13fcad4598ab22fd40dd2c1e79eaf1a7452d154246ed77677b6ef1a3ab95c0",
+  "inks": [
+    "steel",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 2,
+      "name": "Benja",
+      "version": "Guardian of the Dragon Gem"
+    },
+    {
+      "amount": 3,
+      "name": "Black Heron",
+      "version": "Real Bad Egg"
+    },
+    {
+      "amount": 3,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 2,
+      "name": "David Xanatos",
+      "version": "Steel Clan Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Giant Cobra",
+      "version": "Ghostly Serpent"
+    },
+    {
+      "amount": 2,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 4,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 3,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 4,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 1,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    }
+  ]
+}

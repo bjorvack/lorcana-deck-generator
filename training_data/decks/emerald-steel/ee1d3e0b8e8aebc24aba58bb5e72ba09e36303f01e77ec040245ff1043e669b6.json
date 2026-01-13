@@ -1,0 +1,94 @@
+{
+  "hash": "ee1d3e0b8e8aebc24aba58bb5e72ba09e36303f01e77ec040245ff1043e669b6",
+  "inks": [
+    "emerald",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Pirate Captain"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "First Mate"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Lively Pirate"
+    },
+    {
+      "amount": 2,
+      "name": "Jafar",
+      "version": "Aspiring Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "John Silver",
+      "version": "Vengeful Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Perilous Maze",
+      "version": "Watery Labyrinth"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Pirate Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Space Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Seven Dwarfs' Mine",
+      "version": "Secure Fortress"
+    },
+    {
+      "amount": 4,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Alien Buccaneer"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Little Trickster"
+    },
+    {
+      "amount": 3,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Transport Pod",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Unfortunate Situation",
+      "version": ""
+    }
+  ]
+}

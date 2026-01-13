@@ -1,0 +1,94 @@
+{
+  "hash": "e4bc13b2739a6ecbfbaecaf2e6e5cdeae9d61832e8d51cc97a676413be741bd3",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Amethyst Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Enigmatic Inkcaster",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Fairy Ship",
+      "version": "Royal Vessel"
+    },
+    {
+      "amount": 4,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 4,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Honeymaren",
+      "version": "Northuldra Guide"
+    },
+    {
+      "amount": 4,
+      "name": "Little John",
+      "version": "Camp Cook"
+    },
+    {
+      "amount": 4,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Archery Contestant"
+    },
+    {
+      "amount": 4,
+      "name": "Royal Guard",
+      "version": "Octopus Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Show Me More!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 2,
+      "name": "They Never Come Back",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    }
+  ]
+}

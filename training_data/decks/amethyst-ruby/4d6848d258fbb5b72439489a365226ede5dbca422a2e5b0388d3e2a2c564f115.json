@@ -1,0 +1,109 @@
+{
+  "hash": "4d6848d258fbb5b72439489a365226ede5dbca422a2e5b0388d3e2a2c564f115",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 3,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 1,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Max Goof",
+      "version": "Rockin' Teen"
+    },
+    {
+      "amount": 4,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 1,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 4,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 2,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 2,
+      "name": "They Never Come Back",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Whisper of Vanessa"
+    }
+  ]
+}

@@ -4243,5 +4243,2242 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "5e52bb2e82300229bb3c3f6d702da485dca95bbd9768a89db46120050cedadfb",
+    "name": "MinMax Lorcana 2k (Top 4 split)",
+    "url": "https://inkdecks.com/lorcana-tournaments/minmax-lorcana-2k-top-4-split-tournament-decks-85",
+    "date": "2023-10-28",
+    "meta": {
+      "set": 1,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "f81c75eb824dbeafc04757d0667e0e7fe60395d151f2f19d15a77bc1f23884a6",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "acde36441b655eee69b3d52b10068d87525d1ec2c9271c771ab7bed989b7bbc3",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amber"
+        ]
+      },
+      {
+        "hash": "3e2143625d64aa90eacd3ba54fae523a61dfc6b1aef4d48726a9aa30b24d9a9b",
+        "place": 4,
+        "inks": [
+          "emerald",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "3f9b03428af3943dc0f074d4624e647d8c9285ba11268cf8ee5ac113c61e108c",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e535fa19ad1568c1feb343e3faccdb5a399b71debc549527f8cfeaffc21e4d1b",
+        "place": 8,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "de97a8bd59efe69fb8cb124a76ffda7e2f53657ac15ec2ce35d75850c8fcd103",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "21be67b72cdf10f6eaad48458cd0ea1e3f59f34850d6d70211c7d33cb1d7ae70",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "d75d08d3a54288fa5c00c943c174ff40d12aa3601e355008809b220bf1125f9e",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "1383b7e1a9a5f86e90f04983cb293019c9b27e784261089553470e569e9fede3",
+    "name": "CM Games 2k - (Top 8 Split)",
+    "url": "https://inkdecks.com/lorcana-tournaments/cm-games-2k-top-8-split-tournament-decks-83",
+    "date": "2023-10-28",
+    "meta": {
+      "set": 1,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "cac02be64f6c6ab5c2ef5b39d09b59019f26d2935fef8b298f7652b78a999cd8",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "9a3198713648e58bec8c39cb47d346d0dc2b63bf41bec067156b512efe8815bb",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amber"
+        ]
+      },
+      {
+        "hash": "b5c99b31291b09ae6ad4b270122fbfd86ec32c3b839a34ff3f7a0ac10e476f25",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5dc47b6d552767dc301874408c518d0e20fed6b1c65cc4a7d8944bed39ff5496",
+        "place": 4,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "9d26f54d6143df3c01e9fc30a6aa2fe38af29371d209bde838526ac3733db038",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "992106145111858ea09094ac9b6d9b2402b12810f0a435f2ba105bb72dd264a7",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "ac342900b66e22fabb37c83d286e0b2c49064add508e7a75657864c085fddc7c",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "fc84014635a922474444486e82b7f891afb6690c7b48a0d5e3ed3d24b66ef9db",
+    "name": "Lorcana Competitive 2k",
+    "url": "https://inkdecks.com/lorcana-tournaments/lorcana-competitive-2k-tournament-decks-91",
+    "date": "2023-10-29",
+    "meta": {
+      "set": 1,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "ede28e2ca334644e9a8626c0d1e3c76a8c211b99dc74579bf47e83b22089400f",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "7a1fd6b16db11fd6f89d0ba0ad1efda707ba6a50f4e4941a6e854c43a71af9cc",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "aadce2235b9b3ad4f209b20969ad484f27231e353eabedb13deb833855d88d06",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "28e55adf5bd3bc0b0a287cc9f667ed727706aaf69f53077c72c79214d64befe4",
+    "name": "Trollune Lorcana Win-a-Box",
+    "url": "https://inkdecks.com/lorcana-tournaments/trollune-lorcana-win-a-box-tournament-decks-96",
+    "date": "2023-11-04",
+    "meta": {
+      "set": 1,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c75e2151baae47fc5eee8c00240c0d59ad55c70d97778b972c1aaf5c8accb3fe",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "4045a0eec887ca2944fa17bd51c3c73f43478833cb31afbc7c8f22e0e2894920",
+        "place": 2,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "4977636d1a5d38253239ad66f5f547bc7634d0af300b8e733bf57a27d36a687b",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "37193a8c695cf0171cc4bafd9bd26a719276335ddd2e481d7da9324f285835ed",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "d726c58b12c2d3c227ceff518b41350273d92f32a88adb93583be24e2e0bdfa8",
+        "place": 8,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "21be67b72cdf10f6eaad48458cd0ea1e3f59f34850d6d70211c7d33cb1d7ae70",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "9652f6dca35fb661cf287a50e0607b90aa8600d5a055f0bfcb1b6be92ba47674",
+        "place": 8,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "c15225cb628d275576bb2f143d71cb25c8c3832314d8f7b048fe85ab14f2c3bf",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "c41d1985f318ee19ed79becd4101c6ec0b076dd61184ebe135fbfdcddc2a65d8",
+    "name": "Lorcana 1k Competitive Card Co./ Nexus (Top 8 Split)",
+    "url": "https://inkdecks.com/lorcana-tournaments/lorcana-1k-competitive-card-co-nexus-top-8-split-tournament-decks-95",
+    "date": "2023-11-04",
+    "meta": {
+      "set": 1,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "16ec752a0cb6d606ce1e8a4b2f3bfd135c611d9dd5a934fd144e6629c3c4dd9c",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "5fbee394ecd63bdedb3f02402e4ec5a8d0e87f1b053403d1f47b12e1f314382e",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "8c70eaf781debb0f356205179b1834c695dd538cfa493922119af5650eb692e4",
+    "name": "Sunday Lorcana $1K - SCG CON Pittsburgh",
+    "url": "https://inkdecks.com/lorcana-tournaments/sunday-lorcana-1k-scg-con-pittsburgh-tournament-decks-113",
+    "date": "2023-11-11",
+    "meta": {
+      "set": 1,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "03e4ffea2ea33619e4a7b9d6dee8b5c319bb5ac89dd07bcbea62495f18c388d0",
+        "place": 3,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "479655680d86601ce2c8d358af316a47e372baab533e7f7db3ee025c0989d89d",
+        "place": 8,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "d2253eecd7418aecd3604ff7655d5cbbec7cc265ddc4e419126d10ee1a9b2589",
+    "name": "Saturday Lorcana $1K - SCG CON Pittsburgh",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-lorcana-1k-scg-con-pittsburgh-tournament-decks-109",
+    "date": "2023-11-11",
+    "meta": {
+      "set": 1,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "631f63e8c6fb5938dacc2e19b8f7691f48cbe6799d595468baf4cd936db240c1",
+        "place": 1,
+        "inks": [
+          "emerald",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "8f2827f015a12687a1191df8a0b584f522c50b628052df7d8b90b21961495ca4",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "129ba98ca5a59e311a5a1bd93198e151f56890485c129e2542f08c1e02f28cc4",
+        "place": 16,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "efbe722d736c35b126f4914cd3669fbdfb048a6afcbf1df53fe3908cad683db5",
+    "name": "Game Shelf Store Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/game-shelf-store-championship-tournament-decks-119",
+    "date": "2023-11-12",
+    "meta": {
+      "set": 1,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "bb98e89b1e06b24551e4958798271bc41ee9d550a1dc2cd291934677dac33008",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "4a80d705305cd41620f21dbd8a5ef8c34133bc3f4860987edcc12cea4a0282f9",
+    "name": "D23 BLT $3K Lorcana @ The Marilyn Rose Center",
+    "url": "https://inkdecks.com/lorcana-tournaments/d23-blt-3k-lorcana-the-marilyn-rose-center-tournament-decks-114",
+    "date": "2023-11-12",
+    "meta": {
+      "set": 1,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "1c8729c3743c15316e78123116c9cc0bd1bd387b20ed67696248ac13f003f0fd",
+        "place": 16,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0c9a847c1bd46821a16cfac13426eadee9bdf528be4ab8ec16bf4eabadd250b2",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "5df14b1f976d8158edf69e269098e62f3caddfa8334b985171f3e1b27ee5f00f",
+    "name": "Battle Bear x Lorcana DACH - Constructed Event",
+    "url": "https://inkdecks.com/lorcana-tournaments/battle-bear-x-lorcana-dach-constructed-event-tournament-decks-125",
+    "date": "2023-11-19",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "758d0aee03ea6e98770fdb2ad572c556b182e33101c3b06e3fc719fe4dbc8cba",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "813bbbff482fee1a9333bab57951e5fad81ff53a1c99225578265570c582bf04",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "71afc142e8eb62a8c7a51b2fd06152712e8133488968c20c013b38956cbf1d10",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "05fd4367b9ef2ebeb51908e1a36ae573048670c422dbf7bb7db5618897261f2d",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "bfa8c2742281e5fe7b1c478c37310b737611ffed2e761d60375a4bc6da8c99b3",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "7d35904832da6f1fd0b1d40ee0934df75291f471c2eea91fc5d4806dfeedc90e",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "ce760ec8c88c268742e702bf76a7b13af3f31b05bf92c067d95ab371ba62c226",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "ff629b473b6c0b7b5fe09496bfb7f5807013b18071e9de783ed229b6b4c5ce5c",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "b7ccc499077ce0d6c74420efecbe2d47ae43c1f24dcff43f9bd4d38fbb2c5983",
+    "name": "TCG Expo Liverpool - Top 8 Final Standings",
+    "url": "https://inkdecks.com/lorcana-tournaments/tcg-expo-liverpool-top-8-final-standings-tournament-decks-123",
+    "date": "2023-11-19",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "ede28e2ca334644e9a8626c0d1e3c76a8c211b99dc74579bf47e83b22089400f",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "7a1fd6b16db11fd6f89d0ba0ad1efda707ba6a50f4e4941a6e854c43a71af9cc",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "d89d3835781fc0eca596784850636b983f886668be13650f55b8ac32143d4248",
+        "place": 3,
+        "inks": [
+          "emerald",
+          "steel"
+        ]
+      },
+      {
+        "hash": "3ed393ac7c080539648b95fc891fe2c719c64ad962106d51f1fbf8b2c62ebaae",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3494df479568acf3136014f4ea56b4f5aae7d6d6872f48c1ac279961afc9aa21",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "caa5870f367564252466446cc1439a4d7c44d6628efe83a1856c9f5b9af5241d",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "46d66ebbcdf021cbd3e7fed6a859510d86a53dbf8eb9dfb6601f9dd8bd83d32e",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6271d397bdffeb2618b89a414c2dbd8369d8446ea15bc7f5d3297b085b1dca34",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "43f4c7a0277aebfea5f93482b126c77455e10e84ec64dfefa78f45cf44c0fdbd",
+    "name": "PPG GalaxyCon Lorcana 2k - BO3",
+    "url": "https://inkdecks.com/lorcana-tournaments/ppg-galaxycon-lorcana-2k-bo3-tournament-decks-148",
+    "date": "2023-12-02",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "3ed393ac7c080539648b95fc891fe2c719c64ad962106d51f1fbf8b2c62ebaae",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4d76161374d4e13cca13b4818e7fa5161ba59341f0c0db8b8d0fb01e4535d6b8",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "07d2f65eec0cd3b8ebee4a71ac79ce3610ab6ee9b4ca3f6b300af30f3b3933cb",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "41063550029cff72f1c85c124fa2d9c9897023e6af98c2a8d56133d34805fde6",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0623857da237d2311d15097688ac8e52339d2bf075c4e24bc8dd60403e650f4a",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "95432bade5b15e4210d02a61db411f077bd90740cd3c50c1caf23571286ac087",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "78f21b0c18e65ca614af18413e4a22189447a928f67d8e44013bb855073bfe58",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "95403b6c9a39c66621611b97df1c02a821dd8f37d901e022291649b88819c074",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "5c00d7f153eb86b1c43159310e3129c9f03f19891ec7ba4e30e27ae1db769f2d",
+    "name": "PAX Unplugged Lorcana BO1",
+    "url": "https://inkdecks.com/lorcana-tournaments/pax-unplugged-lorcana-bo1-tournament-decks-147",
+    "date": "2023-12-02",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "6e46b22f48231cf7db2a269749928430b3ebfe55790997203f8a5bdd806656b4",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "9b7f7f2fa9370eef4d7b999cb6b6baa6fa465c45e9e8ef3fae41b5c288b6a142",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ba6822b38c7b7d232fd2b3caa44d862ad31f9c85676b215142935b45dff40357",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2447b6e816d9e3bf53414defe5b992bbb7b03d34cd066264cd915cf756ef8770",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ec9993043a1a0b1f1b178ee6ac1364640c28d1a27340cbf832108504de50edea",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6ca558a371a9668b9f8fc3d726a911dc31c53ec2ffbda3e87c352e1110a8490c",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "90ca1aea93dffbd6808905567c365859ecc2999e9541791bf4a57700a3f14ccd",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "ad0acbe8a4982e57882db068327973beb6a6a3dffb276cb7a2bb06bfc6e0225b",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "abb674a92316dcb8942ed13a608139d4c7a326a1308102506dabe13c09435306",
+    "name": "Ludotrotter Cup",
+    "url": "https://inkdecks.com/lorcana-tournaments/ludotrotter-cup-tournament-decks-155",
+    "date": "2023-12-03",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "4977636d1a5d38253239ad66f5f547bc7634d0af300b8e733bf57a27d36a687b",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4f44c0f31f48648a140e2c2f5decaec4c087692fe247c4b8f5ec800ac718a0b3",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f8188856991fed458e1ec502c06047a67207d7e05c32fa728b11e1b1f9e105ad",
+        "place": 4,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "90ee3dd161601d919829e1be98392f0030f089e41b4dc5c03e37dddb64d3593f",
+        "place": 4,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "cbe51a41023339a1261d944c3e706832f8f2b38d428777083ff38afd74d1b1c0",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "a78b84d8d9cb3e77805003044e6af07d884dd53fa5c0452f7d1182d35de7b383",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "78f21b0c18e65ca614af18413e4a22189447a928f67d8e44013bb855073bfe58",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c5412665968a4584e13fe888aec863ac74822d0676b65235ecc5d022348693b9",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9634289fc6f98ded82553cdb3623e3f13f6e91d9a447a89f2b5dbfc96541c22c",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "fb0d50b3174a3a92bdf7bfe8d2c49bad0e165aae860a02c05ac431c9d132706a",
+        "place": 64,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "315f2d4a9b0f2323af8341934801778f174c5e60b5dd63266a1cb9e3f2a8f60d",
+    "name": "Coliseum of Comics 1.5 k",
+    "url": "https://inkdecks.com/lorcana-tournaments/coliseum-of-comics-1-5-k-tournament-decks-171",
+    "date": "2023-12-09",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "281e864ec0ce69b83e4f7c85be31805f11117e4e8e6374091448278eccf6d71b",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "46d66ebbcdf021cbd3e7fed6a859510d86a53dbf8eb9dfb6601f9dd8bd83d32e",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "877e002b7eacfa408cc6b9caae58a058b56e8da0edbca64e22c2cebd7b328cbf",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e01a4ad317ef009a7d4b17210c734d5e3d68ebcec545ff420e941cc7dbb093c8",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3cc453f9c7dc07749e9dd399771e58a43445ba193ba7ae0a67f82b9b3c0928ae",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "8d92999507d62498fad9a3597daa2bb775eabcd9708c2e1a83a5fe390ef02d95",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "steel"
+        ]
+      },
+      {
+        "hash": "9b7f7f2fa9370eef4d7b999cb6b6baa6fa465c45e9e8ef3fae41b5c288b6a142",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "dba20d3352559a4f541f44eef45c63cb6ad2cce83b17f05820861e501c690bf2",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "ac3f729f9877deb55642e21e8cfbb843c1c504259803140667065a0be20266db",
+    "name": "20Lore.pro Pixelborn Event #1 - BO3",
+    "url": "https://inkdecks.com/lorcana-tournaments/20lore-pro-pixelborn-event-1-bo3-tournament-decks-163",
+    "date": "2023-12-09",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "b5c99b31291b09ae6ad4b270122fbfd86ec32c3b839a34ff3f7a0ac10e476f25",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ad73f24a51f31e6cf2646a49f07a46f959aa2ced6381ffd94f1c092c3ff530ce",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c5412665968a4584e13fe888aec863ac74822d0676b65235ecc5d022348693b9",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "600431fec22aad6e1961bb1cc7b294cfae571ddd54aed4d0b4094f6e2cb96d37",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "92970e85c239d7d77fd830cac7ad23483e5443f7d93a2e27584f42ece2149921",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "21be67b72cdf10f6eaad48458cd0ea1e3f59f34850d6d70211c7d33cb1d7ae70",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "a08ca3a564daa10bb63067e74baa4ba31ce8682bacf5505b6c7246ed5ec7f118",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3635713319b1e595b588340d4554b50be4d22fa443f223e1f1e3caefc0f3280f",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "755ce032f6e98c913f925721a55a49679d84af0c5b4a61e6697d1313ab0a05a6",
+    "name": "Dark Sphere Lorcana Win a Case",
+    "url": "https://inkdecks.com/lorcana-tournaments/dark-sphere-lorcana-win-a-case-tournament-decks-164",
+    "date": "2023-12-10",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "21be67b72cdf10f6eaad48458cd0ea1e3f59f34850d6d70211c7d33cb1d7ae70",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "ee7114ee1274712222be81aab3126dcbb5166b5c25a70d33585cbb72c3fafbb9",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "600431fec22aad6e1961bb1cc7b294cfae571ddd54aed4d0b4094f6e2cb96d37",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8c1a720cebbd2318c3002d0bd67bf5b179d4477fe935ca9b3c43ccbcd694dd99",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f68e2f4b5ac85cb8079d53224877aa98cbaf4386f72302a64f07197c1f162f6e",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "366a8d8ad632b165f6cc1a7529551bd8e42dcb9798eb201e2e9ad4f9f72810ce",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "de97a8bd59efe69fb8cb124a76ffda7e2f53657ac15ec2ce35d75850c8fcd103",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2402c51b4257b36f0c3cda1e2d3a0742acff0bf86bab2867e23ef91a622b0fae",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "947793af55d8e1e63379ce57719af9f5992d1aa0248531bf900b9f7495066aad",
+    "name": "Pixelborn Constructed Tournament",
+    "url": "https://inkdecks.com/lorcana-tournaments/pixelborn-constructed-tournament-tournament-decks-181",
+    "date": "2023-12-16",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "ce295daefd69d61f8a774ea55dd622e9315febd0215e578026a825fb67a4ca30",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c1c9266c6a2c56dc4453f48e0ac821a61a3cf99796ee77c2e03c75c259f6c8d3",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "469268fd185b043facae46ee17d064f85fd0e51d8e2469cfe12a4600084948b6",
+        "place": 3,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4d6848d258fbb5b72439489a365226ede5dbca422a2e5b0388d3e2a2c564f115",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0df85274a753efba725ef9f20711a7ffa5507ebcf301ed7964f749a814039625",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "28538f9f9bbadffac01bb0eabd884597dd28abd09f074b31e3895cd6368a31dc",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6ae74d8a96d83e31d6ac8bee72468a645bb6992a2569b564f6b2c43ec1197f34",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "07d2f65eec0cd3b8ebee4a71ac79ce3610ab6ee9b4ca3f6b300af30f3b3933cb",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2f9e90f19cb3c245c5d254d29aa07a5b10f0197bf6b26ab7f2aecafbdfaea898",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4e02d208bc89a789d365bb745cc5ff087d30c03e9b593a2ef953736583386aa4",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "c753e6fb0ac875d3c4dcd123e671b2e8fcb44a802818d81eb2fd1892f5513675",
+        "place": 16,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "b5c99b31291b09ae6ad4b270122fbfd86ec32c3b839a34ff3f7a0ac10e476f25",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ed4f4e45e98fe13a8ebd483e9a44f878bfb6552f321196abfbf446f0653c7eb7",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "74872cbd31f191d08dfe59333033bb4d17b3324a2ae42e3ccebdb3f6400cd9ed",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "07d2f65eec0cd3b8ebee4a71ac79ce3610ab6ee9b4ca3f6b300af30f3b3933cb",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "825660dbd6333ef10abbfcbb8ec7f14fe0f4039c048c619935ea31ef35ffb583",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "3f9b03428af3943dc0f074d4624e647d8c9285ba11268cf8ee5ac113c61e108c",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d9fa2296e69c2ccef3469d0bbd53302c6f19fb46c3956c5e85a948ca4c1f73aa",
+        "place": 32,
+        "inks": [
+          "emerald",
+          "steel"
+        ]
+      },
+      {
+        "hash": "936ce8224b6f6666b3a57e523a4a223a7c15e06470267e43ab44d2e9cda8d1bf",
+        "place": 32,
+        "inks": [
+          "emerald",
+          "steel"
+        ]
+      },
+      {
+        "hash": "dd752989cfa709b324183961134f650f0b229ff2f71119a281bf82140d434309",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "6a287aedc5c6dc7984bb6643a7cc4fd668ce392b8debb764ef04b8f6782d1bd4",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c593067a74156732a81b2e9d248f5d024acff3cfd19b81ac74f1059b35e07a4e",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "20afbd35ba080cccd9a71655a8a90c8b1fdb2c09fafc68c45f6d6f4bba92447b",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4f8d23f629e90f1588285cef29e64fa83b149d06fbf56d8c0fc4ccd17dfe9205",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "049ed3c70380cef578363b0c8449537453c9fbdba6e19fa2622199201dcb2233",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "471f8aae054e7c69e2491536b490299bc0cc7597aebfb9ac829a73e36552dcd6",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "349381c23015f668cf2d95af9e3db5209731d7b4475d5c613ccf05382cbed21b",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "8c2f36ed12019e9c0510a10f7d6937cfb2aa46fe45e6b397059209b705d5bac2",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8ff3f952efdf61246cf2d36abd59158b6894376ae7684e74b3839ef820e21fcb",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "237279c6b0b0efd2b9495757349e645a74d9af1b11b6da8653ab6058c619f26d",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1df9a09525a48764992e05eb382bf5fa52fa5d5afac41b700fcc116d98a65e87",
+        "place": 32,
+        "inks": [
+          "emerald",
+          "steel"
+        ]
+      },
+      {
+        "hash": "da0d4fed0fbf8f248e5717b92b166672227786cacba548e5eba0cfced3d23aee",
+        "place": 32,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "614febd67f33032eda4c78c980b4e8e06c18f31cb871e0de82e441f59a154180",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "43eecb3a1c71462ca497b5d379f28f23f1dea08579071e64a233f8067b5398ab",
+        "place": 64,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "63da13393e0d93702cdaee2cbc287b02d76b6596a57651778779a0b632d819e4",
+        "place": 64,
+        "inks": [
+          "emerald",
+          "steel"
+        ]
+      },
+      {
+        "hash": "dba20d3352559a4f541f44eef45c63cb6ad2cce83b17f05820861e501c690bf2",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e26e7194d4554c41b4f647ed5ae5c001bc4d2fd5aead7076298b7c935c38d9af",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "3aeb69ce5cf6f0591e043d05200b274dd37a5a041d3abde1e31ac8d865662d17",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "674fcc051b6c0e2ea7ef2c5c82232f764754d2cf91e942733f98e82d0cc719dd",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "02ea794b2057c032a3278a1c7f1e0b7949e2bb576ef51cfac29cf2f36e0dd176",
+        "place": 64,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0c5543c108871146fd863c5a375be49b325f9925f586ecf2fdd0c87f6a324f2b",
+        "place": 64,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "049ed3c70380cef578363b0c8449537453c9fbdba6e19fa2622199201dcb2233",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0db9473634176a6b3871bef6493aeebbc3f1396d513f9e0010fa5b317b5db422",
+        "place": 64,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b6271e38bbb7b58a8b9c9f9e8d27ab0085077a39063ca6c334e5d48d700a695c",
+        "place": 64,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "8c1a720cebbd2318c3002d0bd67bf5b179d4477fe935ca9b3c43ccbcd694dd99",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3558b050b6ced98f96e9ea43cef3ce2241046a45f2190a4488f974a7cdbc510d",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ca1696476bfb17cb2e557c6665273a1e72a2604b4a72c696b3a4f0d8e8e75b31",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e380eda88b370068aea74479a0bc19e49738232a9c69bf1a7c52a7deb88200fb",
+        "place": 64,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "0df85274a753efba725ef9f20711a7ffa5507ebcf301ed7964f749a814039625",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2b12edfabbe96266428557b159346e36bbf0f6df7708d520ec9be8bd18ec0b8e",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a08ca3a564daa10bb63067e74baa4ba31ce8682bacf5505b6c7246ed5ec7f118",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "47c784246337f0e88f41b479f889b5a085dd328a23292f069eaf898b0a341b7b",
+        "place": 64,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "b5c99b31291b09ae6ad4b270122fbfd86ec32c3b839a34ff3f7a0ac10e476f25",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a47554351672c1c4a5f1755147fb10f361285093f4bd8d5e4971096f84e370aa",
+        "place": 64,
+        "inks": [
+          "amethyst",
+          "amber"
+        ]
+      },
+      {
+        "hash": "1506448d08b6237a4691f1858b3fe45db733a7b09d19bf892e4ba0e9ac764fee",
+        "place": 64,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "366a8d8ad632b165f6cc1a7529551bd8e42dcb9798eb201e2e9ad4f9f72810ce",
+        "place": 64,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "48c36d1e137d9f24f2fef4659e2e8f6bbd5035f64260d19f1717446501d27144",
+        "place": 64,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "9a345907be0ce0a13a9f525cddf3849b8a4e5fb64712f52f5605c5f212b675d6",
+        "place": 64,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "78f21b0c18e65ca614af18413e4a22189447a928f67d8e44013bb855073bfe58",
+        "place": 64,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "32dbbfbbb3d3e55c7e54f606640a999217c9f2ba39e5ffea7ce13a98b4db6592",
+        "place": 64,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "db6eb1a64d5a46454de82f69ccbb0f8f521f7a0c119708170f2e6e12bc766c84",
+        "place": 64,
+        "inks": [
+          "emerald",
+          "steel"
+        ]
+      },
+      {
+        "hash": "b991062e03d60fec23ee9cace76dcb62c51ee6bd58f89dc1ae01ea9dceea2426",
+        "place": 64,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "a990d5daea0c81e60c3a0f62dc2d390d3ed0c1458016dbb9dbd2bfb00ca1f276",
+        "place": 64,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "cbd45d2dfc4062ecbf7bc52dd4c8a686e049e7c583478dc6a774c5959964fcc1",
+        "place": 64,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "2f2f98852dbaad2fa1e860ec15b0ab024cafe77ccd49b9dc4d06147fecc488c8",
+    "name": "Grand Tournament December",
+    "url": "https://inkdecks.com/lorcana-tournaments/grand-tournament-december-tournament-decks-187",
+    "date": "2023-12-17",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "e8749a2c93fe617283c0dc589986c989dfd78de8858a0f0807ca383f7b7a3de8",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f3fc597d99db31c91a530aba9d9a2930846c5982df3c6e4c0d69d0b2c532124e",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "58369bb94b26eb2fbcc41b278a1512199733a0205a87e8c1aab0c0f21b41ba92",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "609f80a9560cecbfab746463ed988cfc2a28da771c52619e85d8988fb29a9276",
+    "name": "Decks & Dice Lorcana 1k",
+    "url": "https://inkdecks.com/lorcana-tournaments/decks-dice-lorcana-1k-tournament-decks-180",
+    "date": "2023-12-17",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "89beb361c0179edfa96a210332968c15dad08a112b76d1b6fb3346080b6d46bc",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f6f2f7d24dcd26f173d05b5c0c0d919ecc0b6add61f3b984fb6daa3932112239",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "dba20d3352559a4f541f44eef45c63cb6ad2cce83b17f05820861e501c690bf2",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6fa5c375706cdced06baf7e81702e1696e30107ba06c86a4b71c62bdcae3204c",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "65c21348827b25967f888e8b383980767b0ef6e3c9c117b6831c80307cef5a26",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "faaa447c2d900aa324064307640782e984705d95fb00d045075ea006b423ec30",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "124cd8a1de4fea6f8e67c78e5a528abe28b2d0e4567e9637a2fc538c3f4dcf63",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "eeabf87bf74c18f67be46da3b62870ec4ea7b055b02846691796e8209145bf01",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "c65a29a02600ba5d7e245529f2d681f9338ae6db91726c9c5c7db35aa9f305fc",
+    "name": "Quibbles Lorcana Win a Case Tournament",
+    "url": "https://inkdecks.com/lorcana-tournaments/quibbles-lorcana-win-a-case-tournament-tournament-decks-182",
+    "date": "2023-12-18",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "2799d801d9a7dc86bce9c9420b8f0287f73df2d8afc8afdc9828c20cfbcd7368",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "38e096ef66f550174d919470c95b50f2b21e98852afee4d13d5124b2fca969f8",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "57617e24685bf32a489a0e3d6739ea2ff73609e392462909351c9d581c13fda2",
+        "place": 3,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "f68e2f4b5ac85cb8079d53224877aa98cbaf4386f72302a64f07197c1f162f6e",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "05fd4367b9ef2ebeb51908e1a36ae573048670c422dbf7bb7db5618897261f2d",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5e10a26233d26f55ef0abf25ee43c03fa26490ceda95752599578dddae8b4bbe",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4b35ce45ecc770cee00e439a0c9f42d8a7823044e1a0a22209f60f1ed8de7eeb",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "eec3f55592c5a7b0cb9762fe85790cc6f71746df531a4f085681e214b131c8e4",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "d2dfc36c65b2f9e1e5394ac39e86906a4ae8807f4279c7d639fe4ee0def7a36c",
+    "name": "PPG Holiday Matsuri",
+    "url": "https://inkdecks.com/lorcana-tournaments/ppg-holiday-matsuri-tournament-decks-192",
+    "date": "2023-12-22",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "e90a8ee15a37a281005a7df65fbaec8d8e7024dcaee61f02b7a3ac2f6c856f61",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "9442ae906b40bbef4c88454241c694c33ca99e161b111190fb373a35eb1eee80",
+        "place": 2,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9f46da21546b90e3f53b2024a42233cfe70fbd5dbe615d115a4f91e855986153",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9c37392afb3a0eb46be6465c9a32d9e83c7034701d6129dbcbeb28ee8083d4cc",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8c2f36ed12019e9c0510a10f7d6937cfb2aa46fe45e6b397059209b705d5bac2",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "679df61db087060dedfcfe3494e2a272ce4ebef9571194fad7af78a7a621a5c3",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "468c52b8dafcf93eeaaa9bf459610505f8516aa22237496eaeb468f88f56a8f7",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "steel"
+        ]
+      },
+      {
+        "hash": "60cc472d90087da63b144d3a62e895053b9023504c97602c0c491b1ef13526f2",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "d096e68fad49bf569c15ca107f41673821a7e0aec37c82049ef9ce7f5c0ee138",
+    "name": "The Goat - Capre e Principesse",
+    "url": "https://inkdecks.com/lorcana-tournaments/the-goat-capre-e-principesse-tournament-decks-193",
+    "date": "2023-12-23",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "ad91e8fef2ac8113b5d732dd3fe6fa207eda76a570bf5b92f19b9223f11eee14",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "745b3d3ec7f4ccca29077d053fa283a981bcf449fdc2c3f2f03855f09c5d83a8",
+        "place": 2,
+        "inks": [
+          "steel",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "0b5522d90be5a5b1e19a3909523e0ef112317b7795ce6ac3f9ff397ac0980d4e",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "71721d78b152f4f4f18f6151b37d25add08e33ac62fd36f48b7ab747fc7dc43e",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "8c513e8cd2620bf3bc5620113a6fe0e0f2654746a74da43f35dc746ba6f8c017",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "64260b476a8de128570f7678131f3920e68f7ca891faf9d137b2d2cbae9568e3",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "steel"
+        ]
+      },
+      {
+        "hash": "8d373bc13ccb9288f41859f8872897d5bcf68f6310aaa97af5514f29a27f6e7a",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "674fcc051b6c0e2ea7ef2c5c82232f764754d2cf91e942733f98e82d0cc719dd",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3ed393ac7c080539648b95fc891fe2c719c64ad962106d51f1fbf8b2c62ebaae",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4977636d1a5d38253239ad66f5f547bc7634d0af300b8e733bf57a27d36a687b",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "489d544cec47b2b9de215a90e0be7bb2de2476600b187ce41b7fac18ba2d655f",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "dac519c725a5c6f20d5baa5276d57896df4767a8d949116afd2caa28c1c371d8",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7a1fd6b16db11fd6f89d0ba0ad1efda707ba6a50f4e4941a6e854c43a71af9cc",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "924aac9d3689e007940dd5356a70561b5b6aad498ff9944e9758c3a85323eb64",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8b6c28cf16cba75f2a490863bba52380c2928d2dd84cf9de20912a1d49b25e7a",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "a9226614b2ea966e602c5456b1746848d333fe30537bade7829ad7f03eebe878",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "506b6cd8bc1b2132682812528d35c19e3eae757008355d313da4305e32d4b072",
+        "place": 32,
+        "inks": [
+          "steel",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "e9a87b7bc669da1ea0ead4be36083ac369922636a4fd4a5a930bd692380a2d9e",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4d76161374d4e13cca13b4818e7fa5161ba59341f0c0db8b8d0fb01e4535d6b8",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "78f21b0c18e65ca614af18413e4a22189447a928f67d8e44013bb855073bfe58",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fabd8f4e020faf9b4ec600c54933d7f86f310d2a1914879dd806bdbfc7f5a109",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "65b5aba532d93333d535508c476598923d40b289cdbcc6ac8537334b2827c8c5",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "05fd4367b9ef2ebeb51908e1a36ae573048670c422dbf7bb7db5618897261f2d",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c7a99ea651fc7082eb74ee7bb6716c50ab32f12acff8fb9a8cc19c450362367f",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "37cafbaf680dbead60f4beb823e592ae717c32001b2ff9df15a221417cf69c21",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "4f44c0f31f48648a140e2c2f5decaec4c087692fe247c4b8f5ec800ac718a0b3",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5fbee394ecd63bdedb3f02402e4ec5a8d0e87f1b053403d1f47b12e1f314382e",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "c7a99ea651fc7082eb74ee7bb6716c50ab32f12acff8fb9a8cc19c450362367f",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4280b2c3f3844fdaecf714559f95a271cbd3d14a4875d107415ec2c43375fad5",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "30bafc3e95412574567da92df8e299093c6219e6ee9e2c59fbb87d19c2b95c25",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9f46da21546b90e3f53b2024a42233cfe70fbd5dbe615d115a4f91e855986153",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "2bd59b789981d37d0ef289344eb198bb11be6d67fab6bf471266870faddf5406",
+    "name": "Lorcana Constructed $2,000 Cash Prize Event",
+    "url": "https://inkdecks.com/lorcana-tournaments/lorcana-constructed-2-000-cash-prize-event-tournament-decks-211",
+    "date": "2023-12-30",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "51342d16562c428e3ab3db9200b51d82b08a3c55314a82edf5b4ed80291c332a",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7deb1989a9d5917a93731f42ea74ca7fb273ac24caa2081c44b098e7fc6f9933",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "98c8a0582dfcf87321b67152ddbc0f188b1bb07d0f0b8c6d32e68367d343ba6b",
+        "place": 4,
+        "inks": [
+          "emerald",
+          "steel"
+        ]
+      },
+      {
+        "hash": "a93db9a63eeba4ec983e654957e8fa17cd5d6f1fd4550dd85bd69850740e56fd",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7092a70822ea6fd04ee420bb81da8fc7b3a9b87ae86d348ec1821ab995e5ca38",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7a84560a81ff3ee400a3378a72ca69dfecb807c62ccc430bbed69eaa499414dd",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4262f53898d3b24b802475180e5760ce3732000558ee3ac699857dd25c88216f",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "4813f2438584989aa8b1aa4ab7103c8d51d51ba233c6405c0dfa524ab9fbe99f",
+    "name": "T1G 1K Lorcana",
+    "url": "https://inkdecks.com/lorcana-tournaments/t1g-1k-lorcana-tournament-decks-210",
+    "date": "2023-12-30",
+    "meta": {
+      "set": 2,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "b9ece7682253f566ebe1859df9f0dbac98ad4a05cf8dee4fb9e47bcb340ed221",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "600431fec22aad6e1961bb1cc7b294cfae571ddd54aed4d0b4094f6e2cb96d37",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c0f67a6869817ba0ac159eef61ad312e09863fabfb50fb7268711e19f8461ad7",
+        "place": 4,
+        "inks": [
+          "emerald",
+          "steel"
+        ]
+      },
+      {
+        "hash": "79c45048e6e2918148b481bed6f032e593464625cd369200e87f2db8b1b02a4b",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e1afcd7b2b2bb77fdeb174c0683f7aaab59be53a9f18f57f0548448606e91f4c",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "11f08be6709d4b53c118981f6b4b2f184c1d56a03ccd424d1192d7d2f5b6578f",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "e8163f27dd2e77f59392160f38281bc2b428f3016c0dfe49110e5b95916f7cae",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "188bfe97754798d6a1a3c788ba8b79d99cace78e2e6a8d02ee97f66e0946eaba",
+        "place": 8,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      }
+    ]
   }
 ]

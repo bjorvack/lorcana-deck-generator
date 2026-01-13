@@ -1,0 +1,99 @@
+{
+  "hash": "b9487352507c2b156eb25f8cd1e4b7f1edfe8ef890e9f59ba83d6731bd9e0373",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 2,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 2,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 3,
+      "name": "Louis",
+      "version": "Endearing Alligator"
+    },
+    {
+      "amount": 3,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 3,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pull the Lever!",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Scrooge McDuck",
+      "version": "S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 2,
+      "name": "They Never Come Back",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    },
+    {
+      "amount": 4,
+      "name": "Wrong Lever!",
+      "version": ""
+    }
+  ]
+}

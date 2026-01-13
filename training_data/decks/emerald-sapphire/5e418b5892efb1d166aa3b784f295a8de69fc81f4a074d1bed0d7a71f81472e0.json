@@ -1,0 +1,104 @@
+{
+  "hash": "5e418b5892efb1d166aa3b784f295a8de69fc81f4a074d1bed0d7a71f81472e0",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Basil",
+      "version": "Disguised Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Bend to My Will",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 3,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 3,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    },
+    {
+      "amount": 4,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}

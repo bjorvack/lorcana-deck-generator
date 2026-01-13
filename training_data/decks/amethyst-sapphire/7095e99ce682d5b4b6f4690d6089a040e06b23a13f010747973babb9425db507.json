@@ -1,0 +1,94 @@
+{
+  "hash": "7095e99ce682d5b4b6f4690d6089a040e06b23a13f010747973babb9425db507",
+  "inks": [
+    "sapphire",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 3,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 4,
+      "name": "Into the Unknown",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 3,
+      "name": "Royal Guard",
+      "version": "Octopus Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    }
+  ]
+}

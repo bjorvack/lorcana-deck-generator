@@ -1,0 +1,89 @@
+{
+  "hash": "825660dbd6333ef10abbfcbb8ec7f14fe0f4039c048c619935ea31ef35ffb583",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 3,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 3,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Nala",
+      "version": "Undaunted Lioness"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 3,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 3,
+      "name": "Rapunzel",
+      "version": "Ready for Adventure"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    }
+  ]
+}

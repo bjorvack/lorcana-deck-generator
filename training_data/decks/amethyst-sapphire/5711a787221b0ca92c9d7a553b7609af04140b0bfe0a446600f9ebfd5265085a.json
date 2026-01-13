@@ -1,0 +1,109 @@
+{
+  "hash": "5711a787221b0ca92c9d7a553b7609af04140b0bfe0a446600f9ebfd5265085a",
+  "inks": [
+    "sapphire",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Alice",
+      "version": "Accidentally Adrift"
+    },
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 2,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 2,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 4,
+      "name": "Into the Unknown",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 2,
+      "name": "Magical Maneuvers",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "One Jump Ahead",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    }
+  ]
+}

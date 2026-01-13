@@ -1,0 +1,109 @@
+{
+  "hash": "8d32a09c0685e16894c1a5c08927604d1b7470d3ee07a68b043b679bfd52a0c0",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Card Soldiers",
+      "version": "Royal Troops"
+    },
+    {
+      "amount": 4,
+      "name": "Gaston",
+      "version": "Despicable Dealer"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Groundbreaking Chef"
+    },
+    {
+      "amount": 2,
+      "name": "Judy Hopps",
+      "version": "Resourceful Rabbit"
+    },
+    {
+      "amount": 4,
+      "name": "Lady Tremaine",
+      "version": "Imperious Queen"
+    },
+    {
+      "amount": 2,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 1,
+      "name": "Madame Medusa",
+      "version": "The Boss"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 3,
+      "name": "Moana",
+      "version": "Island Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Mother Gothel",
+      "version": "Withered and Wicked"
+    },
+    {
+      "amount": 4,
+      "name": "Mufasa",
+      "version": "Betrayed Leader"
+    },
+    {
+      "amount": 1,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 3,
+      "name": "Pongo",
+      "version": "Determined Father"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 2,
+      "name": "Raya",
+      "version": "Kumandran Rider"
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 1,
+      "name": "Sisu",
+      "version": "Empowered Sibling"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    }
+  ]
+}

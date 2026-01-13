@@ -1,0 +1,99 @@
+{
+  "hash": "eeabf87bf74c18f67be46da3b62870ec4ea7b055b02846691796e8209145bf01",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Snow Queen"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Everybody's Got a Weakness",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 3,
+      "name": "Goofy",
+      "version": "Flying Goof"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 3,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 3,
+      "name": "Prince John",
+      "version": "Fraidy-Cat"
+    },
+    {
+      "amount": 4,
+      "name": "Shere Khan",
+      "version": "Keen-Eyed Hunter"
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Whisper of Vanessa"
+    }
+  ]
+}

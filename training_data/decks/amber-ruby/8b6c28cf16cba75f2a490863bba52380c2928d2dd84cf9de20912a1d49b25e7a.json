@@ -1,0 +1,99 @@
+{
+  "hash": "8b6c28cf16cba75f2a490863bba52380c2928d2dd84cf9de20912a1d49b25e7a",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Christopher Robin",
+      "version": "Adventurer"
+    },
+    {
+      "amount": 2,
+      "name": "Gopher",
+      "version": "Ship's Carpenter"
+    },
+    {
+      "amount": 2,
+      "name": "Hundred Acre Island",
+      "version": "Pooh's Home"
+    },
+    {
+      "amount": 4,
+      "name": "Invited to the Ball",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Kakamora",
+      "version": "Pirate Pitcher"
+    },
+    {
+      "amount": 4,
+      "name": "Michael Darling",
+      "version": "Playful Swordsman"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Kakamora Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Moana",
+      "version": "Self-Taught Sailor"
+    },
+    {
+      "amount": 4,
+      "name": "Owl",
+      "version": "Pirate Lookout"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 4,
+      "name": "Rabbit",
+      "version": "Indignant Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Roo",
+      "version": "Littlest Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Skull Rock",
+      "version": "Isolated Fortress"
+    },
+    {
+      "amount": 2,
+      "name": "The Islands I Pulled from the Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Tigger",
+      "version": "In the Crow's Nest"
+    },
+    {
+      "amount": 4,
+      "name": "Wendy Darling",
+      "version": "Courageous Captain"
+    },
+    {
+      "amount": 4,
+      "name": "Winnie the Pooh",
+      "version": "Hunny Pirate"
+    }
+  ]
+}

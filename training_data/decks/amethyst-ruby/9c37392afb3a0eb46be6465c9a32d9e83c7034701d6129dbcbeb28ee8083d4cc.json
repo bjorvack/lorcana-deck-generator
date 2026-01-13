@@ -1,0 +1,114 @@
+{
+  "hash": "9c37392afb3a0eb46be6465c9a32d9e83c7034701d6129dbcbeb28ee8083d4cc",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 1,
+      "name": "Dumbo",
+      "version": "The Flying Elephant"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 1,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 2,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 1,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 4,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 2,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 4,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 2,
+      "name": "They Never Come Back",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Whisper of Vanessa"
+    }
+  ]
+}

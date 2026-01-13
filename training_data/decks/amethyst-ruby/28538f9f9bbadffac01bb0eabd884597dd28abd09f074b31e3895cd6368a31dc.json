@@ -1,0 +1,104 @@
+{
+  "hash": "28538f9f9bbadffac01bb0eabd884597dd28abd09f074b31e3895cd6368a31dc",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Betrayer of the Clan"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 3,
+      "name": "Goofy",
+      "version": "Flying Goof"
+    },
+    {
+      "amount": 4,
+      "name": "Grimorum Arcanorum",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 2,
+      "name": "Mother Gothel",
+      "version": "Vain Sorceress"
+    },
+    {
+      "amount": 4,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 2,
+      "name": "Peter Pan",
+      "version": "Shadow Catcher"
+    },
+    {
+      "amount": 4,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 1,
+      "name": "Shere Khan",
+      "version": "Menacing Predator"
+    },
+    {
+      "amount": 2,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 2,
+      "name": "Turbo",
+      "version": "Royal Hack"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Whisper of Vanessa"
+    }
+  ]
+}

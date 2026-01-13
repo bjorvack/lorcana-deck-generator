@@ -1,0 +1,104 @@
+{
+  "hash": "f5b5fa0679b21e9e8f09841127356fb9259c8b080878389ce3f9b7cd2741c715",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Banzai",
+      "version": "Gluttonous Predator"
+    },
+    {
+      "amount": 1,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 4,
+      "name": "Chernabog's Followers",
+      "version": "Creatures of Evil"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Kit Cloudkicker",
+      "version": "Tough Guy"
+    },
+    {
+      "amount": 1,
+      "name": "Lyle Tiberius Rourke",
+      "version": "Cunning Mercenary"
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Snake"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Broom",
+      "version": "Illuminary Keeper"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Crab"
+    },
+    {
+      "amount": 4,
+      "name": "Merlin",
+      "version": "Goat"
+    },
+    {
+      "amount": 3,
+      "name": "Merlin",
+      "version": "Rabbit"
+    },
+    {
+      "amount": 1,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "hash": "d297c2c1ab251071d4b8a12632791207223096408d173d19dba5821583919859",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 2,
+      "name": "Clarabelle",
+      "version": "Contented Wallflower"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 3,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 3,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Decisive Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Lady",
+      "version": "Elegant Spaniel"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Miss Park Avenue"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 2,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Enterprising Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Street-Smart Dog"
+    },
+    {
+      "amount": 1,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    }
+  ]
+}

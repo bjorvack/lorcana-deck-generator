@@ -1,0 +1,89 @@
+{
+  "hash": "df6d578977d34127d25697bc8483c8bc0256d5d7c0733df9916ce57b77e45db4",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Amethyst Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Bambi",
+      "version": "Little Prince"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Enigmatic Inkcaster",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Finnick",
+      "version": "Tiny Terror"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Honeymaren",
+      "version": "Northuldra Guide"
+    },
+    {
+      "amount": 4,
+      "name": "Little John",
+      "version": "Camp Cook"
+    },
+    {
+      "amount": 4,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 3,
+      "name": "Robin Hood",
+      "version": "Archery Contestant"
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 4,
+      "name": "Show Me More!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    }
+  ]
+}

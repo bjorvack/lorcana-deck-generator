@@ -1,0 +1,89 @@
+{
+  "hash": "c593067a74156732a81b2e9d248f5d024acff3cfd19b81ac74f1059b35e07a4e",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Baloo",
+      "version": "von Bruinwald XIII"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Super Goof"
+    },
+    {
+      "amount": 1,
+      "name": "Invited to the Ball",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Jim Dear",
+      "version": "Beloved Husband"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Daring Defender"
+    },
+    {
+      "amount": 4,
+      "name": "Moana",
+      "version": "Self-Taught Sailor"
+    },
+    {
+      "amount": 4,
+      "name": "Mother Gothel",
+      "version": "Withered and Wicked"
+    },
+    {
+      "amount": 4,
+      "name": "Nala",
+      "version": "Mischievous Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 4,
+      "name": "Sven",
+      "version": "Reindeer Steed"
+    },
+    {
+      "amount": 4,
+      "name": "The Prince",
+      "version": "Vigilant Suitor"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "hash": "da0d4fed0fbf8f248e5717b92b166672227786cacba548e5eba0cfced3d23aee",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Amethyst Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Enigmatic Inkcaster",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 4,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Honeymaren",
+      "version": "Northuldra Guide"
+    },
+    {
+      "amount": 4,
+      "name": "Little John",
+      "version": "Camp Cook"
+    },
+    {
+      "amount": 4,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 4,
+      "name": "Royal Guard",
+      "version": "Octopus Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Show Me More!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "They Never Come Back",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Violet Sabrewing",
+      "version": "Senior Junior Woodchuck"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "hash": "e8163f27dd2e77f59392160f38281bc2b428f3016c0dfe49110e5b95916f7cae",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 3,
+      "name": "Bronx",
+      "version": "Ferocious Beast"
+    },
+    {
+      "amount": 3,
+      "name": "Brooklyn",
+      "version": "Second in Command"
+    },
+    {
+      "amount": 2,
+      "name": "Calhoun",
+      "version": "Hard-Nosed Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 3,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 1,
+      "name": "Flotilla",
+      "version": "Coconut Armada"
+    },
+    {
+      "amount": 2,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 3,
+      "name": "Rapunzel",
+      "version": "Ready for Adventure"
+    },
+    {
+      "amount": 2,
+      "name": "Sebastian",
+      "version": "Loyal Crab"
+    },
+    {
+      "amount": 3,
+      "name": "Shere Khan",
+      "version": "Menacing Predator"
+    },
+    {
+      "amount": 2,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Prince",
+      "version": "Vigilant Suitor"
+    },
+    {
+      "amount": 3,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    }
+  ]
+}

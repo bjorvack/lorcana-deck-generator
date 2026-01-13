@@ -1,0 +1,99 @@
+{
+  "hash": "b12efbc567da9ccb7b9d66a151827ca402811161644d8ff76f773ec46888f364",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 2,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Decisive Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Elegant Spaniel"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Miss Park Avenue"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 2,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 1,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge McDuck",
+      "version": "S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Enterprising Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Street-Smart Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 2,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    }
+  ]
+}

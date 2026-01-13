@@ -1,0 +1,94 @@
+{
+  "hash": "e26e7194d4554c41b4f647ed5ae5c001bc4d2fd5aead7076298b7c935c38d9af",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 3,
+      "name": "David Xanatos",
+      "version": "Charismatic Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 3,
+      "name": "Mufasa",
+      "version": "Ruler of Pride Rock"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Considerate Diplomat"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 1,
+      "name": "One Jump Ahead",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}

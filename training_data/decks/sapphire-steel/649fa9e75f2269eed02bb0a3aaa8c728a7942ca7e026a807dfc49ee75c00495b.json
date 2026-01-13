@@ -1,0 +1,164 @@
+{
+  "hash": "649fa9e75f2269eed02bb0a3aaa8c728a7942ca7e026a807dfc49ee75c00495b",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Anna",
+      "version": "Making Snow Plans"
+    },
+    {
+      "amount": 2,
+      "name": "Basil",
+      "version": "Tenacious Mouse"
+    },
+    {
+      "amount": 3,
+      "name": "Black Heron",
+      "version": "Real Bad Egg"
+    },
+    {
+      "amount": 1,
+      "name": "Castle Wyvern",
+      "version": "Above the Clouds"
+    },
+    {
+      "amount": 2,
+      "name": "Clawhauser",
+      "version": "Donut Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Daisy Duck",
+      "version": "Ghost Finder"
+    },
+    {
+      "amount": 2,
+      "name": "David Xanatos",
+      "version": "Steel Clan Leader"
+    },
+    {
+      "amount": 2,
+      "name": "Detective's Badge",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Ghost Hunter"
+    },
+    {
+      "amount": 2,
+      "name": "Francine",
+      "version": "Eyeing the Evidence"
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Investigative Mind"
+    },
+    {
+      "amount": 3,
+      "name": "Hen Wen",
+      "version": "Prophetic Pig"
+    },
+    {
+      "amount": 2,
+      "name": "Hen Wen's Visions",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Jasmine",
+      "version": "Soothing Princess"
+    },
+    {
+      "amount": 1,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 3,
+      "name": "Judy Hopps",
+      "version": "On the Case"
+    },
+    {
+      "amount": 1,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 1,
+      "name": "Kristoff",
+      "version": "Mining the Ruins"
+    },
+    {
+      "amount": 2,
+      "name": "Mickey Mouse",
+      "version": "Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Minnie Mouse",
+      "version": "Ghost Hunter"
+    },
+    {
+      "amount": 3,
+      "name": "Nick Wilde",
+      "version": "Determined Detective"
+    },
+    {
+      "amount": 1,
+      "name": "Nick Wilde",
+      "version": "Persistent Investigator"
+    },
+    {
+      "amount": 2,
+      "name": "Pluto",
+      "version": "Clever Cluefinder"
+    },
+    {
+      "amount": 2,
+      "name": "Promising Lead",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Putting It All Together",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Robin Hood",
+      "version": "Ephemeral Archer"
+    },
+    {
+      "amount": 3,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 2,
+      "name": "The Headless Horseman",
+      "version": "Relentless Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "The Robot Queen",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Zeus",
+      "version": "Missing His Spark"
+    },
+    {
+      "amount": 2,
+      "name": "Zootopia",
+      "version": "Police Headquarters"
+    }
+  ]
+}

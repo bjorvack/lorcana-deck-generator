@@ -1,0 +1,94 @@
+{
+  "hash": "d9fa2296e69c2ccef3469d0bbd53302c6f19fb46c3956c5e85a948ca4c1f73aa",
+  "inks": [
+    "emerald",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 2,
+      "name": "Captain Hook",
+      "version": "The Pirate King"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Underhanded"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Dumptruck",
+      "version": "Karnage's Second Mate"
+    },
+    {
+      "amount": 3,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "John Silver",
+      "version": "Ship's Cook"
+    },
+    {
+      "amount": 4,
+      "name": "Kakamora",
+      "version": "Long-Range Specialist"
+    },
+    {
+      "amount": 4,
+      "name": "Mr. Arrow",
+      "version": "Legacy's First Mate"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "hash": "37e1ae5b1d2f8357225683c6a888f0959fdc92e475f985ea5cb9f2c59f3fe725",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Belle",
+      "version": "Apprentice Inventor"
+    },
+    {
+      "amount": 3,
+      "name": "Calhoun",
+      "version": "Hard-Nosed Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Down in New Orleans",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Gaston",
+      "version": "Intellectual Powerhouse"
+    },
+    {
+      "amount": 4,
+      "name": "Gramma Tala",
+      "version": "Keeper of Ancient Stories"
+    },
+    {
+      "amount": 4,
+      "name": "Kit Cloudkicker",
+      "version": "Navigator"
+    },
+    {
+      "amount": 4,
+      "name": "Kit Cloudkicker",
+      "version": "Spunky Bear Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 4,
+      "name": "Mufasa",
+      "version": "Betrayed Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Prince Naveen",
+      "version": "Ukulele Player"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Unrivaled Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Tamatoa",
+      "version": "Happy as a Clam"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "hash": "4b35ce45ecc770cee00e439a0c9f42d8a7823044e1a0a22209f60f1ed8de7eeb",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Good Job!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Grand Councilwoman",
+      "version": "Federation Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Hakuna Matata",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "He's Got a Sword!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "I Won't Give In",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Invited to the Ball",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel's Tower",
+      "version": "Secluded Prison"
+    },
+    {
+      "amount": 2,
+      "name": "Ratigan's Party",
+      "version": "Seedy Back Room"
+    },
+    {
+      "amount": 2,
+      "name": "Revive",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Sign the Scroll",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Abomination"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Alien Dancer"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Little Rocket"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "New Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 2,
+      "name": "Sword of Truth",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tangle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Thievery",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Training Grounds",
+      "version": "Impossible Pillar"
+    }
+  ]
+}

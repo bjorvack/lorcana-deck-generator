@@ -1,0 +1,109 @@
+{
+  "hash": "f26efbb1932950c8168accc6996faa8f70266c0298bf2c59aae4bb6e23e051d3",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Arthur",
+      "version": "King Victorious"
+    },
+    {
+      "amount": 2,
+      "name": "But I'm Much Faster",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 2,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Jasmine",
+      "version": "Fearless Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 2,
+      "name": "Lady Kluck",
+      "version": "Protective Confidant"
+    },
+    {
+      "amount": 3,
+      "name": "Might Solve a Mystery",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 1,
+      "name": "The Headless Horseman",
+      "version": "Cursed Rider"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vincenzo Santorini",
+      "version": "The Explosives Expert"
+    },
+    {
+      "amount": 3,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "hash": "71721d78b152f4f4f18f6151b37d25add08e33ac62fd36f48b7ab747fc7dc43e",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Baloo",
+      "version": "von Bruinwald XIII"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Spotless Food-Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Daredevil"
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Super Goof"
+    },
+    {
+      "amount": 4,
+      "name": "Kida",
+      "version": "Protector of Atlantis"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Stylish Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Flying Steed"
+    },
+    {
+      "amount": 4,
+      "name": "Pongo",
+      "version": "Ol' Rascal"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 4,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "hash": "c9720781e7e2d0bcfd5d5e013c4f12dfd6d7b786804aa9e2830cfea5d93af059",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Whole New World",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "And Then Along Came Zeus",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ariel",
+      "version": "Spectacular Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Ballroom Sensation"
+    },
+    {
+      "amount": 4,
+      "name": "Grab Your Sword",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Let the Storm Rage On",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Prince Naveen",
+      "version": "Ukulele Player"
+    },
+    {
+      "amount": 3,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    }
+  ]
+}

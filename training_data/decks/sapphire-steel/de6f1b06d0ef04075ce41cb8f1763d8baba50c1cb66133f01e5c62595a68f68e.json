@@ -1,0 +1,99 @@
+{
+  "hash": "de6f1b06d0ef04075ce41cb8f1763d8baba50c1cb66133f01e5c62595a68f68e",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Resourceful Infiltrator"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Steady Strategist"
+    },
+    {
+      "amount": 2,
+      "name": "Mayor Winddancer",
+      "version": "Actor-Turned-Politician"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Namaari",
+      "version": "Single-Minded Rival"
+    },
+    {
+      "amount": 3,
+      "name": "Pleakley",
+      "version": "Scientific Expert"
+    },
+    {
+      "amount": 3,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 3,
+      "name": "Sudden Scare",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 3,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vincenzo Santorini",
+      "version": "The Explosives Expert"
+    }
+  ]
+}

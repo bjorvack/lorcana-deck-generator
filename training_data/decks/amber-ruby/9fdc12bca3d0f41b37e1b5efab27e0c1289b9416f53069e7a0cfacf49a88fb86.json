@@ -1,0 +1,109 @@
+{
+  "hash": "9fdc12bca3d0f41b37e1b5efab27e0c1289b9416f53069e7a0cfacf49a88fb86",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 3,
+      "name": "Chip",
+      "version": "Friend Indeed"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 3,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 3,
+      "name": "Gloyd Orangeboar",
+      "version": "Fierce Competitor"
+    },
+    {
+      "amount": 2,
+      "name": "Invited to the Ball",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Jim Dear",
+      "version": "Beloved Husband"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 1,
+      "name": "Mickey Mouse",
+      "version": "Amber Champion"
+    },
+    {
+      "amount": 2,
+      "name": "Minnie Mouse",
+      "version": "Daring Defender"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 3,
+      "name": "Rapunzel",
+      "version": "Ready for Adventure"
+    },
+    {
+      "amount": 4,
+      "name": "Sebastian",
+      "version": "Loyal Crab"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "Adventurous Successor"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Pride Protector"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Scrappy Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Alien Dancer"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 3,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    }
+  ]
+}

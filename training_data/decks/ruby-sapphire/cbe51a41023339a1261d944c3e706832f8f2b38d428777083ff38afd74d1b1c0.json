@@ -1,0 +1,104 @@
+{
+  "hash": "cbe51a41023339a1261d944c3e706832f8f2b38d428777083ff38afd74d1b1c0",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Ghostly Tale",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 2,
+      "name": "Medallion Weights",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Might Solve a Mystery",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Mushu's Rocket",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Next Stop, Olympus",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Nothing We Won't Do",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sapphire Coil",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Daring Visitor"
+    },
+    {
+      "amount": 3,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}
