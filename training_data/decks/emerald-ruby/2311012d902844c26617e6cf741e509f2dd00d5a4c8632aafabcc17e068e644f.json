@@ -1,0 +1,129 @@
+{
+  "hash": "2311012d902844c26617e6cf741e509f2dd00d5a4c8632aafabcc17e068e644f",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Bend to My Will",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 3,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 3,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 2,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Heffalumps and Woozles",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "I2I",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Iago",
+      "version": "Fake Flamingo"
+    },
+    {
+      "amount": 2,
+      "name": "Lady Tremaine",
+      "version": "Sinister Socialite"
+    },
+    {
+      "amount": 2,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 2,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Nothing We Won't Do",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 2,
+      "name": "Powerline",
+      "version": "World's Greatest Rock Star"
+    },
+    {
+      "amount": 2,
+      "name": "Ratigan",
+      "version": "Nefarious Criminal"
+    },
+    {
+      "amount": 2,
+      "name": "Shere Khan",
+      "version": "Fearsome Tiger"
+    },
+    {
+      "amount": 4,
+      "name": "Tigger",
+      "version": "In the Crow's Nest"
+    },
+    {
+      "amount": 1,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 3,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}

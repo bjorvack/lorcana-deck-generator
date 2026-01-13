@@ -5108,5 +5108,180 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "749d470853914327a233ed62dc03cfa13b6526f617e2de135968c78788582a7c",
+    "name": "Whispers- Set Championship El Dragón Rojo",
+    "url": "https://inkdecks.com/lorcana-tournaments/whispers-set-championship-el-dragon-rojo-tournament-decks-363020",
+    "date": "2026-01-11",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "4e45372d36bf965d158040fd92f20c632de4e68c82eedc58a27964cf8afd0d4d",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b53bebe094ef119477a1ad1fb37e5e6318068a50434193ca207805ae572825ad",
+        "place": 2,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "d1619da0320850c9f1aafdc1e7b0070a5828d71b01c28c741c33f30842c42d2e",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a187ae91791e78a02190950dd7ca6331fb7315961073c95ae0e3907392c19b69",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fcd5e0b44ecedf80d21d678e0936573ba5295a3a2682f83251f1a4b1a1437f03",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ccf3917035e7f6bd858c179fd0d9860a979f9873bd38e7df17e0f7669b962858",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "e8b362b4f0446f6c1465a2e9bd752d996ec9d723de13d75183cec4f01b0ec4a5",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "27dd75a8547f7ab0be4477ecbb5b7f9776dd13e9ff480ed96e3521f05d51ebda",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "2ad65e3b4df1b838889b6eb9a10c68d179217cfcdbe6b643888b0782ff19005e",
+    "name": "Sonntag Morning Whispers in the Well - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/sonntag-morning-whispers-in-the-well-set-championship-tournament-decks-363018",
+    "date": "2026-01-11",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "ea24958ac5d0e9b239c6bb9655bc5383d98f75747889a920635b4a9855bb30b0",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1c9f1817716ca273340083242ec726b64def54086e3e4077a53e1e6a3621f999",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "c0f0cd386bd89ea514e743433bfe1b34c919cfe44298aba3ca69edacf89ad28b",
+    "name": "R916 Whispers in the Well Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/r916-whispers-in-the-well-set-championship-tournament-decks-363017",
+    "date": "2026-01-11",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "43ef88621095b23bed3fc2843439cd201d43c333b55b5081969417f12c18696c",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "ed91515de85b74d9943b588163a27b906c136e18945684f66df377ae3f03caf2",
+        "place": 2,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "4f5b5c8bca2518189a37d2a7adc86b99c11a686a2f293e3423c86a3a261b950e",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "4186cd913e3bd98b29b05b3a18c9ccea31b94da0720db3092eda6384fcb28bb5",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2311012d902844c26617e6cf741e509f2dd00d5a4c8632aafabcc17e068e644f",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a0f5cc355d4fc6ebd8cd5c95ae61cc4826dbe673cbe16ab138baafc8ef32f725",
+        "place": 8,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "e609851779175a46986d6940a2feaf1f0e5006ac583af7edc510281ce0e4f7b8",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
