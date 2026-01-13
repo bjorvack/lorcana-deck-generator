@@ -98,8 +98,8 @@ puppeteer.use(StealthPlugin());
       console.log(`\n========== Fetching page ${currentPage} ==========`)
       const pageUrl =
         currentPage === 1 ?
-          'https://inkdecks.com/lorcana-tournaments/core?sort=date&direction=asc' :
-          `https://inkdecks.com/lorcana-tournaments/core?sort=date&direction=asc&page=${currentPage}`
+          'https://inkdecks.com/lorcana-tournaments/core?sort=date&direction=desc' :
+          `https://inkdecks.com/lorcana-tournaments/core?sort=date&direction=desc&page=${currentPage}`
 
       await page.goto(pageUrl, {
         waitUntil: 'networkidle2'
