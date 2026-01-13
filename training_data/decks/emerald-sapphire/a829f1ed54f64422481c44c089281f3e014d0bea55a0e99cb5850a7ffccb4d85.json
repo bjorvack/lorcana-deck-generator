@@ -1,0 +1,104 @@
+{
+  "hash": "a829f1ed54f64422481c44c089281f3e014d0bea55a0e99cb5850a7ffccb4d85",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Alice",
+      "version": "Savvy Sailor"
+    },
+    {
+      "amount": 2,
+      "name": "Archimedes",
+      "version": "Resourceful Owl"
+    },
+    {
+      "amount": 4,
+      "name": "Blessed Bagpipes",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 2,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Emily Quackfaster",
+      "version": "Level-Headed Librarian"
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Expert Shipwright"
+    },
+    {
+      "amount": 2,
+      "name": "He Who Steals and Runs Away",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Heffalumps and Woozles",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Jeweled Collar",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Little John",
+      "version": "Impermanent Outlaw"
+    },
+    {
+      "amount": 2,
+      "name": "Medal of Heroes",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Might Solve a Mystery",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}
