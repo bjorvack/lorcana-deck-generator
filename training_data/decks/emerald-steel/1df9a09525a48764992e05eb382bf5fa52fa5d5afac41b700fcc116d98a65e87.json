@@ -1,0 +1,104 @@
+{
+  "hash": "1df9a09525a48764992e05eb382bf5fa52fa5d5afac41b700fcc116d98a65e87",
+  "inks": [
+    "emerald",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Captain Hook",
+      "version": "Captain of the Jolly Roger"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "The Pirate King"
+    },
+    {
+      "amount": 2,
+      "name": "Desperate Plan",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "First Mate"
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Lively Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Grewnge",
+      "version": "Cannon Expert"
+    },
+    {
+      "amount": 4,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "John Silver",
+      "version": "Ship's Cook"
+    },
+    {
+      "amount": 2,
+      "name": "John Silver",
+      "version": "Stern Captain"
+    },
+    {
+      "amount": 3,
+      "name": "Mr. Smee",
+      "version": "Efficient Captain"
+    },
+    {
+      "amount": 2,
+      "name": "Mr. Smee",
+      "version": "Steadfast Mate"
+    },
+    {
+      "amount": 2,
+      "name": "Nathaniel Flint",
+      "version": "Notorious Pirate"
+    },
+    {
+      "amount": 2,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Pirate Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Space Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tug",
+      "version": "of-War"
+    }
+  ]
+}

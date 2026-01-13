@@ -1,0 +1,109 @@
+{
+  "hash": "c1c9266c6a2c56dc4453f48e0ac821a61a3cf99796ee77c2e03c75c259f6c8d3",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Arthur",
+      "version": "Wart"
+    },
+    {
+      "amount": 2,
+      "name": "Bagheera",
+      "version": "Guardian Jaguar"
+    },
+    {
+      "amount": 3,
+      "name": "Bolt",
+      "version": "Down but Not Out"
+    },
+    {
+      "amount": 4,
+      "name": "Bolt",
+      "version": "Superdog"
+    },
+    {
+      "amount": 2,
+      "name": "Bruno's Return",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Groundbreaking Chef"
+    },
+    {
+      "amount": 2,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "True Hero"
+    },
+    {
+      "amount": 3,
+      "name": "I Won't Give In",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 2,
+      "name": "Mickey Mouse",
+      "version": "Amber Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Philoctetes",
+      "version": "No-Nonsense Instructor"
+    },
+    {
+      "amount": 1,
+      "name": "Revive",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Robin Hood",
+      "version": "Ephemeral Archer"
+    },
+    {
+      "amount": 2,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "When Will My Life Begin?",
+      "version": ""
+    }
+  ]
+}

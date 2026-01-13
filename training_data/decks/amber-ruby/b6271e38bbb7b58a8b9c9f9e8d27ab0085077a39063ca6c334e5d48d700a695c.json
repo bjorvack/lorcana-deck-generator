@@ -1,0 +1,164 @@
+{
+  "hash": "b6271e38bbb7b58a8b9c9f9e8d27ab0085077a39063ca6c334e5d48d700a695c",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Amber Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Fix",
+      "version": "It Felix, Jr. - Delighted Sightseer"
+    },
+    {
+      "amount": 2,
+      "name": "Fix",
+      "version": "It Felix, Jr. - Niceland Steward"
+    },
+    {
+      "amount": 2,
+      "name": "Gopher",
+      "version": "Ship's Carpenter"
+    },
+    {
+      "amount": 2,
+      "name": "Hundred Acre Island",
+      "version": "Pooh's Home"
+    },
+    {
+      "amount": 2,
+      "name": "I Won't Give In",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Jasmine",
+      "version": "Rebellious Princess"
+    },
+    {
+      "amount": 1,
+      "name": "Jim Hawkins",
+      "version": "Honorable Pirate"
+    },
+    {
+      "amount": 3,
+      "name": "John Darling",
+      "version": "Sophisticated Swordsman"
+    },
+    {
+      "amount": 1,
+      "name": "John Silver",
+      "version": "Ferocious Friend"
+    },
+    {
+      "amount": 1,
+      "name": "Kakamora",
+      "version": "Boarding Party"
+    },
+    {
+      "amount": 3,
+      "name": "Kakamora",
+      "version": "Pirate Pitcher"
+    },
+    {
+      "amount": 2,
+      "name": "Lead the Way",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Michael Darling",
+      "version": "Playful Swordsman"
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "Courageous Sailor"
+    },
+    {
+      "amount": 1,
+      "name": "Moana",
+      "version": "Kakamora Leader"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Self-Taught Sailor"
+    },
+    {
+      "amount": 2,
+      "name": "Owl",
+      "version": "Pirate Lookout"
+    },
+    {
+      "amount": 1,
+      "name": "Pooh Pirate Ship",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Rabbit",
+      "version": "Indignant Pirate"
+    },
+    {
+      "amount": 3,
+      "name": "Ratigan",
+      "version": "Raging Rat"
+    },
+    {
+      "amount": 1,
+      "name": "Ratigan's Party",
+      "version": "Seedy Back Room"
+    },
+    {
+      "amount": 2,
+      "name": "Rescue Rangers Away!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Roo",
+      "version": "Littlest Pirate"
+    },
+    {
+      "amount": 2,
+      "name": "Rutt",
+      "version": "Northern Moose"
+    },
+    {
+      "amount": 2,
+      "name": "Skull Rock",
+      "version": "Isolated Fortress"
+    },
+    {
+      "amount": 1,
+      "name": "The Islands I Pulled from the Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Tigger",
+      "version": "In the Crow's Nest"
+    },
+    {
+      "amount": 2,
+      "name": "Tuke",
+      "version": "Northern Moose"
+    },
+    {
+      "amount": 1,
+      "name": "Wendy Darling",
+      "version": "Courageous Captain"
+    },
+    {
+      "amount": 1,
+      "name": "Winnie the Pooh",
+      "version": "Hunny Pirate"
+    }
+  ]
+}

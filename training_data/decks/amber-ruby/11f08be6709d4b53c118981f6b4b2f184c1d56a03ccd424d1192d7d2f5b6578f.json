@@ -1,0 +1,94 @@
+{
+  "hash": "11f08be6709d4b53c118981f6b4b2f184c1d56a03ccd424d1192d7d2f5b6578f",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Lovely Lady"
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Musketeer Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Super Goof"
+    },
+    {
+      "amount": 4,
+      "name": "Heal What Has Been Hurt",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Julieta Madrigal",
+      "version": "Excellent Cook"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 4,
+      "name": "Medallion Weights",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Storyteller"
+    },
+    {
+      "amount": 4,
+      "name": "Pepa Madrigal",
+      "version": "Sensitive Sister"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Impulsive Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 2,
+      "name": "So Much to Give",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Teeth and Ambitions",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "The Prince",
+      "version": "Vigilant Suitor"
+    }
+  ]
+}

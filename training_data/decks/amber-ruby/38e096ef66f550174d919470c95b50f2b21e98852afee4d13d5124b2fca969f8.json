@@ -1,0 +1,144 @@
+{
+  "hash": "38e096ef66f550174d919470c95b50f2b21e98852afee4d13d5124b2fca969f8",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Ariel",
+      "version": "Adventurous Collector"
+    },
+    {
+      "amount": 3,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 3,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Beast",
+      "version": "Gracious Prince"
+    },
+    {
+      "amount": 2,
+      "name": "Cinderella",
+      "version": "The Right One"
+    },
+    {
+      "amount": 2,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 2,
+      "name": "Gaston",
+      "version": "Arrogant Hunter"
+    },
+    {
+      "amount": 2,
+      "name": "Julieta Madrigal",
+      "version": "Excellent Cook"
+    },
+    {
+      "amount": 2,
+      "name": "Lantern",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Daring Defender"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Determined Explorer"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Island Explorer"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Of Motunui"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Self-Taught Sailor"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Nani",
+      "version": "Protective Sister"
+    },
+    {
+      "amount": 2,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 2,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 4,
+      "name": "Queen's Sensor Core",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Rapunzel's Tower",
+      "version": "Secluded Prison"
+    },
+    {
+      "amount": 2,
+      "name": "Snow White",
+      "version": "Fairest in the Land"
+    },
+    {
+      "amount": 2,
+      "name": "The Glass Slipper",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Prince",
+      "version": "Vigilant Suitor"
+    },
+    {
+      "amount": 2,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    },
+    {
+      "amount": 2,
+      "name": "Vanellope Von Schweetz",
+      "version": "Spunky Speedster"
+    },
+    {
+      "amount": 3,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

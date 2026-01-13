@@ -1,0 +1,84 @@
+{
+  "hash": "6271fdc50c963f6d61526846f63881267783a6bda15090a912c4dea16d8762c4",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Battle-Tested"
+    },
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Courageous Rescuer"
+    },
+    {
+      "amount": 4,
+      "name": "Candlehead",
+      "version": "Dedicated Racer"
+    },
+    {
+      "amount": 4,
+      "name": "Candy Drift",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Fix",
+      "version": "It Felix, Jr. - Pint-Sized Hero"
+    },
+    {
+      "amount": 4,
+      "name": "Gloyd Orangeboar",
+      "version": "Fierce Competitor"
+    },
+    {
+      "amount": 4,
+      "name": "King Candy",
+      "version": "Royal Racer"
+    },
+    {
+      "amount": 4,
+      "name": "King Candy",
+      "version": "Sugar Rush Nightmare"
+    },
+    {
+      "amount": 4,
+      "name": "Taffyta Muttonfudge",
+      "version": "Crowd Favorite"
+    },
+    {
+      "amount": 4,
+      "name": "Taffyta Muttonfudge",
+      "version": "Ruthless Rival"
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope Von Schweetz",
+      "version": "Spunky Speedster"
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope von Schweetz",
+      "version": "Candy Mechanic"
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope von Schweetz",
+      "version": "Sugar Rush Champ"
+    },
+    {
+      "amount": 4,
+      "name": "Wreck",
+      "version": "It Ralph - Back Seat Driver"
+    },
+    {
+      "amount": 4,
+      "name": "Wreck",
+      "version": "It Ralph - Big Lug"
+    }
+  ]
+}

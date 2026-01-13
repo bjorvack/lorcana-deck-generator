@@ -1,0 +1,104 @@
+{
+  "hash": "460d08a44ca4c00cae0c027fbd461c6a33ad3bef7edb5aaab1b44d5ce35e3c9f",
+  "inks": [
+    "sapphire",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Baymax",
+      "version": "Armored Companion"
+    },
+    {
+      "amount": 4,
+      "name": "Belle",
+      "version": "Apprentice Inventor"
+    },
+    {
+      "amount": 3,
+      "name": "Cogsworth",
+      "version": "Climbing Clock"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Frenemy"
+    },
+    {
+      "amount": 1,
+      "name": "Goofy",
+      "version": "Flying Goof"
+    },
+    {
+      "amount": 3,
+      "name": "Goofy",
+      "version": "Super Goof"
+    },
+    {
+      "amount": 3,
+      "name": "Gramma Tala",
+      "version": "Keeper of Ancient Stories"
+    },
+    {
+      "amount": 2,
+      "name": "Li Shang",
+      "version": "Valorous General"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 2,
+      "name": "Maximus",
+      "version": "Team Champion"
+    },
+    {
+      "amount": 4,
+      "name": "McDuck Manor",
+      "version": "Scrooge's Mansion"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Prince John",
+      "version": "Fraidy-Cat"
+    },
+    {
+      "amount": 3,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Scepter of Arendelle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Afficionado of Antiquities"
+    },
+    {
+      "amount": 2,
+      "name": "Tamatoa",
+      "version": "Happy as a Clam"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Insistent Fairy"
+    }
+  ]
+}

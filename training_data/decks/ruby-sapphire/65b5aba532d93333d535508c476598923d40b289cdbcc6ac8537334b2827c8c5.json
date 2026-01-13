@@ -1,0 +1,114 @@
+{
+  "hash": "65b5aba532d93333d535508c476598923d40b289cdbcc6ac8537334b2827c8c5",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Brawl",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Fishbone Quill",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Gramma Tala",
+      "version": "Keeper of Ancient Stories"
+    },
+    {
+      "amount": 1,
+      "name": "Great Stone Dragon",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Hercules",
+      "version": "Daring Demigod"
+    },
+    {
+      "amount": 3,
+      "name": "Hermes",
+      "version": "Harried Messenger"
+    },
+    {
+      "amount": 4,
+      "name": "Hiram Flaversham",
+      "version": "Toymaker"
+    },
+    {
+      "amount": 4,
+      "name": "How Far I'll Go",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ichabod Crane",
+      "version": "Scared Out of His Mind"
+    },
+    {
+      "amount": 1,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Lucky Dime",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Madame Medusa",
+      "version": "The Boss"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "One Jump Ahead",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Impulsive Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "Tamatoa",
+      "version": "So Shiny!"
+    },
+    {
+      "amount": 1,
+      "name": "Vision of the Future",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Vitalisphere",
+      "version": ""
+    }
+  ]
+}

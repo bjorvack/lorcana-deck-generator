@@ -1,0 +1,99 @@
+{
+  "hash": "a990d5daea0c81e60c3a0f62dc2d390d3ed0c1458016dbb9dbd2bfb00ca1f276",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Bagheera",
+      "version": "Cautious Explorer"
+    },
+    {
+      "amount": 3,
+      "name": "Get to Safety!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Groundbreaking Chef"
+    },
+    {
+      "amount": 4,
+      "name": "Julieta Madrigal",
+      "version": "Excellent Cook"
+    },
+    {
+      "amount": 2,
+      "name": "Minnie Mouse",
+      "version": "Pirate Lookout"
+    },
+    {
+      "amount": 3,
+      "name": "Moana",
+      "version": "Undeterred Voyager"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 3,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 3,
+      "name": "Sleepy Hollow",
+      "version": "The Bridge"
+    },
+    {
+      "amount": 4,
+      "name": "Sugar Rush Speedway",
+      "version": "Finish Line"
+    },
+    {
+      "amount": 4,
+      "name": "Sugar Rush Speedway",
+      "version": "Starting Line"
+    },
+    {
+      "amount": 4,
+      "name": "Taffyta Muttonfudge",
+      "version": "Crowd Favorite"
+    },
+    {
+      "amount": 2,
+      "name": "Taffyta Muttonfudge",
+      "version": "Sour Speedster"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Islands I Pulled from the Sea",
+      "version": ""
+    }
+  ]
+}
