@@ -24148,5 +24148,90 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "327e51fe6820c2274dfc627be8f104d94e6ee4ec64cef7d9c99710c61fb079b6",
+    "name": "Wizards Well Whispers in the Well Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/wizards-well-whispers-in-the-well-set-championship-tournament-decks-363012",
+    "date": "2025-01-11",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "7fd254cfed3625d3970435803095d4b619ec409f6dcc774ca0dd4b38bbf51f84",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "bc9730af6b5a9e0040ffd53dafbf9c8049c3b8ef66894c7cc5a5148500b4cc82",
+        "place": 2,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "0ba1dc1c7da0c52a65a0f88d302d7b211e7afb3d9a811251f5cfbdabf8225c47",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "9cf9421c782c7ecfe3f7e19b74e6bdef29a370565aad39bf92d9c41f54473070",
+        "place": 4,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "5dc0e5396da7e74a72aa37663939628f3bfb469ccb8bafbfafe3db4eac69081a",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fd89c742e2e6710d8caba6389bc98506d5c6f7d8b8fc778692cb66ca95794124",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "ae54a4dbd109fea2e1dbb6b696af74295e3cf7aa35812043f68e79ae190586a4",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "8fdd22e34dd26396ec63a872ee041b6a9429527ed1deb5191fdb5d4e60fdabad",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "3ed393ac7c080539648b95fc891fe2c719c64ad962106d51f1fbf8b2c62ebaae",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
