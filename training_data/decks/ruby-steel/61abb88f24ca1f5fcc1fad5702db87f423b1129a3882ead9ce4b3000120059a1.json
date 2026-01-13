@@ -1,0 +1,104 @@
+{
+  "hash": "61abb88f24ca1f5fcc1fad5702db87f423b1129a3882ead9ce4b3000120059a1",
+  "inks": [
+    "steel",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "And Then Along Came Zeus",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Fan the Flames",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Frenemy"
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Super Goof"
+    },
+    {
+      "amount": 3,
+      "name": "Gustav the Giant",
+      "version": "Terror of the Kingdom"
+    },
+    {
+      "amount": 2,
+      "name": "Jim Hawkins",
+      "version": "Space Traveler"
+    },
+    {
+      "amount": 3,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 4,
+      "name": "Moana",
+      "version": "Island Explorer"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Kakamora Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Moana",
+      "version": "Self-Taught Sailor"
+    },
+    {
+      "amount": 4,
+      "name": "Mr. Smee",
+      "version": "Bumbling Mate"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 4,
+      "name": "RLS Legacy",
+      "version": "Solar Galleon"
+    },
+    {
+      "amount": 3,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Treasure Mountain",
+      "version": "Azurite Sea Island"
+    }
+  ]
+}

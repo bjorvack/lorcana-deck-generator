@@ -1,0 +1,89 @@
+{
+  "hash": "c76992107b020c30f264018f85de84b58268e35c0db934d10a2fd10e11ee613e",
+  "inks": [
+    "amethyst",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Alma Madrigal",
+      "version": "Family Matriarch"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Ballroom Sensation"
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "HeiHei",
+      "version": "Boat Snack"
+    },
+    {
+      "amount": 4,
+      "name": "Julieta Madrigal",
+      "version": "Excellent Cook"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Musical Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Musketeer Champion"
+    },
+    {
+      "amount": 2,
+      "name": "Mirabel Madrigal",
+      "version": "Gift of the Family"
+    },
+    {
+      "amount": 4,
+      "name": "Mirabel Madrigal",
+      "version": "Hopeful Dreamer"
+    },
+    {
+      "amount": 4,
+      "name": "Mirabel Madrigal",
+      "version": "Musically Talented"
+    },
+    {
+      "amount": 4,
+      "name": "Mirabel Madrigal",
+      "version": "Prophecy Finder"
+    },
+    {
+      "amount": 4,
+      "name": "Pepa Madrigal",
+      "version": "Sensitive Sister"
+    },
+    {
+      "amount": 3,
+      "name": "Rutt",
+      "version": "Northern Moose"
+    },
+    {
+      "amount": 3,
+      "name": "Sleepy's Flute",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Family Madrigal",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

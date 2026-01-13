@@ -1,0 +1,119 @@
+{
+  "hash": "b99de44ad17bf622af3de10bf53934711cfe70fb88b26215e117fc69a97fb53e",
+  "inks": [
+    "amethyst",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 2,
+      "name": "Brawl",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Card Soldiers",
+      "version": "Royal Troops"
+    },
+    {
+      "amount": 4,
+      "name": "Chernabog's Followers",
+      "version": "Creatures of Evil"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Frenemy"
+    },
+    {
+      "amount": 3,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Genie",
+      "version": "Supportive Friend"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 2,
+      "name": "Lady Tremaine",
+      "version": "Imperious Queen"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Broom",
+      "version": "Illuminary Keeper"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Moana",
+      "version": "Island Explorer"
+    },
+    {
+      "amount": 2,
+      "name": "Pegasus",
+      "version": "Flying Steed"
+    },
+    {
+      "amount": 4,
+      "name": "Peter Pan",
+      "version": "Shadow Finder"
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 1,
+      "name": "Sisu",
+      "version": "Empowered Sibling"
+    },
+    {
+      "amount": 2,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    }
+  ]
+}

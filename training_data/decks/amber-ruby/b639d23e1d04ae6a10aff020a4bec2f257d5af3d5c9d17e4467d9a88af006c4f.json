@@ -1,0 +1,94 @@
+{
+  "hash": "b639d23e1d04ae6a10aff020a4bec2f257d5af3d5c9d17e4467d9a88af006c4f",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "King Candy",
+      "version": "Royal Racer"
+    },
+    {
+      "amount": 4,
+      "name": "King Candy",
+      "version": "Sugar Rush Nightmare"
+    },
+    {
+      "amount": 2,
+      "name": "Lady Tremaine",
+      "version": "Imperious Queen"
+    },
+    {
+      "amount": 2,
+      "name": "Madame Medusa",
+      "version": "The Boss"
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 4,
+      "name": "Mother Gothel",
+      "version": "Withered and Wicked"
+    },
+    {
+      "amount": 4,
+      "name": "Mufasa",
+      "version": "Betrayed Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Pongo",
+      "version": "Determined Father"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope Von Schweetz",
+      "version": "Spunky Speedster"
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope von Schweetz",
+      "version": "Candy Mechanic"
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope von Schweetz",
+      "version": "Sugar Rush Champ"
+    },
+    {
+      "amount": 4,
+      "name": "Wreck",
+      "version": "It Ralph - Back Seat Driver"
+    },
+    {
+      "amount": 3,
+      "name": "Wreck",
+      "version": "It Ralph - Big Lug"
+    }
+  ]
+}

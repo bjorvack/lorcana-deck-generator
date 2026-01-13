@@ -1,0 +1,99 @@
+{
+  "hash": "b171dbaff58f4ae97aef0deca79ab84f4c580681e387d3fe207ce54abb3b799f",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Whole New World",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "And Then Along Came Zeus",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Spectacular Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Ballroom Sensation"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 2,
+      "name": "Gaston",
+      "version": "Baritone Bully"
+    },
+    {
+      "amount": 4,
+      "name": "Lawrence",
+      "version": "Jealous Manservant"
+    },
+    {
+      "amount": 3,
+      "name": "Let the Storm Rage On",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Miss Bianca",
+      "version": "Unwavering Agent"
+    },
+    {
+      "amount": 3,
+      "name": "Mr. Smee",
+      "version": "Bumbling Mate"
+    },
+    {
+      "amount": 1,
+      "name": "Nala",
+      "version": "Mischievous Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Never Land",
+      "version": "Mermaid Lagoon"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Troubadour",
+      "version": "Musical Narrator"
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Vanessa"
+    },
+    {
+      "amount": 3,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

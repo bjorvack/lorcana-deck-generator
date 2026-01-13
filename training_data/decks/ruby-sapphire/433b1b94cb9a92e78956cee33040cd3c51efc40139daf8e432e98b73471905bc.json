@@ -1,0 +1,104 @@
+{
+  "hash": "433b1b94cb9a92e78956cee33040cd3c51efc40139daf8e432e98b73471905bc",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Be Prepared",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Hide Away",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hiram Flaversham",
+      "version": "Toymaker"
+    },
+    {
+      "amount": 4,
+      "name": "How Far I'll Go",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ice Block",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 4,
+      "name": "McDuck Manor",
+      "version": "Scrooge's Mansion"
+    },
+    {
+      "amount": 1,
+      "name": "Next Stop, Olympus",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Scar",
+      "version": "Vicious Cheater"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Empowered Sibling"
+    },
+    {
+      "amount": 4,
+      "name": "Tamatoa",
+      "version": "Happy as a Clam"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 3,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}

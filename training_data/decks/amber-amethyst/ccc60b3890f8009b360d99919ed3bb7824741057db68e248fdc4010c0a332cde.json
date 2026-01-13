@@ -1,0 +1,84 @@
+{
+  "hash": "ccc60b3890f8009b360d99919ed3bb7824741057db68e248fdc4010c0a332cde",
+  "inks": [
+    "amethyst",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Alma Madrigal",
+      "version": "Family Matriarch"
+    },
+    {
+      "amount": 4,
+      "name": "Archimedes",
+      "version": "Exasperated Owl"
+    },
+    {
+      "amount": 4,
+      "name": "Arthur",
+      "version": "Wizard's Apprentice"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Leader of the Seven Dwarfs"
+    },
+    {
+      "amount": 4,
+      "name": "Fairy Ship",
+      "version": "Royal Vessel"
+    },
+    {
+      "amount": 4,
+      "name": "Isabela Madrigal",
+      "version": "Golden Child"
+    },
+    {
+      "amount": 4,
+      "name": "Isabela Madrigal",
+      "version": "In the Moment"
+    },
+    {
+      "amount": 4,
+      "name": "Koda",
+      "version": "Smallish Bear"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Carpet",
+      "version": "Amazing Flier"
+    },
+    {
+      "amount": 4,
+      "name": "Nala",
+      "version": "Mischievous Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Never Land",
+      "version": "Mermaid Lagoon"
+    },
+    {
+      "amount": 4,
+      "name": "Pascal",
+      "version": "Garden Chameleon"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fast Flier"
+    },
+    {
+      "amount": 4,
+      "name": "Wendy Darling",
+      "version": "Talented Sailor"
+    }
+  ]
+}

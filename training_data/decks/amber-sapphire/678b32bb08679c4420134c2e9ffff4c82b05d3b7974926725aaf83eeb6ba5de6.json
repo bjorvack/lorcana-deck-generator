@@ -1,0 +1,154 @@
+{
+  "hash": "678b32bb08679c4420134c2e9ffff4c82b05d3b7974926725aaf83eeb6ba5de6",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Bashful",
+      "version": "Hopeless Romantic"
+    },
+    {
+      "amount": 1,
+      "name": "Belle",
+      "version": "Inventive Engineer"
+    },
+    {
+      "amount": 1,
+      "name": "Christopher Robin",
+      "version": "Adventurer"
+    },
+    {
+      "amount": 3,
+      "name": "Cruella De Vil",
+      "version": "Fashionable Cruiser"
+    },
+    {
+      "amount": 2,
+      "name": "Doc",
+      "version": "Leader of the Seven Dwarfs"
+    },
+    {
+      "amount": 2,
+      "name": "Dopey",
+      "version": "Always Playful"
+    },
+    {
+      "amount": 2,
+      "name": "Fang Crossbow",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Four Dozen Eggs",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Gaston",
+      "version": "Baritone Bully"
+    },
+    {
+      "amount": 1,
+      "name": "Gaston",
+      "version": "Intellectual Powerhouse"
+    },
+    {
+      "amount": 1,
+      "name": "Grand Duke",
+      "version": "Advisor to the King"
+    },
+    {
+      "amount": 3,
+      "name": "Grumpy",
+      "version": "Bad-Tempered"
+    },
+    {
+      "amount": 2,
+      "name": "Gumbo Pot",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Happy",
+      "version": "Good-Natured"
+    },
+    {
+      "amount": 1,
+      "name": "Hiram Flaversham",
+      "version": "Toymaker"
+    },
+    {
+      "amount": 2,
+      "name": "Judy Hopps",
+      "version": "Optimistic Officer"
+    },
+    {
+      "amount": 2,
+      "name": "Launch",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "LeFou",
+      "version": "Bumbler"
+    },
+    {
+      "amount": 3,
+      "name": "Owl",
+      "version": "Logical Lecturer"
+    },
+    {
+      "amount": 2,
+      "name": "Painting the Roses Red",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Philoctetes",
+      "version": "Trainer of Heroes"
+    },
+    {
+      "amount": 3,
+      "name": "Sleepy",
+      "version": "Nodding Off"
+    },
+    {
+      "amount": 3,
+      "name": "Sneezy",
+      "version": "Very Allergic"
+    },
+    {
+      "amount": 2,
+      "name": "Snow White",
+      "version": "Lost in the Forest"
+    },
+    {
+      "amount": 3,
+      "name": "The Nokk",
+      "version": "Water Spirit"
+    },
+    {
+      "amount": 1,
+      "name": "The Queen",
+      "version": "Commanding Presence"
+    },
+    {
+      "amount": 3,
+      "name": "The Queen",
+      "version": "Regal Monarch"
+    },
+    {
+      "amount": 1,
+      "name": "Winnie the Pooh",
+      "version": "Having a Think"
+    }
+  ]
+}

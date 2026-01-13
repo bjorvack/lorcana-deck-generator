@@ -1,0 +1,94 @@
+{
+  "hash": "70f3d58695ccbaf13a5815f8a8c0cd9a8b7982e45e57dc6ea0640d00afbf8c5f",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 3,
+      "name": "Chicha",
+      "version": "Dedicated Mother"
+    },
+    {
+      "amount": 2,
+      "name": "Chip 'n' Dale",
+      "version": "Recovery Rangers"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Musketeer Spy"
+    },
+    {
+      "amount": 4,
+      "name": "Dale",
+      "version": "Mischievous Ranger"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Focused Flatfoot"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "Look at This Family",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Soggy Fox"
+    },
+    {
+      "amount": 4,
+      "name": "Pleakley",
+      "version": "Scientific Expert"
+    },
+    {
+      "amount": 3,
+      "name": "Pouncing Practice",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Unrivaled Archer"
+    },
+    {
+      "amount": 1,
+      "name": "Rolly",
+      "version": "Chubby Puppy"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 3,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

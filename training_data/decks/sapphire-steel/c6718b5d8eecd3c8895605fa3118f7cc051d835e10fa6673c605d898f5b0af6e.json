@@ -1,0 +1,94 @@
+{
+  "hash": "c6718b5d8eecd3c8895605fa3118f7cc051d835e10fa6673c605d898f5b0af6e",
+  "inks": [
+    "steel",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "And Then Along Came Zeus",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Belle",
+      "version": "Apprentice Inventor"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Fortisphere",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hiram Flaversham",
+      "version": "Toymaker"
+    },
+    {
+      "amount": 4,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Lucky Dime",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Resourceful Miser"
+    },
+    {
+      "amount": 2,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tamatoa",
+      "version": "Happy as a Clam"
+    },
+    {
+      "amount": 3,
+      "name": "Tamatoa",
+      "version": "So Shiny!"
+    },
+    {
+      "amount": 4,
+      "name": "The Robot Queen",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    }
+  ]
+}

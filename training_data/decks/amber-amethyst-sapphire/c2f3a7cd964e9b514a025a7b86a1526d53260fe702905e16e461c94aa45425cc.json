@@ -1,0 +1,110 @@
+{
+  "hash": "c2f3a7cd964e9b514a025a7b86a1526d53260fe702905e16e461c94aa45425cc",
+  "inks": [
+    "amethyst",
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 4,
+      "name": "Belle",
+      "version": "Apprentice Inventor"
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 3,
+      "name": "Finders Keepers",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Friends on the Other Side",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 3,
+      "name": "How Far I'll Go",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Into the Unknown",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Madam Mim",
+      "version": "Fox"
+    },
+    {
+      "amount": 3,
+      "name": "Merlin",
+      "version": "Crab"
+    },
+    {
+      "amount": 2,
+      "name": "Merlin",
+      "version": "Rabbit"
+    },
+    {
+      "amount": 1,
+      "name": "Merlin's Carpetbag",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Monstro",
+      "version": "Infamous Whale"
+    },
+    {
+      "amount": 4,
+      "name": "Pawpsicle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tamatoa",
+      "version": "Happy as a Clam"
+    },
+    {
+      "amount": 3,
+      "name": "The Queen's Castle",
+      "version": "Mirror Chamber"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "hash": "f8d73bc6f7bf73a806d275a82e98d97bcb9f3d5acaf279ebc0af14ac23bf0cc4",
+  "inks": [
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Alice",
+      "version": "Savvy Sailor"
+    },
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "News Reporter"
+    },
+    {
+      "amount": 2,
+      "name": "Clawhauser",
+      "version": "Front Desk Officer"
+    },
+    {
+      "amount": 4,
+      "name": "Jim Dear",
+      "version": "Beloved Husband"
+    },
+    {
+      "amount": 3,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 3,
+      "name": "Maximus",
+      "version": "Palace Horse"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Musketeer Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Patch",
+      "version": "Playful Pup"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 3,
+      "name": "Restoring the Heart",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "Protective Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Thunderbolt",
+      "version": "Wonder Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Wendy Darling",
+      "version": "Authority on Peter Pan"
+    },
+    {
+      "amount": 3,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

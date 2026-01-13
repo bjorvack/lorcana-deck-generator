@@ -1,0 +1,114 @@
+{
+  "hash": "c92f499ebefa07ccb8b5f772acc286f2c7301f8ade7084653d1bed6dab12543b",
+  "inks": [
+    "emerald",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Bagheera",
+      "version": "Guardian Jaguar"
+    },
+    {
+      "amount": 3,
+      "name": "Captain Hook",
+      "version": "Captain of the Jolly Roger"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 3,
+      "name": "Captain Hook",
+      "version": "The Pirate King"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Underhanded"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Pirate Captain"
+    },
+    {
+      "amount": 2,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 3,
+      "name": "Hidden Cove",
+      "version": "Tranquil Haven"
+    },
+    {
+      "amount": 3,
+      "name": "Kakamora",
+      "version": "Band of Pirates"
+    },
+    {
+      "amount": 2,
+      "name": "Mr. Smee",
+      "version": "Captain of the Jolly Roger"
+    },
+    {
+      "amount": 2,
+      "name": "Mr. Smee",
+      "version": "Efficient Captain"
+    },
+    {
+      "amount": 4,
+      "name": "Mr. Smee",
+      "version": "Steadfast Mate"
+    },
+    {
+      "amount": 3,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Pirate Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Space Pirate"
+    },
+    {
+      "amount": 1,
+      "name": "Remember Who You Are",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 2,
+      "name": "Tug",
+      "version": "of-War"
+    }
+  ]
+}
