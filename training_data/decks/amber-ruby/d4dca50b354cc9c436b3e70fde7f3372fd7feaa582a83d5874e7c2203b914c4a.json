@@ -1,0 +1,109 @@
+{
+  "hash": "d4dca50b354cc9c436b3e70fde7f3372fd7feaa582a83d5874e7c2203b914c4a",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "David Xanatos",
+      "version": "Charismatic Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Gaston",
+      "version": "Despicable Dealer"
+    },
+    {
+      "amount": 1,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 2,
+      "name": "Lady Tremaine",
+      "version": "Imperious Queen"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 2,
+      "name": "Madame Medusa",
+      "version": "The Boss"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Hero to All"
+    },
+    {
+      "amount": 4,
+      "name": "Mother Gothel",
+      "version": "Withered and Wicked"
+    },
+    {
+      "amount": 3,
+      "name": "Mufasa",
+      "version": "Betrayed Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 3,
+      "name": "Pongo",
+      "version": "Determined Father"
+    },
+    {
+      "amount": 4,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 3,
+      "name": "Rapunzel",
+      "version": "Gifted with Healing"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "King in the Making"
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Empowered Sibling"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 1,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "hash": "f2e4f16a15ff5e3a575483bdc58358f8a76de7ba0b886efd32be9f32636a70bc",
+  "inks": [
+    "amethyst",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Fierce Protector"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 1,
+      "name": "Finders Keepers",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 2,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 2,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Max Goof",
+      "version": "Rockin' Teen"
+    },
+    {
+      "amount": 3,
+      "name": "Moana",
+      "version": "Island Explorer"
+    },
+    {
+      "amount": 3,
+      "name": "Mother Gothel",
+      "version": "Vain Sorceress"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 4,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 3,
+      "name": "Second Star to the Right",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Daring Visitor"
+    }
+  ]
+}

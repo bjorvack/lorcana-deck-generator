@@ -1,0 +1,104 @@
+{
+  "hash": "e548a331d38fb1ffc6b923ec627c6df1f0d169e59e365e4f9ba90ae05f2b40f6",
+  "inks": [
+    "emerald",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Captain Hook",
+      "version": "Underhanded"
+    },
+    {
+      "amount": 1,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Pirate Captain"
+    },
+    {
+      "amount": 4,
+      "name": "Don Karnage",
+      "version": "Prince of Pirates"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "First Mate"
+    },
+    {
+      "amount": 4,
+      "name": "Hidden Cove",
+      "version": "Tranquil Haven"
+    },
+    {
+      "amount": 4,
+      "name": "Jim Hawkins",
+      "version": "Honorable Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Making a Wish"
+    },
+    {
+      "amount": 4,
+      "name": "Piglet",
+      "version": "Pooh Pirate Captain"
+    },
+    {
+      "amount": 4,
+      "name": "Pooh Pirate Ship",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Prepare to Board!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Rabbit",
+      "version": "Indignant Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel's Tower",
+      "version": "Secluded Prison"
+    },
+    {
+      "amount": 1,
+      "name": "Remember Who You Are",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Scroop",
+      "version": "Odious Mutineer"
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Winnie the Pooh",
+      "version": "Hunny Pirate"
+    },
+    {
+      "amount": 2,
+      "name": "You Have Forgotten Me",
+      "version": ""
+    }
+  ]
+}

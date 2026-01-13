@@ -1,0 +1,99 @@
+{
+  "hash": "00a783ba2ca186e2bcf38d18b71e37446a395dd8639b6d6d6d79e80a02c11d6a",
+  "inks": [
+    "emerald",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Beyond the Horizon",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "The Pirate King"
+    },
+    {
+      "amount": 3,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Jasmine",
+      "version": "Fearless Princess"
+    },
+    {
+      "amount": 2,
+      "name": "Max Goof",
+      "version": "Chart Topper"
+    },
+    {
+      "amount": 3,
+      "name": "Max Goof",
+      "version": "Rebellious Teen"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 2,
+      "name": "Pete",
+      "version": "Space Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Archery Contestant"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Champion of Sherwood"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Most Helpful"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 3,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}

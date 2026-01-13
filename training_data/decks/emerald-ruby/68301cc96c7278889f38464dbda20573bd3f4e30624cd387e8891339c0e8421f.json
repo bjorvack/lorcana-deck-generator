@@ -1,0 +1,109 @@
+{
+  "hash": "68301cc96c7278889f38464dbda20573bd3f4e30624cd387e8891339c0e8421f",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Devoted Herald"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Maleficent's Spy"
+    },
+    {
+      "amount": 1,
+      "name": "Flynn Rider",
+      "version": "Breaking and Entering"
+    },
+    {
+      "amount": 3,
+      "name": "Flynn Rider",
+      "version": "Charming Rogue"
+    },
+    {
+      "amount": 2,
+      "name": "Flynn Rider",
+      "version": "His Own Biggest Fan"
+    },
+    {
+      "amount": 2,
+      "name": "Hidden Cove",
+      "version": "Tranquil Haven"
+    },
+    {
+      "amount": 3,
+      "name": "Hypnotize",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 3,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Prince John",
+      "version": "Greediest of All"
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 2,
+      "name": "Raya",
+      "version": "Kumandran Rider"
+    },
+    {
+      "amount": 4,
+      "name": "Strike a Good Match",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sudden Chill",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "The Muses",
+      "version": "Proclaimers of Heroes"
+    },
+    {
+      "amount": 3,
+      "name": "Tigger",
+      "version": "In the Crow's Nest"
+    },
+    {
+      "amount": 4,
+      "name": "Undermine",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver of All"
+    },
+    {
+      "amount": 3,
+      "name": "We Don't Talk About Bruno",
+      "version": ""
+    }
+  ]
+}
