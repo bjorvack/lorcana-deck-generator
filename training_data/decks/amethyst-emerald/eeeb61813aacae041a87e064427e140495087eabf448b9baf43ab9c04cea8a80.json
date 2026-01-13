@@ -1,0 +1,99 @@
+{
+  "hash": "eeeb61813aacae041a87e064427e140495087eabf448b9baf43ab9c04cea8a80",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Amethyst Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Enigmatic Inkcaster",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Finnick",
+      "version": "Tiny Terror"
+    },
+    {
+      "amount": 3,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 4,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Honeymaren",
+      "version": "Northuldra Guide"
+    },
+    {
+      "amount": 3,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 3,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 2,
+      "name": "Robin Hood",
+      "version": "Archery Contestant"
+    },
+    {
+      "amount": 3,
+      "name": "Show Me More!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 2,
+      "name": "They Never Come Back",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "This Is My Family",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    }
+  ]
+}
