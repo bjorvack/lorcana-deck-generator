@@ -1,0 +1,114 @@
+{
+  "hash": "e609851779175a46986d6940a2feaf1f0e5006ac583af7edc510281ce0e4f7b8",
+  "inks": [
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Alice",
+      "version": "Growing Girl"
+    },
+    {
+      "amount": 2,
+      "name": "Anna",
+      "version": "True-Hearted"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Dreaming Guardian"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 2,
+      "name": "Beast",
+      "version": "Gracious Prince"
+    },
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Of the Ball"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 1,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 2,
+      "name": "Minnie Mouse",
+      "version": "Sweetheart Princess"
+    },
+    {
+      "amount": 3,
+      "name": "Moana",
+      "version": "Determined Explorer"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 1,
+      "name": "Mrs. Beakley",
+      "version": "Former S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Considerate Diplomat"
+    },
+    {
+      "amount": 1,
+      "name": "Mulan",
+      "version": "Free Spirit"
+    },
+    {
+      "amount": 3,
+      "name": "Queen's Sensor Core",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Ready for Adventure"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Queen",
+      "version": "Conceited Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope von Schweetz",
+      "version": "Sugar Rush Champ"
+    },
+    {
+      "amount": 4,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

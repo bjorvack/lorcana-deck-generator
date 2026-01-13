@@ -1,0 +1,164 @@
+{
+  "hash": "ed91515de85b74d9943b588163a27b906c136e18945684f66df377ae3f03caf2",
+  "inks": [
+    "amethyst",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Anna",
+      "version": "Eager Acolyte"
+    },
+    {
+      "amount": 1,
+      "name": "Anna",
+      "version": "Mystical Majesty"
+    },
+    {
+      "amount": 2,
+      "name": "Archimedes",
+      "version": "Electrified Owl"
+    },
+    {
+      "amount": 2,
+      "name": "Archimedes",
+      "version": "Exasperated Owl"
+    },
+    {
+      "amount": 2,
+      "name": "Bruni",
+      "version": "Fire Salamander"
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Daisy's Date"
+    },
+    {
+      "amount": 1,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Finders Keepers",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Gale",
+      "version": "Wind Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Glimmer vs Glimmer",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "King of Hearts",
+      "version": "Monarch of Wonderland"
+    },
+    {
+      "amount": 2,
+      "name": "Maleficent",
+      "version": "Vengeful Sorceress"
+    },
+    {
+      "amount": 2,
+      "name": "Mickey Mouse",
+      "version": "Enthusiastic Dancer"
+    },
+    {
+      "amount": 2,
+      "name": "Minnie Mouse",
+      "version": "Dazzling Dancer"
+    },
+    {
+      "amount": 1,
+      "name": "Olaf",
+      "version": "Happy Passenger"
+    },
+    {
+      "amount": 2,
+      "name": "Rancis Fluggerbutter",
+      "version": "Chocolate Charger"
+    },
+    {
+      "amount": 2,
+      "name": "Retrosphere",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Shere Khan",
+      "version": "Fierce and Furious"
+    },
+    {
+      "amount": 4,
+      "name": "Shere Khan",
+      "version": "Keen-Eyed Hunter"
+    },
+    {
+      "amount": 3,
+      "name": "Simba",
+      "version": "Adventurous Successor"
+    },
+    {
+      "amount": 2,
+      "name": "Snowanna Rainbeau",
+      "version": "Cool Competitor"
+    },
+    {
+      "amount": 1,
+      "name": "Taffyta Muttonfudge",
+      "version": "Crowd Favorite"
+    },
+    {
+      "amount": 2,
+      "name": "Taffyta Muttonfudge",
+      "version": "Ruthless Rival"
+    },
+    {
+      "amount": 2,
+      "name": "Taffyta Muttonfudge",
+      "version": "Sour Speedster"
+    },
+    {
+      "amount": 2,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 2,
+      "name": "The Nokk",
+      "version": "Mythical Spirit"
+    },
+    {
+      "amount": 1,
+      "name": "The Sword Released",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Turbo",
+      "version": "Royal Hack"
+    },
+    {
+      "amount": 1,
+      "name": "Vanellope von Schweetz",
+      "version": "Random Roster Racer"
+    },
+    {
+      "amount": 1,
+      "name": "Wreck",
+      "version": "It Ralph - Demolition Dude"
+    }
+  ]
+}
