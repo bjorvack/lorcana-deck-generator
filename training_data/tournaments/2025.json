@@ -24408,5 +24408,58 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "ab828c17c6a7d1f31074d49ceb757a14f5e86d397d682c78590980594aea9ac8",
+    "name": "Sunday Morning Whispers in the Well - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/sunday-morning-whispers-in-the-well-set-championship-tournament-decks-363023",
+    "date": "2025-01-11",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "23ed2bf012e953ce63d406f81c9ad9d79f9462623cf69f5bc0b4e72e58f147c0",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "180d9fe32f6235ad8ea2b12954e87dc95e38614ad4dd29acc188e518b55b30d2",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "3ed393ac7c080539648b95fc891fe2c719c64ad962106d51f1fbf8b2c62ebaae",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c05a580afe7df731af2403e7efc507452131a2899695d1bdb0017799aee45641",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "29d648d7c51a3dd95db93d5ffab4b7d434bc7dbd53114532ac02dedba2a2f23d",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
