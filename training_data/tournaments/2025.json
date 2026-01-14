@@ -24461,5 +24461,74 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "7af6f99698a8b50593fafe499b01a01183573a834fd87c473228832358736ab2",
+    "name": "Hobby Kaikan Whispers in the Well Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/hobby-kaikan-whispers-in-the-well-set-championship-tournament-decks-363024",
+    "date": "2025-01-10",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "bbe749d62dfe63fd2b7066b49a203347fba11ccb9d7c3bad3a02efdf10241f1f",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f2b0c961d00b1d5029b70c4ded63e9f53feeadf10aef69ed787dfd9069c451f6",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "b0a78fd2da7bcf7ed28da6cbe38283b854fe6836967f08300ee5a5c2044b4be0",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "01e5760fd0903c27f95979cc95ed7f8f50a19b1c143430012e5ffbd6a2ed473e",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "d65a2a35133ad74da0d564ca8a7a8b91c5ff79d4b8bbda39a87d35fbd4c29d7f",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "19a9b2c6f7b963b2e82c0ae39f09828b29e048edc405c9ac4105a1301b00bb7c",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "63acbaf42c3707333dc3f3f153829b0c9b192c2ec5a1ddcc89fd78efed9b0bed",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
