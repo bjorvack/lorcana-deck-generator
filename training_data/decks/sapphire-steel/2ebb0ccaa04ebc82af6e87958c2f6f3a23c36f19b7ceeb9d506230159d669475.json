@@ -1,0 +1,94 @@
+{
+  "hash": "2ebb0ccaa04ebc82af6e87958c2f6f3a23c36f19b7ceeb9d506230159d669475",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Beyond the Horizon",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Clawhauser",
+      "version": "Donut Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Focused Flatfoot"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Resourceful Infiltrator"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Steady Strategist"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Determined Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Persistent Investigator"
+    },
+    {
+      "amount": 2,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vincenzo Santorini",
+      "version": "The Explosives Expert"
+    }
+  ]
+}
