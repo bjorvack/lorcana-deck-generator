@@ -5405,5 +5405,87 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "3aa845d070911d201c652ce80d1719d079dc08173fcea1179f4f65374eaf7e40",
+    "name": "Cartapapa Set Championship (Montpellier)",
+    "url": "https://inkdecks.com/lorcana-tournaments/cartapapa-set-championship-montpellier-tournament-decks-363038",
+    "date": "2026-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "bdc0ffb1fc3502e05893f205dfd774da708d3f67a22e342a1cdbaa5d06249f64",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fbc2e398c12e6a34253ab8cc1d4a2ad1b13bcac1b74cac3e23dd246d84541052",
+        "place": 2,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "2ebb0ccaa04ebc82af6e87958c2f6f3a23c36f19b7ceeb9d506230159d669475",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "522a4fe515dc3c1f9aafb8e5803b15717a99efb4c2f899e8cc622ceb62fefe89",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "27e8362bf84d134572da170f57bba35a2fffcff54c83faab39bb1025798a0478",
+        "place": 8,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "737e1a41ebeba44d8e69b5572d2239adf455c453729db9938a1da2f041639711",
+    "name": "Whispers in the Well Set Championships - Split Finals",
+    "url": "https://inkdecks.com/lorcana-tournaments/whispers-in-the-well-set-championships-split-finals-tournament-decks-363035",
+    "date": "2026-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "e060c5fc22628bc932248fbab70bfeca776b3b4587260c578e809e9cacb54f65",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "04dad2e82b6ae7bd7329c9a4c153a8208fcd714d1d9d1508302f580af07cda4a",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
