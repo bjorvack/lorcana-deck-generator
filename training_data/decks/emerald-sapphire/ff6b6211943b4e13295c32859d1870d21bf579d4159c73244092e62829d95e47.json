@@ -1,0 +1,99 @@
+{
+  "hash": "ff6b6211943b4e13295c32859d1870d21bf579d4159c73244092e62829d95e47",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Undercover Detective"
+    },
+    {
+      "amount": 3,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 2,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Contented Wallflower"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 1,
+      "name": "Ink Geyser",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}
