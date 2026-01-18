@@ -6080,5 +6080,47 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "62184047cd6b0703ca1e705bc6906efa92d040dc428fbfa4d45ffc72495cdec9",
+    "name": "Tucson Games & Gadgets - Tucson Mall - Whispers Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/tucson-games-gadgets-tucson-mall-whispers-set-champs-tournament-decks-363046",
+    "date": "2026-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "449652e7b7d6bb132409b37941de0c7efe456188c041f12a223d4426b0652098",
+        "place": 2,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "679c6015eabd72169c35c010aee0747cf1d42be6ac702931a6e41d376d54394f",
+    "name": "SATURDAY AFTERNOON WHISPERS IN THE WELL - SET CHAMPIONSHIP",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-afternoon-whispers-in-the-well-set-championship-tournament-decks-363045",
+    "date": "2026-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "6284629dd4b5162d78b657f38bf38353a596e9a492fb28363e5f829f90073e35",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
