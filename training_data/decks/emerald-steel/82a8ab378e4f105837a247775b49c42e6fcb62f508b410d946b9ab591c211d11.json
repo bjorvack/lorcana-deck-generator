@@ -1,0 +1,99 @@
+{
+  "hash": "82a8ab378e4f105837a247775b49c42e6fcb62f508b410d946b9ab591c211d11",
+  "inks": [
+    "emerald",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Prince Ali"
+    },
+    {
+      "amount": 1,
+      "name": "Benja",
+      "version": "Guardian of the Dragon Gem"
+    },
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 3,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Castle Wyvern",
+      "version": "Above the Clouds"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 2,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Family Fishing Pole",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 3,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Set for Adventure"
+    },
+    {
+      "amount": 4,
+      "name": "Inspector Tezuka",
+      "version": "Resolute Officer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Nala",
+      "version": "Undaunted Lioness"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 2,
+      "name": "Seven Dwarfs' Mine",
+      "version": "Secure Fortress"
+    },
+    {
+      "amount": 4,
+      "name": "Zootopia",
+      "version": "Police Headquarters"
+    }
+  ]
+}
