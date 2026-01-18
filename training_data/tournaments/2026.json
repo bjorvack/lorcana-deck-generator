@@ -5750,5 +5750,82 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "8ff87976739e0a6f522491576ea6af04cb2732d5912fc04958c43baf6c4f73d7",
+    "name": "Set Meisterschaft Geflüster aus der Tiefe",
+    "url": "https://inkdecks.com/lorcana-tournaments/set-meisterschaft-gefluster-aus-der-tiefe-tournament-decks-363031",
+    "date": "2026-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "0723ca35bd6f6941195faf378e9803e5b058dc55ef57a60bbd4e7797059f65e8",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "328041d2c7fecef2d40305ed94a9a5c09b94b819a89000d3a8ac2cba4d1ef9ef",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e15166c4b234d1e9134cc85ccdf3454593dd90b38d9399075755b738843e8bbc",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "28d7ed509b84c912129758e88758a5b7e0af2d048d06f498c493c2395e35eb4c",
+        "place": 4,
+        "inks": [
+          "steel",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "29b9ebf09aa6b72467c82cd7c219ea79b2b26a1c130f0c8fb8707723a9f43f12",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fabf6e42840d43b13501a5701e34253de3798f77911c394612c83e83e6f2750b",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3dfed9a20ff8f28b32afdbccc474c8210caa8b2811b68278b20323b18aa974be",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "29b2fb4c4722ab515f98c15d7fa6265095f6f23028b4d55a56b61be39d262eda",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
