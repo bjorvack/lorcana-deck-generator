@@ -6151,5 +6151,172 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "137892b54b9da915e9f9b769dcc79488c1cae64e4844549e52074cf02a212767",
+    "name": "Card Club Whispers in the Well Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/card-club-whispers-in-the-well-set-championship-tournament-decks-363055",
+    "date": "2026-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "83b3186ec59fdcabd9e8815a61a6a19f041b0ea9e95f8a59a1d25b42128fcb50",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "54908538ba67e662569e05d41ac4bc2c99237cdff34d201f6d42321b5c64d2b9",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a693d8339571c27ab697b060c1c3a768ed1e6bdb9e1072bbc4562a362fccc245",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "3ed393ac7c080539648b95fc891fe2c719c64ad962106d51f1fbf8b2c62ebaae",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d5e3e4d5222424d6eee6a3a24401e6a42779c4f1dfaf0b41c1bc894dec7b007a",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "316cd5dfa2d9622fa1f019fddba238ce52f1ae1183863eabbb629515e369724e",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "0e7aafaa04fa648940a25ccfa54481b6bb87f6bd19b3fa75b3915877550b610b",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "38374cf0a578f64f6fae7386cb09f80a156bbbff56aee9a0b9597cf7ff556ad4",
+    "name": "Saturday Afternoon Whispers in the Well - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-afternoon-whispers-in-the-well-set-championship-tournament-decks-363053",
+    "date": "2026-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c20e377e479274f61d0fe2ab1d00ac09bccf9cfe1f741732f3bf9bf3064e47dc",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "14cfa2927eb6d588785636615672a6fd817c5e7516c36262b1a64c70af1acd5a",
+    "name": "Top Cut Games CCQ - Round 11 Standings",
+    "url": "https://inkdecks.com/lorcana-tournaments/top-cut-games-ccq-round-11-standings-tournament-decks-363052",
+    "date": "2026-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "3caa2d6e10c18ddc57b1b9ebadaea050a5ca4153efa46f363a67f4bc825d251a",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "250b789fc82e057a1f8ea199377fb88b53f642ba4ac2e4861d9e5eb75f796b84",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "64c1085f1ed19f0f2c5106250db6c960c22b7109b6a5427dda42d55653e85b33",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "fd04e0c0618d60c8d64e5e1b6840286a2cf1fe37dc59e3fb6ebd7e2df21a2ed1",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1fa1e5fdc5be90e166864013a5048efe2f1ec54cf4da116d6151fbcadb40b238",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "250b789fc82e057a1f8ea199377fb88b53f642ba4ac2e4861d9e5eb75f796b84",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "fc70324285425f83406d630f6bfbaaa70232a3801f759d73ae80ac911faddd49",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "3ae06244211fb9e8dab1ee56da6f9ed863ae84897be31c3afe67a46bc99fc8e3",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
