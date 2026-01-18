@@ -1,0 +1,119 @@
+{
+  "hash": "fd7ba97a1ed9d0e11b9bff3fb14ae954b4c11c09565a75a591c9bf4ac09d7fe7",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 3,
+      "name": "Darling Dear",
+      "version": "Beloved Wife"
+    },
+    {
+      "amount": 3,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 2,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 3,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 3,
+      "name": "Hundred Acre Island",
+      "version": "Pooh's Home"
+    },
+    {
+      "amount": 3,
+      "name": "Jock",
+      "version": "Attentive Uncle"
+    },
+    {
+      "amount": 3,
+      "name": "Lady",
+      "version": "Decisive Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Elegant Spaniel"
+    },
+    {
+      "amount": 3,
+      "name": "Lady",
+      "version": "Miss Park Avenue"
+    },
+    {
+      "amount": 3,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Pluto",
+      "version": "Determined Defender"
+    },
+    {
+      "amount": 3,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 3,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge McDuck",
+      "version": "S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 3,
+      "name": "Snow White",
+      "version": "Fairest in the Land"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tramp",
+      "version": "Dapper Rascal"
+    },
+    {
+      "amount": 3,
+      "name": "Tramp",
+      "version": "Enterprising Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Street-Smart Dog"
+    }
+  ]
+}
