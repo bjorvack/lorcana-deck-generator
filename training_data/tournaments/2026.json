@@ -6318,5 +6318,167 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "b153ee19e255134b14785ede9b1be97a32457506b4c8599bbc1a190442dc328b",
+    "name": "Geflüster in der Tiefe - Setmeisterschaft",
+    "url": "https://inkdecks.com/lorcana-tournaments/gefluster-in-der-tiefe-setmeisterschaft-tournament-decks-363056",
+    "date": "2026-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "5048cb0f95cbe96961be9f962ebecac365a42d4564f4c2c694469d8ff8a5f3ec",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f15724f772966aa38d15e219fe868f6c80dd76bf34adc54c6ab45dc5c3779d43",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "3d61b452f9dea6e941462a4af86cc5337772ff99c140c366722eb1629f62e74c",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "54e4c08e9e6645a839065480e52214252ba5dbb63ba8cfd7058faf9756c4cf49",
+        "place": 4,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "ffee39dd079aa4dbf5cd0774ecbcba5403c4cc597c039ef153442742028e0a4b",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "e21ff506cef4b154828c10c463c61f6489668eea2749dea6bffd716efd16aeae",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "f6ce2a32da5a49dadab9bf3b5430bb66e3351cc6842d52a6f55c12bdb8a13c45",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "cf6ed1b0868fe5f4b72610d6aeb0403db3103082aa640547be68b711c5f592af",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "5b6db0068c1ed7368d61bc36052dec7b9726c371bdbde26efe9953891c22fbe7",
+    "name": "Top Cut Games CCQ - TOP 8 Standings",
+    "url": "https://inkdecks.com/lorcana-tournaments/top-cut-games-ccq-top-8-standings-tournament-decks-363052",
+    "date": "2026-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "3caa2d6e10c18ddc57b1b9ebadaea050a5ca4153efa46f363a67f4bc825d251a",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "250b789fc82e057a1f8ea199377fb88b53f642ba4ac2e4861d9e5eb75f796b84",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "64c1085f1ed19f0f2c5106250db6c960c22b7109b6a5427dda42d55653e85b33",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "fd04e0c0618d60c8d64e5e1b6840286a2cf1fe37dc59e3fb6ebd7e2df21a2ed1",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "791c69492972230aa6e45fa9533cf088949118be8d4eca9023e68e73d2ebb943",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "1fa1e5fdc5be90e166864013a5048efe2f1ec54cf4da116d6151fbcadb40b238",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "250b789fc82e057a1f8ea199377fb88b53f642ba4ac2e4861d9e5eb75f796b84",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "fc70324285425f83406d630f6bfbaaa70232a3801f759d73ae80ac911faddd49",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "3ae06244211fb9e8dab1ee56da6f9ed863ae84897be31c3afe67a46bc99fc8e3",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
