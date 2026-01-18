@@ -6122,5 +6122,34 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "db388e1db8d02a5ea2ad58e90892b46506c54e580ee719a926b250ebb3bda041",
+    "name": "Saturday Morning Whispers in the Well - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-morning-whispers-in-the-well-set-championship-tournament-decks-363030",
+    "date": "2026-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "49f0db32caffcdc5fab582c754536058077c6bc944d58b2ecc6e3830648e0887",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "57243e703cd1718e83e407416986abd14a25f90da06a137fe77b38880a86b689",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      }
+    ]
   }
 ]
