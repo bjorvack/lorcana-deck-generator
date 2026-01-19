@@ -7112,5 +7112,82 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "a48c5498f4c1863e2f28ba5b382851524793cc742012efbf1d08a70973d9e301",
+    "name": "4GS Games Whispers in the Well Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/4gs-games-whispers-in-the-well-set-championship-tournament-decks-363072",
+    "date": "2026-01-18",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "7195bda392d58cf709f0971e7e42f271e8645b7ce709197d030d23c1c5f9dca3",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8489ccf7a6f64bddeadaa8fc6c93027d2e2ace178620729498b5af2cc504eec2",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "09129fc9335353a3a7cd9d8d108c97fc4bc201f1790c1abb2251ab2f5cef43e2",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "17cf48edb3aaaa6ab522e7c24b0ca9dc4524363c2163df6629dc23942e8d4dff",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5a181302d34e8efb12454e14570bebf20f4eb2013a99237a887cfe6d1724e838",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "80ad095b0e94d14f5c637aa45f189ccde69636c8d75966b68c23e958109a8087",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "de1a115520e5e179071520728d56a28089f93b9a746b9caf7ff27f1a8712de48",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b691c636717a101b3a827b7c66563fd0e4ed1c2524c8f41cd0a1f1f8b793f285",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
