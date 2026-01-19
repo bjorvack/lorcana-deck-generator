@@ -6940,5 +6940,71 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "18b494597021fe9c802535dbc79f33edc2ea650ef9119f673f2ee2230697b923",
+    "name": "Whispers Store Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/whispers-store-championship-tournament-decks-363065",
+    "date": "2026-01-18",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "aa61a324118dded6a370538c82862338a9b874590a0c8e5a9e2a87c00e6abe18",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e489f3633b6f473135e5fd6cb7168bb91203da682acd35dccd42c0a8742028fd",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "80f7eadb372b6e51f233dcca17045423e11e10e970375423d4d7628cb88eefc3",
+    "name": "Championship – Whispers in the Well DRAGONCT",
+    "url": "https://inkdecks.com/lorcana-tournaments/championship-whispers-in-the-well-dragonct-tournament-decks-363058",
+    "date": "2026-01-18",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "fc70324285425f83406d630f6bfbaaa70232a3801f759d73ae80ac911faddd49",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "10715b62d1712ef3b437a97e1dc1d6c7c0530bfc07d916f6f251ac058137e8c1",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "0b34aa4b484f2a4132c09dffb61baf4ffb312e0980f1c49179458ca71aa6346a",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
