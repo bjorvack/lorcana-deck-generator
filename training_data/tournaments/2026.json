@@ -6605,5 +6605,50 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "5d54b28e6e5d48b07743054d59bf048e3e6662f043e7733e2d9f5a7ee28dfa56",
+    "name": "PikaStore Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/pikastore-set-championship-tournament-decks-363062",
+    "date": "2026-01-18",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "1d1278ba5283dddb6fd484fe2783ce322a69c1ae9292da2985486c8cefa87eb8",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "64c1085f1ed19f0f2c5106250db6c960c22b7109b6a5427dda42d55653e85b33",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b0a92c230a3df4535c36a3f4e8cf43fb58a2fc262e02d5cbeac684f1eb5e8a2a",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "79b5871b2438e229ec3bff741f7b7c8fff9b2600431a69cf11620adb4bbff580",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
