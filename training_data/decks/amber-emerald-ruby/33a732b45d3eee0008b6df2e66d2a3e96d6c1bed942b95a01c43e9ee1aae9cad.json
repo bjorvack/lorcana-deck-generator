@@ -1,0 +1,100 @@
+{
+  "hash": "33a732b45d3eee0008b6df2e66d2a3e96d6c1bed942b95a01c43e9ee1aae9cad",
+  "inks": [
+    "emerald",
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Darling Dear",
+      "version": "Beloved Wife"
+    },
+    {
+      "amount": 2,
+      "name": "He Who Steals and Runs Away",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Jim Dear",
+      "version": "Beloved Husband"
+    },
+    {
+      "amount": 4,
+      "name": "Jock",
+      "version": "Attentive Uncle"
+    },
+    {
+      "amount": 3,
+      "name": "Kanine Krunchies",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Decisive Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Lady",
+      "version": "Elegant Spaniel"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Napoleon",
+      "version": "Clever Bloodhound"
+    },
+    {
+      "amount": 3,
+      "name": "Only So Much Room",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Perdita",
+      "version": "On the Lookout"
+    },
+    {
+      "amount": 2,
+      "name": "Roger Radcliffe",
+      "version": "Dog Lover"
+    },
+    {
+      "amount": 3,
+      "name": "So Much to Give",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Spaghetti Dinner",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Colonel",
+      "version": "Old Sheepdog"
+    },
+    {
+      "amount": 2,
+      "name": "Tramp",
+      "version": "Dapper Rascal"
+    },
+    {
+      "amount": 3,
+      "name": "Tramp",
+      "version": "Enterprising Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Observant Guardian"
+    }
+  ]
+}
