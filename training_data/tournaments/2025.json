@@ -24997,5 +24997,130 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "8fc93d119beaeb1edf08bf95e1032955c5c655ccfeaa42b7dbcc81eb6d61de0e",
+    "name": "Neusser Whispers in the Well Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/neusser-whispers-in-the-well-set-championship-tournament-decks-363059",
+    "date": "2025-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "3aaf879e1a530f69b24d3477e86189c2fb6fbbd769b85cdee7fe2dbd608e9c7b",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "eebadca3633b344b0f6968b019904551ca156621f79e9c829405cf70e97de623",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "ee09bf56f6dfb66a85aba3d008aa3bbbdfdd39b74654468c2a81e4d7c1d61798",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8c148a0863e73c5374936232c6a77fecdb7942eb31f9adc69593cd5f5117dbe2",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7d87b022e4dddc7575c4e6ec72722d3f13e96fac36678a19e192eab7f38d1e4e",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "16255c0fd45f5efe76a222ffcc198d1e94aee86c8675d5d3aa2bed786fbc7f86",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "aff1971423bc4db2c2c0daefeb9faeee130d16dc9f5934289b6050f43fcc5b9d",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "92faf7feb2134a240f7e64f9d821f96963d3d7bf5a86f94690fc290a9561770e",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b6d7a638c8f50a6a4da916dea55282f9699df79c58ae9341fab88bb48effae31",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "59c73d1198a028da6ee3f295b9e55352b4f530cd751c9f3be583ed8e6003bc9a",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "6840e6db16e839608d3f8866de58af0a4a6fc1317f7f28c4acdf5c092c83fc9e",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "674f3630c29668ceae93c08f5b57d0c6fa76ff2a4cabe9d9499af45d9c288289",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "407d09a8cab2adcccac8c74d274ee6ee1e439d37535ae0b203a5a7f30d3e228b",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "f9ba9f857cfa023b5fe2e590d3efb055f19e107db822d3ac39782374ca443f1c",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
