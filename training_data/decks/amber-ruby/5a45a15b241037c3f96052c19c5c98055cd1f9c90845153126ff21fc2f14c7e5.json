@@ -1,0 +1,94 @@
+{
+  "hash": "5a45a15b241037c3f96052c19c5c98055cd1f9c90845153126ff21fc2f14c7e5",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Beast",
+      "version": "Aggressive Lord"
+    },
+    {
+      "amount": 4,
+      "name": "Glimmer vs Glimmer",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Flying Goof"
+    },
+    {
+      "amount": 3,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "Amber Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Brave Little Prince"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "True Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Daring Defender"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Sweetheart Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Nothing We Won't Do",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Determined Defender"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "The Prince",
+      "version": "Vigilant Suitor"
+    }
+  ]
+}
