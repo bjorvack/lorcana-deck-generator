@@ -25122,5 +25122,228 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "e94afdc73454e20b47266d6abc719961e3c750dab4f6134ae8986b04b533fc1a",
+    "name": "Geflüster in der Tiefe - Setmeisterschaft",
+    "url": "https://inkdecks.com/lorcana-tournaments/gefluster-in-der-tiefe-setmeisterschaft-tournament-decks-363056",
+    "date": "2025-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "5048cb0f95cbe96961be9f962ebecac365a42d4564f4c2c694469d8ff8a5f3ec",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f15724f772966aa38d15e219fe868f6c80dd76bf34adc54c6ab45dc5c3779d43",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "3d61b452f9dea6e941462a4af86cc5337772ff99c140c366722eb1629f62e74c",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "54e4c08e9e6645a839065480e52214252ba5dbb63ba8cfd7058faf9756c4cf49",
+        "place": 4,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "ffee39dd079aa4dbf5cd0774ecbcba5403c4cc597c039ef153442742028e0a4b",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "e21ff506cef4b154828c10c463c61f6489668eea2749dea6bffd716efd16aeae",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "f6ce2a32da5a49dadab9bf3b5430bb66e3351cc6842d52a6f55c12bdb8a13c45",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "cf6ed1b0868fe5f4b72610d6aeb0403db3103082aa640547be68b711c5f592af",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "749f7414f9c8d5ca56cdef157b4e586a5dd5af993f6397677953e63e387071be",
+    "name": "Card Club Whispers in the Well Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/card-club-whispers-in-the-well-set-championship-tournament-decks-363055",
+    "date": "2025-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "83b3186ec59fdcabd9e8815a61a6a19f041b0ea9e95f8a59a1d25b42128fcb50",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "54908538ba67e662569e05d41ac4bc2c99237cdff34d201f6d42321b5c64d2b9",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a693d8339571c27ab697b060c1c3a768ed1e6bdb9e1072bbc4562a362fccc245",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "3ed393ac7c080539648b95fc891fe2c719c64ad962106d51f1fbf8b2c62ebaae",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "67ac0a18d26198b972030a52a868e6ffe87e97945318b20c8226776518ee1ba8",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "316cd5dfa2d9622fa1f019fddba238ce52f1ae1183863eabbb629515e369724e",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "0e7aafaa04fa648940a25ccfa54481b6bb87f6bd19b3fa75b3915877550b610b",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "7fd254cfed3625d3970435803095d4b619ec409f6dcc774ca0dd4b38bbf51f84",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "64deee80e99e95157547dddee0fa5495251dd0ffd23a3e4e871ac1df33438deb",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ab9880c4cfa5a70836ff00a92bf8f21856053af3c75b769b8f16a16a08876ff5",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9420208ed3f6a0975642c217303151c8a027884f4cd1762dbef9ae36f0716565",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5a45a15b241037c3f96052c19c5c98055cd1f9c90845153126ff21fc2f14c7e5",
+        "place": 16,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "e541c27cf69ef9e3bb7d3748f1a2b9f96081fcf21f53e17b08104fc63c9d6c21",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "674f3630c29668ceae93c08f5b57d0c6fa76ff2a4cabe9d9499af45d9c288289",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "1d951c5d77bad218a491050071b3ff5059d749c5518d9b13179dc185492e0cb8",
+    "name": "Saturday Afternoon Whispers in the Well - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-afternoon-whispers-in-the-well-set-championship-tournament-decks-363053",
+    "date": "2025-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c20e377e479274f61d0fe2ab1d00ac09bccf9cfe1f741732f3bf9bf3064e47dc",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
