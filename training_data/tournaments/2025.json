@@ -25486,5 +25486,602 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "e9d7ef5246f733238a2788404a49bfe1590710b80400f04ccd3ccdfcfc1d9fbf",
+    "name": "4GS Games Whispers in the Well Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/4gs-games-whispers-in-the-well-set-championship-tournament-decks-363072",
+    "date": "2025-01-18",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "7195bda392d58cf709f0971e7e42f271e8645b7ce709197d030d23c1c5f9dca3",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8489ccf7a6f64bddeadaa8fc6c93027d2e2ace178620729498b5af2cc504eec2",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "09129fc9335353a3a7cd9d8d108c97fc4bc201f1790c1abb2251ab2f5cef43e2",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "17cf48edb3aaaa6ab522e7c24b0ca9dc4524363c2163df6629dc23942e8d4dff",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5a181302d34e8efb12454e14570bebf20f4eb2013a99237a887cfe6d1724e838",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "80ad095b0e94d14f5c637aa45f189ccde69636c8d75966b68c23e958109a8087",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "de1a115520e5e179071520728d56a28089f93b9a746b9caf7ff27f1a8712de48",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b691c636717a101b3a827b7c66563fd0e4ed1c2524c8f41cd0a1f1f8b793f285",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "c9ac248c83e97c2039dedd4d1f18a742e3cac9c7835dbc368ac25e9e98a7a4e8",
+    "name": "Whispers Store Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/whispers-store-championship-tournament-decks-363071",
+    "date": "2025-01-18",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "90b6be42daad8ac5cadfd8f54b7024df4ad761eeac2188094eb9cdca3b9556a4",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "10c9dc6563e13c97a800c96a3e6d92711aaf2df4ac26b59616701a8a94d40561",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "881c1ad026801a71ebfc61ee021b85e93a3cb47ff412c3300ec65b509faccd9f",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "9050ec214a6c2a8eb2c54c40dda8c744053be6669d3b4370394b1bc3ba2368d9",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "39d226f713c84575b85cff47b99695649708e2da92c6ae0657a09306d97d8192",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "8837e7d551b606bbe071ab37eb93df7fa21ecd34dc1691ac6981b50cde38b71b",
+    "name": "Whispers In The Well - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/whispers-in-the-well-set-championship-tournament-decks-363068",
+    "date": "2025-01-18",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "fd366d113f18b9a9b18dd981617ad4e1ac6bc9b6337bed76a3cd2b368deca794",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "792cbcf5a187dd22dd74ce108dced1855a915ddd48965ba813ba73d2d6c4c2f2",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5910f5ee9ce1e239d907f283f69ffb37fc712c92640c9742de5f395767522d17",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b2bcb91789a5e6fded9613c01de75c405bb4e2b196fccdb7074bc71cb77a37cb",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f85613c2f79bd2a49fa3f9587e2c3ceac30d1255e9fc93369df49af7dd6ac2b3",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "1457d6e702b1008d5c1c3e1a9368ee1fe9c073a51ada67e3f4318113e6d8863a",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "c9ac248c83e97c2039dedd4d1f18a742e3cac9c7835dbc368ac25e9e98a7a4e8",
+    "name": "Whispers Store Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/whispers-store-championship-tournament-decks-363065",
+    "date": "2025-01-18",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "aa61a324118dded6a370538c82862338a9b874590a0c8e5a9e2a87c00e6abe18",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e489f3633b6f473135e5fd6cb7168bb91203da682acd35dccd42c0a8742028fd",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "df202552e1093b9bc0ca2793b51d2bc76a682b34d9e7efab7f495c05a1e58d2c",
+    "name": "Lud'M Set Championship (Montpellier)",
+    "url": "https://inkdecks.com/lorcana-tournaments/lud-m-set-championship-montpellier-tournament-decks-363063",
+    "date": "2025-01-18",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "f0bc97050b2665dcd99f1489079de7023ad859415a3a4b82b8c62528e6a4d0e4",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "dcaffc455c98b302689010a5c4b47f0d17e433eb27942d01c3a0f44423f220eb",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "65d3c0c58019de761ff2e8795155fd67a950406eb47501e9a70c25b48398d0e8",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "2a6c3a951cbcc3f778fa34b6846a45426d7a6da03f6779c72aa79547328d927d",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "86d85884d6f543875ed8f60d9a34d78dcd33fde25613bd0acce879d538f5a5bd",
+    "name": "Whispers in the Well Set Championships",
+    "url": "https://inkdecks.com/lorcana-tournaments/whispers-in-the-well-set-championships-tournament-decks-363060",
+    "date": "2025-01-18",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "f3a68329538bce0251c8d01f11910e774326a8be355cf52210dacaa3f745ef1a",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1504c591345af44d02d034e46e599d7287e0e22e6baa61b41cc7aa965442ec36",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c647aad16a1a431587f3b43672679e3b38742d3b1f30b04672059fe4f4161f4c",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "f88ddcca5d59a00032fbb9560bf0859519c044e6b699b8f0150e84d3890999f8",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0b8325d269152a7c96dedc6b3a8bf8635027cd10b88381858072c5c3df0cf9b1",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4ac21fddf4816da6223b5abfeadbde2895588ad6298f9e3ff4e497f178a88a1a",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "719db7c2aaf7d67c4f5822ea1eda30214df69e038f8887a074cd4ba0c16c4fa4",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "620fc75071f29ee5354dbb8b4ba38ec3c771c500f29c44994532b06ddbe0cb5b",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "6ac9b561cb863fc841668da8821a668b16cb7aa1fac42d052def13d3676ce8fb",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "1e333ffff872db9ed54c029edfac0217170f19b32272ccce39f6c6e03f91bce7",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "37193a8c695cf0171cc4bafd9bd26a719276335ddd2e481d7da9324f285835ed",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "3dfb41fe1b259b14d76d3c2bd89ec6d719a8d15c1f07d0678312aebcdb410669",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "884afa1263a84af3a68cc5183edaa8db377f15816c8753267affc50b7f6922cd",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5c5473bad8f53539b779ad6384ae129df5dc914f8a53636a31a9f8e12dde926d",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "9928a46c234aaa5430220edddaaa6624ff3336aad9c386fe68d5cb6442ae91f8",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b7f10fb92da2ea42b8e2b71f951dcebb0dedd5521cf3657c3e1991e03a693d1d",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "4bf4ba2ec8f21b2f7490d64a58cc9c5eba485fefae6c7ab28a1644f527ed8944",
+        "place": 32,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "868a6fa3a301e8b87207e894b6cb3c2dfa70a33c45a22e4ab6f1067804e4dc63",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "02e99b5c34816506b0b737f9b62e4c0b028cdfb3a1cf36fe67abcb9c5e50e023",
+        "place": 32,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "3957bd0f0153326398c7178c6dc5a9b2d6c244bf4ccebca121a064689a13830c",
+        "place": 32,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7410f98c664fed1ef6a014365326209e1e4610760f1c7306e33835c9f29a0b79",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d23390d88b4ddf3d78bf5742ea3b8247b409a30272985cb96d5ed11987cc579c",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "c5bfb85ba9bd3ed41632d84b4ae6289b0011450c00bfbb4199543b5761178385",
+    "name": "Championship – Whispers in the Well DRAGONCT",
+    "url": "https://inkdecks.com/lorcana-tournaments/championship-whispers-in-the-well-dragonct-tournament-decks-363058",
+    "date": "2025-01-18",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "fc70324285425f83406d630f6bfbaaa70232a3801f759d73ae80ac911faddd49",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b5d81d682261e242e55b971c94c4d6cef821af1b07e499d87bd451f72f538247",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "10715b62d1712ef3b437a97e1dc1d6c7c0530bfc07d916f6f251ac058137e8c1",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "0b34aa4b484f2a4132c09dffb61baf4ffb312e0980f1c49179458ca71aa6346a",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a09c8afb016b8246fa9d25fdf2b840911608c6b1d6dc9b160570255fb5a5cfe0",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "7b75f65aa6bf8bf218837550a3b5984d534f03e79c0db75f9bec37b0d2cb5e6a",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8627ec7c31744ca8ffac6324c6c57f829c434a2f51eb451d722e6dede335aea3",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8d408b8cea0925e5dda5f12316b78262cddd89398a855748b1eb275bf012dbb5",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "37a70d4a17b185464cf731ed574427b1ebe1d2072235cf89692a5dc2ef1d1791",
+    "name": "KGS Catskill Whispers in the Well - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/kgs-catskill-whispers-in-the-well-set-championship-tournament-decks-363075",
+    "date": "2025-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "71148453740f640e634d450fd666727a1b266e979d3aa9bfc785fb6ac55e0350",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "672ee59859d837e50e7a3cf4ba256f6f3f4fa091b135bf8a0e821d5536e65e0b",
+    "name": "Whispers in the Well Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/whispers-in-the-well-set-championship-tournament-decks-363073",
+    "date": "2025-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "62e2ab39de78e4195bb1c609b6dee16bb19b25f1899c906b9d323a923844f8c7",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "bef9b9a2558a555f570f167af17847142602b93895343cd0fe98744f6f815722",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "429abaa8d6ec14264389877246e67f1208576b87512ee152e2f2fff3365fa0df",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ab226a39c2d4bf1d27171a81b8e5eee5aacbc458e05372ee033cda43fe695886",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "steel"
+        ]
+      }
+    ]
   }
 ]

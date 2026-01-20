@@ -1,0 +1,109 @@
+{
+  "hash": "39d226f713c84575b85cff47b99695649708e2da92c6ae0657a09306d97d8192",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Agrabah",
+      "version": "Marketplace"
+    },
+    {
+      "amount": 2,
+      "name": "Aladdin",
+      "version": "Prince Ali"
+    },
+    {
+      "amount": 3,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Secret Agent"
+    },
+    {
+      "amount": 4,
+      "name": "Flotsam",
+      "version": "Slippery as an Eel"
+    },
+    {
+      "amount": 3,
+      "name": "HeiHei",
+      "version": "Bumbling Rooster"
+    },
+    {
+      "amount": 2,
+      "name": "Kaa",
+      "version": "Suspicious Serpent"
+    },
+    {
+      "amount": 3,
+      "name": "LeFou",
+      "version": "Instigator"
+    },
+    {
+      "amount": 4,
+      "name": "Megara",
+      "version": "Pulling the Strings"
+    },
+    {
+      "amount": 2,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 3,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 3,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Impulsive Ruler"
+    },
+    {
+      "amount": 2,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 2,
+      "name": "Robin Hood",
+      "version": "Daydreamer"
+    },
+    {
+      "amount": 4,
+      "name": "Sergeant Tibbs",
+      "version": "Courageous Cat"
+    },
+    {
+      "amount": 3,
+      "name": "Sudden Chill",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Most Helpful"
+    }
+  ]
+}
