@@ -1,0 +1,109 @@
+{
+  "hash": "d2a7774ba449cf2ea1f986d4bf953eeb90451a18e0e41d52886631e2bbb86593",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Arthur",
+      "version": "King Victorious"
+    },
+    {
+      "amount": 2,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Tenacious Mouse"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 3,
+      "name": "Daisy Duck",
+      "version": "Ghost Finder"
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Ghost Hunter"
+    },
+    {
+      "amount": 3,
+      "name": "Francine",
+      "version": "Eyeing the Evidence"
+    },
+    {
+      "amount": 3,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 3,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ink Amplifier",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 1,
+      "name": "Minnie Mouse",
+      "version": "Ghost Hunter"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Determined Detective"
+    },
+    {
+      "amount": 3,
+      "name": "Nick Wilde",
+      "version": "Persistent Investigator"
+    },
+    {
+      "amount": 2,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Vincenzo Santorini",
+      "version": "The Explosives Expert"
+    }
+  ]
+}

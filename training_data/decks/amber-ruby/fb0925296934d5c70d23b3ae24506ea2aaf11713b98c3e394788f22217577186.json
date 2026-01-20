@@ -1,0 +1,109 @@
+{
+  "hash": "fb0925296934d5c70d23b3ae24506ea2aaf11713b98c3e394788f22217577186",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Baloo",
+      "version": "Friend and Guardian"
+    },
+    {
+      "amount": 3,
+      "name": "Cri",
+      "version": "Kee - Part of the Team"
+    },
+    {
+      "amount": 3,
+      "name": "David Xanatos",
+      "version": "Charismatic Leader"
+    },
+    {
+      "amount": 2,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 2,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Hermes",
+      "version": "Harried Messenger"
+    },
+    {
+      "amount": 3,
+      "name": "Huey",
+      "version": "Reliable Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "Amber Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Daring Defender"
+    },
+    {
+      "amount": 3,
+      "name": "Moana",
+      "version": "Island Explorer"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 4,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "King in the Making"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 3,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    }
+  ]
+}
