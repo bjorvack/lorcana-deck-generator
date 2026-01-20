@@ -1,0 +1,94 @@
+{
+  "hash": "868a6fa3a301e8b87207e894b6cb3c2dfa70a33c45a22e4ab6f1067804e4dc63",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Bellwether",
+      "version": "Master Manipulator"
+    },
+    {
+      "amount": 3,
+      "name": "Chomp!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Lively Pirate"
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Pie Slinger"
+    },
+    {
+      "amount": 4,
+      "name": "Dormouse",
+      "version": "Easily Agitated"
+    },
+    {
+      "amount": 2,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Fidget",
+      "version": "Sneaky Bat"
+    },
+    {
+      "amount": 4,
+      "name": "King of Hearts",
+      "version": "Picky Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Mosquito Bite",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Haughty Monarch"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Impulsive Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Unpredictable Bully"
+    },
+    {
+      "amount": 4,
+      "name": "Tweedledee & Tweedledum",
+      "version": "Strange Storytellers"
+    }
+  ]
+}
