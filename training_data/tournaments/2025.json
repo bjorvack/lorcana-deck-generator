@@ -26258,5 +26258,111 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "0973b6321ac11d96257153fb39dc20256e3c96e30c450c8396161c2da81a3baa",
+    "name": "Top Cut Games CCQ - TOP 8  Standings",
+    "url": "https://inkdecks.com/lorcana-tournaments/top-cut-games-ccq-top-8-standings-tournament-decks-363052",
+    "date": "2025-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "3caa2d6e10c18ddc57b1b9ebadaea050a5ca4153efa46f363a67f4bc825d251a",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "250b789fc82e057a1f8ea199377fb88b53f642ba4ac2e4861d9e5eb75f796b84",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "64c1085f1ed19f0f2c5106250db6c960c22b7109b6a5427dda42d55653e85b33",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "fd04e0c0618d60c8d64e5e1b6840286a2cf1fe37dc59e3fb6ebd7e2df21a2ed1",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "791c69492972230aa6e45fa9533cf088949118be8d4eca9023e68e73d2ebb943",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "1fa1e5fdc5be90e166864013a5048efe2f1ec54cf4da116d6151fbcadb40b238",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fc70324285425f83406d630f6bfbaaa70232a3801f759d73ae80ac911faddd49",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "3ae06244211fb9e8dab1ee56da6f9ed863ae84897be31c3afe67a46bc99fc8e3",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "baab161605717191b23db0ee87ceb388a463feaa5fe83cee088b911c01be23fb",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "46277d192c4657c5c7c961afd71bdebb6d1e9ba6f29c87fb764a5b1972da5a97",
+    "name": "Tucson Games & Gadgets - Tucson Mall - Whispers Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/tucson-games-gadgets-tucson-mall-whispers-set-champs-tournament-decks-363046",
+    "date": "2025-01-17",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "449652e7b7d6bb132409b37941de0c7efe456188c041f12a223d4426b0652098",
+        "place": 2,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
