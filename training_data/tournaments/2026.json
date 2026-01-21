@@ -7761,5 +7761,119 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "9911ba9f9d2ba9f62abe2823a74c6bbbe199bbc5289c276d7becbb48ffd4ea84",
+    "name": "Illumineer Champions League - Season 2 - Finals",
+    "url": "https://inkdecks.com/lorcana-tournaments/illumineer-champions-league-season-2-finals-tournament-decks-363061",
+    "date": "2026-01-20",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "9149d28d6a285dd770959cfb0b2bb81846e3b4a3cc2e5b9c1c725039ff0e4ea2",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d1d17215e9cb7f85cba6f7c4094c1233d447c84e16f86edc549f0e5124f40f7a",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "f5b70c4c2f54a30ccb53b2747e73395cb5a69543ac0ccd704c661408da8318aa",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "9149d28d6a285dd770959cfb0b2bb81846e3b4a3cc2e5b9c1c725039ff0e4ea2",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f03b5a6c094091b593e28c0eece078ef20a02b2a65d9c8b3fc69b74a84e948d3",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2c7f4570dfb79860d05ea8713c3719eab4329df4c500c68bec72aa6c1bd994af",
+        "place": 6,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "64c1085f1ed19f0f2c5106250db6c960c22b7109b6a5427dda42d55653e85b33",
+        "place": 7,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "6fab6125d7047351d49d2afcc1fdc5ea9130e4bc1ee2f6e94fd2c5cc1a2a9202",
+    "name": "Championnat de Set : Lueurs dans les Profondeurs",
+    "url": "https://inkdecks.com/lorcana-tournaments/championnat-de-set-lueurs-dans-les-profondeurs-tournament-decks-363082",
+    "date": "2026-01-18",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "dfd539879b38adb9916ca3c1c0b37ce56b066edd7f775cf0f782b611d41445a7",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "fc70324285425f83406d630f6bfbaaa70232a3801f759d73ae80ac911faddd49",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "7993758cbcd3e6b4e1d84dea032c40dd22b5a9c62e29d97a5d52568d3d2a3600",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9cb00da70b96993c145bc98f9f49d84df252493d847fa13c42c5f213588bc5e9",
+        "place": 4,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      }
+    ]
   }
 ]
