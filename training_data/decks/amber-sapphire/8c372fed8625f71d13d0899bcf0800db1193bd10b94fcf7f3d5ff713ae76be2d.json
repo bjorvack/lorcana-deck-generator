@@ -1,0 +1,89 @@
+{
+  "hash": "8c372fed8625f71d13d0899bcf0800db1193bd10b94fcf7f3d5ff713ae76be2d",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Baloo",
+      "version": "Friend and Guardian"
+    },
+    {
+      "amount": 4,
+      "name": "Chicha",
+      "version": "Dedicated Mother"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 4,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Soggy Fox"
+    },
+    {
+      "amount": 2,
+      "name": "Ratigan",
+      "version": "Greedy Genius"
+    },
+    {
+      "amount": 2,
+      "name": "Restoring the Heart",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Cavern Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "King in the Making"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    }
+  ]
+}
