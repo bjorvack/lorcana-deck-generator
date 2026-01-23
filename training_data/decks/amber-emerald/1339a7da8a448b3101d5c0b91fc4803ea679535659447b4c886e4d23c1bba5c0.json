@@ -1,0 +1,104 @@
+{
+  "hash": "1339a7da8a448b3101d5c0b91fc4803ea679535659447b4c886e4d23c1bba5c0",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Blessed Bagpipes",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 2,
+      "name": "Clarabelle",
+      "version": "Contented Wallflower"
+    },
+    {
+      "amount": 4,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 4,
+      "name": "Emily Quackfaster",
+      "version": "Level-Headed Librarian"
+    },
+    {
+      "amount": 2,
+      "name": "Flotsam",
+      "version": "Slippery as an Eel"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 1,
+      "name": "Goofy",
+      "version": "Emerald Champion"
+    },
+    {
+      "amount": 3,
+      "name": "Goofy",
+      "version": "Expert Shipwright"
+    },
+    {
+      "amount": 4,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Little John",
+      "version": "Impermanent Outlaw"
+    },
+    {
+      "amount": 4,
+      "name": "Megara",
+      "version": "Secret Keeper"
+    },
+    {
+      "amount": 1,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Recovered Page",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 3,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    }
+  ]
+}
