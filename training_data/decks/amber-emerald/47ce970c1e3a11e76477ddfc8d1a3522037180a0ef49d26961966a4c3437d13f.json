@@ -1,0 +1,114 @@
+{
+  "hash": "47ce970c1e3a11e76477ddfc8d1a3522037180a0ef49d26961966a4c3437d13f",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 2,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Decisive Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Lady",
+      "version": "Elegant Spaniel"
+    },
+    {
+      "amount": 2,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Miss Park Avenue"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 1,
+      "name": "Mickey Mouse",
+      "version": "Amber Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Tramp",
+      "version": "Dapper Rascal"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Enterprising Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Tramp",
+      "version": "Street-Smart Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 1,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    }
+  ]
+}

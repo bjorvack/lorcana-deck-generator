@@ -1,0 +1,94 @@
+{
+  "hash": "089a50fe26949c64d4e5715621c7c43db5649ed175882dbe7bcb84bf69f14b43",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Baloo",
+      "version": "Friend and Guardian"
+    },
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Paranormal Investigator"
+    },
+    {
+      "amount": 2,
+      "name": "Daisy Duck",
+      "version": "Sapphire Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Focused Flatfoot"
+    },
+    {
+      "amount": 4,
+      "name": "Down in New Orleans",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Investigative Mind"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "On the Case"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 2,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 2,
+      "name": "Mufasa",
+      "version": "King of the Pride Lands"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

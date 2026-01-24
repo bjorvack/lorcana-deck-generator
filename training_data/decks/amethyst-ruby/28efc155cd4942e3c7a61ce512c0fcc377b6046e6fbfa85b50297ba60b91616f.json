@@ -1,0 +1,99 @@
+{
+  "hash": "28efc155cd4942e3c7a61ce512c0fcc377b6046e6fbfa85b50297ba60b91616f",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 3,
+      "name": "Mushu's Rocket",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Next Stop, Olympus",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 3,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 1,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 2,
+      "name": "They Never Come Back",
+      "version": ""
+    }
+  ]
+}
