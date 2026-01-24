@@ -8125,5 +8125,266 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "11eee997fe51597bf579e4c4d889adf804ab054a400a9ca4f63bc03962c00914",
+    "name": "Road To Lorcana 10 - Saison 10",
+    "url": "https://inkdecks.com/lorcana-tournaments/road-to-lorcana-10-saison-10-tournament-decks-363049",
+    "date": "2026-01-23",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "b0a92c230a3df4535c36a3f4e8cf43fb58a2fc262e02d5cbeac684f1eb5e8a2a",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "621ffa63be4ffafe0f3db4b26cb3d3ed416279a630bc0322fe4acfb4035dc046",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a488d61a6291d0e4c0cde8a5dc8dc74837a5a5cf31fbd9df13f4e79726790e50",
+        "place": 3,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a20cbbfdadff6f48481be20b1a01a2b55df3df041bff036a2f3edf4564eac82a",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "621ffa63be4ffafe0f3db4b26cb3d3ed416279a630bc0322fe4acfb4035dc046",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3cb7a008b5232cbb5d0472dcf03a08a9bfdf3eb89a75511f60b23ad081dcab6f",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "d6c0bb9a20c8c55ca93c535e3dcf143d49581dfd51ba215ab12b85bab33bf17a",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "359cc8d08211ecd2f1ab0b61d46a277efcd1e807fa489123746fabe6481e73bf",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "ac113a4b677471d9c06f8048ba3852c7fa6650dfccfbdb78d097c858b9aa1f64",
+        "place": 16,
+        "inks": [
+          "steel",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "6a70e38062c91a823b0cd99e8ff0944bae06a8f71708fec440678502b302a4d9",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3ed393ac7c080539648b95fc891fe2c719c64ad962106d51f1fbf8b2c62ebaae",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "28efc155cd4942e3c7a61ce512c0fcc377b6046e6fbfa85b50297ba60b91616f",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1017a2b859166b1de792e2941c21bbe79610a4a1b1330f1c09d9ed1b586145ab",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "6edef8b3050ae3e340c7af4df69dffc951f5111025b5f3729a73b6a7b4a5d223",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d5d2b88d02348f40f4343dcc40c4251c5176c3f821996a62d480bc5c9b004ae7",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "bae31c73c2f9cfb9ef93bac10e0ed9cecf0c78803afa33e99c69f97ee555b1ca",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "11fc2dbef0e7bbf5e60e5aae86a551b819ba3e00106fd74c34f20edfe2ca3d1c",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8265ff7f404609eead8f3947ed2860160c9ab8e2916ecd3dafc4a10880852eb5",
+        "place": 32,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "8860d25566f141170ff6c4ac24c3c3c921cc33e9db44b7c6abf30b982e547118",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "steel"
+        ]
+      },
+      {
+        "hash": "e3e912b82faeeece68f769c96489e9d8e05aaefee24cecdd9856e296f331b97d",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f076db75e7be986520241d8d410b40059aaa59eb60b59cc125351f1c3d5e931d",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5778e09dbf060ce53de7cbfc47a170ceed793818f7b355ac2f1d02b532403b24",
+        "place": 32,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "089a50fe26949c64d4e5715621c7c43db5649ed175882dbe7bcb84bf69f14b43",
+        "place": 32,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "8511937995854e09bbdb41e1388d0f0c188d3e7041ca5b2b0552dfec98e03e32",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "758f796ac5193c45c11be78bc115fbc414e7ef0b8efdb20692c8292f9fa3373a",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "38ef1965d66a80ecb73e34711ab34794b129506ad758ad669fe889706e512997",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d3492d681d87b6deeb950206c6a1196b7d18b5dd2072ce47771b45825145f063",
+        "place": 32,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "47ce970c1e3a11e76477ddfc8d1a3522037180a0ef49d26961966a4c3437d13f",
+        "place": 32,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "ad3c5c6aa8f71683cb962c5c5e116bd54d57a6f8082ba247074bf17da80a8d5d",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "05f6ed8a51bf61b9589e4eec952b0257cc5ecce5bf55542a069a778f71b0774f",
+        "place": 32,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "1fbed83b79d7f2ddd6101107e4553c1ebfd2a4b58346aa34e30a388541ede16f",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
