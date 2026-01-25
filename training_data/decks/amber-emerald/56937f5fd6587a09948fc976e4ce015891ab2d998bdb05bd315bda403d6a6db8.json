@@ -1,0 +1,119 @@
+{
+  "hash": "56937f5fd6587a09948fc976e4ce015891ab2d998bdb05bd315bda403d6a6db8",
+  "inks": [
+    "emerald",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Blessed Bagpipes",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Della Duck",
+      "version": "Returning Mother"
+    },
+    {
+      "amount": 3,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 4,
+      "name": "Emily Quackfaster",
+      "version": "Level-Headed Librarian"
+    },
+    {
+      "amount": 3,
+      "name": "Flintheart Glomgold",
+      "version": "Scheming Billionaire"
+    },
+    {
+      "amount": 4,
+      "name": "Flotsam",
+      "version": "Slippery as an Eel"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 2,
+      "name": "Gaston",
+      "version": "Frightful Bully"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Galumphing Gumshoe"
+    },
+    {
+      "amount": 3,
+      "name": "Goofy",
+      "version": "Ghost Hunter"
+    },
+    {
+      "amount": 2,
+      "name": "Little John",
+      "version": "Impermanent Outlaw"
+    },
+    {
+      "amount": 2,
+      "name": "Megara",
+      "version": "Secret Keeper"
+    },
+    {
+      "amount": 1,
+      "name": "Scrooge McDuck",
+      "version": "Cavern Prospector"
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge McDuck",
+      "version": "On the Right Track"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "Happy-Go-Lucky"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "King in the Making"
+    },
+    {
+      "amount": 3,
+      "name": "Simba",
+      "version": "Pride Protector"
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 3,
+      "name": "Webby's Diary",
+      "version": ""
+    }
+  ]
+}
