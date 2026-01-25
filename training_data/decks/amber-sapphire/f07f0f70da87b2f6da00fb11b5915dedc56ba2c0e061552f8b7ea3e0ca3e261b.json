@@ -1,0 +1,99 @@
+{
+  "hash": "f07f0f70da87b2f6da00fb11b5915dedc56ba2c0e061552f8b7ea3e0ca3e261b",
+  "inks": [
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Alice",
+      "version": "Growing Girl"
+    },
+    {
+      "amount": 3,
+      "name": "Anna",
+      "version": "Braving the Storm"
+    },
+    {
+      "amount": 3,
+      "name": "Aurora",
+      "version": "Dreaming Guardian"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 2,
+      "name": "Fergus McDuck",
+      "version": "Scrooge's Father"
+    },
+    {
+      "amount": 4,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 3,
+      "name": "Moana",
+      "version": "Determined Explorer"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Mrs. Beakley",
+      "version": "Former S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Considerate Diplomat"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Free Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Queen's Sensor Core",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Ready for Adventure"
+    },
+    {
+      "amount": 4,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    },
+    {
+      "amount": 4,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}
