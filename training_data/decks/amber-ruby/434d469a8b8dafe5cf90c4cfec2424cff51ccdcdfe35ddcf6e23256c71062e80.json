@@ -1,0 +1,94 @@
+{
+  "hash": "434d469a8b8dafe5cf90c4cfec2424cff51ccdcdfe35ddcf6e23256c71062e80",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 4,
+      "name": "Charlotte La Bouff",
+      "version": "Mardi Gras Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 3,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Medallion Weights",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Daring Defender"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Sweetheart Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Free Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Standing Her Ground"
+    },
+    {
+      "amount": 3,
+      "name": "Queen's Sensor Core",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Ready for Adventure"
+    },
+    {
+      "amount": 3,
+      "name": "Simba",
+      "version": "Scrappy Cub"
+    },
+    {
+      "amount": 3,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    },
+    {
+      "amount": 4,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}
