@@ -9193,5 +9193,79 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "511cf3300d7716a04d08c5b4f39613bad7e9f255b21aaec3924c60cc1224f51e",
+    "name": "Top Dog Gaming Whispers in the Well - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/top-dog-gaming-whispers-in-the-well-set-championship-tournament-decks-363114",
+    "date": "2026-01-25",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "884afa1263a84af3a68cc5183edaa8db377f15816c8753267affc50b7f6922cd",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "b0e905c64f12c76c8bb0a3949b2d0119795e2d1aba28ae7f0d0d69a86035f889",
+    "name": "Baraka Jeu Shop Set Championship (Montpellier)",
+    "url": "https://inkdecks.com/lorcana-tournaments/baraka-jeu-shop-set-championship-montpellier-tournament-decks-363113",
+    "date": "2026-01-25",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "6d4be32274cf6649f334448e4faa6938482c4683166a12e58116a636ba1f3a73",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "1c24c15c55e36537910ad2ba4566d77c193ad2566e9cad61b7ad435b816cb6f6",
+        "place": 2,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2745b956a5c03d66d2b0d3ed9733e6cd22d730e3a3b397467a40e86318baacbf",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "bef9b9a2558a555f570f167af17847142602b93895343cd0fe98744f6f815722",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e5ab192868d5cefd0e68ff8ae149155c709aa31faf53d0e6aa91045ebb2d789b",
+        "place": 8,
+        "inks": [
+          "steel",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
