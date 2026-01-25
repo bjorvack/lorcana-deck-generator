@@ -1,0 +1,89 @@
+{
+  "hash": "72373a19553f48e2454fe8a72a84de4126c1f947f91b5bca79d466ab97b72d4c",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 3,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Koda",
+      "version": "Smallish Bear"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Nala",
+      "version": "Undaunted Lioness"
+    },
+    {
+      "amount": 4,
+      "name": "Penny",
+      "version": "Bolt's Person"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Guard Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 4,
+      "name": "Rhino",
+      "version": "One-Sixteenth Wolf"
+    },
+    {
+      "amount": 4,
+      "name": "Rhino",
+      "version": "Power Hamster"
+    },
+    {
+      "amount": 4,
+      "name": "The Troubadour",
+      "version": "Musical Narrator"
+    },
+    {
+      "amount": 3,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    }
+  ]
+}

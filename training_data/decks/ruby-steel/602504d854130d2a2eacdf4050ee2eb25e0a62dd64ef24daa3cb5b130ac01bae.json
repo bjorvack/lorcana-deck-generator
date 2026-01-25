@@ -1,0 +1,104 @@
+{
+  "hash": "602504d854130d2a2eacdf4050ee2eb25e0a62dd64ef24daa3cb5b130ac01bae",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Ariel",
+      "version": "Adventurous Collector"
+    },
+    {
+      "amount": 4,
+      "name": "But I'm Much Faster",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 2,
+      "name": "Denahi",
+      "version": "Impatient Hunter"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 4,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "I'm Still Here",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 3,
+      "name": "Mayor Winddancer",
+      "version": "Actor-Turned-Politician"
+    },
+    {
+      "amount": 4,
+      "name": "Mushu",
+      "version": "Majestic Dragon"
+    },
+    {
+      "amount": 1,
+      "name": "Namaari",
+      "version": "Single-Minded Rival"
+    },
+    {
+      "amount": 2,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 3,
+      "name": "Raya",
+      "version": "Kumandran Rider"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    }
+  ]
+}

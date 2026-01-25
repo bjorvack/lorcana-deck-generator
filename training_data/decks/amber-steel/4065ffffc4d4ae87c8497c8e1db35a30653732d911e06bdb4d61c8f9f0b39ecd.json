@@ -1,0 +1,89 @@
+{
+  "hash": "4065ffffc4d4ae87c8497c8e1db35a30653732d911e06bdb4d61c8f9f0b39ecd",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 3,
+      "name": "Bolt",
+      "version": "Down but Not Out"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Amber Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Nala",
+      "version": "Undaunted Lioness"
+    },
+    {
+      "amount": 4,
+      "name": "Penny",
+      "version": "Bolt's Person"
+    },
+    {
+      "amount": 4,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 4,
+      "name": "Rhino",
+      "version": "One-Sixteenth Wolf"
+    },
+    {
+      "amount": 4,
+      "name": "Rhino",
+      "version": "Power Hamster"
+    },
+    {
+      "amount": 3,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    }
+  ]
+}
