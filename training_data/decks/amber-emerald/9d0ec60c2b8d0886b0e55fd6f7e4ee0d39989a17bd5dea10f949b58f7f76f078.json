@@ -1,0 +1,154 @@
+{
+  "hash": "9d0ec60c2b8d0886b0e55fd6f7e4ee0d39989a17bd5dea10f949b58f7f76f078",
+  "inks": [
+    "emerald",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Akela",
+      "version": "Forest Runner"
+    },
+    {
+      "amount": 1,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Bellwether",
+      "version": "Master Manipulator"
+    },
+    {
+      "amount": 2,
+      "name": "Blessed Bagpipes",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Della Duck",
+      "version": "Returning Mother"
+    },
+    {
+      "amount": 2,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 2,
+      "name": "Emily Quackfaster",
+      "version": "Level-Headed Librarian"
+    },
+    {
+      "amount": 2,
+      "name": "Flotsam",
+      "version": "Slippery as an Eel"
+    },
+    {
+      "amount": 3,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Emerald Champion"
+    },
+    {
+      "amount": 2,
+      "name": "Higgins",
+      "version": "Undercover Officer"
+    },
+    {
+      "amount": 2,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lantern",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Little John",
+      "version": "Impermanent Outlaw"
+    },
+    {
+      "amount": 2,
+      "name": "Megara",
+      "version": "Secret Keeper"
+    },
+    {
+      "amount": 2,
+      "name": "Mrs. Beakley",
+      "version": "Former S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 2,
+      "name": "Rapunzel",
+      "version": "Ready for Adventure"
+    },
+    {
+      "amount": 4,
+      "name": "Recovered Page",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Scrooge McDuck",
+      "version": "Cavern Prospector"
+    },
+    {
+      "amount": 1,
+      "name": "Scrooge McDuck",
+      "version": "On the Right Track"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "King in the Making"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 2,
+      "name": "Webby Vanderquack",
+      "version": "Knowledge Seeker"
+    },
+    {
+      "amount": 2,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    },
+    {
+      "amount": 2,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}
