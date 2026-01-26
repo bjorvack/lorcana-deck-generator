@@ -1,0 +1,94 @@
+{
+  "hash": "840b9b8ee95e8d5ab273db24f95eadb8afd1dda209631557b001cd5d29fbb586",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "News Reporter"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Ghost Finder"
+    },
+    {
+      "amount": 3,
+      "name": "Daisy Duck",
+      "version": "Paranormal Investigator"
+    },
+    {
+      "amount": 4,
+      "name": "Dewey",
+      "version": "Showy Nephew"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 4,
+      "name": "Huey",
+      "version": "Savvy Nephew"
+    },
+    {
+      "amount": 3,
+      "name": "Louie",
+      "version": "One Cool Duck"
+    },
+    {
+      "amount": 2,
+      "name": "Minnie Mouse",
+      "version": "Sweetheart Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Free Spirit"
+    },
+    {
+      "amount": 3,
+      "name": "Rapunzel",
+      "version": "Ready for Adventure"
+    },
+    {
+      "amount": 4,
+      "name": "Restoring the Heart",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Great Illuminary",
+      "version": "Radiant Ballroom"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}
