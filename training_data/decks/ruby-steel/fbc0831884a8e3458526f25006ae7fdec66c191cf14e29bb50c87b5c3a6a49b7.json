@@ -1,0 +1,99 @@
+{
+  "hash": "fbc0831884a8e3458526f25006ae7fdec66c191cf14e29bb50c87b5c3a6a49b7",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Bagheera",
+      "version": "Guardian Jaguar"
+    },
+    {
+      "amount": 3,
+      "name": "Bronx",
+      "version": "Ferocious Beast"
+    },
+    {
+      "amount": 2,
+      "name": "But I'm Much Faster",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Happy",
+      "version": "Lively Knight"
+    },
+    {
+      "amount": 3,
+      "name": "Lawrence",
+      "version": "Jealous Manservant"
+    },
+    {
+      "amount": 4,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Mushu",
+      "version": "Majestic Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Guard Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 3,
+      "name": "Scar",
+      "version": "Finally King"
+    },
+    {
+      "amount": 4,
+      "name": "Seven Dwarfs' Mine",
+      "version": "Secure Fortress"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Insistent Fairy"
+    }
+  ]
+}
