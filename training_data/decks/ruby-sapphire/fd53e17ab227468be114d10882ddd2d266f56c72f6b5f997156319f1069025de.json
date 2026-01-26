@@ -1,0 +1,89 @@
+{
+  "hash": "fd53e17ab227468be114d10882ddd2d266f56c72f6b5f997156319f1069025de",
+  "inks": [
+    "sapphire",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Dig a Little Deeper",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Don't Let the Frostbite Bite",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Down in New Orleans",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "I2I",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "LeFou",
+      "version": "Instigator"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Causing an Uproar"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Nothing We Won't Do",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "Musical Superstar"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "World's Greatest Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Unrivaled Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}

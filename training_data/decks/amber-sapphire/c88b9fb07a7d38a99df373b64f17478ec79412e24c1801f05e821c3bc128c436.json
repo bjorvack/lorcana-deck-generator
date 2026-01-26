@@ -1,0 +1,94 @@
+{
+  "hash": "c88b9fb07a7d38a99df373b64f17478ec79412e24c1801f05e821c3bc128c436",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Cruella De Vil",
+      "version": "Style Icon"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 1,
+      "name": "Lucky",
+      "version": "Runt of the Litter"
+    },
+    {
+      "amount": 4,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "Amber Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Patch",
+      "version": "Playful Pup"
+    },
+    {
+      "amount": 4,
+      "name": "Pepper",
+      "version": "Quick-Thinking Puppy"
+    },
+    {
+      "amount": 1,
+      "name": "Perdita",
+      "version": "Determined Mother"
+    },
+    {
+      "amount": 4,
+      "name": "Perdita",
+      "version": "Playful Mother"
+    },
+    {
+      "amount": 3,
+      "name": "Pongo",
+      "version": "Dear Old Dad"
+    },
+    {
+      "amount": 1,
+      "name": "Pongo",
+      "version": "Determined Father"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Ready for Adventure"
+    },
+    {
+      "amount": 3,
+      "name": "Rolly",
+      "version": "Chubby Puppy"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Thunderbolt",
+      "version": "Wonder Dog"
+    }
+  ]
+}
