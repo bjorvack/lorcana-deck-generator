@@ -1,0 +1,149 @@
+{
+  "hash": "6d38e95859b26bfe3976bf8223d1bb74e8780350197d6ebf781f088c5cf6570a",
+  "inks": [
+    "emerald",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Alistair Krei",
+      "version": "Ambitious Entrepreneur"
+    },
+    {
+      "amount": 4,
+      "name": "Aunt Cass",
+      "version": "Biggest Fan"
+    },
+    {
+      "amount": 1,
+      "name": "Baymax",
+      "version": "Armored Companion"
+    },
+    {
+      "amount": 1,
+      "name": "Baymax",
+      "version": "Giant Robot"
+    },
+    {
+      "amount": 1,
+      "name": "Baymax",
+      "version": "Low Battery"
+    },
+    {
+      "amount": 1,
+      "name": "Baymax",
+      "version": "Personal Healthcare Companion"
+    },
+    {
+      "amount": 2,
+      "name": "Baymax's Charging Station",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Baymax's Healthcare Chip",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 1,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 2,
+      "name": "Heathcliff",
+      "version": "Stoic Butler"
+    },
+    {
+      "amount": 1,
+      "name": "Hiro Hamada",
+      "version": "Future Champion"
+    },
+    {
+      "amount": 2,
+      "name": "Hiro Hamada",
+      "version": "Robotics Prodigy"
+    },
+    {
+      "amount": 2,
+      "name": "Hiro Hamada",
+      "version": "Team Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Honey Lemon",
+      "version": "Chemical Genius"
+    },
+    {
+      "amount": 4,
+      "name": "Institute of Technology",
+      "version": "Prestigious University"
+    },
+    {
+      "amount": 3,
+      "name": "MegaBot",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Microbots",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Prepare Your Bot",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Tadashi Hamada",
+      "version": "Baymax Inventor"
+    },
+    {
+      "amount": 1,
+      "name": "Tadashi Hamada",
+      "version": "Gifted Roboticist"
+    },
+    {
+      "amount": 2,
+      "name": "Transport Pod",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Wasabi",
+      "version": "Methodical Engineer"
+    },
+    {
+      "amount": 1,
+      "name": "We Could Be Immortals",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Yokai",
+      "version": "Enigmatic Inventor"
+    },
+    {
+      "amount": 1,
+      "name": "Yokai",
+      "version": "Intellectual Schemer"
+    },
+    {
+      "amount": 2,
+      "name": "Yokai",
+      "version": "Professor Callaghan"
+    },
+    {
+      "amount": 2,
+      "name": "Yokai",
+      "version": "Scientific Supervillain"
+    }
+  ]
+}
