@@ -10437,5 +10437,82 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "7c36505a49254ba926f284dd615710dbe7b51ec47e61e6e39a679134a1e02dd1",
+    "name": "Whispers in the well - Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/whispers-in-the-well-set-champs-tournament-decks-363133",
+    "date": "2026-01-25",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "ea68da8321393efc9c46e24befeb3a66885ace8f10d13e08ba1ee8ff5da65450",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "cba0d817cbca4d40134ac10263e2b6a21053f6057e8ee4929dfed742d5cf0616",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2eadb947e4e94d42cf838bb8311b21a72144810fc58a8af7db0786f9b5a11cbe",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8d8b6336ba6bf15401e40f1f8a6b194fb7785150270fd6c5ae60be2630cbd29c",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e489f3633b6f473135e5fd6cb7168bb91203da682acd35dccd42c0a8742028fd",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "10b8048abe3c0a07c132a973d1145801286a30f4ba9c27e75a48973cd8d61d60",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2d45d1253720adfacc4ff5fe1ea3c0df9103e11aa42684a31a162063073af05d",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b52058870b411f7c0da6d8801dfa21b6de674f968317f15a00723f85b586872c",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
