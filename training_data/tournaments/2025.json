@@ -28971,5 +28971,82 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "49c68269c30630f786d511004123faeab30b8f4e6ae283ae01557ca350003971",
+    "name": "Whispers Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/whispers-set-champs-tournament-decks-363131",
+    "date": "2025-01-24",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "6c2464e5312116e246b4255e2668196bbe389c9f98aecfe6b2fd47a9d8a32559",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "53343d5e1baa6804064a1f646640e42e0c5b59356595096f44aa0123ec8aa934",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d1fe31d73f32cd93a1041c729c3ac45ed19152c7c11ea77ed215809c0129b2f9",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e56706193a67f549517855f3807342c95a21c1f0b47228be8c79a7f470e05d0d",
+        "place": 4,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "95cc7e0baddd83b746e67c01ea549b5dd7340b8dda9f933238f35e5cd2ce90d9",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "e4d957f8f1d90b8e7532eac98681067807d40f0d351cb360d9ee4f19444104d2",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "546c39b43a923fe1b55a7e0216e537c14f9f0ffe8860802907161d78ad241d33",
+        "place": 8,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "b691c636717a101b3a827b7c66563fd0e4ed1c2524c8f41cd0a1f1f8b793f285",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
