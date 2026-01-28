@@ -10514,5 +10514,170 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "5738ec8e30236419cbd8711be2f2a7566a4324674b312387a8b76b46758ee5ea",
+    "name": "Frostbite Gauntlet",
+    "url": "https://inkdecks.com/lorcana-tournaments/frostbite-gauntlet-tournament-decks-363122",
+    "date": "2026-01-25",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c78be7aec57679b59407d2c67a98f0651c760d72c2896a5e63b2fbde67636015",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "c1bf87f59ba0c50b5060b6e4ab92fa737fb0c3dd2369c4d54114bbf2cace376d",
+        "place": 2,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "0d54fe32fa8876d9ed1cb36a14248d0f9b8516b3c631f41add8bd3c16175e902",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "1d123692756842e0e3457332349c3dafd8ac0298a5927e3d110c33d68170b98f",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "4bb3021bedbed0dd9a4c82f7a3e5df03ac0f49ffa9501051fcdc40783bf4a09a",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1ad8dd097b1e55dd13ef9dc9bddabd3bf955585451a09b87b69d9a99e67bf9fc",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "3ad6f0e27aca8c8d5319d4a06377bf4ae6437afccd215045774b48d829d60036",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "3aeb69ce5cf6f0591e043d05200b274dd37a5a041d3abde1e31ac8d865662d17",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7744abafaa3ccde4f0d4e7dda5e6d6175060e0240ae22b14da964229529cbd71",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "04c51f04f57ff55df872409db12be58ea62256e017c2f405065e56825de1190c",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "fd04e0c0618d60c8d64e5e1b6840286a2cf1fe37dc59e3fb6ebd7e2df21a2ed1",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7a3e3dd760c1c987371125f9ecc9f23aec26da90364aba60b15934ac0f49d595",
+        "place": 16,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "b66009239911f3bc76064d1984d6406927543c8c67b12b4e0e1f2cbbdc2c278b",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "af67cc2c1eabbc7ccbc2c36db33e249019828fbbad322599ba1045c35415f183",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "d915a4de418fe489a7840c2e6125fe70ae15f53d3128dd68044e699b47a1e111",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "2174b39043591bd1b1cd6b7c6f7b10e155493bdf3043fe5e5471830dda7204de",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1b25021e07492f10d9c2456cab6ebf1208fd03fb790817bae8d28077039e42b1",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b48cb1ac6c68e729d88f46f5b58d349386dc792314b1a7c8db992f60a22d4dde",
+        "place": 32,
+        "inks": [
+          "steel",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "ab5a100118489797f84eab0b3c8de9c4dd778b7ce50bf1baa654d8a0b755b236",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
