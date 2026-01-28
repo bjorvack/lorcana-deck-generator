@@ -29290,5 +29290,82 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "99f7581b09a6e3403f01ccd1af9cbe0ffc0267ce271b3f305df24790a47f8847",
+    "name": "Lueurs dans les profondeurs - championnat de set",
+    "url": "https://inkdecks.com/lorcana-tournaments/lueurs-dans-les-profondeurs-championnat-de-set-tournament-decks-363139",
+    "date": "2025-01-25",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "b30b1c5f6e9b64aa414f30291ed0887245befcda45dac6d1af56b515e3d61d6b",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e3b7aaef33dafffee5f567540fafc73ed9f70d0e56f8c6d6239de84cf5832e6d",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "369a7c746b0cca2501b3651a6954fa37d022beb552875215a0f623d93865f7cd",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "50b8cda5fb842e3c189c0d20a5ccb516bae526f58890488b88cd3852c50139ea",
+        "place": 4,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "7262c80fb9c6001f1fbe6894678dfd4447d8c8692421e847081bd9873a646275",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5cfa8901a4e1a617d5874423410a4ced0864bc6b46dd7bc25f315adb4f626788",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "bdeb4174ef86ca18ef0c0b4d2e8371c1ca71519a4fb034875c9112b561da03e6",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5ede880d58aa2880f780dd03c8248395ca3783503c42aa604191347f7d007f84",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      }
+    ]
   }
 ]
