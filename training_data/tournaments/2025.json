@@ -29367,5 +29367,74 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "1ea868a95af5e8e30b747e94d318b6b1090962930cf1e73484c01e80a649e6b3",
+    "name": "Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/set-championship-tournament-decks-363142",
+    "date": "2025-01-25",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "1b916820cc6e0ecc02cd776cf8de597909bf25689339163bb75d02f50d8da2ca",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "766ef1d83142572a56edb3d630722b62bf4f183d9b935859d40271d27c260f7d",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b621d20fcef0f1612137a870012baf1b41d82e55151b88c41274f226360a8421",
+        "place": 4,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "fc70324285425f83406d630f6bfbaaa70232a3801f759d73ae80ac911faddd49",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "64c1085f1ed19f0f2c5106250db6c960c22b7109b6a5427dda42d55653e85b33",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "8d4e3775fd512d903b6593d63bdcf526be5e3cd686202fd3ee33ae84398cc48c",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "38af16a370d7f182e6c2880ed9cfd3ec8ce9a1f85990d89a13dee06e40f4afd8",
+        "place": 16,
+        "inks": [
+          "emerald",
+          "sapphire"
+        ]
+      }
+    ]
   }
 ]
