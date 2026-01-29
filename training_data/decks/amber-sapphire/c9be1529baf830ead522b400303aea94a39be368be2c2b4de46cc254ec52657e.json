@@ -1,0 +1,104 @@
+{
+  "hash": "c9be1529baf830ead522b400303aea94a39be368be2c2b4de46cc254ec52657e",
+  "inks": [
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Baymax",
+      "version": "Armored Companion"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 3,
+      "name": "Daisy Duck",
+      "version": "Paranormal Investigator"
+    },
+    {
+      "amount": 2,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Dewey",
+      "version": "Lovable Showoff"
+    },
+    {
+      "amount": 4,
+      "name": "Dewey",
+      "version": "Showy Nephew"
+    },
+    {
+      "amount": 4,
+      "name": "Huey",
+      "version": "Savvy Nephew"
+    },
+    {
+      "amount": 4,
+      "name": "Ichabod Crane",
+      "version": "Scared Out of His Mind"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 1,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Louie",
+      "version": "Chill Nephew"
+    },
+    {
+      "amount": 4,
+      "name": "Louie",
+      "version": "One Cool Duck"
+    },
+    {
+      "amount": 4,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Soggy Fox"
+    },
+    {
+      "amount": 3,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 2,
+      "name": "The Black Cauldron",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    }
+  ]
+}
