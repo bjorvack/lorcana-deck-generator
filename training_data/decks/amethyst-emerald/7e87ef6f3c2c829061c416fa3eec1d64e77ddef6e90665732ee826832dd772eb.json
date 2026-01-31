@@ -1,0 +1,114 @@
+{
+  "hash": "7e87ef6f3c2c829061c416fa3eec1d64e77ddef6e90665732ee826832dd772eb",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Very Merry Unbirthday",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Baloo",
+      "version": "Carefree Bear"
+    },
+    {
+      "amount": 3,
+      "name": "Baloo",
+      "version": "Laid-Back Bear"
+    },
+    {
+      "amount": 3,
+      "name": "Casa Madrigal",
+      "version": "Casita"
+    },
+    {
+      "amount": 2,
+      "name": "Chomp!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "Exploring the Unknown"
+    },
+    {
+      "amount": 2,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 3,
+      "name": "Kaa",
+      "version": "Suspicious Serpent"
+    },
+    {
+      "amount": 2,
+      "name": "Kuzco",
+      "version": "Wanted Llama"
+    },
+    {
+      "amount": 4,
+      "name": "Mad Hatter's Teapot",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 2,
+      "name": "Rafiki",
+      "version": "Shaman of the Savanna"
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 4,
+      "name": "Timothy Q. Mouse",
+      "version": "Flight Instructor"
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Fast Flier"
+    },
+    {
+      "amount": 2,
+      "name": "Transport Pod",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 1,
+      "name": "White Agony Plains",
+      "version": "Golden Lagoon"
+    }
+  ]
+}

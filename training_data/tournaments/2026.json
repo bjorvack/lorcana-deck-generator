@@ -11203,5 +11203,98 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "7edfa9dd9be870a969796a38c374357c8eb82d30248dde1d96f1b51811f86d71",
+    "name": "R de jeux Championnat de set Lueurs dans les Profondeurs",
+    "url": "https://inkdecks.com/lorcana-tournaments/r-de-jeux-championnat-de-set-lueurs-dans-les-profondeurs-tournament-decks-363144",
+    "date": "2026-01-31",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "9ccea0731080bb00697648e7aa7862a8e5e4e3cae9e35d1c7e0bab6e1d8eb545",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fbc07d82a0e5a6508f9d3ecf061a4c4a96c9a500ba4a6b4c0de9f87f24173d66",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "0e97e9ca0bba9736d30fd2247a1fc67b95baf70ca02986bb7c3e6714fb640903",
+        "place": 3,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "64c1085f1ed19f0f2c5106250db6c960c22b7109b6a5427dda42d55653e85b33",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b0dfad051208168b4bf70ef5ab43de5e34eddd9852be7a717d105a00de0304e3",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "07fb82b7111424a27645e4a84a99b63605728239e4f41664b5840a1f2137cbef",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "59656dc4186417561195f90e033e6a0b4057c524240dcdd9e19450e3ce18f77c",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "7e87ef6f3c2c829061c416fa3eec1d64e77ddef6e90665732ee826832dd772eb",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "efc029bf4c2c1095875bc044be92416fde55741f7e01b3b7ba5bba78145d8867",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a34a8edac22ca0529f60b43d0ece812f36bc325a85a7a8615ff8e84d625e758e",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
