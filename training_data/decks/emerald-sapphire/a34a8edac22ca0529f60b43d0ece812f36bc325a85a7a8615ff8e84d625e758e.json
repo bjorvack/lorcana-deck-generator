@@ -1,0 +1,89 @@
+{
+  "hash": "a34a8edac22ca0529f60b43d0ece812f36bc325a85a7a8615ff8e84d625e758e",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Anna",
+      "version": "Braving the Storm"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Tranquil Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Secret Agent"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Dewey",
+      "version": "Showy Nephew"
+    },
+    {
+      "amount": 3,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Hans",
+      "version": "Noble Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "HeiHei",
+      "version": "Bumbling Rooster"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Heir of Agrabah"
+    },
+    {
+      "amount": 4,
+      "name": "Motunui",
+      "version": "Island Paradise"
+    },
+    {
+      "amount": 4,
+      "name": "One Jump Ahead",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 3,
+      "name": "Rapunzel",
+      "version": "High Climber"
+    },
+    {
+      "amount": 4,
+      "name": "Sudden Chill",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Most Helpful"
+    }
+  ]
+}
