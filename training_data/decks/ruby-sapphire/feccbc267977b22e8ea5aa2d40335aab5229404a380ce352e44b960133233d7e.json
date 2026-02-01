@@ -1,0 +1,99 @@
+{
+  "hash": "feccbc267977b22e8ea5aa2d40335aab5229404a380ce352e44b960133233d7e",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Abu",
+      "version": "Bold Helmsman"
+    },
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Ghost Finder"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Paranormal Investigator"
+    },
+    {
+      "amount": 2,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Focused Flatfoot"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 3,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "On the Case"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Medallion Weights",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Might Solve a Mystery",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Sapphire Coil",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 3,
+      "name": "The Sword of Shan",
+      "version": "Yu"
+    }
+  ]
+}

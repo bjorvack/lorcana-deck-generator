@@ -1,0 +1,104 @@
+{
+  "hash": "86d82b8895ae1166a6eb9db7a8f5362870364fd6494add4c460a3589c3a7c946",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Bagheera",
+      "version": "Guardian Jaguar"
+    },
+    {
+      "amount": 3,
+      "name": "Broadway",
+      "version": "Sturdy and Strong"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 3,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 2,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Huey",
+      "version": "Reliable Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Lantern",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 2,
+      "name": "Pluto",
+      "version": "Determined Defender"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 3,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 4,
+      "name": "Recovered Page",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Scar",
+      "version": "Finally King"
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge McDuck",
+      "version": "Cavern Prospector"
+    },
+    {
+      "amount": 3,
+      "name": "Simba",
+      "version": "King in the Making"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Vincenzo Santorini",
+      "version": "The Explosives Expert"
+    }
+  ]
+}

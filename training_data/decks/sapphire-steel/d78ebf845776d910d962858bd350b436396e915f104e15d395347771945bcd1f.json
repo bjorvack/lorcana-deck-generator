@@ -1,0 +1,104 @@
+{
+  "hash": "d78ebf845776d910d962858bd350b436396e915f104e15d395347771945bcd1f",
+  "inks": [
+    "steel",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Tenacious Mouse"
+    },
+    {
+      "amount": 1,
+      "name": "Beyond the Horizon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Ghost Finder"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Paranormal Investigator"
+    },
+    {
+      "amount": 3,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Investigative Mind"
+    },
+    {
+      "amount": 2,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Inspector Tezuka",
+      "version": "Resolute Officer"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "On the Case"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 1,
+      "name": "Minnie Mouse",
+      "version": "Ghost Hunter"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Persistent Investigator"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Sly Fox Sleuth"
+    },
+    {
+      "amount": 2,
+      "name": "Nick Wilde",
+      "version": "Soggy Fox"
+    },
+    {
+      "amount": 3,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "hash": "ee51c36b19329bed6d40e6ae08aeff9d9177fa8548a77d03c139a1d78b377ace",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Contented Wallflower"
+    },
+    {
+      "amount": 3,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 2,
+      "name": "Fred",
+      "version": "Giant-Sized"
+    },
+    {
+      "amount": 2,
+      "name": "Fred",
+      "version": "Major Science Enthusiast"
+    },
+    {
+      "amount": 4,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 3,
+      "name": "Go Go Tomago",
+      "version": "Cutting Edge"
+    },
+    {
+      "amount": 2,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Mechanical Engineer"
+    },
+    {
+      "amount": 4,
+      "name": "Hiro Hamada",
+      "version": "Armor Designer"
+    },
+    {
+      "amount": 4,
+      "name": "Hiro Hamada",
+      "version": "Future Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Hiro Hamada",
+      "version": "Intuitive Thinker"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Vision of the Future",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Yokai",
+      "version": "Intellectual Schemer"
+    }
+  ]
+}
