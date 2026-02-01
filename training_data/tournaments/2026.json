@@ -11623,5 +11623,183 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "a8680aab8ae868824edec14047985280541bdb0ccb10a7ed4e75c29aa94afe49",
+    "name": "Disney Lorcana Challenge / DLC Hong Kong 2026",
+    "url": "https://inkdecks.com/lorcana-tournaments/disney-lorcana-challenge-dlc-hong-kong-2026-tournament-decks-363148",
+    "date": "2026-02-01",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "6a09210ad9f319d9a78a370a559699320f2021d7f4b265d2ab9050ef913b3190",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "3268502d8bd413efdc702dc2b7d2a6221d1838670d39a6b0f757552f7b99c145",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "161a7519a54d0f165e9d267fc03a4a1950fca5cc28bd97c3ea9a61a19fb242da",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a5dc2eb53fa682b449539d30b788d46c6eb0982c9482b6e3d3cbc99baca003a4",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e6faec1f44870410d29368b0a55c5337790ebbe930fea0d5a44960ea9679379e",
+        "place": 32,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6576a021a1afcc50ca2b6833ce5da3de76a62f9b240a4c54f2e3d8416053a9ac",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e0296ed4cda88c4b229c97724a5cd12faa9da430b9eb7c4d1af9e071321cb0e6",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "d18777ec8e6150404aef43ff120ad8c920b9d0baee1efabbab3f78a09a40822b",
+        "place": 64,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "161a7519a54d0f165e9d267fc03a4a1950fca5cc28bd97c3ea9a61a19fb242da",
+        "place": 64,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e764862ca19c3c8e1e18da63d762493a9b1eed5d392bc63df7a27f863e2dd693",
+        "place": 64,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "330af403daf86750aaa425cab7473d2fb400477fc02bd2d4504eaf4c56acb489",
+        "place": 128,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "fa00320d014950cace0d40b2d458cfcc658cfcd197404a841a4313630281d183",
+    "name": "Train'ink - win a Box (Montpellier)",
+    "url": "https://inkdecks.com/lorcana-tournaments/train-ink-win-a-box-montpellier-tournament-decks-363146",
+    "date": "2026-01-31",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "055866a3dac239fb05ccfbfe872b53f4906da4d535e62e42da4c7adac6ff20d4",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b0a92c230a3df4535c36a3f4e8cf43fb58a2fc262e02d5cbeac684f1eb5e8a2a",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "d5d44144c7f55e81c70c9e533e399b8251bae015455911957714221730e24258",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b0a92c230a3df4535c36a3f4e8cf43fb58a2fc262e02d5cbeac684f1eb5e8a2a",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "327cdb4e22d99d22b47965bafbe502521d3c76fcc1a18d08ca7c208ffeeba1e5",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "bd588b225161e6c6787d0cc1dc0a8bc94e00cd332a8e6566661ecd322dc075d8",
+        "place": 8,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "537d0e558bfa6bdbcba1e6d0cf136a0e5749d19713b2572037272adb9a57751d",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1ef18090395579fd032e3da024574158d76dae128db442820aabeaa1356b6b8e",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
