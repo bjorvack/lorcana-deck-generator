@@ -29803,5 +29803,34 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "b71af4c6af6ba720adf27237946366d873d7677edeadcdf7049d7b4c51d8308a",
+    "name": "Disney Lorcana Challenge Hong Kong 2026",
+    "url": "https://inkdecks.com/lorcana-tournaments/disney-lorcana-challenge-hong-kong-2026-tournament-decks-363148",
+    "date": "2025-02-01",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "161a7519a54d0f165e9d267fc03a4a1950fca5cc28bd97c3ea9a61a19fb242da",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "161a7519a54d0f165e9d267fc03a4a1950fca5cc28bd97c3ea9a61a19fb242da",
+        "place": 64,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
