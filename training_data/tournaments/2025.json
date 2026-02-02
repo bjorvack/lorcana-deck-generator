@@ -30223,5 +30223,74 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "41beb215f990812f50d589cc7886729220229e854c066b17e2ab862697b18912",
+    "name": "Lorcana CCQ PL Challenge Championship Qualifier Polska Turniej Główny",
+    "url": "https://inkdecks.com/lorcana-tournaments/lorcana-ccq-pl-challenge-championship-qualifier-polska-turniej-glowny-tournament-decks-363147",
+    "date": "2025-01-31",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "a8d2fc78f12c8567614b4c71fea41c09e88fe3582fccccc4973b6b20d3777dac",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "ce3fd0e69e70c6251726cd6be750f4124d42db86d0f13b06c3c39ba9ce4daaf8",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "d914517a3a508743a9b2f475875e461c004db5fb7c50521d0b550bb5cf0d24bf",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1d7bae1884e0708a08480355e2147dc1ad89c94371e8965de8ec43661982ca2b",
+        "place": 32,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b7581222d9e57596ba5db4864cc21aa202b992e87bb8768c0ae3c2e2d0de6c50",
+        "place": 32,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "cae43550e727503cf5c4252f4a1634e846e0ed78132c3a033ac2a7acad40d7dd",
+        "place": 128,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f6c6fba65ede8fa21a707a623c7563336686b58568c7ab4e69f3bbd8cc3aa96f",
+        "place": 128,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
