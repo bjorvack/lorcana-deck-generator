@@ -30441,5 +30441,47 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "0c3a7af4061c8e97444388a8c9d2a97913a18743f7c6345ce7da8405b63ff31f",
+    "name": "Le Joker Championnat de SET 10 LORCANA",
+    "url": "https://inkdecks.com/lorcana-tournaments/le-joker-championnat-de-set-10-lorcana-tournament-decks-363154",
+    "date": "2025-01-31",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "40cc7f31f0ae7735c9e0cddaa090eabafb67b82c8b9bb4c74d8ef4fd87269fab",
+        "place": 8,
+        "inks": [
+          "steel",
+          "ruby"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "9436f339e7682e6171ba246659b13418e47e98644e8a48ff189f6b0aa533638b",
+    "name": "Whispers in the Well - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/whispers-in-the-well-set-championship-tournament-decks-363153",
+    "date": "2025-01-25",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "391c45f28fd1a5b9a3d333077a4e5ac8205b1ad68b4f1f8641728d152a37f60e",
+        "place": 2,
+        "inks": [
+          "steel",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
