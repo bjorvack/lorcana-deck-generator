@@ -1,0 +1,89 @@
+{
+  "hash": "40cc7f31f0ae7735c9e0cddaa090eabafb67b82c8b9bb4c74d8ef4fd87269fab",
+  "inks": [
+    "steel",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "But I'm Much Faster",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Fa Zhou",
+      "version": "War Hero"
+    },
+    {
+      "amount": 2,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Rebellious Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Mushu",
+      "version": "Majestic Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Impulsive Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 3,
+      "name": "Robin Hood",
+      "version": "Ephemeral Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Shere Khan",
+      "version": "Menacing Predator"
+    },
+    {
+      "amount": 3,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    }
+  ]
+}
