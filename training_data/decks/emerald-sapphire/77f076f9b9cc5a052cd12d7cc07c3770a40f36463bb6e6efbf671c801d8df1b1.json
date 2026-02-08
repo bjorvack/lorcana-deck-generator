@@ -1,0 +1,104 @@
+{
+  "hash": "77f076f9b9cc5a052cd12d7cc07c3770a40f36463bb6e6efbf671c801d8df1b1",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Basil",
+      "version": "Undercover Detective"
+    },
+    {
+      "amount": 1,
+      "name": "Bend to My Will",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 3,
+      "name": "Ink Geyser",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Resourceful Infiltrator"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Royal Commodore"
+    },
+    {
+      "amount": 3,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 2,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 2,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Stopped Chaos in Its Tracks",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}
