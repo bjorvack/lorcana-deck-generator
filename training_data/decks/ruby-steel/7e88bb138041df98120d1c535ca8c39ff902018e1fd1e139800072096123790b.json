@@ -1,0 +1,124 @@
+{
+  "hash": "7e88bb138041df98120d1c535ca8c39ff902018e1fd1e139800072096123790b",
+  "inks": [
+    "steel",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "But I'm Much Faster",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 2,
+      "name": "David Xanatos",
+      "version": "Charismatic Leader"
+    },
+    {
+      "amount": 1,
+      "name": "Desperate Plan",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Hans",
+      "version": "Brazen Manipulator"
+    },
+    {
+      "amount": 2,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Medallion Weights",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Charging Ahead"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Imperial General"
+    },
+    {
+      "amount": 2,
+      "name": "Mushu's Rocket",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "One Last Hope",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 4,
+      "name": "Raya",
+      "version": "Headstrong"
+    },
+    {
+      "amount": 1,
+      "name": "Raya",
+      "version": "Kumandran Rider"
+    },
+    {
+      "amount": 3,
+      "name": "Shere Khan",
+      "version": "Menacing Predator"
+    },
+    {
+      "amount": 1,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Alien Troublemaker"
+    },
+    {
+      "amount": 1,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Sword of Hercules",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Temperamental Fairy"
+    }
+  ]
+}

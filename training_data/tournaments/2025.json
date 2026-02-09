@@ -30483,5 +30483,50 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "1ac4ef450a88b7cd45c40a81abaf5a3a220c53c9725f7c2170d491e309eb963e",
+    "name": "Whispers in the Well - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/whispers-in-the-well-set-championship-tournament-decks-363176",
+    "date": "2025-02-07",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "46819a076f51265d266b820290fcafe495ccc62d901c06841bd5803afe108bcb",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "fc70324285425f83406d630f6bfbaaa70232a3801f759d73ae80ac911faddd49",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "f85ccfb31a3f9e97d6d09aca132953b82d4cc62447d974a10004f6d9e4c69030",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3766e2dc405b37a4058bcc2fc4a59aeb08314d9050cc29a2dc048339523b67b7",
+        "place": 4,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      }
+    ]
   }
 ]
