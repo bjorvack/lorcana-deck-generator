@@ -1,0 +1,204 @@
+{
+  "hash": "0fcb8ce07d2958d7a27dad9abc735394c8c10a74962cceeb3f4cd3ea8258ba0c",
+  "inks": [
+    "steel",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Atitaya",
+      "version": "Fang General"
+    },
+    {
+      "amount": 1,
+      "name": "Break Free",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Card Soldiers",
+      "version": "Royal Troops"
+    },
+    {
+      "amount": 1,
+      "name": "Desperate Plan",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Fa Zhou",
+      "version": "War Hero"
+    },
+    {
+      "amount": 1,
+      "name": "Goofy",
+      "version": "Extreme Athlete"
+    },
+    {
+      "amount": 2,
+      "name": "Grandmother Fa",
+      "version": "Spirited Elder"
+    },
+    {
+      "amount": 2,
+      "name": "Hans",
+      "version": "Brazen Manipulator"
+    },
+    {
+      "amount": 2,
+      "name": "Hercules",
+      "version": "Beloved Hero"
+    },
+    {
+      "amount": 2,
+      "name": "Hercules",
+      "version": "True Hero"
+    },
+    {
+      "amount": 3,
+      "name": "Jasmine",
+      "version": "Fearless Princess"
+    },
+    {
+      "amount": 1,
+      "name": "Li Shang",
+      "version": "Newly Promoted"
+    },
+    {
+      "amount": 2,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 1,
+      "name": "Lyle Tiberius Rourke",
+      "version": "Crystallized Mercenary"
+    },
+    {
+      "amount": 1,
+      "name": "Medallion Weights",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Island Explorer"
+    },
+    {
+      "amount": 1,
+      "name": "Most Everyone's Mad Here",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Mulan",
+      "version": "Charging Ahead"
+    },
+    {
+      "amount": 1,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 1,
+      "name": "Mulan",
+      "version": "Imperial General"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Mushu",
+      "version": "Majestic Dragon"
+    },
+    {
+      "amount": 1,
+      "name": "Mushu's Rocket",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Namaari",
+      "version": "Single-Minded Rival"
+    },
+    {
+      "amount": 1,
+      "name": "Nothing We Won't Do",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Philoctetes",
+      "version": "No-Nonsense Instructor"
+    },
+    {
+      "amount": 2,
+      "name": "Queen of Hearts",
+      "version": "Impulsive Ruler"
+    },
+    {
+      "amount": 2,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 2,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Alien Troublemaker"
+    },
+    {
+      "amount": 1,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "The Sword of Shan",
+      "version": "Yu"
+    },
+    {
+      "amount": 2,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 2,
+      "name": "Tinker Bell",
+      "version": "Tiny Tactician"
+    },
+    {
+      "amount": 1,
+      "name": "Training Dummy",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Tug",
+      "version": "of-War"
+    },
+    {
+      "amount": 1,
+      "name": "We've Got Company!",
+      "version": ""
+    }
+  ]
+}
