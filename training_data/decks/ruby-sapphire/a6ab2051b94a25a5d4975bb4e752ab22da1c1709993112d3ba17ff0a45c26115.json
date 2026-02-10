@@ -1,0 +1,94 @@
+{
+  "hash": "a6ab2051b94a25a5d4975bb4e752ab22da1c1709993112d3ba17ff0a45c26115",
+  "inks": [
+    "sapphire",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Dragon Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 3,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 3,
+      "name": "Medallion Weights",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Considerate Diplomat"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Mushu's Rocket",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    }
+  ]
+}
