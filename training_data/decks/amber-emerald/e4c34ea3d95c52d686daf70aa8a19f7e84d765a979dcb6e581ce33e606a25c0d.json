@@ -1,0 +1,84 @@
+{
+  "hash": "e4c34ea3d95c52d686daf70aa8a19f7e84d765a979dcb6e581ce33e606a25c0d",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Royal Commodore"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Royal Seafarer"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "High Climber"
+    },
+    {
+      "amount": 4,
+      "name": "Rapunzel",
+      "version": "Ready for Adventure"
+    },
+    {
+      "amount": 4,
+      "name": "Raya",
+      "version": "Infiltration Expert"
+    },
+    {
+      "amount": 4,
+      "name": "The Queen",
+      "version": "Conceited Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    }
+  ]
+}

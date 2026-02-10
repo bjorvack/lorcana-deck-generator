@@ -1,0 +1,89 @@
+{
+  "hash": "260ae81c289d7f1dc4c9a6fa0d95ce77c83c7f3aa3b453308b6602b3f80a4dbe",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Blessed Bagpipes",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Fred Honeywell"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Ichabod Crane",
+      "version": "Scared Out of His Mind"
+    },
+    {
+      "amount": 4,
+      "name": "Ink Geyser",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Jiminy Cricket",
+      "version": "Ghost of Christmas Past"
+    },
+    {
+      "amount": 4,
+      "name": "Megara",
+      "version": "Secret Keeper"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Bob Cratchit"
+    },
+    {
+      "amount": 4,
+      "name": "Morty Fieldmouse",
+      "version": "Tiny Tim"
+    },
+    {
+      "amount": 4,
+      "name": "Pleakley",
+      "version": "Scientific Expert"
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Reformed Ebenezer"
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 2,
+      "name": "Strike a Good Match",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}

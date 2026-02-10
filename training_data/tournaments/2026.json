@@ -12825,5 +12825,42 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "873faf3aefdab8f79b50e8ed8e8e9c11f63ad22a4baff5ef3c721f8795573258",
+    "name": "Set 11 Proxy Tournament",
+    "url": "https://inkdecks.com/lorcana-tournaments/set-11-proxy-tournament-tournament-decks-363181",
+    "date": "2026-02-08",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "6b114f33fa6d7bb24cb0b097a34f05ee6ac9ab7b239a6a5ca84d7657e4060c2a",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "e4c34ea3d95c52d686daf70aa8a19f7e84d765a979dcb6e581ce33e606a25c0d",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "260ae81c289d7f1dc4c9a6fa0d95ce77c83c7f3aa3b453308b6602b3f80a4dbe",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
