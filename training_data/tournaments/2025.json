@@ -31292,5 +31292,58 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "d293227cbcd15173a744d616ef27fa75131f33d64d2f0debfa904317de87bf08",
+    "name": "Set Championship Fabled na Dream Up TCG",
+    "url": "https://inkdecks.com/lorcana-tournaments/set-championship-fabled-na-dream-up-tcg-tournament-decks-363180",
+    "date": "2025-02-07",
+    "meta": {
+      "set": 10,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "d36a9db0e4c4e8416952660fcd998299a644ad46deb2862379f1805f20ba013c",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "8dca2a23e6e51d5a58c6bbcfba85e150ede7f0e84ff760c6b6f6f093930566ba",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f2a174879e02e375fb41e03257eed41ed8add7dbc87179651af28dbe91a1ddc7",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "aa690288ce1f5719898d8077c891672ca7d0ca79ea9feef70ce53c71bced2d96",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "8a3b28c11aff539e092233e41dd2bcbc74d01d0b53181fe8a17bf2069037be67",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
