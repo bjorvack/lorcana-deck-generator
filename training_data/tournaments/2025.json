@@ -31870,5 +31870,34 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "4a483b7daec29da7c5cda14f69ad30b0904fe6550a99df30abfdcc2a5587f147",
+    "name": "Deck & Dice Tournament 2.0",
+    "url": "https://inkdecks.com/lorcana-tournaments/deck-dice-tournament-2-0-tournament-decks-363186",
+    "date": "2025-02-14",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "ebee1bbeadffef9c8aafb6b49dbb3905f6d58f88336e8e385b74ed69e86cd1ae",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0c29f9fb3cb0a33d5019b8c24806311dbec9b66f2e19fec2377a0af1d48735e9",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
