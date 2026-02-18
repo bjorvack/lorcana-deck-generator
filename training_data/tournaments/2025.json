@@ -32117,5 +32117,74 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "178bf473a1d3fe782c11d13a8e0da5f6dd8b6bab1bf7ab6ee72e7f26087b584d",
+    "name": "Refined Gaming Set 11 Case Tournament",
+    "url": "https://inkdecks.com/lorcana-tournaments/refined-gaming-set-11-case-tournament-tournament-decks-363188",
+    "date": "2025-02-15",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "e65473bdae6200f6636dadbf6fc14deb216f7229e04b941cd943ee2f1b2cc626",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ed8d024d8fe260df7b5d543a62bebffad4e29eca5e6f8920be81a48e19ab108c",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ebbc77fa3507ed300dce5e4da9310e697c4537292a54b66901a2e8165bb13a4a",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "db4ecb19b503e5ac2226242a3df9f3802ed1aae998903466e8efa40e3673105d",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "5f4e86cfe04da977712f18e9a3c78f763f7283cf34aa22131632928efccc973e",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "steel"
+        ]
+      },
+      {
+        "hash": "3a75f899bdb5fa15c9a6f1aa1528536875a76fabc31574638883091cd84a00f8",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "ffe5c80f2d48cc2f06524de664ef7ffb70bf047833c6ddd67b56302b1b1aafc9",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      }
+    ]
   }
 ]
