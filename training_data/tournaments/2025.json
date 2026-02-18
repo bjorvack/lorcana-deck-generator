@@ -32096,5 +32096,26 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "b6ebc2b0bcda1fd37bc578e488ce8c9be268268b97da0ba078391a05ba3f9b23",
+    "name": "Winterspell 2 Box Tourney",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-2-box-tourney-tournament-decks-363189",
+    "date": "2025-02-14",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "b97d64623e39c92f0d0809116ad8288974fcbdebfd40f72251ed79d20d54aa0c",
+        "place": 2,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      }
+    ]
   }
 ]
