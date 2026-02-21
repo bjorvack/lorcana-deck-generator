@@ -32186,5 +32186,82 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "d4cc22dae8b4ef04a14f4e5700f9cba486f2bb99fc21df858790fca411f1f83e",
+    "name": "Go Ink Yourself Tournament - Winterspell",
+    "url": "https://inkdecks.com/lorcana-tournaments/go-ink-yourself-tournament-winterspell-tournament-decks-363197",
+    "date": "2025-02-21",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "bfc503e773001eb9574aacc9117a2eeee0ec1e4ebe9bcb5af70ccc50a9d1c87a",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "09ab21ea5828d48ef7c7495c380ed6f4b2c0700916f455134097e9045f41afe3",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "51e75a3b6a04f732d83e4c6eee17888e55514b05807a55dfd430e5878a34a9ad",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "b102cf9a9c64e5fe03df7327662148749691eed6d7066920f6bf700dfc5df798",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9ed21a1a84c9b8a5c1525bce6ec6400563924de1d8954f1bbf3278718c215ed5",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "4c42eec1c872ea1de1bca8e7c847258b0725226d30b39fc55d6e6f83696a6653",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "4828bac40991d380a8a5fc6490b7df3eb33dac31fa413a7a29ce5b6433310f6d",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5892e62f45962402f0bb7d10df5c8e161c598eb41b4546375e0642fd5ff17eda",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
