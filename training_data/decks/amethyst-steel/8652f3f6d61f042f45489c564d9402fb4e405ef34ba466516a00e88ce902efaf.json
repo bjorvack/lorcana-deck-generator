@@ -1,0 +1,99 @@
+{
+  "hash": "8652f3f6d61f042f45489c564d9402fb4e405ef34ba466516a00e88ce902efaf",
+  "inks": [
+    "steel",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 3,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Christopher Robin",
+      "version": "Joining the Fun"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 3,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 3,
+      "name": "Giant Cobra",
+      "version": "Ghostly Serpent"
+    },
+    {
+      "amount": 4,
+      "name": "Gigi",
+      "version": "Best in Snow"
+    },
+    {
+      "amount": 2,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Jasmine",
+      "version": "Fearless Princess"
+    },
+    {
+      "amount": 4,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tigger",
+      "version": "Bouncing All the Way"
+    },
+    {
+      "amount": 2,
+      "name": "Yzma",
+      "version": "Conniving Chemist"
+    }
+  ]
+}

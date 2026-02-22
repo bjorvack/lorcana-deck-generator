@@ -1,0 +1,94 @@
+{
+  "hash": "923a285edb0bc2d0fd9db2b37646b4d3fb68f414faf776ddc8c047873d6fddcd",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "Exploring the Unknown"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Spirit of Winter"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 3,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Kuzco",
+      "version": "Wanted Llama"
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Raging Storm",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Sven",
+      "version": "Leaping Reindeer"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 4,
+      "name": "They Never Come Back",
+      "version": ""
+    }
+  ]
+}

@@ -14880,5 +14880,164 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "e9a8df4dcbcc61919aed338ff95905176d0c87bddbe955d4ef14728c96ff3e7c",
+    "name": "LTD Relegation Div 1 vs. Div2 TTH - 7S",
+    "url": "https://inkdecks.com/lorcana-tournaments/ltd-relegation-div-1-vs-div2-tth-7s-tournament-decks-363195",
+    "date": "2026-02-22",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "85632d72425d4714839734cee6f53630dc89e1ee5f216c304305009339cc072f",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "3f4268d1be325f1116cf61057f628ebddfb6cb1c7d90867be72b793de5ce8c72",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b5d438d97e1c08be67601522fe298d5021c3ae3ec4f3e3a5bad334a6675c5802",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ab85e1e5601ce7e7063271088d2a0bf2e3b07713ff61f2398f20a60fa67d7364",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8652f3f6d61f042f45489c564d9402fb4e405ef34ba466516a00e88ce902efaf",
+        "place": 5,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8388e1475159ddc37e2b52f63b990a22a8e840b53a50da5e8e200da8feb0b14e",
+        "place": 6,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "001ef57074557ce4a3bded03c086657a91ef3f73d9c9e186a8455c602640a26c",
+    "name": "Winterspell Celebration Event",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-celebration-event-tournament-decks-363202",
+    "date": "2026-02-21",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "923a285edb0bc2d0fd9db2b37646b4d3fb68f414faf776ddc8c047873d6fddcd",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "a5d60400ecaf0d84478aa48af3aa0dc902a4437c37d991fc96dd06c242e1038a",
+    "name": "WInterSpell Release TFM $3,000 Event!",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-release-tfm-3-000-event-tournament-decks-363201",
+    "date": "2026-02-21",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "a41abb778cea1f1c60b83e463b7d6dca9a5b0b4cc168de298beb110c709d096d",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8a086248c04562d86f4fcf6715a636152b223fda7a3259fbe055d5cc9409ced4",
+        "place": 2,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "21c0757c1d0ac72cf836785c42c22fe57231a5c5c8692fb94fc162fd973f211c",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "41870f1382b4e77bf0a2f2adfcbbf4adb9fdc6e2614cd46003f0fdf0274f989f",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4b3aa269dc9f732851a0959b1bec9d73415652ea531af43ef0624ff79bce2e7e",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ba329c7289eabe715985e7faa13e974deeeb4aa17cee6ac4a99bb6585776c6a7",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "095556079e5c44947893559ccdb0a5a3c777cc41bc38fa0b48d48be295933c28",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "ee198a42cb3a9db6609df286779a8a599fb8b6dd2f8f4ba125072b0baa661563",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
