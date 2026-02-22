@@ -1,0 +1,144 @@
+{
+  "hash": "db758fed2b6e0e9878fb41660949955bc21988736e755a02bb8f383761143848",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Akood et Emuti",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Amethyst Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Bambi",
+      "version": "Little Prince"
+    },
+    {
+      "amount": 2,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 3,
+      "name": "Finders Keepers",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 1,
+      "name": "Hades",
+      "version": "Lord of the Dead"
+    },
+    {
+      "amount": 1,
+      "name": "Honeymaren",
+      "version": "Northuldra Guide"
+    },
+    {
+      "amount": 2,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Kuzco",
+      "version": "Wanted Llama"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Snow Artist"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Storyteller"
+    },
+    {
+      "amount": 2,
+      "name": "Nala",
+      "version": "Romping in the Snow"
+    },
+    {
+      "amount": 1,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Pua",
+      "version": "Protective Pig"
+    },
+    {
+      "amount": 4,
+      "name": "Pudge",
+      "version": "Controls the Weather"
+    },
+    {
+      "amount": 3,
+      "name": "Rabbit",
+      "version": "Indignant Pirate"
+    },
+    {
+      "amount": 2,
+      "name": "Reuben",
+      "version": "Sandwich Expert"
+    },
+    {
+      "amount": 1,
+      "name": "Show Me More!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Alien Dancer"
+    },
+    {
+      "amount": 1,
+      "name": "The Queen",
+      "version": "Jealous Beauty"
+    },
+    {
+      "amount": 3,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 1,
+      "name": "Tinker Bell",
+      "version": "Snowflake Collector"
+    },
+    {
+      "amount": 2,
+      "name": "Wisdom of the Willow",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Zootopia",
+      "version": "Tundratown"
+    }
+  ]
+}

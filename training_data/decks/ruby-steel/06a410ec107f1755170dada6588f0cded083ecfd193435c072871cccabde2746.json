@@ -1,0 +1,184 @@
+{
+  "hash": "06a410ec107f1755170dada6588f0cded083ecfd193435c072871cccabde2746",
+  "inks": [
+    "steel",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Beast",
+      "version": "Aggressive Lord"
+    },
+    {
+      "amount": 3,
+      "name": "Broadway",
+      "version": "Sturdy and Strong"
+    },
+    {
+      "amount": 4,
+      "name": "Bronx",
+      "version": "Ferocious Beast"
+    },
+    {
+      "amount": 3,
+      "name": "Brooklyn",
+      "version": "Second in Command"
+    },
+    {
+      "amount": 1,
+      "name": "Castle Wyvern",
+      "version": "Above the Clouds"
+    },
+    {
+      "amount": 1,
+      "name": "Donald Duck",
+      "version": "Ruby Champion"
+    },
+    {
+      "amount": 1,
+      "name": "Elisa Maza",
+      "version": "Transformed Gargoyle"
+    },
+    {
+      "amount": 2,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Goliath",
+      "version": "Guardian of Castle Wyvern"
+    },
+    {
+      "amount": 1,
+      "name": "Grandmother Fa",
+      "version": "Spirited Elder"
+    },
+    {
+      "amount": 3,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 2,
+      "name": "Hermes",
+      "version": "Harried Messenger"
+    },
+    {
+      "amount": 3,
+      "name": "Hudson",
+      "version": "Determined Reader"
+    },
+    {
+      "amount": 2,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 3,
+      "name": "Li Shang",
+      "version": "Newly Promoted"
+    },
+    {
+      "amount": 2,
+      "name": "Maximus",
+      "version": "Team Champion"
+    },
+    {
+      "amount": 1,
+      "name": "Mickey Mouse",
+      "version": "Trumpeter"
+    },
+    {
+      "amount": 1,
+      "name": "Moana",
+      "version": "Island Explorer"
+    },
+    {
+      "amount": 1,
+      "name": "Mother Gothel",
+      "version": "Underhanded Schemer"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Charging Ahead"
+    },
+    {
+      "amount": 1,
+      "name": "Mushu",
+      "version": "Majestic Dragon"
+    },
+    {
+      "amount": 1,
+      "name": "Negaduck",
+      "version": "Evil Doppelganger"
+    },
+    {
+      "amount": 1,
+      "name": "Negaduck",
+      "version": "Public Enemy Number One"
+    },
+    {
+      "amount": 2,
+      "name": "Next Stop, Olympus",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 2,
+      "name": "Shere Khan",
+      "version": "Fierce and Furious"
+    },
+    {
+      "amount": 2,
+      "name": "Shere Khan",
+      "version": "Keen-Eyed Hunter"
+    },
+    {
+      "amount": 1,
+      "name": "Shere Khan",
+      "version": "Menacing Predator"
+    },
+    {
+      "amount": 1,
+      "name": "Simba",
+      "version": "Scrappy Cub"
+    },
+    {
+      "amount": 1,
+      "name": "Sleepy Hollow",
+      "version": "The Bridge"
+    },
+    {
+      "amount": 1,
+      "name": "The Bitterwood",
+      "version": "Underground Forest"
+    },
+    {
+      "amount": 2,
+      "name": "The Sword of Hercules",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Tinker Bell",
+      "version": "Insistent Fairy"
+    },
+    {
+      "amount": 2,
+      "name": "Zeus",
+      "version": "Missing His Spark"
+    }
+  ]
+}
