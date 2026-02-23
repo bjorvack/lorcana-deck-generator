@@ -1,0 +1,104 @@
+{
+  "hash": "6eb464813308b58015f8b5dafb7207cfd842f00ab2035277342fbe173f7b2098",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 3,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 2,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Decisive Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Elegant Spaniel"
+    },
+    {
+      "amount": 2,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Miss Park Avenue"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 2,
+      "name": "Mickey Mouse",
+      "version": "Amber Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Pudge",
+      "version": "Controls the Weather"
+    },
+    {
+      "amount": 3,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Enterprising Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Street-Smart Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 3,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    }
+  ]
+}
