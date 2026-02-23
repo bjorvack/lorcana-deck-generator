@@ -34422,5 +34422,55 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "5290a6820424880a6bda481e587b14637f043696ef60a178281e8d4f6ec4f62b",
+    "name": "Axion Sunday Core Cup",
+    "url": "https://inkdecks.com/lorcana-tournaments/axion-sunday-core-cup-tournament-decks-363208",
+    "date": "2025-02-22",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "7f27b4f696c24f030ffa00b89a0899222cae2b8c00df3a67ef6843d97b710bf6",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "c4c698f17d9b9abbe49e104986387bcf735ea9b76d508be6a977979e2831fc40",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "0eccd8aef8732b45c5caddcbe8d8b63f1a348f6f68204985e92b839e4d99a92b",
+    "name": "Core Constructed Side Event @ DLC Melbourne",
+    "url": "https://inkdecks.com/lorcana-tournaments/core-constructed-side-event-dlc-melbourne-tournament-decks-363207",
+    "date": "2025-02-22",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "161a7519a54d0f165e9d267fc03a4a1950fca5cc28bd97c3ea9a61a19fb242da",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
