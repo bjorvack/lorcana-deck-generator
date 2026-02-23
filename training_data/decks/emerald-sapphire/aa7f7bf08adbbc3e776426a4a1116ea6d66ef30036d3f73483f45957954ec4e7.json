@@ -1,0 +1,84 @@
+{
+  "hash": "aa7f7bf08adbbc3e776426a4a1116ea6d66ef30036d3f73483f45957954ec4e7",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Alice",
+      "version": "Savvy Sailor"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Cruella De Vil",
+      "version": "Style Icon"
+    },
+    {
+      "amount": 4,
+      "name": "Education or Elimination",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Emily Quackfaster",
+      "version": "Level-Headed Librarian"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Goofy",
+      "version": "Expert Shipwright"
+    },
+    {
+      "amount": 4,
+      "name": "Helping Hand",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Little John",
+      "version": "Impermanent Outlaw"
+    },
+    {
+      "amount": 4,
+      "name": "Medal of Heroes",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Tod",
+      "version": "All Alone"
+    },
+    {
+      "amount": 4,
+      "name": "Tod",
+      "version": "Knows All the Tricks"
+    }
+  ]
+}
