@@ -1,0 +1,114 @@
+{
+  "hash": "79713fbc57f35b15b28e48621248b7410985ef753954b38cd8017a332f2c04ed",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Alice",
+      "version": "Accidentally Adrift"
+    },
+    {
+      "amount": 3,
+      "name": "Belle",
+      "version": "Snowfield Strategist"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 3,
+      "name": "David Xanatos",
+      "version": "Charismatic Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Goofy",
+      "version": "Flying Goof"
+    },
+    {
+      "amount": 2,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 3,
+      "name": "Kuzco",
+      "version": "Selfish Emperor"
+    },
+    {
+      "amount": 2,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Marching Off to Battle",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Curious Explorer"
+    },
+    {
+      "amount": 2,
+      "name": "Negaduck",
+      "version": "Evil Doppelganger"
+    },
+    {
+      "amount": 2,
+      "name": "Out of Order",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Robin Hood",
+      "version": "Unrivaled Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Temperamental Fairy"
+    },
+    {
+      "amount": 2,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}
