@@ -1,0 +1,89 @@
+{
+  "hash": "3e6819cc633d37924903dafc68fb82fd9c6ddf841e3a531e65fad6ad21b64379",
+  "inks": [
+    "emerald",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Decisive Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Snow Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 4,
+      "name": "Pudge",
+      "version": "Controls the Weather"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Little Trickster"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Naughty Experiment"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Enterprising Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Street-Smart Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    }
+  ]
+}

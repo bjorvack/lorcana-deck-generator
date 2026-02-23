@@ -1,0 +1,104 @@
+{
+  "hash": "ac4b2541bd68d560ea2907e4a9decb54eb9c4b06c2956e3537d3daa0ca70167a",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Chernabog",
+      "version": "Unnatural Force"
+    },
+    {
+      "amount": 3,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 2,
+      "name": "Colors of the Wind",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Magical Researcher"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Louis",
+      "version": "Endearing Alligator"
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 4,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 4,
+      "name": "Snow Fort",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Sven",
+      "version": "Leaping Reindeer"
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 3,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 3,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    },
+    {
+      "amount": 4,
+      "name": "White Rabbit",
+      "version": "Late Again"
+    },
+    {
+      "amount": 4,
+      "name": "Yzma",
+      "version": "Conniving Chemist"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "hash": "8e248660a6e3f2bea68fe4b7521d5e4a02062f09729bf18afc6525455e8300f6",
+  "inks": [
+    "steel",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Angel",
+      "version": "Experiment 624"
+    },
+    {
+      "amount": 1,
+      "name": "Aurora",
+      "version": "Dreaming Guardian"
+    },
+    {
+      "amount": 1,
+      "name": "Benja",
+      "version": "Guardian of the Dragon Gem"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Jasmine",
+      "version": "Fearless Princess"
+    },
+    {
+      "amount": 2,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Mufasa",
+      "version": "Ruler of Pride Rock"
+    },
+    {
+      "amount": 1,
+      "name": "Namaari",
+      "version": "Single-Minded Rival"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Ghost of Christmas Future"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vincenzo Santorini",
+      "version": "The Explosives Expert"
+    }
+  ]
+}
