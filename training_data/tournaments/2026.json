@@ -15851,5 +15851,130 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "297de6f39131536654c9477f2c6435062f7bd87712662ae93c7ef16732f24bd8",
+    "name": "Winterspell $1k Tournament",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-1k-tournament-tournament-decks-363204",
+    "date": "2026-02-22",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "2f93d3d8a511f282642c39663cab5f1df24258c17b25a9d527af9832ca6e69c1",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "865f92f62a94a167041fa9be4b913a1baf7cf9dd40b897b04fef621089978554",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "2061a5c5521b3d29fbe37dc8a0657eb5379f49830a5ab678db2dae39d341730b",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "57cd5922a3e50fe374a74ffe70ecd3aa7ec5141f1692cef4a41e6956d7bc4952",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4c1445c78b065c94ae5cd69c9c223c519827b3b7c6b3f8a543da974aa2360518",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "674e20d335fab190e3f73befe86373ffe1df18a09afb2adb64df181a78e3b9a5",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "414c1958954d034c56b7a734a9893ce3a454961e59cb7df0c54a27bb3f3d4663",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8d1e415bf57fa140c3e7ae8dbd44c4327f45a8f58fdbd7b1aac5000fcee20eb9",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e90226e4c4f7eec3bf1013447c499d70e4a245f5a05687b8271b66bf79055ada",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "f4e8c821056093d7d2d73dddf1e4673ca4825338a076d579248c7d7664a9df49",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "668f4a74211802dd852b547271e5d05148fefec5bd903a14f8b49ac5557380ce",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "de787b3312c6154bc2e42bcce5b0d9cc1b7b9b184b9cac0cbeb1f248cabdb11e",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "940ead5d75f7c6ffcdcbaec7925da985c28d151c6047462a92eccebb347f0320",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "ef20165eb6d72741c1c5afd427effbafbf84910d6c5fd81fd5531d74d08da868",
+        "place": 16,
+        "inks": [
+          "steel",
+          "ruby"
+        ]
+      }
+    ]
   }
 ]
