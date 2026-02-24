@@ -1,0 +1,114 @@
+{
+  "hash": "1e36cf2e5e6b6279c792393bdbb246a7c9c9cc4472a5f8c3d2e07f0ee4a45ed8",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Alice",
+      "version": "Well-Read Whisper"
+    },
+    {
+      "amount": 1,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 1,
+      "name": "Break Free",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 2,
+      "name": "David Xanatos",
+      "version": "Charismatic Leader"
+    },
+    {
+      "amount": 2,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 2,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Kuzco",
+      "version": "Wanted Llama"
+    },
+    {
+      "amount": 4,
+      "name": "Lonely Grave",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Madame Medusa",
+      "version": "Deceiving Partner"
+    },
+    {
+      "amount": 3,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 1,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 4,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 3,
+      "name": "Willie the Giant",
+      "version": "Ghost of Christmas Present"
+    },
+    {
+      "amount": 3,
+      "name": "Wreck",
+      "version": "it Ralph - Raging Wrecker"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "hash": "e1bb20426aedd05aaa5fc13abc542d46eba0b79862718105cc4466916b5817eb",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Basil",
+      "version": "Undercover Detective"
+    },
+    {
+      "amount": 1,
+      "name": "Baymax",
+      "version": "Giant Robot"
+    },
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 2,
+      "name": "Chernabog",
+      "version": "Unnatural Force"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Contented Wallflower"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 2,
+      "name": "Fergus McDuck",
+      "version": "Scrooge's Father"
+    },
+    {
+      "amount": 4,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 1,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Ghost of Christmas Future"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Afficionado of Antiquities"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "hash": "c0d4656fb1e9a8a41ad826e84c3f9b147ddf603944ff06cdff17e8636a7750ff",
+  "inks": [
+    "emerald",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 2,
+      "name": "David",
+      "version": "Protective Snowboarder"
+    },
+    {
+      "amount": 1,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 4,
+      "name": "John Smith",
+      "version": "Snow Tracker"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Snow Artist"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 4,
+      "name": "Pudge",
+      "version": "Controls the Weather"
+    },
+    {
+      "amount": 2,
+      "name": "Rhino",
+      "version": "One-Sixteenth Wolf"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Little Trickster"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Naughty Experiment"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 3,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Deceiver"
+    }
+  ]
+}

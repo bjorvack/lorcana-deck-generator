@@ -1,0 +1,94 @@
+{
+  "hash": "67ba17e94ccd9ae54a8ad81b98034a4038ad6e5e252027a107f10c94f26bbae7",
+  "inks": [
+    "amethyst",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 4,
+      "name": "Chief Powhatan",
+      "version": "Protective Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Christopher Robin",
+      "version": "Joining the Fun"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 3,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Dolores Madrigal",
+      "version": "Easy Listener"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 3,
+      "name": "Honeymaren",
+      "version": "Northuldra Guide"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Nani",
+      "version": "Stage Manager"
+    },
+    {
+      "amount": 3,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 4,
+      "name": "Percy",
+      "version": "Pupsicle"
+    },
+    {
+      "amount": 4,
+      "name": "Pocahontas",
+      "version": "Finding the Way"
+    },
+    {
+      "amount": 4,
+      "name": "Pocahontas",
+      "version": "Following the Wind"
+    },
+    {
+      "amount": 2,
+      "name": "Pocahontas",
+      "version": "Peacekeeper"
+    },
+    {
+      "amount": 3,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 3,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    }
+  ]
+}
