@@ -1,0 +1,109 @@
+{
+  "hash": "351bd97582cb15a0dd928091f27dcaceb33fb0f21ce86d64ab7aeb22e0cbb5c0",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 2,
+      "name": "Christopher Robin",
+      "version": "Joining the Fun"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Fred Honeywell"
+    },
+    {
+      "amount": 3,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Magical Researcher"
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Of the Lamp"
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Ghost of Jacob Marley"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 2,
+      "name": "Merlin",
+      "version": "Completing His Research"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Mrs. Cratchit"
+    },
+    {
+      "amount": 3,
+      "name": "Pocahontas",
+      "version": "Following the Wind"
+    },
+    {
+      "amount": 4,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 3,
+      "name": "Snow Fort",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Sven",
+      "version": "Leaping Reindeer"
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Whisper of Vanessa"
+    }
+  ]
+}
