@@ -1,0 +1,94 @@
+{
+  "hash": "bd38a450b885e9c2802165a628d271a05cebe76fb518fe9cb8ec9f1c1e17877d",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Angel",
+      "version": "Experiment 624"
+    },
+    {
+      "amount": 4,
+      "name": "Broadway",
+      "version": "Sturdy and Strong"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Heir of Agrabah"
+    },
+    {
+      "amount": 2,
+      "name": "Jasmine",
+      "version": "Inspired Researcher"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Resourceful Infiltrator"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Steady Strategist"
+    },
+    {
+      "amount": 4,
+      "name": "Kristoff",
+      "version": "Mining the Ruins"
+    },
+    {
+      "amount": 4,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 1,
+      "name": "Nala",
+      "version": "Undaunted Lioness"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Ghost of Christmas Future"
+    },
+    {
+      "amount": 4,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 3,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Sultan",
+      "version": "Playful Monarch"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Vincenzo Santorini",
+      "version": "The Explosives Expert"
+    }
+  ]
+}
