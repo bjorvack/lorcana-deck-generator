@@ -37430,5 +37430,135 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "93e58d7c6e9696af61111de49a319e55b34884d7eaaca176132ca9c5c948011f",
+    "name": "Mensual Hades Byte Arena TCG",
+    "url": "https://inkdecks.com/lorcana-tournaments/mensual-hades-byte-arena-tcg-tournament-decks-363240",
+    "date": "2025-02-28",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "fdfbb19a7b36630e0b996e32774d798118f83fc2c2ce541c8b0a9bf7942180ec",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a24b4bda780e4f7b125fcc5de0cf431a51eba4f74b53291a39f3992cc8925f58",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e90226e4c4f7eec3bf1013447c499d70e4a245f5a05687b8271b66bf79055ada",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "771de4ee1addb6d1ed8ac4cac62c2a80fffd3c97c29d08a2c89ee8188697749b",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a7ccbec314543483b5052778a767dbd3c8ee5515761c15bd6065409f1a5e84d2",
+        "place": 8,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "bc2c480a8d15e912000fa6d3bb86d75c47032cd39b61a8426bebf5bb10a3f37d",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "0e5046481bfde38dd22178d2a5815577a4ce977e02f9514610629fda28b456e7",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c10a64704ed65b8d2ab92fc43386f5c37ca93b6d52f83b06addefcbb5a416bdd",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "403da02cd2e13b387b7ab89095483b7fcf9917ae7400aceb44a7415fcaea31c5",
+    "name": "SO SHINY! Win a Case",
+    "url": "https://inkdecks.com/lorcana-tournaments/so-shiny-win-a-case-tournament-decks-363234",
+    "date": "2025-02-28",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c802f17b8b2e4da08ae024788061d22b4cbb4354e8813347af7dd8845095a7cf",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c4a51f30a80b0be892faffc4c4b02c184005b0371ce84b9306964bbc5e0b3a29",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "2f93d3d8a511f282642c39663cab5f1df24258c17b25a9d527af9832ca6e69c1",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "fc3220f4db144489e5d7bb86b91e7705a73477f51c5ae2d6dee73508a4038491",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "929f2b0850efd472de2e80c5e7c091cf019114c90aa8afba3778da0bed20e0ba",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
