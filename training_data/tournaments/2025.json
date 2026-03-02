@@ -39012,5 +39012,55 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "b4796f86906eab5dccfc129c02906c1524ade997cc90457b8767b89e675d5ec2",
+    "name": "TSD Cash Tournament",
+    "url": "https://inkdecks.com/lorcana-tournaments/tsd-cash-tournament-tournament-decks-363246",
+    "date": "2025-02-28",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "a28a3c2af8d24f59a217e056b7d275cf2f6f3731819447f1c454837b9ffeb942",
+        "place": 2,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c927f667604f0bffc3f335cc549fa7f3d39b943ee7904acc48fac896b51d90de",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "29eb512089a9c6fd81e4c2ef72ce195808c9281e76de5f25c035c4b82eaa44df",
+    "name": "Ink Hearts",
+    "url": "https://inkdecks.com/lorcana-tournaments/ink-hearts-tournament-decks-363245",
+    "date": "2025-02-28",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "f459fcb934d6c78732efea8637cd373249115b120633b64a34340243fc5b2a0d",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
