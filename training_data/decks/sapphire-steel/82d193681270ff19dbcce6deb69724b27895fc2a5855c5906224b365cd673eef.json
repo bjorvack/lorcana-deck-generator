@@ -1,0 +1,104 @@
+{
+  "hash": "82d193681270ff19dbcce6deb69724b27895fc2a5855c5906224b365cd673eef",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Angel",
+      "version": "Experiment 624"
+    },
+    {
+      "amount": 2,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 3,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Resourceful Infiltrator"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Steady Strategist"
+    },
+    {
+      "amount": 2,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Ghost of Christmas Future"
+    },
+    {
+      "amount": 1,
+      "name": "Pleakley",
+      "version": "Scientific Expert"
+    },
+    {
+      "amount": 2,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vincenzo Santorini",
+      "version": "The Explosives Expert"
+    }
+  ]
+}

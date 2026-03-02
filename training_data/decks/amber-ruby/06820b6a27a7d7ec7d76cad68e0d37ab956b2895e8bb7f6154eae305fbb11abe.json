@@ -1,0 +1,109 @@
+{
+  "hash": "06820b6a27a7d7ec7d76cad68e0d37ab956b2895e8bb7f6154eae305fbb11abe",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Akood et Emuti",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Angel",
+      "version": "Siren Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Ethereal Voice"
+    },
+    {
+      "amount": 2,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 2,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Nakoma",
+      "version": "Waiting Out the Storm"
+    },
+    {
+      "amount": 2,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Or Rewrite History!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sarabi",
+      "version": "Protecting the Pride"
+    },
+    {
+      "amount": 3,
+      "name": "Scrooge's Counting House",
+      "version": "Ebenezer's Office"
+    },
+    {
+      "amount": 2,
+      "name": "Scrump",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Daring Visitor"
+    },
+    {
+      "amount": 4,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Trials and Tribulations",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Vanessa"
+    },
+    {
+      "amount": 1,
+      "name": "Ursula's Shell Necklace",
+      "version": ""
+    }
+  ]
+}
