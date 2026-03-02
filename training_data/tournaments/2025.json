@@ -39062,5 +39062,34 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "4c2f890eb38067e73697d8e06fcbef33a271dc71a7801a05ca987019e4b71e73",
+    "name": "Glass City Showdown Lorcana Winterspell $2.5k Cash Tournament",
+    "url": "https://inkdecks.com/lorcana-tournaments/glass-city-showdown-lorcana-winterspell-2-5k-cash-tournament-tournament-decks-363247",
+    "date": "2025-02-28",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "2e030252f9d90dad6346ce575c95fa5ddfa5f1a1d6fffa141fa7ee539f309115",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "01b822e88dae145e13ebe1882a1a353b05de654e6f43a3fad57b852b43251f92",
+        "place": 2,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
