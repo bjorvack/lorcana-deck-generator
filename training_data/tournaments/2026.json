@@ -20645,5 +20645,146 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "f9a5f7ee55395714f2ffa18e791106b096e2cf341798518770ac52b67999a535",
+    "name": "Winter League 2026",
+    "url": "https://inkdecks.com/lorcana-tournaments/winter-league-2026-tournament-decks-363244",
+    "date": "2026-03-01",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "15fe147c35bb029b26607d89511b4c62a6b47e665a6f98b0421083d13bb3f7f4",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "12bdb487a2112887290bd1e0a802e9ac37755a6d97c337563c733fbdb8fddef8",
+        "place": 2,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "2467373f096f26d1e79af42e3bad47a9303eb9efb51ae34b30a6a8b602e9e877",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2669370a26aea7e4f3371321573fcf3a4f9c985bd64d425207e12f4033234c77",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "ba60d9fd227e165482ef55f35062aba3e918c8f47cb090d535d0304acd41a86b",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "068c7f15a14c9be58120e5d938157def8bbe03cf1e3b2397e440f5f1b7e656d6",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "473db77a86af9791470a6ecd18023b79ffad7d3251b096f372bd86fc67c4ffdc",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "30f464ba3089659e5184b5c6cf0acb10a9f5cfcbc2f6333cd323448d34a5738f",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a7969cfc9411b264142477fed4aed13b31d71980915c9ad6b0f0c509aca74108",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8014d70b5276b8a349e26080f02aa8c21d28988b60b8dc2dd454c7bb55250fcc",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b377ea82258e7e1c0b60fa2ecd37106ac3e326951f16bceb025c6d6c714e4f6e",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "dc2b084f5e9074e625fd69fde0494c28d5fc5811377e33200e2290d896f70ac8",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "0b1b52065b0faef1d86f322ee7dfec77d4ca4ce654c8069bb05eda0859869ab1",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "905751b548ffb492ed2c5fc325335db97ae1d8078db842757079fb6bf451620b",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "aca0e65134e4ca9a108d9f59553ea002bffd474d55b8e4a5ff2c476c38f71618",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e9a05b5f634ad375fc3a9c060d0752f5322df61ebe0773bfbf0a701e1aa5b908",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
