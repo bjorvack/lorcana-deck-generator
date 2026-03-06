@@ -210,16 +210,38 @@ module.exports = class ValidationModel {
     featuresTensor.dispose()
     labelsTensor.dispose()
 
-    console.log('\n✅ Training complete!')
-    const finalAcc = history.history.val_acc[history.history.val_acc.length - 1]
-    const finalLoss = history.history.val_loss[history.history.val_loss.length - 1]
-    console.log(`Final metrics: loss=${finalLoss.toFixed(4)}, val_acc=${(finalAcc * 100).toFixed(1)}%`)
+    // Calculate final metrics on validation set
+    const valPredTensor = this.model.predict(tf.tensor2d(valFeatures))
+    const valPreds = await valPredTensor.data()
+    valPredTensor.dispose()
+
+    const finalRealDeckRate = calculateRealDeckAccuracy(valPreds, valLabels)
+    const finalFakeDeckRate = calculateRealDeckAccuracy(
+      valPreds.map(p => 1 - p),
+      valLabels.map(l => l === 0 ? 1 : 0)
+    )
+
+    console.log('\n' + '='.repeat(50))
+    console.log('📊 VALIDATOR TRAINING OVERVIEW')
+    console.log('='.repeat(50))
+    console.log(`Total training samples: ${labels.length}`)
+    console.log(`  - Real decks: ${valLabels.filter(l => l > 0).length}`)
+    console.log(`  - Fake decks: ${valLabels.filter(l => l === 0).length}`)
+    console.log('')
+    console.log(`Final Results (validation set):`)
+    console.log(`  - Real decks validated (>= 0.8): ${(finalRealDeckRate * 100).toFixed(1)}%`)
+    console.log(`  - Fake decks rejected (< 0.8): ${(finalFakeDeckRate * 100).toFixed(1)}%`)
+    console.log(`  - Overall accuracy: ${(finalAcc * 100).toFixed(1)}%`)
+    console.log('')
     
-    if (finalAcc >= 0.90) {
-      console.log('✅ Target accuracy (90%) achieved!')
+    if (finalRealDeckRate >= 0.90) {
+      console.log('✅ Target achieved: 90% of real decks validated!')
     } else {
-      console.log(`⚠️ Target accuracy (90%) not achieved. Consider training longer.`)
+      console.log(`⚠️ Target not met: ${(finalRealDeckRate * 100).toFixed(1)}% (target: 90%)`)
+      console.log('   Consider training for more epochs.')
     }
+    console.log('='.repeat(50))
+    
     return history
   }
 
