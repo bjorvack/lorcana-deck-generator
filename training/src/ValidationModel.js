@@ -132,8 +132,8 @@ module.exports = class ValidationModel {
         // Real decks have label > 0
         if (labels[i] > 0) {
           totalRealDecks++
-          // Consider valid if predicted score >= 0.5
-          if (predictions[i] >= 0.5) {
+          // Consider valid if predicted score >= 0.8 (stricter threshold)
+          if (predictions[i] >= 0.8) {
             realDecksCorrect++
           }
         }
