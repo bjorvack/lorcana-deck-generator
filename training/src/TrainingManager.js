@@ -29,6 +29,193 @@ module.exports = class TrainingManager {
     this.keywordSynergyMatrix = new Map()
     // Track card -> keywords mapping for fast lookup
     this.cardKeywordsMap = new Map()
+
+    // Ability combo tracking
+    // Maps card IDs to ability combos they enable/benefit from
+    this.abilityComboMap = new Map()
+    // Known ability combos in the game
+    this.abilityCombos = {
+      // Singer decks need singer characters + song actions
+      'singer-song': {
+        keywords: ['Singer'],
+        relatedTypes: ['Action'],
+        keywordsNeeded: ['Singer'],
+        description: 'Singer characters benefit from song actions'
+      },
+      // Challenger decks want targets
+      'challenger': {
+        keywords: ['Challenger'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Challenger'],
+        description: 'Challenger characters need other characters to challenge'
+      },
+      // Shift decks need cheaper versions
+      'shift': {
+        keywords: ['Shift'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Shift'],
+        description: 'Shift cards need cheaper version to shift from'
+      },
+      // Bodyguard protects others
+      'bodyguard': {
+        keywords: ['Bodyguard'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Bodyguard'],
+        description: 'Bodyguard protects vulnerable characters'
+      },
+      // Evasive needs challenges
+      'evasive': {
+        keywords: ['Evasive'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Evasive'],
+        description: 'Evasive characters avoid non-evasive challenges'
+      },
+      // Rush should attack quickly
+      'rush': {
+        keywords: ['Rush'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Rush'],
+        description: 'Rush characters can challenge same turn'
+      },
+      // Resist decks want high damage targets
+      'resist': {
+        keywords: ['Resist'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Resist'],
+        description: 'Resist reduces incoming damage'
+      },
+      // Ward needs opponents
+      'ward': {
+        keywords: ['Ward'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Ward'],
+        description: 'Ward blocks challenging'
+      }
+    }
+
+    // Curriculum Learning Phases
+    // Progressively increase difficulty during training
+    this.curriculumPhase = 0
+    this.curriculumPhases = [
+      { name: 'single-ink', maxInks: 1, epochs: 5, description: 'Single ink decks only' },
+      { name: 'dual-ink-simple', maxInks: 2, minInks: 2, epochs: 10, simpleInks: true, description: 'Simple dual-ink combinations' },
+      { name: 'dual-ink', maxInks: 2, minInks: 2, epochs: 15, description: 'All dual-ink combinations' },
+      { name: 'triple-ink', maxInks: 3, minInks: 3, epochs: 20, description: 'Triple ink decks' },
+      { name: 'full', maxInks: 4, minInks: 2, epochs: -1, description: 'Full deck building' }
+    ]
+    this.currentEpochInPhase = 0
+    this.totalEpochsTrained = 0
+
+    // Ink difficulty mapping - some ink combos are harder
+    this.inkDifficulty = {
+      'amber-amethyst': 1.0,
+      'amber-emerald': 1.0,
+      'amber-ruby': 1.0,
+      'amber-sapphire': 1.0,
+      'amethyst-emerald': 1.0,
+      'amethyst-ruby': 1.0,
+      'amethyst-sapphire': 1.0,
+      'emerald-ruby': 1.0,
+      'emerald-sapphire': 1.0,
+      'ruby-sapphire': 1.0,
+      'steel-amber': 1.2,
+      'steel-amethyst': 1.2,
+      'steel-emerald': 1.2,
+      'steel-ruby': 1.2,
+      'steel-sapphire': 1.2
+    }
+  }
+
+  /**
+   * Get current curriculum phase configuration
+   */
+  getCurriculumPhase () {
+    return this.curriculumPhases[this.curriculumPhase]
+  }
+
+  /**
+   * Update curriculum based on epochs trained
+   * Should be called at the start of each epoch
+   */
+  updateCurriculum () {
+    const phase = this.getCurriculumPhase()
+
+    // Check if we should advance to next phase
+    if (phase.epochs > 0 && this.currentEpochInPhase >= phase.epochs) {
+      if (this.curriculumPhase < this.curriculumPhases.length - 1) {
+        this.curriculumPhase++
+        this.currentEpochInPhase = 0
+        this.log(`📚 Curriculum: Advanced to phase '${this.getCurriculumPhase().name}' - ${this.getCurriculumPhase().description}`)
+      }
+    }
+
+    this.currentEpochInPhase++
+    this.totalEpochsTrained++
+
+    return this.getCurriculumPhase()
+  }
+
+  /**
+   * Get allowed inks for current curriculum phase
+   * Returns array of ink combinations allowed
+   */
+  getCurriculumAllowedInks () {
+    const phase = this.getCurriculumPhase()
+    const inkKeys = Object.keys(this.inkDifficulty)
+
+    // Filter based on curriculum phase
+    const allowedInks = []
+    for (const inkKey of inkKeys) {
+      const inks = inkKey.split('-')
+      const inkCount = inks.length
+
+      // Check if within phase constraints
+      if (inkCount >= phase.minInks && inkCount <= phase.maxInks) {
+        // In simple mode, only allow common/easy combos
+        if (phase.simpleInks) {
+          const difficulty = this.inkDifficulty[inkKey] || 1.0
+          if (difficulty <= 1.0) {
+            allowedInks.push(inkKey)
+          }
+        } else {
+          allowedInks.push(inkKey)
+        }
+      }
+    }
+
+    return allowedInks
+  }
+
+  /**
+   * Get difficulty multiplier for current phase
+   */
+  getCurriculumDifficulty () {
+    const phase = this.getCurriculumPhase()
+    // Difficulty increases as we progress
+    return 1.0 + (this.curriculumPhase * 0.2)
+  }
+
+  /**
+   * Get curriculum statistics
+   */
+  getCurriculumStats () {
+    return {
+      phase: this.getCurriculumPhase().name,
+      phaseDescription: this.getCurriculumPhase().description,
+      progressInPhase: `${this.currentEpochInPhase}/${this.getCurriculumPhase().epochs}`,
+      totalEpochs: this.totalEpochsTrained,
+      difficulty: this.getCurriculumDifficulty()
+    }
+  }
+
+  /**
+   * Reset curriculum to beginning
+   */
+  resetCurriculum () {
+    this.curriculumPhase = 0
+    this.currentEpochInPhase = 0
+    this.totalEpochsTrained = 0
+    this.log('📚 Curriculum: Reset to beginning')
   }
 
   /**
@@ -268,6 +455,151 @@ module.exports = class TrainingManager {
     return pairCount > 0 ? Math.min(1, totalSynergy / pairCount * 10) : 0
   }
 
+  /**
+   * Initialize ability combo mapping from cards
+   * Builds a map of which cards enable/participate in which ability combos
+   */
+  initializeAbilityCombos() {
+    this.log('Initializing ability combo mappings...')
+
+    for (const [cardId, card] of this.indexMap) {
+      const combos = []
+
+      // Check each ability combo
+      for (const [comboName, comboDef] of Object.entries(this.abilityCombos)) {
+        // Check if card has any of the combo's keywords
+        if (card.keywords) {
+          for (const keyword of card.keywords) {
+            if (comboDef.keywords.includes(keyword)) {
+              combos.push(comboName)
+              break
+            }
+          }
+        }
+
+        // Check if card has related types
+        if (card.types) {
+          for (const type of card.types) {
+            if (comboDef.relatedTypes.includes(type)) {
+              // Only add if card also has relevant keywords or is the right type
+              if (card.keywords && card.keywords.some(k => comboDef.keywords.includes(k))) {
+                if (!combos.includes(comboName)) {
+                  combos.push(comboName)
+                }
+              }
+            }
+          }
+        }
+      }
+
+      if (combos.length > 0) {
+        this.abilityComboMap.set(cardId, combos)
+      }
+    }
+
+    this.log(`  Ability combos mapped for ${this.abilityComboMap.size} cards`)
+  }
+
+  /**
+   * Calculate ability combo score for a deck
+   * Rewards having complete ability combos (e.g., singers + songs)
+   * @param {Array} deckIndices - Array of card IDs
+   * @returns {Number} Combo score (0-1)
+   */
+  calculateAbilityComboScore(deckIndices) {
+    if (deckIndices.length < 4) return 0
+
+    // Track which combos are partially or fully formed
+    const comboCounts = {}
+    const comboCardCounts = {}
+
+    for (const cardId of deckIndices) {
+      const combos = this.abilityComboMap.get(cardId)
+      if (combos) {
+        for (const combo of combos) {
+          comboCounts[combo] = (comboCounts[combo] || 0) + 1
+          if (!comboCardCounts[combo]) {
+            comboCardCounts[combo] = new Set()
+          }
+          comboCardCounts[combo].add(cardId)
+        }
+      }
+    }
+
+    // Score each combo
+    let totalScore = 0
+    let comboCount = 0
+
+    for (const [comboName, comboDef] of Object.entries(this.abilityCombos)) {
+      const cardCount = comboCardCounts[comboName]?.size || 0
+
+      // A combo is "complete" with enough cards
+      // Singer needs: 4+ singer characters + 4+ songs (simplified)
+      // Others need: 2+ cards with that keyword
+      let threshold
+      if (comboName === 'singer-song') {
+        threshold = 4 // At least 4 cards involved in the singer combo
+      } else {
+        threshold = 2 // At least 2 cards with the keyword
+      }
+
+      if (cardCount >= threshold) {
+        // Full synergy bonus
+        totalScore += 1.0
+      } else if (cardCount >= threshold / 2) {
+        // Partial synergy
+        totalScore += 0.5
+      }
+      comboCount++
+    }
+
+    return comboCount > 0 ? Math.min(1, totalScore / Math.min(comboCount, 4)) : 0
+  }
+
+  /**
+   * Get recommended cards for completing ability combos
+   * @param {Array} deckIndices - Current deck
+   * @param {Array} allowedInks - Allowed ink colors
+   * @returns {Array} Card IDs that would complete combos
+   */
+  getComboFillerCards(deckIndices, allowedInks) {
+    // Find which combos are partially formed
+    const activeCombos = new Set()
+    const neededCombos = {}
+
+    for (const cardId of deckIndices) {
+      const combos = this.abilityComboMap.get(cardId)
+      if (combos) {
+        for (const combo of combos) {
+          activeCombos.add(combo)
+          if (!neededCombos[combo]) {
+            neededCombos[combo] = { current: 0, needed: 4 }
+          }
+          neededCombos[combo].current++
+        }
+      }
+    }
+
+    // Find cards that complete these combos
+    const fillerCards = []
+    for (const [cardId, card] of this.indexMap) {
+      if (deckIndices.includes(cardId)) continue
+      if (allowedInks && !allowedInks.includes(card.ink)) continue
+
+      const combos = this.abilityComboMap.get(cardId)
+      if (combos) {
+        for (const combo of combos) {
+          if (activeCombos.has(combo) && neededCombos[combo].current < neededCombos[combo].needed) {
+            fillerCards.push(cardId)
+            break
+          }
+        }
+      }
+    }
+
+    return fillerCards
+  }
+
   log(message) {
     console.log(`[${new Date().toLocaleTimeString()}] ${message}`)
   }
@@ -319,6 +651,9 @@ module.exports = class TrainingManager {
         }
       })
       this.log(`Unique cards indexed: ${this.cardMap.size}`)
+
+      // Initialize ability combos from cards
+      this.initializeAbilityCombos()
 
       // Build text vocabulary
       this.log('Building text vocabulary...')

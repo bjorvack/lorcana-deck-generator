@@ -24,6 +24,70 @@ class RLTrainer {
     // Metrics
     this.episodeRewards = []
     this.baseline = 0.5 // Running average of rewards
+
+    // Experience Replay Buffer
+    this.replayBufferSize = options.replayBufferSize || 1000
+    this.replayBuffer = []
+    this.replayRatio = options.replayRatio || 0.3 // 30% of batch from replay
+    this.minRewardForReplay = 0.6 // Only store episodes with reward >= this
+  }
+
+  /**
+   * Add episode to replay buffer
+   * Only stores high-quality episodes for replay
+   */
+  addToReplayBuffer (episode) {
+    // Only store good episodes to improve sample efficiency
+    if (episode.reward >= this.minRewardForReplay) {
+      // Store a copy (not reference) to avoid mutation
+      this.replayBuffer.push({
+        states: episode.states.map(s => [...s]),
+        actions: [...episode.actions],
+        logProbs: [...episode.logProbs],
+        reward: episode.reward
+      })
+
+      // Remove oldest if buffer full
+      if (this.replayBuffer.length > this.replayBufferSize) {
+        this.replayBuffer.shift()
+      }
+    }
+  }
+
+  /**
+   * Sample from replay buffer for training
+   * @param {Number} batchSize - Number of samples to return
+   * @returns {Array} Sample episodes from buffer
+   */
+  sampleFromReplayBuffer (batchSize) {
+    if (this.replayBuffer.length === 0) return []
+
+    const samples = []
+    const numSamples = Math.min(batchSize, this.replayBuffer.length)
+
+    // Random sampling from buffer
+    for (let i = 0; i < numSamples; i++) {
+      const idx = Math.floor(Math.random() * this.replayBuffer.length)
+      samples.push(this.replayBuffer[idx])
+    }
+
+    return samples
+  }
+
+  /**
+   * Get replay buffer statistics
+   */
+  getReplayStats () {
+    if (this.replayBuffer.length === 0) {
+      return { size: 0, avgReward: 0, maxReward: 0 }
+    }
+
+    const rewards = this.replayBuffer.map(e => e.reward)
+    return {
+      size: this.replayBuffer.length,
+      avgReward: rewards.reduce((a, b) => a + b, 0) / rewards.length,
+      maxReward: Math.max(...rewards)
+    }
   }
 
   /**
@@ -91,12 +155,16 @@ class RLTrainer {
     const synergyReward = this.calculateSynergyReward(deck)
     const keywordSynergyReward = this.calculateKeywordSynergyReward(deck)
 
+    // Calculate Ability Combo Reward
+    const abilityComboReward = this.calculateAbilityComboReward(deck)
+
     // Weighted sum:
-    // Validator (Quality & Balance): 60% - Let the learned model decide what is "good"
+    // Validator (Quality & Balance): 55% - Let the learned model decide what is "good"
     // Consistency (Structure): 10% - Reward playing multiple copies
-    // Card Synergy: 20% - Reward cards that commonly appear together
+    // Card Synergy: 15% - Reward cards that commonly appear together
     // Keyword Synergy: 10% - Reward complementary keywords
-    episode.reward = (validatorReward * 0.6) + (consistencyReward * 0.1) + (synergyReward * 0.2) + (keywordSynergyReward * 0.1)
+    // Ability Combo: 10% - Reward completing ability combos
+    episode.reward = (validatorReward * 0.55) + (consistencyReward * 0.1) + (synergyReward * 0.15) + (keywordSynergyReward * 0.1) + (abilityComboReward * 0.1)
 
     return episode
   }
@@ -181,6 +249,16 @@ class RLTrainer {
     }
 
     return count > 0 ? Math.min(1, totalSynergy / count * 5) : 0
+  }
+
+  /**
+   * Calculate ability combo reward
+   * Rewards having complete ability combos (e.g., multiple singers)
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Combo reward (0-1)
+   */
+  calculateAbilityComboReward (deck) {
+    return this.trainingManager.calculateAbilityComboScore(deck)
   }
 
   /**
@@ -289,9 +367,25 @@ class RLTrainer {
     for (let i = 0; i < this.batchSize; i++) {
       const episode = await this.collectEpisode(inks)
       episodes.push(episode)
+
+      // Add to replay buffer
+      this.addToReplayBuffer(episode)
+
       process.stdout.write(`\r  Episode ${i + 1}/${this.batchSize}: reward = ${episode.reward.toFixed(3)}`)
     }
     console.log('') // Newline
+
+    // Mix in replay samples if available
+    let allEpisodes = episodes
+    if (this.replayBuffer.length > 0) {
+      const replaySamples = this.sampleFromReplayBuffer(
+        Math.floor(this.batchSize * this.replayRatio)
+      )
+      if (replaySamples.length > 0) {
+        allEpisodes = [...episodes, ...replaySamples]
+        console.log(`[RL] Replay buffer: ${this.replayBuffer.length} episodes (using ${replaySamples.length} in this batch)`)
+      }
+    }
 
     // Compute statistics
     const rewards = episodes.map(ep => ep.reward)
@@ -305,12 +399,15 @@ class RLTrainer {
       this.baseline = this.baseline * 0.9 + avgReward * 0.1 // EMA
     }
 
-    // Compute policy gradient and update
-    const lossValue = await this.updatePolicy(episodes)
+    // Compute policy gradient and update (use all episodes for training)
+    const lossValue = await this.updatePolicy(allEpisodes)
 
     // Track metrics
     this.episodeRewards.push(avgReward)
 
+    // Print replay stats
+    const replayStats = this.getReplayStats()
+    console.log(`[RL] Replay: ${replayStats.size} episodes, avg reward: ${replayStats.avgReward.toFixed(3)}`)
     console.log(`[RL] Avg Reward: ${avgReward.toFixed(4)} ± ${stdReward.toFixed(4)}`)
     console.log(`[RL] Baseline: ${this.baseline.toFixed(4)}`)
     console.log(`[RL] Loss: ${lossValue.toFixed(4)}`)
@@ -319,7 +416,8 @@ class RLTrainer {
       avgReward,
       stdReward,
       baseline: this.baseline,
-      loss: lossValue
+      loss: lossValue,
+      replayStats
     }
   }
 
