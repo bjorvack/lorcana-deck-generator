@@ -8,6 +8,7 @@
         "train-validator": "node train-validator.js",
         "train-rl": "node train_rl.js",
         "scrape": "node scrape.js",
+        "verify-validator": "node verify-validator.js",
         "postinstall": "node scripts/patch-tfjs-node.js"
     },
     "dependencies": {
