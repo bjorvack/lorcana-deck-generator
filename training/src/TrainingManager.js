@@ -865,12 +865,24 @@ module.exports = class TrainingManager {
       return
     }
 
+    // For incremental training, also load a sample of existing decks for better synergy matrices
+    let synergyDecks = [...this.newDecksToTrain]
+    if (!fullRetrain && this.trainingState.trainedDeckHashes && this.trainingState.trainedDeckHashes.length > 0) {
+      // Load up to 2000 existing decks for synergy building (sample to save memory)
+      const sampleSize = Math.min(2000, this.trainingState.trainedDeckHashes.length)
+      const existingDecks = await this.loadExistingDecksForSynergy(sampleSize)
+      if (existingDecks.length > 0) {
+        this.log(`Including ${existingDecks.length} existing decks for synergy matrices...`)
+        synergyDecks = [...existingDecks, ...this.newDecksToTrain]
+      }
+    }
+
     // 2c. Build synergy matrices from training data (with batching if enabled)
     if (this.streamDecks) {
       this.log('Using streaming mode for synergy building...')
-      await this.buildCooccurrenceMatrixBatched(this.newDecksToTrain)
+      await this.buildCooccurrenceMatrixBatched(synergyDecks)
     } else {
-      this.buildCooccurrenceMatrix(this.newDecksToTrain)
+      this.buildCooccurrenceMatrix(synergyDecks)
     }
     await this.compactMemory()
     
@@ -1220,6 +1232,68 @@ module.exports = class TrainingManager {
       this.deckHashSet = new Set()
       // We re-add them as we process
     }
+  }
+
+  /**
+   * Load existing trained decks for synergy matrix building
+   * Used during incremental training to include historical patterns
+   * @param {Number} sampleSize - Maximum number of decks to load
+   * @returns {Array} Array of deck objects
+   */
+  async loadExistingDecksForSynergy (sampleSize = 2000) {
+    const decks = []
+    const trainingDataPath = this.trainingDataPath
+    const tournamentsDir = path.join(trainingDataPath, 'tournaments')
+
+    if (!fs.existsSync(tournamentsDir)) {
+      return decks
+    }
+
+    // Sample existing deck hashes
+    const existingHashes = this.trainingState.trainedDeckHashes || []
+    if (existingHashes.length === 0) return decks
+
+    // Random sample
+    const shuffled = existingHashes.sort(() => 0.5 - Math.random())
+    const sampledHashes = shuffled.slice(0, sampleSize)
+
+    // Try to load decks
+    for (const hash of sampledHashes) {
+      // Try all possible ink paths
+      const inks = ['amber', 'amethyst', 'emerald', 'ruby', 'sapphire', 'steel']
+      let loaded = false
+
+      for (const ink of inks) {
+        if (loaded) break
+        const deckPath = path.join(trainingDataPath, 'decks', ink, `${hash}.json`)
+        if (fs.existsSync(deckPath)) {
+          try {
+            const deckContent = JSON.parse(fs.readFileSync(deckPath, 'utf8'))
+            decks.push(deckContent)
+            loaded = true
+          } catch (e) {
+            // Skip invalid files
+          }
+        }
+      }
+
+      // Single ink paths
+      for (const ink of inks) {
+        if (loaded) break
+        const deckPath = path.join(trainingDataPath, 'decks', `${ink}`, `${hash}.json`)
+        if (fs.existsSync(deckPath)) {
+          try {
+            const deckContent = JSON.parse(fs.readFileSync(deckPath, 'utf8'))
+            decks.push(deckContent)
+            loaded = true
+          } catch (e) {
+            // Skip invalid files
+          }
+        }
+      }
+    }
+
+    return decks
   }
 
   getInkPath(inks) {
