@@ -88,6 +88,9 @@ puppeteer.use(StealthPlugin());
     let currentPage = 1
     let hasMorePages = true
     let totalProcessed = 0
+    let consecutiveSkippedPages = 0
+    let lastProcessedCount = 0
+    const maxConsecutiveSkippedPages = isDev ? 3 : 1 // In dev, continue for a few pages if fully scraped
 
     // Process tournaments page by page
     // Check if we should limit to first page only (for CI/scheduled runs)
@@ -522,6 +525,28 @@ puppeteer.use(StealthPlugin());
 
       if (firstPageOnly) {
         console.log('First page only mode - stopping pagination.')
+        hasMorePages = false
+        break
+      }
+
+      // Track consecutive pages where all tournaments were already scraped
+      // In dev mode, continue for a few pages to ensure we have the latest data
+      // In production, stop after 1 page of no new tournaments
+      if (totalProcessed === 0 || totalProcessed === lastProcessedCount) {
+        consecutiveSkippedPages++
+        console.log(`  (Page ${currentPage} had no new tournaments - ${consecutiveSkippedPages}/${maxConsecutiveSkippedPages})`)
+      } else {
+        consecutiveSkippedPages = 0
+      }
+      lastProcessedCount = totalProcessed
+
+      // Stop if we've hit the limit of consecutive skipped pages
+      if (consecutiveSkippedPages >= maxConsecutiveSkippedPages) {
+        if (isDev) {
+          console.log(`Dev mode: Stopping after ${consecutiveSkippedPages} pages with no new tournaments`)
+        } else {
+          console.log('Production mode: Stopping after 1 page with no new tournaments')
+        }
         hasMorePages = false
         break
       }
