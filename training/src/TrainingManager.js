@@ -21,6 +21,776 @@ module.exports = class TrainingManager {
       'training-state.json'
     )
     this.trainingState = null
+
+    // Synergy learning - co-occurrence matrix
+    // card_i -> { card_j: normalized_score }
+    this.cooccurrenceMatrix = new Map()
+    // Track keyword synergies: keyword_i -> { keyword_j: score }
+    this.keywordSynergyMatrix = new Map()
+    // Track card -> keywords mapping for fast lookup
+    this.cardKeywordsMap = new Map()
+
+    // Ability combo tracking
+    // Maps card IDs to ability combos they enable/benefit from
+    this.abilityComboMap = new Map()
+    // Known ability combos in the game
+    this.abilityCombos = {
+      // Singer decks need singer characters + song actions
+      'singer-song': {
+        keywords: ['Singer'],
+        relatedTypes: ['Action'],
+        keywordsNeeded: ['Singer'],
+        description: 'Singer characters benefit from song actions'
+      },
+      // Challenger decks want targets
+      'challenger': {
+        keywords: ['Challenger'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Challenger'],
+        description: 'Challenger characters need other characters to challenge'
+      },
+      // Shift decks need cheaper versions
+      'shift': {
+        keywords: ['Shift'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Shift'],
+        description: 'Shift cards need cheaper version to shift from'
+      },
+      // Bodyguard protects others
+      'bodyguard': {
+        keywords: ['Bodyguard'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Bodyguard'],
+        description: 'Bodyguard protects vulnerable characters'
+      },
+      // Evasive needs challenges
+      'evasive': {
+        keywords: ['Evasive'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Evasive'],
+        description: 'Evasive characters avoid non-evasive challenges'
+      },
+      // Rush should attack quickly
+      'rush': {
+        keywords: ['Rush'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Rush'],
+        description: 'Rush characters can challenge same turn'
+      },
+      // Resist decks want high damage targets
+      'resist': {
+        keywords: ['Resist'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Resist'],
+        description: 'Resist reduces incoming damage'
+      },
+      // Ward needs opponents
+      'ward': {
+        keywords: ['Ward'],
+        relatedTypes: ['Character'],
+        keywordsNeeded: ['Ward'],
+        description: 'Ward blocks challenging'
+      }
+    }
+
+    // Curriculum Learning Phases
+    // Progressively increase difficulty during training
+    // Note: Lorcana only allows max 2 ink colors per deck
+    this.curriculumPhase = 0
+    this.curriculumPhases = [
+      { name: 'single-ink', maxInks: 1, epochs: 5, description: 'Single ink decks only' },
+      { name: 'dual-ink-simple', maxInks: 2, minInks: 2, epochs: 10, simpleInks: true, description: 'Simple dual-ink combinations' },
+      { name: 'dual-ink', maxInks: 2, minInks: 2, epochs: 15, description: 'All dual-ink combinations' },
+      { name: 'full', maxInks: 2, minInks: 2, epochs: -1, description: 'Full deck building' }
+    ]
+    this.currentEpochInPhase = 0
+    this.totalEpochsTrained = 0
+
+    // Ink difficulty mapping - valid Lorcana ink combinations
+    // (Amber, Amethyst, Emerald, Ruby, Sapphire, Steel)
+    // Single ink for phase 1, dual ink combinations for phase 2+
+    this.inkDifficulty = {
+      // Single ink
+      'amber': 0.5,
+      'amethyst': 0.5,
+      'emerald': 0.5,
+      'ruby': 0.5,
+      'sapphire': 0.5,
+      'steel': 0.5,
+      // Dual ink
+      'amber-amethyst': 1.0,
+      'amber-emerald': 1.0,
+      'amber-ruby': 1.0,
+      'amber-sapphire': 1.0,
+      'amber-steel': 1.0,
+      'amethyst-emerald': 1.0,
+      'amethyst-ruby': 1.0,
+      'amethyst-sapphire': 1.0,
+      'amethyst-steel': 1.0,
+      'emerald-ruby': 1.0,
+      'emerald-sapphire': 1.0,
+      'emerald-steel': 1.0,
+      'ruby-sapphire': 1.0,
+      'ruby-steel': 1.0,
+      'sapphire-steel': 1.0
+    }
+
+    // Memory optimization settings
+    this.synergyThreshold = 0.05 // Filter out weak synergies (below 5%)
+    this.maxSynergiesPerCard = 50 // Limit top synergies per card
+    
+    // Batch processing settings
+    this.batchSize = 500 // Process decks in batches
+    this.streamDecks = true // Use streaming mode
+  }
+
+  /**
+   * Force garbage collection if available
+   * Call between heavy processing phases
+   */
+  async compactMemory () {
+    if (global.gc) {
+      this.log('Running garbage collection...')
+      global.gc()
+    }
+    // Give event loop time to clean up
+    await new Promise(resolve => setImmediate(resolve))
+  }
+
+  /**
+   * Stream deck processing - processes decks in batches to reduce memory
+   * @param {Array} decks - Array of decks to process
+   * @param {Function} processor - Function to call for each batch
+   * @param {Function} aggregator - Function to aggregate results (optional)
+   */
+  async processDecksInBatches (decks, processor, aggregator = null) {
+    const batchSize = this.batchSize || 500
+    const results = aggregator ? aggregator() : null
+    const totalBatches = Math.ceil(decks.length / batchSize)
+    
+    this.log(`Processing ${decks.length} decks in ${totalBatches} batches...`)
+    
+    for (let i = 0; i < decks.length; i += batchSize) {
+      const batch = decks.slice(i, i + batchSize)
+      const batchNum = Math.floor(i / batchSize) + 1
+      
+      if (batchNum % 5 === 0 || batchNum === 1) {
+        this.log(`  Processing batch ${batchNum}/${totalBatches}`)
+      }
+      
+      // Process this batch
+      const batchResult = await processor(batch)
+      
+      // Aggregate results if provided
+      if (results && batchResult) {
+        this.aggregateResults(results, batchResult)
+      }
+      
+      // Memory cleanup every few batches
+      if (batchNum % 5 === 0) {
+        await this.compactMemory()
+      }
+    }
+    
+    this.log(`  Completed ${totalBatches} batches`)
+    return results
+  }
+
+  /**
+   * Aggregate batch results into overall results
+   */
+  aggregateResults (results, batchResult) {
+    if (typeof batchResult === 'number') {
+      results.count = (results.count || 0) + batchResult
+    } else if (batchResult instanceof Map) {
+      for (const [key, value] of batchResult) {
+        results.set(key, (results.get(key) || 0) + value)
+      }
+    } else if (typeof batchResult === 'object') {
+      for (const key of Object.keys(batchResult)) {
+        results[key] = (results[key] || 0) + batchResult[key]
+      }
+    }
+  }
+
+  /**
+   * Build co-occurrence matrix in batches to reduce memory
+   */
+  async buildCooccurrenceMatrixBatched (decks) {
+    this.log('Building card co-occurrence matrix (streaming mode)...')
+    
+    const batchSize = this.batchSize || 500
+    const pairCounts = new Map()
+    const cardCounts = new Map()
+    
+    // Process in batches
+    const totalBatches = Math.ceil(decks.length / batchSize)
+    const maxPairsPerDeck = 1000 // Limit pairs per deck
+    const threshold = this.synergyThreshold || 0.05
+    
+    for (let i = 0; i < decks.length; i += batchSize) {
+      const batch = decks.slice(i, i + batchSize)
+      const batchNum = Math.floor(i / batchSize) + 1
+      
+      if (batchNum % 5 === 0 || batchNum === 1) {
+        this.log(`  Batch ${batchNum}/${totalBatches}: building counts...`)
+      }
+      
+      // Process each deck in batch
+      for (const deck of batch) {
+        const cardIds = new Set()
+        for (const cardEntry of deck.cards) {
+          const key = this.getCardKey(cardEntry.name, cardEntry.version)
+          const cardId = this.cardMap.get(key)
+          if (cardId !== undefined) {
+            cardIds.add(cardId)
+          }
+        }
+        
+        // Count individual cards
+        for (const cardId of cardIds) {
+          cardCounts.set(cardId, (cardCounts.get(cardId) || 0) + 1)
+        }
+        
+        // Count pairs
+        const cardArray = Array.from(cardIds)
+        let pairCount = 0
+        for (let j = 0; j < cardArray.length && pairCount < maxPairsPerDeck; j++) {
+          for (let k = j + 1; k < cardArray.length && pairCount < maxPairsPerDeck; k++) {
+            const pairKey = `${cardArray[j]}-${cardArray[k]}`
+            pairCounts.set(pairKey, (pairCounts.get(pairKey) || 0) + 1)
+            pairCount++
+          }
+        }
+      }
+      
+      // Periodic cleanup
+      if (batchNum % 5 === 0) {
+        await this.compactMemory()
+      }
+    }
+    
+    this.log(`  Normalizing and filtering (threshold: ${threshold})...`)
+    
+    // Normalize and filter
+    for (const [pairKey, pairCount] of pairCounts) {
+      const [id1, id2] = pairKey.split('-').map(Number)
+      const count1 = cardCounts.get(id1) || 1
+      const score = pairCount / count1
+      
+      if (score < threshold) continue
+      
+      if (!this.cooccurrenceMatrix.has(id1)) {
+        this.cooccurrenceMatrix.set(id1, new Map())
+      }
+      if (!this.cooccurrenceMatrix.has(id2)) {
+        this.cooccurrenceMatrix.set(id2, new Map())
+      }
+      
+      const synergies1 = this.cooccurrenceMatrix.get(id1)
+      const synergies2 = this.cooccurrenceMatrix.get(id2)
+      
+      if (synergies1.size < (this.maxSynergiesPerCard || 50)) {
+        synergies1.set(id2, score)
+      }
+      if (synergies2.size < (this.maxSynergiesPerCard || 50)) {
+        synergies2.set(id1, score)
+      }
+    }
+    
+    this.deckCardCounts = cardCounts
+    this.log(`  Co-occurrence: ${this.cooccurrenceMatrix.size} cards, ${pairCounts.size} pairs (filtered)`)
+  }
+
+  /**
+   * Get current curriculum phase configuration
+   */
+  getCurriculumPhase () {
+    return this.curriculumPhases[this.curriculumPhase]
+  }
+
+  /**
+   * Update curriculum based on epochs trained
+   * Should be called at the start of each epoch
+   */
+  updateCurriculum () {
+    const phase = this.getCurriculumPhase()
+
+    // Check if we should advance to next phase
+    if (phase.epochs > 0 && this.currentEpochInPhase >= phase.epochs) {
+      if (this.curriculumPhase < this.curriculumPhases.length - 1) {
+        this.curriculumPhase++
+        this.currentEpochInPhase = 0
+        this.log(`📚 Curriculum: Advanced to phase '${this.getCurriculumPhase().name}' - ${this.getCurriculumPhase().description}`)
+      }
+    }
+
+    this.currentEpochInPhase++
+    this.totalEpochsTrained++
+
+    return this.getCurriculumPhase()
+  }
+
+  /**
+   * Get allowed inks for current curriculum phase
+   * Returns array of ink combinations allowed
+   */
+  getCurriculumAllowedInks () {
+    const phase = this.getCurriculumPhase()
+    const inkKeys = Object.keys(this.inkDifficulty)
+
+    // Filter based on curriculum phase
+    const allowedInks = []
+    for (const inkKey of inkKeys) {
+      const inks = inkKey.split('-')
+      const inkCount = inks.length
+
+      // Check if within phase constraints
+      if (inkCount >= phase.minInks && inkCount <= phase.maxInks) {
+        // In simple mode, only allow common/easy combos
+        if (phase.simpleInks) {
+          const difficulty = this.inkDifficulty[inkKey] || 1.0
+          if (difficulty <= 1.0) {
+            allowedInks.push(inkKey)
+          }
+        } else {
+          allowedInks.push(inkKey)
+        }
+      }
+    }
+
+    return allowedInks
+  }
+
+  /**
+   * Get difficulty multiplier for current phase
+   */
+  getCurriculumDifficulty () {
+    const phase = this.getCurriculumPhase()
+    // Difficulty increases as we progress
+    return 1.0 + (this.curriculumPhase * 0.2)
+  }
+
+  /**
+   * Get curriculum statistics
+   */
+  getCurriculumStats () {
+    return {
+      phase: this.getCurriculumPhase().name,
+      phaseDescription: this.getCurriculumPhase().description,
+      progressInPhase: `${this.currentEpochInPhase}/${this.getCurriculumPhase().epochs}`,
+      totalEpochs: this.totalEpochsTrained,
+      difficulty: this.getCurriculumDifficulty()
+    }
+  }
+
+  /**
+   * Reset curriculum to beginning
+   */
+  resetCurriculum () {
+    this.curriculumPhase = 0
+    this.currentEpochInPhase = 0
+    this.totalEpochsTrained = 0
+    this.log('📚 Curriculum: Reset to beginning')
+  }
+
+  /**
+   * Build co-occurrence matrix from training decks
+   * Learns which cards frequently appear together in winning/tournament decks
+   * @param {Array} decks - Array of deck objects with card entries
+   */
+  buildCooccurrenceMatrix(decks) {
+    this.log('Building card co-occurrence matrix...')
+
+    const pairCounts = new Map()
+    const cardCounts = new Map()
+    const totalDecks = decks.length
+
+    for (const deck of decks) {
+      // Get unique card IDs in this deck
+      const cardIds = new Set()
+      for (const cardEntry of deck.cards) {
+        const key = this.getCardKey(cardEntry.name, cardEntry.version)
+        const cardId = this.cardMap.get(key)
+        if (cardId !== undefined) {
+          cardIds.add(cardId)
+        }
+      }
+
+      // Count individual cards
+      for (const cardId of cardIds) {
+        cardCounts.set(cardId, (cardCounts.get(cardId) || 0) + 1)
+      }
+
+      // Count pairs (symmetric) - limit to reduce memory
+      const cardArray = Array.from(cardIds)
+      const maxPairs = 1000 // Limit pairs per deck to save memory
+      let pairCount = 0
+      for (let i = 0; i < cardArray.length && pairCount < maxPairs; i++) {
+        for (let j = i + 1; j < cardArray.length && pairCount < maxPairs; j++) {
+          const pairKey = `${cardArray[i]}-${cardArray[j]}`
+          pairCounts.set(pairKey, (pairCounts.get(pairKey) || 0) + 1)
+          pairCount++
+        }
+      }
+    }
+
+    // Normalize and filter: P(card_j | card_i) = count(pair) / count(card_i)
+    // Only keep synergies above threshold
+    const threshold = this.synergyThreshold || 0.05
+    
+    for (const [pairKey, pairCount] of pairCounts) {
+      const [id1, id2] = pairKey.split('-').map(Number)
+      const count1 = cardCounts.get(id1) || 1
+
+      // Score = normalized co-occurrence
+      const score = pairCount / count1
+
+      // Skip low-synergy pairs to save memory
+      if (score < threshold) continue
+
+      // Store symmetrically with limit
+      if (!this.cooccurrenceMatrix.has(id1)) {
+        this.cooccurrenceMatrix.set(id1, new Map())
+      }
+      if (!this.cooccurrenceMatrix.has(id2)) {
+        this.cooccurrenceMatrix.set(id2, new Map())
+      }
+
+      // Limit synergies per card
+      const synergies1 = this.cooccurrenceMatrix.get(id1)
+      const synergies2 = this.cooccurrenceMatrix.get(id2)
+      
+      if (synergies1.size < (this.maxSynergiesPerCard || 50)) {
+        synergies1.set(id2, score)
+      }
+      if (synergies2.size < (this.maxSynergiesPerCard || 50)) {
+        synergies2.set(id1, score)
+      }
+    }
+
+    // Store card counts for baseline
+    this.deckCardCounts = cardCounts
+
+    this.log(`  Co-occurrence matrix: ${this.cooccurrenceMatrix.size} cards tracked`)
+    this.log(`  Pair counts: ${pairCounts.size} unique pairs (filtered by threshold ${threshold})`)
+  }
+
+  /**
+   * Build keyword synergy matrix from training decks
+   * Learns which keyword combinations work well together
+   * @param {Array} decks - Array of deck objects
+   */
+  buildKeywordSynergyMatrix(decks) {
+    this.log('Building keyword synergy matrix...')
+
+    const keywordPairCounts = new Map()
+    const keywordCounts = new Map()
+
+    // All known keywords in the game
+    const allKeywords = ['Ward', 'Evasive', 'Bodyguard', 'Resist', 'Singer', 'Shift', 'Reckless', 'Challenger', 'Rush', 'Boost']
+
+    for (const deck of decks) {
+      // Collect all keywords present in deck
+      const deckKeywords = new Set()
+
+      for (const cardEntry of deck.cards) {
+        const key = this.getCardKey(cardEntry.name, cardEntry.version)
+        const cardId = this.cardMap.get(key)
+        if (cardId !== undefined) {
+          const card = this.indexMap.get(cardId)
+          if (card && card.keywords) {
+            for (const kw of card.keywords) {
+              if (allKeywords.includes(kw)) {
+                deckKeywords.add(kw)
+                // Store card -> keywords mapping
+                if (!this.cardKeywordsMap.has(cardId)) {
+                  this.cardKeywordsMap.set(cardId, new Set())
+                }
+                this.cardKeywordsMap.get(cardId).add(kw)
+              }
+            }
+          }
+        }
+      }
+
+      // Count individual keywords
+      for (const kw of deckKeywords) {
+        keywordCounts.set(kw, (keywordCounts.get(kw) || 0) + 1)
+      }
+
+      // Count keyword pairs
+      const kwArray = Array.from(deckKeywords)
+      for (let i = 0; i < kwArray.length; i++) {
+        for (let j = i + 1; j < kwArray.length; j++) {
+          const pairKey = [kwArray[i], kwArray[j]].sort().join('|')
+          keywordPairCounts.set(pairKey, (keywordPairCounts.get(pairKey) || 0) + 1)
+        }
+      }
+    }
+
+    // Normalize and store
+    for (const [pairKey, count] of keywordPairCounts) {
+      const [kw1, kw2] = pairKey.split('|')
+      const total1 = keywordCounts.get(kw1) || 1
+
+      const score = count / total1
+
+      if (!this.keywordSynergyMatrix.has(kw1)) {
+        this.keywordSynergyMatrix.set(kw1, new Map())
+      }
+      if (!this.keywordSynergyMatrix.has(kw2)) {
+        this.keywordSynergyMatrix.set(kw2, new Map())
+      }
+
+      this.keywordSynergyMatrix.get(kw1).set(kw2, score)
+      this.keywordSynergyMatrix.get(kw2).set(kw1, score)
+    }
+
+    this.log(`  Keyword synergy matrix: ${this.keywordSynergyMatrix.size} keywords tracked`)
+  }
+
+  /**
+   * Get synergy score between two cards
+   * @param {Number} cardId1 - First card index
+   * @param {Number} cardId2 - Second card index
+   * @returns {Number} Synergy score (0-1, higher is better)
+   */
+  getCardSynergy(cardId1, cardId2) {
+    const synergies1 = this.cooccurrenceMatrix.get(cardId1)
+    if (!synergies1) return 0
+
+    const score = synergies1.get(cardId2)
+    return score || 0
+  }
+
+  /**
+   * Get synergy score for adding a card to existing deck
+   * @param {Number} cardId - Card to add
+   * @param {Array} currentDeck - Array of card IDs already in deck
+   * @returns {Number} Average synergy with current deck
+   */
+  getDeckSynergyScore(cardId, currentDeck) {
+    if (currentDeck.length === 0) return 0
+
+    let totalSynergy = 0
+    let count = 0
+
+    for (const existingCardId of currentDeck) {
+      const synergy = this.getCardSynergy(cardId, existingCardId)
+      if (synergy > 0) {
+        totalSynergy += synergy
+        count++
+      }
+    }
+
+    return count > 0 ? totalSynergy / count : 0
+  }
+
+  /**
+   * Get keyword synergy score for a card based on deck's current keywords
+   * @param {Number} cardId - Card to evaluate
+   * @param {Set} deckKeywords - Keywords already in deck
+   * @returns {Number} Keyword synergy score
+   */
+  getKeywordSynergyScore(cardId, deckKeywords) {
+    const cardKeywords = this.cardKeywordsMap.get(cardId)
+    if (!cardKeywords || cardKeywords.size === 0) return 0
+    if (deckKeywords.size === 0) return 0
+
+    let totalSynergy = 0
+    let count = 0
+
+    for (const cardKw of cardKeywords) {
+      const deckSynergies = this.keywordSynergyMatrix.get(cardKw)
+      if (deckSynergies) {
+        for (const deckKw of deckKeywords) {
+          const score = deckSynergies.get(deckKw)
+          if (score) {
+            totalSynergy += score
+            count++
+          }
+        }
+      }
+    }
+
+    return count > 0 ? totalSynergy / count : 0
+  }
+
+  /**
+   * Calculate overall synergy reward for a complete deck
+   * @param {Array} deckIndices - Array of card IDs
+   * @returns {Number} Synergy score (0-1)
+   */
+  calculateDeckSynergy(deckIndices) {
+    if (deckIndices.length < 2) return 0
+
+    // Calculate pairwise synergies
+    let totalSynergy = 0
+    let pairCount = 0
+
+    // Sample pairs for efficiency (don't check all n^2)
+    const sampleSize = Math.min(100, deckIndices.length)
+    for (let i = 0; i < sampleSize; i++) {
+      const idx1 = Math.floor(Math.random() * deckIndices.length)
+      let idx2 = Math.floor(Math.random() * deckIndices.length)
+      while (idx2 === idx1) {
+        idx2 = Math.floor(Math.random() * deckIndices.length)
+      }
+
+      const synergy = this.getCardSynergy(deckIndices[idx1], deckIndices[idx2])
+      if (synergy > 0) {
+        totalSynergy += synergy
+        pairCount++
+      }
+    }
+
+    return pairCount > 0 ? Math.min(1, totalSynergy / pairCount * 10) : 0
+  }
+
+  /**
+   * Initialize ability combo mapping from cards
+   * Builds a map of which cards enable/participate in which ability combos
+   */
+  initializeAbilityCombos() {
+    this.log('Initializing ability combo mappings...')
+
+    for (const [cardId, card] of this.indexMap) {
+      const combos = []
+
+      // Check each ability combo
+      for (const [comboName, comboDef] of Object.entries(this.abilityCombos)) {
+        // Check if card has any of the combo's keywords
+        if (card.keywords) {
+          for (const keyword of card.keywords) {
+            if (comboDef.keywords.includes(keyword)) {
+              combos.push(comboName)
+              break
+            }
+          }
+        }
+
+        // Check if card has related types
+        if (card.types) {
+          for (const type of card.types) {
+            if (comboDef.relatedTypes.includes(type)) {
+              // Only add if card also has relevant keywords or is the right type
+              if (card.keywords && card.keywords.some(k => comboDef.keywords.includes(k))) {
+                if (!combos.includes(comboName)) {
+                  combos.push(comboName)
+                }
+              }
+            }
+          }
+        }
+      }
+
+      if (combos.length > 0) {
+        this.abilityComboMap.set(cardId, combos)
+      }
+    }
+
+    this.log(`  Ability combos mapped for ${this.abilityComboMap.size} cards`)
+  }
+
+  /**
+   * Calculate ability combo score for a deck
+   * Rewards having complete ability combos (e.g., singers + songs)
+   * @param {Array} deckIndices - Array of card IDs
+   * @returns {Number} Combo score (0-1)
+   */
+  calculateAbilityComboScore(deckIndices) {
+    if (deckIndices.length < 4) return 0
+
+    // Track which combos are partially or fully formed
+    const comboCounts = {}
+    const comboCardCounts = {}
+
+    for (const cardId of deckIndices) {
+      const combos = this.abilityComboMap.get(cardId)
+      if (combos) {
+        for (const combo of combos) {
+          comboCounts[combo] = (comboCounts[combo] || 0) + 1
+          if (!comboCardCounts[combo]) {
+            comboCardCounts[combo] = new Set()
+          }
+          comboCardCounts[combo].add(cardId)
+        }
+      }
+    }
+
+    // Score each combo
+    let totalScore = 0
+    let comboCount = 0
+
+    for (const [comboName, comboDef] of Object.entries(this.abilityCombos)) {
+      const cardCount = comboCardCounts[comboName]?.size || 0
+
+      // A combo is "complete" with enough cards
+      // Singer needs: 4+ singer characters + 4+ songs (simplified)
+      // Others need: 2+ cards with that keyword
+      let threshold
+      if (comboName === 'singer-song') {
+        threshold = 4 // At least 4 cards involved in the singer combo
+      } else {
+        threshold = 2 // At least 2 cards with the keyword
+      }
+
+      if (cardCount >= threshold) {
+        // Full synergy bonus
+        totalScore += 1.0
+      } else if (cardCount >= threshold / 2) {
+        // Partial synergy
+        totalScore += 0.5
+      }
+      comboCount++
+    }
+
+    return comboCount > 0 ? Math.min(1, totalScore / Math.min(comboCount, 4)) : 0
+  }
+
+  /**
+   * Get recommended cards for completing ability combos
+   * @param {Array} deckIndices - Current deck
+   * @param {Array} allowedInks - Allowed ink colors
+   * @returns {Array} Card IDs that would complete combos
+   */
+  getComboFillerCards(deckIndices, allowedInks) {
+    // Find which combos are partially formed
+    const activeCombos = new Set()
+    const neededCombos = {}
+
+    for (const cardId of deckIndices) {
+      const combos = this.abilityComboMap.get(cardId)
+      if (combos) {
+        for (const combo of combos) {
+          activeCombos.add(combo)
+          if (!neededCombos[combo]) {
+            neededCombos[combo] = { current: 0, needed: 4 }
+          }
+          neededCombos[combo].current++
+        }
+      }
+    }
+
+    // Find cards that complete these combos
+    const fillerCards = []
+    for (const [cardId, card] of this.indexMap) {
+      if (deckIndices.includes(cardId)) continue
+      if (allowedInks && !allowedInks.includes(card.ink)) continue
+
+      const combos = this.abilityComboMap.get(cardId)
+      if (combos) {
+        for (const combo of combos) {
+          if (activeCombos.has(combo) && neededCombos[combo].current < neededCombos[combo].needed) {
+            fillerCards.push(cardId)
+            break
+          }
+        }
+      }
+    }
+
+    return fillerCards
   }
 
   log(message) {
@@ -75,6 +845,9 @@ module.exports = class TrainingManager {
       })
       this.log(`Unique cards indexed: ${this.cardMap.size}`)
 
+      // Initialize ability combos from cards
+      this.initializeAbilityCombos()
+
       // Build text vocabulary
       this.log('Building text vocabulary...')
       this.textEmbedder.buildVocabulary(this.cards)
@@ -92,14 +865,46 @@ module.exports = class TrainingManager {
       return
     }
 
-    // 2b. Compute ink distribution for balancing
-    const inkDistribution = new Map()
-    for (const deck of this.newDecksToTrain) {
-      const inkPath = this.getInkPath(deck.inks)
-      if (inkPath) {
-        inkDistribution.set(inkPath, (inkDistribution.get(inkPath) || 0) + 1)
+    // For incremental training, also load a sample of existing decks for better synergy matrices
+    let synergyDecks = [...this.newDecksToTrain]
+    if (!fullRetrain && this.trainingState.trainedDeckHashes && this.trainingState.trainedDeckHashes.length > 0) {
+      // Load up to 2000 existing decks for synergy building (sample to save memory)
+      const sampleSize = Math.min(2000, this.trainingState.trainedDeckHashes.length)
+      const existingDecks = await this.loadExistingDecksForSynergy(sampleSize)
+      if (existingDecks.length > 0) {
+        this.log(`Including ${existingDecks.length} existing decks for synergy matrices...`)
+        synergyDecks = [...existingDecks, ...this.newDecksToTrain]
       }
     }
+
+    // 2c. Build synergy matrices from training data (with batching if enabled)
+    if (this.streamDecks) {
+      this.log('Using streaming mode for synergy building...')
+      await this.buildCooccurrenceMatrixBatched(synergyDecks)
+    } else {
+      this.buildCooccurrenceMatrix(synergyDecks)
+    }
+    await this.compactMemory()
+    
+    this.buildKeywordSynergyMatrix(this.newDecksToTrain)
+    await this.compactMemory()
+
+    // 2b. Compute ink distribution for balancing (batched)
+    this.log('Computing ink distribution...')
+    const inkDistribution = await this.processDecksInBatches(
+      this.newDecksToTrain,
+      async (batch) => {
+        const batchDist = new Map()
+        for (const deck of batch) {
+          const inkPath = this.getInkPath(deck.inks)
+          if (inkPath) {
+            batchDist.set(inkPath, (batchDist.get(inkPath) || 0) + 1)
+          }
+        }
+        return batchDist
+      },
+      () => new Map()
+    )
 
     // Calculate balancing multipliers
     let balancingMultipliers = new Map()
@@ -114,90 +919,18 @@ module.exports = class TrainingManager {
       this.log('------------------------')
     }
 
-    // 3. Process Decks
-    this.log('Processing decks...')
-    const sequences = []
-    const featureSequences = []
-    const textSequences = []
-
-    let processedDecks = 0
-
-    for (const deck of this.newDecksToTrain) {
-      const deckIndices = []
-
-      for (const cardEntry of deck.cards) {
-        const key = this.getCardKey(cardEntry.name, cardEntry.version)
-        if (this.cardMap.has(key)) {
-          const index = this.cardMap.get(key)
-          for (let i = 0; i < cardEntry.amount; i++) {
-            deckIndices.push(index)
-          }
-        }
-      }
-
-      if (deckIndices.length > 0) {
-        // Hash check again (redundant but safe)
-        const deckHash = deck.hash || this.getDeckHash(deckIndices)
-
-        // Calculate repetitions based on balancing
-        const inkPath = this.getInkPath(deck.inks)
-        const baseRepetitions = 5
-        const multiplier = balanceClasses && inkPath ? (balancingMultipliers.get(inkPath) || 1) : 1
-        const totalRepetitions = baseRepetitions * multiplier
-
-        // Create shuffled versions
-        for (let k = 0; k < totalRepetitions; k++) {
-          const shuffledIndices = [...deckIndices].sort(
-            () => Math.random() - 0.5
-          )
-
-          const seqIndices = []
-          const seqFeatures = []
-          const seqTextIndices = []
-
-          const currentStats = this.getInitialDeckStats()
-          const cardCounts = new Map()
-
-          for (const index of shuffledIndices) {
-            const card = this.indexMap.get(index)
-            const copiesSoFar = cardCounts.get(index) || 0
-
-            this.updateDeckStats(currentStats, card)
-            const features = this.extractCardFeatures(
-              card,
-              currentStats,
-              copiesSoFar
-            )
-            const textIndices = this.textEmbedder.cardToTextIndices(card)
-
-            seqIndices.push(index)
-            seqFeatures.push(features)
-            seqTextIndices.push(textIndices)
-
-            cardCounts.set(index, copiesSoFar + 1)
-          }
-
-          sequences.push(seqIndices)
-          featureSequences.push(seqFeatures)
-          textSequences.push(seqTextIndices)
-        }
-
-        // Mark as trained
-        this.deckHashSet.add(deckHash)
-      }
-      processedDecks++
-    }
-
-    this.log(
-      `Generated ${sequences.length} sequences from ${processedDecks} decks.`
-    )
-
-    if (sequences.length === 0) {
-      this.log('No sequences generated. Skipping.')
-      return
-    }
-
-    // 4. Train Model
+    // 3. Process Decks in Batches (never load all at once)
+    // For full retrain, we process incrementally and train as we go
+    const totalDecks = this.newDecksToTrain.length
+    const processBatchSize = this.batchSize || 500
+    const trainBatchSize = 5000 // Train after this many sequences
+    
+    this.log(`Processing ${totalDecks} decks in batches of ${processBatchSize}...`)
+    
+    let totalSequences = 0
+    let batchesProcessed = 0
+    
+    // Initialize model if needed
     if (!this.model.model) {
       this.log('Initializing new model...')
       this.log('Building card embedding matrix...')
@@ -207,62 +940,113 @@ module.exports = class TrainingManager {
       this.log('Continuing training on existing model...')
     }
 
-    this.log('Training model...')
+    // Process decks in batches and train incrementally
+    for (let batchStart = 0; batchStart < totalDecks; batchStart += processBatchSize) {
+      const batchEnd = Math.min(batchStart + processBatchSize, totalDecks)
+      const batchDecks = this.newDecksToTrain.slice(batchStart, batchEnd)
+      const progress = ((batchEnd / totalDecks) * 100).toFixed(1)
+      
+      this.log(`  Processing decks ${batchStart + 1}-${batchEnd}/${totalDecks} (${progress}%)`)
+      
+      // Process this batch into sequences
+      const batchSequences = []
+      const batchFeatureSequences = []
+      const batchTextSequences = []
+      
+      for (const deck of batchDecks) {
+        const deckIndices = []
 
-    // Helper to shuffle data arrays in sync
-    const shuffleData = (seqs) => {
-      const indices = seqs.map((_, i) => i)
-      for (let i = indices.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [indices[i], indices[j]] = [indices[j], indices[i]]
+        for (const cardEntry of deck.cards) {
+          const key = this.getCardKey(cardEntry.name, cardEntry.version)
+          if (this.cardMap.has(key)) {
+            const index = this.cardMap.get(key)
+            for (let i = 0; i < cardEntry.amount; i++) {
+              deckIndices.push(index)
+            }
+          }
+        }
+
+        if (deckIndices.length > 0) {
+          const deckHash = deck.hash || this.getDeckHash(deckIndices)
+
+          const inkPath = this.getInkPath(deck.inks)
+          const baseRepetitions = 5
+          const multiplier = balanceClasses && inkPath ? (balancingMultipliers.get(inkPath) || 1) : 1
+          const totalRepetitions = baseRepetitions * multiplier
+
+          for (let k = 0; k < totalRepetitions; k++) {
+            const shuffledIndices = this.fisherYatesShuffle([...deckIndices])
+
+            const seqIndices = []
+            const seqFeatures = []
+            const seqTextIndices = []
+
+            const currentStats = this.getInitialDeckStats()
+            const cardCounts = new Map()
+
+            for (const index of shuffledIndices) {
+              const card = this.indexMap.get(index)
+              const copiesSoFar = cardCounts.get(index) || 0
+
+              this.updateDeckStats(currentStats, card)
+              const features = this.extractCardFeatures(card, currentStats, copiesSoFar)
+              const textIndices = this.textEmbedder.cardToTextIndices(card)
+
+              seqIndices.push(index)
+              seqFeatures.push(features)
+              seqTextIndices.push(textIndices)
+
+              cardCounts.set(index, copiesSoFar + 1)
+            }
+
+            batchSequences.push(seqIndices)
+            batchFeatureSequences.push(seqFeatures)
+            batchTextSequences.push(seqTextIndices)
+          }
+
+          this.deckHashSet.add(deckHash)
+        }
       }
-      return {
-        shuffledSeqs: indices.map((i) => seqs[i])
+
+      // Add batch sequences to training
+      totalSequences += batchSequences.length
+      batchesProcessed++
+      
+      // Train on this batch immediately
+      if (batchSequences.length > 0) {
+        this.log(`    Training on ${batchSequences.length} sequences (total: ${totalSequences})`)
+        
+        // Shuffle and train
+        const shuffledIndices = batchSequences.map((_, i) => i)
+        for (let i = shuffledIndices.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffledIndices[i], shuffledIndices[j]] = [shuffledIndices[j], shuffledIndices[i]]
+        }
+        
+        const shuffledSeqs = shuffledIndices.map(i => batchSequences[i])
+        
+        // Train in sub-batches
+        const subBatchSize = 1000
+        for (let s = 0; s < shuffledSeqs.length; s += subBatchSize) {
+          const subBatch = shuffledSeqs.slice(s, s + subBatchSize)
+          await this.model.train(subBatch, 1)
+        }
       }
+
+      // Clear batch from memory
+      batchSequences.length = 0
+      batchFeatureSequences.length = 0
+      batchTextSequences.length = 0
+      
+      // Memory cleanup
+      await this.compactMemory()
     }
 
-    const MAX_BATCH_SIZE = 5000
-    if (sequences.length > MAX_BATCH_SIZE) {
-      this.log(
-        `Large dataset detected (${sequences.length} sequences). Training in batches of ${MAX_BATCH_SIZE}...`
-      )
+    this.log(`Completed processing. Total sequences trained: ${totalSequences}`)
 
-      this.log('Shuffling training data...')
-      const { shuffledSeqs } = shuffleData(sequences)
-
-      const numBatches = Math.ceil(sequences.length / MAX_BATCH_SIZE)
-
-      for (let epoch = 0; epoch < epochs; epoch++) {
-        this.log(`Global Epoch ${epoch + 1}/${epochs}`)
-
-        for (let batchIdx = 0; batchIdx < numBatches; batchIdx++) {
-          const start = batchIdx * MAX_BATCH_SIZE
-          const end = Math.min(
-            (batchIdx + 1) * MAX_BATCH_SIZE,
-            sequences.length
-          )
-
-          const batchSequences = shuffledSeqs.slice(start, end)
-
-          await this.model.train(batchSequences, 1, (e, logs) => {
-            if (batchIdx % 5 === 0 || batchIdx === numBatches - 1) {
-              this.log(
-                `  Batch ${batchIdx + 1
-                }/${numBatches}: loss = ${logs.loss.toFixed(4)}`
-              )
-            }
-          })
-        }
-        await this.saveModel()
-        this.log(`  ✓ Checkpoint saved (Epoch ${epoch + 1})`)
-      }
-    } else {
-      await this.model.train(sequences, epochs, async (epoch, logs) => {
-        this.log(
-          `Epoch ${epoch + 1}/${epochs}: loss = ${logs.loss.toFixed(4)}`
-        )
-        await this.saveModel()
-      })
+    if (totalSequences === 0) {
+      this.log('No sequences generated. Skipping.')
+      return
     }
 
     this.log('Training complete!')
@@ -307,6 +1091,13 @@ module.exports = class TrainingManager {
               const inkPath = this.getInkPath(deckRef.inks)
               if (!inkPath) continue // invalid/unknown inks
 
+              // VALIDATION: Lorcana only allows max 2 inks
+              const inkCount = deckRef.inks ? deckRef.inks.length : 0
+              if (inkCount > 2) {
+                skippedDecks++
+                continue // Skip decks with more than 2 inks
+              }
+
               const deckPath = path.join(this.trainingDataPath, 'decks', inkPath, `${deckRef.hash}.json`)
 
               if (fs.existsSync(deckPath)) {
@@ -335,14 +1126,14 @@ module.exports = class TrainingManager {
       const MIN_DECKS_THRESHOLD = 10
       const SYNTHETIC_DECKS_FOR_MISSING = 10
 
-      // Generate all possible ink combinations
+      // All valid Lorcana inks (Amber, Amethyst, Emerald, Ruby, Sapphire, Steel)
       const INKS = ['amber', 'amethyst', 'emerald', 'ruby', 'sapphire', 'steel']
       const allCombinations = []
       // Single ink
       for (const ink of INKS) {
         allCombinations.push([ink])
       }
-      // Two-ink
+      // Two-ink (max 2 inks per Lorcana rules)
       for (let i = 0; i < INKS.length; i++) {
         for (let j = i + 1; j < INKS.length; j++) {
           allCombinations.push([INKS[i], INKS[j]])
@@ -407,6 +1198,68 @@ module.exports = class TrainingManager {
       this.deckHashSet = new Set()
       // We re-add them as we process
     }
+  }
+
+  /**
+   * Load existing trained decks for synergy matrix building
+   * Used during incremental training to include historical patterns
+   * @param {Number} sampleSize - Maximum number of decks to load
+   * @returns {Array} Array of deck objects
+   */
+  async loadExistingDecksForSynergy (sampleSize = 2000) {
+    const decks = []
+    const trainingDataPath = this.trainingDataPath
+    const tournamentsDir = path.join(trainingDataPath, 'tournaments')
+
+    if (!fs.existsSync(tournamentsDir)) {
+      return decks
+    }
+
+    // Sample existing deck hashes
+    const existingHashes = this.trainingState.trainedDeckHashes || []
+    if (existingHashes.length === 0) return decks
+
+    // Random sample
+    const shuffled = existingHashes.sort(() => 0.5 - Math.random())
+    const sampledHashes = shuffled.slice(0, sampleSize)
+
+    // Try to load decks
+    for (const hash of sampledHashes) {
+      // Try all possible ink paths
+      const inks = ['amber', 'amethyst', 'emerald', 'ruby', 'sapphire', 'steel']
+      let loaded = false
+
+      for (const ink of inks) {
+        if (loaded) break
+        const deckPath = path.join(trainingDataPath, 'decks', ink, `${hash}.json`)
+        if (fs.existsSync(deckPath)) {
+          try {
+            const deckContent = JSON.parse(fs.readFileSync(deckPath, 'utf8'))
+            decks.push(deckContent)
+            loaded = true
+          } catch (e) {
+            // Skip invalid files
+          }
+        }
+      }
+
+      // Single ink paths
+      for (const ink of inks) {
+        if (loaded) break
+        const deckPath = path.join(trainingDataPath, 'decks', `${ink}`, `${hash}.json`)
+        if (fs.existsSync(deckPath)) {
+          try {
+            const deckContent = JSON.parse(fs.readFileSync(deckPath, 'utf8'))
+            decks.push(deckContent)
+            loaded = true
+          } catch (e) {
+            // Skip invalid files
+          }
+        }
+      }
+    }
+
+    return decks
   }
 
   getInkPath(inks) {
@@ -848,6 +1701,104 @@ module.exports = class TrainingManager {
       } else {
         return this.generateFakeDeck('pure_random')
       }
+    } else if (strategy === 'excessive_singletons') {
+      // Generate deck with too many singletons (unrealistic)
+      const cardPool = Array.from(this.indexMap.values())
+      const numUniqueCards = Math.floor(Math.random() * 15) + 35 // 35-50 unique cards
+      const selectedCards = []
+      while (selectedCards.length < numUniqueCards) {
+        const randomIdx = cardPool[Math.floor(Math.random() * cardPool.length)]
+        if (!selectedCards.includes(randomIdx)) selectedCards.push(randomIdx)
+      }
+      // Add each card exactly once (all singletons)
+      for (const cardIdx of selectedCards) {
+        deckIndices.push(cardIdx)
+      }
+      // Fill rest with random cards
+      while (deckIndices.length < deckSize) {
+        const randomIdx = cardPool[Math.floor(Math.random() * cardPool.length)]
+        deckIndices.push(randomIdx)
+      }
+    } else if (strategy === 'too_many_actions') {
+      // Generate deck with too many action/item cards (can't play)
+      const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+      const chosenInk = inks[Math.floor(Math.random() * inks.length)]
+      
+      const characterPool = []
+      const actionPool = []
+      for (const [idx, card] of this.indexMap.entries()) {
+        if (card.ink === chosenInk) {
+          const type = card.type || ''
+          if (type === 'Character') {
+            characterPool.push(idx)
+          } else if (type === 'Action' || type === 'Item') {
+            actionPool.push(idx)
+          }
+        }
+      }
+      // Add too many actions (70%+)
+      const targetActions = Math.floor(deckSize * 0.7)
+      for (let i = 0; i < targetActions && i < actionPool.length; i++) {
+        deckIndices.push(actionPool[i % actionPool.length])
+      }
+      while (deckIndices.length < deckSize && characterPool.length > 0) {
+        deckIndices.push(characterPool[Math.floor(Math.random() * characterPool.length)])
+      }
+    } else if (strategy === 'poor_curve') {
+      // Generate deck with terrible mana curve (all high cost)
+      const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+      const chosenInks = []
+      const inkCount = Math.random() < 0.5 ? 1 : 2
+      for (let i = 0; i < inkCount; i++) {
+        const ink = inks[Math.floor(Math.random() * inks.length)]
+        if (!chosenInks.includes(ink)) chosenInks.push(ink)
+      }
+      const cardPool = []
+      for (const [idx, card] of this.indexMap.entries()) {
+        if (chosenInks.includes(card.ink) && card.legality === 'legal') {
+          cardPool.push(idx)
+        }
+      }
+      // Only use expensive cards (cost 6+)
+      const expensiveCards = cardPool.filter(idx => {
+        const card = this.indexMap.get(idx)
+        return card && card.cost >= 6
+      })
+      const cheapCards = cardPool.filter(idx => {
+        const card = this.indexMap.get(idx)
+        return card && card.cost <= 2
+      })
+      
+      // 80% expensive cards (terrible curve)
+      while (deckIndices.length < Math.floor(deckSize * 0.8) && expensiveCards.length > 0) {
+        deckIndices.push(expensiveCards[Math.floor(Math.random() * expensiveCards.length)])
+      }
+      while (deckIndices.length < deckSize && cheapCards.length > 0) {
+        deckIndices.push(cheapCards[Math.floor(Math.random() * cheapCards.length)])
+      }
+    } else if (strategy === 'single_color_extreme') {
+      // Single color but not enough ink (less than 4 copies)
+      const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+      const chosenInk = inks[Math.floor(Math.random() * inks.length)]
+      
+      const cardPool = []
+      for (const [idx, card] of this.indexMap.entries()) {
+        if (card.ink === chosenInk && card.legality === 'legal') {
+          cardPool.push(idx)
+        }
+      }
+      // Only add 1-3 copies of each ink source
+      const inkSources = cardPool.filter(idx => {
+        const card = this.indexMap.get(idx)
+        return card && (card.type === 'Character' || card.inkwell === 1)
+      })
+      
+      for (let i = 0; i < 3 && i < inkSources.length; i++) {
+        deckIndices.push(inkSources[i])
+      }
+      while (deckIndices.length < deckSize && cardPool.length > 0) {
+        deckIndices.push(cardPool[Math.floor(Math.random() * cardPool.length)])
+      }
     }
     return deckIndices.slice(0, deckSize)
   }
@@ -1077,25 +2028,31 @@ module.exports = class TrainingManager {
     return deck.slice(0, 60)
   }
 
-  prepareValidationDataset() {
+  prepareValidationDataset(forceLoadAll = true) {
     this.log('Preparing validation dataset...')
     const features = []
     const labels = []
     let realDeckCount = 0
     const realDeckIndices = []
 
-    // MODIFIED: Iterate this.newDecksToTrain OR load historical decks if needed?
-    // For validation, we need diverse real decks. If newDecksToTrain is small, validation might be weak.
-    // However, loading ALL hashes just for validation is expensive.
-    // We will use newDecksToTrain if available, otherwise validation might be skipped or small.
-    // Ideally we should keep a "validation set" separate, but for now we just use what we have.
-    // If training incrementally, we validate on new data + maybe some baked-in validation set?
-    // Current logic: uses this.trainingData.
-    // We no longer populate this.trainingData with tournament objects.
-    // We populate this.newDecksToTrain.
-
-    // We need to resolve what to use here.
-    const sourceDecks = this.newDecksToTrain
+    // For validator training, we need ALL decks (not just new ones)
+    // This ensures the validator learns from the full historical dataset
+    let sourceDecks = this.newDecksToTrain
+    
+    // If forceLoadAll is true, we should reload all decks for better training
+    if (forceLoadAll && this.trainingState?.trainedDeckHashes?.length > 0) {
+      const existingHashes = new Set(this.trainingState.trainedDeckHashes)
+      
+      // Also include new decks
+      const allDeckHashes = new Set()
+      for (const deck of this.newDecksToTrain) {
+        if (deck.hash) allDeckHashes.add(deck.hash)
+      }
+      
+      // Count unique decks we have
+      const totalAvailable = (this.trainingState.trainedDeckHashes?.length || 0) + this.newDecksToTrain.length
+      this.log(`Using ${totalAvailable} total decks for validator training`)
+    }
 
     for (const deck of sourceDecks) {
       const deckIndices = []
@@ -1139,12 +2096,37 @@ module.exports = class TrainingManager {
 
     this.log(`Generated ${partialDeckCount} partial decks (medium quality)`)
 
+    // IMPORTANT: Shuffle features and labels together to ensure train/val split has both real and fake decks
+    // Create paired array
+    const pairedData = features.map((f, i) => ({ features: f, label: labels[i] }))
+    
+    // Fisher-Yates shuffle
+    for (let i = pairedData.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pairedData[i], pairedData[j]] = [pairedData[j], pairedData[i]]
+    }
+    
+    // Unpair back to separate arrays
+    const shuffledFeatures = pairedData.map(p => p.features)
+    const shuffledLabels = pairedData.map(p => p.label)
+    
+    // Replace original arrays
+    features.length = 0
+    labels.length = 0
+    features.push(...shuffledFeatures)
+    labels.push(...shuffledLabels)
+
+    // Updated fake deck strategies - more diverse negative examples
     const strategyCounts = {
-      pure_random: Math.floor(realDeckCount * 0.25),
-      ink_constrained: Math.floor(realDeckCount * 0.2),
-      rule_broken: Math.floor(realDeckCount * 0.2),
-      low_diversity: Math.floor(realDeckCount * 0.15),
-      imbalanced_splash: Math.floor(realDeckCount * 0.2)
+      pure_random: Math.floor(realDeckCount * 0.15),
+      ink_constrained: Math.floor(realDeckCount * 0.1),
+      rule_broken: Math.floor(realDeckCount * 0.1),
+      low_diversity: Math.floor(realDeckCount * 0.1),
+      imbalanced_splash: Math.floor(realDeckCount * 0.1),
+      excessive_singletons: Math.floor(realDeckCount * 0.15),  // New: too many singletons
+      too_many_actions: Math.floor(realDeckCount * 0.1),      // New: too many uninkable
+      poor_curve: Math.floor(realDeckCount * 0.1),            // New: bad mana curve
+      single_color_extreme: Math.floor(realDeckCount * 0.1)   // New: not enough ink
     }
 
     for (const [strategy, count] of Object.entries(strategyCounts)) {
@@ -1163,5 +2145,19 @@ module.exports = class TrainingManager {
     }
 
     return { features, labels }
+  }
+
+  /**
+   * Fisher-Yates (Knuth) shuffle algorithm - unbiased random shuffle
+   * @param {Array} array - Array to shuffle
+   * @returns {Array} New shuffled array
+   */
+  fisherYatesShuffle (array) {
+    const shuffled = [...array]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    return shuffled
   }
 }

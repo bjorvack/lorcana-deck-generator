@@ -24,6 +24,70 @@ class RLTrainer {
     // Metrics
     this.episodeRewards = []
     this.baseline = 0.5 // Running average of rewards
+
+    // Experience Replay Buffer
+    this.replayBufferSize = options.replayBufferSize || 1000
+    this.replayBuffer = []
+    this.replayRatio = options.replayRatio || 0.3 // 30% of batch from replay
+    this.minRewardForReplay = 0.6 // Only store episodes with reward >= this
+  }
+
+  /**
+   * Add episode to replay buffer
+   * Only stores high-quality episodes for replay
+   */
+  addToReplayBuffer (episode) {
+    // Only store good episodes to improve sample efficiency
+    if (episode.reward >= this.minRewardForReplay) {
+      // Store a copy (not reference) to avoid mutation
+      this.replayBuffer.push({
+        states: episode.states.map(s => [...s]),
+        actions: [...episode.actions],
+        logProbs: [...episode.logProbs],
+        reward: episode.reward
+      })
+
+      // Remove oldest if buffer full
+      if (this.replayBuffer.length > this.replayBufferSize) {
+        this.replayBuffer.shift()
+      }
+    }
+  }
+
+  /**
+   * Sample from replay buffer for training
+   * @param {Number} batchSize - Number of samples to return
+   * @returns {Array} Sample episodes from buffer
+   */
+  sampleFromReplayBuffer (batchSize) {
+    if (this.replayBuffer.length === 0) return []
+
+    const samples = []
+    const numSamples = Math.min(batchSize, this.replayBuffer.length)
+
+    // Random sampling from buffer
+    for (let i = 0; i < numSamples; i++) {
+      const idx = Math.floor(Math.random() * this.replayBuffer.length)
+      samples.push(this.replayBuffer[idx])
+    }
+
+    return samples
+  }
+
+  /**
+   * Get replay buffer statistics
+   */
+  getReplayStats () {
+    if (this.replayBuffer.length === 0) {
+      return { size: 0, avgReward: 0, maxReward: 0 }
+    }
+
+    const rewards = this.replayBuffer.map(e => e.reward)
+    return {
+      size: this.replayBuffer.length,
+      avgReward: rewards.reduce((a, b) => a + b, 0) / rewards.length,
+      maxReward: Math.max(...rewards)
+    }
   }
 
   /**
@@ -40,14 +104,23 @@ class RLTrainer {
 
     const deck = []
     const cardCounts = new Map()
+    const deckKeywords = new Set() // Track keywords for synergy
 
     // Generate deck card by card
     while (deck.length < 60) {
       // Current state
       episode.states.push([...deck])
 
-      // Get action probabilities from policy
-      const probs = await this.policy.predict(deck)
+      // Build context for synergy-aware prediction
+      const context = {
+        synergyMatrix: this.trainingManager.cooccurrenceMatrix,
+        keywords: deckKeywords
+      }
+
+      // Get action probabilities from policy with context for synergy
+      const probs = await this.policy.predictWithContext
+        ? await this.policy.predictWithContext(deck, context)
+        : await this.policy.predict(deck)
 
       // Sample action using policy
       const { action, logProb } = this.sampleActionFromPolicy(probs, deck, cardCounts, inks)
@@ -58,6 +131,14 @@ class RLTrainer {
       // Execute action
       deck.push(action)
       cardCounts.set(action, (cardCounts.get(action) || 0) + 1)
+
+      // Update keyword tracking
+      const cardKeywords = this.trainingManager.cardKeywordsMap.get(action)
+      if (cardKeywords) {
+        for (const kw of cardKeywords) {
+          deckKeywords.add(kw)
+        }
+      }
     }
 
     // Get terminal reward from validator
@@ -70,10 +151,44 @@ class RLTrainer {
     // Calculate Consistency Reward (Bonus for multiple copies)
     const consistencyReward = this.calculateConsistencyReward(deck)
 
+    // Calculate Synergy Rewards
+    const synergyReward = this.calculateSynergyReward(deck)
+    const keywordSynergyReward = this.calculateKeywordSynergyReward(deck)
+
+    // Calculate Ability Combo Reward
+    const abilityComboReward = this.calculateAbilityComboReward(deck)
+
+    // Calculate New Rewards (Structure & Playability)
+    const inkCurveScore = this.calculateInkCurveScore(deck)
+    const cardTypeScore = this.calculateCardTypeScore(deck)
+    const deckSizeScore = this.calculateDeckSizeScore(deck)
+    const minInkScore = this.calculateMinimumInkScore(deck)
+    const singletonPenaltyScore = this.calculateSingletonPenalty(deck)
+    const uninkablePenaltyScore = this.calculateUninkablePenalty(deck)
+
     // Weighted sum:
-    // Validator (Quality & Balance): 80% - Let the learned model decide what is "good"
-    // Consistency (Structure): 20%
-    episode.reward = (validatorReward * 0.8) + (consistencyReward * 0.2)
+    // Validator (Quality & Balance): 35% - Let the learned model decide what is "good"
+    // Consistency (Structure): 8% - Reward playing multiple copies
+    // Card Synergy: 10% - Reward cards that commonly appear together
+    // Keyword Synergy: 7% - Reward complementary keywords
+    // Ability Combo: 7% - Reward completing ability combos
+    // Ink Curve: 7% - Reward balanced ink costs
+    // Card Type: 7% - Reward proper character/action/item distribution
+    // Deck Size: 4% - Reward exactly 60 cards
+    // Minimum Ink: 5% - Reward having 4+ copies of each ink
+    // Singleton Penalty: 5% - Penalize excessive singletons
+    // Uninkable Penalty: 5% - Penalize excessive uninkable cards
+    episode.reward = (validatorReward * 0.35) + 
+                     (consistencyReward * 0.08) + 
+                     (synergyReward * 0.10) + 
+                     (keywordSynergyReward * 0.07) + 
+                     (abilityComboReward * 0.07) +
+                     (inkCurveScore * 0.07) +
+                     (cardTypeScore * 0.07) +
+                     (deckSizeScore * 0.04) +
+                     (minInkScore * 0.05) +
+                     (singletonPenaltyScore * 0.05) +
+                     (uninkablePenaltyScore * 0.05)
 
     return episode
   }
@@ -102,6 +217,317 @@ class RLTrainer {
 
     // Boost the signal slightly to make it comparable to validator score
     return Math.min(1.0, repetitionRatio * 1.3)
+  }
+
+  /**
+   * Calculate synergy reward based on learned co-occurrence patterns
+   * Uses the training manager's co-occurrence matrix to score card synergies
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Synergy score (0-1)
+   */
+  calculateSynergyReward (deck) {
+    if (deck.length < 2) return 0
+
+    // Use the training manager's synergy methods
+    const synergyScore = this.trainingManager.calculateDeckSynergy(deck)
+    return synergyScore
+  }
+
+  /**
+   * Calculate keyword synergy reward
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Keyword synergy score (0-1)
+   */
+  calculateKeywordSynergyReward (deck) {
+    if (deck.length < 2) return 0
+
+    // Collect all keywords from deck
+    const deckKeywords = new Set()
+    for (const cardId of deck) {
+      const cardKeywords = this.trainingManager.cardKeywordsMap.get(cardId)
+      if (cardKeywords) {
+        for (const kw of cardKeywords) {
+          deckKeywords.add(kw)
+        }
+      }
+    }
+
+    if (deckKeywords.size < 2) return 0
+
+    // Calculate pairwise keyword synergies
+    let totalSynergy = 0
+    let count = 0
+    const kwArray = Array.from(deckKeywords)
+
+    for (let i = 0; i < Math.min(kwArray.length, 10); i++) {
+      for (let j = i + 1; j < Math.min(kwArray.length, 10); j++) {
+        const synergies = this.trainingManager.keywordSynergyMatrix.get(kwArray[i])
+        if (synergies) {
+          const score = synergies.get(kwArray[j])
+          if (score) {
+            totalSynergy += score
+            count++
+          }
+        }
+      }
+    }
+
+    return count > 0 ? Math.min(1, totalSynergy / count * 5) : 0
+  }
+
+  /**
+   * Calculate ability combo reward
+   * Rewards having complete ability combos (e.g., multiple singers)
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Combo reward (0-1)
+   */
+  calculateAbilityComboReward (deck) {
+    return this.trainingManager.calculateAbilityComboScore(deck)
+  }
+
+  /**
+   * Calculate ink curve score
+   * Rewards balanced ink costs (1-2-3-4 curve)
+   * Lorcana decks should have playable curves
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Curve score (0-1)
+   */
+  calculateInkCurveScore (deck) {
+    if (deck.length === 0) return 0
+
+    const inkCostCounts = {}
+    let totalCards = 0
+
+    for (const idx of deck) {
+      const card = this.trainingManager.indexMap.get(idx)
+      if (!card) continue
+
+      const cost = card.cost || card.inkwell || 0
+      inkCostCounts[cost] = (inkCostCounts[cost] || 0) + 1
+      totalCards++
+    }
+
+    if (totalCards === 0) return 0
+
+    // Ideal curve for Lorcana: 1-2 cost heavy, tapering 3-4, minimal 5+
+    // Target distribution: ~25% 1-cost, ~30% 2-cost, ~25% 3-cost, ~15% 4-cost, ~5% 5+
+    const idealDistribution = { 1: 0.25, 2: 0.30, 3: 0.25, 4: 0.15, 5: 0.05 }
+    
+    let score = 0
+    let totalWeight = 0
+
+    for (let cost = 1; cost <= 5; cost++) {
+      const actual = (inkCostCounts[cost] || 0) / totalCards
+      const ideal = idealDistribution[cost] || 0.01
+      const diff = Math.abs(actual - ideal)
+      
+      // Closer to ideal = higher score
+      const costScore = Math.max(0, 1 - diff * 4)
+      score += costScore * ideal
+      totalWeight += ideal
+    }
+
+    // Bonus for having playable cards (1-4 cost should be ~95% of deck)
+    const playableRatio = ((inkCostCounts[1] || 0) + (inkCostCounts[2] || 0) + 
+                           (inkCostCounts[3] || 0) + (inkCostCounts[4] || 0)) / totalCards
+    const playableBonus = Math.min(playableRatio, 0.2) // Up to 0.2 bonus
+
+    return Math.min(1, (score / totalWeight) * 0.8 + playableBonus)
+  }
+
+  /**
+   * Calculate card type distribution score
+   * Rewards proper character/action/item ratios
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Type distribution score (0-1)
+   */
+  calculateCardTypeScore (deck) {
+    if (deck.length === 0) return 0
+
+    const typeCounts = { Character: 0, Action: 0, Item: 0, Location: 0 }
+    let totalCards = 0
+
+    for (const idx of deck) {
+      const card = this.trainingManager.indexMap.get(idx)
+      if (!card) continue
+
+      const type = card.type || card.cardType || 'Unknown'
+      if (typeCounts[type] !== undefined) {
+        typeCounts[type]++
+      }
+      totalCards++
+    }
+
+    if (totalCards === 0) return 0
+
+    // Ideal distribution for Lorcana:
+    // Characters: ~65% (40 cards) - need characters to win
+    // Actions: ~25% (15 cards) - actions provide value
+    // Items: ~8% (5 cards) - items are powerful but limited
+    // Locations: ~2% (optional)
+    const idealDistribution = { Character: 0.65, Action: 0.25, Item: 0.08, Location: 0.02 }
+
+    let score = 0
+    for (const [type, ideal] of Object.entries(idealDistribution)) {
+      const actual = typeCounts[type] / totalCards
+      const diff = Math.abs(actual - ideal)
+      // Max score if matches ideal, decreases as it deviates
+      score += Math.max(0, 1 - diff * 3)
+    }
+
+    // Also check minimum character count (need at least ~30 to be playable)
+    const minCharacterRatio = 0.4
+    const characterRatio = typeCounts.Character / totalCards
+    if (characterRatio < minCharacterRatio) {
+      score *= 0.5 // Heavy penalty for too few characters
+    }
+
+    return Math.min(1, score / 4) // Normalize to 0-1
+  }
+
+  /**
+   * Calculate deck size score
+   * Rewards having exactly 60 cards
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Size score (0-1)
+   */
+  calculateDeckSizeScore (deck) {
+    const targetSize = 60
+    const deckSize = deck.length
+
+    if (deckSize === targetSize) return 1.0
+    if (deckSize < targetSize) return deckSize / targetSize
+    // Penalty for oversized decks
+    return Math.max(0, 1 - (deckSize - targetSize) * 0.1)
+  }
+
+  /**
+   * Calculate minimum ink count score
+   * Ensures deck has at least 4 copies of each ink color
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Minimum ink score (0-1)
+   */
+  calculateMinimumInkScore (deck) {
+    const inkCounts = {}
+    let hasInk = false
+
+    for (const idx of deck) {
+      const card = this.trainingManager.indexMap.get(idx)
+      if (!card) continue
+
+      const cardInks = card.inks || (card.ink ? [card.ink] : [])
+      for (const ink of cardInks) {
+        inkCounts[ink] = (inkCounts[ink] || 0) + 1
+        hasInk = true
+      }
+    }
+
+    if (!hasInk) return 0
+
+    // Check each ink has at least 4 copies
+    let minInksWith4 = 0
+    let totalInks = 0
+
+    for (const ink of Object.keys(inkCounts)) {
+      totalInks++
+      if (inkCounts[ink] >= 4) {
+        minInksWith4++
+      }
+    }
+
+    // If using 1 ink: need at least 4 of that ink
+    // If using 2 inks: need at least 4 of each ink
+    // Score based on how many inks meet the threshold
+    return totalInks > 0 ? minInksWith4 / totalInks : 0
+  }
+
+  /**
+   * Calculate singleton penalty score
+   * Penalizes decks with too many singleton cards (only 1 copy)
+   * Real Lorcana decks typically have 15-25 unique cards
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Singleton score (0-1, higher is better)
+   */
+  calculateSingletonPenalty (deck) {
+    if (deck.length === 0) return 0
+
+    // Count unique cards and their copies
+    const cardCounts = new Map()
+    for (const idx of deck) {
+      cardCounts.set(idx, (cardCounts.get(idx) || 0) + 1)
+    }
+
+    // Count singletons (cards with only 1 copy)
+    let singletonCount = 0
+    let uniqueCardCount = cardCounts.size
+
+    for (const [, count] of cardCounts) {
+      if (count === 1) {
+        singletonCount++
+      }
+    }
+
+    if (uniqueCardCount === 0) return 0
+
+    const singletonRatio = singletonCount / uniqueCardCount
+
+    // Ideal: 15-25% singletons (some flex cards)
+    // Penalize heavily if >35% singletons
+    // Penalize moderately if 25-35% singletons
+    
+    if (singletonRatio <= 0.25) {
+      return 1.0 // Good: few singletons
+    } else if (singletonRatio <= 0.35) {
+      return 0.6 // Moderate penalty
+    } else if (singletonRatio <= 0.5) {
+      return 0.3 // Heavy penalty
+    } else {
+      return 0.0 // Fail: too many singletons
+    }
+  }
+
+  /**
+   * Calculate uninkable penalty score
+   * Penalizes decks with too many uninkable (action/item) cards
+   * Real Lorcana decks need ink to play cards
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Uninkable score (0-1, higher is better)
+   */
+  calculateUninkablePenalty (deck) {
+    if (deck.length === 0) return 0
+
+    let uninkableCount = 0
+
+    for (const idx of deck) {
+      const card = this.trainingManager.indexMap.get(idx)
+      if (!card) continue
+
+      // Check if card is uninkable (actions and items are typically uninkable)
+      const type = card.type || card.cardType || ''
+      const isUninkable = type === 'Action' || type === 'Item' || type === 'Location'
+      
+      // Some characters might also be uninkable if they have certain abilities
+      if (!card.ink && !card.inks) {
+        uninkableCount++
+      } else if (isUninkable) {
+        uninkableCount++
+      }
+    }
+
+    const uninkableRatio = uninkableCount / deck.length
+
+    // Ideal: ~20-30% uninkable cards (actions + items)
+    // Penalize if >40% uninkable
+    
+    if (uninkableRatio <= 0.25) {
+      return 1.0 // Good
+    } else if (uninkableRatio <= 0.35) {
+      return 0.7 // Minor penalty
+    } else if (uninkableRatio <= 0.45) {
+      return 0.4 // Moderate penalty
+    } else {
+      return 0.1 // Heavy penalty
+    }
   }
 
   /**
@@ -182,16 +608,18 @@ class RLTrainer {
   }
 
   /**
-     * Compute returns for an episode
-     * Can use discounting or just terminal reward
+     * Compute returns for an episode using reward-to-go
+     * Each step receives the discounted sum of future rewards only
      */
   computeReturns (episode) {
     const returns = []
+    let discountedReturn = 0
 
-    // Simple version: all steps get same terminal reward
-    // (Deck quality is only known at end)
-    for (let t = 0; t < episode.logProbs.length; t++) {
-      returns.push(episode.reward)
+    // Use reward-to-go: each step gets the discounted sum of rewards from that point forward
+    // This provides better credit assignment than giving all steps the same reward
+    for (let t = episode.logProbs.length - 1; t >= 0; t--) {
+      discountedReturn = episode.reward * Math.pow(this.gamma, episode.logProbs.length - 1 - t) + discountedReturn
+      returns.unshift(discountedReturn)
     }
 
     return returns
@@ -208,9 +636,25 @@ class RLTrainer {
     for (let i = 0; i < this.batchSize; i++) {
       const episode = await this.collectEpisode(inks)
       episodes.push(episode)
+
+      // Add to replay buffer
+      this.addToReplayBuffer(episode)
+
       process.stdout.write(`\r  Episode ${i + 1}/${this.batchSize}: reward = ${episode.reward.toFixed(3)}`)
     }
     console.log('') // Newline
+
+    // Mix in replay samples if available
+    let allEpisodes = episodes
+    if (this.replayBuffer.length > 0) {
+      const replaySamples = this.sampleFromReplayBuffer(
+        Math.floor(this.batchSize * this.replayRatio)
+      )
+      if (replaySamples.length > 0) {
+        allEpisodes = [...episodes, ...replaySamples]
+        console.log(`[RL] Replay buffer: ${this.replayBuffer.length} episodes (using ${replaySamples.length} in this batch)`)
+      }
+    }
 
     // Compute statistics
     const rewards = episodes.map(ep => ep.reward)
@@ -224,12 +668,15 @@ class RLTrainer {
       this.baseline = this.baseline * 0.9 + avgReward * 0.1 // EMA
     }
 
-    // Compute policy gradient and update
-    const lossValue = await this.updatePolicy(episodes)
+    // Compute policy gradient and update (use all episodes for training)
+    const lossValue = await this.updatePolicy(allEpisodes)
 
     // Track metrics
     this.episodeRewards.push(avgReward)
 
+    // Print replay stats
+    const replayStats = this.getReplayStats()
+    console.log(`[RL] Replay: ${replayStats.size} episodes, avg reward: ${replayStats.avgReward.toFixed(3)}`)
     console.log(`[RL] Avg Reward: ${avgReward.toFixed(4)} ± ${stdReward.toFixed(4)}`)
     console.log(`[RL] Baseline: ${this.baseline.toFixed(4)}`)
     console.log(`[RL] Loss: ${lossValue.toFixed(4)}`)
@@ -238,7 +685,8 @@ class RLTrainer {
       avgReward,
       stdReward,
       baseline: this.baseline,
-      loss: lossValue
+      loss: lossValue,
+      replayStats
     }
   }
 

@@ -104,19 +104,43 @@ module.exports = class ValidationModel {
     console.log(`Training on ${labels.length} decks...`)
     console.log('Architecture: 256 → 128 → 64 → 32 → 1')
     console.log('Learning rate: 0.003 (3x increased)')
-    console.log('Regularization: L2=0.001, Dropout=0.3\n')
+    console.log('Regularization: L2=0.001, Dropout=0.3')
+    console.log('Target: 90% of real decks validated as valid\n')
 
     const featuresTensor = tf.tensor2d(features)
     const labelsTensor = tf.tensor2d(labels.map(l => [l]))
 
     // Split train/val
     const splitIdx = Math.floor(labels.length * 0.8)
+    
+    const valFeatures = features.slice(splitIdx)
+    const valLabels = labels.slice(splitIdx)
 
     // Learning rate scheduler: reduce LR when validation loss plateaus
     let bestValLoss = Infinity
     let patienceCounter = 0
     const patience = 5
     let currentLR = 0.003
+    let targetAchieved = false
+
+    // Calculate real deck validation rate (percentage of real decks predicted as valid)
+    const calculateRealDeckAccuracy = (predictions, labels) => {
+      let realDecksCorrect = 0
+      let totalRealDecks = 0
+      
+      for (let i = 0; i < labels.length; i++) {
+        // Real decks have label > 0
+        if (labels[i] > 0) {
+          totalRealDecks++
+          // Consider valid if predicted score >= 0.8 (stricter threshold)
+          if (predictions[i] >= 0.8) {
+            realDecksCorrect++
+          }
+        }
+      }
+      
+      return totalRealDecks > 0 ? (realDecksCorrect / totalRealDecks) : 0
+    }
 
     const history = await this.model.fit(
       featuresTensor.slice([0, 0], [splitIdx, features[0].length]),
@@ -130,14 +154,39 @@ module.exports = class ValidationModel {
         ],
         callbacks: {
           onEpochEnd: async (epoch, logs) => {
+            // Get predictions on validation set
+            const valPredTensor = this.model.predict(
+              tf.tensor2d(valFeatures)
+            )
+            const valPreds = await valPredTensor.data()
+            valPredTensor.dispose()
+            
+            // Calculate real deck validation rate
+            const realDeckAccuracy = calculateRealDeckAccuracy(valPreds, valLabels)
+            const fakeDeckAccuracy = calculateRealDeckAccuracy(
+              valPreds.map(p => 1 - p), 
+              valLabels.map(l => l === 0 ? 1 : 0)
+            )
+            
             // Format metrics nicely
             const metrics = [
-                            `loss=${logs.loss.toFixed(4)}`,
-                            `acc=${(logs.acc * 100).toFixed(1)}%`,
-                            `val_loss=${logs.val_loss.toFixed(4)}`,
-                            `val_acc=${(logs.val_acc * 100).toFixed(1)}%`
+              `loss=${logs.loss.toFixed(4)}`,
+              `acc=${(logs.acc * 100).toFixed(1)}%`,
+              `real_decks=${(realDeckAccuracy * 100).toFixed(1)}%`,
+              `val_loss=${logs.val_loss.toFixed(4)}`
             ]
             console.log(`Epoch ${epoch + 1}/${epochs}: ${metrics.join(', ')}`)
+
+            // Check if 90% of real decks are validated as valid
+            if (realDeckAccuracy >= 0.90) {
+              console.log(`   ✓ Target achieved: ${(realDeckAccuracy * 100).toFixed(1)}% of real decks validated (target: 90%)`)
+              targetAchieved = true
+              // Don't stop immediately - try to improve further
+              if (realDeckAccuracy >= 0.95) {
+                console.log(`   ✓ Excellent: ${(realDeckAccuracy * 100).toFixed(1)}% - stopping`)
+                this.model.stopTraining = true
+              }
+            }
 
             // Learning rate scheduling
             if (logs.val_loss < bestValLoss) {
@@ -153,12 +202,6 @@ module.exports = class ValidationModel {
                 patienceCounter = 0
               }
             }
-
-            // Early stopping if accuracy is very high
-            if (logs.val_acc >= 0.95 && logs.val_loss < 0.2) {
-              console.log(`   ✓ Early stopping: validation accuracy ${(logs.val_acc * 100).toFixed(1)}% achieved!`)
-              this.model.stopTraining = true
-            }
           }
         }
       }
@@ -167,10 +210,39 @@ module.exports = class ValidationModel {
     featuresTensor.dispose()
     labelsTensor.dispose()
 
-    console.log('\n✅ Training complete!')
-    console.log(`Final metrics: loss=${history.history.loss[history.history.loss.length - 1].toFixed(4)}, ` +
-            `val_loss=${history.history.val_loss[history.history.val_loss.length - 1].toFixed(4)}, ` +
-            `val_acc=${(history.history.val_acc[history.history.val_acc.length - 1] * 100).toFixed(1)}%`)
+    // Calculate final metrics on validation set
+    const valPredTensor = this.model.predict(tf.tensor2d(valFeatures))
+    const valPreds = await valPredTensor.data()
+    valPredTensor.dispose()
+
+    const finalRealDeckRate = calculateRealDeckAccuracy(valPreds, valLabels)
+    const finalFakeDeckRate = calculateRealDeckAccuracy(
+      valPreds.map(p => 1 - p),
+      valLabels.map(l => l === 0 ? 1 : 0)
+    )
+    const finalAcc = history.history.val_acc[history.history.val_acc.length - 1]
+
+    console.log('\n' + '='.repeat(50))
+    console.log('📊 VALIDATOR TRAINING OVERVIEW')
+    console.log('='.repeat(50))
+    console.log(`Total training samples: ${labels.length}`)
+    console.log(`  - Real decks: ${valLabels.filter(l => l > 0).length}`)
+    console.log(`  - Fake decks: ${valLabels.filter(l => l === 0).length}`)
+    console.log('')
+    console.log(`Final Results (validation set):`)
+    console.log(`  - Real decks validated (>= 0.8): ${(finalRealDeckRate * 100).toFixed(1)}%`)
+    console.log(`  - Fake decks rejected (< 0.8): ${(finalFakeDeckRate * 100).toFixed(1)}%`)
+    console.log(`  - Overall accuracy: ${(finalAcc * 100).toFixed(1)}%`)
+    console.log('')
+    
+    if (finalRealDeckRate >= 0.90) {
+      console.log('✅ Target achieved: 90% of real decks validated!')
+    } else {
+      console.log(`⚠️ Target not met: ${(finalRealDeckRate * 100).toFixed(1)}% (target: 90%)`)
+      console.log('   Consider training for more epochs.')
+    }
+    console.log('='.repeat(50))
+    
     return history
   }
 
@@ -186,26 +258,89 @@ module.exports = class ValidationModel {
     }
 
     // Check for ink balance if requestedInks provided
-    if (requestedInks.length === 2) {
-      // We need to reconstruct ink counts from features or pass raw deck
-      // Since features are aggregated, we can't easily get exact ink counts here without changing input
-      // However, we can check if the model predicts it as "bad" based on training data
-      // But for immediate rule-based penalty (since we can't easily retrain model right now with ink features):
-      
-      // NOTE: Ideally, we should pass the raw deck to evaluate() or add ink ratios to features.
-      // Assuming we can't change feature structure easily, we rely on the neural network
-      // to have learned that "imbalanced" decks are bad (via training data).
-      
-      // But we can add a heuristic penalty if we had access to ink counts.
+    // Ink counts are at positions 13-18 (after cost: 0-9, types: 10-12)
+    const inkFeatureStart = 13
+    const inkNames = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+    const inkCounts = {}
+    for (let i = 0; i < 6; i++) {
+      inkCounts[inkNames[i]] = features[inkFeatureStart + i]
+    }
+
+    // Get singleton ratio (feature index 1)
+    const singletonRatio = features[1]
+    
+    // Get uninkable ratio (feature index 26)
+    const uninkableRatio = features[26] || 0
+
+    if (requestedInks && requestedInks.length > 0) {
+      const totalCards = features.reduce((sum, f) => sum + f, 0) // Approximate total
+      const inkableCards = features[12] // inkable ratio
+      const totalInkable = Math.round(inkableCards * 60)
+
+      // RULE: Check singleton ratio - too many singletons is unrealistic
+      if (singletonRatio > 0.35) {
+        console.log(`[RULE] Excessive singletons: ${Math.round(singletonRatio * 100)}% - returning 0.0`)
+        return 0.0 // Too many singletons = unrealistic deck
+      }
+
+      // RULE: Check uninkable ratio - too many uninkable cards
+      if (uninkableRatio > 0.4) {
+        console.log(`[RULE] Excessive uninkable cards: ${Math.round(uninkableRatio * 100)}% - returning 0.0`)
+        return 0.0 // Can't play the deck
+      }
+
+      // Check that at least 3 cards can produce each ink
+      const minCardsPerInk = 3
+      for (const requestedInk of requestedInks) {
+        const inkCount = inkCounts[requestedInk] || 0
+        if (inkCount * 60 < minCardsPerInk) {
+          console.log(`[RULE] Insufficient ${requestedInk} ink: ${Math.round(inkCount * 60)} cards - applying penalty`)
+          // Return neural network score but with significant penalty
+          const featuresTensor = tf.tensor2d([features])
+          const prediction = this.model.predict(featuresTensor)
+          const score = (await prediction.data())[0]
+          featuresTensor.dispose()
+          prediction.dispose()
+          return Math.max(0, score - 0.3) // Penalize by 30%
+        }
+      }
+
+      // For dual-ink decks, check for reasonable balance (not too lopsided)
+      if (requestedInks.length === 2) {
+        const ink1Count = inkCounts[requestedInks[0]] || 0
+        const ink2Count = inkCounts[requestedInks[1]] || 0
+        const ratio = Math.min(ink1Count, ink2Count) / Math.max(ink1Count, ink2Count + 0.001)
+
+        // If one ink is more than 4x the other, it's likely imbalanced
+        if (ratio < 0.25 && ink1Count > 0.1 && ink2Count > 0.1) {
+          console.log(`[RULE] Imbalanced dual-ink detected: ratio ${ratio.toFixed(2)} - applying penalty`)
+          const featuresTensor = tf.tensor2d([features])
+          const prediction = this.model.predict(featuresTensor)
+          const score = (await prediction.data())[0]
+          featuresTensor.dispose()
+          prediction.dispose()
+          return Math.max(0, score - 0.2) // Penalize by 20%
+        }
+      }
     }
 
     // Otherwise, use neural network prediction
     const featuresTensor = tf.tensor2d([features])
     const prediction = this.model.predict(featuresTensor)
-    const score = await prediction.data()
+    const score = (await prediction.data())[0]
     featuresTensor.dispose()
     prediction.dispose()
-    return score[0]
+    
+    // Apply penalties for moderate singleton/uninkable issues (soft rules)
+    let finalScore = score
+    if (singletonRatio > 0.25) {
+      finalScore = Math.max(0, finalScore - 0.15) // 15% penalty for 25-35% singletons
+    }
+    if (uninkableRatio > 0.25) {
+      finalScore = Math.max(0, finalScore - 0.15) // 15% penalty for 25-40% uninkable
+    }
+    
+    return finalScore
   }
 
   async evaluateWithBreakdown (features, requestedInks = []) {

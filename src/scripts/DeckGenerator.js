@@ -160,7 +160,10 @@ export default class DeckGenerator {
     if (cardsOfInk.length === 0) {
       return []
     }
-    do {
+
+    // Use a for loop with explicit iteration limit to prevent infinite loops
+    const maxIterations = 100
+    for (let iteration = 0; iteration < maxIterations; iteration++) {
       const chosenCard = this.pickRandomCard(
         cardsOfInk,
         deck,
@@ -168,7 +171,17 @@ export default class DeckGenerator {
         triesRemaining
       )
       deck.push(chosenCard)
-    } while (!this.isDeckValid(deck))
+
+      if (this.isDeckValid(deck)) {
+        break // Exit loop once deck is valid
+      }
+    }
+
+    // If still not valid after max iterations, return empty to signal failure
+    if (!this.isDeckValid(deck)) {
+      console.warn('Failed to generate valid deck after max iterations')
+      return []
+    }
 
     if (triesRemaining >= 0) {
       triesRemaining--
@@ -230,7 +243,6 @@ export default class DeckGenerator {
     })
 
     const legalCardsOfCost = cardsOfCost.filter((card) => {
-      console.log(card)
       return card.legality === 'legal'
     })
 
@@ -279,7 +291,7 @@ export default class DeckGenerator {
 
   validateAndRetry (deck, deckType, triesRemaining) {
     let deckLength = deck.length
-    let previousDeckLength = (deckLength = null)
+    let previousDeckLength = null
     do {
       console.log('Removing cards without requirements')
       previousDeckLength = deckLength

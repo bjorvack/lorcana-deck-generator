@@ -181,6 +181,94 @@ module.exports = class DeckModel {
     return probabilities
   }
 
+  /**
+   * Predict next card with enhanced context for synergy awareness
+   * This allows the model to learn card synergies based on current deck state
+   * @param {Array} cardIndices - Current deck card indices
+   * @param {Object} context - Additional context: { keywords: Set, inkCounts: Object, costCurve: Array }
+   * @returns {Float32Array} Probability distribution over cards
+   */
+  async predictWithContext (cardIndices, context = {}) {
+    if (!this.model) return null
+
+    const startIdx = Math.max(0, this.maxLen - cardIndices.length)
+
+    // Pad Sequence
+    const paddedSeq = new Array(this.maxLen).fill(0)
+    for (let j = 0; j < Math.min(cardIndices.length, this.maxLen); j++) {
+      paddedSeq[startIdx + j] = cardIndices[j]
+    }
+
+    const inputTensor = tf.tensor2d([paddedSeq], [1, this.maxLen], 'int32')
+    const prediction = this.model.predict(inputTensor)
+    let probabilities = await prediction.data()
+
+    // Apply context-aware adjustments if synergy matrices available
+    if (context.synergyMatrix && cardIndices.length > 0) {
+      probabilities = this.applySynergyBoost(probabilities, cardIndices, context)
+    }
+
+    inputTensor.dispose()
+    prediction.dispose()
+
+    return probabilities
+  }
+
+  /**
+   * Apply synergy-based boost to card probabilities
+   * @param {Float32Array} probs - Original probabilities
+   * @param {Array} currentDeck - Current deck card indices
+   * @param {Object} context - Context with synergy data
+   * @returns {Float32Array} Adjusted probabilities
+   */
+  applySynergyBoost (probs, currentDeck, context) {
+    const adjusted = new Float32Array(probs.length)
+
+    for (let i = 0; i < probs.length; i++) {
+      if (probs[i] === 0) {
+        adjusted[i] = 0
+        continue
+      }
+
+      let synergyBoost = 1.0
+
+      // Boost cards that synergize with current deck
+      if (context.synergyMatrix) {
+        let totalSynergy = 0
+        let count = 0
+
+        for (const deckCardId of currentDeck) {
+          const cardSynergies = context.synergyMatrix.get(deckCardId)
+          if (cardSynergies) {
+            const synergy = cardSynergies.get(i)
+            if (synergy) {
+              totalSynergy += synergy
+              count++
+            }
+          }
+        }
+
+        if (count > 0) {
+          // Boost by up to 50% based on synergy
+          const avgSynergy = totalSynergy / count
+          synergyBoost = 1.0 + (avgSynergy * 0.5)
+        }
+      }
+
+      adjusted[i] = probs[i] * synergyBoost
+    }
+
+    // Renormalize
+    const sum = adjusted.reduce((a, b) => a + b, 0)
+    if (sum > 0) {
+      for (let i = 0; i < adjusted.length; i++) {
+        adjusted[i] /= sum
+      }
+    }
+
+    return adjusted
+  }
+
   async saveModel (path) {
     if (!this.model) return
     // Ensure path starts with file://
@@ -196,10 +284,18 @@ module.exports = class DeckModel {
       path = `file://${path}`
     }
     this.model = await tf.loadLayersModel(path)
-    // Recompile model after loading to ensure it's ready for training/prediction
+
+    // Infer vocabSize from output shape (needed for predictions)
+    if (this.model.outputs && this.model.outputs.length > 0) {
+      // Output shape is [null, vocabSize]
+      this.vocabSize = this.model.outputs[0].shape[1]
+    }
+
+    // Recompile model after loading - use categoricalCrossentropy to match training
+    // (Note: This is for inference. For RL training with integer labels, use sparseCategoricalCrossentropy)
     this.model.compile({
       optimizer: 'adam',
-      loss: 'sparseCategoricalCrossentropy',
+      loss: 'categoricalCrossentropy',
       metrics: ['accuracy']
     })
 
@@ -297,10 +393,27 @@ module.exports = class DeckModel {
     }
 
     const inputTensor = tf.tensor2d([paddedSeq], [1, this.maxLen], 'int32')
-    const prediction = this.model.predict(inputTensor)
 
-    inputTensor.dispose()
+    // Use predict with explicit training=true to ensure gradient tracking
+    const prediction = this.model.predict(inputTensor, { training: true })
 
-    return prediction // Return tensor for gradient computation
+    // Note: Caller is responsible for disposing the returned prediction tensor
+    // Store inputTensor on prediction for later cleanup by caller
+    prediction.inputTensor = inputTensor
+
+    return prediction
+  }
+
+  /**
+   * Dispose tensors from predictWithGradient
+   * @param {Tensor} prediction - Prediction tensor from predictWithGradient
+   */
+  disposePrediction (prediction) {
+    if (prediction) {
+      if (prediction.inputTensor) {
+        prediction.inputTensor.dispose()
+      }
+      prediction.dispose()
+    }
   }
 }
