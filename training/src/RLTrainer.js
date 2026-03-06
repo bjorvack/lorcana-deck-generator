@@ -158,13 +158,31 @@ class RLTrainer {
     // Calculate Ability Combo Reward
     const abilityComboReward = this.calculateAbilityComboReward(deck)
 
+    // Calculate New Rewards (Structure & Playability)
+    const inkCurveScore = this.calculateInkCurveScore(deck)
+    const cardTypeScore = this.calculateCardTypeScore(deck)
+    const deckSizeScore = this.calculateDeckSizeScore(deck)
+    const minInkScore = this.calculateMinimumInkScore(deck)
+
     // Weighted sum:
-    // Validator (Quality & Balance): 55% - Let the learned model decide what is "good"
-    // Consistency (Structure): 10% - Reward playing multiple copies
-    // Card Synergy: 15% - Reward cards that commonly appear together
-    // Keyword Synergy: 10% - Reward complementary keywords
-    // Ability Combo: 10% - Reward completing ability combos
-    episode.reward = (validatorReward * 0.55) + (consistencyReward * 0.1) + (synergyReward * 0.15) + (keywordSynergyReward * 0.1) + (abilityComboReward * 0.1)
+    // Validator (Quality & Balance): 40% - Let the learned model decide what is "good"
+    // Consistency (Structure): 8% - Reward playing multiple copies
+    // Card Synergy: 12% - Reward cards that commonly appear together
+    // Keyword Synergy: 8% - Reward complementary keywords
+    // Ability Combo: 8% - Reward completing ability combos
+    // Ink Curve: 8% - Reward balanced ink costs
+    // Card Type: 8% - Reward proper character/action/item distribution
+    // Deck Size: 4% - Reward exactly 60 cards
+    // Minimum Ink: 4% - Reward having 4+ copies of each ink
+    episode.reward = (validatorReward * 0.40) + 
+                     (consistencyReward * 0.08) + 
+                     (synergyReward * 0.12) + 
+                     (keywordSynergyReward * 0.08) + 
+                     (abilityComboReward * 0.08) +
+                     (inkCurveScore * 0.08) +
+                     (cardTypeScore * 0.08) +
+                     (deckSizeScore * 0.04) +
+                     (minInkScore * 0.04)
 
     return episode
   }
@@ -259,6 +277,162 @@ class RLTrainer {
    */
   calculateAbilityComboReward (deck) {
     return this.trainingManager.calculateAbilityComboScore(deck)
+  }
+
+  /**
+   * Calculate ink curve score
+   * Rewards balanced ink costs (1-2-3-4 curve)
+   * Lorcana decks should have playable curves
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Curve score (0-1)
+   */
+  calculateInkCurveScore (deck) {
+    if (deck.length === 0) return 0
+
+    const inkCostCounts = {}
+    let totalCards = 0
+
+    for (const idx of deck) {
+      const card = this.trainingManager.indexMap.get(idx)
+      if (!card) continue
+
+      const cost = card.cost || card.inkwell || 0
+      inkCostCounts[cost] = (inkCostCounts[cost] || 0) + 1
+      totalCards++
+    }
+
+    if (totalCards === 0) return 0
+
+    // Ideal curve for Lorcana: 1-2 cost heavy, tapering 3-4, minimal 5+
+    // Target distribution: ~25% 1-cost, ~30% 2-cost, ~25% 3-cost, ~15% 4-cost, ~5% 5+
+    const idealDistribution = { 1: 0.25, 2: 0.30, 3: 0.25, 4: 0.15, 5: 0.05 }
+    
+    let score = 0
+    let totalWeight = 0
+
+    for (let cost = 1; cost <= 5; cost++) {
+      const actual = (inkCostCounts[cost] || 0) / totalCards
+      const ideal = idealDistribution[cost] || 0.01
+      const diff = Math.abs(actual - ideal)
+      
+      // Closer to ideal = higher score
+      const costScore = Math.max(0, 1 - diff * 4)
+      score += costScore * ideal
+      totalWeight += ideal
+    }
+
+    // Bonus for having playable cards (1-4 cost should be ~95% of deck)
+    const playableRatio = ((inkCostCounts[1] || 0) + (inkCostCounts[2] || 0) + 
+                           (inkCostCounts[3] || 0) + (inkCostCounts[4] || 0)) / totalCards
+    const playableBonus = Math.min(playableRatio, 0.2) // Up to 0.2 bonus
+
+    return Math.min(1, (score / totalWeight) * 0.8 + playableBonus)
+  }
+
+  /**
+   * Calculate card type distribution score
+   * Rewards proper character/action/item ratios
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Type distribution score (0-1)
+   */
+  calculateCardTypeScore (deck) {
+    if (deck.length === 0) return 0
+
+    const typeCounts = { Character: 0, Action: 0, Item: 0, Location: 0 }
+    let totalCards = 0
+
+    for (const idx of deck) {
+      const card = this.trainingManager.indexMap.get(idx)
+      if (!card) continue
+
+      const type = card.type || card.cardType || 'Unknown'
+      if (typeCounts[type] !== undefined) {
+        typeCounts[type]++
+      }
+      totalCards++
+    }
+
+    if (totalCards === 0) return 0
+
+    // Ideal distribution for Lorcana:
+    // Characters: ~65% (40 cards) - need characters to win
+    // Actions: ~25% (15 cards) - actions provide value
+    // Items: ~8% (5 cards) - items are powerful but limited
+    // Locations: ~2% (optional)
+    const idealDistribution = { Character: 0.65, Action: 0.25, Item: 0.08, Location: 0.02 }
+
+    let score = 0
+    for (const [type, ideal] of Object.entries(idealDistribution)) {
+      const actual = typeCounts[type] / totalCards
+      const diff = Math.abs(actual - ideal)
+      // Max score if matches ideal, decreases as it deviates
+      score += Math.max(0, 1 - diff * 3)
+    }
+
+    // Also check minimum character count (need at least ~30 to be playable)
+    const minCharacterRatio = 0.4
+    const characterRatio = typeCounts.Character / totalCards
+    if (characterRatio < minCharacterRatio) {
+      score *= 0.5 // Heavy penalty for too few characters
+    }
+
+    return Math.min(1, score / 4) // Normalize to 0-1
+  }
+
+  /**
+   * Calculate deck size score
+   * Rewards having exactly 60 cards
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Size score (0-1)
+   */
+  calculateDeckSizeScore (deck) {
+    const targetSize = 60
+    const deckSize = deck.length
+
+    if (deckSize === targetSize) return 1.0
+    if (deckSize < targetSize) return deckSize / targetSize
+    // Penalty for oversized decks
+    return Math.max(0, 1 - (deckSize - targetSize) * 0.1)
+  }
+
+  /**
+   * Calculate minimum ink count score
+   * Ensures deck has at least 4 copies of each ink color
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Minimum ink score (0-1)
+   */
+  calculateMinimumInkScore (deck) {
+    const inkCounts = {}
+    let hasInk = false
+
+    for (const idx of deck) {
+      const card = this.trainingManager.indexMap.get(idx)
+      if (!card) continue
+
+      const cardInks = card.inks || (card.ink ? [card.ink] : [])
+      for (const ink of cardInks) {
+        inkCounts[ink] = (inkCounts[ink] || 0) + 1
+        hasInk = true
+      }
+    }
+
+    if (!hasInk) return 0
+
+    // Check each ink has at least 4 copies
+    let minInksWith4 = 0
+    let totalInks = 0
+
+    for (const ink of Object.keys(inkCounts)) {
+      totalInks++
+      if (inkCounts[ink] >= 4) {
+        minInksWith4++
+      }
+    }
+
+    // If using 1 ink: need at least 4 of that ink
+    // If using 2 inks: need at least 4 of each ink
+    // Score based on how many inks meet the threshold
+    return totalInks > 0 ? minInksWith4 / totalInks : 0
   }
 
   /**
