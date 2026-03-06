@@ -163,26 +163,32 @@ class RLTrainer {
     const cardTypeScore = this.calculateCardTypeScore(deck)
     const deckSizeScore = this.calculateDeckSizeScore(deck)
     const minInkScore = this.calculateMinimumInkScore(deck)
+    const singletonPenaltyScore = this.calculateSingletonPenalty(deck)
+    const uninkablePenaltyScore = this.calculateUninkablePenalty(deck)
 
     // Weighted sum:
-    // Validator (Quality & Balance): 40% - Let the learned model decide what is "good"
+    // Validator (Quality & Balance): 35% - Let the learned model decide what is "good"
     // Consistency (Structure): 8% - Reward playing multiple copies
-    // Card Synergy: 12% - Reward cards that commonly appear together
-    // Keyword Synergy: 8% - Reward complementary keywords
-    // Ability Combo: 8% - Reward completing ability combos
-    // Ink Curve: 8% - Reward balanced ink costs
-    // Card Type: 8% - Reward proper character/action/item distribution
+    // Card Synergy: 10% - Reward cards that commonly appear together
+    // Keyword Synergy: 7% - Reward complementary keywords
+    // Ability Combo: 7% - Reward completing ability combos
+    // Ink Curve: 7% - Reward balanced ink costs
+    // Card Type: 7% - Reward proper character/action/item distribution
     // Deck Size: 4% - Reward exactly 60 cards
-    // Minimum Ink: 4% - Reward having 4+ copies of each ink
-    episode.reward = (validatorReward * 0.40) + 
+    // Minimum Ink: 5% - Reward having 4+ copies of each ink
+    // Singleton Penalty: 5% - Penalize excessive singletons
+    // Uninkable Penalty: 5% - Penalize excessive uninkable cards
+    episode.reward = (validatorReward * 0.35) + 
                      (consistencyReward * 0.08) + 
-                     (synergyReward * 0.12) + 
-                     (keywordSynergyReward * 0.08) + 
-                     (abilityComboReward * 0.08) +
-                     (inkCurveScore * 0.08) +
-                     (cardTypeScore * 0.08) +
+                     (synergyReward * 0.10) + 
+                     (keywordSynergyReward * 0.07) + 
+                     (abilityComboReward * 0.07) +
+                     (inkCurveScore * 0.07) +
+                     (cardTypeScore * 0.07) +
                      (deckSizeScore * 0.04) +
-                     (minInkScore * 0.04)
+                     (minInkScore * 0.05) +
+                     (singletonPenaltyScore * 0.05) +
+                     (uninkablePenaltyScore * 0.05)
 
     return episode
   }
@@ -433,6 +439,95 @@ class RLTrainer {
     // If using 2 inks: need at least 4 of each ink
     // Score based on how many inks meet the threshold
     return totalInks > 0 ? minInksWith4 / totalInks : 0
+  }
+
+  /**
+   * Calculate singleton penalty score
+   * Penalizes decks with too many singleton cards (only 1 copy)
+   * Real Lorcana decks typically have 15-25 unique cards
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Singleton score (0-1, higher is better)
+   */
+  calculateSingletonPenalty (deck) {
+    if (deck.length === 0) return 0
+
+    // Count unique cards and their copies
+    const cardCounts = new Map()
+    for (const idx of deck) {
+      cardCounts.set(idx, (cardCounts.get(idx) || 0) + 1)
+    }
+
+    // Count singletons (cards with only 1 copy)
+    let singletonCount = 0
+    let uniqueCardCount = cardCounts.size
+
+    for (const [, count] of cardCounts) {
+      if (count === 1) {
+        singletonCount++
+      }
+    }
+
+    if (uniqueCardCount === 0) return 0
+
+    const singletonRatio = singletonCount / uniqueCardCount
+
+    // Ideal: 15-25% singletons (some flex cards)
+    // Penalize heavily if >35% singletons
+    // Penalize moderately if 25-35% singletons
+    
+    if (singletonRatio <= 0.25) {
+      return 1.0 // Good: few singletons
+    } else if (singletonRatio <= 0.35) {
+      return 0.6 // Moderate penalty
+    } else if (singletonRatio <= 0.5) {
+      return 0.3 // Heavy penalty
+    } else {
+      return 0.0 // Fail: too many singletons
+    }
+  }
+
+  /**
+   * Calculate uninkable penalty score
+   * Penalizes decks with too many uninkable (action/item) cards
+   * Real Lorcana decks need ink to play cards
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Uninkable score (0-1, higher is better)
+   */
+  calculateUninkablePenalty (deck) {
+    if (deck.length === 0) return 0
+
+    let uninkableCount = 0
+
+    for (const idx of deck) {
+      const card = this.trainingManager.indexMap.get(idx)
+      if (!card) continue
+
+      // Check if card is uninkable (actions and items are typically uninkable)
+      const type = card.type || card.cardType || ''
+      const isUninkable = type === 'Action' || type === 'Item' || type === 'Location'
+      
+      // Some characters might also be uninkable if they have certain abilities
+      if (!card.ink && !card.inks) {
+        uninkableCount++
+      } else if (isUninkable) {
+        uninkableCount++
+      }
+    }
+
+    const uninkableRatio = uninkableCount / deck.length
+
+    // Ideal: ~20-30% uninkable cards (actions + items)
+    // Penalize if >40% uninkable
+    
+    if (uninkableRatio <= 0.25) {
+      return 1.0 // Good
+    } else if (uninkableRatio <= 0.35) {
+      return 0.7 // Minor penalty
+    } else if (uninkableRatio <= 0.45) {
+      return 0.4 // Moderate penalty
+    } else {
+      return 0.1 // Heavy penalty
+    }
   }
 
   /**

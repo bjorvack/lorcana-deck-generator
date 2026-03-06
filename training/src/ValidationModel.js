@@ -194,10 +194,28 @@ module.exports = class ValidationModel {
       inkCounts[inkNames[i]] = features[inkFeatureStart + i]
     }
 
+    // Get singleton ratio (feature index 1)
+    const singletonRatio = features[1]
+    
+    // Get uninkable ratio (feature index 26)
+    const uninkableRatio = features[26] || 0
+
     if (requestedInks && requestedInks.length > 0) {
       const totalCards = features.reduce((sum, f) => sum + f, 0) // Approximate total
       const inkableCards = features[12] // inkable ratio
       const totalInkable = Math.round(inkableCards * 60)
+
+      // RULE: Check singleton ratio - too many singletons is unrealistic
+      if (singletonRatio > 0.35) {
+        console.log(`[RULE] Excessive singletons: ${Math.round(singletonRatio * 100)}% - returning 0.0`)
+        return 0.0 // Too many singletons = unrealistic deck
+      }
+
+      // RULE: Check uninkable ratio - too many uninkable cards
+      if (uninkableRatio > 0.4) {
+        console.log(`[RULE] Excessive uninkable cards: ${Math.round(uninkableRatio * 100)}% - returning 0.0`)
+        return 0.0 // Can't play the deck
+      }
 
       // Check that at least 3 cards can produce each ink
       const minCardsPerInk = 3
@@ -240,7 +258,17 @@ module.exports = class ValidationModel {
     const score = (await prediction.data())[0]
     featuresTensor.dispose()
     prediction.dispose()
-    return score
+    
+    // Apply penalties for moderate singleton/uninkable issues (soft rules)
+    let finalScore = score
+    if (singletonRatio > 0.25) {
+      finalScore = Math.max(0, finalScore - 0.15) // 15% penalty for 25-35% singletons
+    }
+    if (uninkableRatio > 0.25) {
+      finalScore = Math.max(0, finalScore - 0.15) // 15% penalty for 25-40% uninkable
+    }
+    
+    return finalScore
   }
 
   async evaluateWithBreakdown (features, requestedInks = []) {
