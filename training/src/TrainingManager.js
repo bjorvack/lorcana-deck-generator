@@ -907,80 +907,95 @@ module.exports = class TrainingManager {
       this.log('------------------------')
     }
 
-    // 3. Process Decks
+    // 3. Process Decks (Batched with Progress)
     this.log('Processing decks...')
     const sequences = []
     const featureSequences = []
     const textSequences = []
 
-    let processedDecks = 0
+    const totalDecks = this.newDecksToTrain.length
+    const batchSize = this.batchSize || 500
+    
+    this.log(`  Total decks: ${totalDecks}, batch size: ${batchSize}`)
 
-    for (const deck of this.newDecksToTrain) {
-      const deckIndices = []
+    for (let batchStart = 0; batchStart < totalDecks; batchStart += batchSize) {
+      const batchEnd = Math.min(batchStart + batchSize, totalDecks)
+      const batchDecks = this.newDecksToTrain.slice(batchStart, batchEnd)
+      const progress = ((batchEnd / totalDecks) * 100).toFixed(1)
+      
+      this.log(`  Processing decks ${batchStart + 1}-${batchEnd}/${totalDecks} (${progress}%)`)
 
-      for (const cardEntry of deck.cards) {
-        const key = this.getCardKey(cardEntry.name, cardEntry.version)
-        if (this.cardMap.has(key)) {
-          const index = this.cardMap.get(key)
-          for (let i = 0; i < cardEntry.amount; i++) {
-            deckIndices.push(index)
+      for (const deck of batchDecks) {
+        const deckIndices = []
+
+        for (const cardEntry of deck.cards) {
+          const key = this.getCardKey(cardEntry.name, cardEntry.version)
+          if (this.cardMap.has(key)) {
+            const index = this.cardMap.get(key)
+            for (let i = 0; i < cardEntry.amount; i++) {
+              deckIndices.push(index)
+            }
           }
+        }
+
+        if (deckIndices.length > 0) {
+          // Hash check again (redundant but safe)
+          const deckHash = deck.hash || this.getDeckHash(deckIndices)
+
+          // Calculate repetitions based on balancing
+          const inkPath = this.getInkPath(deck.inks)
+          const baseRepetitions = 5
+          const multiplier = balanceClasses && inkPath ? (balancingMultipliers.get(inkPath) || 1) : 1
+          const totalRepetitions = baseRepetitions * multiplier
+
+          // Create shuffled versions using Fisher-Yates algorithm
+          for (let k = 0; k < totalRepetitions; k++) {
+            const shuffledIndices = this.fisherYatesShuffle([...deckIndices])
+
+            const seqIndices = []
+            const seqFeatures = []
+            const seqTextIndices = []
+
+            const currentStats = this.getInitialDeckStats()
+            const cardCounts = new Map()
+
+            for (const index of shuffledIndices) {
+              const card = this.indexMap.get(index)
+              const copiesSoFar = cardCounts.get(index) || 0
+
+              this.updateDeckStats(currentStats, card)
+              const features = this.extractCardFeatures(
+                card,
+                currentStats,
+                copiesSoFar
+              )
+              const textIndices = this.textEmbedder.cardToTextIndices(card)
+
+              seqIndices.push(index)
+              seqFeatures.push(features)
+              seqTextIndices.push(textIndices)
+
+              cardCounts.set(index, copiesSoFar + 1)
+            }
+
+            sequences.push(seqIndices)
+            featureSequences.push(seqFeatures)
+            textSequences.push(seqTextIndices)
+          }
+
+          // Mark as trained
+          this.deckHashSet.add(deckHash)
         }
       }
 
-      if (deckIndices.length > 0) {
-        // Hash check again (redundant but safe)
-        const deckHash = deck.hash || this.getDeckHash(deckIndices)
-
-        // Calculate repetitions based on balancing
-        const inkPath = this.getInkPath(deck.inks)
-        const baseRepetitions = 5
-        const multiplier = balanceClasses && inkPath ? (balancingMultipliers.get(inkPath) || 1) : 1
-        const totalRepetitions = baseRepetitions * multiplier
-
-        // Create shuffled versions using Fisher-Yates algorithm
-        for (let k = 0; k < totalRepetitions; k++) {
-          const shuffledIndices = this.fisherYatesShuffle([...deckIndices])
-
-          const seqIndices = []
-          const seqFeatures = []
-          const seqTextIndices = []
-
-          const currentStats = this.getInitialDeckStats()
-          const cardCounts = new Map()
-
-          for (const index of shuffledIndices) {
-            const card = this.indexMap.get(index)
-            const copiesSoFar = cardCounts.get(index) || 0
-
-            this.updateDeckStats(currentStats, card)
-            const features = this.extractCardFeatures(
-              card,
-              currentStats,
-              copiesSoFar
-            )
-            const textIndices = this.textEmbedder.cardToTextIndices(card)
-
-            seqIndices.push(index)
-            seqFeatures.push(features)
-            seqTextIndices.push(textIndices)
-
-            cardCounts.set(index, copiesSoFar + 1)
-          }
-
-          sequences.push(seqIndices)
-          featureSequences.push(seqFeatures)
-          textSequences.push(seqTextIndices)
-        }
-
-        // Mark as trained
-        this.deckHashSet.add(deckHash)
+      // Progress update and memory cleanup
+      if (batchEnd % 1000 === 0 || batchEnd === totalDecks) {
+        await this.compactMemory()
       }
-      processedDecks++
     }
 
     this.log(
-      `Generated ${sequences.length} sequences from ${processedDecks} decks.`
+      `Generated ${sequences.length} sequences from ${totalDecks} decks.`
     )
 
     if (sequences.length === 0) {
