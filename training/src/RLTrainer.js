@@ -182,16 +182,18 @@ class RLTrainer {
   }
 
   /**
-     * Compute returns for an episode
-     * Can use discounting or just terminal reward
+     * Compute returns for an episode using reward-to-go
+     * Each step receives the discounted sum of future rewards only
      */
   computeReturns (episode) {
     const returns = []
+    let discountedReturn = 0
 
-    // Simple version: all steps get same terminal reward
-    // (Deck quality is only known at end)
-    for (let t = 0; t < episode.logProbs.length; t++) {
-      returns.push(episode.reward)
+    // Use reward-to-go: each step gets the discounted sum of rewards from that point forward
+    // This provides better credit assignment than giving all steps the same reward
+    for (let t = episode.logProbs.length - 1; t >= 0; t--) {
+      discountedReturn = episode.reward * Math.pow(this.gamma, episode.logProbs.length - 1 - t) + discountedReturn
+      returns.unshift(discountedReturn)
     }
 
     return returns

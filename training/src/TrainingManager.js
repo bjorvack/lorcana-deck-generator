@@ -145,11 +145,9 @@ module.exports = class TrainingManager {
         const multiplier = balanceClasses && inkPath ? (balancingMultipliers.get(inkPath) || 1) : 1
         const totalRepetitions = baseRepetitions * multiplier
 
-        // Create shuffled versions
+        // Create shuffled versions using Fisher-Yates algorithm
         for (let k = 0; k < totalRepetitions; k++) {
-          const shuffledIndices = [...deckIndices].sort(
-            () => Math.random() - 0.5
-          )
+          const shuffledIndices = this.fisherYatesShuffle([...deckIndices])
 
           const seqIndices = []
           const seqFeatures = []
@@ -1163,5 +1161,19 @@ module.exports = class TrainingManager {
     }
 
     return { features, labels }
+  }
+
+  /**
+   * Fisher-Yates (Knuth) shuffle algorithm - unbiased random shuffle
+   * @param {Array} array - Array to shuffle
+   * @returns {Array} New shuffled array
+   */
+  fisherYatesShuffle (array) {
+    const shuffled = [...array]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    return shuffled
   }
 }

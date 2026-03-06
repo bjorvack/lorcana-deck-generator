@@ -186,26 +186,61 @@ module.exports = class ValidationModel {
     }
 
     // Check for ink balance if requestedInks provided
-    if (requestedInks.length === 2) {
-      // We need to reconstruct ink counts from features or pass raw deck
-      // Since features are aggregated, we can't easily get exact ink counts here without changing input
-      // However, we can check if the model predicts it as "bad" based on training data
-      // But for immediate rule-based penalty (since we can't easily retrain model right now with ink features):
-      
-      // NOTE: Ideally, we should pass the raw deck to evaluate() or add ink ratios to features.
-      // Assuming we can't change feature structure easily, we rely on the neural network
-      // to have learned that "imbalanced" decks are bad (via training data).
-      
-      // But we can add a heuristic penalty if we had access to ink counts.
+    // Ink counts are at positions 13-18 (after cost: 0-9, types: 10-12)
+    const inkFeatureStart = 13
+    const inkNames = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+    const inkCounts = {}
+    for (let i = 0; i < 6; i++) {
+      inkCounts[inkNames[i]] = features[inkFeatureStart + i]
+    }
+
+    if (requestedInks && requestedInks.length > 0) {
+      const totalCards = features.reduce((sum, f) => sum + f, 0) // Approximate total
+      const inkableCards = features[12] // inkable ratio
+      const totalInkable = Math.round(inkableCards * 60)
+
+      // Check that at least 3 cards can produce each ink
+      const minCardsPerInk = 3
+      for (const requestedInk of requestedInks) {
+        const inkCount = inkCounts[requestedInk] || 0
+        if (inkCount * 60 < minCardsPerInk) {
+          console.log(`[RULE] Insufficient ${requestedInk} ink: ${Math.round(inkCount * 60)} cards - applying penalty`)
+          // Return neural network score but with significant penalty
+          const featuresTensor = tf.tensor2d([features])
+          const prediction = this.model.predict(featuresTensor)
+          const score = (await prediction.data())[0]
+          featuresTensor.dispose()
+          prediction.dispose()
+          return Math.max(0, score - 0.3) // Penalize by 30%
+        }
+      }
+
+      // For dual-ink decks, check for reasonable balance (not too lopsided)
+      if (requestedInks.length === 2) {
+        const ink1Count = inkCounts[requestedInks[0]] || 0
+        const ink2Count = inkCounts[requestedInks[1]] || 0
+        const ratio = Math.min(ink1Count, ink2Count) / Math.max(ink1Count, ink2Count + 0.001)
+
+        // If one ink is more than 4x the other, it's likely imbalanced
+        if (ratio < 0.25 && ink1Count > 0.1 && ink2Count > 0.1) {
+          console.log(`[RULE] Imbalanced dual-ink detected: ratio ${ratio.toFixed(2)} - applying penalty`)
+          const featuresTensor = tf.tensor2d([features])
+          const prediction = this.model.predict(featuresTensor)
+          const score = (await prediction.data())[0]
+          featuresTensor.dispose()
+          prediction.dispose()
+          return Math.max(0, score - 0.2) // Penalize by 20%
+        }
+      }
     }
 
     // Otherwise, use neural network prediction
     const featuresTensor = tf.tensor2d([features])
     const prediction = this.model.predict(featuresTensor)
-    const score = await prediction.data()
+    const score = (await prediction.data())[0]
     featuresTensor.dispose()
     prediction.dispose()
-    return score[0]
+    return score
   }
 
   async evaluateWithBreakdown (features, requestedInks = []) {

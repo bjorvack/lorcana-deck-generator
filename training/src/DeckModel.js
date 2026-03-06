@@ -196,10 +196,18 @@ module.exports = class DeckModel {
       path = `file://${path}`
     }
     this.model = await tf.loadLayersModel(path)
-    // Recompile model after loading to ensure it's ready for training/prediction
+
+    // Infer vocabSize from output shape (needed for predictions)
+    if (this.model.outputs && this.model.outputs.length > 0) {
+      // Output shape is [null, vocabSize]
+      this.vocabSize = this.model.outputs[0].shape[1]
+    }
+
+    // Recompile model after loading - use categoricalCrossentropy to match training
+    // (Note: This is for inference. For RL training with integer labels, use sparseCategoricalCrossentropy)
     this.model.compile({
       optimizer: 'adam',
-      loss: 'sparseCategoricalCrossentropy',
+      loss: 'categoricalCrossentropy',
       metrics: ['accuracy']
     })
 
@@ -297,10 +305,27 @@ module.exports = class DeckModel {
     }
 
     const inputTensor = tf.tensor2d([paddedSeq], [1, this.maxLen], 'int32')
-    const prediction = this.model.predict(inputTensor)
 
-    inputTensor.dispose()
+    // Use predict with explicit training=true to ensure gradient tracking
+    const prediction = this.model.predict(inputTensor, { training: true })
 
-    return prediction // Return tensor for gradient computation
+    // Note: Caller is responsible for disposing the returned prediction tensor
+    // Store inputTensor on prediction for later cleanup by caller
+    prediction.inputTensor = inputTensor
+
+    return prediction
+  }
+
+  /**
+   * Dispose tensors from predictWithGradient
+   * @param {Tensor} prediction - Prediction tensor from predictWithGradient
+   */
+  disposePrediction (prediction) {
+    if (prediction) {
+      if (prediction.inputTensor) {
+        prediction.inputTensor.dispose()
+      }
+      prediction.dispose()
+    }
   }
 }
