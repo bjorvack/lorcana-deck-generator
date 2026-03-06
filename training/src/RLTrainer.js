@@ -40,14 +40,23 @@ class RLTrainer {
 
     const deck = []
     const cardCounts = new Map()
+    const deckKeywords = new Set() // Track keywords for synergy
 
     // Generate deck card by card
     while (deck.length < 60) {
       // Current state
       episode.states.push([...deck])
 
-      // Get action probabilities from policy
-      const probs = await this.policy.predict(deck)
+      // Build context for synergy-aware prediction
+      const context = {
+        synergyMatrix: this.trainingManager.cooccurrenceMatrix,
+        keywords: deckKeywords
+      }
+
+      // Get action probabilities from policy with context for synergy
+      const probs = await this.policy.predictWithContext
+        ? await this.policy.predictWithContext(deck, context)
+        : await this.policy.predict(deck)
 
       // Sample action using policy
       const { action, logProb } = this.sampleActionFromPolicy(probs, deck, cardCounts, inks)
@@ -58,6 +67,14 @@ class RLTrainer {
       // Execute action
       deck.push(action)
       cardCounts.set(action, (cardCounts.get(action) || 0) + 1)
+
+      // Update keyword tracking
+      const cardKeywords = this.trainingManager.cardKeywordsMap.get(action)
+      if (cardKeywords) {
+        for (const kw of cardKeywords) {
+          deckKeywords.add(kw)
+        }
+      }
     }
 
     // Get terminal reward from validator
@@ -70,10 +87,16 @@ class RLTrainer {
     // Calculate Consistency Reward (Bonus for multiple copies)
     const consistencyReward = this.calculateConsistencyReward(deck)
 
+    // Calculate Synergy Rewards
+    const synergyReward = this.calculateSynergyReward(deck)
+    const keywordSynergyReward = this.calculateKeywordSynergyReward(deck)
+
     // Weighted sum:
-    // Validator (Quality & Balance): 80% - Let the learned model decide what is "good"
-    // Consistency (Structure): 20%
-    episode.reward = (validatorReward * 0.8) + (consistencyReward * 0.2)
+    // Validator (Quality & Balance): 60% - Let the learned model decide what is "good"
+    // Consistency (Structure): 10% - Reward playing multiple copies
+    // Card Synergy: 20% - Reward cards that commonly appear together
+    // Keyword Synergy: 10% - Reward complementary keywords
+    episode.reward = (validatorReward * 0.6) + (consistencyReward * 0.1) + (synergyReward * 0.2) + (keywordSynergyReward * 0.1)
 
     return episode
   }
@@ -102,6 +125,62 @@ class RLTrainer {
 
     // Boost the signal slightly to make it comparable to validator score
     return Math.min(1.0, repetitionRatio * 1.3)
+  }
+
+  /**
+   * Calculate synergy reward based on learned co-occurrence patterns
+   * Uses the training manager's co-occurrence matrix to score card synergies
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Synergy score (0-1)
+   */
+  calculateSynergyReward (deck) {
+    if (deck.length < 2) return 0
+
+    // Use the training manager's synergy methods
+    const synergyScore = this.trainingManager.calculateDeckSynergy(deck)
+    return synergyScore
+  }
+
+  /**
+   * Calculate keyword synergy reward
+   * @param {Array} deck - Array of card indices
+   * @returns {Number} Keyword synergy score (0-1)
+   */
+  calculateKeywordSynergyReward (deck) {
+    if (deck.length < 2) return 0
+
+    // Collect all keywords from deck
+    const deckKeywords = new Set()
+    for (const cardId of deck) {
+      const cardKeywords = this.trainingManager.cardKeywordsMap.get(cardId)
+      if (cardKeywords) {
+        for (const kw of cardKeywords) {
+          deckKeywords.add(kw)
+        }
+      }
+    }
+
+    if (deckKeywords.size < 2) return 0
+
+    // Calculate pairwise keyword synergies
+    let totalSynergy = 0
+    let count = 0
+    const kwArray = Array.from(deckKeywords)
+
+    for (let i = 0; i < Math.min(kwArray.length, 10); i++) {
+      for (let j = i + 1; j < Math.min(kwArray.length, 10); j++) {
+        const synergies = this.trainingManager.keywordSynergyMatrix.get(kwArray[i])
+        if (synergies) {
+          const score = synergies.get(kwArray[j])
+          if (score) {
+            totalSynergy += score
+            count++
+          }
+        }
+      }
+    }
+
+    return count > 0 ? Math.min(1, totalSynergy / count * 5) : 0
   }
 
   /**

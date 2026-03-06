@@ -21,6 +21,251 @@ module.exports = class TrainingManager {
       'training-state.json'
     )
     this.trainingState = null
+
+    // Synergy learning - co-occurrence matrix
+    // card_i -> { card_j: normalized_score }
+    this.cooccurrenceMatrix = new Map()
+    // Track keyword synergies: keyword_i -> { keyword_j: score }
+    this.keywordSynergyMatrix = new Map()
+    // Track card -> keywords mapping for fast lookup
+    this.cardKeywordsMap = new Map()
+  }
+
+  /**
+   * Build co-occurrence matrix from training decks
+   * Learns which cards frequently appear together in winning/tournament decks
+   * @param {Array} decks - Array of deck objects with card entries
+   */
+  buildCooccurrenceMatrix(decks) {
+    this.log('Building card co-occurrence matrix...')
+
+    const pairCounts = new Map()
+    const cardCounts = new Map()
+    const totalDecks = decks.length
+
+    for (const deck of decks) {
+      // Get unique card IDs in this deck
+      const cardIds = new Set()
+      for (const cardEntry of deck.cards) {
+        const key = this.getCardKey(cardEntry.name, cardEntry.version)
+        const cardId = this.cardMap.get(key)
+        if (cardId !== undefined) {
+          cardIds.add(cardId)
+        }
+      }
+
+      // Count individual cards
+      for (const cardId of cardIds) {
+        cardCounts.set(cardId, (cardCounts.get(cardId) || 0) + 1)
+      }
+
+      // Count pairs (symmetric)
+      const cardArray = Array.from(cardIds)
+      for (let i = 0; i < cardArray.length; i++) {
+        for (let j = i + 1; j < cardArray.length; j++) {
+          const pairKey = `${cardArray[i]}-${cardArray[j]}`
+          pairCounts.set(pairKey, (pairCounts.get(pairKey) || 0) + 1)
+        }
+      }
+    }
+
+    // Normalize: P(card_j | card_i) = count(pair) / count(card_i)
+    for (const [pairKey, pairCount] of pairCounts) {
+      const [id1, id2] = pairKey.split('-').map(Number)
+      const count1 = cardCounts.get(id1) || 1
+
+      // Score = normalized co-occurrence (how often j appears when i is present)
+      const score = pairCount / count1
+
+      // Store symmetrically
+      if (!this.cooccurrenceMatrix.has(id1)) {
+        this.cooccurrenceMatrix.set(id1, new Map())
+      }
+      if (!this.cooccurrenceMatrix.has(id2)) {
+        this.cooccurrenceMatrix.set(id2, new Map())
+      }
+
+      this.cooccurrenceMatrix.get(id1).set(id2, score)
+      this.cooccurrenceMatrix.get(id2).set(id1, score)
+    }
+
+    // Store card counts for baseline
+    this.deckCardCounts = cardCounts
+
+    this.log(`  Co-occurrence matrix: ${this.cooccurrenceMatrix.size} cards tracked`)
+    this.log(`  Pair counts: ${pairCounts.size} unique pairs`)
+  }
+
+  /**
+   * Build keyword synergy matrix from training decks
+   * Learns which keyword combinations work well together
+   * @param {Array} decks - Array of deck objects
+   */
+  buildKeywordSynergyMatrix(decks) {
+    this.log('Building keyword synergy matrix...')
+
+    const keywordPairCounts = new Map()
+    const keywordCounts = new Map()
+
+    // All known keywords in the game
+    const allKeywords = ['Ward', 'Evasive', 'Bodyguard', 'Resist', 'Singer', 'Shift', 'Reckless', 'Challenger', 'Rush', 'Boost']
+
+    for (const deck of decks) {
+      // Collect all keywords present in deck
+      const deckKeywords = new Set()
+
+      for (const cardEntry of deck.cards) {
+        const key = this.getCardKey(cardEntry.name, cardEntry.version)
+        const cardId = this.cardMap.get(key)
+        if (cardId !== undefined) {
+          const card = this.indexMap.get(cardId)
+          if (card && card.keywords) {
+            for (const kw of card.keywords) {
+              if (allKeywords.includes(kw)) {
+                deckKeywords.add(kw)
+                // Store card -> keywords mapping
+                if (!this.cardKeywordsMap.has(cardId)) {
+                  this.cardKeywordsMap.set(cardId, new Set())
+                }
+                this.cardKeywordsMap.get(cardId).add(kw)
+              }
+            }
+          }
+        }
+      }
+
+      // Count individual keywords
+      for (const kw of deckKeywords) {
+        keywordCounts.set(kw, (keywordCounts.get(kw) || 0) + 1)
+      }
+
+      // Count keyword pairs
+      const kwArray = Array.from(deckKeywords)
+      for (let i = 0; i < kwArray.length; i++) {
+        for (let j = i + 1; j < kwArray.length; j++) {
+          const pairKey = [kwArray[i], kwArray[j]].sort().join('|')
+          keywordPairCounts.set(pairKey, (keywordPairCounts.get(pairKey) || 0) + 1)
+        }
+      }
+    }
+
+    // Normalize and store
+    for (const [pairKey, count] of keywordPairCounts) {
+      const [kw1, kw2] = pairKey.split('|')
+      const total1 = keywordCounts.get(kw1) || 1
+
+      const score = count / total1
+
+      if (!this.keywordSynergyMatrix.has(kw1)) {
+        this.keywordSynergyMatrix.set(kw1, new Map())
+      }
+      if (!this.keywordSynergyMatrix.has(kw2)) {
+        this.keywordSynergyMatrix.set(kw2, new Map())
+      }
+
+      this.keywordSynergyMatrix.get(kw1).set(kw2, score)
+      this.keywordSynergyMatrix.get(kw2).set(kw1, score)
+    }
+
+    this.log(`  Keyword synergy matrix: ${this.keywordSynergyMatrix.size} keywords tracked`)
+  }
+
+  /**
+   * Get synergy score between two cards
+   * @param {Number} cardId1 - First card index
+   * @param {Number} cardId2 - Second card index
+   * @returns {Number} Synergy score (0-1, higher is better)
+   */
+  getCardSynergy(cardId1, cardId2) {
+    const synergies1 = this.cooccurrenceMatrix.get(cardId1)
+    if (!synergies1) return 0
+
+    const score = synergies1.get(cardId2)
+    return score || 0
+  }
+
+  /**
+   * Get synergy score for adding a card to existing deck
+   * @param {Number} cardId - Card to add
+   * @param {Array} currentDeck - Array of card IDs already in deck
+   * @returns {Number} Average synergy with current deck
+   */
+  getDeckSynergyScore(cardId, currentDeck) {
+    if (currentDeck.length === 0) return 0
+
+    let totalSynergy = 0
+    let count = 0
+
+    for (const existingCardId of currentDeck) {
+      const synergy = this.getCardSynergy(cardId, existingCardId)
+      if (synergy > 0) {
+        totalSynergy += synergy
+        count++
+      }
+    }
+
+    return count > 0 ? totalSynergy / count : 0
+  }
+
+  /**
+   * Get keyword synergy score for a card based on deck's current keywords
+   * @param {Number} cardId - Card to evaluate
+   * @param {Set} deckKeywords - Keywords already in deck
+   * @returns {Number} Keyword synergy score
+   */
+  getKeywordSynergyScore(cardId, deckKeywords) {
+    const cardKeywords = this.cardKeywordsMap.get(cardId)
+    if (!cardKeywords || cardKeywords.size === 0) return 0
+    if (deckKeywords.size === 0) return 0
+
+    let totalSynergy = 0
+    let count = 0
+
+    for (const cardKw of cardKeywords) {
+      const deckSynergies = this.keywordSynergyMatrix.get(cardKw)
+      if (deckSynergies) {
+        for (const deckKw of deckKeywords) {
+          const score = deckSynergies.get(deckKw)
+          if (score) {
+            totalSynergy += score
+            count++
+          }
+        }
+      }
+    }
+
+    return count > 0 ? totalSynergy / count : 0
+  }
+
+  /**
+   * Calculate overall synergy reward for a complete deck
+   * @param {Array} deckIndices - Array of card IDs
+   * @returns {Number} Synergy score (0-1)
+   */
+  calculateDeckSynergy(deckIndices) {
+    if (deckIndices.length < 2) return 0
+
+    // Calculate pairwise synergies
+    let totalSynergy = 0
+    let pairCount = 0
+
+    // Sample pairs for efficiency (don't check all n^2)
+    const sampleSize = Math.min(100, deckIndices.length)
+    for (let i = 0; i < sampleSize; i++) {
+      const idx1 = Math.floor(Math.random() * deckIndices.length)
+      let idx2 = Math.floor(Math.random() * deckIndices.length)
+      while (idx2 === idx1) {
+        idx2 = Math.floor(Math.random() * deckIndices.length)
+      }
+
+      const synergy = this.getCardSynergy(deckIndices[idx1], deckIndices[idx2])
+      if (synergy > 0) {
+        totalSynergy += synergy
+        pairCount++
+      }
+    }
+
+    return pairCount > 0 ? Math.min(1, totalSynergy / pairCount * 10) : 0
   }
 
   log(message) {
@@ -91,6 +336,10 @@ module.exports = class TrainingManager {
       this.log('No new data loaded; skipping training run.')
       return
     }
+
+    // 2c. Build synergy matrices from training data
+    this.buildCooccurrenceMatrix(this.newDecksToTrain)
+    this.buildKeywordSynergyMatrix(this.newDecksToTrain)
 
     // 2b. Compute ink distribution for balancing
     const inkDistribution = new Map()
