@@ -95,19 +95,28 @@ module.exports = class TrainingManager {
 
     // Curriculum Learning Phases
     // Progressively increase difficulty during training
+    // Note: Lorcana only allows max 2 ink colors per deck
     this.curriculumPhase = 0
     this.curriculumPhases = [
       { name: 'single-ink', maxInks: 1, epochs: 5, description: 'Single ink decks only' },
       { name: 'dual-ink-simple', maxInks: 2, minInks: 2, epochs: 10, simpleInks: true, description: 'Simple dual-ink combinations' },
       { name: 'dual-ink', maxInks: 2, minInks: 2, epochs: 15, description: 'All dual-ink combinations' },
-      { name: 'triple-ink', maxInks: 3, minInks: 3, epochs: 20, description: 'Triple ink decks' },
-      { name: 'full', maxInks: 4, minInks: 2, epochs: -1, description: 'Full deck building' }
+      { name: 'full', maxInks: 2, minInks: 2, epochs: -1, description: 'Full deck building' }
     ]
     this.currentEpochInPhase = 0
     this.totalEpochsTrained = 0
 
-    // Ink difficulty mapping - some ink combos are harder
+    // Ink difficulty mapping - only valid Lorcana ink combinations
+    // (Amber, Amethyst, Emerald, Ruby, Sapphire)
+    // Single ink for phase 1, dual ink combinations for phase 2+
     this.inkDifficulty = {
+      // Single ink
+      'amber': 0.5,
+      'amethyst': 0.5,
+      'emerald': 0.5,
+      'ruby': 0.5,
+      'sapphire': 0.5,
+      // Dual ink
       'amber-amethyst': 1.0,
       'amber-emerald': 1.0,
       'amber-ruby': 1.0,
@@ -117,12 +126,7 @@ module.exports = class TrainingManager {
       'amethyst-sapphire': 1.0,
       'emerald-ruby': 1.0,
       'emerald-sapphire': 1.0,
-      'ruby-sapphire': 1.0,
-      'steel-amber': 1.2,
-      'steel-amethyst': 1.2,
-      'steel-emerald': 1.2,
-      'steel-ruby': 1.2,
-      'steel-sapphire': 1.2
+      'ruby-sapphire': 1.0
     }
   }
 
