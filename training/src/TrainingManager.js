@@ -138,6 +138,10 @@ module.exports = class TrainingManager {
     // Memory optimization settings
     this.synergyThreshold = 0.05 // Filter out weak synergies (below 5%)
     this.maxSynergiesPerCard = 50 // Limit top synergies per card
+    
+    // Batch processing settings
+    this.batchSize = 500 // Process decks in batches
+    this.streamDecks = true // Use streaming mode
   }
 
   /**
@@ -151,6 +155,151 @@ module.exports = class TrainingManager {
     }
     // Give event loop time to clean up
     await new Promise(resolve => setImmediate(resolve))
+  }
+
+  /**
+   * Stream deck processing - processes decks in batches to reduce memory
+   * @param {Array} decks - Array of decks to process
+   * @param {Function} processor - Function to call for each batch
+   * @param {Function} aggregator - Function to aggregate results (optional)
+   */
+  async processDecksInBatches (decks, processor, aggregator = null) {
+    const batchSize = this.batchSize || 500
+    const results = aggregator ? aggregator() : null
+    const totalBatches = Math.ceil(decks.length / batchSize)
+    
+    this.log(`Processing ${decks.length} decks in ${totalBatches} batches...`)
+    
+    for (let i = 0; i < decks.length; i += batchSize) {
+      const batch = decks.slice(i, i + batchSize)
+      const batchNum = Math.floor(i / batchSize) + 1
+      
+      if (batchNum % 5 === 0 || batchNum === 1) {
+        this.log(`  Processing batch ${batchNum}/${totalBatches}`)
+      }
+      
+      // Process this batch
+      const batchResult = await processor(batch)
+      
+      // Aggregate results if provided
+      if (results && batchResult) {
+        this.aggregateResults(results, batchResult)
+      }
+      
+      // Memory cleanup every few batches
+      if (batchNum % 5 === 0) {
+        await this.compactMemory()
+      }
+    }
+    
+    this.log(`  Completed ${totalBatches} batches`)
+    return results
+  }
+
+  /**
+   * Aggregate batch results into overall results
+   */
+  aggregateResults (results, batchResult) {
+    if (typeof batchResult === 'number') {
+      results.count = (results.count || 0) + batchResult
+    } else if (batchResult instanceof Map) {
+      for (const [key, value] of batchResult) {
+        results.set(key, (results.get(key) || 0) + value)
+      }
+    } else if (typeof batchResult === 'object') {
+      for (const key of Object.keys(batchResult)) {
+        results[key] = (results[key] || 0) + batchResult[key]
+      }
+    }
+  }
+
+  /**
+   * Build co-occurrence matrix in batches to reduce memory
+   */
+  async buildCooccurrenceMatrixBatched (decks) {
+    this.log('Building card co-occurrence matrix (streaming mode)...')
+    
+    const batchSize = this.batchSize || 500
+    const pairCounts = new Map()
+    const cardCounts = new Map()
+    
+    // Process in batches
+    const totalBatches = Math.ceil(decks.length / batchSize)
+    const maxPairsPerDeck = 1000 // Limit pairs per deck
+    const threshold = this.synergyThreshold || 0.05
+    
+    for (let i = 0; i < decks.length; i += batchSize) {
+      const batch = decks.slice(i, i + batchSize)
+      const batchNum = Math.floor(i / batchSize) + 1
+      
+      if (batchNum % 5 === 0 || batchNum === 1) {
+        this.log(`  Batch ${batchNum}/${totalBatches}: building counts...`)
+      }
+      
+      // Process each deck in batch
+      for (const deck of batch) {
+        const cardIds = new Set()
+        for (const cardEntry of deck.cards) {
+          const key = this.getCardKey(cardEntry.name, cardEntry.version)
+          const cardId = this.cardMap.get(key)
+          if (cardId !== undefined) {
+            cardIds.add(cardId)
+          }
+        }
+        
+        // Count individual cards
+        for (const cardId of cardIds) {
+          cardCounts.set(cardId, (cardCounts.get(cardId) || 0) + 1)
+        }
+        
+        // Count pairs
+        const cardArray = Array.from(cardIds)
+        let pairCount = 0
+        for (let j = 0; j < cardArray.length && pairCount < maxPairsPerDeck; j++) {
+          for (let k = j + 1; k < cardArray.length && pairCount < maxPairsPerDeck; k++) {
+            const pairKey = `${cardArray[j]}-${cardArray[k]}`
+            pairCounts.set(pairKey, (pairCounts.get(pairKey) || 0) + 1)
+            pairCount++
+          }
+        }
+      }
+      
+      // Periodic cleanup
+      if (batchNum % 5 === 0) {
+        await this.compactMemory()
+      }
+    }
+    
+    this.log(`  Normalizing and filtering (threshold: ${threshold})...`)
+    
+    // Normalize and filter
+    for (const [pairKey, pairCount] of pairCounts) {
+      const [id1, id2] = pairKey.split('-').map(Number)
+      const count1 = cardCounts.get(id1) || 1
+      const score = pairCount / count1
+      
+      if (score < threshold) continue
+      
+      if (!this.cooccurrenceMatrix.has(id1)) {
+        this.cooccurrenceMatrix.set(id1, new Map())
+      }
+      if (!this.cooccurrenceMatrix.has(id2)) {
+        this.cooccurrenceMatrix.set(id2, new Map())
+      }
+      
+      const synergies1 = this.cooccurrenceMatrix.get(id1)
+      const synergies2 = this.cooccurrenceMatrix.get(id2)
+      
+      if (synergies1.size < (this.maxSynergiesPerCard || 50)) {
+        synergies1.set(id2, score)
+      }
+      if (synergies2.size < (this.maxSynergiesPerCard || 50)) {
+        synergies2.set(id1, score)
+      }
+    }
+    
+    this.deckCardCounts = cardCounts
+    this.log(`  Co-occurrence: ${this.cooccurrenceMatrix.size} cards, ${pairCounts.size} pairs (filtered)`)
   }
 
   /**
@@ -716,21 +865,34 @@ module.exports = class TrainingManager {
       return
     }
 
-    // 2c. Build synergy matrices from training data
-    this.buildCooccurrenceMatrix(this.newDecksToTrain)
-    await this.compactMemory() // Clean up after heavy operation
+    // 2c. Build synergy matrices from training data (with batching if enabled)
+    if (this.streamDecks) {
+      this.log('Using streaming mode for synergy building...')
+      await this.buildCooccurrenceMatrixBatched(this.newDecksToTrain)
+    } else {
+      this.buildCooccurrenceMatrix(this.newDecksToTrain)
+    }
+    await this.compactMemory()
     
     this.buildKeywordSynergyMatrix(this.newDecksToTrain)
-    await this.compactMemory() // Clean up after heavy operation
+    await this.compactMemory()
 
-    // 2b. Compute ink distribution for balancing
-    const inkDistribution = new Map()
-    for (const deck of this.newDecksToTrain) {
-      const inkPath = this.getInkPath(deck.inks)
-      if (inkPath) {
-        inkDistribution.set(inkPath, (inkDistribution.get(inkPath) || 0) + 1)
-      }
-    }
+    // 2b. Compute ink distribution for balancing (batched)
+    this.log('Computing ink distribution...')
+    const inkDistribution = await this.processDecksInBatches(
+      this.newDecksToTrain,
+      async (batch) => {
+        const batchDist = new Map()
+        for (const deck of batch) {
+          const inkPath = this.getInkPath(deck.inks)
+          if (inkPath) {
+            batchDist.set(inkPath, (batchDist.get(inkPath) || 0) + 1)
+          }
+        }
+        return batchDist
+      },
+      () => new Map()
+    )
 
     // Calculate balancing multipliers
     let balancingMultipliers = new Map()
