@@ -1701,6 +1701,104 @@ module.exports = class TrainingManager {
       } else {
         return this.generateFakeDeck('pure_random')
       }
+    } else if (strategy === 'excessive_singletons') {
+      // Generate deck with too many singletons (unrealistic)
+      const cardPool = Array.from(this.indexMap.values())
+      const numUniqueCards = Math.floor(Math.random() * 15) + 35 // 35-50 unique cards
+      const selectedCards = []
+      while (selectedCards.length < numUniqueCards) {
+        const randomIdx = cardPool[Math.floor(Math.random() * cardPool.length)]
+        if (!selectedCards.includes(randomIdx)) selectedCards.push(randomIdx)
+      }
+      // Add each card exactly once (all singletons)
+      for (const cardIdx of selectedCards) {
+        deckIndices.push(cardIdx)
+      }
+      // Fill rest with random cards
+      while (deckIndices.length < deckSize) {
+        const randomIdx = cardPool[Math.floor(Math.random() * cardPool.length)]
+        deckIndices.push(randomIdx)
+      }
+    } else if (strategy === 'too_many_actions') {
+      // Generate deck with too many action/item cards (can't play)
+      const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+      const chosenInk = inks[Math.floor(Math.random() * inks.length)]
+      
+      const characterPool = []
+      const actionPool = []
+      for (const [idx, card] of this.indexMap.entries()) {
+        if (card.ink === chosenInk) {
+          const type = card.type || ''
+          if (type === 'Character') {
+            characterPool.push(idx)
+          } else if (type === 'Action' || type === 'Item') {
+            actionPool.push(idx)
+          }
+        }
+      }
+      // Add too many actions (70%+)
+      const targetActions = Math.floor(deckSize * 0.7)
+      for (let i = 0; i < targetActions && i < actionPool.length; i++) {
+        deckIndices.push(actionPool[i % actionPool.length])
+      }
+      while (deckIndices.length < deckSize && characterPool.length > 0) {
+        deckIndices.push(characterPool[Math.floor(Math.random() * characterPool.length)])
+      }
+    } else if (strategy === 'poor_curve') {
+      // Generate deck with terrible mana curve (all high cost)
+      const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+      const chosenInks = []
+      const inkCount = Math.random() < 0.5 ? 1 : 2
+      for (let i = 0; i < inkCount; i++) {
+        const ink = inks[Math.floor(Math.random() * inks.length)]
+        if (!chosenInks.includes(ink)) chosenInks.push(ink)
+      }
+      const cardPool = []
+      for (const [idx, card] of this.indexMap.entries()) {
+        if (chosenInks.includes(card.ink) && card.legality === 'legal') {
+          cardPool.push(idx)
+        }
+      }
+      // Only use expensive cards (cost 6+)
+      const expensiveCards = cardPool.filter(idx => {
+        const card = this.indexMap.get(idx)
+        return card && card.cost >= 6
+      })
+      const cheapCards = cardPool.filter(idx => {
+        const card = this.indexMap.get(idx)
+        return card && card.cost <= 2
+      })
+      
+      // 80% expensive cards (terrible curve)
+      while (deckIndices.length < Math.floor(deckSize * 0.8) && expensiveCards.length > 0) {
+        deckIndices.push(expensiveCards[Math.floor(Math.random() * expensiveCards.length)])
+      }
+      while (deckIndices.length < deckSize && cheapCards.length > 0) {
+        deckIndices.push(cheapCards[Math.floor(Math.random() * cheapCards.length)])
+      }
+    } else if (strategy === 'single_color_extreme') {
+      // Single color but not enough ink (less than 4 copies)
+      const inks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+      const chosenInk = inks[Math.floor(Math.random() * inks.length)]
+      
+      const cardPool = []
+      for (const [idx, card] of this.indexMap.entries()) {
+        if (card.ink === chosenInk && card.legality === 'legal') {
+          cardPool.push(idx)
+        }
+      }
+      // Only add 1-3 copies of each ink source
+      const inkSources = cardPool.filter(idx => {
+        const card = this.indexMap.get(idx)
+        return card && (card.type === 'Character' || card.inkwell === 1)
+      })
+      
+      for (let i = 0; i < 3 && i < inkSources.length; i++) {
+        deckIndices.push(inkSources[i])
+      }
+      while (deckIndices.length < deckSize && cardPool.length > 0) {
+        deckIndices.push(cardPool[Math.floor(Math.random() * cardPool.length)])
+      }
     }
     return deckIndices.slice(0, deckSize)
   }
@@ -1992,12 +2090,17 @@ module.exports = class TrainingManager {
 
     this.log(`Generated ${partialDeckCount} partial decks (medium quality)`)
 
+    // Updated fake deck strategies - more diverse negative examples
     const strategyCounts = {
-      pure_random: Math.floor(realDeckCount * 0.25),
-      ink_constrained: Math.floor(realDeckCount * 0.2),
-      rule_broken: Math.floor(realDeckCount * 0.2),
-      low_diversity: Math.floor(realDeckCount * 0.15),
-      imbalanced_splash: Math.floor(realDeckCount * 0.2)
+      pure_random: Math.floor(realDeckCount * 0.15),
+      ink_constrained: Math.floor(realDeckCount * 0.1),
+      rule_broken: Math.floor(realDeckCount * 0.1),
+      low_diversity: Math.floor(realDeckCount * 0.1),
+      imbalanced_splash: Math.floor(realDeckCount * 0.1),
+      excessive_singletons: Math.floor(realDeckCount * 0.15),  // New: too many singletons
+      too_many_actions: Math.floor(realDeckCount * 0.1),      // New: too many uninkable
+      poor_curve: Math.floor(realDeckCount * 0.1),            // New: bad mana curve
+      single_color_extreme: Math.floor(realDeckCount * 0.1)   // New: not enough ink
     }
 
     for (const [strategy, count] of Object.entries(strategyCounts)) {
