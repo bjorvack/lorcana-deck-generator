@@ -134,6 +134,23 @@ module.exports = class TrainingManager {
       'ruby-steel': 1.0,
       'sapphire-steel': 1.0
     }
+
+    // Memory optimization settings
+    this.synergyThreshold = 0.05 // Filter out weak synergies (below 5%)
+    this.maxSynergiesPerCard = 50 // Limit top synergies per card
+  }
+
+  /**
+   * Force garbage collection if available
+   * Call between heavy processing phases
+   */
+  async compactMemory () {
+    if (global.gc) {
+      this.log('Running garbage collection...')
+      global.gc()
+    }
+    // Give event loop time to clean up
+    await new Promise(resolve => setImmediate(resolve))
   }
 
   /**
@@ -256,25 +273,34 @@ module.exports = class TrainingManager {
         cardCounts.set(cardId, (cardCounts.get(cardId) || 0) + 1)
       }
 
-      // Count pairs (symmetric)
+      // Count pairs (symmetric) - limit to reduce memory
       const cardArray = Array.from(cardIds)
-      for (let i = 0; i < cardArray.length; i++) {
-        for (let j = i + 1; j < cardArray.length; j++) {
+      const maxPairs = 1000 // Limit pairs per deck to save memory
+      let pairCount = 0
+      for (let i = 0; i < cardArray.length && pairCount < maxPairs; i++) {
+        for (let j = i + 1; j < cardArray.length && pairCount < maxPairs; j++) {
           const pairKey = `${cardArray[i]}-${cardArray[j]}`
           pairCounts.set(pairKey, (pairCounts.get(pairKey) || 0) + 1)
+          pairCount++
         }
       }
     }
 
-    // Normalize: P(card_j | card_i) = count(pair) / count(card_i)
+    // Normalize and filter: P(card_j | card_i) = count(pair) / count(card_i)
+    // Only keep synergies above threshold
+    const threshold = this.synergyThreshold || 0.05
+    
     for (const [pairKey, pairCount] of pairCounts) {
       const [id1, id2] = pairKey.split('-').map(Number)
       const count1 = cardCounts.get(id1) || 1
 
-      // Score = normalized co-occurrence (how often j appears when i is present)
+      // Score = normalized co-occurrence
       const score = pairCount / count1
 
-      // Store symmetrically
+      // Skip low-synergy pairs to save memory
+      if (score < threshold) continue
+
+      // Store symmetrically with limit
       if (!this.cooccurrenceMatrix.has(id1)) {
         this.cooccurrenceMatrix.set(id1, new Map())
       }
@@ -282,15 +308,23 @@ module.exports = class TrainingManager {
         this.cooccurrenceMatrix.set(id2, new Map())
       }
 
-      this.cooccurrenceMatrix.get(id1).set(id2, score)
-      this.cooccurrenceMatrix.get(id2).set(id1, score)
+      // Limit synergies per card
+      const synergies1 = this.cooccurrenceMatrix.get(id1)
+      const synergies2 = this.cooccurrenceMatrix.get(id2)
+      
+      if (synergies1.size < (this.maxSynergiesPerCard || 50)) {
+        synergies1.set(id2, score)
+      }
+      if (synergies2.size < (this.maxSynergiesPerCard || 50)) {
+        synergies2.set(id1, score)
+      }
     }
 
     // Store card counts for baseline
     this.deckCardCounts = cardCounts
 
     this.log(`  Co-occurrence matrix: ${this.cooccurrenceMatrix.size} cards tracked`)
-    this.log(`  Pair counts: ${pairCounts.size} unique pairs`)
+    this.log(`  Pair counts: ${pairCounts.size} unique pairs (filtered by threshold ${threshold})`)
   }
 
   /**
@@ -684,7 +718,10 @@ module.exports = class TrainingManager {
 
     // 2c. Build synergy matrices from training data
     this.buildCooccurrenceMatrix(this.newDecksToTrain)
+    await this.compactMemory() // Clean up after heavy operation
+    
     this.buildKeywordSynergyMatrix(this.newDecksToTrain)
+    await this.compactMemory() // Clean up after heavy operation
 
     // 2b. Compute ink distribution for balancing
     const inkDistribution = new Map()
