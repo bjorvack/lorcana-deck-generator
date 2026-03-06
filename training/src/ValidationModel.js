@@ -154,9 +154,10 @@ module.exports = class ValidationModel {
               }
             }
 
-            // Early stopping if accuracy is very high
-            if (logs.val_acc >= 0.95 && logs.val_loss < 0.2) {
-              console.log(`   ✓ Early stopping: validation accuracy ${(logs.val_acc * 100).toFixed(1)}% achieved!`)
+            // Early stopping if target accuracy is achieved
+            // Target: 90% accuracy on real decks (positive examples)
+            if (logs.val_acc >= 0.90 && logs.val_loss < 0.3) {
+              console.log(`   ✓ Target achieved: validation accuracy ${(logs.val_acc * 100).toFixed(1)}% (target: 90%)`)
               this.model.stopTraining = true
             }
           }
@@ -168,9 +169,15 @@ module.exports = class ValidationModel {
     labelsTensor.dispose()
 
     console.log('\n✅ Training complete!')
-    console.log(`Final metrics: loss=${history.history.loss[history.history.loss.length - 1].toFixed(4)}, ` +
-            `val_loss=${history.history.val_loss[history.history.val_loss.length - 1].toFixed(4)}, ` +
-            `val_acc=${(history.history.val_acc[history.history.val_acc.length - 1] * 100).toFixed(1)}%`)
+    const finalAcc = history.history.val_acc[history.history.val_acc.length - 1]
+    const finalLoss = history.history.val_loss[history.history.val_loss.length - 1]
+    console.log(`Final metrics: loss=${finalLoss.toFixed(4)}, val_acc=${(finalAcc * 100).toFixed(1)}%`)
+    
+    if (finalAcc >= 0.90) {
+      console.log('✅ Target accuracy (90%) achieved!')
+    } else {
+      console.log(`⚠️ Target accuracy (90%) not achieved. Consider training longer.`)
+    }
     return history
   }
 

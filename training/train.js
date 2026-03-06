@@ -111,19 +111,27 @@ const ValidationModel = require('./src/ValidationModel');
         card.embedding = embedding
       }
       
-      // Load decks for training
+      // Load decks for training - force load ALL decks (not just new ones)
+      // This ensures validator learns from the full historical dataset
       manager.loadTrainingState()
       if (!manager.trainingState.trainedDeckHashes) {
         manager.trainingState.trainedDeckHashes = []
       }
-      manager.deckHashSet = new Set(manager.trainingState.trainedDeckHashes)
       
-      await manager.loadTrainingData(true)
-      console.log(`Loaded ${manager.newDecksToTrain.length} decks for validation training`)
+      // For validator training, we need to load ALL decks, not skip trained ones
+      // Temporarily clear deckHashSet so loadTrainingData loads everything
+      const savedDeckHashSet = manager.deckHashSet
+      manager.deckHashSet = new Set() // Clear to load ALL decks
       
-      // Prepare dataset
+      await manager.loadTrainingData(true) // forceLoadAll=true
+      console.log(`Loaded ${manager.newDecksToTrain.length} decks for validator training (ALL decks)`)
+      
+      // Prepare dataset - pass false to use ALL loaded decks
       const { features, labels } = manager.prepareValidationDataset()
       console.log(`Dataset: ${features.length} samples, ${labels.filter(l => l > 0).length} positive, ${labels.filter(l => l === 0).length} negative`)
+      
+      // Restore deckHashSet for normal training
+      manager.deckHashSet = savedDeckHashSet
       
       // Train validator
       await validator.initialize(manager.textEmbedder.vocabularySize, 38)
