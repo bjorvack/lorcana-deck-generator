@@ -106,8 +106,8 @@ module.exports = class TrainingManager {
     this.currentEpochInPhase = 0
     this.totalEpochsTrained = 0
 
-    // Ink difficulty mapping - only valid Lorcana ink combinations
-    // (Amber, Amethyst, Emerald, Ruby, Sapphire)
+    // Ink difficulty mapping - valid Lorcana ink combinations
+    // (Amber, Amethyst, Emerald, Ruby, Sapphire, Steel)
     // Single ink for phase 1, dual ink combinations for phase 2+
     this.inkDifficulty = {
       // Single ink
@@ -116,17 +116,23 @@ module.exports = class TrainingManager {
       'emerald': 0.5,
       'ruby': 0.5,
       'sapphire': 0.5,
+      'steel': 0.5,
       // Dual ink
       'amber-amethyst': 1.0,
       'amber-emerald': 1.0,
       'amber-ruby': 1.0,
       'amber-sapphire': 1.0,
+      'amber-steel': 1.0,
       'amethyst-emerald': 1.0,
       'amethyst-ruby': 1.0,
       'amethyst-sapphire': 1.0,
+      'amethyst-steel': 1.0,
       'emerald-ruby': 1.0,
       'emerald-sapphire': 1.0,
-      'ruby-sapphire': 1.0
+      'emerald-steel': 1.0,
+      'ruby-sapphire': 1.0,
+      'ruby-steel': 1.0,
+      'sapphire-steel': 1.0
     }
   }
 
@@ -893,6 +899,13 @@ module.exports = class TrainingManager {
               const inkPath = this.getInkPath(deckRef.inks)
               if (!inkPath) continue // invalid/unknown inks
 
+              // VALIDATION: Lorcana only allows max 2 inks
+              const inkCount = deckRef.inks ? deckRef.inks.length : 0
+              if (inkCount > 2) {
+                skippedDecks++
+                continue // Skip decks with more than 2 inks
+              }
+
               const deckPath = path.join(this.trainingDataPath, 'decks', inkPath, `${deckRef.hash}.json`)
 
               if (fs.existsSync(deckPath)) {
@@ -921,14 +934,14 @@ module.exports = class TrainingManager {
       const MIN_DECKS_THRESHOLD = 10
       const SYNTHETIC_DECKS_FOR_MISSING = 10
 
-      // Generate all possible ink combinations
+      // All valid Lorcana inks (Amber, Amethyst, Emerald, Ruby, Sapphire, Steel)
       const INKS = ['amber', 'amethyst', 'emerald', 'ruby', 'sapphire', 'steel']
       const allCombinations = []
       // Single ink
       for (const ink of INKS) {
         allCombinations.push([ink])
       }
-      // Two-ink
+      // Two-ink (max 2 inks per Lorcana rules)
       for (let i = 0; i < INKS.length; i++) {
         for (let j = i + 1; j < INKS.length; j++) {
           allCombinations.push([INKS[i], INKS[j]])
