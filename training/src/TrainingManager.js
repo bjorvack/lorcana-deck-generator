@@ -919,24 +919,40 @@ module.exports = class TrainingManager {
       this.log('------------------------')
     }
 
-    // 3. Process Decks (Batched with Progress)
-    this.log('Processing decks...')
-    const sequences = []
-    const featureSequences = []
-    const textSequences = []
-
+    // 3. Process Decks in Batches (never load all at once)
+    // For full retrain, we process incrementally and train as we go
     const totalDecks = this.newDecksToTrain.length
-    const batchSize = this.batchSize || 500
+    const processBatchSize = this.batchSize || 500
+    const trainBatchSize = 5000 // Train after this many sequences
     
-    this.log(`  Total decks: ${totalDecks}, batch size: ${batchSize}`)
+    this.log(`Processing ${totalDecks} decks in batches of ${processBatchSize}...`)
+    
+    let totalSequences = 0
+    let batchesProcessed = 0
+    
+    // Initialize model if needed
+    if (!this.model.model) {
+      this.log('Initializing new model...')
+      this.log('Building card embedding matrix...')
+      const embeddingMatrix = this.buildCardEmbeddingMatrix()
+      await this.model.initialize(this.cardMap.size, embeddingMatrix)
+    } else {
+      this.log('Continuing training on existing model...')
+    }
 
-    for (let batchStart = 0; batchStart < totalDecks; batchStart += batchSize) {
-      const batchEnd = Math.min(batchStart + batchSize, totalDecks)
+    // Process decks in batches and train incrementally
+    for (let batchStart = 0; batchStart < totalDecks; batchStart += processBatchSize) {
+      const batchEnd = Math.min(batchStart + processBatchSize, totalDecks)
       const batchDecks = this.newDecksToTrain.slice(batchStart, batchEnd)
       const progress = ((batchEnd / totalDecks) * 100).toFixed(1)
       
       this.log(`  Processing decks ${batchStart + 1}-${batchEnd}/${totalDecks} (${progress}%)`)
-
+      
+      // Process this batch into sequences
+      const batchSequences = []
+      const batchFeatureSequences = []
+      const batchTextSequences = []
+      
       for (const deck of batchDecks) {
         const deckIndices = []
 
@@ -951,16 +967,13 @@ module.exports = class TrainingManager {
         }
 
         if (deckIndices.length > 0) {
-          // Hash check again (redundant but safe)
           const deckHash = deck.hash || this.getDeckHash(deckIndices)
 
-          // Calculate repetitions based on balancing
           const inkPath = this.getInkPath(deck.inks)
           const baseRepetitions = 5
           const multiplier = balanceClasses && inkPath ? (balancingMultipliers.get(inkPath) || 1) : 1
           const totalRepetitions = baseRepetitions * multiplier
 
-          // Create shuffled versions using Fisher-Yates algorithm
           for (let k = 0; k < totalRepetitions; k++) {
             const shuffledIndices = this.fisherYatesShuffle([...deckIndices])
 
@@ -976,11 +989,7 @@ module.exports = class TrainingManager {
               const copiesSoFar = cardCounts.get(index) || 0
 
               this.updateDeckStats(currentStats, card)
-              const features = this.extractCardFeatures(
-                card,
-                currentStats,
-                copiesSoFar
-              )
+              const features = this.extractCardFeatures(card, currentStats, copiesSoFar)
               const textIndices = this.textEmbedder.cardToTextIndices(card)
 
               seqIndices.push(index)
@@ -990,97 +999,54 @@ module.exports = class TrainingManager {
               cardCounts.set(index, copiesSoFar + 1)
             }
 
-            sequences.push(seqIndices)
-            featureSequences.push(seqFeatures)
-            textSequences.push(seqTextIndices)
+            batchSequences.push(seqIndices)
+            batchFeatureSequences.push(seqFeatures)
+            batchTextSequences.push(seqTextIndices)
           }
 
-          // Mark as trained
           this.deckHashSet.add(deckHash)
         }
       }
 
-      // Progress update and memory cleanup
-      if (batchEnd % 1000 === 0 || batchEnd === totalDecks) {
-        await this.compactMemory()
+      // Add batch sequences to training
+      totalSequences += batchSequences.length
+      batchesProcessed++
+      
+      // Train on this batch immediately
+      if (batchSequences.length > 0) {
+        this.log(`    Training on ${batchSequences.length} sequences (total: ${totalSequences})`)
+        
+        // Shuffle and train
+        const shuffledIndices = batchSequences.map((_, i) => i)
+        for (let i = shuffledIndices.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffledIndices[i], shuffledIndices[j]] = [shuffledIndices[j], shuffledIndices[i]]
+        }
+        
+        const shuffledSeqs = shuffledIndices.map(i => batchSequences[i])
+        
+        // Train in sub-batches
+        const subBatchSize = 1000
+        for (let s = 0; s < shuffledSeqs.length; s += subBatchSize) {
+          const subBatch = shuffledSeqs.slice(s, s + subBatchSize)
+          await this.model.train(subBatch, 1)
+        }
       }
+
+      // Clear batch from memory
+      batchSequences.length = 0
+      batchFeatureSequences.length = 0
+      batchTextSequences.length = 0
+      
+      // Memory cleanup
+      await this.compactMemory()
     }
 
-    this.log(
-      `Generated ${sequences.length} sequences from ${totalDecks} decks.`
-    )
+    this.log(`Completed processing. Total sequences trained: ${totalSequences}`)
 
-    if (sequences.length === 0) {
+    if (totalSequences === 0) {
       this.log('No sequences generated. Skipping.')
       return
-    }
-
-    // 4. Train Model
-    if (!this.model.model) {
-      this.log('Initializing new model...')
-      this.log('Building card embedding matrix...')
-      const embeddingMatrix = this.buildCardEmbeddingMatrix()
-      await this.model.initialize(this.cardMap.size, embeddingMatrix)
-    } else {
-      this.log('Continuing training on existing model...')
-    }
-
-    this.log('Training model...')
-
-    // Helper to shuffle data arrays in sync
-    const shuffleData = (seqs) => {
-      const indices = seqs.map((_, i) => i)
-      for (let i = indices.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [indices[i], indices[j]] = [indices[j], indices[i]]
-      }
-      return {
-        shuffledSeqs: indices.map((i) => seqs[i])
-      }
-    }
-
-    const MAX_BATCH_SIZE = 5000
-    if (sequences.length > MAX_BATCH_SIZE) {
-      this.log(
-        `Large dataset detected (${sequences.length} sequences). Training in batches of ${MAX_BATCH_SIZE}...`
-      )
-
-      this.log('Shuffling training data...')
-      const { shuffledSeqs } = shuffleData(sequences)
-
-      const numBatches = Math.ceil(sequences.length / MAX_BATCH_SIZE)
-
-      for (let epoch = 0; epoch < epochs; epoch++) {
-        this.log(`Global Epoch ${epoch + 1}/${epochs}`)
-
-        for (let batchIdx = 0; batchIdx < numBatches; batchIdx++) {
-          const start = batchIdx * MAX_BATCH_SIZE
-          const end = Math.min(
-            (batchIdx + 1) * MAX_BATCH_SIZE,
-            sequences.length
-          )
-
-          const batchSequences = shuffledSeqs.slice(start, end)
-
-          await this.model.train(batchSequences, 1, (e, logs) => {
-            if (batchIdx % 5 === 0 || batchIdx === numBatches - 1) {
-              this.log(
-                `  Batch ${batchIdx + 1
-                }/${numBatches}: loss = ${logs.loss.toFixed(4)}`
-              )
-            }
-          })
-        }
-        await this.saveModel()
-        this.log(`  ✓ Checkpoint saved (Epoch ${epoch + 1})`)
-      }
-    } else {
-      await this.model.train(sequences, epochs, async (epoch, logs) => {
-        this.log(
-          `Epoch ${epoch + 1}/${epochs}: loss = ${logs.loss.toFixed(4)}`
-        )
-        await this.saveModel()
-      })
     }
 
     this.log('Training complete!')
