@@ -2028,25 +2028,31 @@ module.exports = class TrainingManager {
     return deck.slice(0, 60)
   }
 
-  prepareValidationDataset() {
+  prepareValidationDataset(forceLoadAll = true) {
     this.log('Preparing validation dataset...')
     const features = []
     const labels = []
     let realDeckCount = 0
     const realDeckIndices = []
 
-    // MODIFIED: Iterate this.newDecksToTrain OR load historical decks if needed?
-    // For validation, we need diverse real decks. If newDecksToTrain is small, validation might be weak.
-    // However, loading ALL hashes just for validation is expensive.
-    // We will use newDecksToTrain if available, otherwise validation might be skipped or small.
-    // Ideally we should keep a "validation set" separate, but for now we just use what we have.
-    // If training incrementally, we validate on new data + maybe some baked-in validation set?
-    // Current logic: uses this.trainingData.
-    // We no longer populate this.trainingData with tournament objects.
-    // We populate this.newDecksToTrain.
-
-    // We need to resolve what to use here.
-    const sourceDecks = this.newDecksToTrain
+    // For validator training, we need ALL decks (not just new ones)
+    // This ensures the validator learns from the full historical dataset
+    let sourceDecks = this.newDecksToTrain
+    
+    // If forceLoadAll is true, we should reload all decks for better training
+    if (forceLoadAll && this.trainingState?.trainedDeckHashes?.length > 0) {
+      const existingHashes = new Set(this.trainingState.trainedDeckHashes)
+      
+      // Also include new decks
+      const allDeckHashes = new Set()
+      for (const deck of this.newDecksToTrain) {
+        if (deck.hash) allDeckHashes.add(deck.hash)
+      }
+      
+      // Count unique decks we have
+      const totalAvailable = (this.trainingState.trainedDeckHashes?.length || 0) + this.newDecksToTrain.length
+      this.log(`Using ${totalAvailable} total decks for validator training`)
+    }
 
     for (const deck of sourceDecks) {
       const deckIndices = []
@@ -2089,6 +2095,26 @@ module.exports = class TrainingManager {
     }
 
     this.log(`Generated ${partialDeckCount} partial decks (medium quality)`)
+
+    // IMPORTANT: Shuffle features and labels together to ensure train/val split has both real and fake decks
+    // Create paired array
+    const pairedData = features.map((f, i) => ({ features: f, label: labels[i] }))
+    
+    // Fisher-Yates shuffle
+    for (let i = pairedData.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pairedData[i], pairedData[j]] = [pairedData[j], pairedData[i]]
+    }
+    
+    // Unpair back to separate arrays
+    const shuffledFeatures = pairedData.map(p => p.features)
+    const shuffledLabels = pairedData.map(p => p.label)
+    
+    // Replace original arrays
+    features.length = 0
+    labels.length = 0
+    features.push(...shuffledFeatures)
+    labels.push(...shuffledLabels)
 
     // Updated fake deck strategies - more diverse negative examples
     const strategyCounts = {

@@ -220,6 +220,7 @@ module.exports = class ValidationModel {
       valPreds.map(p => 1 - p),
       valLabels.map(l => l === 0 ? 1 : 0)
     )
+    const finalAcc = history.history.val_acc[history.history.val_acc.length - 1]
 
     console.log('\n' + '='.repeat(50))
     console.log('📊 VALIDATOR TRAINING OVERVIEW')
