@@ -1,9 +1,10 @@
-# How to use
+# Lorcana Deck Generator
 
-<!--toc:start-->
+A web-based deck builder and AI-powered deck generator for the Disney Lorcana TCG.
 
-- [How to use](#how-to-use)
-<!--toc:end-->
+## How to Use
 
-[Visit the deckbuilder](https://bjorvack.github.io/lorcana-deck-generator/) to generate a new deck.
-[Visit the deckbuilder](https://bjorvack.github.io/lorcana-deck-generator/ai-generator) to generate a new deck using an ai model.
+Visit the deckbuilder to generate a new deck:
+
+- **[Deck Builder](https://bjorvack.github.io/lorcana-deck-generator/)** - Create custom Lorcana decks
+- **[AI Generator](https://bjorvack.github.io/lorcana-deck-generator/ai-generator)** - Generate decks using an AI model
