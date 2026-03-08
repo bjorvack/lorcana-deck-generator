@@ -1,0 +1,189 @@
+{
+  "hash": "f7a88d6bbf6f24d310b676b9887d118272a5d6953e92b25095d4c3861ef1079a",
+  "inks": [
+    "amethyst",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Anna",
+      "version": "Soothing Sister"
+    },
+    {
+      "amount": 1,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Musketeer Spy"
+    },
+    {
+      "amount": 2,
+      "name": "Eeyore",
+      "version": "In the Way"
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "Magical Researcher"
+    },
+    {
+      "amount": 1,
+      "name": "Genie",
+      "version": "Supportive Friend"
+    },
+    {
+      "amount": 2,
+      "name": "John Smith's Compass",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Lantern",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 2,
+      "name": "Lilo",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 2,
+      "name": "Lilo",
+      "version": "Snow Artist"
+    },
+    {
+      "amount": 1,
+      "name": "Maleficent",
+      "version": "Vexed Partygoer"
+    },
+    {
+      "amount": 2,
+      "name": "Mittens",
+      "version": "Sassy Street Cat"
+    },
+    {
+      "amount": 2,
+      "name": "Nani",
+      "version": "Protective Sister"
+    },
+    {
+      "amount": 3,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Percy",
+      "version": "Pupsicle"
+    },
+    {
+      "amount": 1,
+      "name": "Peter Pan's Shadow",
+      "version": "Not Sewn On"
+    },
+    {
+      "amount": 2,
+      "name": "Pocahontas",
+      "version": "Finding the Way"
+    },
+    {
+      "amount": 3,
+      "name": "Pocahontas",
+      "version": "Following the Wind"
+    },
+    {
+      "amount": 4,
+      "name": "Pot of Honey",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Pride Lands",
+      "version": "Jungle Oasis"
+    },
+    {
+      "amount": 4,
+      "name": "Pua",
+      "version": "Disgruntled Pig"
+    },
+    {
+      "amount": 2,
+      "name": "Pudge",
+      "version": "Controls the Weather"
+    },
+    {
+      "amount": 3,
+      "name": "Rapunzel",
+      "version": "Sunshine"
+    },
+    {
+      "amount": 1,
+      "name": "Rose Lantern",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Alien Dancer"
+    },
+    {
+      "amount": 1,
+      "name": "Stitch",
+      "version": "Carefree Snowboarder"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "The Frozen Vine",
+      "version": "Monstrous Plant"
+    },
+    {
+      "amount": 4,
+      "name": "Tigger",
+      "version": "Bouncing All the Way"
+    },
+    {
+      "amount": 2,
+      "name": "Tinker Bell",
+      "version": "Generous Fairy"
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Snowflake Collector"
+    },
+    {
+      "amount": 1,
+      "name": "Treasure Guardian",
+      "version": "Foreboding Sentry"
+    },
+    {
+      "amount": 1,
+      "name": "Winnie the Pooh",
+      "version": "Hunny Wizard"
+    }
+  ]
+}

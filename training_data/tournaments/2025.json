@@ -39767,5 +39767,146 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "1385010cc748f303f26a52f5270b40595854aef966c9f4313c35a4d880666030",
+    "name": "Mox Ballard Win-A-Case of Winterspell",
+    "url": "https://inkdecks.com/lorcana-tournaments/mox-ballard-win-a-case-of-winterspell-tournament-decks-363256",
+    "date": "2025-03-07",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c9b8bdb92be0ee8bbd402ed894df35c0066bca8d34aaa5ddb673cd3cc54d6ed4",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d813722334e9ebd8b22483411698ed0d0116cb74e73b9da68ed54276ddc6b045",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1f733de8e112f66ed207126bf9a8994dfe181a841f8a4453e7a48843b25c8caf",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a8d117e80e70d11d6889bb9977b2b67612401ea13af9ea13f9090586dad6196e",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d96563d7eb02c56571819d917ff9d95a78062c83cd63384484a01f619a98833c",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "030890468829af0f1de5eaa67c86b0148dc9d5500d47db96ae878512ba016e4f",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7a0805094621ac82bc3ee47e75dc37b1511ee4403fef473cf872f2b2bcfb64de",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "846e574c25d2c76e4c680047e92cdce1a103daec358cfbb4ed84f5afa5f2c1bf",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e54d26427b79703608b4e6a1a72bd0889c63ec56b55caad5f45c8afc7952b2ed",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2260220f72453a9b200da2328b8cd1ee99600562af19684ff0aa3a9bdc0df4cd",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "8da07581e711bba0564350c46b4568f242e650a3c8d7bdefa03709af62aa97d3",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "dea4265ba26324dabc03cd8db0cebd3798729f2a5759862fa5c24d5de701caea",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "c4d5bbc465a50ca279c0173c2a79996cc0058d344181905e0771b860f217ed54",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ff835a9e23a038d60d0bd9c24baec23846666a79bbd559ef290b73f2ae685dda",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a011c81e83c3916f813761b79515192815838a6e6876195e9c90ccc5f804fce4",
+        "place": 16,
+        "inks": [
+          "emerald",
+          "amber"
+        ]
+      },
+      {
+        "hash": "f7a88d6bbf6f24d310b676b9887d118272a5d6953e92b25095d4c3861ef1079a",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "amber"
+        ]
+      }
+    ]
   }
 ]

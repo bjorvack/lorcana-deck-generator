@@ -1,0 +1,124 @@
+{
+  "hash": "dea4265ba26324dabc03cd8db0cebd3798729f2a5759862fa5c24d5de701caea",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Akood et Emuti",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Flying Goof"
+    },
+    {
+      "amount": 3,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 2,
+      "name": "Judy Hopps",
+      "version": "Resourceful Rabbit"
+    },
+    {
+      "amount": 1,
+      "name": "Julieta Madrigal",
+      "version": "Excellent Cook"
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 1,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 1,
+      "name": "Minnie Mouse",
+      "version": "Daring Defender"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 2,
+      "name": "Raya",
+      "version": "Kumandran Rider"
+    },
+    {
+      "amount": 4,
+      "name": "Reuben",
+      "version": "Sandwich Expert"
+    },
+    {
+      "amount": 4,
+      "name": "Sarabi",
+      "version": "Protecting the Pride"
+    },
+    {
+      "amount": 2,
+      "name": "Slushy",
+      "version": "Glacial Guster"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Carefree Snowboarder"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 3,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}
