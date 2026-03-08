@@ -39908,5 +39908,170 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "aae84298e49991c6a1d7629f15caf50c43570140f755d9da0131dead14928606",
+    "name": "Blizzard Brawl",
+    "url": "https://inkdecks.com/lorcana-tournaments/blizzard-brawl-tournament-decks-363226",
+    "date": "2025-03-07",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "58ddd229f3bbd54922f34a928c2183ff23f4536e1f21c6f29ed4bdb47b633bdf",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4c505830097043fe467c8af8cda1cc07f03bd21eca88cf3c338cab1784de3bb3",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7cd5881c9221c5101648a41cb954cff0f336695c22bd9452bed85c9d57cd9e42",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "377d35a37f8f4dba4fcd680b412d3e7a4758be39e5188e00a57c9709911f0164",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d72283f45bc1e2782f43c86624ab0492b061661786d05bafdac404c23fd29054",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0171258af1ff8485a6fe7b533ad64b47c38c8171e8989608af64d23f2f5bfd6e",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0c6a02a5099939102f83d74a807bc3477db31aab72f2526c568f87fa02e94b35",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "35a84929ef16fcfdc3dd114b82f5342bb1b16e066b254d71ce352f6b80f74d2a",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2cc59f4730ffe482a09ffb40ac573f9d85472e2063a143e137566db9260337d8",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d816f4f402ab67dc8f7a46962b24d58e2814edcc2ebebb9ad110240c571949b5",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1c83c16ac132cc3369c1dd574266e87b2d5f178841a669f8b5eed87ecd348ee6",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "587c669bfed3abe78e1d108f6c40fb2e4ecd75b4402549b593ab1b0d61579919",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "85d1ff7fd6adf2d85818663f2da77b3562c8d69748bf40aba7c31dff7b2dc020",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a9c4f1adc50d5d9c63320e064f744abef46302101eea3723c0b8ec4cb1c169a9",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4cc4c38c3722adeccc41c8dc342366ee5a8b7dfa24b2a6d2fc67ce321b02040c",
+        "place": 16,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6d132a1478c3ed7c29e1be8a52e155dc82739a62679eca9d423ae7087d6dca26",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "8a56210fc74fcd9a3f56e6b4cbeca08953178687c23f66e9ae9acdc79f0a00d2",
+        "place": 32,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "1f9a84700940a3991b84fb05457ac95bd1d2900c4a799733a9ff82048e308f57",
+        "place": 32,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "1f9a84700940a3991b84fb05457ac95bd1d2900c4a799733a9ff82048e308f57",
+        "place": 32,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
