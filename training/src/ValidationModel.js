@@ -336,39 +336,9 @@ module.exports = class ValidationModel {
         return 0.0 // Can't play the deck
       }
 
-      // Check that at least 3 cards can produce each ink
-      const minCardsPerInk = 3
-      for (const requestedInk of requestedInks) {
-        const inkCount = inkCounts[requestedInk] || 0
-        if (inkCount * 60 < minCardsPerInk) {
-          console.log(`[RULE] Insufficient ${requestedInk} ink for [${requestedInks.join(', ')}]: ${Math.round(inkCount * 60)} cards - applying penalty`)
-          // Return neural network score but with significant penalty
-          const featuresTensor = tf.tensor2d([features])
-          const prediction = this.model.predict(featuresTensor)
-          const score = (await prediction.data())[0]
-          featuresTensor.dispose()
-          prediction.dispose()
-          return Math.max(0, score - 0.3) // Penalize by 30%
-        }
-      }
-
-      // For dual-ink decks, check for reasonable balance (not too lopsided)
-      if (requestedInks.length === 2) {
-        const ink1Count = inkCounts[requestedInks[0]] || 0
-        const ink2Count = inkCounts[requestedInks[1]] || 0
-        const ratio = Math.min(ink1Count, ink2Count) / Math.max(ink1Count, ink2Count + 0.001)
-
-        // If one ink is more than 4x the other, it's likely imbalanced
-        if (ratio < 0.25 && ink1Count > 0.1 && ink2Count > 0.1) {
-          console.log(`[RULE] Imbalanced dual-ink detected: ratio ${ratio.toFixed(2)} - applying penalty`)
-          const featuresTensor = tf.tensor2d([features])
-          const prediction = this.model.predict(featuresTensor)
-          const score = (await prediction.data())[0]
-          featuresTensor.dispose()
-          prediction.dispose()
-          return Math.max(0, score - 0.2) // Penalize by 20%
-        }
-      }
+      // Note: Ink balance is now handled by the neural network model
+      // The model learned what proper ink distributions look like during training
+      // We only enforce the hard rules (singleton ratio, uninkable ratio) here
     }
 
     // Otherwise, use neural network prediction
