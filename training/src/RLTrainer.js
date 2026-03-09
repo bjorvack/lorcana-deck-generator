@@ -97,13 +97,13 @@ class RLTrainer {
         fs.mkdirSync(dir, { recursive: true })
       }
 
-      // Convert episodes to deck data - store minimal info to save memory
+      // Convert episodes to deck data - store minimal info
       const decksData = episodes.map((episode, idx) => {
         const inks = inksList[idx]
         
         return {
           inks,
-          actions: episode.actions, // Store indices, not names
+          actions: episode.actions,
           reward: episode.reward,
           validatorReward: episode.validatorReward,
           consistencyReward: episode.consistencyReward,
@@ -111,21 +111,19 @@ class RLTrainer {
         }
       })
 
-      // Read existing file or create new
-      let existingData = []
+      // Append to file without reading (for efficiency)
+      const data = JSON.stringify(decksData, null, 2)
+      
       if (fs.existsSync(this.tempDecksPath)) {
-        try {
-          existingData = JSON.parse(fs.readFileSync(this.tempDecksPath, 'utf8'))
-        } catch (e) {
-          existingData = []
-        }
+        // Append to existing file
+        const existingContent = fs.readFileSync(this.tempDecksPath, 'utf8')
+        const existingData = existingContent ? JSON.parse(existingContent) : []
+        existingData.push(...decksData)
+        fs.writeFileSync(this.tempDecksPath, JSON.stringify(existingData, null, 2))
+      } else {
+        // Create new file
+        fs.writeFileSync(this.tempDecksPath, JSON.stringify(decksData, null, 2))
       }
-
-      // Append new decks
-      existingData.push(...decksData)
-
-      // Write back
-      fs.writeFileSync(this.tempDecksPath, JSON.stringify(existingData, null, 2))
     } catch (err) {
       console.error(`[RL] Warning: Failed to save temp decks file: ${err.message}`)
     }
