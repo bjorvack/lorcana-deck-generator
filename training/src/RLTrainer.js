@@ -30,6 +30,53 @@ class RLTrainer {
     this.replayBuffer = []
     this.replayRatio = options.replayRatio || 0.3 // 30% of batch from replay
     this.minRewardForReplay = 0.6 // Only store episodes with reward >= this
+
+    // Cache: Valid cards per ink combination (for fast lookup)
+    this.validCardsCache = new Map()
+    this._buildValidCardsCache()
+  }
+
+  /**
+   * Build cache of valid card indices for each ink combination
+   * This speeds up deck generation significantly
+   */
+  _buildValidCardsCache () {
+    const allInks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
+    const inkCombinations = []
+
+    // Single-ink
+    for (const ink of allInks) {
+      inkCombinations.push([ink])
+    }
+    // Dual-ink
+    for (let i = 0; i < allInks.length; i++) {
+      for (let j = i + 1; j < allInks.length; j++) {
+        inkCombinations.push([allInks[i], allInks[j]])
+      }
+    }
+
+    for (const inks of inkCombinations) {
+      const validCards = []
+      for (const [idx, card] of this.trainingManager.indexMap) {
+        const cardInks = card.inks || (card.ink ? [card.ink] : [])
+        // Check if card can be used with these inks
+        const isAllowed = cardInks.length === 0 || cardInks.every(ink => inks.includes(ink))
+        if (isAllowed) {
+          validCards.push(idx)
+        }
+      }
+      const key = inks.sort().join('+')
+      this.validCardsCache.set(key, validCards)
+    }
+    console.log(`[RL] Cached valid cards for ${this.validCardsCache.size} ink combinations`)
+  }
+
+  /**
+   * Get cached valid cards for an ink combination
+   */
+  _getValidCards (inks) {
+    const key = inks.sort().join('+')
+    return this.validCardsCache.get(key) || []
   }
 
   /**
@@ -105,6 +152,9 @@ class RLTrainer {
     const deck = []
     const cardCounts = new Map()
     const deckKeywords = new Set() // Track keywords for synergy
+    
+    // Get cached valid cards for this ink combination
+    const validCards = this._getValidCards(inks)
 
     // Generate deck card by card
     while (deck.length < 60) {
@@ -122,8 +172,8 @@ class RLTrainer {
         ? await this.policy.predictWithContext(deck, context)
         : await this.policy.predict(deck)
 
-      // Sample action using policy
-      const { action, logProb } = this.sampleActionFromPolicy(probs, deck, cardCounts, inks)
+      // Sample action using policy (pass validCards for fast filtering)
+      const { action, logProb } = this.sampleActionFromPolicy(probs, deck, cardCounts, inks, validCards)
 
       episode.actions.push(action)
       episode.logProbs.push(logProb)
@@ -534,7 +584,7 @@ class RLTrainer {
      * Sample action from policy with exploration
      * Filters invalid actions (exceeds max count)
      */
-  sampleActionFromPolicy (probs, currentDeck, cardCounts, allowedInks) {
+  sampleActionFromPolicy (probs, currentDeck, cardCounts, allowedInks, validCardsCache = null) {
     // Create array from Float32Array
     let probsArray = Array.from(probs)
 
@@ -559,24 +609,26 @@ class RLTrainer {
     }
 
     // Mask invalid actions (cards at max count or wrong ink)
+    // Use cached valid cards if available for fast filtering
     const maskedProbs = probsArray.map((p, idx) => {
-      const card = this.trainingManager.indexMap.get(idx)
-      if (!card) return 0
+      // Fast path: use cached valid cards
+      if (validCardsCache && validCardsCache.length > 0) {
+        if (!validCardsCache.includes(idx)) return 0
+      } else {
+        // Slow path: check ink constraints
+        const card = this.trainingManager.indexMap.get(idx)
+        if (!card) return 0
 
-      const count = cardCounts.get(idx) || 0
-      const maxAmount = card.maxAmount || 4
-
-      // Can't add more if at max
-      if (count >= maxAmount) return 0
-
-      // Check Ink Constraints
-      if (allowedInks && allowedInks.length > 0) {
         const cardInks = card.inks || (card.ink ? [card.ink] : [])
-        if (cardInks.length > 0) {
-          const isAllowed = cardInks.every(ink => allowedInks.includes(ink))
-          if (!isAllowed) return 0
+        if (allowedInks && allowedInks.length > 0 && cardInks.length > 0) {
+          if (!cardInks.every(ink => allowedInks.includes(ink))) return 0
         }
       }
+      
+      // Check max count (applies to both paths)
+      const count = cardCounts.get(idx) || 0
+      const maxAmount = 4 // Default max
+      if (count >= maxAmount) return 0
 
       return p
     })
@@ -828,22 +880,31 @@ class RLTrainer {
       console.log(`\n--- Epoch ${epoch + 1}/${numEpochs} ---`)
 
       // Collect episodes from ALL ink combinations this epoch
-      const allEpisodes = []
-
-      // Shuffle ink combinations for variety within epoch
+      // Use PARALLEL deck generation for speedup
       const shuffledInks = [...inkCombinations].sort(() => Math.random() - 0.5)
 
+      // Build list of all (inks, deckIndex) pairs to generate
+      const tasks = []
       for (const inks of shuffledInks) {
-        // Generate multiple decks for this ink combination
         for (let d = 0; d < decksPerInk; d++) {
-          const episode = await this.collectEpisode(inks)
-          allEpisodes.push(episode)
-          this.addToReplayBuffer(episode)
+          tasks.push({ inks, deckIdx: d })
         }
-
-        process.stdout.write(`\r  ${inks.join(' + ')}: ${decksPerInk} decks`)
       }
-      console.log('') // Newline after ink progress
+
+      console.log(`  Generating ${tasks.length} decks in parallel...`)
+
+      // Generate all decks in parallel
+      const startTime = Date.now()
+      const episodePromises = tasks.map(task => this.collectEpisode(task.inks))
+      const allEpisodes = await Promise.all(episodePromises)
+      
+      // Add all to replay buffer
+      for (const episode of allEpisodes) {
+        this.addToReplayBuffer(episode)
+      }
+
+      const elapsed = Date.now() - startTime
+      console.log(`  Generated ${allEpisodes.length} decks in ${elapsed}ms`)
 
       // Shuffle all episodes before policy update (Fisher-Yates)
       for (let i = allEpisodes.length - 1; i > 0; i--) {
