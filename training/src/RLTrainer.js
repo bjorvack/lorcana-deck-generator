@@ -1,6 +1,4 @@
 const tf = require('@tensorflow/tfjs-node')
-const fs = require('fs')
-const path = require('path')
 
 /**
  * RLTrainer - REINFORCE algorithm for training deck generator
@@ -11,9 +9,6 @@ class RLTrainer {
     this.policy = policyModel
     this.validator = validatorModel
     this.trainingManager = trainingManager
-    
-    // Temporary file for generated decks (for validation access)
-    this.tempDecksPath = options.tempDecksPath || './training_data/temp_generated_decks.json'
 
     // Hyperparameters
     this.learningRate = options.learningRate || 0.0001
@@ -82,64 +77,6 @@ class RLTrainer {
   _getValidCards (inks) {
     const key = inks.sort().join('+')
     return this.validCardsCache.get(key) || []
-  }
-
-  /**
-   * Save generated decks to temporary JSON file for validation access
-   * @param {Array} episodes - Array of episode objects containing deck info
-   * @param {Array} inksList - Array of ink combinations for each episode
-   */
-  _saveDecksToTempFile (episodes, inksList) {
-    try {
-      // Ensure directory exists
-      const dir = path.dirname(this.tempDecksPath)
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true })
-      }
-
-      // Convert episodes to deck data - store minimal info
-      const decksData = episodes.map((episode, idx) => {
-        const inks = inksList[idx]
-        
-        return {
-          inks,
-          actions: episode.actions,
-          reward: episode.reward,
-          validatorReward: episode.validatorReward,
-          consistencyReward: episode.consistencyReward,
-          synergyReward: episode.synergyReward
-        }
-      })
-
-      // Append to file without reading (for efficiency)
-      const data = JSON.stringify(decksData, null, 2)
-      
-      if (fs.existsSync(this.tempDecksPath)) {
-        // Append to existing file
-        const existingContent = fs.readFileSync(this.tempDecksPath, 'utf8')
-        const existingData = existingContent ? JSON.parse(existingContent) : []
-        existingData.push(...decksData)
-        fs.writeFileSync(this.tempDecksPath, JSON.stringify(existingData, null, 2))
-      } else {
-        // Create new file
-        fs.writeFileSync(this.tempDecksPath, JSON.stringify(decksData, null, 2))
-      }
-    } catch (err) {
-      console.error(`[RL] Warning: Failed to save temp decks file: ${err.message}`)
-    }
-  }
-
-  /**
-   * Clear the temporary decks file
-   */
-  _clearTempDecksFile () {
-    try {
-      if (fs.existsSync(this.tempDecksPath)) {
-        fs.unlinkSync(this.tempDecksPath)
-      }
-    } catch (err) {
-      // Ignore errors - file may not exist
-    }
   }
 
   /**
@@ -284,10 +221,6 @@ class RLTrainer {
     const singletonPenaltyScore = this.calculateSingletonPenalty(deck)
     const uninkablePenaltyScore = this.calculateUninkablePenalty(deck)
 
-    episode.validatorReward = validatorReward
-    episode.consistencyReward = consistencyReward
-    episode.synergyReward = synergyReward
-    
     // Weighted sum:
     // Validator (Quality & Balance): 35% - Let the learned model decide what is "good"
     // Consistency (Structure): 8% - Reward playing multiple copies
@@ -300,10 +233,10 @@ class RLTrainer {
     // Minimum Ink: 5% - Reward having 4+ copies of each ink
     // Singleton Penalty: 5% - Penalize excessive singletons
     // Uninkable Penalty: 5% - Penalize excessive uninkable cards
-    episode.reward = (validatorReward * 0.35) + 
-                     (consistencyReward * 0.08) + 
-                     (synergyReward * 0.10) + 
-                     (keywordSynergyReward * 0.07) + 
+    episode.reward = (validatorReward * 0.35) +
+                     (consistencyReward * 0.08) +
+                     (synergyReward * 0.10) +
+                     (keywordSynergyReward * 0.07) +
                      (abilityComboReward * 0.07) +
                      (inkCurveScore * 0.07) +
                      (cardTypeScore * 0.07) +
@@ -951,9 +884,6 @@ class RLTrainer {
     for (let epoch = 0; epoch < numEpochs; epoch++) {
       console.log(`\n--- Epoch ${epoch + 1}/${numEpochs} ---`)
 
-      // Clear temp file at start of epoch
-      this._clearTempDecksFile()
-
       // Collect episodes from ALL ink combinations this epoch
       // Use PARALLEL deck generation for speedup
       const shuffledInks = [...inkCombinations].sort(() => Math.random() - 0.5)
@@ -999,9 +929,6 @@ class RLTrainer {
         
         const batchEpisodes = await Promise.all(batchPromises)
         allEpisodes.push(...batchEpisodes)
-        
-        // Save batches to temp file incrementally (for validation access)
-        this._saveDecksToTempFile(batchEpisodes, tasks.slice(i, i + batchSize).map(t => t.inks))
       }
       console.log('') // Newline after progress
       
