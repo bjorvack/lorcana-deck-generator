@@ -41648,5 +41648,34 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "c53afd7aa75b5408c54cdca87adb2204647e20609ef83ff06f1a261c8c18ef96",
+    "name": "CCS Lorcana $25,000 Weekend - Invitational Qualifier 3",
+    "url": "https://inkdecks.com/lorcana-tournaments/ccs-lorcana-25-000-weekend-invitational-qualifier-3-tournament-decks-363261",
+    "date": "2025-03-07",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "174ef0d72794abd7ec81437182317c23427316a1ec4896c1d10019394c0478ab",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "5b13506fdf403262c4976e4e397ebd53265f3ba9c731d3571280e31ce459caa2",
+        "place": 16,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      }
+    ]
   }
 ]
