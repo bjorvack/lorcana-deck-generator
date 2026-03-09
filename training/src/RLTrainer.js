@@ -893,10 +893,31 @@ class RLTrainer {
 
       console.log(`  Generating ${tasks.length} decks in parallel...`)
 
-      // Generate all decks in parallel
+      // Generate all decks in parallel with progress tracking
       const startTime = Date.now()
-      const episodePromises = tasks.map(task => this.collectEpisode(task.inks))
+      let completed = 0
+      const total = tasks.length
+      
+      // Simple progress bar
+      const progressWidth = 30
+      const updateProgress = () => {
+        const percent = completed / total
+        const filled = Math.floor(percent * progressWidth)
+        const bar = '█'.repeat(filled) + '░'.repeat(progressWidth - filled)
+        process.stdout.write(`\r  [${bar}] ${completed}/${total} decks`)
+      }
+
+      // Wrap promises to track completion
+      const episodePromises = tasks.map(task => 
+        this.collectEpisode(task.inks).then(episode => {
+          completed++
+          updateProgress()
+          return episode
+        })
+      )
+      
       const allEpisodes = await Promise.all(episodePromises)
+      console.log('') // Newline after progress
       
       // Add all to replay buffer
       for (const episode of allEpisodes) {
