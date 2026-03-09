@@ -9,7 +9,10 @@
     "dev": "webpack --mode development --watch",
     "start": "webpack serve --mode development --open",
     "lint": "standard",
-    "lint:fix": "standard --fix"
+    "lint:fix": "standard --fix",
+    "train": "node training/train.js",
+    "train-validator": "node training/train-validator.js",
+    "train-rl": "node training/train_rl.js"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
