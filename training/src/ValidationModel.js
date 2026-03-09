@@ -339,6 +339,29 @@ module.exports = class ValidationModel {
       // Note: Ink balance is now handled by the neural network model
       // The model learned what proper ink distributions look like during training
       // We only enforce the hard rules (singleton ratio, uninkable ratio) here
+
+      // Check that at least 2 cards can produce each ink (soft check)
+      const minCardsPerInk = 2
+      let inkBalanceIssue = false
+      for (const requestedInk of requestedInks) {
+        const inkCount = inkCounts[requestedInk] || 0
+        if (inkCount * 60 < minCardsPerInk) {
+          inkBalanceIssue = true
+          break
+        }
+      }
+      
+      // For dual-ink decks, check for reasonable balance
+      if (!inkBalanceIssue && requestedInks.length === 2) {
+        const ink1Count = inkCounts[requestedInks[0]] || 0
+        const ink2Count = inkCounts[requestedInks[1]] || 0
+        const ratio = Math.min(ink1Count, ink2Count) / Math.max(ink1Count + 0.001, ink2Count + 0.001)
+        
+        // If one ink is more than 5x the other, flag as imbalanced
+        if (ratio < 0.2) {
+          console.log(`[RULE] Imbalanced dual-ink: [${requestedInks.join(', ')}] ratio ${ratio.toFixed(2)}`)
+        }
+      }
     }
 
     // Otherwise, use neural network prediction
