@@ -107,14 +107,19 @@ module.exports = class ValidationModel {
     console.log('Regularization: L2=0.001, Dropout=0.3')
     console.log('Target: 90% of real decks validated as valid\n')
 
+    // Binarize labels: real decks (0.6-0.85) become 1, fake decks (0) become 0
+    // This makes the binaryCrossentropy loss function work properly
+    const binaryLabels = labels.map(l => l > 0 ? 1 : 0)
+    
     const featuresTensor = tf.tensor2d(features)
-    const labelsTensor = tf.tensor2d(labels.map(l => [l]))
+    const labelsTensor = tf.tensor2d(binaryLabels.map(l => [l]))
 
     // Split train/val
     const splitIdx = Math.floor(labels.length * 0.8)
     
     const valFeatures = features.slice(splitIdx)
     const valLabels = labels.slice(splitIdx)
+    const valBinaryLabels = binaryLabels.slice(splitIdx)
 
     // Learning rate scheduler: reduce LR when validation loss plateaus
     let bestValLoss = Infinity
@@ -161,11 +166,11 @@ module.exports = class ValidationModel {
             const valPreds = await valPredTensor.data()
             valPredTensor.dispose()
             
-            // Calculate real deck validation rate
-            const realDeckAccuracy = calculateRealDeckAccuracy(valPreds, valLabels)
+            // Calculate real deck validation rate using binary labels
+            const realDeckAccuracy = calculateRealDeckAccuracy(valPreds, valBinaryLabels)
             const fakeDeckAccuracy = calculateRealDeckAccuracy(
               valPreds.map(p => 1 - p), 
-              valLabels.map(l => l === 0 ? 1 : 0)
+              valBinaryLabels.map(l => 1 - l)
             )
 
             // Calculate average scores for real and fake decks
@@ -174,8 +179,8 @@ module.exports = class ValidationModel {
             let fakeDeckSum = 0
             let fakeDeckCount = 0
             
-            for (let i = 0; i < valLabels.length; i++) {
-              if (valLabels[i] > 0) {
+            for (let i = 0; i < valBinaryLabels.length; i++) {
+              if (valBinaryLabels[i] === 1) {
                 realDeckSum += valPreds[i]
                 realDeckCount++
               } else {
@@ -235,10 +240,10 @@ module.exports = class ValidationModel {
     const valPreds = await valPredTensor.data()
     valPredTensor.dispose()
 
-    const finalRealDeckRate = calculateRealDeckAccuracy(valPreds, valLabels)
+    const finalRealDeckRate = calculateRealDeckAccuracy(valPreds, valBinaryLabels)
     const finalFakeDeckRate = calculateRealDeckAccuracy(
       valPreds.map(p => 1 - p),
-      valLabels.map(l => l === 0 ? 1 : 0)
+      valBinaryLabels.map(l => 1 - l)
     )
     const finalAcc = history.history.val_acc[history.history.val_acc.length - 1]
 
@@ -248,8 +253,8 @@ module.exports = class ValidationModel {
     let fakeDeckSum = 0
     let fakeDeckCount = 0
     
-    for (let i = 0; i < valLabels.length; i++) {
-      if (valLabels[i] > 0) {
+    for (let i = 0; i < valBinaryLabels.length; i++) {
+      if (valBinaryLabels[i] === 1) {
         realDeckSum += valPreds[i]
         realDeckCount++
       } else {

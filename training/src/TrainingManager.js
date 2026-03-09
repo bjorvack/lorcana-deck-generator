@@ -2096,26 +2096,6 @@ module.exports = class TrainingManager {
 
     this.log(`Generated ${partialDeckCount} partial decks (medium quality)`)
 
-    // IMPORTANT: Shuffle features and labels together to ensure train/val split has both real and fake decks
-    // Create paired array
-    const pairedData = features.map((f, i) => ({ features: f, label: labels[i] }))
-    
-    // Fisher-Yates shuffle
-    for (let i = pairedData.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [pairedData[i], pairedData[j]] = [pairedData[j], pairedData[i]]
-    }
-    
-    // Unpair back to separate arrays
-    const shuffledFeatures = pairedData.map(p => p.features)
-    const shuffledLabels = pairedData.map(p => p.label)
-    
-    // Replace original arrays
-    features.length = 0
-    labels.length = 0
-    features.push(...shuffledFeatures)
-    labels.push(...shuffledLabels)
-
     // Updated fake deck strategies - more diverse negative examples
     const strategyCounts = {
       pure_random: Math.floor(realDeckCount * 0.15),
@@ -2140,6 +2120,28 @@ module.exports = class TrainingManager {
 
     this.log(`Generated ${realDeckCount} fake decks`)
     this.log(`Total dataset size: ${features.length} decks`)
+
+    // IMPORTANT: Shuffle features and labels together AFTER adding all decks (real + partial + fake)
+    // This ensures train/val split has both real and fake decks
+    // Create paired array
+    const pairedData = features.map((f, i) => ({ features: f, label: labels[i] }))
+    
+    // Fisher-Yates shuffle
+    for (let i = pairedData.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pairedData[i], pairedData[j]] = [pairedData[j], pairedData[i]]
+    }
+    
+    // Unpair back to separate arrays
+    const shuffledFeatures = pairedData.map(p => p.features)
+    const shuffledLabels = pairedData.map(p => p.label)
+    
+    // Replace original arrays
+    features.length = 0
+    labels.length = 0
+    features.push(...shuffledFeatures)
+    labels.push(...shuffledLabels)
+
     if (features.length > 0) {
       this.log(`Feature dimension: ${features[0].length}`)
     }
