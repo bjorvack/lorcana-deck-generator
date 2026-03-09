@@ -845,6 +845,12 @@ class RLTrainer {
       }
       console.log('') // Newline after ink progress
 
+      // Shuffle all episodes before policy update (Fisher-Yates)
+      for (let i = allEpisodes.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [allEpisodes[i], allEpisodes[j]] = [allEpisodes[j], allEpisodes[i]];
+      }
+
       // Calculate statistics for this epoch
       const rewards = allEpisodes.map(ep => ep.reward)
       const avgReward = rewards.reduce((a, b) => a + b, 0) / rewards.length
