@@ -858,6 +858,11 @@ class RLTrainer {
     const decksPerInk = options.decksPerInk || 10 // Number of decks to generate per ink combo per epoch
     const maxTimeMinutes = options.maxTimeMinutes || null
     const startTime = Date.now()
+    
+    // Entropy scheduling for exploration→exploitation
+    const entropyCoefStart = 0.1 // High exploration early
+    const entropyCoefEnd = 0.001 // Low exploitation later
+    const entropyDecayEpochs = Math.min(20, numEpochs) // Decay over 20 epochs
 
     // Generate all possible ink combinations (single and dual)
     const allInks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
@@ -886,6 +891,14 @@ class RLTrainer {
     let combinationIndex = 0
 
     for (let epoch = 0; epoch < numEpochs; epoch++) {
+      // Calculate entropy coefficient for this epoch (exponential decay)
+      const epochProgress = epoch / entropyDecayEpochs
+      const currentEntropyCoef = entropyCoefStart * Math.exp(-3 * epochProgress) + entropyCoefEnd
+      this.entropyCoef = currentEntropyCoef
+      
+      // Save for logging
+      const epochEntropyCoef = currentEntropyCoef
+
       // Check time limit
       if (maxTimeMinutes) {
         const elapsedMinutes = (Date.now() - startTime) / 60000
@@ -982,6 +995,7 @@ class RLTrainer {
       // Print epoch summary
       const replayStats = this.getReplayStats()
       console.log(`[RL] Epoch ${epoch + 1} Summary:`)
+      console.log(`  Entropy Coef: ${epochEntropyCoef.toFixed(4)} (explore→exploit)`)
       console.log(`  Avg Reward: ${avgReward.toFixed(4)} ± ${stdReward.toFixed(4)}`)
       console.log(`  Validator Score: ${avgValidatorScore.toFixed(4)} (raw validator approval)`)
       console.log(`  Baseline: ${this.baseline.toFixed(4)}`)
