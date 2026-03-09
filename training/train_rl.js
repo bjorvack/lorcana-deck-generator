@@ -98,6 +98,7 @@ async function main() {
     : null
 
   const numEpochs = singleCycle ? 1 : (maxTimeMinutes ? 999 : 50)
+  const decksPerInk = singleCycle ? 3 : 10 // Fewer decks for single epoch test
   
   if (singleCycle) {
     console.log('Running SINGLE epoch only (--single flag)\n')
@@ -108,7 +109,7 @@ async function main() {
   // Start RL Training
   await rlTrainer.train({
     numEpochs,
-    decksPerInk: 10, // Generate 10 decks per ink combination per epoch (210 decks/epoch)
+    decksPerInk, // 3 for single mode, 10 otherwise
     saveInterval: 10,
     savePath: path.join(__dirname, '..', 'training_data', 'deck-generator-rl'),
     maxTimeMinutes

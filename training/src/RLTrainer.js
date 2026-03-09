@@ -774,15 +774,17 @@ class RLTrainer {
      * Update policy using REINFORCE algorithm
      */
   async updatePolicy (episodes) {
-    // 1. Prepare data
+    // 1. Prepare data - limit to first 10 states per episode to reduce memory
     const states = []
     const actions = []
     const advantages = []
+    const maxStatesPerEpisode = 10 // Only use first 10 states per deck (210*10=2100 vs 210*60=12600)
 
     for (const episode of episodes) {
       const returns = this.computeReturns(episode)
-
-      for (let t = 0; t < episode.states.length; t++) {
+      const numStates = Math.min(episode.states.length, maxStatesPerEpisode)
+      
+      for (let t = 0; t < numStates; t++) {
         // Pad state to maxLen
         const deck = episode.states[t]
         const paddedSeq = new Array(this.policy.maxLen).fill(0)
@@ -812,7 +814,6 @@ class RLTrainer {
       const logits = this.policy.model.predict(statesTensor)
 
       // Calculate log probs
-      // Add epsilon to avoid log(0)
       const logProbs = tf.log(tf.add(logits, 1e-10))
 
       // Select log prob of taken actions
@@ -820,7 +821,6 @@ class RLTrainer {
       const selectedLogProbs = tf.sum(tf.mul(logProbs, actionMask), 1)
 
       // Loss = -mean(log_prob * advantage)
-      // We want to maximize reward, so minimize negative reward
       const loss = tf.mean(tf.mul(tf.neg(selectedLogProbs), advantagesTensor))
 
       // Add entropy regularization
@@ -834,7 +834,6 @@ class RLTrainer {
     }
 
     // Apply gradients
-    // minimize returns the value of the loss function
     const varList = this.policy.model.trainableWeights.map(w => w.val)
     const loss = this.optimizer.minimize(lossFunction, true, varList)
 
