@@ -1493,15 +1493,15 @@ module.exports = class TrainingManager {
       else if (count === 4) copyDistribution[3]++
       else copyDistribution[4]++
     }
-    const totalUniqueCards = [...cardCounts.keys()].length
+    const totalUniqueCards = Math.max(1, [...cardCounts.keys()].length)
     copyDistribution.forEach((count, i) =>
-      features.push(count / Math.max(1, totalUniqueCards))
+      features.push(count / totalUniqueCards)
     )
 
     // Additional features
     const costCounts = Array(10).fill(0)
     let inkableCount = 0
-    const totalCards = deckIndices.length
+    const totalCards = Math.max(1, deckIndices.length) // Prevent division by zero
     const typeCounts = { character: 0, action: 0, item: 0, location: 0 }
     const inkCounts = { Amber: 0, Amethyst: 0, Emerald: 0, Ruby: 0, Sapphire: 0, Steel: 0 }
     const keywordCounts = { Ward: 0, Evasive: 0, Bodyguard: 0, Resist: 0, Singer: 0, Shift: 0, Reckless: 0, Challenger: 0, Rush: 0 }
