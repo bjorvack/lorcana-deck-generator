@@ -853,7 +853,7 @@ class RLTrainer {
      */
   async train (options = {}) {
     const numEpochs = options.numEpochs || 100
-    const saveInterval = options.saveInterval || 10
+    const saveInterval = options.saveInterval || 1 // Default: save every epoch
     const savePath = options.savePath || './training_data/deck-generator-rl'
     const decksPerInk = options.decksPerInk || 10 // Number of decks to generate per ink combo per epoch
     const maxTimeMinutes = options.maxTimeMinutes || null
