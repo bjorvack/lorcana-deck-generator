@@ -97,17 +97,13 @@ class RLTrainer {
         fs.mkdirSync(dir, { recursive: true })
       }
 
-      // Convert episodes to deck data
+      // Convert episodes to deck data - store minimal info to save memory
       const decksData = episodes.map((episode, idx) => {
         const inks = inksList[idx]
-        const deckCards = episode.actions.map(cardIdx => {
-          const card = this.trainingManager.indexMap.get(cardIdx)
-          return card ? card.name : `card_${cardIdx}`
-        })
         
         return {
           inks,
-          cards: deckCards,
+          actions: episode.actions, // Store indices, not names
           reward: episode.reward,
           validatorReward: episode.validatorReward,
           consistencyReward: episode.consistencyReward,
