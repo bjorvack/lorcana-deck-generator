@@ -1,4 +1,3 @@
 /node_modules/
 /dist/
 deck-generator-rl_epoch*
-training_data/deck-validator-model/
