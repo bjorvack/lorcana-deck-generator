@@ -341,7 +341,7 @@ module.exports = class ValidationModel {
       for (const requestedInk of requestedInks) {
         const inkCount = inkCounts[requestedInk] || 0
         if (inkCount * 60 < minCardsPerInk) {
-          console.log(`[RULE] Insufficient ${requestedInk} ink: ${Math.round(inkCount * 60)} cards - applying penalty`)
+          console.log(`[RULE] Insufficient ${requestedInk} ink for [${requestedInks.join(', ')}]: ${Math.round(inkCount * 60)} cards - applying penalty`)
           // Return neural network score but with significant penalty
           const featuresTensor = tf.tensor2d([features])
           const prediction = this.model.predict(featuresTensor)
