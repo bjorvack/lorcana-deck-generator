@@ -136,6 +136,19 @@ class RLTrainer {
   }
 
   /**
+   * Clear the temporary decks file
+   */
+  _clearTempDecksFile () {
+    try {
+      if (fs.existsSync(this.tempDecksPath)) {
+        fs.unlinkSync(this.tempDecksPath)
+      }
+    } catch (err) {
+      // Ignore errors - file may not exist
+    }
+  }
+
+  /**
    * Add episode to replay buffer
    * Only stores high-quality episodes for replay
    */
@@ -943,6 +956,9 @@ class RLTrainer {
 
     for (let epoch = 0; epoch < numEpochs; epoch++) {
       console.log(`\n--- Epoch ${epoch + 1}/${numEpochs} ---`)
+
+      // Clear temp file at start of epoch
+      this._clearTempDecksFile()
 
       // Collect episodes from ALL ink combinations this epoch
       // Use PARALLEL deck generation for speedup
