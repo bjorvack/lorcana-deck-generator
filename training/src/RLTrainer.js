@@ -26,7 +26,7 @@ class RLTrainer {
     this.baseline = 0.5 // Running average of rewards
 
     // Experience Replay Buffer
-    this.replayBufferSize = options.replayBufferSize || 1000
+    this.replayBufferSize = options.replayBufferSize || 500 // Reduced from 1000
     this.replayBuffer = []
     this.replayRatio = options.replayRatio || 0.3 // 30% of batch from replay
     this.minRewardForReplay = 0.6 // Only store episodes with reward >= this
@@ -87,8 +87,13 @@ class RLTrainer {
     // Only store good episodes to improve sample efficiency
     if (episode.reward >= this.minRewardForReplay) {
       // Store a copy (not reference) to avoid mutation
+      // Only store first and last state to save memory (intermediate states not needed)
+      const statesToStore = [
+        episode.states[0],  // First state
+        episode.states[episode.states.length - 1]  // Last state (full deck)
+      ]
       this.replayBuffer.push({
-        states: episode.states.map(s => [...s]),
+        states: statesToStore,
         actions: [...episode.actions],
         logProbs: [...episode.logProbs],
         reward: episode.reward
@@ -964,6 +969,9 @@ class RLTrainer {
       console.log(`  Baseline: ${this.baseline.toFixed(4)}`)
       console.log(`  Loss: ${lossValue.toFixed(4)}`)
       console.log(`  Replay: ${replayStats.size} episodes (avg: ${replayStats.avgReward.toFixed(3)})`)
+
+      // Clear episode data to free memory
+      allEpisodes.length = 0
 
       // Save checkpoint
       if ((epoch + 1) % saveInterval === 0) {
