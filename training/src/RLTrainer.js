@@ -203,6 +203,9 @@ class RLTrainer {
     // The validator will penalize decks that don't match the learned ink profile patterns.
     const validatorReward = await this.validator.evaluate(deckFeatures, inks)
 
+    // Store validator reward separately for logging
+    episode.validatorReward = validatorReward
+
     // Calculate Consistency Reward (Bonus for multiple copies)
     const consistencyReward = this.calculateConsistencyReward(deck)
 
@@ -953,6 +956,10 @@ class RLTrainer {
         rewards.reduce((sum, r) => sum + Math.pow(r - avgReward, 2), 0) / rewards.length
       )
 
+      // Calculate validator-only scores (what validator would give without RL rules)
+      const validatorRewards = allEpisodes.map(ep => ep.validatorReward || 0)
+      const avgValidatorScore = validatorRewards.reduce((a, b) => a + b, 0) / validatorRewards.length
+
       // Update baseline
       if (this.useBaseline) {
         this.baseline = this.baseline * 0.9 + avgReward * 0.1
@@ -966,6 +973,7 @@ class RLTrainer {
       const replayStats = this.getReplayStats()
       console.log(`[RL] Epoch ${epoch + 1} Summary:`)
       console.log(`  Avg Reward: ${avgReward.toFixed(4)} ± ${stdReward.toFixed(4)}`)
+      console.log(`  Validator Score: ${avgValidatorScore.toFixed(4)} (raw validator approval)`)
       console.log(`  Baseline: ${this.baseline.toFixed(4)}`)
       console.log(`  Loss: ${lossValue.toFixed(4)}`)
       console.log(`  Replay: ${replayStats.size} episodes (avg: ${replayStats.avgReward.toFixed(3)})`)
