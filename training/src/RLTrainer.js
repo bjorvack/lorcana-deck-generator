@@ -1023,6 +1023,16 @@ class RLTrainer {
     await this.policy.saveModel(savePath)
     console.log(`\n[RL] Training complete! Final model saved to ${savePath}`)
 
+    // Save metrics for analysis
+    const metricsPath = `${savePath}_metrics.json`
+    const metrics = {
+      totalEpochs: numEpochs,
+      entropySchedule: { start: entropyCoefStart, end: entropyCoefEnd, decayEpochs: entropyDecayEpochs },
+      episodeRewards: this.episodeRewards
+    }
+    require('fs').writeFileSync(metricsPath, JSON.stringify(metrics, null, 2))
+    console.log(`[RL] Saved metrics to ${metricsPath}`)
+
     // Print summary
     console.log('\n=== Training Summary ===')
     console.log(`Final Avg Reward: ${this.episodeRewards[this.episodeRewards.length - 1].toFixed(4)}`)
