@@ -857,6 +857,8 @@ class RLTrainer {
     const saveInterval = options.saveInterval || 10
     const savePath = options.savePath || './training_data/deck-generator-rl'
     const decksPerInk = options.decksPerInk || 10 // Number of decks to generate per ink combo per epoch
+    const maxTimeMinutes = options.maxTimeMinutes || null
+    const startTime = Date.now()
 
     // Generate all possible ink combinations (single and dual)
     const allInks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
@@ -885,6 +887,15 @@ class RLTrainer {
     let combinationIndex = 0
 
     for (let epoch = 0; epoch < numEpochs; epoch++) {
+      // Check time limit
+      if (maxTimeMinutes) {
+        const elapsedMinutes = (Date.now() - startTime) / 60000
+        if (elapsedMinutes >= maxTimeMinutes) {
+          console.log(`\n⏰ Time limit of ${maxTimeMinutes} minutes reached. Stopping training.`)
+          break
+        }
+      }
+
       console.log(`\n--- Epoch ${epoch + 1}/${numEpochs} ---`)
 
       // Collect episodes from ALL ink combinations this epoch

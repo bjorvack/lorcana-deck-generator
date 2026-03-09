@@ -90,12 +90,28 @@ async function main() {
   )
   console.log('✓ RL Trainer ready\n')
 
+  // Parse command line args for single-cycle mode
+  const args = process.argv.slice(2)
+  const singleCycle = args.includes('--single') || args.includes('-1')
+  const maxTimeMinutes = args.includes('--time')
+    ? parseInt(args[args.indexOf('--time') + 1]) || 10
+    : null
+
+  const numEpochs = singleCycle ? 1 : (maxTimeMinutes ? 999 : 50)
+  
+  if (singleCycle) {
+    console.log('Running SINGLE epoch only (--single flag)\n')
+  } else if (maxTimeMinutes) {
+    console.log(`Running with ${maxTimeMinutes} minute time limit\n`)
+  }
+
   // Start RL Training
   await rlTrainer.train({
-    numEpochs: 50,
+    numEpochs,
     decksPerInk: 10, // Generate 10 decks per ink combination per epoch (210 decks/epoch)
     saveInterval: 10,
-    savePath: path.join(__dirname, '..', 'training_data', 'deck-generator-rl')
+    savePath: path.join(__dirname, '..', 'training_data', 'deck-generator-rl'),
+    maxTimeMinutes
   })
 
   console.log('\n✓ RL Training Complete!')

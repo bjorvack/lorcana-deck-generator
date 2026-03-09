@@ -317,13 +317,12 @@ module.exports = class ValidationModel {
     // Get singleton ratio (feature index 1)
     const singletonRatio = features[1]
     
-    // Get uninkable ratio (feature index 26)
-    const uninkableRatio = features[26] || 0
+    // Get inkable ratio (feature index 26) - uninkable is 1 - inkable
+    const inkableRatio = features[26] || 0
+    const uninkableRatio = 1 - inkableRatio
 
     if (requestedInks && requestedInks.length > 0) {
       const totalCards = features.reduce((sum, f) => sum + f, 0) // Approximate total
-      const inkableCards = features[12] // inkable ratio
-      const totalInkable = Math.round(inkableCards * 60)
 
       // RULE: Check singleton ratio - too many singletons is unrealistic
       if (singletonRatio > 0.35) {
