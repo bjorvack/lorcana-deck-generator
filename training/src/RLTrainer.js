@@ -891,12 +891,13 @@ class RLTrainer {
         }
       }
 
-      console.log(`  Generating ${tasks.length} decks in parallel...`)
+      console.log(`  Generating ${tasks.length} decks in parallel (max 10 at a time)...`)
 
-      // Generate all decks in parallel with progress tracking
+      // Generate decks in batches of 10 to limit memory usage
       const startTime = Date.now()
       let completed = 0
       const total = tasks.length
+      const batchSize = 10
       
       // Simple progress bar
       const progressWidth = 30
@@ -907,16 +908,23 @@ class RLTrainer {
         process.stdout.write(`\r  [${bar}] ${completed}/${total} decks`)
       }
 
-      // Wrap promises to track completion
-      const episodePromises = tasks.map(task => 
-        this.collectEpisode(task.inks).then(episode => {
-          completed++
-          updateProgress()
-          return episode
-        })
-      )
-      
-      const allEpisodes = await Promise.all(episodePromises)
+      // Process in batches
+      const allEpisodes = []
+      for (let i = 0; i < tasks.length; i += batchSize) {
+        const batch = tasks.slice(i, i + batchSize)
+        
+        // Run batch in parallel
+        const batchPromises = batch.map(task =>
+          this.collectEpisode(task.inks).then(episode => {
+            completed++
+            updateProgress()
+            return episode
+          })
+        )
+        
+        const batchEpisodes = await Promise.all(batchPromises)
+        allEpisodes.push(...batchEpisodes)
+      }
       console.log('') // Newline after progress
       
       // Add all to replay buffer
