@@ -536,7 +536,27 @@ class RLTrainer {
      */
   sampleActionFromPolicy (probs, currentDeck, cardCounts, allowedInks) {
     // Create array from Float32Array
-    const probsArray = Array.from(probs)
+    let probsArray = Array.from(probs)
+
+    // Apply VERY STRONG repetition bias to achieve ~30-40% singleton rate
+    // With 2000+ cards and 60 picks, random = 95%+ singletons
+    // Need exponential boost to prefer existing cards
+    // Strategy: 
+    // - If deck has 0-10 cards: moderate boost (5x)
+    // - If deck has 11-30 cards: strong boost (20x)  
+    // - If deck has 30+ cards: extreme boost (50x) to close out deck
+    const deckSize = currentDeck.length
+    let repeatBoost = 5.0
+    if (deckSize > 30) repeatBoost = 50.0
+    else if (deckSize > 10) repeatBoost = 20.0
+    
+    for (let i = 0; i < probsArray.length; i++) {
+      const count = cardCounts.get(i) || 0
+      if (count > 0) {
+        // Apply exponential bonus based on existing count
+        probsArray[i] *= Math.pow(repeatBoost, count)
+      }
+    }
 
     // Mask invalid actions (cards at max count or wrong ink)
     const maskedProbs = probsArray.map((p, idx) => {
