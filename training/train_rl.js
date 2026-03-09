@@ -92,7 +92,8 @@ async function main() {
 
   // Start RL Training
   await rlTrainer.train({
-    numEpochs: 50, // Start with fewer epochs
+    numEpochs: 50,
+    decksPerInk: 10, // Generate 10 decks per ink combination per epoch (210 decks/epoch)
     saveInterval: 10,
     savePath: path.join(__dirname, '..', 'training_data', 'deck-generator-rl')
   })

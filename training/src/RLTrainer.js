@@ -796,6 +796,7 @@ class RLTrainer {
     const numEpochs = options.numEpochs || 100
     const saveInterval = options.saveInterval || 10
     const savePath = options.savePath || './training_data/deck-generator-rl'
+    const decksPerInk = options.decksPerInk || 10 // Number of decks to generate per ink combo per epoch
 
     // Generate all possible ink combinations (single and dual)
     const allInks = ['Amber', 'Amethyst', 'Emerald', 'Ruby', 'Sapphire', 'Steel']
@@ -815,7 +816,8 @@ class RLTrainer {
 
     console.log('\n=== Starting RL Training ===')
     console.log(`Epochs: ${numEpochs}`)
-    console.log(`Batch Size: ${this.batchSize}`)
+    console.log(`Decks per ink: ${decksPerInk}`)
+    console.log(`Total decks per epoch: ${inkCombinations.length * decksPerInk}`)
     console.log(`Learning Rate: ${this.learningRate}`)
     console.log(`Ink Combinations: ${inkCombinations.length} (6 mono-color + 15 dual-color)`)
     console.log('================================\n')
@@ -823,14 +825,49 @@ class RLTrainer {
     let combinationIndex = 0
 
     for (let epoch = 0; epoch < numEpochs; epoch++) {
-      // Cycle through ink combinations
-      const inks = inkCombinations[combinationIndex % inkCombinations.length]
-      combinationIndex++
+      console.log(`\n--- Epoch ${epoch + 1}/${numEpochs} ---`)
 
-      console.log(`\n--- Epoch ${epoch + 1}/${numEpochs} [${inks.join(' + ')}] ---`)
+      // Collect episodes from ALL ink combinations this epoch
+      const allEpisodes = []
 
-      // Train one step
-      const metrics = await this.trainStep(inks)
+      // Shuffle ink combinations for variety within epoch
+      const shuffledInks = [...inkCombinations].sort(() => Math.random() - 0.5)
+
+      for (const inks of shuffledInks) {
+        // Generate multiple decks for this ink combination
+        for (let d = 0; d < decksPerInk; d++) {
+          const episode = await this.collectEpisode(inks)
+          allEpisodes.push(episode)
+          this.addToReplayBuffer(episode)
+        }
+
+        process.stdout.write(`\r  ${inks.join(' + ')}: ${decksPerInk} decks`)
+      }
+      console.log('') // Newline after ink progress
+
+      // Calculate statistics for this epoch
+      const rewards = allEpisodes.map(ep => ep.reward)
+      const avgReward = rewards.reduce((a, b) => a + b, 0) / rewards.length
+      const stdReward = Math.sqrt(
+        rewards.reduce((sum, r) => sum + Math.pow(r - avgReward, 2), 0) / rewards.length
+      )
+
+      // Update baseline
+      if (this.useBaseline) {
+        this.baseline = this.baseline * 0.9 + avgReward * 0.1
+      }
+
+      // Update policy using all collected episodes
+      const lossValue = await this.updatePolicy(allEpisodes)
+      this.episodeRewards.push(avgReward)
+
+      // Print epoch summary
+      const replayStats = this.getReplayStats()
+      console.log(`[RL] Epoch ${epoch + 1} Summary:`)
+      console.log(`  Avg Reward: ${avgReward.toFixed(4)} ± ${stdReward.toFixed(4)}`)
+      console.log(`  Baseline: ${this.baseline.toFixed(4)}`)
+      console.log(`  Loss: ${lossValue.toFixed(4)}`)
+      console.log(`  Replay: ${replayStats.size} episodes (avg: ${replayStats.avgReward.toFixed(3)})`)
 
       // Save checkpoint
       if ((epoch + 1) % saveInterval === 0) {
@@ -840,7 +877,7 @@ class RLTrainer {
       }
 
       // Early stopping
-      if (metrics.avgReward >= 0.9) {
+      if (avgReward >= 0.9) {
         console.log('\n[RL] Reached target reward of 0.9! Stopping early.')
         break
       }
@@ -855,7 +892,7 @@ class RLTrainer {
     console.log(`Final Avg Reward: ${this.episodeRewards[this.episodeRewards.length - 1].toFixed(4)}`)
     console.log(`Best Reward: ${Math.max(...this.episodeRewards).toFixed(4)}`)
     console.log(`Improvement: ${(this.episodeRewards[this.episodeRewards.length - 1] - this.episodeRewards[0]).toFixed(4)}`)
-    console.log(`Trained on ${inkCombinations.length} ink combinations`)
+    console.log(`Trained on ${inkCombinations.length} ink combinations x ${decksPerInk} decks per epoch`)
   }
 }
 
