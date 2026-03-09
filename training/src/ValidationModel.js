@@ -167,12 +167,32 @@ module.exports = class ValidationModel {
               valPreds.map(p => 1 - p), 
               valLabels.map(l => l === 0 ? 1 : 0)
             )
+
+            // Calculate average scores for real and fake decks
+            let realDeckSum = 0
+            let realDeckCount = 0
+            let fakeDeckSum = 0
+            let fakeDeckCount = 0
+            
+            for (let i = 0; i < valLabels.length; i++) {
+              if (valLabels[i] > 0) {
+                realDeckSum += valPreds[i]
+                realDeckCount++
+              } else {
+                fakeDeckSum += valPreds[i]
+                fakeDeckCount++
+              }
+            }
+            
+            const avgRealDeckScore = realDeckCount > 0 ? realDeckSum / realDeckCount : 0
+            const avgFakeDeckScore = fakeDeckCount > 0 ? fakeDeckSum / fakeDeckCount : 0
             
             // Format metrics nicely
             const metrics = [
               `loss=${logs.loss.toFixed(4)}`,
               `acc=${(logs.acc * 100).toFixed(1)}%`,
-              `real_decks=${(realDeckAccuracy * 100).toFixed(1)}%`,
+              `real=${(avgRealDeckScore * 100).toFixed(1)}%`,
+              `fake=${(avgFakeDeckScore * 100).toFixed(1)}%`,
               `val_loss=${logs.val_loss.toFixed(4)}`
             ]
             console.log(`Epoch ${epoch + 1}/${epochs}: ${metrics.join(', ')}`)
@@ -222,17 +242,40 @@ module.exports = class ValidationModel {
     )
     const finalAcc = history.history.val_acc[history.history.val_acc.length - 1]
 
+    // Calculate average scores for real and fake decks
+    let realDeckSum = 0
+    let realDeckCount = 0
+    let fakeDeckSum = 0
+    let fakeDeckCount = 0
+    
+    for (let i = 0; i < valLabels.length; i++) {
+      if (valLabels[i] > 0) {
+        realDeckSum += valPreds[i]
+        realDeckCount++
+      } else {
+        fakeDeckSum += valPreds[i]
+        fakeDeckCount++
+      }
+    }
+    
+    const avgRealDeckScore = realDeckCount > 0 ? realDeckSum / realDeckCount : 0
+    const avgFakeDeckScore = fakeDeckCount > 0 ? fakeDeckSum / fakeDeckCount : 0
+
     console.log('\n' + '='.repeat(50))
     console.log('📊 VALIDATOR TRAINING OVERVIEW')
     console.log('='.repeat(50))
     console.log(`Total training samples: ${labels.length}`)
-    console.log(`  - Real decks: ${valLabels.filter(l => l > 0).length}`)
-    console.log(`  - Fake decks: ${valLabels.filter(l => l === 0).length}`)
+    console.log(`  - Real decks: ${labels.filter(l => l > 0).length}`)
+    console.log(`  - Fake decks: ${labels.filter(l => l === 0).length}`)
     console.log('')
     console.log(`Final Results (validation set):`)
     console.log(`  - Real decks validated (>= 0.8): ${(finalRealDeckRate * 100).toFixed(1)}%`)
     console.log(`  - Fake decks rejected (< 0.8): ${(finalFakeDeckRate * 100).toFixed(1)}%`)
     console.log(`  - Overall accuracy: ${(finalAcc * 100).toFixed(1)}%`)
+    console.log('')
+    console.log(`Average Scores (before training = 0.5 baseline):`)
+    console.log(`  - Real decks avg score: ${(avgRealDeckScore * 100).toFixed(1)}%`)
+    console.log(`  - Fake decks avg score: ${(avgFakeDeckScore * 100).toFixed(1)}%`)
     console.log('')
     
     if (finalRealDeckRate >= 0.90) {
