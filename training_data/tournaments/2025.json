@@ -42055,5 +42055,74 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "41821ffe2e3d12fc0dc894d986fd58d76cb337f166e7898113887aede23c0868",
+    "name": "Win-A-Box Winterspell 8 mars (Lachenaie)",
+    "url": "https://inkdecks.com/lorcana-tournaments/win-a-box-winterspell-8-mars-lachenaie-tournament-decks-363262",
+    "date": "2025-03-08",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "d3b3f7f2c607a7722b4f1bd195ea44dd54a511d70841ef2743a5fc6c1dfb3c33",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "8b069dd14ffdea7dee9f3fd9b75f064146ae8709d8f7b70756f6d097f2bd5b0f",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "39fcd8e7a614a3590a90dc7ce5066cd2d0e4391310f8e284ba19ed334a285750",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9b68ffec94dc50390cdc8d91090905f389cc08da8eb2b70799319336a9dabd6c",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f0c96b31a0deb1645dca86627bcdd1e6b77b2b5d0c93e860949dc476d9cab3ed",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d088270a5775f6c9e736321e1bd06aef1a812f72eeb361c26de24f759a24b0e5",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "612be05875d6c579fa0ad4888e5f056d84430923970f74b4c53a0036b1c7d6b5",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
