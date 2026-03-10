@@ -48,13 +48,25 @@ async function main() {
 
   // Load pre-trained DeckModel
   console.log('[4/5] Loading pre-trained deck model...')
-  const deckModelPath = path.join(__dirname, '..', 'training_data', 'deck-generator-model', 'model.json')
-  if (!fs.existsSync(deckModelPath)) {
-    console.error('  ✗ Error: Pre-trained deck model not found!')
-    console.error(`  Expected at: ${deckModelPath}`)
-    console.error('  Please train the base model first using: npm run train')
-    process.exit(1)
+  
+  // Try to continue from previous RL model, fall back to base model
+  const rlModelPath = path.join(__dirname, '..', 'training_data', 'deck-generator-rl', 'model.json')
+  const baseModelPath = path.join(__dirname, '..', 'training_data', 'deck-generator-model', 'model.json')
+  
+  let deckModelPath = rlModelPath
+  if (!fs.existsSync(rlModelPath)) {
+    console.log('  ℹ No previous RL model found, using base model')
+    deckModelPath = baseModelPath
+    if (!fs.existsSync(baseModelPath)) {
+      console.error('  ✗ Error: Pre-trained deck model not found!')
+      console.error(`  Expected at: ${deckModelPath}`)
+      console.error('  Please train the base model first using: npm run train')
+      process.exit(1)
+    }
+  } else {
+    console.log('  ✓ Continuing from previous RL model')
   }
+  
   await trainingManager.model.loadModel(deckModelPath)
   console.log('  ✓ Deck model loaded')
 
