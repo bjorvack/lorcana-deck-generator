@@ -23564,5 +23564,34 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "5b9369a964170b5ffc92fb6139aab36f427df34796920951170b74435415cbb6",
+    "name": "Tintenpott 2",
+    "url": "https://inkdecks.com/lorcana-tournaments/tintenpott-2-tournament-decks-363249",
+    "date": "2026-03-01",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "fb4ef791808265fa56fa47868056f7f70437c4dedfb006e69029b00f0a3936c2",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "1b08e3297bfde44e4cca5c53c1c117b0f4c4a8965f403c3a91de2db814478860",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]

@@ -42026,5 +42026,34 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "62aeef27bc49af282a0b0273d8bc4fd8fbac9ae53ad2ced95d0d5435538f72b9",
+    "name": "Tintenpott 2",
+    "url": "https://inkdecks.com/lorcana-tournaments/tintenpott-2-tournament-decks-363249",
+    "date": "2025-03-01",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "fb4ef791808265fa56fa47868056f7f70437c4dedfb006e69029b00f0a3936c2",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "1b08e3297bfde44e4cca5c53c1c117b0f4c4a8965f403c3a91de2db814478860",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
