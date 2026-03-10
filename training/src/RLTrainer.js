@@ -37,6 +37,33 @@ class RLTrainer {
   }
 
   /**
+   * Print training overview showing improvement over time
+   */
+  printOverview (epochMetrics, initialMetrics, currentEpoch, isFinal = false) {
+    const recent = epochMetrics.filter(m => m.epoch >= currentEpoch - 9 && m.epoch <= currentEpoch)
+    const recentAvgReward = recent.reduce((sum, m) => sum + m.avgReward, 0) / recent.length
+    const recentAvgValidator = recent.reduce((sum, m) => sum + m.avgValidatorScore, 0) / recent.length
+    
+    const current = epochMetrics[epochMetrics.length - 1]
+    const rewardDiff = current.avgReward - initialMetrics.avgReward
+    const validatorDiff = current.avgValidatorScore - initialMetrics.avgValidatorScore
+
+    console.log('\n' + '='.repeat(50))
+    console.log(isFinal ? '🎯 FINAL TRAINING OVERVIEW' : `📊 TRAINING OVERVIEW (Epoch ${currentEpoch})`)
+    console.log('='.repeat(50))
+    console.log(`\n📈 IMPROVEMENT SINCE START:`)
+    console.log(`  Reward:   ${initialMetrics.avgReward.toFixed(4)} → ${current.avgReward.toFixed(4)} (${rewardDiff >= 0 ? '+' : ''}${rewardDiff.toFixed(4)})`)
+    console.log(`  Validator: ${initialMetrics.avgValidatorScore.toFixed(4)} → ${current.avgValidatorScore.toFixed(4)} (${validatorDiff >= 0 ? '+' : ''}${validatorDiff.toFixed(4)})`)
+    console.log(`\n📈 LAST 10 EPOCHS AVG:`)
+    console.log(`  Reward:   ${recentAvgReward.toFixed(4)}`)
+    console.log(`  Validator: ${recentAvgValidator.toFixed(4)}`)
+    console.log(`\n📈 CURRENT:`)
+    console.log(`  Entropy: ${current.entropyCoef.toFixed(4)}`)
+    console.log(`  Replay Buffer: ${current.replaySize} episodes`)
+    console.log('='.repeat(50) + '\n')
+  }
+
+  /**
    * Build cache of valid card indices for each ink combination
    * This speeds up deck generation significantly
    */
@@ -888,6 +915,14 @@ class RLTrainer {
     console.log(`Ink Combinations: ${inkCombinations.length} (6 mono-color + 15 dual-color)`)
     console.log('================================\n')
 
+    // Track initial performance for comparison
+    const initialMetrics = {
+      avgReward: null,
+      avgValidatorScore: null,
+      epoch: 0
+    }
+    const epochMetrics = [] // Store metrics per epoch for overview
+
     let combinationIndex = 0
 
     for (let epoch = 0; epoch < numEpochs; epoch++) {
@@ -1002,6 +1037,32 @@ class RLTrainer {
       console.log(`  Loss: ${lossValue.toFixed(4)}`)
       console.log(`  Replay: ${replayStats.size} episodes (avg: ${replayStats.avgReward.toFixed(3)})`)
 
+      // Store metrics for overview
+      const metrics = {
+        epoch: epoch + 1,
+        avgReward,
+        stdReward,
+        avgValidatorScore,
+        baseline: this.baseline,
+        loss: lossValue,
+        entropyCoef: epochEntropyCoef,
+        replaySize: replayStats.size,
+        replayAvgReward: replayStats.avgReward
+      }
+      epochMetrics.push(metrics)
+
+      // Save initial metrics after first epoch
+      if (epoch === 0) {
+        initialMetrics.avgReward = avgReward
+        initialMetrics.avgValidatorScore = avgValidatorScore
+        initialMetrics.epoch = epoch + 1
+      }
+
+      // Print overview every 10 epochs
+      if ((epoch + 1) % 10 === 0) {
+        this.printOverview(epochMetrics, initialMetrics, epoch + 1)
+      }
+
       // Clear episode data to free memory
       allEpisodes.length = 0
 
@@ -1022,6 +1083,10 @@ class RLTrainer {
     // Final save
     await this.policy.saveModel(savePath)
     console.log(`\n[RL] Training complete! Final model saved to ${savePath}`)
+
+    // Print final overview with improvement
+    const finalEpoch = epochMetrics.length
+    this.printOverview(epochMetrics, initialMetrics, finalEpoch, true)
 
     // Save metrics for analysis
     const metricsPath = `${savePath}_metrics.json`
