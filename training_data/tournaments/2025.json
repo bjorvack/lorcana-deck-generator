@@ -42124,5 +42124,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "56cfd4ec9d41790f33097183f09c265c9712db8ca6643d8872f2b0bf7e2521b7",
+    "name": "Spieltag 1 Div 1 Team Tintenvorrat - 7 Serpents TCG",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-1-div-1-team-tintenvorrat-7-serpents-tcg-tournament-decks-363266",
+    "date": "2025-03-11",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "6921c866c742e06cea6ddac70e41850cbe5b32994ee0e9af8be064e739e0cdd9",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0bdefda377ea3d8f09f945625c3b0e6b56b08721cee5efb334804edd60010964",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "353c938eaad7242460c7e7fb093e85ee3afde9ffd23e8a9f7962f323bee5d0cd",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "c4c8c64e4e6f7591b3261976209b3e6c55af1f99766e8ba9de9af58ea4ba64e0",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "99f0ba3941bc39b86af1a0fc0ea73bd1fa2817399b77e3ab05ccaf46689311fb",
+        "place": 5,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "70d796039ec1012ce3036c9430513f99542d420e6e98c6eff776fdecf866c43b",
+        "place": 6,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
