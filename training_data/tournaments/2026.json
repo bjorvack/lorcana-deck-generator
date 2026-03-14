@@ -23784,5 +23784,50 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "344a3b08f854bd019f60a1cde954c2d7d27c02bae3c75ca9659516a0862d06b2",
+    "name": "Friday Night Lorcana",
+    "url": "https://inkdecks.com/lorcana-tournaments/friday-night-lorcana-tournament-decks-363279",
+    "date": "2026-03-13",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "cb7c8511b564dc8352651240524114ff7e0ecbc05f0be9d02d4cbdeeac8841cb",
+        "place": 1,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "810f1823b0c6e21cacaf51f42538cf2e00ba5ddb0ac9b8103b4511777d48639b",
+        "place": 2,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "85dae1d78b3f303f3a914b53f41a077975d346c1a833d9c9b97f5bce8504bdcc",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5e34f6c5111691d758b6ff917da9e644ab92cb6e0fac5073ceed1fb4c16a6056",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
