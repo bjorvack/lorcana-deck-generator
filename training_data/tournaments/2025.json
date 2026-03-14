@@ -42185,5 +42185,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "b1c00c7a2549f249bbbf8f858cddf8c29819d15f7e0b54170447505b9d37da64",
+    "name": "Spieltag 1 Div 1 Team Inkognito - Team ICONIC",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-1-div-1-team-inkognito-team-iconic-tournament-decks-363277",
+    "date": "2025-03-13",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "324ccbd366c84fc618284baaaf89532052932f3dde154b558035787e4982fb26",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "31f9db72348eb2f627dd151537a3a100be3cec5aaf0f7a30c1451ce913a76b1e",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "eceadc27fd985147550931ffc73ca9d587327d4f404fbf38c0bb07a16b7e15e3",
+        "place": 3,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "dea45df6a2d68dade77470952ae8001cbed733e2ed5165e4ef803583b129f0da",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0d4ccf6fab19e535c441fc3dc332f40bfaf44b596b73f8a256a6f9e0767581bc",
+        "place": 5,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "c96e637972ad8bdaa54733dcb78754d185e52037f56faf6236b098f9f35bcb4f",
+        "place": 6,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      }
+    ]
   }
 ]
