@@ -23829,5 +23829,146 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "0465befbd405c4ccae2598d0f6a7dfa11eec6d8c090ce28f91e21533145aaa3d",
+    "name": "Pro-Play Summit: Pittsburgh (Swiss Rounds)",
+    "url": "https://inkdecks.com/lorcana-tournaments/pro-play-summit-pittsburgh-swiss-rounds-tournament-decks-363282",
+    "date": "2026-03-14",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "a8e936aa2394fe7c84ca7bd62685dcc70819d496cfa0bc1920f3ff1fe23af04e",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "068c78f1a6694307fc56e56777fa591acd4c30cfcf422af643cc3e8c03f03aef",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "741e309e9d280f7d98f75a33679a0400919c38b9acdc91a6a17be3f052c337b3",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "fd2dc434186e8c40d3af6c4742be3b94f98b35d5e38300529366534e3396a2fb",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "1fcbdb11ca4113c7ae687285348f5269cf7f6686e488c07ac30db37645885c83",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "174ef0d72794abd7ec81437182317c23427316a1ec4896c1d10019394c0478ab",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "b0cbff39721052dce9f33c90fe1ab8e7163a181da3b05bcc2672d24048a38d2d",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "610ad8478ebd82d7267911f3ba35ff4dcde3becf4f73855af92825a6a61144b2",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "bf4778d6a3056f87fb67e2491648e12881f1879dabff60295983ce44999fa0e1",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "86f5882451b2bdc24d937ded1afe66aee707ed629038ed0f97289a78f0b9301b",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "3c732c5b6eb97f840988c57aaa0f5e2e4ad38382517f00b564eea6b5234f2d94",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "068c78f1a6694307fc56e56777fa591acd4c30cfcf422af643cc3e8c03f03aef",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "138afe2b2d1d81fe6ce229a15f475bb0af276a66b353bccfa0a100ca9dda1b77",
+        "place": 16,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "6647df644dca66ce91e1b72ac664f8b4aebfad7dd1dc9bddcb064aa30cdeefc6",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ec947446f293502d4e0aa9c7f5f5b03e2a563a4b5105055ad19b012baf64a9e9",
+        "place": 16,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "89df2f18ccfa934649071484c70e1ddf20ad0db7cfa94d5414b7d06086fd8b5d",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
