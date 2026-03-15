@@ -1,0 +1,99 @@
+{
+  "hash": "5ce1bf02ff552b8f65eef981bd35626a622aae5369aaaf1fab1eb94e63bf9631",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Aurora",
+      "version": "Waking Beauty"
+    },
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 4,
+      "name": "Circle of Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Decisive Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Lady",
+      "version": "Miss Park Avenue"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 3,
+      "name": "Rhino",
+      "version": "One-Sixteenth Wolf"
+    },
+    {
+      "amount": 3,
+      "name": "Scar",
+      "version": "Vengeful Lion"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Street-Smart Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Vanessa"
+    }
+  ]
+}

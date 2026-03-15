@@ -1,0 +1,104 @@
+{
+  "hash": "23f8f4f2303c0206a68aeb5eedca905e2a8db40b35ddf1e19e9e298023d01b3f",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Basil",
+      "version": "Undercover Detective"
+    },
+    {
+      "amount": 1,
+      "name": "Baymax",
+      "version": "Giant Robot"
+    },
+    {
+      "amount": 1,
+      "name": "Bend to My Will",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 4,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Stopped Chaos in Its Tracks",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Strike a Good Match",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 1,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}
