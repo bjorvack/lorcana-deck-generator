@@ -1,0 +1,99 @@
+{
+  "hash": "aecb44f8e726b923e6196b6ef9e645f25419d726119bebf50a90ac422dfaf2f2",
+  "inks": [
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Alice",
+      "version": "Growing Girl"
+    },
+    {
+      "amount": 2,
+      "name": "Anna",
+      "version": "True-Hearted"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Dreaming Guardian"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 2,
+      "name": "Chief Powhatan",
+      "version": "Protective Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 2,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Sweetheart Princess"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Considerate Diplomat"
+    },
+    {
+      "amount": 4,
+      "name": "Pocahontas",
+      "version": "Finding the Way"
+    },
+    {
+      "amount": 4,
+      "name": "Queen's Sensor Core",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Rapunzel",
+      "version": "Ready for Adventure"
+    },
+    {
+      "amount": 4,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    },
+    {
+      "amount": 4,
+      "name": "Tiana",
+      "version": "Warm and Happy"
+    },
+    {
+      "amount": 2,
+      "name": "Tiny Tim's Crutch",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Wisdom of the Willow",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

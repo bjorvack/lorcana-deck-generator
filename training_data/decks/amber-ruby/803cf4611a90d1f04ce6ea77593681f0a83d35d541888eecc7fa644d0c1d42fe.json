@@ -1,0 +1,124 @@
+{
+  "hash": "803cf4611a90d1f04ce6ea77593681f0a83d35d541888eecc7fa644d0c1d42fe",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Beast",
+      "version": "Snowfield Troublemaker"
+    },
+    {
+      "amount": 2,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "Concerned Sister"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Ice Artisan"
+    },
+    {
+      "amount": 4,
+      "name": "Fix",
+      "version": "It Felix, Jr. - Delighted Sightseer"
+    },
+    {
+      "amount": 3,
+      "name": "Fix",
+      "version": "It Felix, Jr. - Niceland Steward"
+    },
+    {
+      "amount": 4,
+      "name": "Get to Safety!",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Grab Your Bow",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Minnie Mouse",
+      "version": "Pirate Lookout"
+    },
+    {
+      "amount": 2,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Negaduck",
+      "version": "Evil Doppelganger"
+    },
+    {
+      "amount": 4,
+      "name": "Negaduck",
+      "version": "Public Enemy Number One"
+    },
+    {
+      "amount": 1,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Raging Storm",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Sleepy Hollow",
+      "version": "The Bridge"
+    },
+    {
+      "amount": 4,
+      "name": "Sugar Rush Speedway",
+      "version": "Finish Line"
+    },
+    {
+      "amount": 4,
+      "name": "Sugar Rush Speedway",
+      "version": "Starting Line"
+    },
+    {
+      "amount": 2,
+      "name": "Taffyta Muttonfudge",
+      "version": "Sour Speedster"
+    },
+    {
+      "amount": 1,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "The Islands I Pulled from the Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tuk Tuk",
+      "version": "Lively Partner"
+    },
+    {
+      "amount": 1,
+      "name": "Vanellope Von Schweetz",
+      "version": "Gutsy Go-Getter"
+    },
+    {
+      "amount": 4,
+      "name": "Zootopia",
+      "version": "Tundratown"
+    }
+  ]
+}
