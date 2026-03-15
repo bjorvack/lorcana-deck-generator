@@ -1,0 +1,104 @@
+{
+  "hash": "bfadc16e816ac9a42f4ccfe95663a0ddd3b24a22fac710c56859a9fa7798dbbc",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Belle",
+      "version": "Snowfield Strategist"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Curious Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Nakoma",
+      "version": "Waiting Out the Storm"
+    },
+    {
+      "amount": 4,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Ghost of Christmas Future"
+    },
+    {
+      "amount": 2,
+      "name": "Raging Storm",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 2,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 1,
+      "name": "Tamatoa",
+      "version": "Seeker of Shine"
+    },
+    {
+      "amount": 1,
+      "name": "The Black Cauldron",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 3,
+      "name": "Wasabi",
+      "version": "Methodical Engineer"
+    },
+    {
+      "amount": 3,
+      "name": "Wreck",
+      "version": "It Ralph - Admiral Underpants"
+    }
+  ]
+}

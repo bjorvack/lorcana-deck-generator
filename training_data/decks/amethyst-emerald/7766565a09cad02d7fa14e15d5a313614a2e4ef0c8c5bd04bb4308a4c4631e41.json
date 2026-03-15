@@ -1,0 +1,94 @@
+{
+  "hash": "7766565a09cad02d7fa14e15d5a313614a2e4ef0c8c5bd04bb4308a4c4631e41",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Christopher Robin",
+      "version": "Joining the Fun"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Fred Honeywell"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Magical Researcher"
+    },
+    {
+      "amount": 3,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Expert Shipwright"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 3,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Mrs. Cratchit"
+    },
+    {
+      "amount": 2,
+      "name": "Obscurosphere",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 3,
+      "name": "Pocahontas",
+      "version": "Following the Wind"
+    },
+    {
+      "amount": 4,
+      "name": "Snow Fort",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Sven",
+      "version": "Leaping Reindeer"
+    }
+  ]
+}

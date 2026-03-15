@@ -1,0 +1,104 @@
+{
+  "hash": "ce67c34134fd1324f90ea9a89d2fea243f70dddf1dce6cf1b30403a4bb860d05",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Bend to My Will",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 4,
+      "name": "Education or Elimination",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Elisa Maza",
+      "version": "Transformed Gargoyle"
+    },
+    {
+      "amount": 4,
+      "name": "Heffalumps and Woozles",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "HeiHei",
+      "version": "Bumbling Rooster"
+    },
+    {
+      "amount": 4,
+      "name": "Liquidator",
+      "version": "Iced Over"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Olaf",
+      "version": "Snowman of Action"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 3,
+      "name": "Scrooge McDuck",
+      "version": "Ebenezer Scrooge"
+    },
+    {
+      "amount": 2,
+      "name": "Snow Fort",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Strike a Good Match",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 2,
+      "name": "Tod",
+      "version": "Playful Kit"
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "White Rabbit",
+      "version": "Late Again"
+    }
+  ]
+}
