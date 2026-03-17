@@ -1,0 +1,104 @@
+{
+  "hash": "2d2bbf76b10e3e7cb3c41c3fb19f8d75190a70211f9814233908eedbaa2f4ad4",
+  "inks": [
+    "sapphire",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 3,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 1,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Into the Unknown",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Isis Vanderchill",
+      "version": "Ice Queen of St. Canard"
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 1,
+      "name": "Magical Maneuvers",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Royal Guard",
+      "version": "Octopus Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tigger",
+      "version": "Bouncing All the Way"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "hash": "8c61b2032be022936ffb1ed0022ae6604db3469a01feff7faf7b7f42f5e4f55b",
+  "inks": [
+    "amber",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Castle Wyvern",
+      "version": "Above the Clouds"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "John Silver",
+      "version": "Greedy Treasure Seeker"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Bundled Up"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Nala",
+      "version": "Undaunted Lioness"
+    },
+    {
+      "amount": 4,
+      "name": "Nani",
+      "version": "Stage Manager"
+    },
+    {
+      "amount": 4,
+      "name": "Seven Dwarfs' Mine",
+      "version": "Secure Fortress"
+    },
+    {
+      "amount": 4,
+      "name": "Zootopia",
+      "version": "Police Headquarters"
+    },
+    {
+      "amount": 4,
+      "name": "Zootopia",
+      "version": "Tundratown"
+    }
+  ]
+}

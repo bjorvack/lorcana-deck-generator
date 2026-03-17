@@ -1,0 +1,104 @@
+{
+  "hash": "7a861b9dba2a98047ab19860e8a308aa3858292ee564d392973ccc16564f4a70",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Basil's Magnifying Glass",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Battering Ram",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Belle's Favorite Book",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Family Fishing Pole",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Hypnotic Deduction",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Louis",
+      "version": "Endearing Alligator"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "MegaBot",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Merlin's Carpetbag",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Spinning Skater"
+    },
+    {
+      "amount": 3,
+      "name": "Obscurosphere",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Oswald",
+      "version": "The Lucky Rabbit"
+    },
+    {
+      "amount": 4,
+      "name": "Potion of Malice",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Resourceful Miser"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Naughty Experiment"
+    },
+    {
+      "amount": 3,
+      "name": "Tamatoa",
+      "version": "Happy as a Clam"
+    }
+  ]
+}

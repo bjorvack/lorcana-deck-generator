@@ -1,0 +1,99 @@
+{
+  "hash": "d60952b8f0e688f92b4e157d1ded911606749d76447cbe7d9be0fa3659195466",
+  "inks": [
+    "steel",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Angel",
+      "version": "Experiment 624"
+    },
+    {
+      "amount": 2,
+      "name": "Black Heron",
+      "version": "Real Bad Egg"
+    },
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Christopher Robin",
+      "version": "Joining the Fun"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 3,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Giant Cobra",
+      "version": "Ghostly Serpent"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 3,
+      "name": "Isis Vanderchill",
+      "version": "Ice Queen of St. Canard"
+    },
+    {
+      "amount": 4,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 2,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 1,
+      "name": "Restoring the Crown",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Yzma",
+      "version": "Conniving Chemist"
+    }
+  ]
+}

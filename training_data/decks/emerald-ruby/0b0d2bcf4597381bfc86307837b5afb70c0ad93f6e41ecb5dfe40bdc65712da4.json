@@ -1,0 +1,109 @@
+{
+  "hash": "0b0d2bcf4597381bfc86307837b5afb70c0ad93f6e41ecb5dfe40bdc65712da4",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 2,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Contented Wallflower"
+    },
+    {
+      "amount": 1,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 4,
+      "name": "LeFou",
+      "version": "Instigator"
+    },
+    {
+      "amount": 3,
+      "name": "Max Goof",
+      "version": "Chart Topper"
+    },
+    {
+      "amount": 4,
+      "name": "Max Goof",
+      "version": "Rebellious Teen"
+    },
+    {
+      "amount": 4,
+      "name": "Max Goof",
+      "version": "Rockin' Teen"
+    },
+    {
+      "amount": 2,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Powerline",
+      "version": "Musical Superstar"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "World's Greatest Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "Roxanne",
+      "version": "Powerline Fan"
+    },
+    {
+      "amount": 4,
+      "name": "Strike a Good Match",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}
