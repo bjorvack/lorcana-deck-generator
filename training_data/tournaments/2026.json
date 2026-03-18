@@ -26268,5 +26268,188 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "412ba477da37457ed3e9455355e1c3dfcc7b73b2adc3029ac7091fd44571c7ba",
+    "name": "Spieltag 1 Div 2 Tintenlovers - Hardcast Lorcana Club",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-1-div-2-tintenlovers-hardcast-lorcana-club-tournament-decks-363300",
+    "date": "2026-03-18",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "866adf6f3a18820d4a325d5c2881e275809de09e8df8d55266869086bff41716",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "76cd42d8c00c15372a66bf4c41e9b4adba6cc6b03cc6451deb2bf46d41a709ad",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "627739e7bb2c70a582d9a4cf1c6cdfb3c2db9903802f18611f3ae1d7eb0ca9b1",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "002df9d6f634734fbcbc37ac1b270545cde05231617d704a2a03294685648240",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e03bbc663d6a8f38529da318660c3fd779e809834a3a4cb816895ff9dda1953e",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a7e7bddd27996ac63d5a6ecc67f66c306990b1bd0a23e15cb187c135ccfadfac",
+        "place": 6,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "3a6bc0fc5331aad5482c870c23ae3684dab588c89b85c7311e0e934d0a4c2ecb",
+    "name": "Spieltag 1 Div 1 MRO’s Glimmer Gang - Playing Ducks",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-1-div-1-mro-s-glimmer-gang-playing-ducks-tournament-decks-363286",
+    "date": "2026-03-18",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "ea54d1deb48038a6967b963767dc1fd222e2fa04048353877512b8d8ab453863",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2c5a7293954605b5f7fc66642593d4a71d91672fcb9229d56f4a9a6b0207d600",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "65e76fc5c0cc923ae9ab45aa6eb55848e587ca817b934d9af27d788ded62b847",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "1bf108ed087bb619307eee1fba4fd63afb27288336646407e69eaabb8a2f2866",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "18e0f4364566a900585ff8daf4ca471746a4b729691f03a5cdb154be43b3d25d",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9d0dde7d6961b11edc64fd175f579f3e0c0feb822ccdab86d62e5eadab8b1fc0",
+        "place": 6,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "f6cbb66d20513380e1a54b9002cdde912fd8006a8d3b667c9d4e1f4a05567360",
+    "name": "Spieltag 1 Div 2 Illumineers Rhein-Neckar - The Inkcredibles",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-1-div-2-illumineers-rhein-neckar-the-inkcredibles-tournament-decks-363299",
+    "date": "2026-03-17",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "4a73919cd9b0330291a2ef22c3e93280b263af6e0fff1e4e937bd9ee1ad78501",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9b04dd5346899347b056485ccea30d545866e6fa56fd365bc00165192465f713",
+        "place": 2,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "1d6353563397e42ea3b485a3adfc3920538d7e7c026726bc512cc46ffbb13871",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "88f145e00f3e85594adeadd2380b691785d77a1773ca7f6d439db91528034f6b",
+        "place": 4,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "9d9a056015d847ae5630c83eba1bc9bb68ba5978046f6dc41a854925861f5623",
+        "place": 5,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "9e48da3407b2b2de58dc6d5a34b0ff8e316b3da9e6498d9592e19993836d02e1",
+        "place": 6,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      }
+    ]
   }
 ]
