@@ -26451,5 +26451,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "eee6d72a8b75d7b63ab6f6ec85ab0d165b0ee2c0e43778e14b5705f9cba77c7f",
+    "name": "Spieltag 1 Div 1 Battle-Bear - InkCrows",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-1-div-1-battle-bear-inkcrows-tournament-decks-363284",
+    "date": "2026-03-19",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "31fb203de74e3dea8cd36145c4eea06a4c31dfab6fa3f4ae1080ef8ee5fe6daa",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "b96d899bacc0fc50b7eb7c71a6d89d417f9a3808a1c3e09236c9784487b29e4a",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a429c1375b17ea84585eca2ef16f3db7233af4f1d6a57ebd3e3b6bb9225f3d79",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "8f996ad62f349307ae16376fe976a4f0c5a9767bf8e079899c2f70b141fdc52f",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "98d50d1885eace1f1f779e8bd08a0ff9aa4da85888bc2687efcd4a041b7fc45e",
+        "place": 5,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9d812fcaf04e98c3ca4b1341a8cf84ea46bdfbb797c677277ae6ad91552937c1",
+        "place": 6,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
