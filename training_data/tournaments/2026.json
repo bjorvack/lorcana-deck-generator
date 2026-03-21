@@ -26973,5 +26973,58 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "e91d3e03d975c66b28f983bdb7645deedf023179d05f3f43945a039cb580f323",
+    "name": "Spieltag 1 Div 2 Team Tota Hahn - Brick Happens",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-1-div-2-team-tota-hahn-brick-happens-tournament-decks-363287",
+    "date": "2026-03-20",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "3753e7bcc1d83c9c376608a080861744517839cfefab8ff0895e0aed2b3739bb",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "86a4cbcfcc8d0046ef12a26e90276574d2fdd4b3a22c20b98d552754704aaea3",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f70df65b61e38baf45d52b3f39839dbd01784d26a5c5b8a0d4af46e7fe3580d9",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "8160b6b6226e19db92098c9c9fa86f6b07ed342f6bf317a18b88fd31eec4f74e",
+        "place": 5,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "b6db54fce9cf68e9f0af8fa558b8665782c4f31c5e486bd5e05dc25eb3d5e0b8",
+        "place": 6,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      }
+    ]
   }
 ]
