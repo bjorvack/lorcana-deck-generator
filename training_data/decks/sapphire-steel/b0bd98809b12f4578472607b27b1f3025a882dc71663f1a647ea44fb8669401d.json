@@ -1,0 +1,104 @@
+{
+  "hash": "b0bd98809b12f4578472607b27b1f3025a882dc71663f1a647ea44fb8669401d",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Angel",
+      "version": "Experiment 624"
+    },
+    {
+      "amount": 1,
+      "name": "Arthur",
+      "version": "King Victorious"
+    },
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 4,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Resourceful Infiltrator"
+    },
+    {
+      "amount": 4,
+      "name": "Jasmine",
+      "version": "Steady Strategist"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Ghost of Christmas Future"
+    },
+    {
+      "amount": 2,
+      "name": "Pleakley",
+      "version": "Scientific Expert"
+    },
+    {
+      "amount": 1,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 2,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vincenzo Santorini",
+      "version": "The Explosives Expert"
+    }
+  ]
+}
