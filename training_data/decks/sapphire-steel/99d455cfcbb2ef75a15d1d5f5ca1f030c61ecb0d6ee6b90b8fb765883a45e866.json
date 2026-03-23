@@ -1,0 +1,99 @@
+{
+  "hash": "99d455cfcbb2ef75a15d1d5f5ca1f030c61ecb0d6ee6b90b8fb765883a45e866",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Blue Smoke",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Darkwing Duck",
+      "version": "Cool Under Pressure"
+    },
+    {
+      "amount": 4,
+      "name": "Darkwing Duck",
+      "version": "Crime Fighter"
+    },
+    {
+      "amount": 3,
+      "name": "Darkwing Duck",
+      "version": "Darkwarrior"
+    },
+    {
+      "amount": 4,
+      "name": "Darkwing Duck",
+      "version": "Drake Mallard"
+    },
+    {
+      "amount": 2,
+      "name": "Francine",
+      "version": "Eyeing the Evidence"
+    },
+    {
+      "amount": 3,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "On the Case"
+    },
+    {
+      "amount": 3,
+      "name": "Judy Hopps",
+      "version": "Snowball Patrol"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 3,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Might Solve a Mystery",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Persistent Investigator"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Sly Fox Sleuth"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Thunderquack",
+      "version": ""
+    }
+  ]
+}
