@@ -29013,5 +29013,146 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "bed3911158404fd2588eeeff7a97e856482400f59a32714c3141f8261de151c3",
+    "name": "Glimmer Games CCQ",
+    "url": "https://inkdecks.com/lorcana-tournaments/glimmer-games-ccq-tournament-decks-363318",
+    "date": "2026-03-21",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "a254e09730cbd279aecbd5d9455bac4d4a24ad507d383c39e613645b8b634d7d",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "304178372c1614fa6b9030fd6e06e70cf35e0edece9bd2d7992b6cae61c59273",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a8214c9916129e3a27d1daa3dc653c8edeae86a332c6bd8ce10162f0201eff10",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "7691fc7b4db5d5df5a7febeb9fe25509113218c4b101300fe340e9a020f9b184",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0c29ccaa9750e8fcedcf68474de098faf2b096167c386c027b150cf09002d4a0",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "adae75efcf42e86146566be3887bd4ed453d0c3b4157078e085888eef82aa67b",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "884d26b9ab10939dd6d7359d2df4d0ebf048333757e4f7a3ea673673d43b45d4",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "38d4a9fadf12074d6ea7d2a052aea06c042172096e0f6df2b6c26cfa17415346",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "090f60fb3007b9afb010b3686c512018bca1b9405dbf39560d8e57c3c014f3c5",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "15de1b4436dd5c87a3fe1662f3ed58a27686d95534b94bc65435a56045bad9ed",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a88c3a67c19f0dd16e5fca3071de0414622de8421b366c3eb418b67948624594",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "3ea0de040c521064afbc50b61ecd2c44c82ec3a118b21c9dbca4fcb5b4a1cc1f",
+        "place": 16,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "1ece0ca0ef554d536e7f279124703783e6744cdbcd44e76f743d9cff1b4de9e1",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a571a6236ee02dec7e1faea01efd31de2ee0287e338f38ce607d31c3433b597c",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "3444d326d056a20aacaa9252e2cb75d40b2ba3b39bf842624bc963b359f4e1de",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "ee1748fcd34236cd8906fc473a4eb728129a19ef0cadbd8023d47e5da2d43937",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
