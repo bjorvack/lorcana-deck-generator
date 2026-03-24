@@ -1,0 +1,114 @@
+{
+  "hash": "e8f6288191e0995a9d7b819edb8fe955ecf5b340ee57e6539ce9eb617b396834",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 2,
+      "name": "Daisy Duck",
+      "version": "Sapphire Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 1,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Moana",
+      "version": "Curious Explorer"
+    },
+    {
+      "amount": 1,
+      "name": "Mufasa",
+      "version": "Ruler of Pride Rock"
+    },
+    {
+      "amount": 3,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Ghost of Christmas Future"
+    },
+    {
+      "amount": 3,
+      "name": "Raging Storm",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Restoring the Heart",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Scrooge McDuck",
+      "version": "Afficionado of Antiquities"
+    },
+    {
+      "amount": 3,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 2,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 2,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 2,
+      "name": "Vision of the Future",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}
