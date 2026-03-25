@@ -48258,5 +48258,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "e3cf49a34570f6acadaf46f30211ee226308460ce01a2dfadc03f7bf7952b058",
+    "name": "Spieltag 2 Div 1 Team Inkognito - Team Tintenvorrat",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-2-div-1-team-inkognito-team-tintenvorrat-tournament-decks-363315",
+    "date": "2025-03-24",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "7e696fe91ccba1a4874474843e2b545c52ffb0799d327901dbf2720db9d22164",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "29ba302ab16a9fe37b1e8a7b71b30e6c6577a5014ae7e9d4922e4cc10716072b",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fe743806368c341d17826976b23e54a683672584e8e1ac61fc56e31b92fe0e50",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "48fbf2861eeb49e9cb183c535d606bb704d7731839c65c29b679160dd6ce511e",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "88d31454281c0f778b20407cc693c8f5b0b9044da9035e332338ddfc0fb54165",
+        "place": 5,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "a22d11e6fe7ccc395c8c312205b8cc8747784e8444aeae3eca7cdf1ee56a9b82",
+        "place": 6,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
