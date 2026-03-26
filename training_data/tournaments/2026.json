@@ -29942,5 +29942,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "3c015ea147f6184143f5f687a27dd90221b43fa2ce9e27cf40e39ba9215a0fe0",
+    "name": "Spieltag 2 Div 1 InkCrows - Playing Ducks",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-2-div-1-inkcrows-playing-ducks-tournament-decks-363313",
+    "date": "2026-03-25",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "45fb1b64dfcda16c11f868c6e260254efbcec7617ee275a67d7fae6fb8d8a961",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "1c0caf8e7aa09fa739634ca640023354d178bc71044d135409f29d4a0825beff",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "87ccf356883832f2b1c751dfe3b1d6de3fa54546d8a5ab2c10c7aecab706505b",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "7f36715819f92a883283dc50ec09e0c00d58ce0ada253b7ee2011d09601fd4d1",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7ae8210c8eab9965b763b7ac0e6eb4f4c7f5f25c62f66b34a9a43f87d8f9afa5",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "13e663bffa720fefa063141238388100a07e946e933e08a6fbc50e148dd157ff",
+        "place": 6,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
