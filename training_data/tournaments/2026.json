@@ -30517,5 +30517,127 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "98cd74d5bbd2e1b5898196b67836f8501795ee55acc540d11fbba9af7c903b6d",
+    "name": "Spieltag 2 Div 2 Team Tota Hahn - The Inkcredibles",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-2-div-2-team-tota-hahn-the-inkcredibles-tournament-decks-363325",
+    "date": "2026-03-26",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "be27ffe1558fd34e9e00f7d2383f28f44c3a9897de852c6fbe6775c35d4b3a93",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "fefc4ecd37aaa44cbb48de6547e5c4cb03df263a12454a9c1f4e5ee41279f474",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "078b5a65fec33f67b145610f5982dfe421e0c72db16699e2b16ff3e7f83ea79e",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "f5261b3badd910c6e61c0b246f84ac36faa0655d479d0f63ea0d02f34a9e85a7",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4dfdda7e233887055b0de10e9d6c2a60ef87a21820b18d504175777eee477faf",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "be90313535f386556c836d0894fa4432b90df5c8cebfdd72ddd6fb0b2b45389b",
+        "place": 6,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "862508aa5fc300790e796762376dfef68d8c1b78180448cfccd75355103814bf",
+    "name": "Spieltag 2 Div 1 Team Secret Rare - Team ICONIC",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-2-div-1-team-secret-rare-team-iconic-tournament-decks-363324",
+    "date": "2026-03-26",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "0ddbe365ddee20c24eae11854299a1e23e6e31647c4e7390a71968c78b723bf0",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "55cf6b29c3cc2bdaae3dbc55457171d5e508c028499e52f1ca1d6d901fca7792",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2800cd9a029596aefe1547887325c07690b015d12b6c6d3effbf3e8996c44f7a",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "6813500ec62845e62218fe76081e619e90f3c4741074b65f82636af295b04ff0",
+        "place": 4,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "af2f583af0965ed2ea9fbc4c659dcee483ed0836ca375872907931c59df95533",
+        "place": 5,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9e5fb35682fadb7125976d75a0ebfae09cd5a23404f7283b9b10bf2d0166d47a",
+        "place": 6,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]

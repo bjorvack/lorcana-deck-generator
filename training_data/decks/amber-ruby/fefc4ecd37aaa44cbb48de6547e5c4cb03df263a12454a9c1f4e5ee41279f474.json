@@ -1,0 +1,119 @@
+{
+  "hash": "fefc4ecd37aaa44cbb48de6547e5c4cb03df263a12454a9c1f4e5ee41279f474",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Bambi",
+      "version": "Ethereal Fawn"
+    },
+    {
+      "amount": 4,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Ice Artisan"
+    },
+    {
+      "amount": 1,
+      "name": "Fa Zhou",
+      "version": "Honorable Warrior"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Marley's Clumsy Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 1,
+      "name": "Judy Hopps",
+      "version": "Resourceful Rabbit"
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Nakoma",
+      "version": "Waiting Out the Storm"
+    },
+    {
+      "amount": 3,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Raging Storm",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Reuben",
+      "version": "Sandwich Expert"
+    },
+    {
+      "amount": 3,
+      "name": "Sarabi",
+      "version": "Protecting the Pride"
+    },
+    {
+      "amount": 1,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Daring Visitor"
+    },
+    {
+      "amount": 2,
+      "name": "Slushy",
+      "version": "Glacial Guster"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Snowboarder"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    }
+  ]
+}
