@@ -30639,5 +30639,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "c20e951e5679ddd69ba4dbcc870f9955fd9af1fa729838a132f04bb002742f09",
+    "name": "Spieltag 2 Div 2 Brick Happens - Hardcast Lorcana Club",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-2-div-2-brick-happens-hardcast-lorcana-club-tournament-decks-363327",
+    "date": "2026-03-27",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "63e8bec290c55318a896aadfcf1e9e2f0813af8f55cc5a7ed0fec490a082c5ed",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "86a4cbcfcc8d0046ef12a26e90276574d2fdd4b3a22c20b98d552754704aaea3",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a739ad05d6bf09a2d77ec7ba84fc28d38dc1218cb4d7ddf4f2576b2b8310bf2f",
+        "place": 3,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "7b91184c70dd4b89f45a08e34876ad7e53d4fabae6cc9ef93f2fd20a66056d56",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e414ebccf75a6f881c4681736dba7407654fb01f1f8d2114290c4fd50605a85b",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "10121a3771d2d0e776ad8cc3d0d1f7778bd711ef283bcb1d15152c1b0ae7f2b8",
+        "place": 6,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
