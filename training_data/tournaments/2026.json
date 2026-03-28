@@ -30700,5 +30700,129 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "775a7e0a3faa9a3946befaa823abd4675d5e7cb4dde493362698c1886b04854f",
+    "name": "Friday Night Lorcana",
+    "url": "https://inkdecks.com/lorcana-tournaments/friday-night-lorcana-tournament-decks-363331",
+    "date": "2026-03-27",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "7e3b6ee01fb31379631e1170dffaa1122f5a80da84b0aad4a6d3dcde6fd97d1c",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "40349e2f3874295ba74004086dbbee26ded5bca30022de022198fe018a776279",
+        "place": 2,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "4b750e8193a8c480658fde0ed4bbac62a002fa24a5f05b6b70ab7e51c8c974f6",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7691fc7b4db5d5df5a7febeb9fe25509113218c4b101300fe340e9a020f9b184",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "44e84b345257818c3ccb36a61c9d105c3914d1c422eb6dde20abe87cd819528f",
+    "name": "Decks & Dice Lorcana Cssh Tournament",
+    "url": "https://inkdecks.com/lorcana-tournaments/decks-dice-lorcana-cssh-tournament-tournament-decks-363334",
+    "date": "2026-03-22",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "8153384627529f5640635cdf42c97eb195464feef7dfd2df5fc8642e95fdc331",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "b1cf4ae2acc6b707153704e5159cfbee33fcc38202c394ddcf1f696be22da16e",
+    "name": "Content Creator Winterspell Set Champ",
+    "url": "https://inkdecks.com/lorcana-tournaments/content-creator-winterspell-set-champ-tournament-decks-363332",
+    "date": "2026-03-22",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "b0bd98809b12f4578472607b27b1f3025a882dc71663f1a647ea44fb8669401d",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "699bfb999144e0d555d63077baab37e634b6daeab43153442ed8f3723b0cb004",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c16908e91bc35a10871866432c7287ae54e90dda9e15df5b81e3639405f7b258",
+        "place": 4,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "f3e91f4a6e4aa15aa8c56eede7529e857a1ad53f62ccbfccb5835eb32f48bc77",
+    "name": "Core constructed weekly play",
+    "url": "https://inkdecks.com/lorcana-tournaments/core-constructed-weekly-play-tournament-decks-363333",
+    "date": "2026-03-20",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "9500fa9539e849d98a7586f271cf3d5dbe5d327b661f06c3f25dcb8f84c48066",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
