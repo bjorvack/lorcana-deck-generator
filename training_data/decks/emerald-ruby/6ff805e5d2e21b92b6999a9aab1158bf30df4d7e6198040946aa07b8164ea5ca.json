@@ -1,0 +1,109 @@
+{
+  "hash": "6ff805e5d2e21b92b6999a9aab1158bf30df4d7e6198040946aa07b8164ea5ca",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Agrabah",
+      "version": "Marketplace"
+    },
+    {
+      "amount": 3,
+      "name": "Beast",
+      "version": "Aggressive Lord"
+    },
+    {
+      "amount": 1,
+      "name": "Bellwether",
+      "version": "Master Manipulator"
+    },
+    {
+      "amount": 4,
+      "name": "Blessed Bagpipes",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Emerald Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Emily Quackfaster",
+      "version": "Level-Headed Librarian"
+    },
+    {
+      "amount": 3,
+      "name": "Flynn Rider",
+      "version": "Breaking and Entering"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 3,
+      "name": "Friend Owl",
+      "version": "Cantankerous Neighbor"
+    },
+    {
+      "amount": 4,
+      "name": "Gloyd Orangeboar",
+      "version": "Fierce Competitor"
+    },
+    {
+      "amount": 3,
+      "name": "HeiHei",
+      "version": "Bumbling Rooster"
+    },
+    {
+      "amount": 3,
+      "name": "Jasmine",
+      "version": "Rebellious Princess"
+    },
+    {
+      "amount": 2,
+      "name": "Olivia Flaversham",
+      "version": "The Toymaker's Daughter"
+    },
+    {
+      "amount": 2,
+      "name": "Peter Pan",
+      "version": "High Flyer"
+    },
+    {
+      "amount": 3,
+      "name": "Robin Hood",
+      "version": "Archery Contestant"
+    },
+    {
+      "amount": 3,
+      "name": "Simba",
+      "version": "Scrappy Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Thievery",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    },
+    {
+      "amount": 2,
+      "name": "Tod",
+      "version": "All Alone"
+    },
+    {
+      "amount": 2,
+      "name": "Vanellope Von Schweetz",
+      "version": "Spunky Speedster"
+    }
+  ]
+}

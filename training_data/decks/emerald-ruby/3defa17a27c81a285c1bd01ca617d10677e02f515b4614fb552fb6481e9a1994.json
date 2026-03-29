@@ -1,0 +1,89 @@
+{
+  "hash": "3defa17a27c81a285c1bd01ca617d10677e02f515b4614fb552fb6481e9a1994",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Banzai",
+      "version": "Gluttonous Predator"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Underhanded"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Contented Wallflower"
+    },
+    {
+      "amount": 4,
+      "name": "Copper",
+      "version": "Champion of the Forest"
+    },
+    {
+      "amount": 4,
+      "name": "Copper",
+      "version": "Hound Pup"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 4,
+      "name": "Game Preserve",
+      "version": "Protected Land"
+    },
+    {
+      "amount": 2,
+      "name": "Little John",
+      "version": "Impermanent Outlaw"
+    },
+    {
+      "amount": 4,
+      "name": "Olivia Flaversham",
+      "version": "The Toymaker's Daughter"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 2,
+      "name": "Shere Khan",
+      "version": "Fearsome Tiger"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "Scrappy Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Emboldened Warrior"
+    },
+    {
+      "amount": 4,
+      "name": "Squeaks",
+      "version": "Cozy Caterpillar"
+    },
+    {
+      "amount": 4,
+      "name": "White Rabbit",
+      "version": "Late Again"
+    }
+  ]
+}
