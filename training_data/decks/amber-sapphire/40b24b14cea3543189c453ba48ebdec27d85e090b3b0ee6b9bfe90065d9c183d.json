@@ -1,0 +1,74 @@
+{
+  "hash": "40b24b14cea3543189c453ba48ebdec27d85e090b3b0ee6b9bfe90065d9c183d",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Chief Powhatan",
+      "version": "Protective Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lucky",
+      "version": "Runt of the Litter"
+    },
+    {
+      "amount": 4,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 4,
+      "name": "Pepper",
+      "version": "Quick-Thinking Puppy"
+    },
+    {
+      "amount": 2,
+      "name": "Perdita",
+      "version": "Determined Mother"
+    },
+    {
+      "amount": 2,
+      "name": "Perdita",
+      "version": "On the Lookout"
+    },
+    {
+      "amount": 4,
+      "name": "Pongo",
+      "version": "Determined Father"
+    },
+    {
+      "amount": 2,
+      "name": "Restoring the Heart",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Roger Radcliffe",
+      "version": "Dog Lover"
+    },
+    {
+      "amount": 4,
+      "name": "Rolly",
+      "version": "Chubby Puppy"
+    },
+    {
+      "amount": 4,
+      "name": "Thunderbolt",
+      "version": "Wonder Dog"
+    }
+  ]
+}
