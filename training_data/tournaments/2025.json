@@ -49856,5 +49856,34 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "99703ce70814ac1ac56048373f858908a9b84085cc70ef004b5520b2bd0aa1a1",
+    "name": "Pendulum Gaming X Angle Win A Case",
+    "url": "https://inkdecks.com/lorcana-tournaments/pendulum-gaming-x-angle-win-a-case-tournament-decks-363338",
+    "date": "2025-03-28",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "4bae2e2c853cd009296f071508a0e054360604883292512d045da3bfc8bac298",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "6af575f7ec33683fea2f592a65497e25056ffee126952278c93d713310f290a1",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]

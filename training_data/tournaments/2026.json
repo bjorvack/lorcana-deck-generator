@@ -31487,5 +31487,34 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "d24e510606b598e6570a5e98aa433ce20c3cc73e1a13497b1a5d6508763059fe",
+    "name": "Pendulum Gaming X Angle Win A Case",
+    "url": "https://inkdecks.com/lorcana-tournaments/pendulum-gaming-x-angle-win-a-case-tournament-decks-363338",
+    "date": "2026-03-28",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "4bae2e2c853cd009296f071508a0e054360604883292512d045da3bfc8bac298",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "6af575f7ec33683fea2f592a65497e25056ffee126952278c93d713310f290a1",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
