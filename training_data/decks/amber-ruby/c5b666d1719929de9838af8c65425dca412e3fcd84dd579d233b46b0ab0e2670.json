@@ -1,0 +1,104 @@
+{
+  "hash": "c5b666d1719929de9838af8c65425dca412e3fcd84dd579d233b46b0ab0e2670",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Barreling Through"
+    },
+    {
+      "amount": 1,
+      "name": "Ares",
+      "version": "God of War"
+    },
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Ethereal Voice"
+    },
+    {
+      "amount": 3,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "Spectral Demigod"
+    },
+    {
+      "amount": 4,
+      "name": "Liquidator",
+      "version": "Iced Over"
+    },
+    {
+      "amount": 4,
+      "name": "Lonely Grave",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 3,
+      "name": "Or Rewrite History!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Scrooge McDuck",
+      "version": "Ebenezer Scrooge"
+    },
+    {
+      "amount": 1,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Carefree Snowboarder"
+    },
+    {
+      "amount": 1,
+      "name": "The Black Cauldron",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Webby's Diary",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Wreck",
+      "version": "it Ralph - Raging Wrecker"
+    }
+  ]
+}

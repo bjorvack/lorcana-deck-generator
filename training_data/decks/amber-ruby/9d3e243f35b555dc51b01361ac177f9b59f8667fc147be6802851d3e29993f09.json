@@ -1,0 +1,134 @@
+{
+  "hash": "9d3e243f35b555dc51b01361ac177f9b59f8667fc147be6802851d3e29993f09",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Akood et Emuti",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Aladdin",
+      "version": "Barreling Through"
+    },
+    {
+      "amount": 3,
+      "name": "Ariel",
+      "version": "Ethereal Voice"
+    },
+    {
+      "amount": 3,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Ice Artisan"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Flying Goof"
+    },
+    {
+      "amount": 2,
+      "name": "Grab Your Bow",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "Spectral Demigod"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Daring Defender"
+    },
+    {
+      "amount": 2,
+      "name": "Mushu's Rocket",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Next Stop, Olympus",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Or Rewrite History!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Carefree Snowboarder"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 1,
+      "name": "The Black Cauldron",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Webby's Diary",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Willie the Giant",
+      "version": "Ghost of Christmas Present"
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "hash": "fa8b0505d8f4d030f20034fc6916725a87b8133d3a9e372fbca3e780e8b7d4df",
+  "inks": [
+    "amethyst",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Amethyst Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Benja",
+      "version": "Guardian of the Dragon Gem"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 1,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 1,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 1,
+      "name": "Fantastical and Magical",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Giant Cobra",
+      "version": "Ghostly Serpent"
+    },
+    {
+      "amount": 1,
+      "name": "Hercules",
+      "version": "Beloved Hero"
+    },
+    {
+      "amount": 1,
+      "name": "Hercules",
+      "version": "True Hero"
+    },
+    {
+      "amount": 3,
+      "name": "Honeymaren",
+      "version": "Northuldra Guide"
+    },
+    {
+      "amount": 2,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 4,
+      "name": "Jafar",
+      "version": "Aspiring Ruler"
+    },
+    {
+      "amount": 1,
+      "name": "Jafar",
+      "version": "Newly Crowned"
+    },
+    {
+      "amount": 1,
+      "name": "Jafar",
+      "version": "Tyrannical Hypnotist"
+    },
+    {
+      "amount": 1,
+      "name": "Magic Carpet",
+      "version": "Phantom Rug"
+    },
+    {
+      "amount": 2,
+      "name": "Maleficent",
+      "version": "Vengeful Sorceress"
+    },
+    {
+      "amount": 1,
+      "name": "Mickey Mouse",
+      "version": "Giant Mouse"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 1,
+      "name": "Pluto",
+      "version": "Guard Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "Lost Prince"
+    },
+    {
+      "amount": 4,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 2,
+      "name": "They Never Come Back",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Fast Flier"
+    },
+    {
+      "amount": 1,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 3,
+      "name": "Treasure Guardian",
+      "version": "Foreboding Sentry"
+    },
+    {
+      "amount": 1,
+      "name": "Twin Fire",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Yelana",
+      "version": "Northuldra Leader"
+    },
+    {
+      "amount": 1,
+      "name": "Yzma",
+      "version": "Conniving Chemist"
+    }
+  ]
+}

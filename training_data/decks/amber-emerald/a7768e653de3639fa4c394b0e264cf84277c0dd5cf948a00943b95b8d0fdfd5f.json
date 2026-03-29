@@ -1,0 +1,104 @@
+{
+  "hash": "a7768e653de3639fa4c394b0e264cf84277c0dd5cf948a00943b95b8d0fdfd5f",
+  "inks": [
+    "emerald",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 2,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 3,
+      "name": "Lady",
+      "version": "Decisive Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 1,
+      "name": "Lilo",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Snow Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 4,
+      "name": "Pudge",
+      "version": "Controls the Weather"
+    },
+    {
+      "amount": 4,
+      "name": "Rhino",
+      "version": "One-Sixteenth Wolf"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "Playful Pouncer"
+    },
+    {
+      "amount": 1,
+      "name": "Stitch",
+      "version": "Alien Dancer"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Little Trickster"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Naughty Experiment"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 2,
+      "name": "Tramp",
+      "version": "Enterprising Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Street-Smart Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Under the Sea",
+      "version": ""
+    }
+  ]
+}

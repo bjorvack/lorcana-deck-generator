@@ -1,0 +1,94 @@
+{
+  "hash": "1d52f6d1dd805512a55abf653126c1dea52ed1e462a8802f0dd4360a9dc59a54",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Blue Smoke",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Darkwing Duck",
+      "version": "Cool Under Pressure"
+    },
+    {
+      "amount": 4,
+      "name": "Darkwing Duck",
+      "version": "Crime Fighter"
+    },
+    {
+      "amount": 2,
+      "name": "Darkwing Duck",
+      "version": "Darkwarrior"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Snowball Patrol"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Let's Get Dangerous",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Persistent Investigator"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Sly Fox Sleuth"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Terror That Flaps in the Night",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Thunderquack",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    }
+  ]
+}

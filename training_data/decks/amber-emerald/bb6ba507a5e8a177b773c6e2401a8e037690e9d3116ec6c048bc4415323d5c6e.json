@@ -1,0 +1,149 @@
+{
+  "hash": "bb6ba507a5e8a177b773c6e2401a8e037690e9d3116ec6c048bc4415323d5c6e",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Baymax",
+      "version": "Low Battery"
+    },
+    {
+      "amount": 3,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 2,
+      "name": "Fred",
+      "version": "Major Science Enthusiast"
+    },
+    {
+      "amount": 2,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 3,
+      "name": "Heffalumps and Woozles",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "I Won't Give In",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Jasmine",
+      "version": "Royal Seafarer"
+    },
+    {
+      "amount": 1,
+      "name": "Lady",
+      "version": "Decisive Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Lady",
+      "version": "Elegant Spaniel"
+    },
+    {
+      "amount": 2,
+      "name": "Lady",
+      "version": "Miss Park Avenue"
+    },
+    {
+      "amount": 1,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 1,
+      "name": "Max Goof",
+      "version": "Rebellious Teen"
+    },
+    {
+      "amount": 2,
+      "name": "Only So Much Room",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Pacha",
+      "version": "Trekmate"
+    },
+    {
+      "amount": 2,
+      "name": "Peg",
+      "version": "Natural Performer"
+    },
+    {
+      "amount": 2,
+      "name": "Perilous Maze",
+      "version": "Watery Labyrinth"
+    },
+    {
+      "amount": 1,
+      "name": "Scrooge McDuck",
+      "version": "S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 1,
+      "name": "Shere Khan",
+      "version": "Infamous Tiger"
+    },
+    {
+      "amount": 4,
+      "name": "Sudden Chill",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Tramp",
+      "version": "Dapper Rascal"
+    },
+    {
+      "amount": 1,
+      "name": "Tramp",
+      "version": "Enterprising Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Tramp",
+      "version": "Observant Guardian"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 2,
+      "name": "Wake Up, Alice!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Yzma",
+      "version": "Exasperated Schemer"
+    }
+  ]
+}
