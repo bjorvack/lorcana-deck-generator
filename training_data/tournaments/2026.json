@@ -32363,5 +32363,146 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "b95f8b844c65118c46f46787c187934855e90aaf658284263d20a71424a55f50",
+    "name": "Randolph Rosemont 2K CCQ",
+    "url": "https://inkdecks.com/lorcana-tournaments/randolph-rosemont-2k-ccq-tournament-decks-363347",
+    "date": "2026-03-29",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "fbcada0f20a1b4cd27d75036c23f03c1b752bd91fe96da4874b1ce4527a7de9d",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "adae75efcf42e86146566be3887bd4ed453d0c3b4157078e085888eef82aa67b",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "6441b0fa7dbd6010e52e58a9c4924bb55ad855bfbdb00e86765732a5fa2dbd91",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ca81d476a261145ed0b1af9767a3956e982195ac9225afe0b5c6931a69ff6716",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "2e2ec0066fdfe582a84d522718d9e742efd0b46d576591ab3154de3a8806942e",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "d5dcd8c0043bc0e94bb3b2863deaa9710b904c8879be285cbafaad57a3a779a0",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f164549d6b576997c4b5e23f67853f701c64cd0d400a4f8a3c9d23ffaff1ee7c",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3f20d8f2c8523982f94cff1d7469003bedc424d99a7da631d4120bbf2f4370c0",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b0799c2aedeefd675983749bf4d8cf20eeb53536239f12e332d70a0b12299985",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "69fb30951e2a97feca42c02a7a7b664d4a270cb2e44a6ff7cf44ce9ed99d5156",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0b9dab33d61224c387f5a1edb143f782ad17309836370110cdfe52d61595f70d",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "c1d3f31bc088abe5c78e79b682e6fa2de39e90c2da1875c62372faf9c193dddb",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "9b2d4c62f369e5fc9a50d5a05fae8bf4c07c7fd8d842f8ecd1509ff4dab2d56d",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "73d4c557b169ad24b3255d12226b1216cd3530d55c6fe94edd673400728ca05b",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7459857b9b057e5d557bb24b148f9a4641bd74c18b7372d307d99eb12137db30",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a8214c9916129e3a27d1daa3dc653c8edeae86a332c6bd8ce10162f0201eff10",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
