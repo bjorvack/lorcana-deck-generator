@@ -1,0 +1,89 @@
+{
+  "hash": "520efba3666b85a2fe905516df9f00d51efc73f7b91fd8349038808b0e4ad90a",
+  "inks": [
+    "sapphire",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Tenacious Mouse"
+    },
+    {
+      "amount": 2,
+      "name": "Castle Wyvern",
+      "version": "Above the Clouds"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Ghost Finder"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Paranormal Investigator"
+    },
+    {
+      "amount": 4,
+      "name": "Darkwing Duck",
+      "version": "Cool Under Pressure"
+    },
+    {
+      "amount": 4,
+      "name": "Darkwing Duck",
+      "version": "Crime Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "On the Case"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Snowball Patrol"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Persistent Investigator"
+    },
+    {
+      "amount": 4,
+      "name": "Nick Wilde",
+      "version": "Sly Fox Sleuth"
+    },
+    {
+      "amount": 4,
+      "name": "The Terror That Flaps in the Night",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 2,
+      "name": "Zootopia",
+      "version": "Police Headquarters"
+    }
+  ]
+}

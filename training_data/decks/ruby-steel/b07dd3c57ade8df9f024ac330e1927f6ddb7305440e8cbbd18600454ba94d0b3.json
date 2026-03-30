@@ -1,0 +1,109 @@
+{
+  "hash": "b07dd3c57ade8df9f024ac330e1927f6ddb7305440e8cbbd18600454ba94d0b3",
+  "inks": [
+    "steel",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Ambush!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Bagheera",
+      "version": "Guardian Jaguar"
+    },
+    {
+      "amount": 3,
+      "name": "Benja",
+      "version": "Guardian of the Dragon Gem"
+    },
+    {
+      "amount": 4,
+      "name": "Bronx",
+      "version": "Ferocious Beast"
+    },
+    {
+      "amount": 4,
+      "name": "Darkwing Duck",
+      "version": "Crime Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Goliath",
+      "version": "Guardian of Castle Wyvern"
+    },
+    {
+      "amount": 2,
+      "name": "Grab Your Bow",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Maximus",
+      "version": "Team Champion"
+    },
+    {
+      "amount": 1,
+      "name": "Mushu's Rocket",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Namaari",
+      "version": "Single-Minded Rival"
+    },
+    {
+      "amount": 2,
+      "name": "Next Stop, Olympus",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Impulsive Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge McDuck",
+      "version": "Ebenezer Scrooge"
+    },
+    {
+      "amount": 4,
+      "name": "The Sword of Hercules",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Terror That Flaps in the Night",
+      "version": ""
+    }
+  ]
+}
