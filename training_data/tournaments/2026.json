@@ -32504,5 +32504,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "1e55717afb72f01ce5ec0a0e87f7ebbfb730daa6c8d585cf22f86386a8d08b45",
+    "name": "Spieltag 2 Div 2 Der Mushu Clan - Team GOAT",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-2-div-2-der-mushu-clan-team-goat-tournament-decks-363343",
+    "date": "2026-03-30",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "a9cf59f673be5167aedf64d5a2895cfafba9e47628c058dff6580727416b02c3",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "71065f063ded54f8404e3aa60c541fd101bd6951ce9086057f6761ac3a04785f",
+        "place": 2,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "89f2d439dde80fb81ab4908627c2f15ef522ff5e2eed58cb9f771084aadeee0e",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "960b27bd627574cf1d8cbdf46bd72ece186c3d431e457b14fb95d7de635fba2c",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "1bea2d176c2f9502cbc1ad6c0b8d7ccd779f9e95ccc82775fa32841fffec301f",
+        "place": 5,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c0f091510bbf52b26f73bfe4610599c47a749187121d5d663b2f7b6a44f27fba",
+        "place": 6,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
