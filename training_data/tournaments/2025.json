@@ -50926,5 +50926,98 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "98abbeb4e2dc820ea31f81b2f4ab1d4bfd9ebc39b4d4c359b0798f0d1303dfb0",
+    "name": "Hobby Kaikan Winterspell Asia Circuit Store Level Qualifier",
+    "url": "https://inkdecks.com/lorcana-tournaments/hobby-kaikan-winterspell-asia-circuit-store-level-qualifier-tournament-decks-363348",
+    "date": "2025-03-28",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "11bdab01b735198dba7b5a92f1162f853fa2e98ca447c46b289330afdc1cc873",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "36f5d83e1c9c6ba3c3a4713586d044c082cb5d5197540a8cdccf81a136dee80e",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f0f940667a5a981955d416b05ec59c55c0a24dfe7d137338c9a92b9026e9e2b6",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6d28013fb10c7e781c5437c5f4f9395d15642e4615309202f1280cafe4fd7eb0",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "84047d98e9a4535b32bc1ce4e62ab0818a6b0bd06bcd621eb9a3cb5a282a1ff1",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "04e0ffec04c992c93440712f6da7156124e9b2ba1b1c88fb2e44e76dd01005f8",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "1ee273dbca90d66b9266404441c609b77376a62f8491132adb0f69f99bd96189",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a80c366028c0f47e11081f832a87a36802dd36b6eec7094dc77196793ec6361e",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b17ae70b37a581b806184474043b01d16c66404bd19c203d2f144333229f2ba3",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "amber"
+        ]
+      },
+      {
+        "hash": "a348978257fd80441679976fefe14b804f3de21688e374a12f0fefb6b556c444",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
