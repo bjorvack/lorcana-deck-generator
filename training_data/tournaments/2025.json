@@ -51019,5 +51019,130 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "e33feedc040ee2cb8242c14c977199030c95b580ae8d7c49754dccc7531faa32",
+    "name": "Qwest KC McDuck Vault",
+    "url": "https://inkdecks.com/lorcana-tournaments/qwest-kc-mcduck-vault-tournament-decks-363329",
+    "date": "2025-03-28",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c7392d4fec078b4f1e41dd6b7e90833043989e80bd54d0ac23afebaa9c2d8051",
+        "place": 1,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "b621c24e1fa7741334ba01d27f04e0f5fe44d1de4bb0d9f9a285c0e0e10743d4",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "148bb46720235c2f21fa05a9e38467dcc112bc99b3c2377d0ab8f51028e0dc54",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5149954250a9c444b7eca91a798ee238a2274a42d3f7a387a47f9ee0158ec989",
+        "place": 4,
+        "inks": [
+          "steel",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "2c3588efbf332a157be2a80e38f157dab47a30abfce1a052d38b6090290d3917",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "895a527ae470f7e97d92457cf8572c9e6941219eba52e40d7084e0df065d3f56",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "7d0791ad180f531c786cead2dd6567360cbdeb40c87352e1df2e126c5bc98fc9",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "37bd27fc84a27a0a87a459e298b43ee882899e328cfc6caac8d198bec224939a",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a7c2e754409afab175fc2781ffb3dfef26660cba9c1d826a1fee5874cdbd4e2d",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "09712c8e714db7dee13ad4753d93fe5a0bf1db3b1b753faf27be15149d0500a4",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "63ec7114526a422fd9245ad7059f5751350cf9192e2b4113cf81a1f9f96fb045",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "987f663a80c3ca9123dec8fffc3c8148e40ed0e96cdf8ba9bbfae472c3e10edf",
+        "place": 16,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "734c1c01b4fe8fa3f687ecbef650b40e5137efb316d91ae76a5067943eabc48a",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "f0df475fef123d367d556043c1250ab6f389fd52a9b53a33721cffc2e1ecc1ac",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]

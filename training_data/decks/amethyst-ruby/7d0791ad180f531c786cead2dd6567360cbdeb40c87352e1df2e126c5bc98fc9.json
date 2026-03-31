@@ -1,0 +1,119 @@
+{
+  "hash": "7d0791ad180f531c786cead2dd6567360cbdeb40c87352e1df2e126c5bc98fc9",
+  "inks": [
+    "amethyst",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Ares",
+      "version": "God of War"
+    },
+    {
+      "amount": 1,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 3,
+      "name": "Can't Hold It Back Anymore",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Card Soldiers",
+      "version": "Royal Troops"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 2,
+      "name": "Elisa Maza",
+      "version": "Transformed Gargoyle"
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "Ice Artisan"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 2,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 1,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 2,
+      "name": "Madame Medusa",
+      "version": "Deceiving Partner"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 2,
+      "name": "Mother Gothel",
+      "version": "Vain Sorceress"
+    },
+    {
+      "amount": 4,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 3,
+      "name": "Slushy",
+      "version": "Glacial Guster"
+    },
+    {
+      "amount": 2,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 2,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    }
+  ]
+}
