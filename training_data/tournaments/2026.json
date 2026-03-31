@@ -32783,5 +32783,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "b6fa6ff7eac4b0cdd40e1f05101ce99a3a5974630da496eb96a4bada225449e3",
+    "name": "Spieltag 2 Div 2 Tintenlovers- Team Prepared",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-2-div-2-tintenlovers-team-prepared-tournament-decks-363344",
+    "date": "2026-03-31",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "2858e0f774e6a0e0b0ea61feeb51806a2449de99495304ee9652e9f3a0aab07a",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "d7c01dc12bc74b7d4fdd823d7cf253df7c8fdcba4853435334b1a9e56694c77a",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f21c7f100e5b6938c39c28e05c83669f53c394225862404138148fb288885df0",
+        "place": 3,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "b9650f7931383d29d96ad5fcf95d4add3869a71d77efeb4fed3c31e5bd7d68d0",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4aa6bee6da7a15d36222ada71b030d0a1d48640f6963963222dbfe47effa44f3",
+        "place": 5,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9c4cbe4fdcd0425ffc66fdfe33b1b2e1a8a0e67d6f9a0209339a0b80e5f51191",
+        "place": 6,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
