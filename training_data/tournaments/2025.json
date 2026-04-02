@@ -51205,5 +51205,87 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "5d31d8e6fbfddef158655c40c957019932ea926aeec6ba1515ecd5b77dbbcad1",
+    "name": "Spieltag 2 Div1 Battle-Bear - DarkWings",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-2-div1-battle-bear-darkwings-tournament-decks-363312",
+    "date": "2025-04-01",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "d2c2996d33831347680c44fcccb932dbcbeedfc4595034981c63a88e6e735d3f",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "4bae2e2c853cd009296f071508a0e054360604883292512d045da3bfc8bac298",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5145c0b2f113ea3a9ff5220452907f5c349d412b927fe1890e511a7dffede112",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "eec83fedae9e8ef07b04ee4272db6b9a80e3af57bab6bbb7a32f36f4a30095bc",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "61ff0f3b09653f5b7c126978d28e328246ddb0c1175a387610e3d8f105b80d36",
+        "place": 5,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a43cb39dc3eeab32567a557f6b9ea82a28ec9beea29db754656e53e77ffcaf50",
+        "place": 6,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "f5b3ebf8013b3d78b1fd967a48812614e78796d8eb22d3ae6958b487d403b6d3",
+    "name": "Disney Lorcana TCG - Asia Circuit - SideQuest",
+    "url": "https://inkdecks.com/lorcana-tournaments/disney-lorcana-tcg-asia-circuit-sidequest-tournament-decks-363349",
+    "date": "2025-03-29",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "5ee07b58dbbdae400ac84a61ca90e91e88483e109c92116abb18279102163c83",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
