@@ -32926,5 +32926,27 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "5d011a5416e582b767ebed441b80c6ad1a466086a0e4a87f2803922977755004",
+    "name": "MCH Weekly Construct event",
+    "url": "https://inkdecks.com/lorcana-tournaments/mch-weekly-construct-event-tournament-decks-363351",
+    "date": "2026-04-02",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "2af31dd8a4aaa42a4556cd97bb9f960eec815f7118fdf18b6752ca6c99450240",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]

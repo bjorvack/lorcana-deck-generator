@@ -51287,5 +51287,27 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "090b14a56aeff3e2ffcdd05f3eb13ae01928f7d52ea8beeef4f3b627e692b3f0",
+    "name": "MCH Weekly Construct event",
+    "url": "https://inkdecks.com/lorcana-tournaments/mch-weekly-construct-event-tournament-decks-363351",
+    "date": "2025-04-02",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "2af31dd8a4aaa42a4556cd97bb9f960eec815f7118fdf18b6752ca6c99450240",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
