@@ -1,0 +1,109 @@
+{
+  "hash": "ff36bc3306d39fcc6ffe53a3c39d2de1445ff8456e520bf06ca4c7eb5d4528a1",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Barreling Through"
+    },
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Ethereal Voice"
+    },
+    {
+      "amount": 4,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Ice Artisan"
+    },
+    {
+      "amount": 2,
+      "name": "Ghostly Tale",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Liquidator",
+      "version": "Iced Over"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 2,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 2,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Raging Storm",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Recovered Page",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 3,
+      "name": "Scrooge's Counting House",
+      "version": "Ebenezer's Office"
+    },
+    {
+      "amount": 1,
+      "name": "The Black Cauldron",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Webby's Diary",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}
