@@ -33065,5 +33065,336 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "eb1a8d62c82cd65b32833b0ce195d5a1271ceeb18e58e5c576cc4a96a664b4d4",
+    "name": "Saturday Morning Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-morning-winterspell-set-championship-tournament-decks-363360",
+    "date": "2026-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "671bec7a557fe0f4f5b85cf4e3beb9a4fa6181acfb39bb3d81a55e897e0d03bc",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "743b5f6df18591b17c9076d5d08c2316947cdb029366ec7c39f9c276c4e85ac1",
+    "name": "Disney Lorcana: Winterspell Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/disney-lorcana-winterspell-set-championship-tournament-decks-363359",
+    "date": "2026-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "1d25f23f4ba2e2989c50b8c97385adfe1b7749b137fabbbf819cd96a3ecfa74f",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "eb1a8d62c82cd65b32833b0ce195d5a1271ceeb18e58e5c576cc4a96a664b4d4",
+    "name": "Saturday Morning Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-morning-winterspell-set-championship-tournament-decks-363358",
+    "date": "2026-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "a911645a51e0cfd0801ac99d792354e49dcb6c10590783ac0669c2efd1aa3be2",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "0fcbef4e94fcd51045b72470f807de01b7fbf9592140eda6f9f57ee239576c43",
+    "name": "Tournoi Royaume",
+    "url": "https://inkdecks.com/lorcana-tournaments/tournoi-royaume-tournament-decks-363357",
+    "date": "2026-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "09f2dd85522bf8ad744166fd478fb007d4a2c658dbb46f5781d85b3aa572e5c4",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b14d3ac68669ba6c31f7b1881d9a71a52c1b0ccf2656ef0226ded8feb535df03",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "509fb169851d51e168b44c11b46486b5303d09ebe2f87758eeceabe8506e9cd3",
+    "name": "Mochi Cards Winterspell Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/mochi-cards-winterspell-set-championship-tournament-decks-363356",
+    "date": "2026-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "867f726da8d092d8a012eb0414bcee06c24154393ed102b19e9ed413a1ebc51d",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "6c5ce858abb575d9b6f9351eb70666d47d854808a318fd31bd55ff0a71895194",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ff36bc3306d39fcc6ffe53a3c39d2de1445ff8456e520bf06ca4c7eb5d4528a1",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "21923daa173a52770bd22e2dd704d145d43b8ddb6db2a315fb6ca828008c7816",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1ba605c2749ef4735a3be916129e7a245b5bfc1c68b57b04eb65339e5d1c6e59",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b3d74b7d24100e0eeba3ddb67f18c7f3526e832a8f33c90f78113ea3ead11fd2",
+        "place": 8,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "f08fb2696be5abb730cf656c1e0f39f160f6b386ad4099964394e8cf7fd2a4df",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "436230c82b2d2f571c9874d6a3fb25addafe3732f46650f0c02f4084985bc1b0",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5ee07b58dbbdae400ac84a61ca90e91e88483e109c92116abb18279102163c83",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "cc705a33045ff8a6f34466bb7a554389020c7923c5992ee69e90c727fa655a67",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "f5fc805dfe98bd73eb3edbb7d80ad12604e0fbb21814165693ca6d0dbd6db284",
+        "place": 16,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "60d4f3511d2c098932910856cb72d4f0f40d0e10cce2d9bef01405c63694d210",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1731d2fa92d37a375a79261efee055aa5f781e7ce372710efd02c2c6c4257104",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "75a8d53219b2883c201c684351b3b8ae3788d65fb90841605add839751425c51",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ecb967d97bd5cbb1c8c3c9452cae1eac482362643a80f404107e7f03c184c8f7",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "0c6ca7566a9fd0bdc2d765ed473078b8d78626c8f2ee81d9e886b6bf2ac61a6b",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ac78c5bc741da11345cd766a30e03f5bbcc21ee0510c6c3d196c8d0f8e27e1cb",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "24f3b2f87859688377393ea4b12c4bbf8713f9e98a37cf897de032f42911d88c",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "48c2b2d043d4d091604d9e20f6377c0e0e618c5544bc4ebcbdc8e61049fa79e4",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6b2bd4c7eec47b1339fa5fc4dbbba656e4882081bbe604d05f0d14ddd29e4276",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "62f84a21fedb5ea95fa3fbace430b902b5455faeae29806099bfedd8aa28bf0b",
+        "place": 32,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "cef61bea4b26bdf08c8139da367496308b81ae86dd26cef4f468178ab6f7bb56",
+        "place": 32,
+        "inks": [
+          "emerald",
+          "amber"
+        ]
+      },
+      {
+        "hash": "b7b40fac7dc9f7e89de2fe7893c7390b88abcc71fc236e90d61a31b8a87705c3",
+        "place": 32,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "1aacf2779168d5a44cea42445fd94aa5385cae58d8becc011f0ade194c75b511",
+    "name": "Forge and Finds Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/forge-and-finds-winterspell-set-championship-tournament-decks-363355",
+    "date": "2026-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "7048bb32d864de2e6b792b51ef865edbd02b24f76b58e3a5f1b45af1fca0f490",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "1b60af1ea252b4c8f79eb05a14e227833372f1124fabaad148ab7e4203b00059",
+    "name": "Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-championship-tournament-decks-363354",
+    "date": "2026-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "69ce7eb89632e96b4111e26871fc71df432e292181087393693930493792fb97",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      }
+    ]
   }
 ]

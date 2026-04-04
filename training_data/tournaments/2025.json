@@ -51426,5 +51426,97 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "a018602600b9b2ac1cb64bb4186cec2d3a2ee4ac28238a14dfdc8a064f238600",
+    "name": "Saturday Morning Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-morning-winterspell-set-championship-tournament-decks-363360",
+    "date": "2025-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "671bec7a557fe0f4f5b85cf4e3beb9a4fa6181acfb39bb3d81a55e897e0d03bc",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "1aafea67e3fcc1740fc033a2c9fa36962cd9564df5b1736d608ed6795e4669e7",
+    "name": "Disney Lorcana: Winterspell Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/disney-lorcana-winterspell-set-championship-tournament-decks-363359",
+    "date": "2025-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "1d25f23f4ba2e2989c50b8c97385adfe1b7749b137fabbbf819cd96a3ecfa74f",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "a018602600b9b2ac1cb64bb4186cec2d3a2ee4ac28238a14dfdc8a064f238600",
+    "name": "Saturday Morning Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-morning-winterspell-set-championship-tournament-decks-363358",
+    "date": "2025-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "a911645a51e0cfd0801ac99d792354e49dcb6c10590783ac0669c2efd1aa3be2",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "b42aeceb82c1849098549fbfc5f127d7edcc23b162a07fd97ae83965ce1e46eb",
+    "name": "Tournoi Royaume",
+    "url": "https://inkdecks.com/lorcana-tournaments/tournoi-royaume-tournament-decks-363357",
+    "date": "2025-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "09f2dd85522bf8ad744166fd478fb007d4a2c658dbb46f5781d85b3aa572e5c4",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b14d3ac68669ba6c31f7b1881d9a71a52c1b0ccf2656ef0226ded8feb535df03",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
