@@ -51309,5 +51309,122 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "acf6609d30a96008bd04cd626fa5bc0af981e482c275fb6a7b76d7fa8483c17c",
+    "name": "Road To Lorcana 6 - Saison 11",
+    "url": "https://inkdecks.com/lorcana-tournaments/road-to-lorcana-6-saison-11-tournament-decks-363353",
+    "date": "2025-04-03",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "0bef186870465be3c6ef617be4415f25bb17834c8d5e2f093670e28e9babeb85",
+        "place": 1,
+        "inks": [
+          "emerald",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "6e4c83205e72ba1324cb56274a8a9137b5f50e5979b4c3d7df8c8a25c82c701a",
+        "place": 2,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f2a26980d6f351bea8a5e7732a534520511d818b7e9cd8870238e086a8289c8a",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "aa6c0adf033c23cdb6409a5a42283f21033f636cb9ea5fca69bbddefae911ca8",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c8df1de8c5b2c02a8244a99ff8c8dee3b69674df825928fa84ba68ababccbde9",
+        "place": 8,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "5ee352e174a9b868dcfa3ff64dfbd3e50f1afd7544c894300f35ecace1daaa27",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "2bc68fe458d27db33046f959add282749595a1b1626165bd5f613c1860f27440",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a80cade710723cd697ccc1dce797441d9b374a742da6c2e6472a0c3df8028463",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "314b307b002be132a1250624664157e11ca41b707249a6188f6d24099dbef5ed",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "21cef5033f2e8062a71c0ed16a8510fde430fc7dd9da8198858164b0f54956ad",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a571a6236ee02dec7e1faea01efd31de2ee0287e338f38ce607d31c3433b597c",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "9d3e243f35b555dc51b01361ac177f9b59f8667fc147be6802851d3e29993f09",
+        "place": 16,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "fcbe26637f6dbda095bcfc5f9068ba8107111cc5df7bd9410335646b44fb3574",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
