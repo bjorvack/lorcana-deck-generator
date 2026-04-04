@@ -33396,5 +33396,26 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "080999ae0ea440e7861ba2ffe0ef51814a862d7af8cb839352613999db78322e",
+    "name": "Lamacards Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/lamacards-winterspell-set-championship-tournament-decks-363363",
+    "date": "2026-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "04a4bcb2e9586402b691fc059fcbd3a06bfff99211bd7b6a2a28506d4abc5eca",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
