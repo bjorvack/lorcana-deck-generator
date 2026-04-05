@@ -1,0 +1,99 @@
+{
+  "hash": "b54c515c91149260ecdebb2672bcee629b74639278562c77ee0f88f2d89d39fd",
+  "inks": [
+    "sapphire",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Belle",
+      "version": "Snowfield Strategist"
+    },
+    {
+      "amount": 4,
+      "name": "David Xanatos",
+      "version": "Charismatic Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Distract",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Grab Your Bow",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Lady Tremaine",
+      "version": "Sinister Socialite"
+    },
+    {
+      "amount": 4,
+      "name": "Liquidator",
+      "version": "Iced Over"
+    },
+    {
+      "amount": 4,
+      "name": "Lonely Grave",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Marching Off to Battle",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Ghost of Christmas Future"
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Steamboat Rival"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Slushy",
+      "version": "Glacial Guster"
+    },
+    {
+      "amount": 3,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 2,
+      "name": "Wasabi",
+      "version": "Methodical Engineer"
+    },
+    {
+      "amount": 4,
+      "name": "Wreck",
+      "version": "it Ralph - Raging Wrecker"
+    }
+  ]
+}
