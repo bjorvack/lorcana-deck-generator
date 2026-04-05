@@ -1,0 +1,84 @@
+{
+  "hash": "467d16e746e410518a4a05049fb8b60aab114996b3fa68557d946f570a5eddb2",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Dig a Little Deeper",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Distract",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Grab Your Bow",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Helping Hand",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Causing an Uproar"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Next Stop, Olympus",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Olaf",
+      "version": "Snowman of Action"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Sharpshooter"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}

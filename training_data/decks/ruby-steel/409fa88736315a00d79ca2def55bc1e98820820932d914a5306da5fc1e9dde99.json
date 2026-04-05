@@ -1,0 +1,134 @@
+{
+  "hash": "409fa88736315a00d79ca2def55bc1e98820820932d914a5306da5fc1e9dde99",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Agrabah",
+      "version": "Marketplace"
+    },
+    {
+      "amount": 3,
+      "name": "Benja",
+      "version": "Guardian of the Dragon Gem"
+    },
+    {
+      "amount": 2,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 3,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 3,
+      "name": "Castle Wyvern",
+      "version": "Above the Clouds"
+    },
+    {
+      "amount": 4,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Hot Potato",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Jasmine",
+      "version": "Fearless Princess"
+    },
+    {
+      "amount": 2,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 4,
+      "name": "Li Shang",
+      "version": "Newly Promoted"
+    },
+    {
+      "amount": 2,
+      "name": "Lilo",
+      "version": "Bundled Up"
+    },
+    {
+      "amount": 3,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Island Explorer"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Mushu",
+      "version": "Majestic Dragon"
+    },
+    {
+      "amount": 3,
+      "name": "Negaduck",
+      "version": "Evil Doppelganger"
+    },
+    {
+      "amount": 3,
+      "name": "Negaduck",
+      "version": "Public Enemy Number One"
+    },
+    {
+      "amount": 3,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 3,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 3,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 1,
+      "name": "Seven Dwarfs' Mine",
+      "version": "Secure Fortress"
+    },
+    {
+      "amount": 3,
+      "name": "Slushy",
+      "version": "Glacial Guster"
+    },
+    {
+      "amount": 1,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    }
+  ]
+}

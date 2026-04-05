@@ -1,0 +1,109 @@
+{
+  "hash": "486ec58605d262b9118571cd41e8470ab55f73932600e7b9b0732934f6ddb507",
+  "inks": [
+    "emerald",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Disguised Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 1,
+      "name": "Baymax",
+      "version": "Giant Robot"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 2,
+      "name": "Hiro Hamada",
+      "version": "Armor Designer"
+    },
+    {
+      "amount": 2,
+      "name": "Hiro Hamada",
+      "version": "Robotics Prodigy"
+    },
+    {
+      "amount": 2,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Ink Geyser",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Moana",
+      "version": "Curious Explorer"
+    },
+    {
+      "amount": 2,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}
