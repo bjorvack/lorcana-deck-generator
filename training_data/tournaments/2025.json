@@ -52132,5 +52132,50 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "874c6721ca68ef90395c5a558d998595aa56d5e62462b02bb1c1aa0b5df32a31",
+    "name": "Paperxtowel - HDLegacy Winterspell Set Champ",
+    "url": "https://inkdecks.com/lorcana-tournaments/paperxtowel-hdlegacy-winterspell-set-champ-tournament-decks-363365",
+    "date": "2025-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "756b5d3c5fcbaa050ec38b35c1cfaa3424f945fc51bbd5d360e4e71fa6cd1307",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "e724d0a8f109d7789bbe31f89f74389b93c082f9e376d8fb779c1f06dca8c4c6",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "6ee66f3550050631fdd709a116e2387e04b8e6111b78eeb27a506e04069ae8ce",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "08324bf27126437b8f9ac974bc72be92868d3d10b60ca43fa8d1e1cde384884e",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
