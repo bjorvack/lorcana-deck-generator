@@ -1,0 +1,99 @@
+{
+  "hash": "bf7000be1e138f981a9615228e82b3a13d8803dad9fa5da8a536a23012d07477",
+  "inks": [
+    "amethyst",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Bruni",
+      "version": "Fire Salamander"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Isabel"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 3,
+      "name": "Hiram Flaversham",
+      "version": "Intrigued Inventor"
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ludwig von Drake",
+      "version": "Self-Proclaimed Genius"
+    },
+    {
+      "amount": 4,
+      "name": "Magic Carpet",
+      "version": "Amazing Flier"
+    },
+    {
+      "amount": 4,
+      "name": "Magical Maneuvers",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Marshmallow",
+      "version": "Cranky Climber"
+    },
+    {
+      "amount": 4,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Splatter Phoenix",
+      "version": "Rejected Artist"
+    },
+    {
+      "amount": 3,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tadashi Hamada",
+      "version": "Gifted Roboticist"
+    },
+    {
+      "amount": 3,
+      "name": "The Sultan",
+      "version": "Playful Monarch"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    }
+  ]
+}
