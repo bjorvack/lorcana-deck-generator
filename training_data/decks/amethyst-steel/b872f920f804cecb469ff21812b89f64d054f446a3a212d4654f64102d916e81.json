@@ -1,0 +1,129 @@
+{
+  "hash": "b872f920f804cecb469ff21812b89f64d054f446a3a212d4654f64102d916e81",
+  "inks": [
+    "steel",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Angel",
+      "version": "Experiment 624"
+    },
+    {
+      "amount": 3,
+      "name": "Black Heron",
+      "version": "Real Bad Egg"
+    },
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 2,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 2,
+      "name": "Do You Want to Build A Snowman?",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 3,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 3,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 3,
+      "name": "Madam Mim",
+      "version": "Tiny Adversary"
+    },
+    {
+      "amount": 2,
+      "name": "Marshmallow",
+      "version": "Cranky Climber"
+    },
+    {
+      "amount": 3,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 1,
+      "name": "Restoring the Crown",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Smash",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Sven",
+      "version": "Leaping Reindeer"
+    },
+    {
+      "amount": 3,
+      "name": "The Queen",
+      "version": "Jealous Beauty"
+    },
+    {
+      "amount": 3,
+      "name": "Zeus",
+      "version": "Missing His Spark"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "hash": "dd44cc2f2ca901127ed522d9fd92a16af79af0274499322232ce60921d024101",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Amethyst Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Bend to My Will",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 3,
+      "name": "Clarabelle",
+      "version": "Contented Wallflower"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 2,
+      "name": "Kronk",
+      "version": "Laid Back"
+    },
+    {
+      "amount": 3,
+      "name": "Kuzco",
+      "version": "Impulsive Llama"
+    },
+    {
+      "amount": 4,
+      "name": "Kuzco",
+      "version": "Wanted Llama"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Marshmallow",
+      "version": "Cranky Climber"
+    },
+    {
+      "amount": 3,
+      "name": "Mother Gothel",
+      "version": "Conceited Manipulator"
+    },
+    {
+      "amount": 3,
+      "name": "Mother Gothel",
+      "version": "Unwavering Schemer"
+    },
+    {
+      "amount": 2,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 2,
+      "name": "Tinker Bell",
+      "version": "Snowflake Collector"
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    },
+    {
+      "amount": 4,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}

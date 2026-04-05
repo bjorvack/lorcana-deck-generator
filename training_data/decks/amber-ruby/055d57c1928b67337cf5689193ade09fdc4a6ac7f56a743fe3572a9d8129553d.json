@@ -1,0 +1,99 @@
+{
+  "hash": "055d57c1928b67337cf5689193ade09fdc4a6ac7f56a743fe3572a9d8129553d",
+  "inks": [
+    "ruby",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Akood et Emuti",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Angel",
+      "version": "Siren Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Ethereal Voice"
+    },
+    {
+      "amount": 4,
+      "name": "Chief Powhatan",
+      "version": "Protective Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Or Rewrite History!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Raging Storm",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Sarabi",
+      "version": "Protecting the Pride"
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge's Counting House",
+      "version": "Ebenezer's Office"
+    },
+    {
+      "amount": 4,
+      "name": "Sisu",
+      "version": "Daring Visitor"
+    },
+    {
+      "amount": 4,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 2,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    },
+    {
+      "amount": 3,
+      "name": "Webby's Diary",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}
