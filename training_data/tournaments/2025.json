@@ -52772,5 +52772,26 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "67302f89bc455c4f7fd2c0ba6f398eaa504e5bab98240be79c8d8f6089606983",
+    "name": "Sunday Morning Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/sunday-morning-winterspell-set-championship-tournament-decks-363379",
+    "date": "2025-04-05",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "a3cb889ac0adbee6bd23e3eade0856d8cd77c3a2a43d60adf0f92e965c09c5f3",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]

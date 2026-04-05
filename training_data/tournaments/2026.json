@@ -34376,5 +34376,247 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "ac2852aab6517592fad5314b2d521aad3ffcb011e3065c0d21cb0fba2b357574",
+    "name": "Dragon's Lair Winterspell Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/dragon-s-lair-winterspell-set-championship-tournament-decks-363370",
+    "date": "2026-04-05",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "0e621417210258ed43c09e46b188c2e8bcbb8cb0485cfb128bdad9060cb4c114",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "62f77f102d366fe7900e1d7618a60a4a3a641d7bb0f101b8d4a3cb26c84c47dc",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "4003d40112d3b5b1d75fe06f76139dc3cedac0ab4b79cdc1b099743024987a19",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "7ac1025a081a77c1a55d4a63cc4f92c45e3727711a59a6b23f823021a8d9f8e8",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b594f1121c4e6fccfddee93e394cf55841600e8f503c966d7359a242d4b0cf2e",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4bf34225262b4ac14b1806d82ae9c970393ea3b857eab00e63189c8460fd3404",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "0450fc9cc2fceda405700a65e44da86c6da265bec1c78451b721954c09ad37db",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "797bd03f8658588669a75cb30b347bb40d0c4bd896f475a4308de0e8be2f769b",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "07dd9ee0730b1d61aaf5edfced2cebe391f4da915618cdddab715cd53a5f50c5",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2f287d37b7419b8faf84164068b3b5b1d608387913298f0706c9b1a69a14fc03",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "1ff39eee2b1e5ce5bb4bdea5f7c2bc8abbd15e46e3fac364203afcd16b094028",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "db8723eeca7684dba57cc3f86656e9ba29b29faff6a3d1f696862df2946dcfd5",
+        "place": 16,
+        "inks": [
+          "emerald",
+          "amber"
+        ]
+      },
+      {
+        "hash": "5d0c8dbdcda70298fc564899543d0b4bcf8465cad70eda6d378a3a4c97c35d76",
+        "place": 16,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2a678dcbf04c76af5dba8147df827353809a4748433a52f202393d0df93fd870",
+        "place": 16,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "91c9adf855657d94449ca18ce1e551f649ded0a6f58d2100c914e7d19e2a8a0b",
+        "place": 16,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "b54c515c91149260ecdebb2672bcee629b74639278562c77ee0f88f2d89d39fd",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "13091635f15e2ca809c064cefb3a06fb1982ea71cf6d21185c66d86a7d53beab",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "9fa1774cfdc78da9d84badaa48b749f1968580644887a2519e126e8177d5c53d",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3444d326d056a20aacaa9252e2cb75d40b2ba3b39bf842624bc963b359f4e1de",
+        "place": 32,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "bb1ccb5ef1c514d10e635bc58527555df0046b7a39b76d2a060abc2302b9d50c",
+    "name": "R916 Lorcana Asia Circuit",
+    "url": "https://inkdecks.com/lorcana-tournaments/r916-lorcana-asia-circuit-tournament-decks-363369",
+    "date": "2026-04-05",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "8050415a0d6ae365f6dbe41ea23f47dbef7c46d854ba0a4a3f186ddf3c7e8378",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "4186cd913e3bd98b29b05b3a18c9ccea31b94da0720db3092eda6384fcb28bb5",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4186cd913e3bd98b29b05b3a18c9ccea31b94da0720db3092eda6384fcb28bb5",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "525c7eb608e0f1028e3c8e25e9afd55a474a72cd36232a5010379e72bf44da2f",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "10bc7f609f38d178a4567a4303ba70f92343280429b6a915357ef90a42b40ebe",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "09bc69d9f370bcf2fc1bab1fb3a3929e045cfcfd1bc096800bc3bec27abe4f52",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "96ad80912e61ee681d5c43bc8e96c72aef69dc1b2a0302370a2fa7b60195dccc",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a8aa9e1b1b87bd104c6c473c78f612f9789939fb1a3a63e802d70e6a2abdb210",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
