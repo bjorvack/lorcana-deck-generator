@@ -53231,5 +53231,159 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "fde12fc14b3800ec4f62eb69965bc66ac142994925809acc30e550c137a46ae4",
+    "name": "Set Championship Winterspell",
+    "url": "https://inkdecks.com/lorcana-tournaments/set-championship-winterspell-tournament-decks-363387",
+    "date": "2025-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "2258a46382ae01f409655418e5e6128fac1049e569655536ff14a0647c004e7d",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7628c0d4704c1b80d8e21d2bfd4da48b2bf8ab573f1b44186459292eef664568",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a8a8a9030f8fe1cb92d8c4842afbc5913f2ee1a2ed41c4434103881bf40a39cd",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "42b2429729a3839a95c7a0b8dee140c5eab0538d10cde46e950249c7aa3f9e3a",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3f1e23f243f2bf9d855f4adb736a51c23448ecdee89fdc7bc029577eb7d5ed31",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5b3327fc8a2b6a608abd8b12a8e6e17895b41d1887592f667074876388758fbf",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "2c7e840b654d8b19db120fc6a93bc8b0c6cae4e97513b175945525757f5443c2",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "c00ec9c9e02ebafdb1b6df7b683a02e2d366786b1d6cee4b87360a36bb1a112a",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "104a2eda4a146fb912da7d32f43b1d5c774800d5fcaae1a73968465699fb18ee",
+    "name": "Winterspell - Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-champs-tournament-decks-363385",
+    "date": "2025-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "067100060a270b835ffabd2d807f191503ed9b5dc8b665594ee4230fe5b9a392",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "60e29d67de198110b21e366af8a6a667ea83a9fd0343a2c655604c95ff95b92d",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2ff698b3308d8f1ee0def3002d858f0b23a7662841a25e32923984a2015c7502",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "aa6c6bdbde793258b2f4c72ea53d62c23f9f24fb3c4ca0252d17e0c01d4e108f",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "4235eaf717f803f2c3fe2e744d5ca735b8c57b109bf7302fb8abc76017a05aad",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "304178372c1614fa6b9030fd6e06e70cf35e0edece9bd2d7992b6cae61c59273",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "4399617e84e5bba75996b54fb479727b61337fe4905c5e44f2dab3124c32d883",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fbcada0f20a1b4cd27d75036c23f03c1b752bd91fe96da4874b1ce4527a7de9d",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
