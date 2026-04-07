@@ -34968,5 +34968,26 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "ac1c2e482b9066f920491a4647ef1476d136484b9a7cf76b78e95cc5fb01496d",
+    "name": "Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/set-champs-tournament-decks-363390",
+    "date": "2026-04-05",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "ce1838bcb5a68218000401a03493e5dd32f8a4d2f697fd9ba29c5f8a937c9a21",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
