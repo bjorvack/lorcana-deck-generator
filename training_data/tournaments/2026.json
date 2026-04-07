@@ -34989,5 +34989,68 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "94c773a70a68f0b80437a525c75af56ae16eda9c708f22193dc99d83456510bc",
+    "name": "Saturday Afternoon Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-afternoon-winterspell-set-championship-tournament-decks-363395",
+    "date": "2026-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "017ef231647f69bd5352e2e957159e5a61c4db3dce65abb41ae34a09dfa780ed",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "ruby"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "6825c39b359e374de8cc43b389bc89e171d834b26238fef4ce878be6385e982d",
+    "name": "Lorcana Winterspell Set Championship!",
+    "url": "https://inkdecks.com/lorcana-tournaments/lorcana-winterspell-set-championship-tournament-decks-363394",
+    "date": "2026-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "cb6f6acd9121ee0ec44662a1209207659a0de8a2c301852e83266a3944d53020",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "4ed1d36c8f0f7b1d18d8dab471801c946c2b056dfdbb65afe5bd102563fa993d",
+    "name": "Lorcana Winterspell champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/lorcana-winterspell-champs-tournament-decks-363393",
+    "date": "2026-04-04",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "28b7769b0b4a1c94ca31433e87f6b0235fd630a07b3c005ebf86a08977345df1",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
