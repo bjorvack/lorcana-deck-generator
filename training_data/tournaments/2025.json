@@ -53469,5 +53469,26 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "7a6a700d724f5f5758f3afcf054a5ccdadf057c1d61cc08bc64661b2106f4f28",
+    "name": "Les Nouveaux Disciples - Winterspell - Set Championship - Huy Belgique",
+    "url": "https://inkdecks.com/lorcana-tournaments/les-nouveaux-disciples-winterspell-set-championship-huy-belgique-tournament-decks-363398",
+    "date": "2025-04-05",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "09f2dd85522bf8ad744166fd478fb007d4a2c658dbb46f5781d85b3aa572e5c4",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
