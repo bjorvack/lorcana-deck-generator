@@ -35494,5 +35494,127 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "ce0f67864f14b186e1942725935da6dec2c3c9ea3af6342102c6c43f735cf34f",
+    "name": "Spieltag 3 Div 1 Team Secret Rare - Team Tintenvorrat",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-3-div-1-team-secret-rare-team-tintenvorrat-tournament-decks-363402",
+    "date": "2026-04-09",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "9d0dde7d6961b11edc64fd175f579f3e0c0feb822ccdab86d62e5eadab8b1fc0",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "2989cbf44ef0c139d7761067c868a0bdaeec0dbaed8408e8ccb092cc4241bd34",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "591fbb4175739d57cd98ef0c2239b11892aa6269d6c5dc3da74b95ab89aac4e5",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "e24366a75f6cab2574bded48e8af115576833e2ee483f6e0fc13eb814bef2311",
+        "place": 4,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "3332bc9259047cef6fcff6571edbdb64918a51f5e8241448c78fc9f5e47e69ca",
+        "place": 5,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "d7caa62acb6877c583e53cbfcb9b538ff0cf57549e099225982b97f56ef58125",
+        "place": 6,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "503feb0ff093c7876acc3207fb6cbee7411fc5eff8ff560049670a77f1a5d588",
+    "name": "Spieltag 3 Div 1 Ink Crows - 7 Serpents TCG",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-3-div-1-ink-crows-7-serpents-tcg-tournament-decks-363401",
+    "date": "2026-04-09",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "e1e8be02bd95c3498b1e68f8a5d972fe2d56731d113927d162a86de4eac912c9",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "45ddedc860aeba4d3e10d53605b1c224e8980d79757f212e37675d257afd0276",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7048bb32d864de2e6b792b51ef865edbd02b24f76b58e3a5f1b45af1fca0f490",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "d7929b2434b929cb668a9ff1906206ae45f8ecaec59c20839a7d9561d4cff51c",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "ebf181250903b9797384d4393bf6dc5f8326da2420c3de2d779aceea6455f45a",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6fba2703bdffb1089cb3f83f475ff27ba0aaf07b8fb27e21aec1cbd072a47d7e",
+        "place": 6,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
