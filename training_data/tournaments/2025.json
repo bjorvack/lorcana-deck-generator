@@ -54033,5 +54033,50 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "bdcae474f6e3d559f805302adcb8d24fa56fa8b2de05959b13d4d052d5aaabcb",
+    "name": "Winterspell Championship Empire Games",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-championship-empire-games-tournament-decks-363373",
+    "date": "2025-04-05",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "6871712ad4506e6bbcb933c7845384b07d44e99d797b35c5951aa9373b7b5b55",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "d721b8c9a12c5f65284152bcf01c64a361550a32516f93362442aa6647541191",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "45d7cd5ff9b1c28b6c1407e95b6b43f4ab0262aabb0b9f8da4a6253f6aef7c45",
+        "place": 4,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "6871712ad4506e6bbcb933c7845384b07d44e99d797b35c5951aa9373b7b5b55",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      }
+    ]
   }
 ]
