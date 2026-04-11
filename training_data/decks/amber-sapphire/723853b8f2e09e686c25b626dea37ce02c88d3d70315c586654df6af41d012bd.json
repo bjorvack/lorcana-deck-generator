@@ -1,0 +1,134 @@
+{
+  "hash": "723853b8f2e09e686c25b626dea37ce02c88d3d70315c586654df6af41d012bd",
+  "inks": [
+    "sapphire",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Alice",
+      "version": "Savvy Sailor"
+    },
+    {
+      "amount": 3,
+      "name": "Aurora",
+      "version": "Dreaming Guardian"
+    },
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Snowfield Strategist"
+    },
+    {
+      "amount": 3,
+      "name": "Chief Powhatan",
+      "version": "Protective Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 2,
+      "name": "Daisy Duck",
+      "version": "Paranormal Investigator"
+    },
+    {
+      "amount": 3,
+      "name": "Darling Dear",
+      "version": "Beloved Wife"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 2,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 2,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Ludwig Von Drake",
+      "version": "All-Around Expert"
+    },
+    {
+      "amount": 2,
+      "name": "Mickey Mouse",
+      "version": "Amber Champion"
+    },
+    {
+      "amount": 1,
+      "name": "Moana",
+      "version": "Curious Explorer"
+    },
+    {
+      "amount": 1,
+      "name": "Moana",
+      "version": "Determined Explorer"
+    },
+    {
+      "amount": 1,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Pocahontas",
+      "version": "Finding the Way"
+    },
+    {
+      "amount": 4,
+      "name": "Pocahontas",
+      "version": "Peacekeeper"
+    },
+    {
+      "amount": 2,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 3,
+      "name": "Splatter Phoenix",
+      "version": "Rejected Artist"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Carefree Snowboarder"
+    },
+    {
+      "amount": 2,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    },
+    {
+      "amount": 2,
+      "name": "Tiana",
+      "version": "Warm and Happy"
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

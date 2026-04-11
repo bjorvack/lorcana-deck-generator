@@ -1,0 +1,94 @@
+{
+  "hash": "f3f700f571db014b5f80db3f0a7cc4255ae77ce3b0ce68596cf5b9dc9003d65a",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 3,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 4,
+      "name": "Isis Vanderchill",
+      "version": "Ice Queen of St. Canard"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Spinning Skater"
+    },
+    {
+      "amount": 2,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 3,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Pull the Lever!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Royal Guard",
+      "version": "Octopus Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Snow Fort",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "White Rabbit",
+      "version": "Late Again"
+    },
+    {
+      "amount": 4,
+      "name": "Wrong Lever!",
+      "version": ""
+    }
+  ]
+}
