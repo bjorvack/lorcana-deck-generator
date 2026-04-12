@@ -36993,5 +36993,119 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "2e193539b4c1b52130145f9303ec6eb65ca57bd77a8e81198b64b62f7f8c146c",
+    "name": "Set Champ - Heroes Inn",
+    "url": "https://inkdecks.com/lorcana-tournaments/set-champ-heroes-inn-tournament-decks-363428",
+    "date": "2026-04-11",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "2bc9325dc2ea04d1faa8729226c7533091b869a11ee20ca10a9c31603261e2db",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "9920f72847a39c8aae22976be66eb7c6005e77b418cc8e814fc67ba9712a2acb",
+    "name": "MC CALDAS WINTERSPELL - SET CHAMPIONSHIP",
+    "url": "https://inkdecks.com/lorcana-tournaments/mc-caldas-winterspell-set-championship-tournament-decks-363422",
+    "date": "2026-04-11",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "5f4d2b85206f6dc689974e895be46a39a30484a2d3c9ba18b206ad1e51a935e6",
+        "place": 1,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "006a1b9fc7f08c75d512cdd257650a46e9537d1e98df94aaf1fe7107165aa594",
+        "place": 2,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "05d24bd95a4c82c7147f4ea42b152a19eb9c4d61a4c8c0a5fb8113f15b198081",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "570c31eb622eeb0864df3d9e456019ba1e1cbdd9b0300d8d755bb27133ca30d1",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7d5350fd5183763723ca71c7a657a1e17a9374785159ea55a3adf8f973367456",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "968520500db8b60a37fc564948b32937f1dcee39e007d151c8eed9b8d4b14a67",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "14af153430979fb710b3645ba6a75f41c0d2f662793c9207dcb0571d6d247c84",
+        "place": 8,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "47901427e907599472c28cd264ccd2c9896642c57693efb6c833f1355d2e294a",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "04481a1a575e0c5781ea2fdaf2aa9765bcd3dd282df3d9d5c1ebd37c2bc6c1ef",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "450584fecd847e9c7f94c347da54feba6cea6d5de34c624077606386808ca0df",
+        "place": 16,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      }
+    ]
   }
 ]
