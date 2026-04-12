@@ -1,0 +1,109 @@
+{
+  "hash": "68e237d8157937c58677cc7c21d35a285a628600f21d15ade30832a01839ca64",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Bambi",
+      "version": "Ethereal Fawn"
+    },
+    {
+      "amount": 4,
+      "name": "David Xanatos",
+      "version": "Charismatic Leader"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Klutzy Skier"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 4,
+      "name": "Lonely Grave",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Mr. Snoops",
+      "version": "Betrayed Partner"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Nani's Payback",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Pluto",
+      "version": "Friendly Pooch"
+    },
+    {
+      "amount": 4,
+      "name": "Sarabi",
+      "version": "Protecting the Pride"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Daring Visitor"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Snowboarder"
+    },
+    {
+      "amount": 2,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 1,
+      "name": "Webby's Diary",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Willie the Giant",
+      "version": "Ghost of Christmas Present"
+    },
+    {
+      "amount": 3,
+      "name": "Wreck",
+      "version": "it Ralph - Raging Wrecker"
+    }
+  ]
+}

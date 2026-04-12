@@ -1,0 +1,119 @@
+{
+  "hash": "18c0f2d706d1df334b66cf5ee8999878355aad63c1dfd74c78a6c1d35657a293",
+  "inks": [
+    "amethyst",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Akood et Emuti",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Alma Madrigal",
+      "version": "Accepting Grandmother"
+    },
+    {
+      "amount": 3,
+      "name": "Antonio Madrigal",
+      "version": "Friend to All"
+    },
+    {
+      "amount": 3,
+      "name": "Bagheera",
+      "version": "Cautious Explorer"
+    },
+    {
+      "amount": 3,
+      "name": "Chief Powhatan",
+      "version": "Protective Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 3,
+      "name": "Darling Dear",
+      "version": "Beloved Wife"
+    },
+    {
+      "amount": 3,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 2,
+      "name": "Fantastical and Magical",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 2,
+      "name": "Isabela Madrigal",
+      "version": "In the Moment"
+    },
+    {
+      "amount": 3,
+      "name": "Mirabel Madrigal",
+      "version": "Hopeful Dreamer"
+    },
+    {
+      "amount": 4,
+      "name": "Mirabel Madrigal",
+      "version": "Musically Talented"
+    },
+    {
+      "amount": 2,
+      "name": "Pascal",
+      "version": "Garden Chameleon"
+    },
+    {
+      "amount": 3,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 4,
+      "name": "The Family Madrigal",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "This Is My Family",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Timon",
+      "version": "Snowball Swiper"
+    },
+    {
+      "amount": 3,
+      "name": "Ursula",
+      "version": "Vanessa"
+    },
+    {
+      "amount": 3,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}
