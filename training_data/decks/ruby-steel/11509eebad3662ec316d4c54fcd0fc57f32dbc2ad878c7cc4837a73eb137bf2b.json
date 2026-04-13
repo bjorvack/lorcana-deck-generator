@@ -1,0 +1,144 @@
+{
+  "hash": "11509eebad3662ec316d4c54fcd0fc57f32dbc2ad878c7cc4837a73eb137bf2b",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Atitaya",
+      "version": "Fang General"
+    },
+    {
+      "amount": 2,
+      "name": "Beyond the Horizon",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Bobby",
+      "version": "Purple Pigeon"
+    },
+    {
+      "amount": 3,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 3,
+      "name": "Cri",
+      "version": "Kee - Part of the Team"
+    },
+    {
+      "amount": 3,
+      "name": "Friend Owl",
+      "version": "Cantankerous Neighbor"
+    },
+    {
+      "amount": 3,
+      "name": "General Li",
+      "version": "Head of the Imperial Army"
+    },
+    {
+      "amount": 2,
+      "name": "Grandmother Fa",
+      "version": "Spirited Elder"
+    },
+    {
+      "amount": 2,
+      "name": "Honest John",
+      "version": "Shameless Schemer"
+    },
+    {
+      "amount": 2,
+      "name": "Kakamora",
+      "version": "Boarding Party"
+    },
+    {
+      "amount": 3,
+      "name": "Khan",
+      "version": "War Horse"
+    },
+    {
+      "amount": 3,
+      "name": "Lafayette",
+      "version": "Sleepy Basset Hound"
+    },
+    {
+      "amount": 2,
+      "name": "Light the Fuse",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Mulan",
+      "version": "Charging Ahead"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Mushu",
+      "version": "Fast-Talking Dragon"
+    },
+    {
+      "amount": 1,
+      "name": "Mushu",
+      "version": "Your Worst Nightmare"
+    },
+    {
+      "amount": 1,
+      "name": "Prince John",
+      "version": "Fraidy-Cat"
+    },
+    {
+      "amount": 2,
+      "name": "Quick Shot",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Stitch",
+      "version": "Alien Troublemaker"
+    },
+    {
+      "amount": 3,
+      "name": "The Matchmaker",
+      "version": "Unforgiving Expert"
+    },
+    {
+      "amount": 1,
+      "name": "The Sword of Shan",
+      "version": "Yu"
+    },
+    {
+      "amount": 3,
+      "name": "Thumper",
+      "version": "Young Bunny"
+    },
+    {
+      "amount": 3,
+      "name": "Training Staff",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Twitterpated",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Vinnie",
+      "version": "Green Pigeon"
+    },
+    {
+      "amount": 2,
+      "name": "Zipper",
+      "version": "Flying Ranger"
+    }
+  ]
+}
