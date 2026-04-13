@@ -1,0 +1,89 @@
+{
+  "hash": "334ada0d6c1f8e4b6d5db5b42e9531a885d53f183b3449002f10cab7aa864df6",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Bronx",
+      "version": "Ferocious Beast"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 4,
+      "name": "Maximus",
+      "version": "Team Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Mayor Winddancer",
+      "version": "Actor-Turned-Politician"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Mushu's Rocket",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Pluto",
+      "version": "Guard Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Scar",
+      "version": "Finally King"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Tinker Bell",
+      "version": "Insistent Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Willie the Giant",
+      "version": "Ghost of Christmas Present"
+    }
+  ]
+}
