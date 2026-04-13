@@ -1,0 +1,159 @@
+{
+  "hash": "c54ddb164f43b873970df90cb31b290bcf2ea61697868b16a60cceca7bdba4f4",
+  "inks": [
+    "amethyst",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "A Very Merry Unbirthday",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Akela",
+      "version": "Wolf Pack Elder"
+    },
+    {
+      "amount": 2,
+      "name": "Amethyst Coil",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Arthur",
+      "version": "Wart"
+    },
+    {
+      "amount": 2,
+      "name": "Double Trouble",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Fa Zhou",
+      "version": "War Hero"
+    },
+    {
+      "amount": 3,
+      "name": "Giant Cobra",
+      "version": "Ghostly Serpent"
+    },
+    {
+      "amount": 3,
+      "name": "Heihei",
+      "version": "Rambling Rooster"
+    },
+    {
+      "amount": 2,
+      "name": "Helga Sinclair",
+      "version": "Tough as Nails"
+    },
+    {
+      "amount": 1,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 3,
+      "name": "Jafar",
+      "version": "Aspiring Ruler"
+    },
+    {
+      "amount": 1,
+      "name": "Jafar",
+      "version": "Newly Crowned"
+    },
+    {
+      "amount": 2,
+      "name": "Kashekim",
+      "version": "Ancient Ruler"
+    },
+    {
+      "amount": 2,
+      "name": "King Hubert",
+      "version": "Phillip's Father"
+    },
+    {
+      "amount": 1,
+      "name": "Madam Mim",
+      "version": "Cheating Spellcaster"
+    },
+    {
+      "amount": 2,
+      "name": "Magical Maneuvers",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Mufasa",
+      "version": "Respected King"
+    },
+    {
+      "amount": 2,
+      "name": "Pain",
+      "version": "Impudent Imp"
+    },
+    {
+      "amount": 2,
+      "name": "Panic",
+      "version": "High-Strung Imp"
+    },
+    {
+      "amount": 3,
+      "name": "Rajah",
+      "version": "Ghostly Tiger"
+    },
+    {
+      "amount": 1,
+      "name": "Raya",
+      "version": "Guidance Seeker"
+    },
+    {
+      "amount": 3,
+      "name": "Razoul",
+      "version": "Menacing Guard"
+    },
+    {
+      "amount": 1,
+      "name": "Restoring the Crown",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Retrosphere",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Royal Guard",
+      "version": "Bovine Protector"
+    },
+    {
+      "amount": 2,
+      "name": "Tanana",
+      "version": "Tribal Elder"
+    },
+    {
+      "amount": 2,
+      "name": "Te Kā",
+      "version": "Lava Monster"
+    },
+    {
+      "amount": 2,
+      "name": "The Carpenter",
+      "version": "Dinner Companion"
+    },
+    {
+      "amount": 2,
+      "name": "Training Dummy",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Treasure Guardian",
+      "version": "Foreboding Sentry"
+    }
+  ]
+}
