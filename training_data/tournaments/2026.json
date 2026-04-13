@@ -37357,5 +37357,26 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "c6994b5b7f5bf0b35180dd62423fe469bdc6cc2896d44e76057dcd0a8e2a3bc3",
+    "name": "Winterspell Set champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-champs-tournament-decks-363442",
+    "date": "2026-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "a86eb8a423ef03f3f64cc4b8d43c650dcf06ec50c828dece63cfba52701af248",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
