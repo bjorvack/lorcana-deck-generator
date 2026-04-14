@@ -1,0 +1,104 @@
+{
+  "hash": "a150549a3885ed26e32a01d4bec8b07fbb2f93bad013def487d63b7bd868f369",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Beast",
+      "version": "Snowfield Troublemaker"
+    },
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 4,
+      "name": "Christopher Robin",
+      "version": "Joining the Fun"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 3,
+      "name": "Dolores Madrigal",
+      "version": "Easy Listener"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 4,
+      "name": "Madame Medusa",
+      "version": "Deceiving Partner"
+    },
+    {
+      "amount": 3,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 4,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 2,
+      "name": "Pocahontas",
+      "version": "Following the Wind"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Daring Visitor"
+    },
+    {
+      "amount": 3,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 4,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 3,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 2,
+      "name": "This Is My Family",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tigger",
+      "version": "Bouncing All the Way"
+    }
+  ]
+}

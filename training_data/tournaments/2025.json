@@ -56639,5 +56639,183 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "a56b822b7c32798a893cb0a164a4290b70831082ba4672eecf1b234294a52f93",
+    "name": "Winterspell Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-champs-tournament-decks-363454",
+    "date": "2025-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "27bc0933f16fceb51485cfb915ecf0a84d4510481174b38996d4428ff14ed294",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a150549a3885ed26e32a01d4bec8b07fbb2f93bad013def487d63b7bd868f369",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0c29ccaa9750e8fcedcf68474de098faf2b096167c386c027b150cf09002d4a0",
+        "place": 3,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "92884962269eb4d74d294adc43d5c792e94b85b79578555f935eceafece1d813",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "4c12b0c1a39f9de80833b6680919b10fc88228a6854fa05c2fc2fa7122cfd96b",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "1b0e02f7511f0e2d49e724be51655687cc8241bc2aaad66edf6210846fd9e0fb",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "c75f0d721e1abac7cf684fc09b69a68bdb09cf5d64b5a46b7fbc05ee2e5950b1",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "48fce2183666d6e25a3faa2cee912552f73fc48c174dc623140192e5f7c63f46",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "8cb73e6159466ea821cf346b7de8a204eda71f5e90eace0af66d647d46294deb",
+        "place": 16,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "6688f75eb788e7dea1c43d37657579ef51cd3df87311ebaed77bf88eb66efe3b",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "7bbacc8888e3057080a8dc38f9104d2af5d3ba59933a4bbe20f1268a3923b59a",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "d01c52d79ef52236083c1bda7dcf0e90db7378914f8c38cd72adb516d727d0ce",
+    "name": "Disney Lorcana Set Championship - Winterzauber",
+    "url": "https://inkdecks.com/lorcana-tournaments/disney-lorcana-set-championship-winterzauber-tournament-decks-363439",
+    "date": "2025-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "17e096257ab8fbb8854c1e7923f4328442781507409b363f1bf47baf25f10dc6",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "3b1ee0e8768f26f4498fcafb0cd20a10c1bf4b93b23e0506b1a6bcf3c64248b3",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5fb5caa2d7ea36ca7ba94c68be93b4b8f33bd4e2456ed2ac452d79960ccf3a19",
+        "place": 3,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "2bc68fe458d27db33046f959add282749595a1b1626165bd5f613c1860f27440",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "21ddd90559cb0247728a4046d692e4c50d6313390a0867455f4093fc28cdb3aa",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "873fd9f35087768095cfc89bbb598fea675c6a3e2746c4e791427273fca1db56",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "249e23563f3347d1b745e47192ded1ec2da455506e1de6a3a8d698dfd13f6e69",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "826ea9325389efe75fafcb4c2a94ddeca0eb6b6f55407e60c68d4084a2dbe081",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
