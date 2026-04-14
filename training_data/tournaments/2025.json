@@ -55984,5 +55984,408 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "7927d18d51cc6676150571b1a64bf1772be60196c6097047cf30b1d52d272647",
+    "name": "Winterspell - Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-champs-tournament-decks-363452",
+    "date": "2025-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "fbcada0f20a1b4cd27d75036c23f03c1b752bd91fe96da4874b1ce4527a7de9d",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "72f0cb631c3263e33e656e8ce7cde322b79fc4775eea318fad0c1a9cbca45642",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "0811b842923b310a67b3094fd74e4462d163c13f31e1d2b5cf468ae859c91c36",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fd0a68a69933db073e9d588a9a75536a342c6b745a621bf554227aba16b73a99",
+        "place": 4,
+        "inks": [
+          "emerald",
+          "amber"
+        ]
+      },
+      {
+        "hash": "87732625de672ef2982455a69ac092b02e43317a1c995865ba723c823bc574be",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "aad1764c0fe6c11a2cdb9c25a275593f9c3addcac0b27e12414bd9ccd2bf7417",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "271addffbaf28ab6cfb175eafe92612286068867c3e0dbef172518ec765f0129",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "714292b2856e24b552d1b24595617e7e1e210edd3a02dc3dd1319ae8c4b64164",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "d83c4abab385d03df412a35c2ad1b21ac73d76b9c2435742cd95547ce74809d6",
+    "name": "Dark Star Gaming - Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/dark-star-gaming-set-champs-tournament-decks-363438",
+    "date": "2025-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "b1b836b722f9577b03df362492a2c0f347b214674e464989bf6bc7d03e48a085",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "50023f8f2fdfdceef08f4593c47df88e8ca4a92097aa041ccdd4d710be634342",
+    "name": "Set championship Winterspell",
+    "url": "https://inkdecks.com/lorcana-tournaments/set-championship-winterspell-tournament-decks-363435",
+    "date": "2025-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "200b8088706afa6d5bbf27755a4325f0f4306dcb2ed87d0d1723151de4a1a6d2",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "3abd063077ff5d79ab2c02392f6cee8747aa00ab58cb6bbfc31e96c0c6f9a7f7",
+    "name": "Tabletop Wargamers Winterspell Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/tabletop-wargamers-winterspell-set-champs-tournament-decks-363433",
+    "date": "2025-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "6871712ad4506e6bbcb933c7845384b07d44e99d797b35c5951aa9373b7b5b55",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "d7001d4c4e849e12ea9bdf3e30253f7b1fcfb801390efde128ecf22cb0a9c1f3",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b1d3f19c244a6e6445dd0c752cae3f6c4ea5d689eac99cba6b880309241fa02c",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "bfd040c76050925ff104aa62840a3240844aa354e4732671e34c7bfe4c1d0b19",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "9daf044d59721d49cbb288543080313da3d015930ed1b2bf68f8d883b9159ae8",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "80deb605f3b95146028def474010eb3bc8989fa4d6cbda29bc01bd92c7565259",
+        "place": 8,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "e64e5ed44b718f33f487beea0669f3d158b0537cf5b9cbd2d22a2513cc2923db",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "174ef0d72794abd7ec81437182317c23427316a1ec4896c1d10019394c0478ab",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "bf9ab40695f2f3f8eb4b90afad5ae27cbdb1b47885a285f6d5a8de2d26802769",
+    "name": "Winterspell Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-championship-tournament-decks-363432",
+    "date": "2025-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "44a9d6513d6f156132fe31c6f08cf82032957f3a7206f231c7730c9497b6bb26",
+        "place": 1,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "d2491c087a602dc8bc41487efe5071567192f4b25da99cee5a44611504fb7395",
+    "name": "Winterzauber Setmeisterschaft im Cardcastle-Brandenburg",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterzauber-setmeisterschaft-im-cardcastle-brandenburg-tournament-decks-363426",
+    "date": "2025-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "8b8bab14aebd3843fddc58c6b45a3fbf85f43623d4a4456093fde2b2f1f353bb",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "79dde7aebdaf6c0ce0b3e7fdab807f3c803764de2ce39d20a6a74b443461a03a",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "amber"
+        ]
+      },
+      {
+        "hash": "6f9fb912d6c4d71b7e4d48d4a82c4cf1c692fded6dd25be4694266a5131ed5ce",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "1367679a55968f435a5bb8450900cdb7578c432ffba1f7ea9d0f76e2b50ee01c",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "ea1f429ee211094e4c9f9ebe72c8aac8717d6f17e1be03eb50a7e27d3623d434",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "daab93a0cfa56cd1539ee12003b5f1962b29a4e2de3a0ba81ba6bb8f417debf5",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "6a4fdf1c6ea75370f97f8224af744207008ac40b66eca92dd61da98cb47776b6",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "d40f80c207037ac82da18a52f885c69f6c1cba04dab27e20fee71d5760c1d191",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5947f79a1da9977f9e744e4ca7fc208302c7f8f7b27ceba3a372ab0d9929cba4",
+        "place": 16,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4496921dc9f3b973174506cf3da17663306ed0a39dffa0f0684beaf6a2b6df25",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "d114b03b3d70394a228eaa59eed9814d8c478b7bb3f2d65036f8b576860ddb1e",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "475fb4580a8bee7f329f49aadd52ed5a91869cf4288dd19c049fd33e9e210d0b",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "14e2a47810206651794d28ee02fcfd3b6a0afcc4bcbc30c6f9faa5cc54140efe",
+    "name": "LoreLeague Invitational - Imola Qualifier",
+    "url": "https://inkdecks.com/lorcana-tournaments/loreleague-invitational-imola-qualifier-tournament-decks-363449",
+    "date": "2025-04-11",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "99505e0e0142314805cfddb47c5985cdc866b2f802ead37a611e1c9d9056c25e",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a7db2f89ed3a9eba9eb22b9a87d5e2074b9e1bee72e410614e12acc2e8ea541c",
+        "place": 2,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "9805a71225ed09311d04e0d9080ed9e518f81a00205a9b42508c117dcf6ae93a",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3d16788d2f48e6287d33f2d64dfa5c052434414dfe23ef13341c2f5634306c31",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "48e222b210b5c3483000008043ae3359ebf2a17d15afb6fa30b7d8153a3bdb96",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "dd18efc432efd79caa439839bd3ba0b9363ad8666fa5e23301b43dbbf6cda68b",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "aed4c0c0537cef69b1de3194369765e51b63c83ac241f0d1ad34248782a7a9d0",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "174ef0d72794abd7ec81437182317c23427316a1ec4896c1d10019394c0478ab",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
