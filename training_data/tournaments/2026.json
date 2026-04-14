@@ -38384,5 +38384,204 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "3b03bc35dd2db1a46f621b4d8299319194fd56487e7375a8560cc3d2353dbab6",
+    "name": "Spieltag 3 Division 2: Tintenlovers - Der Mushu Clan",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-3-division-2-tintenlovers-der-mushu-clan-tournament-decks-363445",
+    "date": "2026-04-14",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "10a520ee1cce36997c834acd3823dce2ddb5ad63fd4060c511d17d74a1b71925",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "174ef0d72794abd7ec81437182317c23427316a1ec4896c1d10019394c0478ab",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "b04c566e545f035c0c158d505eaae93b76970769f386123e1281c02349085b48",
+        "place": 3,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "83227b4db0322854dc48d2f89414cf345edac60bd0751efe1b541e8ce80cb7dd",
+        "place": 4,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "cd2d33343e9588d3b044cafedbc07d9267b78d5fb0558af1d0f707c92eb8c6e8",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5d05a8856aca4e9be936e2926f2cb4c1c5163efd20fe6de31f4efea36f103ce6",
+        "place": 6,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "f641fbdd09bcf998be8c01573c7b9064109b27c3d25b4692d07882bdb13f8927",
+    "name": "Spieltag 3 Division 1: Battle-Bear - Playing Ducks",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-3-division-1-battle-bear-playing-ducks-tournament-decks-363444",
+    "date": "2026-04-14",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "d53a9526f9ae38f34e0eeac58f1f03e0de37f396466575f294f42981f08d9fbe",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "7c1ec9fbf209b7a64f551167b13329d8c3b554bc58b503d50c0eb63d8a1c9611",
+        "place": 2,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ff9bec8bbcc2a5dc295db5b4b4c6bf8722c1f7a202c36c6c8e6bd6c41dc10f2b",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "856a10dc40714c717e9c154847376145c62ed094ea7cbebe16aa5332129b1901",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b5f0baa3366c9caf381ba5fbc5554fb1b0d7766eaf1a51a099607d09d70e9ee5",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "ae9bb0118ccfdcc062e0c1a17868f12caa465513c32cb2400ecdcb16fece2dbd",
+        "place": 6,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "3927866fe98e6fb30fc989e3c44301f16030db7002934f10a105e79a0d554c46",
+    "name": "High Market Winterspell Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/high-market-winterspell-set-championship-tournament-decks-363457",
+    "date": "2026-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "0396c0e1ee5b78452fdc2ddb57ffd9a2b671b06beb86ea9c524ac322fc440f58",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "36e243c9447ad49fa9f3f5743428a9e6e5ad0d4fa2b8484e21dbd2ecb01c93ce",
+        "place": 2,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b7c159df8deb53dd3ca48b6385e526687779e44074fdeef9a189294b69a78736",
+        "place": 3,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "70fdf2ecc7946ce7110431f2b22553bda8d979e4abcdc094b303d4aaeb4c592f",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "9a39df446be9c4d838e42fab7898024fc2adefb73c93c3a3397c3125ae4b543a",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9bf900b1cd8547fd0776895fd40d9473097a681c95a1cccdbc19496f035d795a",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d004518e048f37844452d717cd06ce2986ee8927d6a83a3dfc6eef6b1bb7b3e5",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "27096b9a87a3cc3b0d7556882d1e6cb9593fcf07acb402a0ea5a56881d971ff4",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
