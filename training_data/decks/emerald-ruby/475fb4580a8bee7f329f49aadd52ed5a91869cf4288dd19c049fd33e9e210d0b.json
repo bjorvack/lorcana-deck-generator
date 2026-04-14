@@ -1,0 +1,104 @@
+{
+  "hash": "475fb4580a8bee7f329f49aadd52ed5a91869cf4288dd19c049fd33e9e210d0b",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 2,
+      "name": "Education or Elimination",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Fidget",
+      "version": "Sneaky Bat"
+    },
+    {
+      "amount": 4,
+      "name": "Force of a Great Typhoon",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Grandmother Fa",
+      "version": "Spirited Elder"
+    },
+    {
+      "amount": 4,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Resourceful Recruit"
+    },
+    {
+      "amount": 4,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 2,
+      "name": "Ruby Coil",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Snow Fort",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Stand Out",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Strike a Good Match",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tod",
+      "version": "All Alone"
+    },
+    {
+      "amount": 3,
+      "name": "Tod",
+      "version": "Knows All the Tricks"
+    },
+    {
+      "amount": 2,
+      "name": "Tod",
+      "version": "Playful Kit"
+    },
+    {
+      "amount": 2,
+      "name": "Undermine",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "You Came Back",
+      "version": ""
+    }
+  ]
+}
