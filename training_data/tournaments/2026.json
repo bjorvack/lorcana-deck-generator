@@ -38583,5 +38583,220 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "f2a2e870db8f9c92dfc6a93863ac3f8103476d854fff7d4611474ca81d2f5bea",
+    "name": "Winterspell Set Champ",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-champ-tournament-decks-363461",
+    "date": "2026-04-13",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "cebe13d0a73d486c8b2d4e265694f10fd9851ba444446ac63d28964a5175faf9",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "fe73a1ee7566138ffd8fe9c87e0ce875d72f2d650686e72b16e6e64be4128ab3",
+        "place": 2,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "19c9f861efdb8378339c0b0bd41479cbce49936d53c44311a47d23b42f65dae6",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "072e9cef5f996c67598c75a6a6c8797847055647d84d0ea861160162973450e5",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "53a304d1efbbc722ede04f912407bffb04cc62db1290b43f86ed1d5e6ae4cb46",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "280f15fb5b2a2246281085539c1c3600479bb566b1ed0e93f86ab145cde3f53f",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0e67cf4cf059930e695d7b218bf891d4d1369b0a7a8e2626613a531dfb3157ee",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "461a6882b8f5666b16c1ff47a0257fdad9c657bc50a7433602ca5a6e5e4166e3",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "c578c04d26ae93252b9dc2bb26880beb0dd72e9c6190cfeb1ce455b5b81eb3a9",
+        "place": 16,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "1b977b4bd3ca8a7b7cbafd54c2e93367ddf940c6985bee0a31a368085987fce1",
+    "name": "Sunday Afternoon Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/sunday-afternoon-winterspell-set-championship-tournament-decks-363459",
+    "date": "2026-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "f1dd73e272674f514855274c25fa497bfe452f0527208185cbee31561b12c736",
+        "place": 1,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a727b7c3608681049018b7807fa93de50b9584ba15dfd26b2656a4a1799be14c",
+        "place": 2,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "a1a4417e0d0a1a7e97360b198fbefdec647acca40ffc60a0e952efada91f199b",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "39545e8e283d7a1137d08f7b0d8dba8f89793210fa310d7f41e0dc3978565eaa",
+        "place": 4,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "7256811b201bfd240ed684303d6770ee4eee0d025dbe099cbee9b8bfb1566646",
+    "name": "Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/set-championship-tournament-decks-363458",
+    "date": "2026-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "b14d3ac68669ba6c31f7b1881d9a71a52c1b0ccf2656ef0226ded8feb535df03",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "9a9fafefa9f4c0ffbf83b0488de6a2a04ac259c90614241421f37d900062d392",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "691ba918d4a2b171477d7d1e677b0504d6ccf2ed5868b534dbe15919addefb95",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "a1f681ec16e94ba7d4132615e53ce786cbf470392e6cbf82f0ac69d29b5b9958",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a2d59f00046ff7c85116680967e7d15483ec0124aac557b1dfc8f6e629de8c8b",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "dcb567eaf6b3c84c254350cb94c9f9a9ac4ae9cec07801853f4af622880bacd1",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ec97e5d48642bb3a6f7a8cda1be5602c4bc9996520a43fa8f66c562ddf99c3ae",
+        "place": 8,
+        "inks": [
+          "steel",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "08da5d99e01b86273418cd23d1b317b38021312af77201458eaf994958678a86",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "f25a96ee27d7f502de7d615aaa9c1661937838e9fddd5110fc717832e6c75801",
+        "place": 16,
+        "inks": [
+          "emerald",
+          "sapphire"
+        ]
+      }
+    ]
   }
 ]
