@@ -1,0 +1,114 @@
+{
+  "hash": "a1f681ec16e94ba7d4132615e53ce786cbf470392e6cbf82f0ac69d29b5b9958",
+  "inks": [
+    "ruby",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 2,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 2,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 3,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "Exploring the Unknown"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Spirit of Winter"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Grab Your Bow",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 3,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Kuzco",
+      "version": "Wanted Llama"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 3,
+      "name": "Magical Maneuvers",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Ready for Battle"
+    },
+    {
+      "amount": 4,
+      "name": "Royal Guard",
+      "version": "Octopus Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 3,
+      "name": "Sven",
+      "version": "Leaping Reindeer"
+    }
+  ]
+}

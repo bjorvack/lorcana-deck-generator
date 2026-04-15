@@ -1,0 +1,149 @@
+{
+  "hash": "f25a96ee27d7f502de7d615aaa9c1661937838e9fddd5110fc717832e6c75801",
+  "inks": [
+    "emerald",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Basil",
+      "version": "Disguised Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Basil",
+      "version": "Practiced Detective"
+    },
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Snowfield Strategist"
+    },
+    {
+      "amount": 2,
+      "name": "Daisy Duck",
+      "version": "Ghost Finder"
+    },
+    {
+      "amount": 2,
+      "name": "Daisy Duck",
+      "version": "Paranormal Investigator"
+    },
+    {
+      "amount": 2,
+      "name": "Donald Duck",
+      "version": "Fred Honeywell"
+    },
+    {
+      "amount": 1,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 1,
+      "name": "Genie",
+      "version": "Of the Lamp"
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Ghost of Jacob Marley"
+    },
+    {
+      "amount": 2,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 1,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Jiminy Cricket",
+      "version": "Ghost of Christmas Past"
+    },
+    {
+      "amount": 2,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 2,
+      "name": "Kanga",
+      "version": "Peaceful Gatherer"
+    },
+    {
+      "amount": 1,
+      "name": "Megara",
+      "version": "Secret Keeper"
+    },
+    {
+      "amount": 2,
+      "name": "Mickey Mouse",
+      "version": "Bob Cratchit"
+    },
+    {
+      "amount": 3,
+      "name": "Morty Fieldmouse",
+      "version": "Tiny Tim"
+    },
+    {
+      "amount": 2,
+      "name": "Mufasa",
+      "version": "Ruler of Pride Rock"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Resourceful Recruit"
+    },
+    {
+      "amount": 3,
+      "name": "Pete",
+      "version": "Ghost of Christmas Future"
+    },
+    {
+      "amount": 4,
+      "name": "Roo",
+      "version": "Little Helper"
+    },
+    {
+      "amount": 3,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Snow Fort",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Tamatoa",
+      "version": "Seeker of Shine"
+    },
+    {
+      "amount": 2,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 2,
+      "name": "Tod",
+      "version": "Playful Kit"
+    },
+    {
+      "amount": 2,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}

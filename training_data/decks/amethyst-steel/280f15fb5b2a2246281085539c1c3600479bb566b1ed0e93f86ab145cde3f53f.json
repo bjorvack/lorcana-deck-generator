@@ -1,0 +1,124 @@
+{
+  "hash": "280f15fb5b2a2246281085539c1c3600479bb566b1ed0e93f86ab145cde3f53f",
+  "inks": [
+    "steel",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Angel",
+      "version": "Experiment 624"
+    },
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 2,
+      "name": "Benja",
+      "version": "Guardian of the Dragon Gem"
+    },
+    {
+      "amount": 3,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Spirit of Winter"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 3,
+      "name": "Genie",
+      "version": "Magical Researcher"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 2,
+      "name": "Giant Cobra",
+      "version": "Ghostly Serpent"
+    },
+    {
+      "amount": 2,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 2,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Isis Vanderchill",
+      "version": "Ice Queen of St. Canard"
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Tiny Adversary"
+    },
+    {
+      "amount": 2,
+      "name": "Pocahontas",
+      "version": "Following the Wind"
+    },
+    {
+      "amount": 3,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 3,
+      "name": "Royal Guard",
+      "version": "Octopus Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Sven",
+      "version": "Leaping Reindeer"
+    },
+    {
+      "amount": 3,
+      "name": "Tigger",
+      "version": "Bouncing All the Way"
+    },
+    {
+      "amount": 2,
+      "name": "Yzma",
+      "version": "Conniving Chemist"
+    }
+  ]
+}

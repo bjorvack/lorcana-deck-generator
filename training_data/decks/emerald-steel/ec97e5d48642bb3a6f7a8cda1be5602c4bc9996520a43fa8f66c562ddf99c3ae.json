@@ -1,0 +1,114 @@
+{
+  "hash": "ec97e5d48642bb3a6f7a8cda1be5602c4bc9996520a43fa8f66c562ddf99c3ae",
+  "inks": [
+    "steel",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Angel",
+      "version": "Experiment 624"
+    },
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 1,
+      "name": "Flynn Rider",
+      "version": "Breaking and Entering"
+    },
+    {
+      "amount": 4,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Of the Lamp"
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 2,
+      "name": "Goliath",
+      "version": "Clan Leader"
+    },
+    {
+      "amount": 4,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Judy Hopps",
+      "version": "Snowball Patrol"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Max Goof",
+      "version": "Chart Topper"
+    },
+    {
+      "amount": 1,
+      "name": "Mulan",
+      "version": "Resourceful Recruit"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 4,
+      "name": "Philoctetes",
+      "version": "No-Nonsense Instructor"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 2,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 3,
+      "name": "Robin Hood",
+      "version": "Archery Contestant"
+    },
+    {
+      "amount": 1,
+      "name": "Robin Hood",
+      "version": "Capable Fighter"
+    },
+    {
+      "amount": 3,
+      "name": "Robin Hood",
+      "version": "Champion of Sherwood"
+    },
+    {
+      "amount": 3,
+      "name": "Snow Fort",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    }
+  ]
+}
