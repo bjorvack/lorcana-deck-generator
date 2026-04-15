@@ -1,0 +1,109 @@
+{
+  "hash": "457fe33eacd9aaa589c39ccbbc093aed6bcbd22f33e675581134452dda9b1907",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Barreling Through"
+    },
+    {
+      "amount": 1,
+      "name": "Ares",
+      "version": "God of War"
+    },
+    {
+      "amount": 4,
+      "name": "Ariel",
+      "version": "Ethereal Voice"
+    },
+    {
+      "amount": 3,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Copper",
+      "version": "On the Scent"
+    },
+    {
+      "amount": 4,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Liquidator",
+      "version": "Iced Over"
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 2,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Raging Storm",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge's Counting House",
+      "version": "Ebenezer's Office"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Daring Visitor"
+    },
+    {
+      "amount": 4,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Trials and Tribulations",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Webby's Diary",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}

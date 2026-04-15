@@ -57231,5 +57231,127 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "c2467369680f35c92049650b2ae04b2f731aafb7b81c54f37b9072cb909118c8",
+    "name": "Spieltag 3 Division 1: DarkWings - Team ICONIC",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-3-division-1-darkwings-team-iconic-tournament-decks-363448",
+    "date": "2025-04-15",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "43a7260ad8551cec4149c49657a7b2af5dd54a8bd6480647a13932b553fa6333",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "78b96bba71791a11a6595a2ede544a48760c222d327d7fb5f79c9394badb7445",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "457fe33eacd9aaa589c39ccbbc093aed6bcbd22f33e675581134452dda9b1907",
+        "place": 3,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "0008520dca06f30f239b7c225ae064669daa0a26385c3d97f655dd02bae996dc",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "7a2e783d0b9764312c38437f3292f43bd43ed0e8a39ad96efedc8c0937432f54",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3c28398cd7a447e5223a751d66333abc2747e07baeb37b56b02bff69739cce22",
+        "place": 6,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "e82536c76dc6b8b2ead2b3a2f1924d5d5a79552f73035cee53a92404ccefc264",
+    "name": "Spieltag 3 Division 2: Illumineers Rhein-Neckar - Team GOAT",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-3-division-2-illumineers-rhein-neckar-team-goat-tournament-decks-363446",
+    "date": "2025-04-15",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "97f672ed562aa093970ea791c169c5d8562c7e9c6e70a21a32130a3465b0bb33",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "feed081a066ebbfa1ffc13842c8356e9d14753468a6bc761dc6d3bac490e696d",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f3580da853ad6f1f8d6359659b98e2af76a8a4e2bb17da32037b5e51afe46218",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "6c5ce858abb575d9b6f9351eb70666d47d854808a318fd31bd55ff0a71895194",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c79a2088afc8fe404f3558bf45d9d3111f19de84497c91afee2b877b5ba59539",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "717b03dc2e6fd7440a5106c2351429edf9f7d9bd308946c5f40b4dcbf9ebb3ac",
+        "place": 6,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
