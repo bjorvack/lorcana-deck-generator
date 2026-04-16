@@ -57353,5 +57353,34 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "4691802f36d3a2f4c1462f7516bed935cd5e2c63cd83c294acef9db7994f79f0",
+    "name": "EL CARDBOARD - WINTERSPELL SET CHAMPIONSHIP",
+    "url": "https://inkdecks.com/lorcana-tournaments/el-cardboard-winterspell-set-championship-tournament-decks-363467",
+    "date": "2025-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "bb4e91b6a9c4a5d91c81d40f4f0308dfc05edb698a7ba5e9349fc903b1c9d76a",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6e1d3043dd6bc9813237f02a4e1d0a24eef68890707eec204475f996b945a3db",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
