@@ -57520,5 +57520,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "6e52fdbd9284c26491ce3bef6121d4d08231a1e85feae57b916751e3dcfc9242",
+    "name": "Spieltag 3 Division 2: Brick Happens - Team Prepared",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-3-division-2-brick-happens-team-prepared-tournament-decks-363447",
+    "date": "2025-04-16",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "0ab074bc7fdfce4385e6917de624f9093503644f178203f2a8492fd9e139c9d9",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "79e19594fd563d3171a8abe655c49fccf10cdb10f04bf341225d2f5e0be91640",
+        "place": 2,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "31913e0ea4f3a7249ae3cbbd7b3b352786cbdbbe13f4725f0d370db50c39e1d6",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "9898b50e365f482085ce6aec14fb44660038bc06acce831048b195772f3aa06f",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a990bdbc46308c1c7cdb538ecad67cf1175e157d0b9813c700f4e7f811114142",
+        "place": 5,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "782d51e616b23aa7a8611d575a08ae7e1dbfea2cf78439f37379e5f8d416378c",
+        "place": 6,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
