@@ -38949,5 +38949,82 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "47a5b414583f370690a4bc35e263f0b43dfbdc6165fd31e3729214959f0203c2",
+    "name": "ABX Winterspell Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/abx-winterspell-set-champs-tournament-decks-363468",
+    "date": "2026-04-12",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "46106da175417c10a424ac89ca6e3af8c5700906920ea3fd845a2a20098c1646",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "8fce15b8ef2c2c9dce78195e13a0481f8a2c975658ef77ede5fe8d4832534239",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fed0fd05c0ec790cec2f16c414cf6bc9c1174c3650b7d33fb901812fceee84cc",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b6d254514698021c217486e35248f3c2567b7bebd56151ae74824803a1067d59",
+        "place": 4,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "d2fa36b468dc57f71830fb8a19fbe06e2a22b78882fef052c941a4bbc8acb952",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "249cb1a1a8ca8e3115d64b8bf41142ad0a13bd5cc095929df1566c8e6026303f",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "614d0190fda360276da28e05e13f696c821790c7c92513c7816b4dd8b5646187",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "74a4615d9e6ccf6c716c9aa04c56fa741ed15ab6b504a9757c1af3b9ab4d6f8b",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
