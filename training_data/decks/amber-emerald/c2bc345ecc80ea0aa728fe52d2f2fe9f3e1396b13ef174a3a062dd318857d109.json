@@ -1,0 +1,89 @@
+{
+  "hash": "c2bc345ecc80ea0aa728fe52d2f2fe9f3e1396b13ef174a3a062dd318857d109",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Contented Wallflower"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Of the Lamp"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Decisive Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Miss Park Avenue"
+    },
+    {
+      "amount": 4,
+      "name": "Merryweather",
+      "version": "Good Fairy"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Storyteller"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Resourceful Recruit"
+    },
+    {
+      "amount": 4,
+      "name": "Nani",
+      "version": "Stage Manager"
+    },
+    {
+      "amount": 4,
+      "name": "Pocahontas",
+      "version": "Finding the Way"
+    },
+    {
+      "amount": 3,
+      "name": "Pocahontas",
+      "version": "Peacekeeper"
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Enterprising Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    }
+  ]
+}

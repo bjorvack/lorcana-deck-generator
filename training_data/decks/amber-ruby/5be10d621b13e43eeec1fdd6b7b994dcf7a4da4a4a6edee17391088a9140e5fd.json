@@ -1,0 +1,114 @@
+{
+  "hash": "5be10d621b13e43eeec1fdd6b7b994dcf7a4da4a4a6edee17391088a9140e5fd",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Barreling Through"
+    },
+    {
+      "amount": 4,
+      "name": "Bambi",
+      "version": "Ethereal Fawn"
+    },
+    {
+      "amount": 1,
+      "name": "Chip 'n' Dale",
+      "version": "Recovery Rangers"
+    },
+    {
+      "amount": 1,
+      "name": "Circle of Life",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Copper",
+      "version": "On the Scent"
+    },
+    {
+      "amount": 4,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Ice Artisan"
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "Spectral Demigod"
+    },
+    {
+      "amount": 3,
+      "name": "Liquidator",
+      "version": "Iced Over"
+    },
+    {
+      "amount": 4,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 2,
+      "name": "Marching Off to Battle",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 1,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Raging Storm",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Sarabi",
+      "version": "Protecting the Pride"
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge's Counting House",
+      "version": "Ebenezer's Office"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Daring Visitor"
+    },
+    {
+      "amount": 4,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Webby's Diary",
+      "version": ""
+    }
+  ]
+}

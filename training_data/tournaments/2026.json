@@ -39026,5 +39026,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "2400859732164e73770e5eaa085b2e238b82b244e53f77495f0659622d5283d5",
+    "name": "Lorcana League Wednesday April 15, 2026",
+    "url": "https://inkdecks.com/lorcana-tournaments/lorcana-league-wednesday-april-15-2026-tournament-decks-363470",
+    "date": "2026-04-15",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "ecbf92dfc4f809cd7a9250d496ee8ecd23b644f501200791c78c65c82a44f333",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "5be10d621b13e43eeec1fdd6b7b994dcf7a4da4a4a6edee17391088a9140e5fd",
+        "place": 2,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "c7ae2a9e997e83895c50282a0274498b13dca41ae9b1ae20ad3186fd06678b5a",
+        "place": 3,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "c2bc345ecc80ea0aa728fe52d2f2fe9f3e1396b13ef174a3a062dd318857d109",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "7158d1d62a6d20826ce2e72fd53d6a77e239ad5f6d9a220b63d4f182ef504bf5",
+        "place": 8,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "e6a860ca0d84e45d6327a23c35aa54a6f7f6e3985c1f1149c95d7ecf754f3447",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
