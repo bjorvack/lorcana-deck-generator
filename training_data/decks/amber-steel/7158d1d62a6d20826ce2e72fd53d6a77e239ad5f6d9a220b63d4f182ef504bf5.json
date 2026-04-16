@@ -1,0 +1,84 @@
+{
+  "hash": "7158d1d62a6d20826ce2e72fd53d6a77e239ad5f6d9a220b63d4f182ef504bf5",
+  "inks": [
+    "amber",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Angel",
+      "version": "Experiment 624"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Desperate Plan",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Gantu",
+      "version": "Hamsterviel's Accomplice"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 4,
+      "name": "Hudson",
+      "version": "Determined Reader"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Best Explorer Ever"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Snow Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Pudge",
+      "version": "Controls the Weather"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "High Badness Level"
+    },
+    {
+      "amount": 4,
+      "name": "Wisdom of the Willow",
+      "version": ""
+    }
+  ]
+}
