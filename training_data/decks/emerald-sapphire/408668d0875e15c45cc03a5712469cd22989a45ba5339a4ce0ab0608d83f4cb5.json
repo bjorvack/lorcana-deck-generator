@@ -1,0 +1,109 @@
+{
+  "hash": "408668d0875e15c45cc03a5712469cd22989a45ba5339a4ce0ab0608d83f4cb5",
+  "inks": [
+    "sapphire",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Copper",
+      "version": "Champion of the Forest"
+    },
+    {
+      "amount": 3,
+      "name": "Copper",
+      "version": "Hound Pup"
+    },
+    {
+      "amount": 2,
+      "name": "Distract",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Helping Hand",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Resourceful Recruit"
+    },
+    {
+      "amount": 3,
+      "name": "Potion of Malice",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 3,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 2,
+      "name": "Prince Phillip",
+      "version": "Warden of the Woods"
+    },
+    {
+      "amount": 3,
+      "name": "Promising Lead",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Shere Khan",
+      "version": "Fearsome Tiger"
+    },
+    {
+      "amount": 3,
+      "name": "Stand Out",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tiny Tim's Crutch",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tod",
+      "version": "All Alone"
+    },
+    {
+      "amount": 4,
+      "name": "Tod",
+      "version": "Knows All the Tricks"
+    },
+    {
+      "amount": 3,
+      "name": "Tod",
+      "version": "Playful Kit"
+    },
+    {
+      "amount": 2,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Vixey",
+      "version": "Forest Friend"
+    }
+  ]
+}
