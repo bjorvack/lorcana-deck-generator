@@ -39787,5 +39787,26 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "c8749085ccd4fdc5b200297c7765e8adcb9df257a86de0313f09b8291d55d76f",
+    "name": "Championnat de set Givresort",
+    "url": "https://inkdecks.com/lorcana-tournaments/championnat-de-set-givresort-tournament-decks-363487",
+    "date": "2026-04-18",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "0bef186870465be3c6ef617be4415f25bb17834c8d5e2f093670e28e9babeb85",
+        "place": 1,
+        "inks": [
+          "emerald",
+          "sapphire"
+        ]
+      }
+    ]
   }
 ]
