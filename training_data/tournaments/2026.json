@@ -39702,5 +39702,90 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "4cc66c6594a3db600e491333ccc468e3b4a54a8de0e6f0f9d1d9dfe466f9f3a7",
+    "name": "Set Championship - Winterspell",
+    "url": "https://inkdecks.com/lorcana-tournaments/set-championship-winterspell-tournament-decks-363473",
+    "date": "2026-04-18",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "4098a24375de713bb81aaddf1311205eeb6c62a394a40d76c0c876f5b23942fc",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "amber"
+        ]
+      },
+      {
+        "hash": "209807f080ba958c89de702569384b95a73519f3f2cf4ea2cc891df5e7f33b25",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f74508c42de859d2400e4fd0f2d400e9cb58da2843a46236406221b8b31e4e6d",
+        "place": 4,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "164e6ae44341cfb65796b5a81b8da8ce5da15d9f275596ba7f5034d9007fb7fe",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "cef9529e8cf609d52dd2dac14abbeb09554d7e733ba366801374e24b5d4df914",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ec17739749ec311da610938b632bccf2235db281a00da525a5c6c641127d3e2e",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d4d7711d2cd9d55242748a66beb4c42735c49937d6145c2fe74026cae27c0463",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6ee0e6c5bae91b7c3db1602c383b66383e94c173570032addc03034f8ace3077",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5b20f7d795b3682cc6384d25a5b981efa3fded4054f96f52e5cefb6badf0acd3",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
