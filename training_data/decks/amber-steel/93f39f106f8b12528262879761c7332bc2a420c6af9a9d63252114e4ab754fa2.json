@@ -1,0 +1,94 @@
+{
+  "hash": "93f39f106f8b12528262879761c7332bc2a420c6af9a9d63252114e4ab754fa2",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Benja",
+      "version": "Guardian of the Dragon Gem"
+    },
+    {
+      "amount": 4,
+      "name": "Gantu",
+      "version": "Hamsterviel's Accomplice"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 4,
+      "name": "John Smith",
+      "version": "Snow Tracker"
+    },
+    {
+      "amount": 3,
+      "name": "Judy Hopps",
+      "version": "Snowball Patrol"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Bundled Up"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Snow Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Nani",
+      "version": "No Worries"
+    },
+    {
+      "amount": 2,
+      "name": "Nani",
+      "version": "Stage Manager"
+    },
+    {
+      "amount": 4,
+      "name": "Pleakley",
+      "version": "Arctic Naturalist"
+    },
+    {
+      "amount": 2,
+      "name": "Pocahontas",
+      "version": "Finding the Way"
+    },
+    {
+      "amount": 4,
+      "name": "Pudge",
+      "version": "Controls the Weather"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Alien Dancer"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "High Badness Level"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 3,
+      "name": "Wisdom of the Willow",
+      "version": ""
+    }
+  ]
+}
