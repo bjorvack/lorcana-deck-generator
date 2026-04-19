@@ -1,0 +1,119 @@
+{
+  "hash": "e570ac3317a02ef51e6a505644d2a4067afdd7103f49f472b8943d702560a0ef",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Bambi",
+      "version": "Ethereal Fawn"
+    },
+    {
+      "amount": 3,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Elsa",
+      "version": "Ice Artisan"
+    },
+    {
+      "amount": 2,
+      "name": "Grab Your Bow",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 2,
+      "name": "Judy Hopps",
+      "version": "Resourceful Rabbit"
+    },
+    {
+      "amount": 3,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 1,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 1,
+      "name": "Minnie Mouse",
+      "version": "Daring Defender"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Injured Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Raya",
+      "version": "Kumandran Rider"
+    },
+    {
+      "amount": 3,
+      "name": "Sarabi",
+      "version": "Protecting the Pride"
+    },
+    {
+      "amount": 2,
+      "name": "Sisu",
+      "version": "Daring Visitor"
+    },
+    {
+      "amount": 2,
+      "name": "Slushy",
+      "version": "Glacial Guster"
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Carefree Snowboarder"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "The Headless Horseman",
+      "version": "Terror of Sleepy Hollow"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "hash": "1ce1d4d4af336d55ef65246e82360faf5d2619047e4e4449753321be0f6cb679",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Castle Wyvern",
+      "version": "Above the Clouds"
+    },
+    {
+      "amount": 4,
+      "name": "Darkwing Duck",
+      "version": "Crime Fighter"
+    },
+    {
+      "amount": 3,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 3,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "Concerned Sister"
+    },
+    {
+      "amount": 3,
+      "name": "Elsa",
+      "version": "Ice Artisan"
+    },
+    {
+      "amount": 4,
+      "name": "Get to Safety!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Graveyard of Christmas Future",
+      "version": "Lonely Resting Place"
+    },
+    {
+      "amount": 2,
+      "name": "Illuminary Tunnels",
+      "version": "Linked Caverns"
+    },
+    {
+      "amount": 4,
+      "name": "John Silver",
+      "version": "Greedy Treasure Seeker"
+    },
+    {
+      "amount": 3,
+      "name": "Launchpad",
+      "version": "Hideout Defender"
+    },
+    {
+      "amount": 3,
+      "name": "Lilo",
+      "version": "Bundled Up"
+    },
+    {
+      "amount": 3,
+      "name": "Sleepy Hollow",
+      "version": "The Bridge"
+    },
+    {
+      "amount": 2,
+      "name": "Sugar Rush Speedway",
+      "version": "Starting Line"
+    },
+    {
+      "amount": 4,
+      "name": "The Game's Afoot!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Vanellope Von Schweetz",
+      "version": "Gutsy Go-Getter"
+    },
+    {
+      "amount": 4,
+      "name": "Winterspell",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Zootopia",
+      "version": "Police Headquarters"
+    }
+  ]
+}
