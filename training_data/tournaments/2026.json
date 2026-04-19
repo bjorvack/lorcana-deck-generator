@@ -39808,5 +39808,74 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "5c76db0e272ed1770731e4f75737890effbf5e748d4145c360a121359e00509c",
+    "name": "Disney Lorcana Winterspell - Set Championship (Top 8)",
+    "url": "https://inkdecks.com/lorcana-tournaments/disney-lorcana-winterspell-set-championship-top-8-tournament-decks-363486",
+    "date": "2026-04-18",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "88d31454281c0f778b20407cc693c8f5b0b9044da9035e332338ddfc0fb54165",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "0d5ba818af3717864ec854c1d1c39bca95232b8e34a8beae5bd963eb6555dff4",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "08da5d99e01b86273418cd23d1b317b38021312af77201458eaf994958678a86",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "016c2bf57d775c81b88958d4f500c6f09833acc08ded668cbc65ebca9ae10676",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "8ce823c7fcaeaa0c470474d708d1ab74d7c1dea8924d035d50dc8f99dc9b34c1",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "0d6b7aa6904dad581d5ac7379c6c11bd983f676da45baeec050f5c36dda6ef4e",
+        "place": 8,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "f6ffa7fc24581fc4de6af2a907dc93386f5b5f380be6adb1c5e3544768b35b2b",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
