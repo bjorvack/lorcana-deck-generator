@@ -59905,5 +59905,26 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "cf7512eafc6735328bdc69af7295e1fb63c2b8ef4f734c06a75fd7e1a7968297",
+    "name": "Adam Renegar",
+    "url": "https://inkdecks.com/lorcana-tournaments/adam-renegar-tournament-decks-363521",
+    "date": "2025-04-19",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "091453fd2ee44538c9d87cca9c24583a2536fd480e268a020ee5ef892ecfc7ad",
+        "place": 2,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      }
+    ]
   }
 ]
