@@ -59491,5 +59491,50 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "da5b5d2ec538589bd70181ba5a5ea947277509ec22ef14b46daff422b7fe1c61",
+    "name": "Winterspell Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-championship-tournament-decks-363502",
+    "date": "2025-04-19",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "bfdd8575cea8454c155ca676f5b0411e12bfdc1e6a7ea1b9a4bca1354d90cd2b",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "b84ad8ecabc75b138c158076e82082dd8b1b2b2097fa4696ad5dd5f567995e2f",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "582d3183875b82927b9ed33f82b445b3d1d2091a962e4e7c3098a571fb423fba",
+        "place": 3,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "e2dc93fe4964992406c1abf29627da59ca3d58be9de94763b5794f08f2ad6da2",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
