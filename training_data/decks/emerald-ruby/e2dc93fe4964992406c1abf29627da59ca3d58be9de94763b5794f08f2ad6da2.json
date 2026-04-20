@@ -1,0 +1,114 @@
+{
+  "hash": "e2dc93fe4964992406c1abf29627da59ca3d58be9de94763b5794f08f2ad6da2",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aladdin",
+      "version": "Barreling Through"
+    },
+    {
+      "amount": 3,
+      "name": "Ares",
+      "version": "God of War"
+    },
+    {
+      "amount": 3,
+      "name": "Chernabog",
+      "version": "Unnatural Force"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Clumsy Guest"
+    },
+    {
+      "amount": 4,
+      "name": "Clarabelle",
+      "version": "Light on Her Hooves"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Fred Honeywell"
+    },
+    {
+      "amount": 3,
+      "name": "Donald Duck",
+      "version": "Perfect Gentleman"
+    },
+    {
+      "amount": 1,
+      "name": "Emily Quackfaster",
+      "version": "Level-Headed Librarian"
+    },
+    {
+      "amount": 2,
+      "name": "Family Fishing Pole",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 3,
+      "name": "Hercules",
+      "version": "Spectral Demigod"
+    },
+    {
+      "amount": 2,
+      "name": "John Silver",
+      "version": "Alien Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "Megara",
+      "version": "Secret Keeper"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Mrs. Cratchit"
+    },
+    {
+      "amount": 3,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge's Counting House",
+      "version": "Ebenezer's Office"
+    },
+    {
+      "amount": 1,
+      "name": "Slushy",
+      "version": "Glacial Guster"
+    },
+    {
+      "amount": 1,
+      "name": "Snow Fort",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Strike a Good Match",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}
