@@ -41127,5 +41127,260 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "7ab4fdb0819a1719cf1504dc81f5bd5c3a9f25ef034d47f3990d1adaf2fa0b6b",
+    "name": "Winterspell - Set Championship - @Zombie",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-championship-zombie-tournament-decks-363506",
+    "date": "2026-04-19",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "f221065bfaa9c3ae037fb2e9372c5f3e533be412e1605d1beec4bb1a97370f7b",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "71ba92f5f763bca2b82cdb6997b4931308a5da7a172a379ccfe5be117b310f6d",
+        "place": 2,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7073c845cafd41a1313783ca8f813ff55a2daaa5f67e870b56a4c78813914af4",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "fbed86ec1aa999339f3aa0a596bcf98a764b06cd072df103cb0aa40471d13d97",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "acb7b66ad4965c21d0162eb576ca52f97b030dcbe54b8eca0aa7e0cf301cf45d",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "068c7f15a14c9be58120e5d938157def8bbe03cf1e3b2397e440f5f1b7e656d6",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4b43921a5978ad4052abf766fa22c7d4aa1ed5f22037cabd6982d9131cd73170",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "cf9d283d2383769652536f2b2ed1772582d52b99a50a16d9d4bcf17e4f8f9d3f",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2fb68d502793cfa49d5670cf5fe8fa7a461d8b4b9c68763d583a134fff68281a",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "bc74caa93f8b13632c628a30363c54f717c7037d138802dd2c1c45d484cacd08",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "steel"
+        ]
+      },
+      {
+        "hash": "7cdf261f49038742ab2208ed4444bb7d2f26ed30a3aff77d4fdfb2272efdc1b0",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "38ec77242bb971763ffedaf3dcffcf0908145446d9f78a6ccfa1cb45033b78fe",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "4588a335c8e8027113074918d5cc1f62e9778ddeec343f570b0229a3390fedee",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "steel"
+        ]
+      },
+      {
+        "hash": "1c0671e58356c482093c05a8ccad0201e530520522133b1ce9fb9f3a0433443c",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "01ff5c78f4ee00e62be7453274138e1cc926970a5b415e9a49a265062f040400",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "2f1f555215673a35f1ef7af3c6dee85aa80a5c139cd58b0b7213ddbabdb24dd1",
+    "name": "Lorc'Opale 2026",
+    "url": "https://inkdecks.com/lorcana-tournaments/lorc-opale-2026-tournament-decks-363505",
+    "date": "2026-04-19",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c169b878bac566553fde630133fa33a467f29b419ef1e4a77c89800c03cf67d6",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f3173f9c3189ca5b735ef9884e576e83115b87840ef75b3805f1c1b142928bb9",
+        "place": 2,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "b82b388868a814cad81f1079fe3e0e8eefd7ff5ef449cf566dbdcad03892b466",
+    "name": "Winterspell Set Championship @ Heroes Stash",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-championship-heroes-stash-tournament-decks-363504",
+    "date": "2026-04-18",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "fc30c14f8985d27203767d8f499aa5137a3fc08cf7463404e5db306b714cfff5",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "8ee637c759dff6810beaf9b9e5a92feec2173e20bbd6cbc49c8cd8233f810997",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2fd39ee572270d4851b47168850d4f34009a2ce224168b5342c3fb5a121dd043",
+        "place": 3,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "2bc9325dc2ea04d1faa8729226c7533091b869a11ee20ca10a9c31603261e2db",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "533cf2dd0bac938f65c0e684a5e1c0cdeb51e8124b3825d82a2fa7fc9cbdc00e",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "89a9f4c63734436409f908f7322182d0966053d9b74cf3d266aa23470ecf60e1",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "1ab2019f3ed88a32c762d841af6c6a8861024691155da56d2adf9e0c7693ee3f",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "0d7f9cae14323d0adf90dac6d12170704e65adf3d3e4172d69813b8483da45d3",
+        "place": 16,
+        "inks": [
+          "emerald",
+          "amber"
+        ]
+      },
+      {
+        "hash": "6502c07967c2d8ed1511aa45155b2dd07a4068b3be66697443a3463b9d1aedec",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "315320dc9701b8c65dfb40a85c2e4a493462431bb2e45c86c80d9b6a15a51f99",
+        "place": 32,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      }
+    ]
   }
 ]
