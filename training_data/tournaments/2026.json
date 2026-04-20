@@ -40968,5 +40968,119 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "a75ed1ad44d1cf3e2c80becfc7acccb3831b7317197b3692280d09c928e5643c",
+    "name": "North Phoenix Gamers Guild Winterspell Set Champ Top 8",
+    "url": "https://inkdecks.com/lorcana-tournaments/north-phoenix-gamers-guild-winterspell-set-champ-top-8-tournament-decks-363498",
+    "date": "2026-04-18",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "a5246f3dedccbed670a272ac653a39fddf47ace5a7e4da0eb133632246ecd47a",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "11d3488e0cbaf4440aaf58b787a90fbb2b489d3620197caade592ac6a2a12bfd",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f81365137c9875710efdba862b3e099302fb5bed3276f9ab36d497590903fb4a",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "369015640c2e0eab6a840e17459d3847b77c5a5fb87a1c6d15b680116d4e03fb",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "92884962269eb4d74d294adc43d5c792e94b85b79578555f935eceafece1d813",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "2f4b1dbce4afa5c0e1a0e3e8f78dc8a21ee90125d08b0461be473557b0e14756",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a5246f3dedccbed670a272ac653a39fddf47ace5a7e4da0eb133632246ecd47a",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "9da4c7749c45b02f358ed9b16f6ecff7e768c09cc1e9541ef9f5de88ecdad9dd",
+    "name": "Championship La guarida del tiempo",
+    "url": "https://inkdecks.com/lorcana-tournaments/championship-la-guarida-del-tiempo-tournament-decks-363493",
+    "date": "2026-04-18",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "d721b8c9a12c5f65284152bcf01c64a361550a32516f93362442aa6647541191",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "baef0cb568bcf035ef2a85940930a57729918e2223c5662c85d9a9521bf92bb3",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "50ebb4eb375bf976eac5b4874abe7e3037670cb79c9ebad7b2328c0dbce62593",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5f150091af7a04e006c791eeb386c3d9859150341170fc1a9b4d903222e19eb5",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]

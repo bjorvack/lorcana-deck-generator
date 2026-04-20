@@ -1,0 +1,89 @@
+{
+  "hash": "baef0cb568bcf035ef2a85940930a57729918e2223c5662c85d9a9521bf92bb3",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Dig a Little Deeper",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Distract",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Grab Your Bow",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Helping Hand",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Causing an Uproar"
+    },
+    {
+      "amount": 4,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Next Stop, Olympus",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Olaf",
+      "version": "Snowman of Action"
+    },
+    {
+      "amount": 4,
+      "name": "Robin Hood",
+      "version": "Sharpshooter"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge's Counting House",
+      "version": "Ebenezer's Office"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    }
+  ]
+}
