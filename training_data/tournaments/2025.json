@@ -59926,5 +59926,81 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "f3be2c7188493fa22bc71540d22e204676546245d77882d1f5efe42fda1050a2",
+    "name": "Cardboardia - Winterspell Set Championships",
+    "url": "https://inkdecks.com/lorcana-tournaments/cardboardia-winterspell-set-championships-tournament-decks-363273",
+    "date": "2025-04-19",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "ddd5fb60f131a025058148f64545962568e5b7f546c0fa4700fe5730770ed16f",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "944a595707e83859651a2a648cd28653ce9bd18016c52614be9ebb92ac56fdb2",
+        "place": 2,
+        "inks": [
+          "emerald",
+          "amber"
+        ]
+      },
+      {
+        "hash": "3dd1728f79c1754f7a7dbbb73abd29e3b4418dcd6a0e821f10184ae2b986a794",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "1c5bebdff17b860f4396c6d2fca2ef7208226607e2f188d8ce1af631d45aeb59",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6a61d7f9dc10cb2e14dcca821eb21e7d5045e78d62dab2ad90cdb1340dfa87f0",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "045b3054754ed4dfa04a22d55b01614aa76fcee7cde019b36df055f7f410af0c",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "7664a9885d0e8d0c358a71d818c232cc1d92fc9d9889dc674e0a9b3c106a8440",
+        "place": 8,
+        "inks": [
+          "steel"
+        ]
+      },
+      {
+        "hash": "5ee07b58dbbdae400ac84a61ca90e91e88483e109c92116abb18279102163c83",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
