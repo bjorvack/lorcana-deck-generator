@@ -1,0 +1,124 @@
+{
+  "hash": "fc6f9521830cb20374f868c6877590134404b0e3caae572d9f2a33d8e4592958",
+  "inks": [
+    "amber",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Bambi",
+      "version": "Ethereal Fawn"
+    },
+    {
+      "amount": 1,
+      "name": "Chip 'n' Dale",
+      "version": "Recovery Rangers"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Infernal Schemer"
+    },
+    {
+      "amount": 1,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Jiminy Cricket",
+      "version": "Ghost of Christmas Past"
+    },
+    {
+      "amount": 4,
+      "name": "Kida",
+      "version": "Creative Thinker"
+    },
+    {
+      "amount": 2,
+      "name": "Kristoff",
+      "version": "Mining the Ruins"
+    },
+    {
+      "amount": 1,
+      "name": "Nakoma",
+      "version": "Waiting Out the Storm"
+    },
+    {
+      "amount": 3,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pete",
+      "version": "Ghost of Christmas Future"
+    },
+    {
+      "amount": 4,
+      "name": "Raging Storm",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Roo",
+      "version": "Little Helper"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge McDuck",
+      "version": "Reformed Ebenezer"
+    },
+    {
+      "amount": 4,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 1,
+      "name": "Simba",
+      "version": "King in the Making"
+    },
+    {
+      "amount": 2,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Tamatoa",
+      "version": "Seeker of Shine"
+    },
+    {
+      "amount": 3,
+      "name": "Thunderbolt",
+      "version": "Wonder Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 1,
+      "name": "Wasabi",
+      "version": "Methodical Engineer"
+    },
+    {
+      "amount": 2,
+      "name": "Webby's Diary",
+      "version": ""
+    }
+  ]
+}
