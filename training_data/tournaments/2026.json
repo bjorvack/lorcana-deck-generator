@@ -41816,5 +41816,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "7c7fa9095b15bf69b9720b13bb5f620992172930458ddec5c45de774fb049bd4",
+    "name": "Saturday Morning Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-morning-winterspell-set-championship-tournament-decks-363525",
+    "date": "2026-04-18",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "13139e9ff3486e0ba64b0eee83ae1439ffc4246a00b39add970b00cdda4c53fe",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "10843cdd19b51607e733587b73f95231938122a92316f64fd07c7c5981738765",
+        "place": 2,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "f9ec8bce5560140e0ea3da7a4e44d6726fbf7c78edb46a988551f2984f73c994",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "a254e09730cbd279aecbd5d9455bac4d4a24ad507d383c39e613645b8b634d7d",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "be3eb532cc1286c2b8a814aa62336678c975d56dea668b29a7cf5a6cf6134515",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "12f9cf53cf1f6e27d1eacecea4c70293ddd9d5d765fde5a008b106226e13089f",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
