@@ -60799,5 +60799,127 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "9f945397ee16403638dab66c576d1aeef2dedede2fccbe58757541b5c4ee4134",
+    "name": "Spieltag 4 Division 1: InkCrows - Team Inkognito",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-4-division-1-inkcrows-team-inkognito-tournament-decks-363478",
+    "date": "2025-04-21",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "45ddedc860aeba4d3e10d53605b1c224e8980d79757f212e37675d257afd0276",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "37a70b38d2d7df51cbce8731d0dc1e38a77710ddcd0af5f477ea838223107b82",
+        "place": 2,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "06874afb4ddcd1ca505013d080d592c32fa4a276b9f1100c9c7c199c80352013",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "ef367a4839cc76bae483ff5e615f1c320416740063d48bb24f9c476ea26e93f3",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "0e7b6af3bb6473e196d5fa63135fba28edaff8b28998f108fa7dd7432b94bca3",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3a3d30a909e3c49baff9ed6317c2cb7866430db7b5752714f2df73ec358e2a85",
+        "place": 6,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "0c8a66c60f07cc133c25615998ff55a2d06222843d8183ef44e3154dc65c2c58",
+    "name": "Spieltag 4 Division 1: Playing Ducks - 7 Serpents TCG",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-4-division-1-playing-ducks-7-serpents-tcg-tournament-decks-363476",
+    "date": "2025-04-21",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "8a007ea236b726a0a65d1dc0a7621ec9fc043c588656561022f2e10a7ef6ae99",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "f62a6b02ba102cc4f0fc7c5b6490f4225052435e84be4589641fbe32c7717d92",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8d221b3c54f2d25cb7127a44508ef73a3a6a2dafc52f198a5441aa094187fdd3",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c5983f244e137e5c104e08c3f8e1a0d8ba3ec1f896db979dfc0b97b42e6ecf04",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "b5f0baa3366c9caf381ba5fbc5554fb1b0d7766eaf1a51a099607d09d70e9ee5",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "363ee5bcec82fda1ff5552ebb1f4c3bf48517c014a9d59c0fa0e5a30e616c100",
+        "place": 6,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
