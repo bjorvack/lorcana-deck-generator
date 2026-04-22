@@ -42512,5 +42512,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "076fe997e28b03a1a9ddc28a3186b72ce46fbb76c3b14f82a62d0ea7314ed972",
+    "name": "Spieltag 4 Division 1: Team Secret Rare - MRO’s Glimmer Gang",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-4-division-1-team-secret-rare-mro-s-glimmer-gang-tournament-decks-363479",
+    "date": "2026-04-22",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "3f693aeab79e944549e68dd88c42a0e42d14b36dec3a4e487d102dcde9867e77",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8e44811c9c67f0cccb4a7107d5820d621cb65ad0a2e97f12a06da272e1617aac",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9f271a1d76b5adce01488fb74f9d9795da8dcee7285cdea9c6f8fc9c0f150454",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "2bc68fe458d27db33046f959add282749595a1b1626165bd5f613c1860f27440",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "7628c0d4704c1b80d8e21d2bfd4da48b2bf8ab573f1b44186459292eef664568",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "6bdeea8dc5476ff0c8e8b31f04549db26c6e9d85069802f7a133feef31099e1a",
+        "place": 6,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
