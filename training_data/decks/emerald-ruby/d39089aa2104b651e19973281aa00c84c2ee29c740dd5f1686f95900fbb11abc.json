@@ -1,0 +1,144 @@
+{
+  "hash": "d39089aa2104b651e19973281aa00c84c2ee29c740dd5f1686f95900fbb11abc",
+  "inks": [
+    "ruby",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Agrabah",
+      "version": "Marketplace"
+    },
+    {
+      "amount": 3,
+      "name": "Aladdin",
+      "version": "Prince Ali"
+    },
+    {
+      "amount": 2,
+      "name": "Be King Undisputed",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Bobby Zimuruski",
+      "version": "Spray Cheese Kid"
+    },
+    {
+      "amount": 1,
+      "name": "Daisy Duck",
+      "version": "Secret Agent"
+    },
+    {
+      "amount": 1,
+      "name": "Donald Duck",
+      "version": "Sleepwalker"
+    },
+    {
+      "amount": 1,
+      "name": "Goofy",
+      "version": "Set for Adventure"
+    },
+    {
+      "amount": 1,
+      "name": "I2I",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "LeFou",
+      "version": "Instigator"
+    },
+    {
+      "amount": 2,
+      "name": "Max Goof",
+      "version": "Chart Topper"
+    },
+    {
+      "amount": 1,
+      "name": "Max Goof",
+      "version": "Rebellious Teen"
+    },
+    {
+      "amount": 3,
+      "name": "Max Goof",
+      "version": "Rockin' Teen"
+    },
+    {
+      "amount": 2,
+      "name": "Megara",
+      "version": "Pulling the Strings"
+    },
+    {
+      "amount": 3,
+      "name": "Mickey Mouse",
+      "version": "Steamboat Pilot"
+    },
+    {
+      "amount": 2,
+      "name": "Mother Knows Best",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "P.J. Pete",
+      "version": "Caught Up in the Music"
+    },
+    {
+      "amount": 1,
+      "name": "Powerline",
+      "version": "Musical Superstar"
+    },
+    {
+      "amount": 3,
+      "name": "Powerline",
+      "version": "Taking the Stage"
+    },
+    {
+      "amount": 3,
+      "name": "Powerline",
+      "version": "World's Greatest Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "Roxanne",
+      "version": "Powerline Fan"
+    },
+    {
+      "amount": 3,
+      "name": "Sergeant Tibbs",
+      "version": "Courageous Cat"
+    },
+    {
+      "amount": 2,
+      "name": "Signed Contract",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Stand Out",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Wildcat",
+      "version": "Mechanic"
+    },
+    {
+      "amount": 3,
+      "name": "You Can Fly!",
+      "version": ""
+    }
+  ]
+}
