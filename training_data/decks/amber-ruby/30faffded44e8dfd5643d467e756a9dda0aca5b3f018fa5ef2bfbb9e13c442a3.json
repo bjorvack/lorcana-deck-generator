@@ -1,0 +1,109 @@
+{
+  "hash": "30faffded44e8dfd5643d467e756a9dda0aca5b3f018fa5ef2bfbb9e13c442a3",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Beast",
+      "version": "Snowfield Troublemaker"
+    },
+    {
+      "amount": 1,
+      "name": "Beast's Castle",
+      "version": "Winter Gardens"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "Concerned Sister"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "Ice Artisan"
+    },
+    {
+      "amount": 4,
+      "name": "Fix",
+      "version": "It Felix, Jr. - Delighted Sightseer"
+    },
+    {
+      "amount": 4,
+      "name": "Fix",
+      "version": "It Felix, Jr. - Niceland Steward"
+    },
+    {
+      "amount": 2,
+      "name": "Get to Safety!",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Graveyard of Christmas Future",
+      "version": "Lonely Resting Place"
+    },
+    {
+      "amount": 1,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Pirate Lookout"
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Kakamora Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Sleepy Hollow",
+      "version": "The Bridge"
+    },
+    {
+      "amount": 4,
+      "name": "Sugar Rush Speedway",
+      "version": "Finish Line"
+    },
+    {
+      "amount": 4,
+      "name": "Sugar Rush Speedway",
+      "version": "Starting Line"
+    },
+    {
+      "amount": 3,
+      "name": "Taffyta Muttonfudge",
+      "version": "Crowd Favorite"
+    },
+    {
+      "amount": 4,
+      "name": "Taffyta Muttonfudge",
+      "version": "Sour Speedster"
+    },
+    {
+      "amount": 1,
+      "name": "The Islands I Pulled from the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tuk Tuk",
+      "version": "Lively Partner"
+    },
+    {
+      "amount": 2,
+      "name": "Vanellope Von Schweetz",
+      "version": "Gutsy Go-Getter"
+    },
+    {
+      "amount": 4,
+      "name": "Zootopia",
+      "version": "Tundratown"
+    }
+  ]
+}
