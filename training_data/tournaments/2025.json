@@ -60982,5 +60982,151 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "bf3c15360164438f0c4cc349d6426c7f201b054c391162c11295369e8b0eac72",
+    "name": "Spieltag 4 Division 1: Battle-Bear - Team ICONIC",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-4-division-1-battle-bear-team-iconic-tournament-decks-363475",
+    "date": "2025-04-20",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "b29bc080791a9e73753a62590cda95711a5beb92fb25126646edfd3e098274a4",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5c69891081264254b699c32f4693d3499608631eb4aa984ce0813be910f80ded",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "2d116b87b44eca9ece23e0fb5d0bf06e3aeea02dc1ba740378c0a354a506335f",
+        "place": 3,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "b44f5e5f688409fc9167fbe4d12270f756fd3f26dcab2d3c154ca9eafa247185",
+        "place": 4,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "42e2a0a2499283e05ab7990af25f0a3a2f65ec9d077bfe73e68e577ddcb993f4",
+        "place": 5,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "84e95540c63d2ab14044ef5e438743a5998f5f6501ad7f2108b5853d46db499e",
+        "place": 6,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "cfe68ee490f71977cc3fca334af82e1cf9ca79825f49041f38dab0f627093bed",
+    "name": "House Rules Gaming - Winterspell Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/house-rules-gaming-winterspell-set-champs-tournament-decks-363530",
+    "date": "2025-04-18",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "376b608f5a2566944275fcc214c9170105fd8d0ba92c3bd5fb8ae33691faf7e3",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3e0e5941be2c0171a37f8706e0641eac690063c6da01242efc7fafa364b4964f",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "deee3bd6c34d2d0d2e2b22b6c6ef8dc02b93c4b09a264c8e6241fd93b1cbf547",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "0d7039485ec7f1db69cc1261dd6ddec90dd8b3180e7166b29d91985bdba7d213",
+        "place": 4,
+        "inks": [
+          "emerald",
+          "amber"
+        ]
+      },
+      {
+        "hash": "f45e49f6ff749f3c278a385c99fd61d518f97914561f384626be6ca922f9debb",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f0b57e3e8469892f286ca3bbfa54fe866ac97605cf2998bbd513f5152f934901",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "72144a627f036e0f2401fcf5e9e9ee6863e9015ae0ad546d2e24ac56a44b026f",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "782d51e616b23aa7a8611d575a08ae7e1dbfea2cf78439f37379e5f8d416378c",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fbcada0f20a1b4cd27d75036c23f03c1b752bd91fe96da4874b1ce4527a7de9d",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
