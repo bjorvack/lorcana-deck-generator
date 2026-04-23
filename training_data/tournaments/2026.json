@@ -42868,5 +42868,50 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "9c480b8fd49dcc0584eeec730089fa7c56783d234e865463acff2dc501817d70",
+    "name": "Sunday Afternoon Winterspell - Set Championship Aux 2 Legendes",
+    "url": "https://inkdecks.com/lorcana-tournaments/sunday-afternoon-winterspell-set-championship-aux-2-legendes-tournament-decks-363533",
+    "date": "2026-04-19",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "680d447f4fd943bcf35a562ebf2d5f2fee6ead6f09d350b5a77e1e4796564bc8",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8ee637c759dff6810beaf9b9e5a92feec2173e20bbd6cbc49c8cd8233f810997",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4298a742dee2200b88801df0168ffd13bf464e6568f8104ec35e9ab79ca8642e",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "94f6264e5664fdc799fe95319e5abfb29c20a68c91a8a176b441395e6d84e435",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
