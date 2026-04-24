@@ -1,0 +1,89 @@
+{
+  "hash": "e487666d7d7ed7c6e9a4179f1b74660db329833c77fc22fd0074252a0a07a247",
+  "inks": [
+    "emerald",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Amethyst Chromicon",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Christopher Robin",
+      "version": "Joining the Fun"
+    },
+    {
+      "amount": 4,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Obedient Raven"
+    },
+    {
+      "amount": 4,
+      "name": "Enigmatic Inkcaster",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Fred",
+      "version": "Mascot by Day"
+    },
+    {
+      "amount": 4,
+      "name": "Gathering Knowledge and Wisdom",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Honeymaren",
+      "version": "Northuldra Guide"
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Vexed Partygoer"
+    },
+    {
+      "amount": 4,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 4,
+      "name": "Palace Guard",
+      "version": "Spectral Sentry"
+    },
+    {
+      "amount": 4,
+      "name": "Pegasus",
+      "version": "Gift for Hercules"
+    },
+    {
+      "amount": 1,
+      "name": "Scrooge McDuck",
+      "version": "S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 4,
+      "name": "Show Me More!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The White Rose",
+      "version": "Jewel of the Garden"
+    },
+    {
+      "amount": 4,
+      "name": "This Is My Family",
+      "version": ""
+    }
+  ]
+}

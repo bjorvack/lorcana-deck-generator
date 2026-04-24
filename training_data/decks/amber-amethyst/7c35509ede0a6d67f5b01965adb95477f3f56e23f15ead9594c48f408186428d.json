@@ -1,0 +1,104 @@
+{
+  "hash": "7c35509ede0a6d67f5b01965adb95477f3f56e23f15ead9594c48f408186428d",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Belle",
+      "version": "Accomplished Mystic"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 3,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 3,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Lantern",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Royal Guard",
+      "version": "Octopus Soldier"
+    },
+    {
+      "amount": 2,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 2,
+      "name": "Sven",
+      "version": "Leaping Reindeer"
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Tiana",
+      "version": "Warm and Happy"
+    },
+    {
+      "amount": 3,
+      "name": "Tigger",
+      "version": "Bouncing All the Way"
+    },
+    {
+      "amount": 3,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}
