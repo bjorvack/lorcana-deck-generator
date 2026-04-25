@@ -61953,5 +61953,82 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "f143536c1aaad9b631fab5c8d9eb0104761202906bb26a4557645382af2377b0",
+    "name": "Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/set-champs-tournament-decks-363537",
+    "date": "2025-04-19",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "d2fa36b468dc57f71830fb8a19fbe06e2a22b78882fef052c941a4bbc8acb952",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "62bfdefae4642c9cbe6c35d14b5ce2f8ed4390f1c60e6dde656a259dd22c8dd7",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "0b7e205b5fb2d3a7fbc6b0e3cc21386b37828469a3b97f0002f7e5481804c85d",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b6d254514698021c217486e35248f3c2567b7bebd56151ae74824803a1067d59",
+        "place": 4,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "e487666d7d7ed7c6e9a4179f1b74660db329833c77fc22fd0074252a0a07a247",
+        "place": 8,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "7c35509ede0a6d67f5b01965adb95477f3f56e23f15ead9594c48f408186428d",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "46106da175417c10a424ac89ca6e3af8c5700906920ea3fd845a2a20098c1646",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b6d254514698021c217486e35248f3c2567b7bebd56151ae74824803a1067d59",
+        "place": 8,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      }
+    ]
   }
 ]
