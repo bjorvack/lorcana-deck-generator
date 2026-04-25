@@ -43621,5 +43621,116 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "d0feca4fe69207fc629c4f701ce1b94e849bebc25d521e1fadebe720b973b12a",
+    "name": "Friday Night Lorcana",
+    "url": "https://inkdecks.com/lorcana-tournaments/friday-night-lorcana-tournament-decks-363540",
+    "date": "2026-04-24",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "cfa9a05a59c70af820b44f5cda2ca6cfa3b72d2d95c9a331088ad991ad9c1381",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "e86db9b7d5c541938e775c4d2c4ae66636adbd51c7d5c3ea1451411a4f116a4c",
+        "place": 2,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "e6fbffea2f4987f30422e2f7718f24ea7f226ba7d68eca3a6e6ff8ee45e9aa56",
+        "place": 3,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "9f44886bf463bd172ddc7f662628d2c69d0cddd45c32dd31b5d842031abb78b1",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "767ace914c4da95d6fca2bcba7a9bd837a388573135e62d4000dd92b4f696d7b",
+    "name": "Games in a Dungeon - S11 Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/games-in-a-dungeon-s11-set-champs-tournament-decks-363539",
+    "date": "2026-04-24",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "e7af11a7195a07f1267390ef1794c0d49848a9406e8dff2ed8d09aa3d9f8f183",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "68e1972ef28b48a98296ab3b7483a6b488ba4739419ed29c4f49bb7d7697b073",
+    "name": "Meeples Winterspell Set Champs Top 4",
+    "url": "https://inkdecks.com/lorcana-tournaments/meeples-winterspell-set-champs-top-4-tournament-decks-363499",
+    "date": "2026-04-19",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "369015640c2e0eab6a840e17459d3847b77c5a5fb87a1c6d15b680116d4e03fb",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a53d545ae0c15ca413a900685826e2ae0406d0647a976f87ba7d24974c438a70",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "1ff6340a785ad4936353ddfe60d6ca2b2ab014b87a131052e4bc619523ee5293",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "6e4f8eb23d9af76e60736cd1d3fe7946ff98f6051e3a0e07990ddd88f4bb8abb",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
