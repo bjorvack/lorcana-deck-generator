@@ -1,0 +1,94 @@
+{
+  "hash": "8ad0bd027e1f93c50d96b60e0653675fa9361c39deef2dd14131856055fd2ddb",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Aurora",
+      "version": "Holding Court"
+    },
+    {
+      "amount": 4,
+      "name": "Chief Powhatan",
+      "version": "Protective Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Donald's Date"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 3,
+      "name": "Fire the Cannons!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Bundled Up"
+    },
+    {
+      "amount": 3,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Nani",
+      "version": "Stage Manager"
+    },
+    {
+      "amount": 3,
+      "name": "Penny",
+      "version": "Bolt's Person"
+    },
+    {
+      "amount": 2,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 4,
+      "name": "Rhino",
+      "version": "One-Sixteenth Wolf"
+    },
+    {
+      "amount": 4,
+      "name": "Rhino",
+      "version": "Power Hamster"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tiana",
+      "version": "Restaurant Owner"
+    }
+  ]
+}

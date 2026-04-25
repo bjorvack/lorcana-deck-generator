@@ -1,0 +1,99 @@
+{
+  "hash": "bfa919d96620372328914f1338eb5f4a4905f0407b970b1ae2c7e895ed79b366",
+  "inks": [
+    "amethyst",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Big Mama",
+      "version": "Clever and Calming"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 4,
+      "name": "Go Go Tomago",
+      "version": "Darting Dynamo"
+    },
+    {
+      "amount": 4,
+      "name": "Louis",
+      "version": "Endearing Alligator"
+    },
+    {
+      "amount": 3,
+      "name": "Minnie Mouse",
+      "version": "Spinning Skater"
+    },
+    {
+      "amount": 2,
+      "name": "Olaf",
+      "version": "Helping Hand"
+    },
+    {
+      "amount": 4,
+      "name": "Pull the Lever!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Rafiki",
+      "version": "Mystical Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Snow Fort",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Strike a Good Match",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    },
+    {
+      "amount": 2,
+      "name": "Wrong Lever!",
+      "version": ""
+    }
+  ]
+}

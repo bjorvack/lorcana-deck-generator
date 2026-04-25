@@ -1,0 +1,89 @@
+{
+  "hash": "4b2acc0ed13ca398b635103b9de3fc297afb56c725d7927967a53ba95ad78976",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Bambi",
+      "version": "Ethereal Fawn"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Fred Honeywell"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Megara",
+      "version": "Secret Keeper"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Mrs. Cratchit"
+    },
+    {
+      "amount": 2,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Royal Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Prince Phillip",
+      "version": "Vanquisher of Foes"
+    },
+    {
+      "amount": 4,
+      "name": "Simba",
+      "version": "King in the Making"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "Carefree Surfer"
+    },
+    {
+      "amount": 4,
+      "name": "Tramp",
+      "version": "Street-Smart Dog"
+    },
+    {
+      "amount": 3,
+      "name": "Under the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    }
+  ]
+}

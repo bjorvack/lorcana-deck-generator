@@ -1,0 +1,104 @@
+{
+  "hash": "ed50ae508a9a03df7ca933e6f209a2f2728404d20abfca1d0cd1ac3c4888cbd8",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Akood et Emuti",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Angel",
+      "version": "Siren Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 3,
+      "name": "Demona",
+      "version": "Betrayer of the Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 4,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 2,
+      "name": "Hypnotic Strength",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 2,
+      "name": "Madam Mim",
+      "version": "Elephant"
+    },
+    {
+      "amount": 3,
+      "name": "Mowgli",
+      "version": "Man Cub"
+    },
+    {
+      "amount": 3,
+      "name": "Raging Storm",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Royal Guard",
+      "version": "Octopus Soldier"
+    },
+    {
+      "amount": 1,
+      "name": "The Black Cauldron",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Library",
+      "version": "A Gift for Belle"
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}
