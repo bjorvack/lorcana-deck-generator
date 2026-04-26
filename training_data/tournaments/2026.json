@@ -44563,5 +44563,51 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "4ce1700887cc0859748d0532dbb9639d0dc4a9b6e4346526d3f95ece7c61ad4d",
+    "name": "Lorcana Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/lorcana-winterspell-set-championship-tournament-decks-363547",
+    "date": "2026-04-25",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "e0c11891830e98f9d8213d09f1fe55d1027b847feffaeeb27530e2929334f1d7",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a0dbc1d6fc0ec7c82a7258e8227dd6fd55639e51f6909e81a7c4a532810c58e9",
+        "place": 2,
+        "inks": [
+          "emerald",
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "934738fb83ce9c15e99029b6548d61fd51460b442e8b9eeb9e854f24ee32fa1c",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "32ccc08eacc01a070ac5a9cb2397b27830e2c93420aedc48b5111e2933a2e015",
+        "place": 4,
+        "inks": [
+          "steel",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
