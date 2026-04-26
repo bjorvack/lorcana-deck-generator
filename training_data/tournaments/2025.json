@@ -63018,5 +63018,82 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "a8905c896a9975b9450b3629e0282046f4ee8c3424f5843ed920af513f41d649",
+    "name": "Saturday Afternoon Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-afternoon-winterspell-set-championship-tournament-decks-363559",
+    "date": "2025-04-26",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "6367dc1d277efc6522b1538fd3f7bc670528e927d2c51a88afcc807bcb228959",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "7ba6e805e54f60603308554f7cafb4952e1378567bc4c9ac2b104d0096b9f402",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "190012da8c64fd7b3a0b7072dbd2f545ff80ce9b7e525483e5687737d5e96606",
+        "place": 3,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "6164aba758f4bc568901400d6e442b0816916f5310b6aa307cd6026f53ab53c8",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "8389172aec69bea56710bec3c1f7dc21edd9a9bbd58056e44c0eee8c66d57786",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "dc0135d512cdcc018732766680035af775aa7f317deef1e2deba878ff0803451",
+        "place": 8,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "d53780d9108534fe5a729528839c1f15c3efe7c08ab16ae793b75bbe138dc0ff",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "bfdd8575cea8454c155ca676f5b0411e12bfdc1e6a7ea1b9a4bca1354d90cd2b",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
