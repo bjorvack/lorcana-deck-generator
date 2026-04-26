@@ -1,0 +1,104 @@
+{
+  "hash": "32ccc08eacc01a070ac5a9cb2397b27830e2c93420aedc48b5111e2933a2e015",
+  "inks": [
+    "steel",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Angel",
+      "version": "Experiment 624"
+    },
+    {
+      "amount": 2,
+      "name": "Archimedes",
+      "version": "Resourceful Owl"
+    },
+    {
+      "amount": 2,
+      "name": "Battering Ram",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 2,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 3,
+      "name": "Education or Elimination",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Expert Shipwright"
+    },
+    {
+      "amount": 2,
+      "name": "Hercules",
+      "version": "Baby Demigod"
+    },
+    {
+      "amount": 4,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 4,
+      "name": "Malicious, Mean, and Scary",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Pete",
+      "version": "Games Referee"
+    },
+    {
+      "amount": 3,
+      "name": "Scar",
+      "version": "Vengeful Lion"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tinker Bell",
+      "version": "Giant Fairy"
+    },
+    {
+      "amount": 4,
+      "name": "Ursula",
+      "version": "Deceiver"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Junior Prospector"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Mystery Enthusiast"
+    },
+    {
+      "amount": 3,
+      "name": "You're Welcome",
+      "version": ""
+    }
+  ]
+}
