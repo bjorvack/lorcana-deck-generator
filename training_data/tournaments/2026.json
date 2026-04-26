@@ -44686,5 +44686,167 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "f021dee685f9097aa55312c0109fbf27b2bb4684e4e6e722861d771ea5cdf488",
+    "name": "Winterspell Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-championship-tournament-decks-363560",
+    "date": "2026-04-26",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "aa3655c4359ea4ebf09a77638b375389ef9c8bfeccccfa794c3a0ad227624d6e",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "9d0dde7d6961b11edc64fd175f579f3e0c0feb822ccdab86d62e5eadab8b1fc0",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "54c8645b31cbf6c6a8f4f4c54eafcd4e04cb44cd97f495272c7b15a90a7cba1b",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "steel"
+        ]
+      },
+      {
+        "hash": "d1a00d10ae03c96fe16556249feaa07b50e154987328965d1ae6f88654732bed",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "98e04b96ee8d6cdefeafa489ad6434d8b164ec7b8dd36b724f94b0a087cb2b68",
+        "place": 8,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "ed7232911cb3fcd2866d0812f5c7098e489e32cbd81793ce876fe45cb30fea2d",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "a71d415008c335829969a7014407791401474064d668e5b023838f2b619439ce",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "e71721d34e65cd85d9fd807e67e3eb8bc8728d44460849dd7742fa7cd1eb5a81",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "d52b6aa2952bc9623a5b78f8f7fffc9bc8301a418eade50207423888ccbb31ae",
+    "name": "Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-championship-tournament-decks-363549",
+    "date": "2026-04-26",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "7048bb32d864de2e6b792b51ef865edbd02b24f76b58e3a5f1b45af1fca0f490",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "b7e1248c2536e6fd31089b7e454a3f22d8e58c02288c6a47985ea9b5acac9366",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "adae75efcf42e86146566be3887bd4ed453d0c3b4157078e085888eef82aa67b",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "00335ef49a4968767c4695425927d79cafd109d692012b65a62db786d3cbeb8a",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "71d7085fecdc2621a2594b071fde09de5f3266e143a86f0c5d1b39a28e30fbfe",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f42cfce01afb2c32a05fe82d5320ed9432b571819481752eafce9f1f7e936503",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "7ad5259f4aebb7e527c2ba3211f58c62a67bda46e2aa342e8cfb90ced3408228",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "73722b1294bf7f20e491fe9366f83f4bbfdcdcce7fe18667843bd55afb9b7e2c",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c55edf5bf83879f2c03b3f7c86cf2d5a01a602ee099bf9ec4841f1066e12d26a",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      }
+    ]
   }
 ]

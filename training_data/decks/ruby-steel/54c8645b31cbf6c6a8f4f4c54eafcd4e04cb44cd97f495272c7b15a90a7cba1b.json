@@ -1,0 +1,89 @@
+{
+  "hash": "54c8645b31cbf6c6a8f4f4c54eafcd4e04cb44cd97f495272c7b15a90a7cba1b",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Angela",
+      "version": "Night Warrior"
+    },
+    {
+      "amount": 4,
+      "name": "Brooklyn",
+      "version": "Second in Command"
+    },
+    {
+      "amount": 4,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Captain Hook",
+      "version": "Forceful Duelist"
+    },
+    {
+      "amount": 4,
+      "name": "Gigi",
+      "version": "Best in Snow"
+    },
+    {
+      "amount": 4,
+      "name": "Goliath",
+      "version": "Guardian of Castle Wyvern"
+    },
+    {
+      "amount": 2,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 4,
+      "name": "Mushu",
+      "version": "Majestic Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Next Stop, Olympus",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "One Last Hope",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 4,
+      "name": "The Sword of Hercules",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Vanellope Von Schweetz",
+      "version": "Spunky Speedster"
+    }
+  ]
+}
