@@ -1,0 +1,89 @@
+{
+  "hash": "240697a0ddd4565e052695fdf18bc5193b121d9408b64b20479dda8214d8eed4",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Angel",
+      "version": "Siren Singer"
+    },
+    {
+      "amount": 3,
+      "name": "Bagheera",
+      "version": "Cautious Explorer"
+    },
+    {
+      "amount": 4,
+      "name": "Beast",
+      "version": "Snowfield Troublemaker"
+    },
+    {
+      "amount": 4,
+      "name": "Card Soldiers",
+      "version": "Royal Troops"
+    },
+    {
+      "amount": 1,
+      "name": "Elsa",
+      "version": "Concerned Sister"
+    },
+    {
+      "amount": 4,
+      "name": "Fix",
+      "version": "It Felix, Jr. - Delighted Sightseer"
+    },
+    {
+      "amount": 4,
+      "name": "Get to Safety!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Minnie Mouse",
+      "version": "Pirate Lookout"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Losing Her Temper"
+    },
+    {
+      "amount": 4,
+      "name": "Sleepy Hollow",
+      "version": "The Bridge"
+    },
+    {
+      "amount": 4,
+      "name": "Sugar Rush Speedway",
+      "version": "Finish Line"
+    },
+    {
+      "amount": 4,
+      "name": "Sugar Rush Speedway",
+      "version": "Starting Line"
+    },
+    {
+      "amount": 4,
+      "name": "Taffyta Muttonfudge",
+      "version": "Sour Speedster"
+    },
+    {
+      "amount": 4,
+      "name": "The Islands I Pulled from the Sea",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tuk Tuk",
+      "version": "Lively Partner"
+    }
+  ]
+}
