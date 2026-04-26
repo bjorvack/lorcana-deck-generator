@@ -62803,5 +62803,26 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "8854047dd5d3fb55a2c65153da230e38996e5d59ff5a8422e503f1ca0e61b4b1",
+    "name": "Funhouse 51 Set 11 Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/funhouse-51-set-11-championship-tournament-decks-363550",
+    "date": "2025-04-26",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "3ec1f4d9ebd46fbc88cc273a0263298ccbbff3d8092db909ddfeeddf1b4b6783",
+        "place": 2,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
