@@ -1,0 +1,114 @@
+{
+  "hash": "73af901531b4e1442ec53e5c2a64af05c9cf4d0638bf0c40496a1368e7a5a94b",
+  "inks": [
+    "steel",
+    "amber"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Akood et Emuti",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Angel",
+      "version": "Experiment 624"
+    },
+    {
+      "amount": 2,
+      "name": "Angel",
+      "version": "Siren Singer"
+    },
+    {
+      "amount": 3,
+      "name": "Cobra Bubbles",
+      "version": "Dedicated Official"
+    },
+    {
+      "amount": 1,
+      "name": "David",
+      "version": "Protective Snowboarder"
+    },
+    {
+      "amount": 4,
+      "name": "Dr. Hamsterviel",
+      "version": "Infamous Scientist"
+    },
+    {
+      "amount": 4,
+      "name": "Gantu",
+      "version": "Hamsterviel's Accomplice"
+    },
+    {
+      "amount": 2,
+      "name": "Grand Councilwoman",
+      "version": "Galactic Authority"
+    },
+    {
+      "amount": 3,
+      "name": "Jumba Jookiba",
+      "version": "Prolific Inventor"
+    },
+    {
+      "amount": 3,
+      "name": "Lilo",
+      "version": "Bundled Up"
+    },
+    {
+      "amount": 1,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 3,
+      "name": "Lilo",
+      "version": "Rock Star"
+    },
+    {
+      "amount": 4,
+      "name": "Lilo",
+      "version": "Snow Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Nani",
+      "version": "No Worries"
+    },
+    {
+      "amount": 3,
+      "name": "Nani",
+      "version": "Stage Manager"
+    },
+    {
+      "amount": 4,
+      "name": "Nearly Indestructible",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Pleakley",
+      "version": "Arctic Naturalist"
+    },
+    {
+      "amount": 3,
+      "name": "Pudge",
+      "version": "Controls the Weather"
+    },
+    {
+      "amount": 2,
+      "name": "Reuben",
+      "version": "Sandwich Expert"
+    },
+    {
+      "amount": 1,
+      "name": "Stitch",
+      "version": "Carefree Snowboarder"
+    },
+    {
+      "amount": 4,
+      "name": "Stitch",
+      "version": "High Badness Level"
+    }
+  ]
+}
