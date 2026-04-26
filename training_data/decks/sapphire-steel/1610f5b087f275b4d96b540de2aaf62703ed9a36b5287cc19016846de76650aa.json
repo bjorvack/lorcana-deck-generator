@@ -1,0 +1,99 @@
+{
+  "hash": "1610f5b087f275b4d96b540de2aaf62703ed9a36b5287cc19016846de76650aa",
+  "inks": [
+    "steel",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Daisy Duck",
+      "version": "Ghost Finder"
+    },
+    {
+      "amount": 3,
+      "name": "Darkwing Duck",
+      "version": "Cool Under Pressure"
+    },
+    {
+      "amount": 4,
+      "name": "Darkwing Duck",
+      "version": "Crime Fighter"
+    },
+    {
+      "amount": 4,
+      "name": "Darkwing Duck",
+      "version": "Drake Mallard"
+    },
+    {
+      "amount": 4,
+      "name": "Donald Duck",
+      "version": "Along for the Ride"
+    },
+    {
+      "amount": 2,
+      "name": "Honker Muddlefoot",
+      "version": "Timid Genius"
+    },
+    {
+      "amount": 3,
+      "name": "Inkrunner",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Judy Hopps",
+      "version": "Lead Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "On the Case"
+    },
+    {
+      "amount": 4,
+      "name": "Judy Hopps",
+      "version": "Snowball Patrol"
+    },
+    {
+      "amount": 2,
+      "name": "Judy Hopps",
+      "version": "Uncovering Clues"
+    },
+    {
+      "amount": 4,
+      "name": "Launchpad",
+      "version": "Trusty Sidekick"
+    },
+    {
+      "amount": 2,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Detective"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Clever Cluefinder"
+    },
+    {
+      "amount": 4,
+      "name": "The Robot Queen",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "The Terror That Flaps in the Night",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Thunderquack",
+      "version": ""
+    }
+  ]
+}
