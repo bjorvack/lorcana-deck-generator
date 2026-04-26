@@ -62951,5 +62951,26 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "cae150346a478684037b3d451819d4ae2bbdc65fe9fa983682896d1614603dcd",
+    "name": "Saturday Afternoon Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-afternoon-winterspell-set-championship-tournament-decks-363557",
+    "date": "2025-04-25",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c9c6529f3ac53d700458978fa3da4fdef84021c9d9fd28975342e57aa41f5204",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
