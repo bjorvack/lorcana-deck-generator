@@ -1,0 +1,94 @@
+{
+  "hash": "2ea332a5e369e347f05f09156ccc655041514ac44f498f204adaef92b67fd444",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Akood et Emuti",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Angel",
+      "version": "Siren Singer"
+    },
+    {
+      "amount": 4,
+      "name": "Chief Powhatan",
+      "version": "Protective Leader"
+    },
+    {
+      "amount": 4,
+      "name": "Copper",
+      "version": "Champion of the Forest"
+    },
+    {
+      "amount": 4,
+      "name": "Copper",
+      "version": "Hound Pup"
+    },
+    {
+      "amount": 4,
+      "name": "Education or Elimination",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Game Preserve",
+      "version": "Protected Land"
+    },
+    {
+      "amount": 4,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 4,
+      "name": "Improvise",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Jock",
+      "version": "Attentive Uncle"
+    },
+    {
+      "amount": 4,
+      "name": "Lady",
+      "version": "Family Dog"
+    },
+    {
+      "amount": 2,
+      "name": "Lantern",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Lilo",
+      "version": "Escape Artist"
+    },
+    {
+      "amount": 4,
+      "name": "Tod",
+      "version": "All Alone"
+    },
+    {
+      "amount": 4,
+      "name": "Tod",
+      "version": "Knows All the Tricks"
+    },
+    {
+      "amount": 4,
+      "name": "Tod",
+      "version": "Playful Kit"
+    },
+    {
+      "amount": 4,
+      "name": "Vixey",
+      "version": "Forest Friend"
+    }
+  ]
+}
