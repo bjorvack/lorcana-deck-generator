@@ -1,0 +1,124 @@
+{
+  "hash": "dc11bd428e825ce184a107a7111379d8878451027fc96169e84b57b117ee04ac",
+  "inks": [
+    "amber",
+    "ruby"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "A Pirate's Life",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Be Our Guest",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Devil's Eye Diamond",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Good Job!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Gopher",
+      "version": "Ship's Carpenter"
+    },
+    {
+      "amount": 2,
+      "name": "Jim Hawkins",
+      "version": "Honorable Pirate"
+    },
+    {
+      "amount": 4,
+      "name": "John Darling",
+      "version": "Sophisticated Swordsman"
+    },
+    {
+      "amount": 2,
+      "name": "John Silver",
+      "version": "Ferocious Friend"
+    },
+    {
+      "amount": 3,
+      "name": "Kakamora",
+      "version": "Pirate Pitcher"
+    },
+    {
+      "amount": 4,
+      "name": "Michael Darling",
+      "version": "Playful Swordsman"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Pirate Captain"
+    },
+    {
+      "amount": 2,
+      "name": "Minnie Mouse",
+      "version": "Pirate Lookout"
+    },
+    {
+      "amount": 3,
+      "name": "Moana",
+      "version": "Kakamora Leader"
+    },
+    {
+      "amount": 3,
+      "name": "Moana",
+      "version": "Self-Taught Sailor"
+    },
+    {
+      "amount": 1,
+      "name": "Or Rewrite History!",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Pooh Pirate Ship",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Rabbit",
+      "version": "Indignant Pirate"
+    },
+    {
+      "amount": 3,
+      "name": "Roo",
+      "version": "Littlest Pirate"
+    },
+    {
+      "amount": 2,
+      "name": "Skull Rock",
+      "version": "Isolated Fortress"
+    },
+    {
+      "amount": 3,
+      "name": "So Much to Give",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Islands I Pulled from the Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tigger",
+      "version": "In the Crow's Nest"
+    },
+    {
+      "amount": 4,
+      "name": "Wendy Darling",
+      "version": "Courageous Captain"
+    }
+  ]
+}

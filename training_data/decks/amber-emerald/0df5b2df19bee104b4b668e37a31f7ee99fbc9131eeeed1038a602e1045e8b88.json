@@ -1,0 +1,129 @@
+{
+  "hash": "0df5b2df19bee104b4b668e37a31f7ee99fbc9131eeeed1038a602e1045e8b88",
+  "inks": [
+    "amber",
+    "emerald"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Bagheera",
+      "version": "Cautious Explorer"
+    },
+    {
+      "amount": 2,
+      "name": "Baymax",
+      "version": "Low Battery"
+    },
+    {
+      "amount": 4,
+      "name": "Bellwether",
+      "version": "Master Manipulator"
+    },
+    {
+      "amount": 4,
+      "name": "Blessed Bagpipes",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Cursed Merfolk",
+      "version": "Ursula's Handiwork"
+    },
+    {
+      "amount": 4,
+      "name": "Della Duck",
+      "version": "Returning Mother"
+    },
+    {
+      "amount": 4,
+      "name": "Della's Moon Lullaby",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Emily Quackfaster",
+      "version": "Level-Headed Librarian"
+    },
+    {
+      "amount": 1,
+      "name": "Enigmatic Inkcaster",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Flintheart Glomgold",
+      "version": "Scheming Billionaire"
+    },
+    {
+      "amount": 1,
+      "name": "Flynn Rider",
+      "version": "Breaking and Entering"
+    },
+    {
+      "amount": 4,
+      "name": "Flynn Rider",
+      "version": "Spectral Scoundrel"
+    },
+    {
+      "amount": 1,
+      "name": "Kuzco",
+      "version": "Temperamental Emperor"
+    },
+    {
+      "amount": 4,
+      "name": "Megara",
+      "version": "Secret Keeper"
+    },
+    {
+      "amount": 3,
+      "name": "Mrs. Beakley",
+      "version": "Former S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 1,
+      "name": "Percy",
+      "version": "Pupsicle"
+    },
+    {
+      "amount": 1,
+      "name": "Rajah",
+      "version": "Devoted Protector"
+    },
+    {
+      "amount": 4,
+      "name": "Recovered Page",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Robin Hood",
+      "version": "Daydreamer"
+    },
+    {
+      "amount": 3,
+      "name": "Scrooge McDuck",
+      "version": "Cavern Prospector"
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge McDuck",
+      "version": "On the Right Track"
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge McDuck",
+      "version": "S.H.U.S.H. Agent"
+    },
+    {
+      "amount": 2,
+      "name": "Simba",
+      "version": "King in the Making"
+    },
+    {
+      "amount": 4,
+      "name": "Webby Vanderquack",
+      "version": "Knowledge Seeker"
+    }
+  ]
+}
