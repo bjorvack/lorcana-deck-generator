@@ -45877,5 +45877,26 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "a81a84676e83710a86ef1d9c419a04e80c4dc67737c8fdee601cb4df117df144",
+    "name": "Winterspell - Championship Zacatrus Vitoria",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-championship-zacatrus-vitoria-tournament-decks-363555",
+    "date": "2026-04-26",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "294c3f5defb82d4b2354547ae4826e6fa47662b892f6d2fdcbb3b5fd474e185b",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      }
+    ]
   }
 ]
