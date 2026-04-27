@@ -45638,5 +45638,26 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "cfeda090b6e49f81396914d3390b6b08100dbb448952cdb08dd1f2c042ad2509",
+    "name": "Saturday Morning Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/saturday-morning-winterspell-set-championship-tournament-decks-363568",
+    "date": "2026-04-25",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "d03b1c3a95f9e4221b3bdd6a0aba523949d5a066343efd7c92380a0c6968f3e5",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
