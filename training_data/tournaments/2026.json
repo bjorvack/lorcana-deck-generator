@@ -45250,5 +45250,393 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "fabc3c262f502857c00c295211ec365d7d2457dca38ba2a133f3e411374484b2",
+    "name": "Ficzone - El Gran Torneo",
+    "url": "https://inkdecks.com/lorcana-tournaments/ficzone-el-gran-torneo-tournament-decks-363566",
+    "date": "2026-04-26",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "746ea4cfb5294143bd52ee8af14d093217fc354fcafb5022b66cbd990777e9b2",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "0a90723ea667f6e1b57faa708cc6c24fdc6cda5960543d617bd0a943e3eb907c",
+        "place": 1,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "00f27bca2731ccb5cb25288fea4f245a436d989002546a10b2d38656344fac90",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "2265e5d08cd667a9a940bf440c9868e61e4b3b0ed331918e42e068cb40894f23",
+        "place": 4,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "52142b4e03eb73ed5414e97869411cc6240b081a555c63d37f01813fa904b526",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "cc94b00b76e698f047c5c9969d96f7664bab28570785d92f99192e02fab8a046",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "56424017115d6feaeb5e8af663f89788524b61126f0422e9da3fc81a34277e25",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "7a09b0eedbe6ff331f635d3870ad1af9b334841b73cd696a681575b7e6ad30a5",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "73d6070f04974b6b1cd44014b0469be433724f171642e9f6efe5df3f873d7dfb",
+        "place": 16,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "a176ebcccd066aacace3407fe048d6ada91a44b0aeb37e9c11b60775a4af2587",
+        "place": 16,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8f2bf78e685c00b7ea3c7d9f013c81ed035108b868ad2d0a2ecb5208b99b0d0e",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "c3c961989b31342f94aaf73f4de5df8bc5c0123c04f86b7b1cf62236896a1428",
+        "place": 16,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "37e5fc46dbe3336834d106446ab00cc6fd0d4c71f102ea6ff76106618424932c",
+        "place": 16,
+        "inks": [
+          "ruby",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "95e25186b8393b055d4192eb4dfcd83565a6b26dbc0d6852b05a6ea565c33f13",
+        "place": 16,
+        "inks": [
+          "steel",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "be5b748f0ead553f9048639685466cc3fe04bcb2c01760d7f103289e71ee6430",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "cda4e8179b7f2909ba9970e0506e1f1bf751dabe55f7b673cd84d3c5407434ff",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "caa3ae9ccc7800254e030137ec6596d7876a985c5c9a0ab55042f457c4f50149",
+        "place": 32,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "a75194892484ffc5880bd716018035840a5dc87cd31c44a1328a11e2fcbd2015",
+        "place": 32,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "38eab77dbe4068bba0bbfa20f14e09fd493bf61e6bf78154f423689554920c4d",
+        "place": 32,
+        "inks": [
+          "amethyst",
+          "steel"
+        ]
+      },
+      {
+        "hash": "35f2ecd01a43b45a301f62ae2b60d7c518d4daf186f0496d1b0e5ecc1669be18",
+        "place": 32,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "8696d6827452c1b844a05bd75cd373fa44aa769e0da9d43f21bedba9d5a8d8ff",
+        "place": 32,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "93c09b83f1c9fb1dc43418b96e0d2da1d00245f09ddfea93724e95d020665d34",
+        "place": 32,
+        "inks": [
+          "emerald",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d66d9aa91378dc113f808995221699ed7e4d8c5d536322df0f57b43b1d1c60a7",
+        "place": 32,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "8647cef30bf9224da975c777bca017c5cb6a1ee93cfa4881219e4cf394cb8cef",
+        "place": 32,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9817ba49ed7d2577caacb0c63eccb89faa91ec8a7ea14358ee23e0d552210d17",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "729ac136a6d0b95a32ab98f311ed048d1d1f23c842fe87b559085721610c59bd",
+    "name": "Sunday Afternoon Winterspell - Set Championship",
+    "url": "https://inkdecks.com/lorcana-tournaments/sunday-afternoon-winterspell-set-championship-tournament-decks-363564",
+    "date": "2026-04-26",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "41e08889a66b26d57edae91ef484cc16b9432d1714a4f7b0aeee9c0f296de93b",
+        "place": 1,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "a4ab81a64493e2dee0a309d12c9a6d279ae8c759f7b636fd81715dcee414d381",
+    "name": "Disney Lorcana Set Championship - Winterzauber",
+    "url": "https://inkdecks.com/lorcana-tournaments/disney-lorcana-set-championship-winterzauber-tournament-decks-363563",
+    "date": "2026-04-25",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "7e923ea147f871fae0f9d5c01287b117ad8128ed598facf3b90cb644fa89f794",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "3b1ee0e8768f26f4498fcafb0cd20a10c1bf4b93b23e0506b1a6bcf3c64248b3",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "0fe2784b62f611c1273c3551d1359a231d77fc053390eaf43be0a38c84dd9308",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c23f6c0fe569961ff41a4bc3915baef38803dcaa1ec71b2f5beb28a77eab938d",
+        "place": 4,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "02bd332ebd82b8333cd5195cb07d55fe7f58cb016ccc95558e3fb5f7ddfe11ce",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "7da8d5fd5409ec5ef89c02ab52fa7301a61f59e39636e8e75ff893c4ce1296db",
+        "place": 8,
+        "inks": [
+          "amber",
+          "ruby"
+        ]
+      },
+      {
+        "hash": "e07212e66c55df8773ddc8cbac47c6a7a11aaacac3dd4e268381c88f25ffae85",
+        "place": 8,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "17e096257ab8fbb8854c1e7923f4328442781507409b363f1bf47baf25f10dc6",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "329ed4d11e8afc661fe171dccfaa149ac259a3f3979aaaa5682c002f8908e16c",
+    "name": "Disney Lorcana Challenge: São Paulo",
+    "url": "https://inkdecks.com/lorcana-tournaments/disney-lorcana-challenge-sao-paulo-tournament-decks-363554",
+    "date": "2026-04-25",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "200a6b4938cea681a1f8a6c66df3b00abda07a303255e86d6225463b78a86452",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d51e5d4467b591b31ad465ed9d262a572bdde2a79bb0225dbb56fd5c07fef15f",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "fe8b3e662d40eb2617fe7a51a71bc0ede51984c90f0423251bfd5ad426c1e6aa",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "13a1c5b5b34c214dec6163701cba07cccd00570ca96cf5775248a1b5abcfa931",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "39a456c7cabd7a344469da2f9bba199e56b8bec06e60bd5dbf9967b754ca6dc4",
+        "place": 16,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5c13df19f0815cdb85e0a63be63f877f989f0f4633d17d3f21e7948c7fcc88cc",
+        "place": 128,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9f7a877f4bf760f64f5ab3a62cb0003a3170bfc3b8cf3760d7cf3dfa8bd64838",
+        "place": 256,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "b3cea07680d8067fbe5efaa4a6903c72e391587806de7e197d35f6d8747a9af8",
+        "place": 256,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
