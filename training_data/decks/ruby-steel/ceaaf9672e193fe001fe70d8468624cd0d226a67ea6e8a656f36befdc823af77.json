@@ -1,0 +1,159 @@
+{
+  "hash": "ceaaf9672e193fe001fe70d8468624cd0d226a67ea6e8a656f36befdc823af77",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 3,
+      "name": "Agrabah",
+      "version": "Marketplace"
+    },
+    {
+      "amount": 1,
+      "name": "Bronx",
+      "version": "Ferocious Beast"
+    },
+    {
+      "amount": 1,
+      "name": "Desperate Plan",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Donald Duck",
+      "version": "Nephew Fred"
+    },
+    {
+      "amount": 1,
+      "name": "Fa Zhou",
+      "version": "Honorable Warrior"
+    },
+    {
+      "amount": 1,
+      "name": "Fa Zhou",
+      "version": "War Hero"
+    },
+    {
+      "amount": 1,
+      "name": "Get to Safety!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Grandmother Fa",
+      "version": "Spirited Elder"
+    },
+    {
+      "amount": 3,
+      "name": "He Hurled His Thunderbolt",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Hercules",
+      "version": "Spectral Demigod"
+    },
+    {
+      "amount": 3,
+      "name": "Li Shang",
+      "version": "Imperial Captain"
+    },
+    {
+      "amount": 3,
+      "name": "Li Shang",
+      "version": "Newly Promoted"
+    },
+    {
+      "amount": 2,
+      "name": "Li Shang",
+      "version": "Solemn Son"
+    },
+    {
+      "amount": 2,
+      "name": "Li Shang",
+      "version": "Valiant Leader"
+    },
+    {
+      "amount": 2,
+      "name": "Light the Fuse",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Marching Off to Battle",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Medallion Weights",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 1,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Imperial General"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Ready for Battle"
+    },
+    {
+      "amount": 3,
+      "name": "Mushu",
+      "version": "Fast-Talking Dragon"
+    },
+    {
+      "amount": 3,
+      "name": "Mushu",
+      "version": "Majestic Dragon"
+    },
+    {
+      "amount": 3,
+      "name": "Mushu",
+      "version": "Your Worst Nightmare"
+    },
+    {
+      "amount": 1,
+      "name": "Nani",
+      "version": "No Worries"
+    },
+    {
+      "amount": 1,
+      "name": "Prince Charming",
+      "version": "Protector of the Realm"
+    },
+    {
+      "amount": 2,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "The Sword of Hercules",
+      "version": ""
+    },
+    {
+      "amount": 1,
+      "name": "Tinker Bell",
+      "version": "Fancy Footwork"
+    },
+    {
+      "amount": 3,
+      "name": "Tuk Tuk",
+      "version": "Lively Partner"
+    }
+  ]
+}
