@@ -45898,5 +45898,214 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "17227e5957188ab4a18b5aa3447fe34712026be083d754ce450cb8eec95bb78d",
+    "name": "Winterspell - Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-champs-tournament-decks-363572",
+    "date": "2026-04-26",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "4983b276c2c83e98331052a64ffeca91d040e1b7ef61c99c120d0265f67b093e",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "3092930d184dbe7778c537a7089bf3673e13290f350abc6c40c43c82c610c69f",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "9f82accf2ed01fea07113b4fa0a34a7be2904f49ba9e45d823b2b37e6bcb037a",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "467d16e746e410518a4a05049fb8b60aab114996b3fa68557d946f570a5eddb2",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "076a3c7c39e1db1b2f5712d95a03ab3cfa4d6c76b1ccc7b77a2bd7a6164baf1c",
+    "name": "Winterspell Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-champs-tournament-decks-363570",
+    "date": "2026-04-26",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "ad91366839a895291fee919bd52afcdf4dfccb8705754ccb3c88263a131213c5",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "80bdc7b5551f42d33e10e9c0119b672cc558b15e16bea4fa6938877d634dc68d",
+    "name": "Winterspell - Set Champs",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-set-champs-tournament-decks-363573",
+    "date": "2026-04-25",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c233c38e1046c74fc3bb1b412d35cb6a6d48199ee198cfc1c2441d93e6171724",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "b16887f0e9d4036e177b7cb4beb4a046e00ee9f1f67c8c1a4a47ae9855bbb5a6",
+        "place": 2,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "8a216bf5984bd7e1bd3a109bced93c55c6188eb935c37124dd2e848b39238859",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "aa6c6bdbde793258b2f4c72ea53d62c23f9f24fb3c4ca0252d17e0c01d4e108f",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "cdba4888743a447e8d87bbcbc6896b1b079366661cf002ace27232a121d2fc74",
+    "name": "Stockholm Open 3",
+    "url": "https://inkdecks.com/lorcana-tournaments/stockholm-open-3-tournament-decks-363571",
+    "date": "2026-04-25",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c59037a2e150bcfe8b50fdd11b2c564ba8e95deca28c25301a0c91f675786216",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5a49ced2a500e485aa4aecb25160a8afaa3098c4e99323f115a10f56779a761d",
+        "place": 16,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "154e99a3749b34e9a2e5c798007a21af345a48b7cb1f95c6828a40920cd7afef",
+    "name": "RUNIK TS 02 - Main Event - CCQ Bordeaux",
+    "url": "https://inkdecks.com/lorcana-tournaments/runik-ts-02-main-event-ccq-bordeaux-tournament-decks-363569",
+    "date": "2026-04-25",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c739afd1f6b20d51d4672b607e37e666606f43334e6f3c86e962b18f38df54be",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "6152b82ddac9790d04465d37e3f39381fcf6da53d4316fd41536d223113fc51b",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "d4533132c1951ff5a06ce17c51b7e0532f96b5cb66759e021ffa1275ef29bc88",
+        "place": 8,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "171b2439b4fcbc4df4f80e4486c0406127d92762e124be11ed59ac4d7a149be7",
+        "place": 8,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "200a6b4938cea681a1f8a6c66df3b00abda07a303255e86d6225463b78a86452",
+        "place": 32,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d61dee8ed0dea364071ccd5257d4725719e6e501798a9bebbfdd636c2f89f50e",
+        "place": 32,
+        "inks": [
+          "amber",
+          "steel"
+        ]
+      },
+      {
+        "hash": "149ea413c134d3f5a01ebe4f69e6bc58e48b1aa355d20cd54cb11dfcab05980a",
+        "place": 32,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
