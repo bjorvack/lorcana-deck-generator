@@ -1,0 +1,114 @@
+{
+  "hash": "ec7b9c4b89fd7cd295f6746bc42ac579f0d99f8e37122aed8e8402040286cdfc",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 2,
+      "name": "Benja",
+      "version": "Guardian of the Dragon Gem"
+    },
+    {
+      "amount": 4,
+      "name": "Diablo",
+      "version": "Watchful Raven"
+    },
+    {
+      "amount": 2,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 3,
+      "name": "Infra",
+      "version": "Pink Ultra Scan Specs"
+    },
+    {
+      "amount": 3,
+      "name": "Li Shang",
+      "version": "Newly Promoted"
+    },
+    {
+      "amount": 2,
+      "name": "Liquidator",
+      "version": "Iced Over"
+    },
+    {
+      "amount": 3,
+      "name": "Maui",
+      "version": "Half-Shark"
+    },
+    {
+      "amount": 2,
+      "name": "Medallion Weights",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Brave Little Prince"
+    },
+    {
+      "amount": 4,
+      "name": "Mickey Mouse",
+      "version": "Food Fight Defender"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Charging Ahead"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Imperial General"
+    },
+    {
+      "amount": 3,
+      "name": "Mushu",
+      "version": "Fast-Talking Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Mushu",
+      "version": "Majestic Dragon"
+    },
+    {
+      "amount": 2,
+      "name": "Mushu",
+      "version": "Your Worst Nightmare"
+    },
+    {
+      "amount": 2,
+      "name": "Next Stop, Olympus",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "One Last Hope",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Scrooge McDuck",
+      "version": "Ebenezer Scrooge"
+    },
+    {
+      "amount": 4,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    }
+  ]
+}
