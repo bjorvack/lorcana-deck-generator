@@ -46887,5 +46887,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "cc79c1716b76cf39458df8a141952d632788b055825a4be58b1b36d95daad37a",
+    "name": "Spieltag 4 Division 2: The Inkcredibles - Team GOAT",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-4-division-2-the-inkcredibles-team-goat-tournament-decks-363482",
+    "date": "2026-04-29",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "dc35ccbe104b4ef3690bc300024e7d3acfaaa50b2546c3dbb8ed895807571389",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b5d6f021af08455ba575693102171c8b69d4984bbd64e8c6a75af642a4c9ad47",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "000d657b381ae87c16472c1f3f824a2228bf5c5f0cd3d33faa16ec8016402764",
+        "place": 3,
+        "inks": [
+          "emerald",
+          "amber"
+        ]
+      },
+      {
+        "hash": "4c10796db83413b32755a8169bb44e538abf3bff57b2cf9d96cd3b1c312bb49d",
+        "place": 4,
+        "inks": [
+          "amber",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "430dc44140a294c7fdfc8054639958dffba5578f2c60b7730514011a6672f425",
+        "place": 5,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "97f672ed562aa093970ea791c169c5d8562c7e9c6e70a21a32130a3465b0bb33",
+        "place": 6,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      }
+    ]
   }
 ]
