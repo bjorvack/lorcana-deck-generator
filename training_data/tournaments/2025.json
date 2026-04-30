@@ -65357,5 +65357,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "df8d696f5801a0241db5e527fd29893bbc5eabb05f5ccfcbca75d2e7e1b8f780",
+    "name": "Spieltag 4 Division 1: DarkWings - Team Tintenvorrat",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-4-division-1-darkwings-team-tintenvorrat-tournament-decks-363477",
+    "date": "2025-04-30",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "2e165ad1bade6258ffd2d5a7f119be9a9ec67485f1b0db27d803fc6bc0bc836c",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "4785416c04a19dfd76cd4db79d81a9d9dd5e4078af1e45d8969b246919b07f2c",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "4170e31c04a2ffcdac6bf016f8ce6a0b0743043f69c446af2fad08a78006189e",
+        "place": 3,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "fd95a920bd9079da50320728c93d3521ac9b1ef0108aeb2b78061b71d0c74543",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "72ed98a74a61b7e45a904e730fb66bd6e05dbd5a435d452fea1d74f5fd4a71f2",
+        "place": 5,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "5343d67600287734247a7c4bf830fcd58142b42f409ce32a27cc0625f0373577",
+        "place": 6,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
