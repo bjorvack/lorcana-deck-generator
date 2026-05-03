@@ -1,0 +1,109 @@
+{
+  "hash": "36a3b303a3a309ddc09a1b62525325e3eb52ea9963aacc88d599074462df16c0",
+  "inks": [
+    "ruby",
+    "steel"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Agrabah",
+      "version": "Marketplace"
+    },
+    {
+      "amount": 2,
+      "name": "But I'm Much Faster",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Calhoun",
+      "version": "Marine Sergeant"
+    },
+    {
+      "amount": 4,
+      "name": "Doc",
+      "version": "Bold Knight"
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "Mighty Leader"
+    },
+    {
+      "amount": 2,
+      "name": "LeFou",
+      "version": "Instigator"
+    },
+    {
+      "amount": 2,
+      "name": "Lexington",
+      "version": "Small in Stature"
+    },
+    {
+      "amount": 2,
+      "name": "Li Shang",
+      "version": "Newly Promoted"
+    },
+    {
+      "amount": 4,
+      "name": "Lumiere",
+      "version": "Fiery Friend"
+    },
+    {
+      "amount": 2,
+      "name": "Mulan",
+      "version": "Charging Ahead"
+    },
+    {
+      "amount": 4,
+      "name": "Mulan",
+      "version": "Disguised Soldier"
+    },
+    {
+      "amount": 3,
+      "name": "Mulan",
+      "version": "Elite Archer"
+    },
+    {
+      "amount": 1,
+      "name": "Mulan",
+      "version": "Imperial General"
+    },
+    {
+      "amount": 4,
+      "name": "Mushu",
+      "version": "Majestic Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Pluto",
+      "version": "Steel Champion"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Impulsive Ruler"
+    },
+    {
+      "amount": 4,
+      "name": "Queen of Hearts",
+      "version": "Sensing Weakness"
+    },
+    {
+      "amount": 4,
+      "name": "Shere Khan",
+      "version": "Menacing Predator"
+    },
+    {
+      "amount": 2,
+      "name": "Strength of a Raging Fire",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Twitterpated",
+      "version": ""
+    }
+  ]
+}
