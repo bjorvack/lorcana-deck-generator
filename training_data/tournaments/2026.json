@@ -47070,5 +47070,82 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "ab1fc954909c2b73446b942c3eda829cf18423d7d259448485a80dfc1262360d",
+    "name": "Winterspell League Tournament",
+    "url": "https://inkdecks.com/lorcana-tournaments/winterspell-league-tournament-tournament-decks-363584",
+    "date": "2026-05-02",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "e771ba15ce024d1f2105f0c8243dad85e199e29adc97f223ed40c690d93d24e1",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8febce74a677bbfcf1a7d92aab1abe9315b9ed34fbcfe2c9f24c71de5ea9c902",
+        "place": 2,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "2f77955c80ad3530ea7a404a3d9501b8ec0f84a06913dd8057f33db3e187809f",
+        "place": 3,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8ed429fa31186bcf2f2b79989f18db81305721546e7dc9e387e11b7a03470855",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "amber"
+        ]
+      },
+      {
+        "hash": "f8cfe6777f1fbd485b876555b00bf23cc1b08245092831251372fc2885eab255",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "6537aa055daefba35ec2823628951c0c6ec2ebf4e0d3f92e4f698131ea0625bf",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "steel"
+        ]
+      },
+      {
+        "hash": "36a3b303a3a309ddc09a1b62525325e3eb52ea9963aacc88d599074462df16c0",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "steel"
+        ]
+      },
+      {
+        "hash": "6910172f029672161c933b8081649a7f9663efd39b43df8de46d3c2ed34eddbc",
+        "place": 8,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      }
+    ]
   }
 ]
