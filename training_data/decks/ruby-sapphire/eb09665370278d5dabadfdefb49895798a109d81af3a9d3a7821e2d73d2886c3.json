@@ -1,0 +1,114 @@
+{
+  "hash": "eb09665370278d5dabadfdefb49895798a109d81af3a9d3a7821e2d73d2886c3",
+  "inks": [
+    "ruby",
+    "sapphire"
+  ],
+  "cards": [
+    {
+      "amount": 4,
+      "name": "Cinderella",
+      "version": "Dream Come True"
+    },
+    {
+      "amount": 2,
+      "name": "Copper",
+      "version": "On the Scent"
+    },
+    {
+      "amount": 4,
+      "name": "Develop Your Brain",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Dig a Little Deeper",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Goofy",
+      "version": "Flying Goof"
+    },
+    {
+      "amount": 2,
+      "name": "Grab Your Bow",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Hercules",
+      "version": "Spectral Demigod"
+    },
+    {
+      "amount": 2,
+      "name": "Let It Go",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Maleficent",
+      "version": "Monstrous Dragon"
+    },
+    {
+      "amount": 4,
+      "name": "Marching Off to Battle",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Moana",
+      "version": "Curious Explorer"
+    },
+    {
+      "amount": 3,
+      "name": "Olaf",
+      "version": "Snowman of Action"
+    },
+    {
+      "amount": 2,
+      "name": "Pete",
+      "version": "Ghost of Christmas Future"
+    },
+    {
+      "amount": 4,
+      "name": "Sail the Azurite Sea",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Scrooge McDuck",
+      "version": "Ghostly Ebenezer"
+    },
+    {
+      "amount": 2,
+      "name": "Scuttle",
+      "version": "Birdbrained"
+    },
+    {
+      "amount": 1,
+      "name": "Spooky Sight",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Time to Go!",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Tipo",
+      "version": "Growing Son"
+    },
+    {
+      "amount": 4,
+      "name": "Vision of the Future",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Wreck",
+      "version": "it Ralph - Raging Wrecker"
+    }
+  ]
+}

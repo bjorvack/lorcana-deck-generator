@@ -1,0 +1,114 @@
+{
+  "hash": "59603881e8f83ba660d4225f641dad41a1255ebf4474c9bc38ce939f7ab7b8a1",
+  "inks": [
+    "amber",
+    "amethyst"
+  ],
+  "cards": [
+    {
+      "amount": 1,
+      "name": "Alan",
+      "version": "a-Dale - Rockin' Rooster"
+    },
+    {
+      "amount": 4,
+      "name": "Cheshire Cat",
+      "version": "Inexplicable"
+    },
+    {
+      "amount": 4,
+      "name": "Demona",
+      "version": "Scourge of the Wyvern Clan"
+    },
+    {
+      "amount": 4,
+      "name": "Dumbo",
+      "version": "Ninth Wonder of the Universe"
+    },
+    {
+      "amount": 4,
+      "name": "Eilonwy",
+      "version": "Princess of Llyr"
+    },
+    {
+      "amount": 4,
+      "name": "Elsa",
+      "version": "The Fifth Spirit"
+    },
+    {
+      "amount": 2,
+      "name": "Genie",
+      "version": "Wish Fulfilled"
+    },
+    {
+      "amount": 3,
+      "name": "Grandmother Willow",
+      "version": "Ancient Advisor"
+    },
+    {
+      "amount": 3,
+      "name": "Hades",
+      "version": "Looking for a Deal"
+    },
+    {
+      "amount": 2,
+      "name": "Iago",
+      "version": "Giant Spectral Parrot"
+    },
+    {
+      "amount": 3,
+      "name": "Junior Woodchuck Guidebook",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "Lantern",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Monstro",
+      "version": "Infamous Whale"
+    },
+    {
+      "amount": 3,
+      "name": "Nakoma",
+      "version": "Waiting Out the Storm"
+    },
+    {
+      "amount": 3,
+      "name": "Ohana Means Family",
+      "version": ""
+    },
+    {
+      "amount": 4,
+      "name": "Royal Guard",
+      "version": "Octopus Soldier"
+    },
+    {
+      "amount": 4,
+      "name": "The Great Illuminary",
+      "version": "Abandoned Laboratory"
+    },
+    {
+      "amount": 3,
+      "name": "The Horseman Strikes!",
+      "version": ""
+    },
+    {
+      "amount": 3,
+      "name": "Tigger",
+      "version": "Bouncing All the Way"
+    },
+    {
+      "amount": 3,
+      "name": "We Know the Way",
+      "version": ""
+    },
+    {
+      "amount": 2,
+      "name": "World's Greatest Criminal Mind",
+      "version": ""
+    }
+  ]
+}
