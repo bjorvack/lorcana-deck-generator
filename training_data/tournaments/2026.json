@@ -47794,5 +47794,82 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "de77320cc92efab20aef1eb906b2eefa927b1f647cba6301847064c9fa2e8cc5",
+    "name": "Championat de set Bonne Pioche x Au'Duel",
+    "url": "https://inkdecks.com/lorcana-tournaments/championat-de-set-bonne-pioche-x-au-duel-tournament-decks-363601",
+    "date": "2026-05-03",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "200a6b4938cea681a1f8a6c66df3b00abda07a303255e86d6225463b78a86452",
+        "place": 1,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "287f85c942da03e7af3943fb663087d00dc87f42ec6cee323e9ac0beedf569fb",
+        "place": 2,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "c169b878bac566553fde630133fa33a467f29b419ef1e4a77c89800c03cf67d6",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "467d16e746e410518a4a05049fb8b60aab114996b3fa68557d946f570a5eddb2",
+        "place": 4,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      },
+      {
+        "hash": "3c4c2705a5adfcc1c6a7a6dae232cd77d8af81c60300805ee46eb71c3eb9b6e3",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "30b711c5ad83b3170b3444dc0c00dab030b64eaf5d52dac19388e7ccff8c0ebf",
+        "place": 8,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "d0ce9301ceb2693b0a67b1908838426f6b28793dabf52a1b849820089c49ad55",
+        "place": 8,
+        "inks": [
+          "steel",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "467d16e746e410518a4a05049fb8b60aab114996b3fa68557d946f570a5eddb2",
+        "place": 8,
+        "inks": [
+          "ruby",
+          "sapphire"
+        ]
+      }
+    ]
   }
 ]
