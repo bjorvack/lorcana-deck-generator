@@ -47871,5 +47871,127 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "2a7b73350d618f1fcb52361fd33f7e784ab43159552b3468049f01d346e4c954",
+    "name": "Spieltag 5 Division 1: DarkWings - MRO’s Glimmer Gang",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-5-division-1-darkwings-mro-s-glimmer-gang-tournament-decks-363593",
+    "date": "2026-05-06",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "8e44811c9c67f0cccb4a7107d5820d621cb65ad0a2e97f12a06da272e1617aac",
+        "place": 1,
+        "inks": [
+          "ruby",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "cc57c5d12d2af79bbb2fe852422f0f910dc3f7603b3bb46f75025a4393980a95",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f9d0a358b549ad989aaaa2401217e46d1f8d28b33cfdcb2daee3180a9a28f91b",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "8079527ec6d4b1d327230a717067462557723981a7c8b7028aaaba4a6de98ffb",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "6a184f2216ade6fe1033201f276a51b59d5b13a602b691ea52f7bf12ca031878",
+        "place": 5,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "9f271a1d76b5adce01488fb74f9d9795da8dcee7285cdea9c6f8fc9c0f150454",
+        "place": 6,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "6279a5630c1fca3f69fc1453fac51754929f8af2432acf99b7d9da94ba8dc8da",
+    "name": "Spieltag 5 Division 1: InkCrows - Team Secret Rare",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-5-division-1-inkcrows-team-secret-rare-tournament-decks-363594",
+    "date": "2026-05-05",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "45ddedc860aeba4d3e10d53605b1c224e8980d79757f212e37675d257afd0276",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "86697d566646b4ab6459959c9c33be587f4e28e1f3169f5486eda655eefb06db",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "5e4f41d3fdb0f283923eb3bf7e44e7be6e1cd3b43ff6c48ecf9ec4cd1aeca8a5",
+        "place": 3,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "7628c0d4704c1b80d8e21d2bfd4da48b2bf8ab573f1b44186459292eef664568",
+        "place": 4,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "415752f4613c49ebc2931c4f70a1f38b14b1f6382b6d1b54cb4ada8a97d9e802",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "steel"
+        ]
+      },
+      {
+        "hash": "e215c58a153dd86775325cce4a02577cf10cd9602560d21a2f23ffd32f5e83de",
+        "place": 6,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
