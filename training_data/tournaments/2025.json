@@ -66402,5 +66402,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "0fe66244d7b1b6cf1d1d9bbf3cc7ac6587818e908810ea0c5cf15112740ffd68",
+    "name": "Spieltag 5 Division 1: Playing Ducks - Team Inkognito",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-5-division-1-playing-ducks-team-inkognito-tournament-decks-363592",
+    "date": "2025-05-07",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "5ab1641884ad1ad79fd9e7e22f3910d343cbfa93cea8e517fe73ca93fc5e2537",
+        "place": 1,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      },
+      {
+        "hash": "fd95a920bd9079da50320728c93d3521ac9b1ef0108aeb2b78061b71d0c74543",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "7172104512e61da1eb7d0c943045cc10968c48db09c5dd0a8377bd7fff1661a4",
+        "place": 3,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "46a3cdaf4d33f7abdb27385ad793736eb3fa00707aa592bf7ba68e8be2457bec",
+        "place": 4,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5ef2f976db9201ef19c0a606839f2e3bdd77eb5dbb2ede074b7cf15dd31fd2e8",
+        "place": 5,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "cca9a8ce0e0b749e83d01c73f6979fb0e6286758e2e94ca4a02dc0c2e3b0a328",
+        "place": 6,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      }
+    ]
   }
 ]
