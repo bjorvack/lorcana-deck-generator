@@ -48379,5 +48379,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "111f2ec978be384cd6a58833da48704f4320adfb4c11746d50f7c1f71b000a74",
+    "name": "Spieltag 5 Division 2: The Inkcredibles - Tintenlovers",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-5-division-2-the-inkcredibles-tintenlovers-tournament-decks-363598",
+    "date": "2026-05-07",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "f1942556c4e234c98f122e33ffd4b62709c6538f2b4bda5da68781116a8901a2",
+        "place": 1,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "b7c7714c0368e4ab09391c155f222575136f5fa7aa06b32b6a5d53a697483e89",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "ec95ef0c1edc5035582572c07db3b83e6c30b89f1bc7a20dbe463c6145accbf7",
+        "place": 3,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "03738d977ea7b10a3820352b51a30d583030573b4aedad1e5230af9f12aedc40",
+        "place": 4,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "5affe799be640d2316d94a0ceec1805006d528bed9b6395e019ce980aae181df",
+        "place": 5,
+        "inks": [
+          "amethyst",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "2b6fdda3481c9291d06b658c9568b36444c36bb3953377c74b4a8a23edbdacd7",
+        "place": 6,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
