@@ -48440,5 +48440,66 @@
         ]
       }
     ]
+  },
+  {
+    "hash": "3f5d69c13b275de167c0ccd673e96be23a7f04515c08498ce8ba6f2399f626b5",
+    "name": "Spieltag 5 Division 1: Battle-Bear - 7 Serpents TCG",
+    "url": "https://inkdecks.com/lorcana-tournaments/spieltag-5-division-1-battle-bear-7-serpents-tcg-tournament-decks-363590",
+    "date": "2026-05-13",
+    "meta": {
+      "set": 11,
+      "legality": "Core"
+    },
+    "players": null,
+    "decks": [
+      {
+        "hash": "c1bad0bba6ae6416f1c9237959ed495330b1ab5493ff946909b8527086b6787d",
+        "place": 1,
+        "inks": [
+          "amber",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "17274798422dc75ce9fbb4dc10746446ac11b46879b685a22a9328188824d363",
+        "place": 2,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "0c769b424ee34c98a67a436ef31a99019d45b825ec7c1072a8044e96bc523be4",
+        "place": 3,
+        "inks": [
+          "amber",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "995033e7f8cab01c47dc07d62a9e114414f067698d22e4740335d9b3e812762f",
+        "place": 4,
+        "inks": [
+          "steel",
+          "amethyst"
+        ]
+      },
+      {
+        "hash": "f6e2cb2214bd9fe9cea4d7f4131c3e959d9b1bf85d202f8dffd42799f1555ea2",
+        "place": 5,
+        "inks": [
+          "sapphire",
+          "emerald"
+        ]
+      },
+      {
+        "hash": "b41de934f68754ff255a4ac0f7eb274609de6a03b804c0344eaa5c302e71f46a",
+        "place": 6,
+        "inks": [
+          "steel",
+          "amber"
+        ]
+      }
+    ]
   }
 ]
